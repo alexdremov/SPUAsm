@@ -1,9 +1,14 @@
+in rbx
 push 0
 pop rax
+dec rbx
 push rax
 push rax
 mul 
 out 
 pop 
 inc rax
-jmp -14
+jm 23
+push 0
+push rbx
+jne -35

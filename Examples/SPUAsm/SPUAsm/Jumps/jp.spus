@@ -1,19 +1,31 @@
+;
 ; Jumps check
+;
+
+in rbx  ; rbx as counter
 
 push 0
 pop rax
 
-forever:
+loop:
+dec rbx  ; decrease counter
 
+; Calculating square
 push rax
 push rax
 mul
-
 out
 
+; Prepare for the next loop
 pop
-
 inc rax
 
-jmp forever
+jm mondayOnly ; exit if it is monday
 
+; Insert conditional jump operands
+push 0
+push rbx
+
+jne loop
+
+mondayOnly:

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		A090F0E3253E3C7B00342FA0 /* jp.spus */ = {isa = PBXFileReference; explicitFileType = sourcecode.asm; path = jp.spus; sourceTree = "<group>"; usesTabs = 0; };
+		A090F0E3253E3C7B00342FA0 /* jp.spus */ = {isa = PBXFileReference; explicitFileType = sourcecode.asm; path = jp.spus; sourceTree = "<group>"; usesTabs = 0; wrapsLines = 1; };
 		A090F0E8253E3CF100342FA0 /* assembly.lst */ = {isa = PBXFileReference; lastKnownFileType = text; path = assembly.lst; sourceTree = "<group>"; };
 		A090F0E9253E3CF100342FA0 /* jp.spub */ = {isa = PBXFileReference; lastKnownFileType = file; path = jp.spub; sourceTree = "<group>"; };
 		A090F0EA253E3CF100342FA0 /* assembly.spuprep */ = {isa = PBXFileReference; lastKnownFileType = text; path = assembly.spuprep; sourceTree = "<group>"; };

@@ -5,6 +5,8 @@
 //  Created by Александр Дремов on 19.10.2020.
 //
 
+#include <time.h>
+
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunused-parameter"
 
@@ -292,7 +294,17 @@ OPEXE_FUNC(jb,  {
     if (!HASBYTES(5))
         return SPU_EXE_NOARGS;
     char* localSPI = *SPI;
-    (*SPI) += *((int*)(localSPI + 1));
+    
+    double left = 0;
+    double right = 0;
+    StackRigidOperationCodes result = StackPop(&(core->stack), &right);
+    STACKRESULT
+    result = StackPop(&(core->stack), &left);
+    STACKRESULT
+    if (left < right)
+        (*SPI) += *((int*)(localSPI + 1));
+    else
+        (*SPI) += 5;
     return SPU_EXE_OK;
 })
 
@@ -300,7 +312,16 @@ OPEXE_FUNC(jbe,  {
     if (!HASBYTES(5))
         return SPU_EXE_NOARGS;
     char* localSPI = *SPI;
-    (*SPI) += *((int*)(localSPI + 1));
+    double left = 0;
+    double right = 0;
+    StackRigidOperationCodes result = StackPop(&(core->stack), &right);
+    STACKRESULT
+    result = StackPop(&(core->stack), &left);
+    STACKRESULT
+    if (left <= right)
+        (*SPI) += *((int*)(localSPI + 1));
+    else
+        (*SPI) += 5;
     return SPU_EXE_OK;
 })
 
@@ -308,7 +329,16 @@ OPEXE_FUNC(je,  {
     if (!HASBYTES(5))
         return SPU_EXE_NOARGS;
     char* localSPI = *SPI;
-    (*SPI) += *((int*)(localSPI + 1));
+    double left = 0;
+    double right = 0;
+    StackRigidOperationCodes result = StackPop(&(core->stack), &right);
+    STACKRESULT
+    result = StackPop(&(core->stack), &left);
+    STACKRESULT
+    if (left == right)
+        (*SPI) += *((int*)(localSPI + 1));
+    else
+        (*SPI) += 5;
     return SPU_EXE_OK;
 })
 
@@ -316,7 +346,16 @@ OPEXE_FUNC(jne,  {
     if (!HASBYTES(5))
         return SPU_EXE_NOARGS;
     char* localSPI = *SPI;
-    (*SPI) += *((int*)(localSPI + 1));
+    double left = 0;
+    double right = 0;
+    StackRigidOperationCodes result = StackPop(&(core->stack), &right);
+    STACKRESULT
+    result = StackPop(&(core->stack), &left);
+    STACKRESULT
+    if (left != right)
+        (*SPI) += *((int*)(localSPI + 1));
+    else
+        (*SPI) += 5;
     return SPU_EXE_OK;
 })
 
@@ -324,7 +363,16 @@ OPEXE_FUNC(ja,  {
     if (!HASBYTES(5))
         return SPU_EXE_NOARGS;
     char* localSPI = *SPI;
-    (*SPI) += *((int*)(localSPI + 1));
+    double left = 0;
+    double right = 0;
+    StackRigidOperationCodes result = StackPop(&(core->stack), &right);
+    STACKRESULT
+    result = StackPop(&(core->stack), &left);
+    STACKRESULT
+    if (left > right)
+        (*SPI) += *((int*)(localSPI + 1));
+    else
+        (*SPI) += 5;
     return SPU_EXE_OK;
 })
 
@@ -332,7 +380,16 @@ OPEXE_FUNC(jae,  {
     if (!HASBYTES(5))
         return SPU_EXE_NOARGS;
     char* localSPI = *SPI;
-    (*SPI) += *((int*)(localSPI + 1));
+    double left = 0;
+    double right = 0;
+    StackRigidOperationCodes result = StackPop(&(core->stack), &right);
+    STACKRESULT
+    result = StackPop(&(core->stack), &left);
+    STACKRESULT
+    if (left >= right)
+        (*SPI) += *((int*)(localSPI + 1));
+    else
+        (*SPI) += 5;
     return SPU_EXE_OK;
 })
 
@@ -340,7 +397,19 @@ OPEXE_FUNC(jm,  {
     if (!HASBYTES(5))
         return SPU_EXE_NOARGS;
     char* localSPI = *SPI;
-    (*SPI) += *((int*)(localSPI + 1));
+    
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    int d    = tm.tm_mday;
+    int m    = tm.tm_mon + 1;
+    int y    = tm.tm_year + 1900;
+
+    int weekday  = (d += m < 3 ? y-- : y - 2, 23*m/9 + d + 4 + y/4- y/100 + y/400)%7;
+    
+    if (weekday == 1)
+        (*SPI) += *((int*)(localSPI + 1));
+    else
+        (*SPI) += 5;
     return SPU_EXE_OK;
 })
 

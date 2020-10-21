@@ -68,11 +68,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A04D82862540A91D0095FB80 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = CMakeLists.txt; sourceTree = "<group>"; };
+		A04D82872540AB5B0095FB80 /* CMakeSourcesAndHeaders.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeSourcesAndHeaders.txt; sourceTree = "<group>"; };
 		A071A8EE2534D19D008711EF /* SPU */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SPU; sourceTree = BUILT_PRODUCTS_DIR; };
-		A071A8FA2534D1C9008711EF /* Syntax.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Syntax.hpp; sourceTree = "<group>"; };
+		A071A8FA2534D1C9008711EF /* Syntax.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Syntax.hpp; path = SoftProcessorUnit/Syntax/Translation/Syntax.hpp; sourceTree = SOURCE_ROOT; };
 		A071A8FB2534D1C9008711EF /* Syntax.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Syntax.cpp; sourceTree = "<group>"; };
 		A071A8FC2534D1C9008711EF /* SPU.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SPU.cpp; sourceTree = "<group>"; };
-		A071A9032534D1F9008711EF /* StackRigid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackRigid.h; sourceTree = "<group>"; };
+		A071A9032534D1F9008711EF /* StackRigid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StackRigid.h; path = SoftProcessorUnit/Common/Stack/StackRigid.h; sourceTree = SOURCE_ROOT; };
 		A071A90E2534DC17008711EF /* SPUAsm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SPUAsm; sourceTree = BUILT_PRODUCTS_DIR; };
 		A071A91A2534DC4E008711EF /* SPUAssembly.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SPUAssembly.cpp; sourceTree = "<group>"; };
 		A071A92C2534DD5A008711EF /* SPUDisAsm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SPUDisAsm; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +116,7 @@
 		A0DD8C182537412900CD405B /* InstrExecutors.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InstrExecutors.cpp; sourceTree = "<group>"; };
 		A0DD8C192537412900CD405B /* InstrExecutors.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InstrExecutors.hpp; sourceTree = "<group>"; };
 		A0DD8C842538889900CD405B /* CodeAnalysis.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CodeAnalysis.cpp; sourceTree = "<group>"; };
-		A0DD8C852538889900CD405B /* CodeAnalysis.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CodeAnalysis.hpp; sourceTree = "<group>"; };
+		A0DD8C852538889900CD405B /* CodeAnalysis.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = CodeAnalysis.hpp; path = SoftProcessorUnit/Assembly/Helpers/AnalysisAndPreparing/CodeAnalysis.hpp; sourceTree = SOURCE_ROOT; };
 		A0DD8C8A2538DC8A00CD405B /* StringDistance.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StringDistance.cpp; sourceTree = "<group>"; };
 		A0DD8C8B2538DC8A00CD405B /* StringDistance.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StringDistance.hpp; sourceTree = "<group>"; };
 		A0DD8CBC2539F09500CD405B /* LabelsStore.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LabelsStore.cpp; sourceTree = "<group>"; };
@@ -149,6 +151,8 @@
 		A071A8E52534D19D008711EF = {
 			isa = PBXGroup;
 			children = (
+				A04D82872540AB5B0095FB80 /* CMakeSourcesAndHeaders.txt */,
+				A04D82862540A91D0095FB80 /* CMakeLists.txt */,
 				A071A8F02534D19D008711EF /* SoftProcessorUnit */,
 				A071A8EF2534D19D008711EF /* Products */,
 			);
