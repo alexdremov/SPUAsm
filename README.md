@@ -1,5 +1,6 @@
 # Транслятор assembly-подобного кода и SPU-исполнитель
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0ef56e0968ad4689a264716b9becbd09)](https://app.codacy.com/gh/AlexRoar/SPUAsm?utm_source=github.com&utm_medium=referral&utm_content=AlexRoar/SPUAsm&utm_campaign=Badge_Grade)
 [![CodeFactor](https://www.codefactor.io/repository/github/alexroar/spuasm/badge)](https://www.codefactor.io/repository/github/alexroar/spuasm)
 
 В данном проекте реализован транслятор кода в неравномерный байткод, дизассемблер для байткода, исполнитель байткода (Soft Processor Unit).
