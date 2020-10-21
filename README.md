@@ -1,4 +1,7 @@
 # Транслятор assembly-подобного кода и SPU-исполнитель
+
+[![CodeFactor](https://www.codefactor.io/repository/github/alexroar/spuasm/badge)](https://www.codefactor.io/repository/github/alexroar/spuasm)
+
 В данном проекте реализован транслятор кода в неравномерный байткод, дизассемблер для байткода, исполнитель байткода (Soft Processor Unit).
 
 В дополнение, присутствует анализатор кода, проверяющий синтаксические ошибки и выбрасывающий отчет в clang формате. Поэтому, XCode и другие IDE поддерживающие clang подсвечивают неверные выражения, отображают комментарии.
