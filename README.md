@@ -12,6 +12,7 @@
 <img src="https://github.com/AlexRoar/SPUAsm/raw/main/Images/generalview.png">
 <img height="100px" src="https://github.com/AlexRoar/SPUAsm/raw/main/Images/errors.png">
 
+- [Документация](https://alexroar.github.io/SPUAsm/html/)
 - [Основной код транслятора](https://github.com/AlexRoar/SPUAsm/blob/main/SoftProcessorUnit/Assembly/SPUAssembly.cpp)
 - [Основной код дизассемблера](https://github.com/AlexRoar/SPUAsm/blob/main/SoftProcessorUnit/Disassembly/SPUDisAssembly.cpp)
 - [Основной код SPU](https://github.com/AlexRoar/SPUAsm/blob/main/SoftProcessorUnit/SPU/SPU.cpp)
