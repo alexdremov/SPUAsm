@@ -1,0 +1,19 @@
+; Jumps check
+
+push 0
+pop rax
+
+forewer:
+
+push rax
+push rax
+mul
+
+out
+
+pop
+
+inc rax
+
+jmp forewer
+

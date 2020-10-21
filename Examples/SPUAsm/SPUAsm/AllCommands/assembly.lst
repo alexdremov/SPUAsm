@@ -1,0 +1,23 @@
+SPUAssembly v1.1.4r AllCommands.spus -> AllCommands.spub
+26    ->    35 | 10  | push 2                    |  0  0  0  0  0  0  0  0  0 40 
+36    ->    38 | 3   | push rbx                  |  0  1  1 
+39    ->    40 | 2   | pop                       |  1  0 
+41    ->    43 | 3   | pop rdx                   |  1  1  3 
+44    ->    45 | 2   | in                        |  2  0 
+46    ->    48 | 3   | in rcx                    |  2  1  2 
+49    ->    49 | 1   | dump                      |  3 
+50    ->    50 | 1   | add                       |  5 
+51    ->    51 | 1   | mul                       |  7 
+52    ->    52 | 1   | sub                       |  6 
+53    ->    53 | 1   | div                       |  8 
+54    ->    54 | 1   | sin                       |  9 
+55    ->    55 | 1   | cos                       |  a 
+56    ->    56 | 1   | sqrt                      |  b 
+57    ->    57 | 1   | het                       |  d 
+58    ->    59 | 2   | out                       |  e  0 
+60    ->    62 | 3   | push rax                  |  0  1  0 
+63    ->    65 | 3   | push rbx                  |  0  1  1 
+66    ->    68 | 3   | push rcx                  |  0  1  2 
+69    ->    71 | 3   | push rdx                  |  0  1  3 
+72    ->    81 | 10  | push 0                    |  0  0  0  0  0  0  0  0  0  0 
+82    ->    91 | 10  | push 1                    |  0  0  0  0  0  0  0  0 f0 3f 

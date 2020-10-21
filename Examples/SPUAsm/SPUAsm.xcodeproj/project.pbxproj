@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 53;
+	objects = {
+
+/* Begin PBXFileReference section */
+		A090F0E3253E3C7B00342FA0 /* jp.spus */ = {isa = PBXFileReference; explicitFileType = sourcecode.asm; path = jp.spus; sourceTree = "<group>"; usesTabs = 0; };
+		A090F0E8253E3CF100342FA0 /* assembly.lst */ = {isa = PBXFileReference; lastKnownFileType = text; path = assembly.lst; sourceTree = "<group>"; };
+		A090F0E9253E3CF100342FA0 /* jp.spub */ = {isa = PBXFileReference; lastKnownFileType = file; path = jp.spub; sourceTree = "<group>"; };
+		A090F0EA253E3CF100342FA0 /* assembly.spuprep */ = {isa = PBXFileReference; lastKnownFileType = text; path = assembly.spuprep; sourceTree = "<group>"; };
+		A090F0EF253E422700342FA0 /* jpDis.spus */ = {isa = PBXFileReference; lastKnownFileType = text; path = jpDis.spus; sourceTree = "<group>"; };
+		A0DD8B942536472400CD405B /* assembly.lst */ = {isa = PBXFileReference; lastKnownFileType = text; path = assembly.lst; sourceTree = "<group>"; };
+		A0DD8B952536472400CD405B /* assembly.spuprep */ = {isa = PBXFileReference; lastKnownFileType = text; path = assembly.spuprep; sourceTree = "<group>"; };
+		A0DD8BB725364DBC00CD405B /* AllCommands.spus */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AllCommands.spus; sourceTree = "<group>"; };
+		A0DD8BBC25364F6500CD405B /* AllCommandsDis.spus */ = {isa = PBXFileReference; lastKnownFileType = text; path = AllCommandsDis.spus; sourceTree = "<group>"; };
+		A0DD8BC12536525400CD405B /* AllCommands.spub */ = {isa = PBXFileReference; explicitFileType = compiled; path = AllCommands.spub; sourceTree = "<group>"; };
+		A0DD8BEC25370C6300CD405B /* squareroots.spus */ = {isa = PBXFileReference; explicitFileType = sourcecode.asm; path = squareroots.spus; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.asm.arm; };
+		A0DD8BF125370D1300CD405B /* assembly.lst */ = {isa = PBXFileReference; lastKnownFileType = text; path = assembly.lst; sourceTree = "<group>"; };
+		A0DD8BF225370D1300CD405B /* sr.spub */ = {isa = PBXFileReference; lastKnownFileType = text; path = sr.spub; sourceTree = "<group>"; };
+		A0DD8BF325370D1300CD405B /* assembly.spuprep */ = {isa = PBXFileReference; lastKnownFileType = text; path = assembly.spuprep; sourceTree = "<group>"; };
+		A0DD8C4A2537ABBD00CD405B /* srDis.spus */ = {isa = PBXFileReference; lastKnownFileType = text; path = srDis.spus; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		A090F0E2253E3C6800342FA0 /* Jumps */ = {
+			isa = PBXGroup;
+			children = (
+				A090F0E3253E3C7B00342FA0 /* jp.spus */,
+				A090F0E8253E3CF100342FA0 /* assembly.lst */,
+				A090F0EA253E3CF100342FA0 /* assembly.spuprep */,
+				A090F0E9253E3CF100342FA0 /* jp.spub */,
+				A090F0EF253E422700342FA0 /* jpDis.spus */,
+			);
+			path = Jumps;
+			sourceTree = "<group>";
+		};
+		A0DD8B86253644AA00CD405B = {
+			isa = PBXGroup;
+			children = (
+				A0DD8B91253644FF00CD405B /* SPUAsm */,
+			);
+			sourceTree = "<group>";
+		};
+		A0DD8B91253644FF00CD405B /* SPUAsm */ = {
+			isa = PBXGroup;
+			children = (
+				A090F0E2253E3C6800342FA0 /* Jumps */,
+				A0DD8BEB25370C2B00CD405B /* SquareRoots */,
+				A0DD8B93253646A900CD405B /* AllCommands */,
+			);
+			path = SPUAsm;
+			sourceTree = "<group>";
+		};
+		A0DD8B93253646A900CD405B /* AllCommands */ = {
+			isa = PBXGroup;
+			children = (
+				A0DD8BB725364DBC00CD405B /* AllCommands.spus */,
+				A0DD8BBC25364F6500CD405B /* AllCommandsDis.spus */,
+				A0DD8BC12536525400CD405B /* AllCommands.spub */,
+				A0DD8B942536472400CD405B /* assembly.lst */,
+				A0DD8B952536472400CD405B /* assembly.spuprep */,
+			);
+			path = AllCommands;
+			sourceTree = "<group>";
+		};
+		A0DD8BEB25370C2B00CD405B /* SquareRoots */ = {
+			isa = PBXGroup;
+			children = (
+				A0DD8BEC25370C6300CD405B /* squareroots.spus */,
+				A0DD8BF325370D1300CD405B /* assembly.spuprep */,
+				A0DD8BF125370D1300CD405B /* assembly.lst */,
+				A0DD8BF225370D1300CD405B /* sr.spub */,
+				A0DD8C4A2537ABBD00CD405B /* srDis.spus */,
+			);
+			path = SquareRoots;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		A090F0E4253E3C8900342FA0 /* SPUAsmJP */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--input $(INPUT_FILE) --output $(OUTPUT_FILE) $(VERBOSE) $(PREPROCESSINGOUT) --lstfile";
+			buildConfigurationList = A090F0E5253E3C8900342FA0 /* Build configuration list for PBXLegacyTarget "SPUAsmJP" */;
+			buildPhases = (
+			);
+			buildToolPath = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/DerivedData/SoftProcessorUnit/Build/Products/Release/SPUAsm";
+			buildWorkingDirectory = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/Examples/SPUAsm/SPUAsm/Jumps";
+			dependencies = (
+			);
+			name = SPUAsmJP;
+			passBuildSettingsInEnvironment = 1;
+			productName = SPUAsm;
+		};
+		A090F0EB253E418E00342FA0 /* SPUDisAsmJP */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--input $(INPUT_FILE) --output $(OUTPUT_FILE) $(VERBOSE)";
+			buildConfigurationList = A090F0EC253E418E00342FA0 /* Build configuration list for PBXLegacyTarget "SPUDisAsmJP" */;
+			buildPhases = (
+			);
+			buildToolPath = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/DerivedData/SoftProcessorUnit/Build/Products/Release/SPUDisAsm";
+			buildWorkingDirectory = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/Examples/SPUAsm/SPUAsm/Jumps";
+			dependencies = (
+			);
+			name = SPUDisAsmJP;
+			passBuildSettingsInEnvironment = 1;
+			productName = SPUDisAsm;
+		};
+		A0DD8BED25370C7A00CD405B /* SPUAsmSR */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--input $(INPUT_FILE) --output $(OUTPUT_FILE) $(VERBOSE) $(PREPROCESSINGOUT) --lstfile";
+			buildConfigurationList = A0DD8BEE25370C7A00CD405B /* Build configuration list for PBXLegacyTarget "SPUAsmSR" */;
+			buildPhases = (
+			);
+			buildToolPath = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/DerivedData/SoftProcessorUnit/Build/Products/Release/SPUAsm";
+			buildWorkingDirectory = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/Examples/SPUAsm/SPUAsm/SquareRoots";
+			dependencies = (
+			);
+			name = SPUAsmSR;
+			passBuildSettingsInEnvironment = 1;
+			productName = SPUAsm;
+		};
+		A0DD8C462537AB2E00CD405B /* SPUDisAsmSR */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--input $(INPUT_FILE) --output $(OUTPUT_FILE) $(VERBOSE)";
+			buildConfigurationList = A0DD8C472537AB2E00CD405B /* Build configuration list for PBXLegacyTarget "SPUDisAsmSR" */;
+			buildPhases = (
+			);
+			buildToolPath = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/DerivedData/SoftProcessorUnit/Build/Products/Release/SPUDisAsm";
+			buildWorkingDirectory = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/Examples/SPUAsm/SPUAsm/SquareRoots";
+			dependencies = (
+			);
+			name = SPUDisAsmSR;
+			passBuildSettingsInEnvironment = 1;
+			productName = SPUDisAsm;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		A0DD8B87253644AA00CD405B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+			};
+			buildConfigurationList = A0DD8B8A253644AA00CD405B /* Build configuration list for PBXProject "SPUAsm" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A0DD8B86253644AA00CD405B;
+			productRefGroup = A0DD8B86253644AA00CD405B;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0DD8C462537AB2E00CD405B /* SPUDisAsmSR */,
+				A0DD8BED25370C7A00CD405B /* SPUAsmSR */,
+				A090F0EB253E418E00342FA0 /* SPUDisAsmJP */,
+				A090F0E4253E3C8900342FA0 /* SPUAsmJP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		A090F0E6253E3C8900342FA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INPUT_FILE = jp.spus;
+				OUTPUT_FILE = jp.spub;
+				PREPROCESSINGOUT = "-E";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERBOSE = "--verbose";
+			};
+			name = Debug;
+		};
+		A090F0E7253E3C8900342FA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INPUT_FILE = jp.spus;
+				OUTPUT_FILE = jp.spub;
+				PREPROCESSINGOUT = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERBOSE = "";
+			};
+			name = Release;
+		};
+		A090F0ED253E418E00342FA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INPUT_FILE = jp.spub;
+				OUTPUT_FILE = jpDis.spus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERBOSE = "--verbose";
+			};
+			name = Debug;
+		};
+		A090F0EE253E418E00342FA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INPUT_FILE = jp.spub;
+				OUTPUT_FILE = jpDis.spus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERBOSE = "";
+			};
+			name = Release;
+		};
+		A0DD8B8C253644AA00CD405B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		A0DD8B8D253644AA00CD405B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = "-O3";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Release;
+		};
+		A0DD8BEF25370C7A00CD405B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INPUT_FILE = squareroots.spus;
+				OUTPUT_FILE = sr.spub;
+				PREPROCESSINGOUT = "-E";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERBOSE = "--verbose";
+			};
+			name = Debug;
+		};
+		A0DD8BF025370C7A00CD405B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INPUT_FILE = squareroots.spus;
+				OUTPUT_FILE = sr.spub;
+				PREPROCESSINGOUT = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERBOSE = "";
+			};
+			name = Release;
+		};
+		A0DD8C482537AB2E00CD405B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INPUT_FILE = sr.spub;
+				OUTPUT_FILE = srDis.spus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERBOSE = "--verbose";
+			};
+			name = Debug;
+		};
+		A0DD8C492537AB2E00CD405B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INPUT_FILE = sr.spub;
+				OUTPUT_FILE = srDis.spus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERBOSE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A090F0E5253E3C8900342FA0 /* Build configuration list for PBXLegacyTarget "SPUAsmJP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A090F0E6253E3C8900342FA0 /* Debug */,
+				A090F0E7253E3C8900342FA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A090F0EC253E418E00342FA0 /* Build configuration list for PBXLegacyTarget "SPUDisAsmJP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A090F0ED253E418E00342FA0 /* Debug */,
+				A090F0EE253E418E00342FA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0DD8B8A253644AA00CD405B /* Build configuration list for PBXProject "SPUAsm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0DD8B8C253644AA00CD405B /* Debug */,
+				A0DD8B8D253644AA00CD405B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0DD8BEE25370C7A00CD405B /* Build configuration list for PBXLegacyTarget "SPUAsmSR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0DD8BEF25370C7A00CD405B /* Debug */,
+				A0DD8BF025370C7A00CD405B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0DD8C472537AB2E00CD405B /* Build configuration list for PBXLegacyTarget "SPUDisAsmSR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0DD8C482537AB2E00CD405B /* Debug */,
+				A0DD8C492537AB2E00CD405B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A0DD8B87253644AA00CD405B /* Project object */;
+}

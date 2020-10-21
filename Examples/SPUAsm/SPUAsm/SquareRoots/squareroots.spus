@@ -1,0 +1,60 @@
+;
+; Data input
+; (a, b, c)
+;
+in      rax
+in      rbx
+in      rcx
+
+;
+; D calculation
+;
+push    rbx
+push    2
+pow
+
+push    4
+push    rax
+mul
+push    rcx
+mul
+sub
+sqrt
+pop     rdx
+
+
+;
+; First x
+;
+clear
+push    -1
+push    rbx
+mul
+push    rdx
+sub
+push    2
+div
+push    rax
+div
+pop     rcx
+
+;
+; Second x
+;
+clear
+push    -1
+push    rbx
+mul
+push    rdx
+add
+push    2
+div
+push    rax
+div
+pop     rax
+
+;
+; Output
+;
+out     rax
+out     rcx

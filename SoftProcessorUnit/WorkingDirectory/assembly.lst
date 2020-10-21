@@ -1,0 +1,14 @@
+SPUAssembly v2.0.1r prog.spus -> output.spub
+26    ->    35 | 10  | push <0>                  |  0  0  0  0  0  0  0  0  0  0 
+36    ->    38 | 3   | pop <rax>                 |  1  1  0 
+x     ->     x | 0   | forewer:                  | 
+39    ->    41 | 3   | push <rax>                |  0  1  0 
+42    ->    44 | 3   | push <rax>                |  0  1  0 
+45    ->    45 | 1   | mul                       |  7 
+46    ->    47 | 2   | out                       |  e  0 
+48    ->    49 | 2   | pop                       |  1  0 
+50    ->    52 | 3   | push <rax>                |  0  1  0 
+53    ->    62 | 10  | push <1>                  |  0  0  0  0  0  0  0  0 f0 3f 
+63    ->    63 | 1   | add                       |  5 
+64    ->    66 | 3   | pop <rax>                 |  1  1  0 
+67    ->    71 | 5   | jmp <forewer>             |  f e4 ff ff ff 

@@ -1,0 +1,41 @@
+; push test
+push 2
+push rbx
+
+; pop test
+pop
+pop rdx
+
+; in test
+in
+in rcx
+
+; dump test
+dump
+
+; math test
+add
+mul
+sub
+div
+sin
+cos
+sqrt
+
+; sys test
+het
+out
+
+; registers test
+push rax
+push rbx
+push rcx
+push rdx
+
+; comments test
+push 0 ; here is some comment
+
+; They can
+; be
+; big
+push 1

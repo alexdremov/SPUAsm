@@ -1,0 +1,16 @@
+push 0
+pop rax
+forewer:
+push rax
+push rax
+mul
+out
+pop
+jmp simple
+dump
+simple:
+push rax
+push 1
+add
+pop rax
+jmp forewer
