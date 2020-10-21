@@ -5,7 +5,7 @@
 //  Created by Александр Дремов on 19.10.2020.
 //
 
-#include <time.h>
+#include <ctime>
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunused-parameter"

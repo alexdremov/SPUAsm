@@ -7,8 +7,8 @@
 
 #ifndef AssemblyHelpers_hpp
 #define AssemblyHelpers_hpp
-#include <stdlib.h>
-#include <stdio.h>
+#include <cstdlib>
+#include <cstdio>
 #include "AssemblyDTypes.hpp"
 #include "LabelsStore.hpp"
 
@@ -34,7 +34,7 @@ void DestructBinaryFile(BinaryFile* binFile);
 
 void DestructAssemblyParams(AssemblyParams* params);
 
-void printAssemblyHelpData(void);
+void printAssemblyHelpData();
 
 void printAssemblyVersion(AssemblyParams* params);
 

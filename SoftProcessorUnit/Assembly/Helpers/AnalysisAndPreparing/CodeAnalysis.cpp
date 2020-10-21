@@ -7,7 +7,7 @@
 
 #include "CodeAnalysis.hpp"
 #include "CommandToBytecode.hpp"
-#include <string.h>
+#include <cstring>
 #include "StringDistance.hpp"
 
 static int isspace(unsigned char a){
@@ -67,34 +67,35 @@ int generateErrors(SyntaxMapping* mapping, AssemblyParams* params, char* code) {
     
     while (newInstruction > (char*)(1)) {
         char* newlinePos = strchr(newInstruction, '\n');
-        if (newlinePos != NULL){
+        if (newlinePos != nullptr){
             *newlinePos = '\0';
         }
         
         char* commPos = strchr(newInstruction, ';');
         if (commPos == newInstruction) {
-            if (newlinePos != NULL){
+            if (newlinePos != nullptr){
                 *newlinePos = '\n';
             }
             newInstruction = strchr(newInstruction + 1, '\n');
             continue;
         }
-        if (commPos != NULL){
+        if (commPos != nullptr){
             *commPos = '\0';
         }
         
         result &= analyzeInstructionErrors(mapping, &localParams, binary, newInstruction, ++lineNo);
         
-        if (commPos != NULL){
+        if (commPos != nullptr){
             *commPos = ';';
         }
         
-        if (newlinePos != NULL){
+        if (newlinePos != nullptr){
             *newlinePos = '\n';
         }
         newInstruction = strchr(newInstruction, '\n') + 1;
     }
-    
+
+    DestructBinaryFile(binary);
     LabelParse completeTable = labelsTableComplete(&localParams, 1);
     
     if (completeTable != SPU_LABEL_OK) {
@@ -125,7 +126,7 @@ int analyzeInstructionErrors(SyntaxMapping* mapping, AssemblyParams* params, Bin
     int argsLen[SPU_CMD_MAXARGS] = {0};
     const char** argv = getArgList(trimmed, &argc, argsLen);
     
-    if (foundEntity == NULL) {
+    if (foundEntity == nullptr) {
         LabelParse resLabel = parseLabel(params, line);
         if (resLabel == SPU_LABEL_NOTFOUND) {
             const SyntaxEntity* best = bestMatchCommand(mapping, trimmed);
@@ -198,7 +199,7 @@ int analyzeInstructionErrors(SyntaxMapping* mapping, AssemblyParams* params, Bin
 
 const SyntaxEntity* bestMatchCommand(SyntaxMapping* mapping, char* command) {
     char* nextInstr = strchr(command, ' ');
-    if (nextInstr != NULL){
+    if (nextInstr != nullptr){
         *nextInstr = '\0';
     }
     
@@ -212,7 +213,7 @@ const SyntaxEntity* bestMatchCommand(SyntaxMapping* mapping, char* command) {
             index = (int)i;
         }
     }
-    if (nextInstr != NULL){
+    if (nextInstr != nullptr){
         *nextInstr = ' ';
     }
     
@@ -222,8 +223,8 @@ const SyntaxEntity* bestMatchCommand(SyntaxMapping* mapping, char* command) {
 void analyzeLabelsErrors(AssemblyParams* params){
     JMPLabel* current = params->labelsStore->first;
     
-    while(current != NULL ) {
-        if (current->name == NULL)
+    while(current != nullptr ) {
+        if (current->name == nullptr)
             break;
         if (current->positionTo == -1) {
             int lineNo = findLineWithSubstrung(params->codeText, current->name);
@@ -247,36 +248,36 @@ void analyzeLabelsErrors(AssemblyParams* params){
 int findLineWithSubstrung(char* code, char* substr){
     char* newInstruction = code;
     int lineNo = 0;
-    if (substr == NULL || code == NULL)
+    if (substr == nullptr || code == nullptr)
         return -1;
     
     while (newInstruction > (char*)(1)) {
         char* newlinePos = strchr(newInstruction, '\n');
-        if (newlinePos != NULL){
+        if (newlinePos != nullptr){
             *newlinePos = '\0';
         }
         
         char* commPos = strchr(newInstruction, ';');
         if (commPos == newInstruction) {
-            if (newlinePos != NULL){
+            if (newlinePos != nullptr){
                 *newlinePos = '\n';
             }
             newInstruction = strchr(newInstruction + 1, '\n');
             continue;
         }
-        if (commPos != NULL){
+        if (commPos != nullptr){
             *commPos = '\0';
         }
         ++lineNo;
-        if(strstr(newInstruction, substr) != NULL) {
+        if(strstr(newInstruction, substr) != nullptr) {
             return lineNo;
         }
        
-        if (commPos != NULL){
+        if (commPos != nullptr){
             *commPos = ';';
         }
         
-        if (newlinePos != NULL){
+        if (newlinePos != nullptr){
             *newlinePos = '\n';
         }
         newInstruction = strchr(newInstruction, '\n') + 1;

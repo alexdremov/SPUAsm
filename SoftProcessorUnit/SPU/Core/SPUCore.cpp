@@ -50,5 +50,4 @@ InstructionExeResult executeInstruction(SPUCore* core,
         default:
             return SPU_EXE_UNKNOWN;
     }
-    return SPU_EXE_OK;
 }

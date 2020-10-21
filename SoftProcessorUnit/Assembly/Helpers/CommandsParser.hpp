@@ -8,7 +8,7 @@
 #ifndef CommandsParser_hpp
 #define CommandsParser_hpp
 
-#include <stdio.h>
+#include <cstdio>
 #include "CommandsDTypes.hpp"
 #include "AssemblyHelpers.hpp"
 #include "Syntax.hpp"

@@ -8,7 +8,7 @@
 #ifndef CodeAnalysis_hpp
 #define CodeAnalysis_hpp
 
-#include <stdio.h>
+#include <cstdio>
 #include "Syntax.hpp"
 #include "AssemblyDTypes.hpp"
 #include "AssemblyHelpers.hpp"

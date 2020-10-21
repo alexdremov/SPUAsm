@@ -34,4 +34,6 @@
 # Derived data
 DerivedData/
 build/
-
+cmake-build-debug/
+cmake-build-release/
+.idea

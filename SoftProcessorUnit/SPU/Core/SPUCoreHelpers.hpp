@@ -8,12 +8,12 @@
 #ifndef SPUCoreHelpers_hpp
 #define SPUCoreHelpers_hpp
 
-#include <stdio.h>
+#include <cstdio>
 #include "SPUDtypes.hpp"
 
 int  parseSPUArgs(RunParameters* parameters, int argc, const char * argv[]);
 
-void spuHelp(void);
+void spuHelp();
 
 void DestructSPUArgs(RunParameters* parameters);
 

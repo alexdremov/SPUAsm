@@ -8,7 +8,7 @@
 #ifndef DisAssemblyHelpers_hpp
 #define DisAssemblyHelpers_hpp
 
-#include <stdio.h>
+#include <cstdio>
 #include "DisAssemblyDTypes.hpp"
 #include "TranslationDTypes.hpp"
 #include "AssemblyHelpers.hpp"
@@ -18,7 +18,7 @@
 
 int  parseArgs(int argc, const char* argv[], DisassemblyParams* params);
 
-void printDisAssemblyHelpData(void);
+void printDisAssemblyHelpData();
 
 void DestructDisAssemblyParams(DisassemblyParams* params);
 

@@ -6,16 +6,16 @@
 //
 
 #include "LabelsStore.hpp"
-#include <stdlib.h>
-#include <string.h>
+#include <cstdlib>
+#include <cstring>
 
 
 JMPLabel::JMPLabel(JMPLabel* previous, char* name) {
-    if (previous != NULL)
+    if (previous != nullptr)
         previous->next = this;
     this->nameLen = strlen(name);
     this->name = (char*)calloc(this->nameLen + 1, sizeof(char));
-    this->next = NULL;
+    this->next = nullptr;
     this->used = 0;
     this->positionTo = -1;
     this->positionFrom = -1;
@@ -38,16 +38,16 @@ void JMPLabel::foundToPosition(unsigned int position) {
 void JMPLabelsStore::newLabel(char* label) {
     JMPLabel* previous = this->last;
     JMPLabel* newLabel = new JMPLabel(this->last, label);
-    if (this->last == NULL)
+    if (this->last == nullptr)
         this->first = (this->last = newLabel);
     else
         this->last  = newLabel;
     
     
     JMPLabel* current = this->first;
-    while (current != NULL && current != this->last) {
+    while (current != nullptr && current != this->last) {
         if (strcmp(current->name, newLabel->name) == 0){
-            previous->next = NULL;
+            previous->next = nullptr;
             this->last = previous;
             delete newLabel;
             throw "Label exists";
@@ -60,7 +60,7 @@ void JMPLabelsStore::newLabel(char* label) {
 void JMPLabelsStore::setLabelToPosition(char* label, unsigned int position) {
     JMPLabel* current = this->getLabel(label);
     
-    if (current == NULL) {
+    if (current == nullptr) {
         this->newLabel(label);
         current = this->last;
     }
@@ -75,38 +75,38 @@ void JMPLabelsStore::setLabelToPosition(char* label, unsigned int position) {
 void JMPLabelsStore::setLabelFromPosition(char* label, unsigned int position) {
     JMPLabel* current = this->getLabel(label);
     
-    if (current == NULL) {
+    if (current == nullptr) {
         this->newLabel(label);
         current = this->last;
     }
     current->positionFrom = position;
 }
 
-JMPLabel* JMPLabelsStore::getLabel(char* label) {
+JMPLabel* JMPLabelsStore::getLabel(char* label) const {
     JMPLabel* current = this->first;
-    while (current != NULL) {
+    while (current != nullptr) {
         if (strcmp(current->name, label) == 0) {
             return current;
         }
         current = current->next;
     }
     
-    return NULL;
+    return nullptr;
 }
 
 JMPLabelsStore::~JMPLabelsStore() {
     JMPLabel* current = this->first;
     
-    while (current != NULL) {
+    while (current != nullptr) {
         JMPLabel* next = current->next;
         delete current;
         current = next;
     }
 }
 
-long int JMPLabelsStore::getLabelToPosition(char* label) {
+long int JMPLabelsStore::getLabelToPosition(char* label) const {
     JMPLabel* current = this->first;
-    while (current != NULL) {
+    while (current != nullptr) {
         if (strcmp(current->name, label) == 0) {
             return current->positionTo;
         }
@@ -115,4 +115,7 @@ long int JMPLabelsStore::getLabelToPosition(char* label) {
     return -1;
 }
 
-JMPLabelsStore::JMPLabelsStore() {}
+JMPLabelsStore::JMPLabelsStore() {
+    this->first = nullptr;
+    this->last = nullptr;
+}

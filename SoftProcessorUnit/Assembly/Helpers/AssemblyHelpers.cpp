@@ -5,8 +5,8 @@
 //  Created by Александр Дремов on 12.10.2020.
 //
 
-#include <string.h>
-#include <assert.h>
+#include <cstring>
+#include <cassert>
 #include "AssemblyHelpers.hpp"
 #include "CommandsParser.hpp"
 #include "AssemblyDTypes.hpp"
@@ -15,7 +15,7 @@
 #define MAXPATHLEN 512
 
 int parseArgs(int argc, const char* argv[], AssemblyParams* params) {
-    AssemblyParams newParams = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    AssemblyParams newParams = {nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, 0};
     if (argc <= 1){
         printAssemblyHelpData();
     }
@@ -31,8 +31,8 @@ int parseArgs(int argc, const char* argv[], AssemblyParams* params) {
             FILE* inputFile = fopen(argv[i + 1], "rb");
             newParams.inputFile = inputFile;
             newParams.inputFileName = *(argv + i + 1);
-            realpath((const char*)newParams.inputFileName, newParams.inputFileRealName);
-            if (newParams.inputFile == NULL){
+            realpath(newParams.inputFileName, newParams.inputFileRealName);
+            if (newParams.inputFile == nullptr){
                 printf("error: assembly: Can't open input file %s\n", newParams.inputFileName);
                 return EXIT_FAILURE;
             }
@@ -62,12 +62,12 @@ int parseArgs(int argc, const char* argv[], AssemblyParams* params) {
         }else if (strcmp(argv[i], "-E") == 0) {
             newParams.prepFile = (FILE*) 1;
         } else {
-            if (newParams.inputFile == NULL){
+            if (newParams.inputFile == nullptr){
                 FILE* inputFile = fopen(argv[i], "rb");
                 newParams.inputFile = inputFile;
                 newParams.inputFileName = *(argv + i);
-                realpath((const char*)newParams.inputFileName, newParams.inputFileRealName);
-                if (newParams.inputFile == NULL){
+                realpath(newParams.inputFileName, newParams.inputFileRealName);
+                if (newParams.inputFile == nullptr){
                     printf("error: assembly: Can't open input file %s\n", argv[i]);
                     return EXIT_FAILURE;
                 }
@@ -75,33 +75,33 @@ int parseArgs(int argc, const char* argv[], AssemblyParams* params) {
         }
     }
     
-    if (newParams.inputFile == NULL) {
+    if (newParams.inputFile == nullptr) {
         printf("error: assembly: No input file specified\n");
         return EXIT_FAILURE;
     }
     
-    if (newParams.outputFile == NULL) {
+    if (newParams.outputFile == nullptr) {
         newParams.outputFile = fopen("output.spub", "wb");
         newParams.outputFileName = "output.spub";
-        if (newParams.outputFile == NULL){
+        if (newParams.outputFile == nullptr){
             printf("error: assembly: No output file specified\n");
             return EXIT_FAILURE;
         }
     }
     
-    if (newParams.lstFile == NULL) {
+    if (newParams.lstFile == nullptr) {
         newParams.lstFile = fopen("assembly.lst", "wb");
         newParams.lstFileName = "assembly.lst";
-        if (newParams.lstFile == NULL){
+        if (newParams.lstFile == nullptr){
             printf("error: assembly: No lstFile file specified\n");
             return EXIT_FAILURE;
         }
     }
     
-    if (newParams.prepFile != NULL) {
+    if (newParams.prepFile != nullptr) {
         newParams.prepFile = fopen("assembly.spuprep", "wb");
         newParams.prepFileName = "assembly.spuprep";
-        if (newParams.prepFileName == NULL) {
+        if (newParams.prepFileName == nullptr) {
             printf("error: assembly: Can't open assembly.spuprep\n");
             return EXIT_FAILURE;
         }
@@ -163,7 +163,7 @@ int appendToBinFile(BinaryFile* binFile, double block) {
 int resizeBinFile(BinaryFile* binFile, size_t spaceNeeded){
     if (binFile->currentSize + spaceNeeded >= binFile->maxSize){
         char* newCode = (char*) realloc(binFile->code, binFile->maxSize + spaceNeeded);
-        if (newCode == NULL)
+        if (newCode == nullptr)
             return EXIT_FAILURE;
         binFile->code = newCode;
         binFile->maxSize += spaceNeeded;
@@ -172,7 +172,7 @@ int resizeBinFile(BinaryFile* binFile, size_t spaceNeeded){
 }
 
 
-void printAssemblyHelpData(void) {
+void printAssemblyHelpData() {
     int SPUAssemblyVersion = SPU_VERSION;
     char* SPUAssemblyVersion_chars = (char*)&SPUAssemblyVersion;
     printf("SPUAssembly v%c.%c.%c%c help\n"
@@ -201,9 +201,9 @@ void DestructAssemblyParams(AssemblyParams* params) {
     fclose(params->lstFile);
     fclose(params->outputFile);
     free(params->inputFileRealName);
-    if (params->prepFile != NULL)
+    if (params->prepFile != nullptr)
         fclose(params->prepFile);
-    if (params->labelsStore != NULL)
+
         delete params->labelsStore;
 }
 
@@ -263,7 +263,7 @@ BinFileLoadResult loadBinFile(BinaryFile* binFile, FILE* inputFile) {
     curPos += sizeof(binFile->currentSize);
     
     resizeBinFile(binFile, binFile->currentSize + 20);
-    memcpy(binFile->code, (char*) curPos, binFile->currentSize);
+    memcpy(binFile->code, curPos, binFile->currentSize);
     
     return SPU_BINLOAD_OK;
 }
@@ -281,7 +281,7 @@ void printAssemblyVersion(AssemblyParams* params) {
                SPUAssemblyVersion_chars[3]);
     }
     
-    if (params->lstFile != NULL) {
+    if (params->lstFile != nullptr) {
         fprintf(params->lstFile,
                 "SPUAssembly v%c.%c.%c%c ",
                 SPUAssemblyVersion_chars[0],

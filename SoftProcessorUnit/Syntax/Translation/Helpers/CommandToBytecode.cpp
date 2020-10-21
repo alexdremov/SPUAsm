@@ -8,8 +8,8 @@
 #include "AssemblyHelpers.hpp"
 #include "CommandsParser.hpp"
 #include "Syntax.hpp"
-#include <string.h>
-#include <ctype.h>
+#include <cstring>
+#include <cctype>
 #include "CTBDefs.h"
 
 

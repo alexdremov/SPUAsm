@@ -5,8 +5,8 @@
 //  Created by Александр Дремов on 12.10.2020.
 //
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 #include "SPUCore.hpp"
 #include "SPUCoreHelpers.hpp"
 #include "Syntax.hpp"
@@ -87,8 +87,8 @@ int main(int argc, const char * argv[]) {
         if (params.verbose){
             StackDump(core.stack, -1, params.inputFileName, "ERROR");
             printf("REGs: ");
-            for (size_t i = 0; i < sizeof(core.REG) / sizeof(core.REG[0]); i++){
-                printf("%lg ", core.REG[i]);
+            for (double i : core.REG){
+                printf("%lg ", i);
             }
             printf("\n");
         }

@@ -5,7 +5,7 @@
 //  Created by Александр Дремов on 12.10.2020.
 //
 
-#include <stdio.h>
+#include <cstdio>
 #include "Syntax.hpp"
 #include "AssemblyHelpers.hpp"
 #include "CommandsParser.hpp"
@@ -41,7 +41,7 @@ int main(int argc, const char* argv[]){
     
     preprocessSource(code, &codeLen);
     
-    if (compileParams.prepFile != NULL) {
+    if (compileParams.prepFile != nullptr) {
         fwrite(code, 1, codeLen,compileParams.prepFile);
     }
     

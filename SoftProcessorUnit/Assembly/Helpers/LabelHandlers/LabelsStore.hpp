@@ -8,16 +8,16 @@
 #ifndef LabelsStore_hpp
 #define LabelsStore_hpp
 
-#include <stdio.h>
+#include <cstdio>
 
 struct JMPLabel {
-    char*  name                  = NULL;
-    size_t nameLen               = 0;
-    unsigned int    used         = 0;
-    long int    positionTo       = -1;
-    long int    positionFrom     = -1;
-    JMPLabel* next               = NULL;
-                
+    char*  name                 ;
+    size_t nameLen              ;
+    unsigned int    used        ;
+    long int    positionTo      ;
+    long int    positionFrom    ;
+    JMPLabel* next              ;
+    
     
     JMPLabel(JMPLabel* previous, char* name);
     
@@ -29,8 +29,8 @@ struct JMPLabel {
 };
 
 struct JMPLabelsStore {
-    JMPLabel* first = NULL;
-    JMPLabel* last  = NULL;
+    JMPLabel* first;
+    JMPLabel* last;
     
     void newLabel(char* label);
     
@@ -38,9 +38,9 @@ struct JMPLabelsStore {
     
     void setLabelFromPosition(char* label, unsigned int position);
     
-    long int getLabelToPosition(char* label);
+    long int getLabelToPosition(char* label) const;
     
-    JMPLabel* getLabel(char* label);
+    JMPLabel* getLabel(char* label) const;
     
     JMPLabelsStore();
     

@@ -8,7 +8,7 @@
 #ifndef EXEDefs_h
 #define EXEDefs_h
 
-#include <stdio.h>
+#include <cstdio>
 
 #include "InstrExecutors.hpp"
 #include "SPUDtypes.hpp"

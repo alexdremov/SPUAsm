@@ -6,8 +6,8 @@
 //
 
 #include "StringDistance.hpp"
-#include <string.h>
-#include <stdlib.h>
+#include <cstring>
+#include <cstdlib>
 
 
 static int min3(int a, int b, int c)
@@ -28,7 +28,7 @@ static unsigned int levenshtein_matrix_calculate(LevenshteinEdit **mat, const ch
     for (j = 1; j <= len2; j++) {
         for (i = 1; i <= len1; i++) {
             unsigned int substitution_cost;
-            unsigned int del = 0, ins = 0, subst = 0;
+            unsigned int del, ins, subst;
             unsigned int best;
             if (str1[i - 1] == str2[j - 1]) {
                 substitution_cost = 0;
@@ -71,29 +71,29 @@ static LevenshteinEdit **levenshtein_matrix_create(size_t len1,
 {
     unsigned int i, j;
     LevenshteinEdit **mat = (LevenshteinEdit **)malloc((len1 + 1) * sizeof(LevenshteinEdit *));
-    if (mat == NULL) {
-        return NULL;
+    if (mat == nullptr) {
+        return nullptr;
     }
     for (i = 0; i <= len1; i++) {
         mat[i] = (LevenshteinEdit *)malloc((len2 + 1) * sizeof(LevenshteinEdit));
-        if (mat[i] == NULL) {
+        if (mat[i] == nullptr) {
             for (j = 0; j < i; j++) {
                 free(mat[j]);
             }
             free(mat);
-            return NULL;
+            return nullptr;
         }
     }
     for (i = 0; i <= len1; i++) {
         mat[i][0].score = i;
-        mat[i][0].prev = NULL;
+        mat[i][0].prev = nullptr;
         mat[i][0].arg1 = 0;
         mat[i][0].arg2 = 0;
     }
     
     for (j = 0; j <= len2; j++) {
         mat[0][j].score = j;
-        mat[0][j].prev = NULL;
+        mat[0][j].prev = nullptr;
         mat[0][j].arg1 = 0;
         mat[0][j].arg2 = 0;
     }
@@ -116,7 +116,7 @@ unsigned int levenshtein_distance(const char *str1, const char *str2, Levenshtei
     /* Initialise the matrix */
     mat = levenshtein_matrix_create(len1, len2);
     if (!mat) {
-        *script = NULL;
+        *script = nullptr;
         return 0;
     }
     /* Main algorithm */
@@ -126,7 +126,7 @@ unsigned int levenshtein_distance(const char *str1, const char *str2, Levenshtei
     if (*script) {
         i = distance - 1;
         for (head = &mat[len1][len2];
-             head->prev != NULL;
+             head->prev != nullptr;
              head = head->prev) {
             if (head->type != NONE) {
                 memcpy(*script + i, head, sizeof(LevenshteinEdit));

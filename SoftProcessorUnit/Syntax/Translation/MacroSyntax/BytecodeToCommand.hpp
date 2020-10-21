@@ -8,7 +8,7 @@
 #ifndef BytecodeToCommand_hpp
 #define BytecodeToCommand_hpp
 
-#include <stdio.h>
+#include <cstdio>
 #include "DisAssemblyDTypes.hpp"
 #include "TranslationDTypes.hpp"
 #include "AssemblyHelpers.hpp"

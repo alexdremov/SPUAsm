@@ -6,12 +6,11 @@
 //
 
 #include "SPUCoreHelpers.hpp"
-#include "SPUCore.hpp"
 #include "SPUVersion.hpp"
-#include <string.h>
+#include <cstring>
 
 int parseSPUArgs(RunParameters* parameters, int argc, const char * argv[]) {
-    RunParameters newParams = {0, 0, 0, 0, 0};
+    RunParameters newParams = {0, nullptr, nullptr, nullptr, nullptr};
     
     if (argc <= 1){
         spuHelp();
@@ -27,7 +26,7 @@ int parseSPUArgs(RunParameters* parameters, int argc, const char * argv[]) {
             FILE* inputFile = fopen(argv[i + 1], "rb");
             newParams.inputFile = inputFile;
             newParams.inputFileName = *(argv + i + 1);
-            if (newParams.inputFile == NULL){
+            if (newParams.inputFile == nullptr){
                 printf("error: spu: Can't open input file\n");
                 return EXIT_FAILURE;
             }
@@ -46,11 +45,11 @@ int parseSPUArgs(RunParameters* parameters, int argc, const char * argv[]) {
         }else if (strcmp(argv[i], "--help") == 0 || strcmp(argv[i], "-h") == 0) {
             spuHelp();
         }else {
-            if (newParams.inputFile == NULL){
+            if (newParams.inputFile == nullptr){
                 FILE* inputFile = fopen(argv[i], "rb");
                 newParams.inputFile = inputFile;
                 newParams.inputFileName = *(argv + i);
-                if (newParams.inputFile == NULL){
+                if (newParams.inputFile == nullptr){
                     printf("error: spu: Can't open input file %s\n", argv[i]);
                     return EXIT_FAILURE;
                 }
@@ -58,12 +57,12 @@ int parseSPUArgs(RunParameters* parameters, int argc, const char * argv[]) {
         }
     }
     
-    if (newParams.inputFile == NULL) {
+    if (newParams.inputFile == nullptr) {
         printf("error: spu: No input file specified\n");
         return EXIT_FAILURE;
     }
     
-    if (newParams.outputFile == NULL) {
+    if (newParams.outputFile == nullptr) {
         newParams.outputFile = stdout;
         newParams.outputFileName = "stdout";
     }
@@ -72,7 +71,7 @@ int parseSPUArgs(RunParameters* parameters, int argc, const char * argv[]) {
     return EXIT_SUCCESS;
 }
 
-void spuHelp(void) {
+void spuHelp() {
     int SPUAssemblyVersion = SPU_VERSION;
     char* SPUAssemblyVersion_chars = (char*)&SPUAssemblyVersion;
     printf("SPU v%c.%c.%c%c help\n"

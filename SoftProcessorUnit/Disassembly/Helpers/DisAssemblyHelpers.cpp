@@ -5,9 +5,9 @@
 //  Created by Александр Дремов on 13.10.2020.
 //
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 #include "DisAssemblyHelpers.hpp"
 #include "AssemblyHelpers.hpp"
 #include "CommandsParser.hpp"
@@ -16,7 +16,7 @@
 
 
 int parseArgs(int argc, const char* argv[], DisassemblyParams* params) {
-    DisassemblyParams newParams = {0, 0, 0, 0, 0};
+    DisassemblyParams newParams = {nullptr, nullptr, nullptr, nullptr, 0};
     if (argc <= 1){
         printDisAssemblyHelpData();
     }
@@ -30,7 +30,7 @@ int parseArgs(int argc, const char* argv[], DisassemblyParams* params) {
             FILE* inputFile = fopen(argv[i + 1], "rb");
             newParams.inputFile = inputFile;
             newParams.inputFileName = *(argv + i + 1);
-            if (newParams.inputFile == NULL){
+            if (newParams.inputFile == nullptr){
                 printf("error: disassembly: Can't open input file\n");
                 return EXIT_FAILURE;
             }
@@ -49,11 +49,11 @@ int parseArgs(int argc, const char* argv[], DisassemblyParams* params) {
         }else if (strcmp(argv[i], "--help") == 0 || strcmp(argv[i], "-h") == 0) {
             printDisAssemblyHelpData();
         }else {
-            if (newParams.inputFile == NULL){
+            if (newParams.inputFile == nullptr){
                 FILE* inputFile = fopen(argv[i], "rb");
                 newParams.inputFile = inputFile;
                 newParams.inputFileName = *(argv + i);
-                if (newParams.inputFile == NULL){
+                if (newParams.inputFile == nullptr){
                     printf("error: disassembly: Can't open input file %s\n", argv[i]);
                     return EXIT_FAILURE;
                 }
@@ -61,15 +61,15 @@ int parseArgs(int argc, const char* argv[], DisassemblyParams* params) {
         }
     }
     
-    if (newParams.inputFile == NULL) {
+    if (newParams.inputFile == nullptr) {
         printf("error: disassembly: No input file specified\n");
         return EXIT_FAILURE;
     }
     
-    if (newParams.outputFile == NULL) {
+    if (newParams.outputFile == nullptr) {
         newParams.outputFile = stdout;
         newParams.outputFileName = "stdout";
-        if (newParams.outputFile == NULL){
+        if (newParams.outputFile == nullptr){
             printf("error: disassembly: No output file specified\n");
             return EXIT_FAILURE;
         }
@@ -81,7 +81,7 @@ int parseArgs(int argc, const char* argv[], DisassemblyParams* params) {
 }
 
 
-void printDisAssemblyHelpData(void) {
+void printDisAssemblyHelpData() {
     int SPUAssemblyVersion = SPU_VERSION;
     char* SPUAssemblyVersion_chars = (char*)&SPUAssemblyVersion;
     printf("SPUDisAssembly v%c.%c.%c%c help\n"
@@ -124,7 +124,7 @@ DisassemblyParseResult disAssamblyInstruction(DisassemblyParams* params,
     
     const SyntaxEntity* entity = getSyntaxEntityByCode(mapping, instructionId);
     
-    if (entity == NULL) {
+    if (entity == nullptr) {
         printf("error: disassembly: found unknown command (%d) or invalid sequence formation\n", instructionId);
         return SPU_DISASM_UNKNOWN_CMD;
     }

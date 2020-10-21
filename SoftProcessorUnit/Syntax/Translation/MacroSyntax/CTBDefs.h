@@ -5,7 +5,7 @@
 //  Created by Александр Дремов on 19.10.2020.
 //
 
-#include <stdio.h>
+#include <cstdio>
 #include "Syntax.hpp"
 #include "TranslationDTypes.hpp"
 #include "AssemblyHelpers.hpp"
@@ -42,7 +42,7 @@
 
 #define SETLABELPOS if (compileParams->labelsStore != NULL) compileParams->labelsStore->setLabelFromPosition((char*)argv[1], (unsigned int)binary->currentSize)
 
-#define GETLABELPOS (int)(compileParams->labelsStore->getLabelToPosition((char*)argv[1])) - (int)(binary->currentSize) + 1
+#define GETLABELPOS ((int)(compileParams->labelsStore->getLabelToPosition((char*)argv[1])) - (int)(binary->currentSize) + 1)
 
 #define ZEROORREGISTERNO LSTDUMPED({{\
 APPENDCHAR(thou->code);\

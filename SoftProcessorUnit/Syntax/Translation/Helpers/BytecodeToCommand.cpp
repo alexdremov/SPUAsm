@@ -5,7 +5,7 @@
 //  Created by Александр Дремов on 13.10.2020.
 //
 
-#include <string.h>
+#include <cstring>
 #include "BytecodeToCommand.hpp"
 #include "DisAssemblyDTypes.hpp"
 #include "TranslationDTypes.hpp"
@@ -25,7 +25,7 @@ int checkBytesEnough(const SyntaxEntity* thou, BinaryFile* binary, char* SPI) {
     return checkBytesEnoughNumber(binary, SPI, neededBytes);
 }
 
-int checkBytesEnoughNumber(BinaryFile* binary, char* SPI, size_t bytes) {
+int checkBytesEnoughNumber(BinaryFile* binary, const char* SPI, size_t bytes) {
     if (SPI + bytes > binary->code + binary->currentSize)
         return 0;
     return 1;

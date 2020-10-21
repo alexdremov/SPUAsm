@@ -6,9 +6,6 @@ push rax
 mul
 out
 pop
-jmp simple
-dump
-simple:
 push rax
 push 1
 add

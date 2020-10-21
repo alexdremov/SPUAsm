@@ -5,7 +5,7 @@
 //  Created by Александр Дремов on 12.10.2020.
 //
 
-#include <stdio.h>
+#include <cstdio>
 #include "AssemblyHelpers.hpp"
 #include "DisAssemblyDTypes.hpp"
 #include "DisAssemblyHelpers.hpp"

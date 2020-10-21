@@ -7,7 +7,7 @@
 
 #ifndef SPUCore_hpp
 #define SPUCore_hpp
-#include <stdio.h>
+#include <cstdio>
 
 #include "Syntax.hpp"
 #include "SPUDtypes.hpp"

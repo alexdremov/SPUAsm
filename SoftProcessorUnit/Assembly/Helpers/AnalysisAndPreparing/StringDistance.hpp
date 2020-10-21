@@ -8,7 +8,7 @@
 #ifndef StringDistance_hpp
 #define StringDistance_hpp
 
-#include <stdio.h>
+#include <cstdio>
 
 typedef enum {
     INSERTION,

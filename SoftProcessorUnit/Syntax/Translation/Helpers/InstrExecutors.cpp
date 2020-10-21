@@ -7,7 +7,7 @@
 
 
 #include "InstrExecutors.hpp"
-#include <math.h>
+#include <cmath>
 #include "EXEDefs.h"
 
 #undef OPEXE_FUNC

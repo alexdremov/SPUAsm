@@ -20,7 +20,7 @@ fprintf(params->outputFile, "\n"); }
 
 int checkBytesEnough(const SyntaxEntity* thou, BinaryFile* binary, char* SPI);
 
-int checkBytesEnoughNumber(BinaryFile* binary, char* SPI, size_t bytes);
+int checkBytesEnoughNumber(BinaryFile* binary, const char* SPI, size_t bytes);
 
 
 #endif /* BTCDefs_h */

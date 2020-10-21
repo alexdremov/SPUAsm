@@ -8,7 +8,7 @@
 #ifndef Syntax_h
 #define Syntax_h
 
-#include <stdlib.h>
+#include <cstdlib>
 #include "TranslationDTypes.hpp"
 #include "AssemblyHelpers.hpp"
 #include "CommandToBytecode.hpp"
@@ -38,13 +38,13 @@ struct SyntaxMapping{
     const size_t        number;
 };
 
-SyntaxMapping getSyntaxMapping(void);
+SyntaxMapping getSyntaxMapping();
 
 int   getSyntaxCode(const SyntaxMapping* mapping, const char* name);
 
-const char* getSyntaxName(const SyntaxMapping* mapping,  const char code);
+const char* getSyntaxName(const SyntaxMapping* mapping,  char code);
 
-const SyntaxEntity* getSyntaxEntityByCode(const SyntaxMapping* mapping, const char code);
+const SyntaxEntity* getSyntaxEntityByCode(const SyntaxMapping* mapping, char code);
 
 const SyntaxEntity* getSyntaxEntityByName(const SyntaxMapping* mapping, const char* name);
 

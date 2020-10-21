@@ -6,14 +6,6 @@
 cmake_minimum_required (VERSION 3.4)
 project( SoftProcessorUnit CXX)
 
-if(NOT CMAKE_BUILD_TYPE)
-   set(CMAKE_BUILD_TYPE Release)
-endif()
-
-set(CMAKE_CXX_FLAGS "-Wall -Wextra")
-set(CMAKE_CXX_FLAGS_DEBUG "-g")
-set(CMAKE_CXX_FLAGS_RELEASE "-O3")
-
 # ###
 # Build for mulle-objc (https://mulle-objc.github.io/):
 #
@@ -182,23 +174,7 @@ set( SPUDIS_ASM_DEPENDENCIES
 )
 
 include_directories(
-SoftProcessorUnit/
-SoftProcessorUnit/Disassembly
-SoftProcessorUnit/Disassembly/Helpers
-SoftProcessorUnit/Assembly
-SoftProcessorUnit/Assembly/Helpers
-SoftProcessorUnit/Assembly/Helpers/LabelHandlers
-SoftProcessorUnit/Assembly/Helpers/DataTypes
-SoftProcessorUnit/Assembly/Helpers/AnalysisAndPreparing
-SoftProcessorUnit/Common
-SoftProcessorUnit/Common/Stack
-SoftProcessorUnit/SPU
-SoftProcessorUnit/SPU/Core
-SoftProcessorUnit/Syntax
-SoftProcessorUnit/Syntax/Translation
-SoftProcessorUnit/Syntax/Translation/MacroSyntax
-SoftProcessorUnit/Syntax/Translation/Helpers
-SoftProcessorUnit/WorkingDirectory
+{{include_dirs}}
 )
 
 
