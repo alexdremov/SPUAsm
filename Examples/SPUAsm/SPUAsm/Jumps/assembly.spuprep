@@ -1,10 +1,10 @@
 push 0
 pop rax
-forewer:
+forever:
 push rax
 push rax
 mul
 out
 pop
 inc rax
-jmp forewer
+jmp forever

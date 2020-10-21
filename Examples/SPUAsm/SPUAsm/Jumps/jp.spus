@@ -3,7 +3,7 @@
 push 0
 pop rax
 
-forewer:
+forever:
 
 push rax
 push rax
@@ -15,5 +15,5 @@ pop
 
 inc rax
 
-jmp forewer
+jmp forever
 
