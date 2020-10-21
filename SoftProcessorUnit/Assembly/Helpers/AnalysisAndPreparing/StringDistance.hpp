@@ -15,17 +15,17 @@ typedef enum {
     DELETION,
     SUBSTITUTION,
     NONE
-} edit_type;
+} LevenshteinEditType;
  
-struct edit {
+struct LevenshteinEdit {
     unsigned int score;
-    edit_type type;
+    LevenshteinEditType type;
     char arg1;
     char arg2;
     unsigned int pos;
-    struct edit *prev;
+    struct LevenshteinEdit *prev;
 };
-typedef struct edit edit;
+typedef struct LevenshteinEdit LevenshteinEdit;
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunused-function"
@@ -33,12 +33,12 @@ typedef struct edit edit;
 
 static int min3(int a, int b, int c);
 
-static unsigned int levenshtein_matrix_calculate(edit **mat, const char *str1, size_t len1,
+static unsigned int levenshtein_matrix_calculate(LevenshteinEdit **mat, const char *str1, size_t len1,
                                                  const char *str2, size_t len2);
 
-static edit **levenshtein_matrix_create(size_t len1, size_t len2);
+static LevenshteinEdit **levenshtein_matrix_create(size_t len1, size_t len2);
 
-unsigned int levenshtein_distance(const char *str1, const char *str2, edit **script);
+unsigned int levenshtein_distance(const char *str1, const char *str2, LevenshteinEdit **script);
 
 size_t trimwhitespace(char *out, size_t len, const char *str);
 

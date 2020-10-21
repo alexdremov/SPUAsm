@@ -1,0 +1,8 @@
+<map id="__StackUpdateChecksum" name="__StackUpdateChecksum">
+<area shape="rect" id="node1" title="Updates Stack checksums. Does not take into account bytes inside the stack but outside of its last el..." alt="" coords="5,31,180,57"/>
+<area shape="rect" id="node2" href="$StackRigid_8cpp.html#a08de7058bae2a1e0c566024850286498" title="Claculates big Stack checksum. Uses Adler&#45;32 method." alt="" coords="241,56,395,83"/>
+<area shape="rect" id="node6" href="$StackRigid_8cpp.html#a2a07c9f65f61c8ca3112dcfaefb4b3be" title="Uses Adler&#45;32 method. Calculates Stack checksum only for the vital parameters. This is necessary beca..." alt="" coords="228,5,408,32"/>
+<area shape="rect" id="node3" href="$StackRigid_8cpp.html#a37faf27d6e9ab4e0a417f29efbda1cbb" title="Calculates Adler&#45;32 checksum from the firstBlock to the firstBlock + len." alt="" coords="478,5,591,32"/>
+<area shape="rect" id="node4" href="$StackRigid_8cpp.html#a269040ce2ab02e681254d1e9f20aff35" title="Memory alocated for the Stack." alt="" coords="456,56,613,83"/>
+<area shape="rect" id="node5" href="$StackRigid_8cpp.html#ad190054fe2653472b68ffe86d6f5dff3" title="Create new stack with pre&#45;defined capacity." alt="" coords="661,56,747,83"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="__StackReallocate" name="__StackReallocate">
+<area shape="rect" id="node1" title="Reallocates Stack if needed." alt="" coords="5,24,137,51"/>
+<area shape="rect" id="node2" href="$StackRigid_8cpp.html#ad190054fe2653472b68ffe86d6f5dff3" title="Create new stack with pre&#45;defined capacity." alt="" coords="391,24,476,51"/>
+<area shape="rect" id="node3" href="$StackRigid_8cpp.html#a50d9ff70df667de809d39640f33db70b" title="Checks for pointer validity." alt="" coords="195,24,333,51"/>
+<area shape="rect" id="node4" href="$StackRigid_8cpp.html#a269040ce2ab02e681254d1e9f20aff35" title="Memory alocated for the Stack." alt="" coords="185,75,343,101"/>
+</map>

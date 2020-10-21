@@ -1,0 +1,203 @@
+\hypertarget{structJMPLabel}{}\doxysection{J\+M\+P\+Label Struct Reference}
+\label{structJMPLabel}\index{JMPLabel@{JMPLabel}}
+
+
+{\ttfamily \#include \char`\"{}Labels\+Store.\+hpp\char`\"{}}
+
+
+
+Collaboration diagram for J\+M\+P\+Label\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{structJMPLabel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structJMPLabel_a0770003bdd8f469a5de65ea9e7302f1d}{J\+M\+P\+Label}} (\mbox{\hyperlink{structJMPLabel}{J\+M\+P\+Label}} $\ast$previous, char $\ast$\mbox{\hyperlink{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}{name}})
+\item 
+\mbox{\hyperlink{structJMPLabel_a3457883cc04a0209a93359c4e3317669}{$\sim$\+J\+M\+P\+Label}} ()
+\item 
+void \mbox{\hyperlink{structJMPLabel_a2347c15c448293079ae7e1b039643a74}{found\+To\+Position}} (unsigned int position)
+\item 
+void \mbox{\hyperlink{structJMPLabel_a29e184f855c89c13698cacb3b1a82827}{was\+Used}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}{name}} = N\+U\+LL
+\item 
+size\+\_\+t \mbox{\hyperlink{structJMPLabel_a24a8ba098a8dc8eaf36193998ebdf2f6}{name\+Len}} = 0
+\item 
+\mbox{\hyperlink{structJMPLabel}{J\+M\+P\+Label}} $\ast$ \mbox{\hyperlink{structJMPLabel_a18b0eaf5621254a95518ced33c188226}{next}} = N\+U\+LL
+\item 
+long int \mbox{\hyperlink{structJMPLabel_adbd2aea889c5e5a61ce1b3a93142e99f}{position\+From}} = -\/1
+\item 
+long int \mbox{\hyperlink{structJMPLabel_a6b67a7b6015f128f7623c1b5854d94d8}{position\+To}} = -\/1
+\item 
+unsigned int \mbox{\hyperlink{structJMPLabel_ac2f35111d1022a99c505c6a2a88db6bc}{used}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structJMPLabel_a0770003bdd8f469a5de65ea9e7302f1d}\label{structJMPLabel_a0770003bdd8f469a5de65ea9e7302f1d}} 
+\index{JMPLabel@{JMPLabel}!JMPLabel@{JMPLabel}}
+\index{JMPLabel@{JMPLabel}!JMPLabel@{JMPLabel}}
+\doxysubsubsection{\texorpdfstring{JMPLabel()}{JMPLabel()}}
+{\footnotesize\ttfamily J\+M\+P\+Label\+::\+J\+M\+P\+Label (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structJMPLabel}{J\+M\+P\+Label}} $\ast$}]{previous,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13                                                  \{}
+\DoxyCodeLine{14     \textcolor{keywordflow}{if} (previous != NULL)}
+\DoxyCodeLine{15         previous-\/>\mbox{\hyperlink{structJMPLabel_a18b0eaf5621254a95518ced33c188226}{next}} = \textcolor{keyword}{this};}
+\DoxyCodeLine{16     this-\/>\mbox{\hyperlink{structJMPLabel_a24a8ba098a8dc8eaf36193998ebdf2f6}{nameLen}} = strlen(\mbox{\hyperlink{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}{name}});}
+\DoxyCodeLine{17     this-\/>\mbox{\hyperlink{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}{name}} = (\textcolor{keywordtype}{char}*)calloc(this-\/>\mbox{\hyperlink{structJMPLabel_a24a8ba098a8dc8eaf36193998ebdf2f6}{nameLen}} + 1, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{18     this-\/>\mbox{\hyperlink{structJMPLabel_a18b0eaf5621254a95518ced33c188226}{next}} = NULL;}
+\DoxyCodeLine{19     this-\/>\mbox{\hyperlink{structJMPLabel_ac2f35111d1022a99c505c6a2a88db6bc}{used}} = 0;}
+\DoxyCodeLine{20     this-\/>\mbox{\hyperlink{structJMPLabel_a6b67a7b6015f128f7623c1b5854d94d8}{positionTo}} = -\/1;}
+\DoxyCodeLine{21     this-\/>\mbox{\hyperlink{structJMPLabel_adbd2aea889c5e5a61ce1b3a93142e99f}{positionFrom}} = -\/1;}
+\DoxyCodeLine{22     strcpy(this-\/>\mbox{\hyperlink{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}{name}}, \mbox{\hyperlink{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}{name}});}
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+
+
+References name, name\+Len, next, position\+From, position\+To, and used.
+
+\mbox{\Hypertarget{structJMPLabel_a3457883cc04a0209a93359c4e3317669}\label{structJMPLabel_a3457883cc04a0209a93359c4e3317669}} 
+\index{JMPLabel@{JMPLabel}!````~JMPLabel@{$\sim$JMPLabel}}
+\index{````~JMPLabel@{$\sim$JMPLabel}!JMPLabel@{JMPLabel}}
+\doxysubsubsection{\texorpdfstring{$\sim$JMPLabel()}{~JMPLabel()}}
+{\footnotesize\ttfamily J\+M\+P\+Label\+::$\sim$\+J\+M\+P\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                    \{}
+\DoxyCodeLine{26     free(this-\/>\mbox{\hyperlink{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}{name}});}
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}
+
+
+References name.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structJMPLabel_a2347c15c448293079ae7e1b039643a74}\label{structJMPLabel_a2347c15c448293079ae7e1b039643a74}} 
+\index{JMPLabel@{JMPLabel}!foundToPosition@{foundToPosition}}
+\index{foundToPosition@{foundToPosition}!JMPLabel@{JMPLabel}}
+\doxysubsubsection{\texorpdfstring{foundToPosition()}{foundToPosition()}}
+{\footnotesize\ttfamily void J\+M\+P\+Label\+::found\+To\+Position (\begin{DoxyParamCaption}\item[{unsigned int}]{position }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                                                     \{}
+\DoxyCodeLine{34     this-\/>\mbox{\hyperlink{structJMPLabel_a6b67a7b6015f128f7623c1b5854d94d8}{positionTo}} = position;}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+
+
+References position\+To.
+
+\mbox{\Hypertarget{structJMPLabel_a29e184f855c89c13698cacb3b1a82827}\label{structJMPLabel_a29e184f855c89c13698cacb3b1a82827}} 
+\index{JMPLabel@{JMPLabel}!wasUsed@{wasUsed}}
+\index{wasUsed@{wasUsed}!JMPLabel@{JMPLabel}}
+\doxysubsubsection{\texorpdfstring{wasUsed()}{wasUsed()}}
+{\footnotesize\ttfamily void J\+M\+P\+Label\+::was\+Used (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29                        \{}
+\DoxyCodeLine{30     this-\/>\mbox{\hyperlink{structJMPLabel_ac2f35111d1022a99c505c6a2a88db6bc}{used}}++;}
+\DoxyCodeLine{31 \}}
+
+\end{DoxyCode}
+
+
+References used.
+
+
+
+Referenced by J\+M\+P\+Labels\+Store\+::set\+Label\+To\+Position().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structJMPLabel_a29e184f855c89c13698cacb3b1a82827_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}\label{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}} 
+\index{JMPLabel@{JMPLabel}!name@{name}}
+\index{name@{name}!JMPLabel@{JMPLabel}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char$\ast$ J\+M\+P\+Label\+::name = N\+U\+LL}
+
+
+
+Referenced by J\+M\+P\+Label(), $\sim$\+J\+M\+P\+Label(), analyze\+Labels\+Errors(), J\+M\+P\+Labels\+Store\+::get\+Label(), J\+M\+P\+Labels\+Store\+::get\+Label\+To\+Position(), labels\+Table\+Complete(), and J\+M\+P\+Labels\+Store\+::new\+Label().
+
+\mbox{\Hypertarget{structJMPLabel_a24a8ba098a8dc8eaf36193998ebdf2f6}\label{structJMPLabel_a24a8ba098a8dc8eaf36193998ebdf2f6}} 
+\index{JMPLabel@{JMPLabel}!nameLen@{nameLen}}
+\index{nameLen@{nameLen}!JMPLabel@{JMPLabel}}
+\doxysubsubsection{\texorpdfstring{nameLen}{nameLen}}
+{\footnotesize\ttfamily size\+\_\+t J\+M\+P\+Label\+::name\+Len = 0}
+
+
+
+Referenced by J\+M\+P\+Label().
+
+\mbox{\Hypertarget{structJMPLabel_a18b0eaf5621254a95518ced33c188226}\label{structJMPLabel_a18b0eaf5621254a95518ced33c188226}} 
+\index{JMPLabel@{JMPLabel}!next@{next}}
+\index{next@{next}!JMPLabel@{JMPLabel}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structJMPLabel}{J\+M\+P\+Label}}$\ast$ J\+M\+P\+Label\+::next = N\+U\+LL}
+
+
+
+Referenced by J\+M\+P\+Label(), J\+M\+P\+Labels\+Store\+::$\sim$\+J\+M\+P\+Labels\+Store(), analyze\+Labels\+Errors(), evaluate\+Labels(), J\+M\+P\+Labels\+Store\+::get\+Label(), J\+M\+P\+Labels\+Store\+::get\+Label\+To\+Position(), labels\+Table\+Complete(), and J\+M\+P\+Labels\+Store\+::new\+Label().
+
+\mbox{\Hypertarget{structJMPLabel_adbd2aea889c5e5a61ce1b3a93142e99f}\label{structJMPLabel_adbd2aea889c5e5a61ce1b3a93142e99f}} 
+\index{JMPLabel@{JMPLabel}!positionFrom@{positionFrom}}
+\index{positionFrom@{positionFrom}!JMPLabel@{JMPLabel}}
+\doxysubsubsection{\texorpdfstring{positionFrom}{positionFrom}}
+{\footnotesize\ttfamily long int J\+M\+P\+Label\+::position\+From = -\/1}
+
+
+
+Referenced by J\+M\+P\+Label(), analyze\+Labels\+Errors(), evaluate\+Labels(), labels\+Table\+Complete(), and J\+M\+P\+Labels\+Store\+::set\+Label\+From\+Position().
+
+\mbox{\Hypertarget{structJMPLabel_a6b67a7b6015f128f7623c1b5854d94d8}\label{structJMPLabel_a6b67a7b6015f128f7623c1b5854d94d8}} 
+\index{JMPLabel@{JMPLabel}!positionTo@{positionTo}}
+\index{positionTo@{positionTo}!JMPLabel@{JMPLabel}}
+\doxysubsubsection{\texorpdfstring{positionTo}{positionTo}}
+{\footnotesize\ttfamily long int J\+M\+P\+Label\+::position\+To = -\/1}
+
+
+
+Referenced by J\+M\+P\+Label(), analyze\+Labels\+Errors(), evaluate\+Labels(), found\+To\+Position(), J\+M\+P\+Labels\+Store\+::get\+Label\+To\+Position(), labels\+Table\+Complete(), and J\+M\+P\+Labels\+Store\+::set\+Label\+To\+Position().
+
+\mbox{\Hypertarget{structJMPLabel_ac2f35111d1022a99c505c6a2a88db6bc}\label{structJMPLabel_ac2f35111d1022a99c505c6a2a88db6bc}} 
+\index{JMPLabel@{JMPLabel}!used@{used}}
+\index{used@{used}!JMPLabel@{JMPLabel}}
+\doxysubsubsection{\texorpdfstring{used}{used}}
+{\footnotesize\ttfamily unsigned int J\+M\+P\+Label\+::used = 0}
+
+
+
+Referenced by J\+M\+P\+Label(), analyze\+Labels\+Errors(), labels\+Table\+Complete(), J\+M\+P\+Labels\+Store\+::set\+Label\+To\+Position(), and was\+Used().
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Soft\+Processor\+Unit/\+Assembly/\+Helpers/\+Label\+Handlers/\mbox{\hyperlink{LabelsStore_8hpp}{Labels\+Store.\+hpp}}\item 
+Soft\+Processor\+Unit/\+Assembly/\+Helpers/\+Label\+Handlers/\mbox{\hyperlink{LabelsStore_8cpp}{Labels\+Store.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,230 @@
+\hypertarget{Syntax_8hpp}{}\doxysection{Soft\+Processor\+Unit/\+Syntax/\+Translation/\+Syntax.hpp File Reference}
+\label{Syntax_8hpp}\index{SoftProcessorUnit/Syntax/Translation/Syntax.hpp@{SoftProcessorUnit/Syntax/Translation/Syntax.hpp}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Translation\+D\+Types.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assembly\+Helpers.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Command\+To\+Bytecode.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Bytecode\+To\+Command.\+hpp\char`\"{}}\newline
+Include dependency graph for Syntax.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Syntax_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Syntax_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}}
+\item 
+struct \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{Syntax_8hpp_a23750b0a14e6a6b75734c3ebccd900c8}{S\+P\+U\+\_\+\+C\+M\+D\+\_\+\+M\+A\+X\+A\+R\+GS}}~5
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{Syntax_8hpp_ac0d3ec8251f1e07bda097b1f0ac44a35}{get\+Syntax\+Code}} (const \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$mapping, const char $\ast$name)
+\item 
+const \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}} $\ast$ \mbox{\hyperlink{Syntax_8hpp_a30812d9f8f71323b317050e3cdc2a0ff}{get\+Syntax\+Entity\+By\+Code}} (const \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$mapping, const char code)
+\item 
+const \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}} $\ast$ \mbox{\hyperlink{Syntax_8hpp_a76535d86348655e2d276eddf51dd809f}{get\+Syntax\+Entity\+By\+Name}} (const \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$mapping, const char $\ast$name)
+\item 
+\mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} \mbox{\hyperlink{Syntax_8hpp_ad8883fa3c572ab45fa3459a378708afd}{get\+Syntax\+Mapping}} (void)
+\item 
+const char $\ast$ \mbox{\hyperlink{Syntax_8hpp_a81c3f483230c9c0d37f4cc118b75826f}{get\+Syntax\+Name}} (const \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$mapping, const char code)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Data Structure Documentation}
+\index{SyntaxMapping@{SyntaxMapping}}\label{structSyntaxMapping}
+\Hypertarget{Syntax_8hpp_structSyntaxMapping}
+\doxysubsubsection{struct Syntax\+Mapping}
+
+
+Collaboration diagram for Syntax\+Mapping\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{structSyntaxMapping__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{Data Fields}
+\mbox{\Hypertarget{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}\label{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}} 
+const \mbox{\hyperlink{structSyntaxEntity}{SyntaxEntity}} $\ast$&
+entities&
+\\
+\hline
+
+\mbox{\Hypertarget{Syntax_8hpp_ae87ea199cc92a108e220ba6eb7a46462}\label{Syntax_8hpp_ae87ea199cc92a108e220ba6eb7a46462}} 
+const size\_t&
+number&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{Syntax_8hpp_a23750b0a14e6a6b75734c3ebccd900c8}\label{Syntax_8hpp_a23750b0a14e6a6b75734c3ebccd900c8}} 
+\index{Syntax.hpp@{Syntax.hpp}!SPU\_CMD\_MAXARGS@{SPU\_CMD\_MAXARGS}}
+\index{SPU\_CMD\_MAXARGS@{SPU\_CMD\_MAXARGS}!Syntax.hpp@{Syntax.hpp}}
+\doxysubsubsection{\texorpdfstring{SPU\_CMD\_MAXARGS}{SPU\_CMD\_MAXARGS}}
+{\footnotesize\ttfamily \#define S\+P\+U\+\_\+\+C\+M\+D\+\_\+\+M\+A\+X\+A\+R\+GS~5}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Syntax_8hpp_ac0d3ec8251f1e07bda097b1f0ac44a35}\label{Syntax_8hpp_ac0d3ec8251f1e07bda097b1f0ac44a35}} 
+\index{Syntax.hpp@{Syntax.hpp}!getSyntaxCode@{getSyntaxCode}}
+\index{getSyntaxCode@{getSyntaxCode}!Syntax.hpp@{Syntax.hpp}}
+\doxysubsubsection{\texorpdfstring{getSyntaxCode()}{getSyntaxCode()}}
+{\footnotesize\ttfamily int get\+Syntax\+Code (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$}]{mapping,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44                                                                   \{}
+\DoxyCodeLine{45     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < mapping-\/>\mbox{\hyperlink{Syntax_8hpp_ae87ea199cc92a108e220ba6eb7a46462}{number}}; i++)\{}
+\DoxyCodeLine{46         \textcolor{keywordflow}{if} (strcmp(mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[i].\mbox{\hyperlink{structSyntaxEntity_a252ef676e30b71d20885c1c5de0be82d}{naming}}, name) == 0)\{}
+\DoxyCodeLine{47             \textcolor{keywordflow}{return} mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[i].\mbox{\hyperlink{structSyntaxEntity_ab8de28b350eba81b20adc899f41e596f}{code}};}
+\DoxyCodeLine{48         \}}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{50     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{51 \}}
+
+\end{DoxyCode}
+
+
+References Syntax\+Entity\+::code, Syntax\+Mapping\+::entities, Syntax\+Entity\+::naming, and Syntax\+Mapping\+::number.
+
+\mbox{\Hypertarget{Syntax_8hpp_a30812d9f8f71323b317050e3cdc2a0ff}\label{Syntax_8hpp_a30812d9f8f71323b317050e3cdc2a0ff}} 
+\index{Syntax.hpp@{Syntax.hpp}!getSyntaxEntityByCode@{getSyntaxEntityByCode}}
+\index{getSyntaxEntityByCode@{getSyntaxEntityByCode}!Syntax.hpp@{Syntax.hpp}}
+\doxysubsubsection{\texorpdfstring{getSyntaxEntityByCode()}{getSyntaxEntityByCode()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}}$\ast$ get\+Syntax\+Entity\+By\+Code (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$}]{mapping,  }\item[{const char}]{code }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63                                                                                          \{}
+\DoxyCodeLine{64     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < mapping-\/>\mbox{\hyperlink{Syntax_8hpp_ae87ea199cc92a108e220ba6eb7a46462}{number}}; i++)\{}
+\DoxyCodeLine{65         \textcolor{keywordflow}{if} (code == mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[i].\mbox{\hyperlink{structSyntaxEntity_ab8de28b350eba81b20adc899f41e596f}{code}})\{}
+\DoxyCodeLine{66             \textcolor{keywordflow}{return} \&mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[i];}
+\DoxyCodeLine{67         \}}
+\DoxyCodeLine{68     \}}
+\DoxyCodeLine{69     \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{70 \}}
+
+\end{DoxyCode}
+
+
+References Syntax\+Entity\+::code, Syntax\+Mapping\+::entities, and Syntax\+Mapping\+::number.
+
+
+
+Referenced by dis\+Assambly\+Instruction().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Syntax_8hpp_a30812d9f8f71323b317050e3cdc2a0ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{Syntax_8hpp_a76535d86348655e2d276eddf51dd809f}\label{Syntax_8hpp_a76535d86348655e2d276eddf51dd809f}} 
+\index{Syntax.hpp@{Syntax.hpp}!getSyntaxEntityByName@{getSyntaxEntityByName}}
+\index{getSyntaxEntityByName@{getSyntaxEntityByName}!Syntax.hpp@{Syntax.hpp}}
+\doxysubsubsection{\texorpdfstring{getSyntaxEntityByName()}{getSyntaxEntityByName()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}}$\ast$ get\+Syntax\+Entity\+By\+Name (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$}]{mapping,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{72                                                                                           \{}
+\DoxyCodeLine{73     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < mapping-\/>\mbox{\hyperlink{Syntax_8hpp_ae87ea199cc92a108e220ba6eb7a46462}{number}}; i++)\{}
+\DoxyCodeLine{74         \textcolor{keywordflow}{if} (strcmp(mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[i].\mbox{\hyperlink{structSyntaxEntity_a252ef676e30b71d20885c1c5de0be82d}{naming}}, name) == 0)\{}
+\DoxyCodeLine{75             \textcolor{keywordflow}{return} \&mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[i];}
+\DoxyCodeLine{76         \}}
+\DoxyCodeLine{77     \}}
+\DoxyCodeLine{78     \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{79 \}}
+
+\end{DoxyCode}
+
+
+References Syntax\+Mapping\+::entities, Syntax\+Entity\+::naming, and Syntax\+Mapping\+::number.
+
+
+
+Referenced by fetch\+Command().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Syntax_8hpp_a76535d86348655e2d276eddf51dd809f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{Syntax_8hpp_ad8883fa3c572ab45fa3459a378708afd}\label{Syntax_8hpp_ad8883fa3c572ab45fa3459a378708afd}} 
+\index{Syntax.hpp@{Syntax.hpp}!getSyntaxMapping@{getSyntaxMapping}}
+\index{getSyntaxMapping@{getSyntaxMapping}!Syntax.hpp@{Syntax.hpp}}
+\doxysubsubsection{\texorpdfstring{getSyntaxMapping()}{getSyntaxMapping()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} get\+Syntax\+Mapping (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                                      \{}
+\DoxyCodeLine{31     \textcolor{keyword}{static} \mbox{\hyperlink{structSyntaxEntity}{SyntaxEntity}} operations[] = \{}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define COMMAND\_INFO(name, code, args, flags) makeEntity(\#name, code , args, flags, \&EVALUATE(CMDCTB\_ \#\# name  ) ,\&EVALUATE(CMDBTC\_ \#\# name)),}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{INFO_8h}{INFO.h}}"{}}}
+\DoxyCodeLine{35         }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#undef COMMAND\_INFO}}
+\DoxyCodeLine{37     \};}
+\DoxyCodeLine{38     \textcolor{keyword}{static} \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{SyntaxMapping}} mapping = \{operations, \textcolor{keyword}{sizeof}(operations) / \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structSyntaxEntity}{SyntaxEntity}})\};}
+\DoxyCodeLine{39     }
+\DoxyCodeLine{40     \textcolor{keywordflow}{return} mapping;}
+\DoxyCodeLine{41 \}}
+
+\end{DoxyCode}
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{Syntax_8hpp_ad8883fa3c572ab45fa3459a378708afd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{Syntax_8hpp_a81c3f483230c9c0d37f4cc118b75826f}\label{Syntax_8hpp_a81c3f483230c9c0d37f4cc118b75826f}} 
+\index{Syntax.hpp@{Syntax.hpp}!getSyntaxName@{getSyntaxName}}
+\index{getSyntaxName@{getSyntaxName}!Syntax.hpp@{Syntax.hpp}}
+\doxysubsubsection{\texorpdfstring{getSyntaxName()}{getSyntaxName()}}
+{\footnotesize\ttfamily const char$\ast$ get\+Syntax\+Name (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$}]{mapping,  }\item[{const char}]{code }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54                                                                          \{}
+\DoxyCodeLine{55     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < mapping-\/>\mbox{\hyperlink{Syntax_8hpp_ae87ea199cc92a108e220ba6eb7a46462}{number}}; i++)\{}
+\DoxyCodeLine{56         \textcolor{keywordflow}{if} (code == mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[i].\mbox{\hyperlink{structSyntaxEntity_ab8de28b350eba81b20adc899f41e596f}{code}})\{}
+\DoxyCodeLine{57             \textcolor{keywordflow}{return} mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[i].\mbox{\hyperlink{structSyntaxEntity_a252ef676e30b71d20885c1c5de0be82d}{naming}};}
+\DoxyCodeLine{58         \}}
+\DoxyCodeLine{59     \}}
+\DoxyCodeLine{60     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{61 \}}
+
+\end{DoxyCode}
+
+
+References Syntax\+Entity\+::code, Syntax\+Mapping\+::entities, Syntax\+Entity\+::naming, and Syntax\+Mapping\+::number.
+

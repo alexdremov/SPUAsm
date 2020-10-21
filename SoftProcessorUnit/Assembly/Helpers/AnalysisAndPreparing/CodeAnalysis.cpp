@@ -205,7 +205,7 @@ const SyntaxEntity* bestMatchCommand(SyntaxMapping* mapping, char* command) {
     int minValue = 0;
     int index = -1;
     for (size_t i = 0; i < mapping->number; i++) {
-        edit *script;
+        LevenshteinEdit *script;
         size_t distance = levenshtein_distance(mapping->entities[i].naming, command, &script);
         if (index == -1 || minValue > (int)distance){
             minValue = (int)distance;

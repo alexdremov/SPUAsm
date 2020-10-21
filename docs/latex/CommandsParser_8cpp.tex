@@ -1,0 +1,990 @@
+\hypertarget{CommandsParser_8cpp}{}\doxysection{Soft\+Processor\+Unit/\+Assembly/\+Helpers/\+Commands\+Parser.cpp File Reference}
+\label{CommandsParser_8cpp}\index{SoftProcessorUnit/Assembly/Helpers/CommandsParser.cpp@{SoftProcessorUnit/Assembly/Helpers/CommandsParser.cpp}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Commands\+Parser.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assembly\+Helpers.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Syntax.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Commands\+D\+Types.\+hpp\char`\"{}}\newline
+Include dependency graph for Commands\+Parser.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CommandsParser_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{CommandsParser_8cpp_aea7d9cd65610cbe3c3b768677f857fbd}{code\+Block\+Empty}} (char $\ast$code\+Block)
+\item 
+void \mbox{\hyperlink{CommandsParser_8cpp_aede32224521297426a2cfad5d4798384}{code\+Estimations}} (\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$binary, char $\ast$code)
+\item 
+\mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8d}{Label\+Parse}} \mbox{\hyperlink{CommandsParser_8cpp_a5f07be82b880dc88bb95bd6085e8399a}{evaluate\+Labels}} (\mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}} $\ast$compile\+Params, \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$binary)
+\item 
+const \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}} $\ast$ \mbox{\hyperlink{CommandsParser_8cpp_a2d524ace1c28ad2095fd220f34a2f929}{fetch\+Command}} (const \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$mapping, char $\ast$code\+Block)
+\item 
+void \mbox{\hyperlink{CommandsParser_8cpp_a11175231a266da4b41b7e1e1f2bf2a3a}{free\+Arg\+List}} (char $\ast$$\ast$argv, int argc)
+\item 
+const char $\ast$$\ast$ \mbox{\hyperlink{CommandsParser_8cpp_a4a20084f6e89bbc776e21d9adc16af7c}{get\+Arg\+List}} (char $\ast$code\+Block, int $\ast$argc)
+\item 
+const char $\ast$$\ast$ \mbox{\hyperlink{CommandsParser_8cpp_a1b183679f152d987a243e2037c78bfa4}{get\+Arg\+List}} (char $\ast$code\+Block, int $\ast$argc, int $\ast$arg\+Lens)
+\item 
+char $\ast$ \mbox{\hyperlink{CommandsParser_8cpp_ac4f89e7dbcbb5986315038db16ad2371}{get\+Source\+File\+Data}} (F\+I\+LE $\ast$input\+File, size\+\_\+t $\ast$length)
+\item 
+int \mbox{\hyperlink{CommandsParser_8cpp_a609cbe8a40a0ba73594e8b89f570b074}{is\+Valid\+Arguments\+Number}} (const \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}} $\ast$mapping, int argc)
+\item 
+\mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8d}{Label\+Parse}} \mbox{\hyperlink{CommandsParser_8cpp_ac706821978aab6d75c0e673fac677e75}{labels\+Table\+Complete}} (\mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}} $\ast$compile\+Params, int quiet)
+\item 
+\mbox{\hyperlink{CommandsDTypes_8hpp_a014dc28c49852c3fac1fa3cd2a95c0d5}{Command\+Parse\+Result}} \mbox{\hyperlink{CommandsParser_8cpp_a9f77310758d1c97d9ea9e1bb83779d5f}{parse\+Code}} (\mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}} $\ast$compile\+Params, const \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$mapping, \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$binary, char $\ast$code, size\+\_\+t length)
+\item 
+\mbox{\hyperlink{CommandsDTypes_8hpp_a014dc28c49852c3fac1fa3cd2a95c0d5}{Command\+Parse\+Result}} \mbox{\hyperlink{CommandsParser_8cpp_ab7c640fc2a8dcec923fa8ffb2844da87}{parse\+Command}} (\mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}} $\ast$compile\+Params, const \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$mapping, \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$binary, char $\ast$code\+Block)
+\item 
+\mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8d}{Label\+Parse}} \mbox{\hyperlink{CommandsParser_8cpp_ac0521cbcbec1bbac34e44d3051b24915}{parse\+Label}} (\mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}} $\ast$compile\+Params, char $\ast$code)
+\item 
+void \mbox{\hyperlink{CommandsParser_8cpp_a9c053f5b726840410e982bf98a5dc7ec}{preprocess\+Source}} (char $\ast$code, size\+\_\+t $\ast$length)
+\item 
+const char $\ast$ \mbox{\hyperlink{CommandsParser_8cpp_a3a86900aa34b39b3fedbebc7ae0c53e7}{register\+Name\+From\+No}} (int no)
+\item 
+int \mbox{\hyperlink{CommandsParser_8cpp_a339f0d81c397ae53843ca64e2f0c86f0}{register\+No\+From\+Name}} (char $\ast$name)
+\item 
+void \mbox{\hyperlink{CommandsParser_8cpp_a0f8de65651301114bc7782475cc6ff79}{remove\+Double\+Whitespaces}} (char $\ast$code, size\+\_\+t $\ast$length)
+\item 
+void \mbox{\hyperlink{CommandsParser_8cpp_af1235b39d424529890580e134c7b3138}{remove\+Whitespaces\+In\+The\+End}} (char $\ast$code, size\+\_\+t $\ast$length)
+\item 
+\mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8d}{Label\+Parse}} \mbox{\hyperlink{CommandsParser_8cpp_a63dde4ce36e120b062e0bc7127eb4ab4}{set\+Label\+Pos}} (\mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}} $\ast$compile\+Params, char $\ast$code, unsigned int pos)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{CommandsParser_8cpp_aea7d9cd65610cbe3c3b768677f857fbd}\label{CommandsParser_8cpp_aea7d9cd65610cbe3c3b768677f857fbd}} 
+\index{CommandsParser.cpp@{CommandsParser.cpp}!codeBlockEmpty@{codeBlockEmpty}}
+\index{codeBlockEmpty@{codeBlockEmpty}!CommandsParser.cpp@{CommandsParser.cpp}}
+\doxysubsubsection{\texorpdfstring{codeBlockEmpty()}{codeBlockEmpty()}}
+{\footnotesize\ttfamily int code\+Block\+Empty (\begin{DoxyParamCaption}\item[{char $\ast$}]{code\+Block }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{272                                     \{}
+\DoxyCodeLine{273     \textcolor{keywordflow}{if} (*codeBlock == \textcolor{charliteral}{';'} || *(codeBlock + 1) == \textcolor{charliteral}{';'})}
+\DoxyCodeLine{274         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{275     \textcolor{keywordflow}{while} (*codeBlock != \textcolor{charliteral}{'\(\backslash\)0'} \&\& *codeBlock != \textcolor{charliteral}{'\(\backslash\)n'}) \{}
+\DoxyCodeLine{276         \textcolor{keywordflow}{if} (*codeBlock != \textcolor{charliteral}{' '} \&\& *codeBlock != \textcolor{charliteral}{'\(\backslash\)n'} \&\& *codeBlock != \textcolor{charliteral}{'\(\backslash\)t'} \&\& *codeBlock != \textcolor{charliteral}{'\(\backslash\)r'})}
+\DoxyCodeLine{277             \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{278         codeBlock++;}
+\DoxyCodeLine{279     \}}
+\DoxyCodeLine{280     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{281 \}}
+
+\end{DoxyCode}
+
+
+Referenced by get\+Arg\+List(), and parse\+Code().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{CommandsParser_8cpp_aea7d9cd65610cbe3c3b768677f857fbd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CommandsParser_8cpp_aede32224521297426a2cfad5d4798384}\label{CommandsParser_8cpp_aede32224521297426a2cfad5d4798384}} 
+\index{CommandsParser.cpp@{CommandsParser.cpp}!codeEstimations@{codeEstimations}}
+\index{codeEstimations@{codeEstimations}!CommandsParser.cpp@{CommandsParser.cpp}}
+\doxysubsubsection{\texorpdfstring{codeEstimations()}{codeEstimations()}}
+{\footnotesize\ttfamily void code\+Estimations (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{binary,  }\item[{char $\ast$}]{code }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{348                                                     \{}
+\DoxyCodeLine{349     \textcolor{keywordtype}{size\_t} stackInitSize = 0;}
+\DoxyCodeLine{350     \textcolor{keywordtype}{char}* p = strstr(code, \textcolor{stringliteral}{"{}push"{}});}
+\DoxyCodeLine{351     \textcolor{keywordflow}{while}(p != NULL)\{}
+\DoxyCodeLine{352         stackInitSize++;}
+\DoxyCodeLine{353         p = strstr(p + 1, \textcolor{stringliteral}{"{}push"{}});}
+\DoxyCodeLine{354     \}}
+\DoxyCodeLine{355     binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_abed489abcb0040342f3be1a90ada73f8}{stackSize}} = stackInitSize;}
+\DoxyCodeLine{356 \}}
+
+\end{DoxyCode}
+
+
+References Binary\+File\+::stack\+Size.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{CommandsParser_8cpp_aede32224521297426a2cfad5d4798384_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CommandsParser_8cpp_a5f07be82b880dc88bb95bd6085e8399a}\label{CommandsParser_8cpp_a5f07be82b880dc88bb95bd6085e8399a}} 
+\index{CommandsParser.cpp@{CommandsParser.cpp}!evaluateLabels@{evaluateLabels}}
+\index{evaluateLabels@{evaluateLabels}!CommandsParser.cpp@{CommandsParser.cpp}}
+\doxysubsubsection{\texorpdfstring{evaluateLabels()}{evaluateLabels()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8d}{Label\+Parse}} evaluate\+Labels (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}} $\ast$}]{compile\+Params,  }\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{binary }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{427                                                                              \{}
+\DoxyCodeLine{428     \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8d}{LabelParse}} completeTable = \mbox{\hyperlink{CommandsParser_8cpp_ac706821978aab6d75c0e673fac677e75}{labelsTableComplete}}(compileParams, 0);}
+\DoxyCodeLine{429     \textcolor{keywordflow}{if} (completeTable != \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3819e9fcd8e4784afc45ae36ad95164b}{SPU\_LABEL\_OK}})\{}
+\DoxyCodeLine{430         \textcolor{keywordflow}{return} completeTable;}
+\DoxyCodeLine{431     \}}
+\DoxyCodeLine{432     \mbox{\hyperlink{structJMPLabel}{JMPLabel}}* current = compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a8ae3b30ad939ce70f9ad67a845be0bb0}{labelsStore}}-\/>\mbox{\hyperlink{structJMPLabelsStore_af23849f04d27c00662e235598f3ca6c5}{first}};}
+\DoxyCodeLine{433     }
+\DoxyCodeLine{434     \textcolor{keywordflow}{while}(current != NULL) \{}
+\DoxyCodeLine{435         \textcolor{keywordtype}{int} offset = (int)(current-\/>\mbox{\hyperlink{structJMPLabel_a6b67a7b6015f128f7623c1b5854d94d8}{positionTo}} -\/ current-\/>\mbox{\hyperlink{structJMPLabel_adbd2aea889c5e5a61ce1b3a93142e99f}{positionFrom}} + 1);}
+\DoxyCodeLine{436         memcpy(binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}} + current-\/>\mbox{\hyperlink{structJMPLabel_adbd2aea889c5e5a61ce1b3a93142e99f}{positionFrom}}, \&offset, \textcolor{keyword}{sizeof}(offset));}
+\DoxyCodeLine{437         current = current-\/>\mbox{\hyperlink{structJMPLabel_a18b0eaf5621254a95518ced33c188226}{next}};}
+\DoxyCodeLine{438     \}}
+\DoxyCodeLine{439     }
+\DoxyCodeLine{440     \textcolor{keywordflow}{return} \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3819e9fcd8e4784afc45ae36ad95164b}{SPU\_LABEL\_OK}};}
+\DoxyCodeLine{441 \}}
+
+\end{DoxyCode}
+
+
+References Binary\+File\+::code, J\+M\+P\+Labels\+Store\+::first, Assembly\+Params\+::labels\+Store, labels\+Table\+Complete(), J\+M\+P\+Label\+::next, J\+M\+P\+Label\+::position\+From, J\+M\+P\+Label\+::position\+To, and S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+OK.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{CommandsParser_8cpp_a5f07be82b880dc88bb95bd6085e8399a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CommandsParser_8cpp_a2d524ace1c28ad2095fd220f34a2f929}\label{CommandsParser_8cpp_a2d524ace1c28ad2095fd220f34a2f929}} 
+\index{CommandsParser.cpp@{CommandsParser.cpp}!fetchCommand@{fetchCommand}}
+\index{fetchCommand@{fetchCommand}!CommandsParser.cpp@{CommandsParser.cpp}}
+\doxysubsubsection{\texorpdfstring{fetchCommand()}{fetchCommand()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}}$\ast$ fetch\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$}]{mapping,  }\item[{char $\ast$}]{code\+Block }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80                                                                                 \{}
+\DoxyCodeLine{81     \textcolor{keywordtype}{char}* command = (\textcolor{keywordtype}{char}*) calloc(strlen(codeBlock) + 1, \textcolor{keyword}{sizeof}(char));}
+\DoxyCodeLine{82     strcpy(command, codeBlock);}
+\DoxyCodeLine{83     \textcolor{keywordtype}{char}* firstWhitespace = strchr(command, \textcolor{charliteral}{' '});}
+\DoxyCodeLine{84     \textcolor{keywordflow}{if} (firstWhitespace != NULL)\{}
+\DoxyCodeLine{85         *firstWhitespace = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{86     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{87         firstWhitespace = strchr(command, \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{88         \textcolor{keywordflow}{if} (firstWhitespace != NULL)\{}
+\DoxyCodeLine{89             *firstWhitespace = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{90         \}}
+\DoxyCodeLine{91     \}}
+\DoxyCodeLine{92     }
+\DoxyCodeLine{93     \textcolor{keyword}{const} \mbox{\hyperlink{structSyntaxEntity}{SyntaxEntity}}* foundCommand = \mbox{\hyperlink{Syntax_8cpp_a76535d86348655e2d276eddf51dd809f}{getSyntaxEntityByName}}(mapping, (\textcolor{keyword}{const} \textcolor{keywordtype}{char}*)command);}
+\DoxyCodeLine{94     }
+\DoxyCodeLine{95     free(command);}
+\DoxyCodeLine{96     \textcolor{keywordflow}{return} foundCommand;}
+\DoxyCodeLine{97 \}}
+
+\end{DoxyCode}
+
+
+References get\+Syntax\+Entity\+By\+Name().
+
+
+
+Referenced by analyze\+Instruction\+Errors(), and parse\+Command().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{CommandsParser_8cpp_a2d524ace1c28ad2095fd220f34a2f929_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CommandsParser_8cpp_a2d524ace1c28ad2095fd220f34a2f929_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CommandsParser_8cpp_a11175231a266da4b41b7e1e1f2bf2a3a}\label{CommandsParser_8cpp_a11175231a266da4b41b7e1e1f2bf2a3a}} 
+\index{CommandsParser.cpp@{CommandsParser.cpp}!freeArgList@{freeArgList}}
+\index{freeArgList@{freeArgList}!CommandsParser.cpp@{CommandsParser.cpp}}
+\doxysubsubsection{\texorpdfstring{freeArgList()}{freeArgList()}}
+{\footnotesize\ttfamily void free\+Arg\+List (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{argv,  }\item[{int}]{argc }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{139                                         \{}
+\DoxyCodeLine{140     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < argc; i++) \{}
+\DoxyCodeLine{141         free(argv[i]);}
+\DoxyCodeLine{142     \}}
+\DoxyCodeLine{143     free(argv);}
+\DoxyCodeLine{144 \}}
+
+\end{DoxyCode}
+
+
+Referenced by analyze\+Instruction\+Errors(), and parse\+Command().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CommandsParser_8cpp_a11175231a266da4b41b7e1e1f2bf2a3a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CommandsParser_8cpp_a4a20084f6e89bbc776e21d9adc16af7c}\label{CommandsParser_8cpp_a4a20084f6e89bbc776e21d9adc16af7c}} 
+\index{CommandsParser.cpp@{CommandsParser.cpp}!getArgList@{getArgList}}
+\index{getArgList@{getArgList}!CommandsParser.cpp@{CommandsParser.cpp}}
+\doxysubsubsection{\texorpdfstring{getArgList()}{getArgList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const char$\ast$$\ast$ get\+Arg\+List (\begin{DoxyParamCaption}\item[{char $\ast$}]{code\+Block,  }\item[{int $\ast$}]{argc }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{99                                                     \{}
+\DoxyCodeLine{100     \textcolor{keywordflow}{return} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}**)\mbox{\hyperlink{CommandsParser_8cpp_a4a20084f6e89bbc776e21d9adc16af7c}{getArgList}}(codeBlock, argc, NULL);}
+\DoxyCodeLine{101 \}}
+
+\end{DoxyCode}
+
+
+References get\+Arg\+List().
+
+
+
+Referenced by analyze\+Instruction\+Errors(), get\+Arg\+List(), and parse\+Command().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{CommandsParser_8cpp_a4a20084f6e89bbc776e21d9adc16af7c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CommandsParser_8cpp_a4a20084f6e89bbc776e21d9adc16af7c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CommandsParser_8cpp_a1b183679f152d987a243e2037c78bfa4}\label{CommandsParser_8cpp_a1b183679f152d987a243e2037c78bfa4}} 
+\index{CommandsParser.cpp@{CommandsParser.cpp}!getArgList@{getArgList}}
+\index{getArgList@{getArgList}!CommandsParser.cpp@{CommandsParser.cpp}}
+\doxysubsubsection{\texorpdfstring{getArgList()}{getArgList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const char$\ast$$\ast$ get\+Arg\+List (\begin{DoxyParamCaption}\item[{char $\ast$}]{code\+Block,  }\item[{int $\ast$}]{argc,  }\item[{int $\ast$}]{arg\+Lens }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{103                                                                  \{}
+\DoxyCodeLine{104     *argc = 1;}
+\DoxyCodeLine{105     \textcolor{keywordtype}{char}** args = (\textcolor{keywordtype}{char}**) calloc(\mbox{\hyperlink{Syntax_8hpp_a23750b0a14e6a6b75734c3ebccd900c8}{SPU\_CMD\_MAXARGS}}, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));}
+\DoxyCodeLine{106     \textcolor{keywordtype}{char}* firstWhitespace = strchr(codeBlock, \textcolor{charliteral}{' '});}
+\DoxyCodeLine{107     }
+\DoxyCodeLine{108     \textcolor{keywordtype}{size\_t} maxLen = strlen(codeBlock);}
+\DoxyCodeLine{109     }
+\DoxyCodeLine{110     args[0] = (\textcolor{keywordtype}{char}*) calloc(maxLen, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{111     sscanf(codeBlock, \textcolor{stringliteral}{"{}\%s"{}}, args[0]);}
+\DoxyCodeLine{112     }
+\DoxyCodeLine{113     \textcolor{keywordflow}{if} (firstWhitespace == NULL)}
+\DoxyCodeLine{114         \textcolor{keywordflow}{return} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}**) args;}
+\DoxyCodeLine{115     }
+\DoxyCodeLine{116     \textcolor{keywordtype}{int} argumentsAvailable = 1;}
+\DoxyCodeLine{117     \textcolor{keywordflow}{if} (firstWhitespace != NULL) \{}
+\DoxyCodeLine{118         firstWhitespace = strchr(codeBlock, \textcolor{charliteral}{' '});}
+\DoxyCodeLine{119         \textcolor{keywordflow}{while} (firstWhitespace != NULL) \{}
+\DoxyCodeLine{120             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{CommandsParser_8cpp_aea7d9cd65610cbe3c3b768677f857fbd}{codeBlockEmpty}}(firstWhitespace))\{}
+\DoxyCodeLine{121                 args[argumentsAvailable] = (\textcolor{keywordtype}{char}*) calloc(maxLen, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{122                 sscanf(firstWhitespace + 1, \textcolor{stringliteral}{"{}\%s"{}}, args[argumentsAvailable]);}
+\DoxyCodeLine{123                 argumentsAvailable++;}
+\DoxyCodeLine{124             \}}
+\DoxyCodeLine{125             firstWhitespace = strchr(firstWhitespace + 1, \textcolor{charliteral}{' '});}
+\DoxyCodeLine{126         \}}
+\DoxyCodeLine{127     \}}
+\DoxyCodeLine{128     *argc = argumentsAvailable;}
+\DoxyCodeLine{129     }
+\DoxyCodeLine{130     \textcolor{keywordflow}{if} (argLens != NULL) \{}
+\DoxyCodeLine{131         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < argumentsAvailable; i++)\{}
+\DoxyCodeLine{132             argLens[i] = (int)strlen(args[i]);}
+\DoxyCodeLine{133         \}}
+\DoxyCodeLine{134     \}}
+\DoxyCodeLine{135     }
+\DoxyCodeLine{136     \textcolor{keywordflow}{return} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}**)args;}
+\DoxyCodeLine{137 \}}
+
+\end{DoxyCode}
+
+
+References code\+Block\+Empty(), and S\+P\+U\+\_\+\+C\+M\+D\+\_\+\+M\+A\+X\+A\+R\+GS.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{CommandsParser_8cpp_a1b183679f152d987a243e2037c78bfa4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CommandsParser_8cpp_ac4f89e7dbcbb5986315038db16ad2371}\label{CommandsParser_8cpp_ac4f89e7dbcbb5986315038db16ad2371}} 
+\index{CommandsParser.cpp@{CommandsParser.cpp}!getSourceFileData@{getSourceFileData}}
+\index{getSourceFileData@{getSourceFileData}!CommandsParser.cpp@{CommandsParser.cpp}}
+\doxysubsubsection{\texorpdfstring{getSourceFileData()}{getSourceFileData()}}
+{\footnotesize\ttfamily char$\ast$ get\+Source\+File\+Data (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{input\+File,  }\item[{size\+\_\+t $\ast$}]{length }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17                                                          \{}
+\DoxyCodeLine{18     fseek(inputFile, 0, SEEK\_END);}
+\DoxyCodeLine{19     *length = (size\_t) ftell(inputFile);}
+\DoxyCodeLine{20     fseek(inputFile, 0, SEEK\_SET);}
+\DoxyCodeLine{21     }
+\DoxyCodeLine{22     \textcolor{keywordtype}{char} *buffer = (\textcolor{keywordtype}{char}*)calloc(*length + 2, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{23     \textcolor{keywordflow}{if} (buffer) \{}
+\DoxyCodeLine{24         fread(buffer, 1, *length, inputFile);}
+\DoxyCodeLine{25         buffer[*length] = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{26     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{27         \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{28     \}}
+\DoxyCodeLine{29     }
+\DoxyCodeLine{30     \textcolor{keywordflow}{return} buffer;}
+\DoxyCodeLine{31 \}}
+
+\end{DoxyCode}
+
+
+Referenced by load\+Bin\+File(), and main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CommandsParser_8cpp_ac4f89e7dbcbb5986315038db16ad2371_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CommandsParser_8cpp_a609cbe8a40a0ba73594e8b89f570b074}\label{CommandsParser_8cpp_a609cbe8a40a0ba73594e8b89f570b074}} 
+\index{CommandsParser.cpp@{CommandsParser.cpp}!isValidArgumentsNumber@{isValidArgumentsNumber}}
+\index{isValidArgumentsNumber@{isValidArgumentsNumber}!CommandsParser.cpp@{CommandsParser.cpp}}
+\doxysubsubsection{\texorpdfstring{isValidArgumentsNumber()}{isValidArgumentsNumber()}}
+{\footnotesize\ttfamily int is\+Valid\+Arguments\+Number (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}} $\ast$}]{mapping,  }\item[{int}]{argc }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{147                                                                   \{}
+\DoxyCodeLine{148     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* formatPtr = mapping-\/>\mbox{\hyperlink{structSyntaxEntity_a02a711b31d8895f3ffaaa71bdc6c918e}{format}};}
+\DoxyCodeLine{149     }
+\DoxyCodeLine{150     \textcolor{keywordtype}{int} maxPossible = 0;}
+\DoxyCodeLine{151     \textcolor{keywordtype}{int} argumentsTotal = argc;}
+\DoxyCodeLine{152     \textcolor{keywordtype}{int} argumentsAvailable = argc;}
+\DoxyCodeLine{153     \textcolor{keywordflow}{while} (*formatPtr != \textcolor{charliteral}{'\(\backslash\)0'}) \{}
+\DoxyCodeLine{154         \textcolor{keywordflow}{if} (*formatPtr == \textcolor{charliteral}{'*'} \&\& argumentsAvailable <= 0)}
+\DoxyCodeLine{155             \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{156         argumentsAvailable-\/-\/;}
+\DoxyCodeLine{157         formatPtr++;}
+\DoxyCodeLine{158         maxPossible++;}
+\DoxyCodeLine{159     \}}
+\DoxyCodeLine{160     }
+\DoxyCodeLine{161     \textcolor{keywordflow}{if} (argumentsTotal > maxPossible)}
+\DoxyCodeLine{162         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{163     }
+\DoxyCodeLine{164     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{165 \}}
+
+\end{DoxyCode}
+
+
+References Syntax\+Entity\+::format.
+
+
+
+Referenced by analyze\+Instruction\+Errors(), and parse\+Command().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CommandsParser_8cpp_a609cbe8a40a0ba73594e8b89f570b074_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CommandsParser_8cpp_ac706821978aab6d75c0e673fac677e75}\label{CommandsParser_8cpp_ac706821978aab6d75c0e673fac677e75}} 
+\index{CommandsParser.cpp@{CommandsParser.cpp}!labelsTableComplete@{labelsTableComplete}}
+\index{labelsTableComplete@{labelsTableComplete}!CommandsParser.cpp@{CommandsParser.cpp}}
+\doxysubsubsection{\texorpdfstring{labelsTableComplete()}{labelsTableComplete()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8d}{Label\+Parse}} labels\+Table\+Complete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}} $\ast$}]{compile\+Params,  }\item[{int}]{quiet }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{444                                                                          \{}
+\DoxyCodeLine{445     \mbox{\hyperlink{structJMPLabel}{JMPLabel}}* current = compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a8ae3b30ad939ce70f9ad67a845be0bb0}{labelsStore}}-\/>\mbox{\hyperlink{structJMPLabelsStore_af23849f04d27c00662e235598f3ca6c5}{first}};}
+\DoxyCodeLine{446     }
+\DoxyCodeLine{447     \textcolor{keywordflow}{while}(current != NULL) \{}
+\DoxyCodeLine{448         \textcolor{keywordflow}{if} (current-\/>\mbox{\hyperlink{structJMPLabel_a6b67a7b6015f128f7623c1b5854d94d8}{positionTo}} == -\/1) \{}
+\DoxyCodeLine{449             \textcolor{keywordflow}{if} (quiet!= 1)}
+\DoxyCodeLine{450                 printf(\textcolor{stringliteral}{"{}\%s: error: assembly: no label specified for '\%s' jump\(\backslash\)n"{}}, compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}}, current-\/>\mbox{\hyperlink{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}{name}});}
+\DoxyCodeLine{451             \textcolor{keywordflow}{if} (compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}} != NULL)}
+\DoxyCodeLine{452                 fprintf(compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}}, \textcolor{stringliteral}{"{}\%s: error: assembly: no label specified for '\%s' jump\(\backslash\)n"{}}, compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}}, current-\/>\mbox{\hyperlink{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}{name}});}
+\DoxyCodeLine{453             \textcolor{keywordflow}{return} \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da6cadd424d5f2177bc2d2ef0a94093533}{SPU\_LABEL\_NOTFOUND}};}
+\DoxyCodeLine{454         \}}
+\DoxyCodeLine{455         }
+\DoxyCodeLine{456         \textcolor{keywordflow}{if} (current-\/>\mbox{\hyperlink{structJMPLabel_adbd2aea889c5e5a61ce1b3a93142e99f}{positionFrom}} == -\/1) \{}
+\DoxyCodeLine{457             \textcolor{keywordflow}{if} (quiet != 1)}
+\DoxyCodeLine{458                 printf(\textcolor{stringliteral}{"{}\%s: error: assembly: label '\%s' has no jump instructions\(\backslash\)n"{}}, compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}}, current-\/>\mbox{\hyperlink{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}{name}});}
+\DoxyCodeLine{459             \textcolor{keywordflow}{if} (compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}} != NULL)}
+\DoxyCodeLine{460                 fprintf(compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}}, \textcolor{stringliteral}{"{}\%s: error: assembly: label '\%s' has no jump instructions\(\backslash\)n"{}}, compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}}, current-\/>\mbox{\hyperlink{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}{name}});}
+\DoxyCodeLine{461             \textcolor{keywordflow}{return} \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da160647c003208bcca88f7bfe734e68fd}{SPU\_LABEL\_INVALID}};}
+\DoxyCodeLine{462         \}}
+\DoxyCodeLine{463         }
+\DoxyCodeLine{464         \textcolor{keywordflow}{if} (current-\/>\mbox{\hyperlink{structJMPLabel_ac2f35111d1022a99c505c6a2a88db6bc}{used}} > 1) \{}
+\DoxyCodeLine{465             \textcolor{keywordflow}{if} (quiet!= 1)}
+\DoxyCodeLine{466                 printf(\textcolor{stringliteral}{"{}\%s: error: assembly: label '\%s' has several definitions\(\backslash\)n"{}}, compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}}, current-\/>\mbox{\hyperlink{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}{name}});}
+\DoxyCodeLine{467             \textcolor{keywordflow}{if} (compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}} != NULL)}
+\DoxyCodeLine{468                 fprintf(compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}}, \textcolor{stringliteral}{"{}\%s: error: assembly: label '\%s' has several definitions\(\backslash\)n"{}}, compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}}, current-\/>\mbox{\hyperlink{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}{name}});}
+\DoxyCodeLine{469             \textcolor{keywordflow}{return} \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3797776cf338bd2930b7824194685365}{SPU\_LABEL\_DUBLICATE}};}
+\DoxyCodeLine{470         \}}
+\DoxyCodeLine{471         }
+\DoxyCodeLine{472         current = current-\/>\mbox{\hyperlink{structJMPLabel_a18b0eaf5621254a95518ced33c188226}{next}};}
+\DoxyCodeLine{473     \}}
+\DoxyCodeLine{474     }
+\DoxyCodeLine{475     \textcolor{keywordflow}{return} \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3819e9fcd8e4784afc45ae36ad95164b}{SPU\_LABEL\_OK}};}
+\DoxyCodeLine{476 \}}
+
+\end{DoxyCode}
+
+
+References J\+M\+P\+Labels\+Store\+::first, Assembly\+Params\+::input\+File\+Name, Assembly\+Params\+::labels\+Store, Assembly\+Params\+::lst\+File, J\+M\+P\+Label\+::name, J\+M\+P\+Label\+::next, J\+M\+P\+Label\+::position\+From, J\+M\+P\+Label\+::position\+To, S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+D\+U\+B\+L\+I\+C\+A\+TE, S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+I\+N\+V\+A\+L\+ID, S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+N\+O\+T\+F\+O\+U\+ND, S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+OK, and J\+M\+P\+Label\+::used.
+
+
+
+Referenced by evaluate\+Labels(), and generate\+Errors().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CommandsParser_8cpp_ac706821978aab6d75c0e673fac677e75_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CommandsParser_8cpp_a9f77310758d1c97d9ea9e1bb83779d5f}\label{CommandsParser_8cpp_a9f77310758d1c97d9ea9e1bb83779d5f}} 
+\index{CommandsParser.cpp@{CommandsParser.cpp}!parseCode@{parseCode}}
+\index{parseCode@{parseCode}!CommandsParser.cpp@{CommandsParser.cpp}}
+\doxysubsubsection{\texorpdfstring{parseCode()}{parseCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CommandsDTypes_8hpp_a014dc28c49852c3fac1fa3cd2a95c0d5}{Command\+Parse\+Result}} parse\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}} $\ast$}]{compile\+Params,  }\item[{const \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$}]{mapping,  }\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{binary,  }\item[{char $\ast$}]{code,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{283                                                                                                                                          \{}
+\DoxyCodeLine{284     \textcolor{keywordtype}{char}* lastBlockPos = code;}
+\DoxyCodeLine{285     }
+\DoxyCodeLine{286     \textcolor{keywordtype}{size\_t} instrUct = 0;}
+\DoxyCodeLine{287     \textcolor{keywordflow}{while} (lastBlockPos != NULL \&\& lastBlockPos != (\textcolor{keywordtype}{char}*)NULL + 1) \{}
+\DoxyCodeLine{288         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{CommandsParser_8cpp_aea7d9cd65610cbe3c3b768677f857fbd}{codeBlockEmpty}}(lastBlockPos)) \{}
+\DoxyCodeLine{289             \mbox{\hyperlink{CommandsDTypes_8hpp_a014dc28c49852c3fac1fa3cd2a95c0d5}{CommandParseResult}} res = \mbox{\hyperlink{CommandsParser_8cpp_ab7c640fc2a8dcec923fa8ffb2844da87}{parseCommand}}(compileParams, mapping, binary, lastBlockPos);}
+\DoxyCodeLine{290             instrUct++;}
+\DoxyCodeLine{291             \textcolor{keywordflow}{if} (res != \mbox{\hyperlink{CommandsDTypes_8hpp_a014dc28c49852c3fac1fa3cd2a95c0d5aa4efc8f9e76b32072d33a7d67f856d99}{SPU\_PARSE\_OK}})\{}
+\DoxyCodeLine{292                 \textcolor{keywordflow}{if} (compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3998875859d91d9614897720dd09aa3a}{verbose}}) \{}
+\DoxyCodeLine{293                     printf(\textcolor{stringliteral}{"{}\%s: error: assembly: failed to parse instruction no. \%zu '\%s'\(\backslash\)n"{}}, compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}}, instrUct, lastBlockPos);}
+\DoxyCodeLine{294                 \}}
+\DoxyCodeLine{295                 fprintf(compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}}, \textcolor{stringliteral}{"{}error: assembly: failed to parse instruction no. \%zu '\%s'\(\backslash\)n"{}}, instrUct, lastBlockPos);}
+\DoxyCodeLine{296                 \textcolor{keywordflow}{return} res;}
+\DoxyCodeLine{297             \}}
+\DoxyCodeLine{298         \}}
+\DoxyCodeLine{299         }
+\DoxyCodeLine{300         lastBlockPos = ((\textcolor{keywordtype}{char}*)memchr(lastBlockPos, \textcolor{charliteral}{'\(\backslash\)n'}, (\textcolor{keywordtype}{size\_t})length -\/ (size\_t)(lastBlockPos -\/ code))) + 1;}
+\DoxyCodeLine{301     \}}
+\DoxyCodeLine{302     }
+\DoxyCodeLine{303     }
+\DoxyCodeLine{304     \textcolor{keywordflow}{return} \mbox{\hyperlink{CommandsDTypes_8hpp_a014dc28c49852c3fac1fa3cd2a95c0d5aa4efc8f9e76b32072d33a7d67f856d99}{SPU\_PARSE\_OK}};}
+\DoxyCodeLine{305 \}}
+
+\end{DoxyCode}
+
+
+References code\+Block\+Empty(), Assembly\+Params\+::input\+File\+Name, Assembly\+Params\+::lst\+File, parse\+Command(), S\+P\+U\+\_\+\+P\+A\+R\+S\+E\+\_\+\+OK, and Assembly\+Params\+::verbose.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CommandsParser_8cpp_a9f77310758d1c97d9ea9e1bb83779d5f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{CommandsParser_8cpp_a9f77310758d1c97d9ea9e1bb83779d5f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CommandsParser_8cpp_ab7c640fc2a8dcec923fa8ffb2844da87}\label{CommandsParser_8cpp_ab7c640fc2a8dcec923fa8ffb2844da87}} 
+\index{CommandsParser.cpp@{CommandsParser.cpp}!parseCommand@{parseCommand}}
+\index{parseCommand@{parseCommand}!CommandsParser.cpp@{CommandsParser.cpp}}
+\doxysubsubsection{\texorpdfstring{parseCommand()}{parseCommand()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CommandsDTypes_8hpp_a014dc28c49852c3fac1fa3cd2a95c0d5}{Command\+Parse\+Result}} parse\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}} $\ast$}]{compile\+Params,  }\item[{const \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$}]{mapping,  }\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{binary,  }\item[{char $\ast$}]{code\+Block }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{167                                                                                                                                   \{}
+\DoxyCodeLine{168     \textcolor{keywordtype}{char}* newlinePos = strchr(codeBlock, \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{169     \textcolor{keywordflow}{if} (newlinePos != NULL)\{}
+\DoxyCodeLine{170         *newlinePos = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{171     \}}
+\DoxyCodeLine{172     }
+\DoxyCodeLine{173     \textcolor{keywordtype}{char}* commPos = strchr(codeBlock, \textcolor{charliteral}{';'});}
+\DoxyCodeLine{174     \textcolor{keywordflow}{if} (commPos != NULL)\{}
+\DoxyCodeLine{175         *commPos = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{176     \}}
+\DoxyCodeLine{177     }
+\DoxyCodeLine{178     \textcolor{keyword}{const} \mbox{\hyperlink{structSyntaxEntity}{SyntaxEntity}}* foundEntity = \mbox{\hyperlink{CommandsParser_8cpp_a2d524ace1c28ad2095fd220f34a2f929}{fetchCommand}}(mapping, codeBlock);}
+\DoxyCodeLine{179     }
+\DoxyCodeLine{180     \textcolor{keywordflow}{if} (foundEntity == NULL) \{}
+\DoxyCodeLine{181         \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8d}{LabelParse}} resLabel = \mbox{\hyperlink{CommandsParser_8cpp_a63dde4ce36e120b062e0bc7127eb4ab4}{setLabelPos}}(compileParams, codeBlock, (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}});}
+\DoxyCodeLine{182         \textcolor{keywordflow}{if} (resLabel == \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da6cadd424d5f2177bc2d2ef0a94093533}{SPU\_LABEL\_NOTFOUND}}) \{}
+\DoxyCodeLine{183             printf(\textcolor{stringliteral}{"{}\%s: error: assembly: unknown instruction '\%s' found\(\backslash\)n"{}}, compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}},}
+\DoxyCodeLine{184                    codeBlock);}
+\DoxyCodeLine{185             }
+\DoxyCodeLine{186             fprintf(compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}}, \textcolor{stringliteral}{"{}error: assembly: unknown instruction '\%s' found\(\backslash\)n"{}}, codeBlock);}
+\DoxyCodeLine{187             \textcolor{keywordflow}{return} \mbox{\hyperlink{CommandsDTypes_8hpp_a014dc28c49852c3fac1fa3cd2a95c0d5a5ce20d1b64896091d8e4a9a8d6c171c2}{SPU\_UNKNOWN\_COMMAND}};}
+\DoxyCodeLine{188         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{189             \textcolor{keywordflow}{switch} (resLabel) \{}
+\DoxyCodeLine{190                 \textcolor{keywordflow}{case} \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3797776cf338bd2930b7824194685365}{SPU\_LABEL\_DUBLICATE}}: \{}
+\DoxyCodeLine{191                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{192                 \}}
+\DoxyCodeLine{193                 \textcolor{keywordflow}{case} \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3819e9fcd8e4784afc45ae36ad95164b}{SPU\_LABEL\_OK}}: \{}
+\DoxyCodeLine{194                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{195                 \}}
+\DoxyCodeLine{196                 \textcolor{keywordflow}{case} \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da6cadd424d5f2177bc2d2ef0a94093533}{SPU\_LABEL\_NOTFOUND}}: \{}
+\DoxyCodeLine{197                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{198                 \}}
+\DoxyCodeLine{199                 \textcolor{keywordflow}{case} \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da160647c003208bcca88f7bfe734e68fd}{SPU\_LABEL\_INVALID}}: \{}
+\DoxyCodeLine{200                     printf(\textcolor{stringliteral}{"{}\%s: error: assembly: invalid label name '\%s' found\(\backslash\)n"{}}, compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}},}
+\DoxyCodeLine{201                            codeBlock);}
+\DoxyCodeLine{202                     fprintf(compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}}, \textcolor{stringliteral}{"{}error: assembly: invalid label name '\%s' found\(\backslash\)n"{}}, codeBlock);}
+\DoxyCodeLine{203                     \textcolor{keywordflow}{return} \mbox{\hyperlink{CommandsDTypes_8hpp_a014dc28c49852c3fac1fa3cd2a95c0d5a9919a60095d8b1be6437d22db9eb1710}{SPU\_PARSE\_LABEL\_INVALID}};}
+\DoxyCodeLine{204                 \}}
+\DoxyCodeLine{205             \}}
+\DoxyCodeLine{206             \textcolor{keywordflow}{if} (compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}} != NULL)\{}
+\DoxyCodeLine{207                 fprintf(compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}}, \textcolor{stringliteral}{"{}\%-\/5s -\/> \%5s | "{}}, \textcolor{stringliteral}{"{}x"{}}, \textcolor{stringliteral}{"{}x"{}} );}
+\DoxyCodeLine{208                 fprintf(compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}}, \textcolor{stringliteral}{"{}\%-\/3d | "{}}, 0);}
+\DoxyCodeLine{209                 fprintf(compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}}, \textcolor{stringliteral}{"{}\%-\/25s | "{}}, codeBlock);}
+\DoxyCodeLine{210                 fprintf(compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}}, \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{211             \}}
+\DoxyCodeLine{212         \}}
+\DoxyCodeLine{213     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{214         }
+\DoxyCodeLine{215         \textcolor{keywordtype}{int} argc = 0;}
+\DoxyCodeLine{216         \textcolor{keyword}{const} \textcolor{keywordtype}{char}** argv = \mbox{\hyperlink{CommandsParser_8cpp_a4a20084f6e89bbc776e21d9adc16af7c}{getArgList}}(codeBlock, \&argc);}
+\DoxyCodeLine{217         }
+\DoxyCodeLine{218         \textcolor{keywordtype}{int} validArguments = \mbox{\hyperlink{CommandsParser_8cpp_a609cbe8a40a0ba73594e8b89f570b074}{isValidArgumentsNumber}}(foundEntity, argc -\/ 1);}
+\DoxyCodeLine{219         }
+\DoxyCodeLine{220         \textcolor{keywordflow}{if} (validArguments == 0)\{}
+\DoxyCodeLine{221             \textcolor{keywordflow}{if} (compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3998875859d91d9614897720dd09aa3a}{verbose}}) \{}
+\DoxyCodeLine{222                 printf(\textcolor{stringliteral}{"{}\%s: error: assembly: wrong instruction '\%s' found. "{}}}
+\DoxyCodeLine{223                        \textcolor{stringliteral}{"{}Arguments number is not valid. "{}}}
+\DoxyCodeLine{224                        \textcolor{stringliteral}{"{}Valid format: '\%s'\(\backslash\)n"{}}, compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}}, codeBlock, foundEntity-\/>\mbox{\hyperlink{structSyntaxEntity_a02a711b31d8895f3ffaaa71bdc6c918e}{format}});}
+\DoxyCodeLine{225             \}}
+\DoxyCodeLine{226             fprintf(compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}}, \textcolor{stringliteral}{"{}error: assembly: wrong instruction '\%s' found. "{}}}
+\DoxyCodeLine{227                     \textcolor{stringliteral}{"{}Arguments number is not valid. "{}}}
+\DoxyCodeLine{228                     \textcolor{stringliteral}{"{}Valid format: '\%s'\(\backslash\)n"{}}, codeBlock, foundEntity-\/>\mbox{\hyperlink{structSyntaxEntity_a02a711b31d8895f3ffaaa71bdc6c918e}{format}});}
+\DoxyCodeLine{229             \mbox{\hyperlink{CommandsParser_8cpp_a11175231a266da4b41b7e1e1f2bf2a3a}{freeArgList}}((\textcolor{keywordtype}{char}**)argv, argc);}
+\DoxyCodeLine{230             \textcolor{keywordflow}{return} \mbox{\hyperlink{CommandsDTypes_8hpp_a014dc28c49852c3fac1fa3cd2a95c0d5aaf396cb249f38e1c3dc6b08450bf6619}{SPU\_CMD\_WRONG\_ARGUMENTS}};}
+\DoxyCodeLine{231         \}}
+\DoxyCodeLine{232         }
+\DoxyCodeLine{233         \mbox{\hyperlink{TranslationDTypes_8hpp_aaef4a579ede91cde0e35d0c6d40c8061}{CommandToBytesResult}} parseRes = foundEntity-\/>\mbox{\hyperlink{structSyntaxEntity_ae017135ccefa21c7c462806baac1f7d7}{cProcessor}}(foundEntity, compileParams, binary, argc, argv);}
+\DoxyCodeLine{234         }
+\DoxyCodeLine{235         \textcolor{keywordflow}{switch} (parseRes) \{}
+\DoxyCodeLine{236             \textcolor{keywordflow}{case} \mbox{\hyperlink{TranslationDTypes_8hpp_aaef4a579ede91cde0e35d0c6d40c8061a8742b7e558fbfc0df3e82514cd09a2fb}{SPU\_CTB\_ERROR}}:\{}
+\DoxyCodeLine{237                 printf(\textcolor{stringliteral}{"{}\%s: error: assembly: general syntax error\(\backslash\)n"{}}, compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}});}
+\DoxyCodeLine{238                 fprintf(compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}}, \textcolor{stringliteral}{"{}error: assembly: general syntax error\(\backslash\)n"{}});}
+\DoxyCodeLine{239                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{240             \}}
+\DoxyCodeLine{241             \textcolor{keywordflow}{case} \mbox{\hyperlink{TranslationDTypes_8hpp_aaef4a579ede91cde0e35d0c6d40c8061afd6e2644760e1a67e9320591bc2a2a0c}{SPU\_CTB\_UNKNOWN\_REGISTER}}:\{}
+\DoxyCodeLine{242                 printf(\textcolor{stringliteral}{"{}\%s: error: assembly: unknown register\(\backslash\)n"{}}, compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}});}
+\DoxyCodeLine{243                 fprintf(compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}}, \textcolor{stringliteral}{"{}error: assembly: unknown register\(\backslash\)n"{}});}
+\DoxyCodeLine{244                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{245             \}}
+\DoxyCodeLine{246             \textcolor{keywordflow}{case} \mbox{\hyperlink{TranslationDTypes_8hpp_aaef4a579ede91cde0e35d0c6d40c8061a2699407e47aa173c5775a911832d92de}{SPU\_CTB\_INVALID\_NUMBER}}:\{}
+\DoxyCodeLine{247                 printf(\textcolor{stringliteral}{"{}\%s error: assembly: invalid number of arguments\(\backslash\)n"{}}, compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}});}
+\DoxyCodeLine{248                 fprintf(compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}}, \textcolor{stringliteral}{"{}error: assembly: invalid number of arguments\(\backslash\)n"{}});}
+\DoxyCodeLine{249                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{250             \}}
+\DoxyCodeLine{251             \textcolor{keywordflow}{case} \mbox{\hyperlink{TranslationDTypes_8hpp_aaef4a579ede91cde0e35d0c6d40c8061a7c3c53b3cdfb58d13a224b0b19788161}{SPU\_CTB\_OK}}:\{}
+\DoxyCodeLine{252                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{253             \}}
+\DoxyCodeLine{254         \}}
+\DoxyCodeLine{255         }
+\DoxyCodeLine{256         \textcolor{keywordflow}{if} (parseRes != \mbox{\hyperlink{TranslationDTypes_8hpp_aaef4a579ede91cde0e35d0c6d40c8061a7c3c53b3cdfb58d13a224b0b19788161}{SPU\_CTB\_OK}}) \{}
+\DoxyCodeLine{257             \textcolor{keywordflow}{return} \mbox{\hyperlink{CommandsDTypes_8hpp_a014dc28c49852c3fac1fa3cd2a95c0d5a0d58bbcb26cbf7690ab124da7c318073}{SPU\_FINALPARSE\_ERROR}};}
+\DoxyCodeLine{258         \}}
+\DoxyCodeLine{259         \mbox{\hyperlink{CommandsParser_8cpp_a11175231a266da4b41b7e1e1f2bf2a3a}{freeArgList}}((\textcolor{keywordtype}{char}**)argv, argc);}
+\DoxyCodeLine{260     \}}
+\DoxyCodeLine{261     }
+\DoxyCodeLine{262     \textcolor{keywordflow}{if} (newlinePos != NULL)\{}
+\DoxyCodeLine{263         *newlinePos = \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{264     \}}
+\DoxyCodeLine{265     \textcolor{keywordflow}{if} (commPos != NULL)\{}
+\DoxyCodeLine{266         *commPos = \textcolor{charliteral}{';'};}
+\DoxyCodeLine{267     \}}
+\DoxyCodeLine{268     }
+\DoxyCodeLine{269     \textcolor{keywordflow}{return} \mbox{\hyperlink{CommandsDTypes_8hpp_a014dc28c49852c3fac1fa3cd2a95c0d5aa4efc8f9e76b32072d33a7d67f856d99}{SPU\_PARSE\_OK}};}
+\DoxyCodeLine{270 \}}
+
+\end{DoxyCode}
+
+
+References Syntax\+Entity\+::c\+Processor, Binary\+File\+::current\+Size, fetch\+Command(), Syntax\+Entity\+::format, free\+Arg\+List(), get\+Arg\+List(), Assembly\+Params\+::input\+File\+Name, is\+Valid\+Arguments\+Number(), Assembly\+Params\+::lst\+File, set\+Label\+Pos(), S\+P\+U\+\_\+\+C\+M\+D\+\_\+\+W\+R\+O\+N\+G\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS, S\+P\+U\+\_\+\+C\+T\+B\+\_\+\+E\+R\+R\+OR, S\+P\+U\+\_\+\+C\+T\+B\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+N\+U\+M\+B\+ER, S\+P\+U\+\_\+\+C\+T\+B\+\_\+\+OK, S\+P\+U\+\_\+\+C\+T\+B\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+R\+E\+G\+I\+S\+T\+ER, S\+P\+U\+\_\+\+F\+I\+N\+A\+L\+P\+A\+R\+S\+E\+\_\+\+E\+R\+R\+OR, S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+D\+U\+B\+L\+I\+C\+A\+TE, S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+I\+N\+V\+A\+L\+ID, S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+N\+O\+T\+F\+O\+U\+ND, S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+OK, S\+P\+U\+\_\+\+P\+A\+R\+S\+E\+\_\+\+L\+A\+B\+E\+L\+\_\+\+I\+N\+V\+A\+L\+ID, S\+P\+U\+\_\+\+P\+A\+R\+S\+E\+\_\+\+OK, S\+P\+U\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+C\+O\+M\+M\+A\+ND, and Assembly\+Params\+::verbose.
+
+
+
+Referenced by parse\+Code().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CommandsParser_8cpp_ab7c640fc2a8dcec923fa8ffb2844da87_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{CommandsParser_8cpp_ab7c640fc2a8dcec923fa8ffb2844da87_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CommandsParser_8cpp_ac0521cbcbec1bbac34e44d3051b24915}\label{CommandsParser_8cpp_ac0521cbcbec1bbac34e44d3051b24915}} 
+\index{CommandsParser.cpp@{CommandsParser.cpp}!parseLabel@{parseLabel}}
+\index{parseLabel@{parseLabel}!CommandsParser.cpp@{CommandsParser.cpp}}
+\doxysubsubsection{\texorpdfstring{parseLabel()}{parseLabel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8d}{Label\+Parse}} parse\+Label (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}} $\ast$}]{compile\+Params,  }\item[{char $\ast$}]{code }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{379                                                                  \{}
+\DoxyCodeLine{380     \textcolor{keywordtype}{char}* colonFound = strchr(code, \textcolor{charliteral}{':'});}
+\DoxyCodeLine{381     }
+\DoxyCodeLine{382     \textcolor{keywordflow}{if} (colonFound == NULL)}
+\DoxyCodeLine{383         \textcolor{keywordflow}{return} \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da6cadd424d5f2177bc2d2ef0a94093533}{SPU\_LABEL\_NOTFOUND}};}
+\DoxyCodeLine{384     *colonFound = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{385     }
+\DoxyCodeLine{386     \textcolor{keywordtype}{char}* checker = code;}
+\DoxyCodeLine{387     \textcolor{keywordflow}{while}(checker < colonFound) \{}
+\DoxyCodeLine{388         \textcolor{keywordflow}{if} (!(isalpha(*checker) || isnumber(*checker)))}
+\DoxyCodeLine{389             \textcolor{keywordflow}{return} \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da160647c003208bcca88f7bfe734e68fd}{SPU\_LABEL\_INVALID}};}
+\DoxyCodeLine{390         checker++;}
+\DoxyCodeLine{391     \}}
+\DoxyCodeLine{392     }
+\DoxyCodeLine{393     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{394         compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a8ae3b30ad939ce70f9ad67a845be0bb0}{labelsStore}}-\/>\mbox{\hyperlink{structJMPLabelsStore_a2c011d9327249181f05780a91ef5b9d9}{newLabel}}(code);}
+\DoxyCodeLine{395     \} \textcolor{keywordflow}{catch}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* e) \{}
+\DoxyCodeLine{396         *colonFound = \textcolor{charliteral}{':'};}
+\DoxyCodeLine{397         \textcolor{keywordflow}{return} \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3797776cf338bd2930b7824194685365}{SPU\_LABEL\_DUBLICATE}};}
+\DoxyCodeLine{398     \}}
+\DoxyCodeLine{399     *colonFound = \textcolor{charliteral}{':'};}
+\DoxyCodeLine{400     \textcolor{keywordflow}{return} \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3819e9fcd8e4784afc45ae36ad95164b}{SPU\_LABEL\_OK}};}
+\DoxyCodeLine{401 \}}
+
+\end{DoxyCode}
+
+
+References Assembly\+Params\+::labels\+Store, J\+M\+P\+Labels\+Store\+::new\+Label(), S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+D\+U\+B\+L\+I\+C\+A\+TE, S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+I\+N\+V\+A\+L\+ID, S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+N\+O\+T\+F\+O\+U\+ND, and S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+OK.
+
+
+
+Referenced by analyze\+Instruction\+Errors().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{CommandsParser_8cpp_ac0521cbcbec1bbac34e44d3051b24915_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CommandsParser_8cpp_ac0521cbcbec1bbac34e44d3051b24915_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CommandsParser_8cpp_a9c053f5b726840410e982bf98a5dc7ec}\label{CommandsParser_8cpp_a9c053f5b726840410e982bf98a5dc7ec}} 
+\index{CommandsParser.cpp@{CommandsParser.cpp}!preprocessSource@{preprocessSource}}
+\index{preprocessSource@{preprocessSource}!CommandsParser.cpp@{CommandsParser.cpp}}
+\doxysubsubsection{\texorpdfstring{preprocessSource()}{preprocessSource()}}
+{\footnotesize\ttfamily void preprocess\+Source (\begin{DoxyParamCaption}\item[{char $\ast$}]{code,  }\item[{size\+\_\+t $\ast$}]{length }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46                                                   \{}
+\DoxyCodeLine{47     \mbox{\hyperlink{CommandsParser_8cpp_a0f8de65651301114bc7782475cc6ff79}{removeDoubleWhitespaces}}(code, length);}
+\DoxyCodeLine{48     }
+\DoxyCodeLine{49     \textcolor{keywordtype}{char}* commentPos = strchr(code, \textcolor{charliteral}{';'});}
+\DoxyCodeLine{50     \textcolor{keywordflow}{while} (commentPos != NULL) \{}
+\DoxyCodeLine{51         \textcolor{keywordtype}{char}* commentPosNext = strchr(commentPos, \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{52         \textcolor{keywordflow}{if} (commentPosNext == NULL)\{}
+\DoxyCodeLine{53             commentPosNext = code + *length -\/ 1;}
+\DoxyCodeLine{54         \}}
+\DoxyCodeLine{55         \textcolor{keywordtype}{size\_t} emptyLength = 0;}
+\DoxyCodeLine{56         \textcolor{keywordtype}{char}* mover = commentPosNext;}
+\DoxyCodeLine{57         \textcolor{keywordtype}{char}* commentPosTmp = commentPos;}
+\DoxyCodeLine{58         \textcolor{keywordflow}{while} (mover != code + *length) \{}
+\DoxyCodeLine{59             emptyLength++;}
+\DoxyCodeLine{60             *(commentPosTmp++) = *(mover++);}
+\DoxyCodeLine{61         \}}
+\DoxyCodeLine{62         *(commentPosTmp) = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{63         *length = strlen(code);}
+\DoxyCodeLine{64         commentPos = strchr(commentPos + 1, \textcolor{charliteral}{';'});}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66     }
+\DoxyCodeLine{67     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i + 1 < *length; ) \{}
+\DoxyCodeLine{68         \textcolor{keywordflow}{if}(code[i] == \textcolor{charliteral}{'\(\backslash\)n'} \&\& (code[i+1] == \textcolor{charliteral}{'\(\backslash\)n'} || code[(i > 0) ? i -\/ 1 : i] == \textcolor{charliteral}{'\(\backslash\)n'})) \{}
+\DoxyCodeLine{69             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} j = i; j < *length; j++) \{}
+\DoxyCodeLine{70                 code[j]=code[j + 1];}
+\DoxyCodeLine{71             \}}
+\DoxyCodeLine{72             (*length)-\/-\/;}
+\DoxyCodeLine{73         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{74             i++;}
+\DoxyCodeLine{75         \}}
+\DoxyCodeLine{76     \}}
+\DoxyCodeLine{77     \mbox{\hyperlink{CommandsParser_8cpp_af1235b39d424529890580e134c7b3138}{removeWhitespacesInTheEnd}}(code, length);}
+\DoxyCodeLine{78 \}}
+
+\end{DoxyCode}
+
+
+References remove\+Double\+Whitespaces(), and remove\+Whitespaces\+In\+The\+End().
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CommandsParser_8cpp_a9c053f5b726840410e982bf98a5dc7ec_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{CommandsParser_8cpp_a9c053f5b726840410e982bf98a5dc7ec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CommandsParser_8cpp_a3a86900aa34b39b3fedbebc7ae0c53e7}\label{CommandsParser_8cpp_a3a86900aa34b39b3fedbebc7ae0c53e7}} 
+\index{CommandsParser.cpp@{CommandsParser.cpp}!registerNameFromNo@{registerNameFromNo}}
+\index{registerNameFromNo@{registerNameFromNo}!CommandsParser.cpp@{CommandsParser.cpp}}
+\doxysubsubsection{\texorpdfstring{registerNameFromNo()}{registerNameFromNo()}}
+{\footnotesize\ttfamily const char$\ast$ register\+Name\+From\+No (\begin{DoxyParamCaption}\item[{int}]{no }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{329                                        \{}
+\DoxyCodeLine{330     \textcolor{keywordflow}{switch} (no) \{}
+\DoxyCodeLine{331         \textcolor{keywordflow}{case} 0:}
+\DoxyCodeLine{332             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}rax"{}};}
+\DoxyCodeLine{333             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{334         \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{335             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}rbx"{}};}
+\DoxyCodeLine{336             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{337         \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{338             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}rcx"{}};}
+\DoxyCodeLine{339             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{340         \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{341             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}rdx"{}};}
+\DoxyCodeLine{342             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{343     \}}
+\DoxyCodeLine{344     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}<UNKNOWN REGISTER>"{}};}
+\DoxyCodeLine{345 \}}
+
+\end{DoxyCode}
+
+
+Referenced by O\+P\+B\+A\+C\+K\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+N\+C().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CommandsParser_8cpp_a3a86900aa34b39b3fedbebc7ae0c53e7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CommandsParser_8cpp_a339f0d81c397ae53843ca64e2f0c86f0}\label{CommandsParser_8cpp_a339f0d81c397ae53843ca64e2f0c86f0}} 
+\index{CommandsParser.cpp@{CommandsParser.cpp}!registerNoFromName@{registerNoFromName}}
+\index{registerNoFromName@{registerNoFromName}!CommandsParser.cpp@{CommandsParser.cpp}}
+\doxysubsubsection{\texorpdfstring{registerNoFromName()}{registerNoFromName()}}
+{\footnotesize\ttfamily int register\+No\+From\+Name (\begin{DoxyParamCaption}\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{307                                    \{}
+\DoxyCodeLine{308     \textcolor{keywordtype}{char}* whPos = strchr(name, \textcolor{charliteral}{' '});}
+\DoxyCodeLine{309     \textcolor{keywordflow}{if} (whPos != NULL)}
+\DoxyCodeLine{310         *whPos = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{311     \textcolor{keywordtype}{int} \mbox{\hyperlink{EXE_8h_a648bf88b6941d0a6f80ee99e8821a527}{result}} = -\/1;}
+\DoxyCodeLine{312     \textcolor{keywordflow}{if} (strcmp(\textcolor{stringliteral}{"{}rax"{}}, name) == 0) \{}
+\DoxyCodeLine{313         \mbox{\hyperlink{EXE_8h_a648bf88b6941d0a6f80ee99e8821a527}{result}} = 0;}
+\DoxyCodeLine{314     \}}
+\DoxyCodeLine{315     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(\textcolor{stringliteral}{"{}rbx"{}}, name) == 0) \{}
+\DoxyCodeLine{316         \mbox{\hyperlink{EXE_8h_a648bf88b6941d0a6f80ee99e8821a527}{result}} = 1;}
+\DoxyCodeLine{317     \}}
+\DoxyCodeLine{318     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(\textcolor{stringliteral}{"{}rcx"{}}, name) == 0) \{}
+\DoxyCodeLine{319         \mbox{\hyperlink{EXE_8h_a648bf88b6941d0a6f80ee99e8821a527}{result}} = 2;}
+\DoxyCodeLine{320     \}}
+\DoxyCodeLine{321     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(\textcolor{stringliteral}{"{}rdx"{}}, name) == 0) \{}
+\DoxyCodeLine{322         \mbox{\hyperlink{EXE_8h_a648bf88b6941d0a6f80ee99e8821a527}{result}} = 3;}
+\DoxyCodeLine{323     \}}
+\DoxyCodeLine{324     \textcolor{keywordflow}{if} (whPos != NULL)}
+\DoxyCodeLine{325         *whPos = \textcolor{charliteral}{' '};}
+\DoxyCodeLine{326     \textcolor{keywordflow}{return} \mbox{\hyperlink{EXE_8h_a648bf88b6941d0a6f80ee99e8821a527}{result}};}
+\DoxyCodeLine{327 \}}
+
+\end{DoxyCode}
+
+
+References result.
+
+
+
+Referenced by O\+P\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+N\+C().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{CommandsParser_8cpp_a339f0d81c397ae53843ca64e2f0c86f0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CommandsParser_8cpp_a0f8de65651301114bc7782475cc6ff79}\label{CommandsParser_8cpp_a0f8de65651301114bc7782475cc6ff79}} 
+\index{CommandsParser.cpp@{CommandsParser.cpp}!removeDoubleWhitespaces@{removeDoubleWhitespaces}}
+\index{removeDoubleWhitespaces@{removeDoubleWhitespaces}!CommandsParser.cpp@{CommandsParser.cpp}}
+\doxysubsubsection{\texorpdfstring{removeDoubleWhitespaces()}{removeDoubleWhitespaces()}}
+{\footnotesize\ttfamily void remove\+Double\+Whitespaces (\begin{DoxyParamCaption}\item[{char $\ast$}]{code,  }\item[{size\+\_\+t $\ast$}]{length }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                                                          \{}
+\DoxyCodeLine{34     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i + 1 < *length; ) \{}
+\DoxyCodeLine{35         \textcolor{keywordflow}{if}(code[i] == \textcolor{charliteral}{' '} \&\& (code[i+1] == \textcolor{charliteral}{' '} || code[i-\/1] == \textcolor{charliteral}{' '})) \{}
+\DoxyCodeLine{36             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} j = i; j < *length; j++) \{}
+\DoxyCodeLine{37                 code[j]=code[j + 1];}
+\DoxyCodeLine{38             \}}
+\DoxyCodeLine{39             (*length)-\/-\/;}
+\DoxyCodeLine{40         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{41             i++;}
+\DoxyCodeLine{42         \}}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+
+
+Referenced by main(), and preprocess\+Source().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CommandsParser_8cpp_a0f8de65651301114bc7782475cc6ff79_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CommandsParser_8cpp_af1235b39d424529890580e134c7b3138}\label{CommandsParser_8cpp_af1235b39d424529890580e134c7b3138}} 
+\index{CommandsParser.cpp@{CommandsParser.cpp}!removeWhitespacesInTheEnd@{removeWhitespacesInTheEnd}}
+\index{removeWhitespacesInTheEnd@{removeWhitespacesInTheEnd}!CommandsParser.cpp@{CommandsParser.cpp}}
+\doxysubsubsection{\texorpdfstring{removeWhitespacesInTheEnd()}{removeWhitespacesInTheEnd()}}
+{\footnotesize\ttfamily void remove\+Whitespaces\+In\+The\+End (\begin{DoxyParamCaption}\item[{char $\ast$}]{code,  }\item[{size\+\_\+t $\ast$}]{length }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{358                                                            \{}
+\DoxyCodeLine{359     \textcolor{keywordtype}{char}* newLinePos = strchr(code, \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{360     \textcolor{keywordflow}{while} (newLinePos != NULL) \{}
+\DoxyCodeLine{361         \textcolor{keywordtype}{char}* whPos = newLinePos;}
+\DoxyCodeLine{362         \textcolor{keywordflow}{if} (whPos != code) \{}
+\DoxyCodeLine{363             whPos -\/= 1;}
+\DoxyCodeLine{364             \textcolor{keywordtype}{char}* mover = whPos + 1;}
+\DoxyCodeLine{365             \textcolor{keywordflow}{if} (*whPos == \textcolor{charliteral}{' '}) \{}
+\DoxyCodeLine{366                 \textcolor{keywordflow}{while}(mover <= code + *length)\{}
+\DoxyCodeLine{367                     *(mover -\/ 1) = *(mover);}
+\DoxyCodeLine{368                     mover++;}
+\DoxyCodeLine{369                 \}}
+\DoxyCodeLine{370                 }
+\DoxyCodeLine{371                 *length -\/= 1;}
+\DoxyCodeLine{372             \}}
+\DoxyCodeLine{373         \}}
+\DoxyCodeLine{374         newLinePos = strchr(newLinePos + 1, \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{375     \}}
+\DoxyCodeLine{376 \}}
+
+\end{DoxyCode}
+
+
+Referenced by preprocess\+Source().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CommandsParser_8cpp_af1235b39d424529890580e134c7b3138_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CommandsParser_8cpp_a63dde4ce36e120b062e0bc7127eb4ab4}\label{CommandsParser_8cpp_a63dde4ce36e120b062e0bc7127eb4ab4}} 
+\index{CommandsParser.cpp@{CommandsParser.cpp}!setLabelPos@{setLabelPos}}
+\index{setLabelPos@{setLabelPos}!CommandsParser.cpp@{CommandsParser.cpp}}
+\doxysubsubsection{\texorpdfstring{setLabelPos()}{setLabelPos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8d}{Label\+Parse}} set\+Label\+Pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}} $\ast$}]{compile\+Params,  }\item[{char $\ast$}]{code,  }\item[{unsigned int}]{pos }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{403                                                                                     \{}
+\DoxyCodeLine{404     \textcolor{keywordtype}{char}* colonFound = strchr(code, \textcolor{charliteral}{':'});}
+\DoxyCodeLine{405     }
+\DoxyCodeLine{406     \textcolor{keywordflow}{if} (colonFound == NULL)}
+\DoxyCodeLine{407         \textcolor{keywordflow}{return} \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da6cadd424d5f2177bc2d2ef0a94093533}{SPU\_LABEL\_NOTFOUND}};}
+\DoxyCodeLine{408     *colonFound = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{409     }
+\DoxyCodeLine{410     \textcolor{keywordtype}{char}* checker = code;}
+\DoxyCodeLine{411     \textcolor{keywordflow}{while}(checker < colonFound) \{}
+\DoxyCodeLine{412         \textcolor{keywordflow}{if} (!(isalpha(*checker) || isnumber(*checker)))}
+\DoxyCodeLine{413             \textcolor{keywordflow}{return} \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da160647c003208bcca88f7bfe734e68fd}{SPU\_LABEL\_INVALID}};}
+\DoxyCodeLine{414         checker++;}
+\DoxyCodeLine{415     \}}
+\DoxyCodeLine{416     }
+\DoxyCodeLine{417     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{418         compileParams-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a8ae3b30ad939ce70f9ad67a845be0bb0}{labelsStore}}-\/>\mbox{\hyperlink{structJMPLabelsStore_adc8bdb4dfb06275a44fa33811a5e008a}{setLabelToPosition}}(code, pos);}
+\DoxyCodeLine{419     \} \textcolor{keywordflow}{catch}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* e) \{}
+\DoxyCodeLine{420         *colonFound = \textcolor{charliteral}{':'};}
+\DoxyCodeLine{421         \textcolor{keywordflow}{return} \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3797776cf338bd2930b7824194685365}{SPU\_LABEL\_DUBLICATE}};}
+\DoxyCodeLine{422     \}}
+\DoxyCodeLine{423     *colonFound = \textcolor{charliteral}{':'};}
+\DoxyCodeLine{424     \textcolor{keywordflow}{return} \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3819e9fcd8e4784afc45ae36ad95164b}{SPU\_LABEL\_OK}};}
+\DoxyCodeLine{425 \}}
+
+\end{DoxyCode}
+
+
+References Assembly\+Params\+::labels\+Store, Levenshtein\+Edit\+::pos, J\+M\+P\+Labels\+Store\+::set\+Label\+To\+Position(), S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+D\+U\+B\+L\+I\+C\+A\+TE, S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+I\+N\+V\+A\+L\+ID, S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+N\+O\+T\+F\+O\+U\+ND, and S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+OK.
+
+
+
+Referenced by analyze\+Instruction\+Errors(), and parse\+Command().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CommandsParser_8cpp_a63dde4ce36e120b062e0bc7127eb4ab4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CommandsParser_8cpp_a63dde4ce36e120b062e0bc7127eb4ab4_icgraph}
+\end{center}
+\end{figure}

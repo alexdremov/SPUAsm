@@ -1,0 +1,310 @@
+\hypertarget{StringDistance_8hpp}{}\doxysection{Soft\+Processor\+Unit/\+Assembly/\+Helpers/\+Analysis\+And\+Preparing/\+String\+Distance.hpp File Reference}
+\label{StringDistance_8hpp}\index{SoftProcessorUnit/Assembly/Helpers/AnalysisAndPreparing/StringDistance.hpp@{SoftProcessorUnit/Assembly/Helpers/AnalysisAndPreparing/StringDistance.hpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for String\+Distance.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{StringDistance_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{StringDistance_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{Levenshtein\+Edit}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{Levenshtein\+Edit}} \mbox{\hyperlink{StringDistance_8hpp_ae668b5d215309dd176e3d8a3998a96bf}{Levenshtein\+Edit}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919}{Levenshtein\+Edit\+Type}} \{ \mbox{\hyperlink{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919a4a2bf51e8b45a48a16421a3035b50bbf}{I\+N\+S\+E\+R\+T\+I\+ON}}, 
+\mbox{\hyperlink{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919abde76e129e1e8d7ca615d80ac22a3086}{D\+E\+L\+E\+T\+I\+ON}}, 
+\mbox{\hyperlink{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919a67f494aae4b456d5132a37cbf12e19cd}{S\+U\+B\+S\+T\+I\+T\+U\+T\+I\+ON}}, 
+\mbox{\hyperlink{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919ac157bdf0b85a40d2619cbc8bc1ae5fe2}{N\+O\+NE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{StringDistance_8hpp_aefb44f0d50d4ec3baf6a3346a1f0577d}{levenshtein\+\_\+distance}} (const char $\ast$str1, const char $\ast$str2, \mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{Levenshtein\+Edit}} $\ast$$\ast$script)
+\item 
+static unsigned int \mbox{\hyperlink{StringDistance_8hpp_a3b12d839051fb92dc0afd38445dafdec}{levenshtein\+\_\+matrix\+\_\+calculate}} (\mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{Levenshtein\+Edit}} $\ast$$\ast$mat, const char $\ast$str1, size\+\_\+t len1, const char $\ast$str2, size\+\_\+t len2)
+\item 
+static \mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{Levenshtein\+Edit}} $\ast$$\ast$ \mbox{\hyperlink{StringDistance_8hpp_abaef3a4815c6d37d86b010afa8083f42}{levenshtein\+\_\+matrix\+\_\+create}} (size\+\_\+t len1, size\+\_\+t len2)
+\item 
+static int \mbox{\hyperlink{StringDistance_8hpp_a433d5257dea0796eeca004cb2549a013}{min3}} (int a, int b, int c)
+\item 
+size\+\_\+t \mbox{\hyperlink{StringDistance_8hpp_ae2de998c4ba5a28831558e04eae31c00}{trimwhitespace}} (char $\ast$out, size\+\_\+t len, const char $\ast$str)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Data Structure Documentation}
+\index{LevenshteinEdit@{LevenshteinEdit}}\label{structLevenshteinEdit}
+\Hypertarget{StringDistance_8hpp_structLevenshteinEdit}
+\doxysubsubsection{struct Levenshtein\+Edit}
+
+
+Collaboration diagram for Levenshtein\+Edit\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{structLevenshteinEdit__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{Data Fields}
+\mbox{\Hypertarget{StringDistance_8hpp_a173ccf0048be38dde941393205c3311b}\label{StringDistance_8hpp_a173ccf0048be38dde941393205c3311b}} 
+char&
+arg1&
+\\
+\hline
+
+\mbox{\Hypertarget{StringDistance_8hpp_af15ee0351e4507cc44ac9f3ba6f661e4}\label{StringDistance_8hpp_af15ee0351e4507cc44ac9f3ba6f661e4}} 
+char&
+arg2&
+\\
+\hline
+
+\mbox{\Hypertarget{StringDistance_8hpp_ad0007a839231496fc1e6ac08d4aa0aa7}\label{StringDistance_8hpp_ad0007a839231496fc1e6ac08d4aa0aa7}} 
+unsigned int&
+pos&
+\\
+\hline
+
+\mbox{\Hypertarget{StringDistance_8hpp_a957e8154d1567c70a86f0b97e9c299a3}\label{StringDistance_8hpp_a957e8154d1567c70a86f0b97e9c299a3}} 
+struct \mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{LevenshteinEdit}} $\ast$&
+prev&
+\\
+\hline
+
+\mbox{\Hypertarget{StringDistance_8hpp_aaa7a506415d915062595e69e6ffed3b5}\label{StringDistance_8hpp_aaa7a506415d915062595e69e6ffed3b5}} 
+unsigned int&
+score&
+\\
+\hline
+
+\mbox{\Hypertarget{StringDistance_8hpp_afcf648925706bb441df48b249e5edb6a}\label{StringDistance_8hpp_afcf648925706bb441df48b249e5edb6a}} 
+\mbox{\hyperlink{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919}{LevenshteinEditType}}&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{StringDistance_8hpp_ae668b5d215309dd176e3d8a3998a96bf}\label{StringDistance_8hpp_ae668b5d215309dd176e3d8a3998a96bf}} 
+\index{StringDistance.hpp@{StringDistance.hpp}!LevenshteinEdit@{LevenshteinEdit}}
+\index{LevenshteinEdit@{LevenshteinEdit}!StringDistance.hpp@{StringDistance.hpp}}
+\doxysubsubsection{\texorpdfstring{LevenshteinEdit}{LevenshteinEdit}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{Levenshtein\+Edit}} \mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{Levenshtein\+Edit}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919}\label{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919}} 
+\index{StringDistance.hpp@{StringDistance.hpp}!LevenshteinEditType@{LevenshteinEditType}}
+\index{LevenshteinEditType@{LevenshteinEditType}!StringDistance.hpp@{StringDistance.hpp}}
+\doxysubsubsection{\texorpdfstring{LevenshteinEditType}{LevenshteinEditType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919}{Levenshtein\+Edit\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INSERTION@{INSERTION}!StringDistance.hpp@{StringDistance.hpp}}\index{StringDistance.hpp@{StringDistance.hpp}!INSERTION@{INSERTION}}}\mbox{\Hypertarget{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919a4a2bf51e8b45a48a16421a3035b50bbf}\label{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919a4a2bf51e8b45a48a16421a3035b50bbf}} 
+I\+N\+S\+E\+R\+T\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DELETION@{DELETION}!StringDistance.hpp@{StringDistance.hpp}}\index{StringDistance.hpp@{StringDistance.hpp}!DELETION@{DELETION}}}\mbox{\Hypertarget{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919abde76e129e1e8d7ca615d80ac22a3086}\label{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919abde76e129e1e8d7ca615d80ac22a3086}} 
+D\+E\+L\+E\+T\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUBSTITUTION@{SUBSTITUTION}!StringDistance.hpp@{StringDistance.hpp}}\index{StringDistance.hpp@{StringDistance.hpp}!SUBSTITUTION@{SUBSTITUTION}}}\mbox{\Hypertarget{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919a67f494aae4b456d5132a37cbf12e19cd}\label{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919a67f494aae4b456d5132a37cbf12e19cd}} 
+S\+U\+B\+S\+T\+I\+T\+U\+T\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!StringDistance.hpp@{StringDistance.hpp}}\index{StringDistance.hpp@{StringDistance.hpp}!NONE@{NONE}}}\mbox{\Hypertarget{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919ac157bdf0b85a40d2619cbc8bc1ae5fe2}\label{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919ac157bdf0b85a40d2619cbc8bc1ae5fe2}} 
+N\+O\+NE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13              \{}
+\DoxyCodeLine{14     \mbox{\hyperlink{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919a4a2bf51e8b45a48a16421a3035b50bbf}{INSERTION}},}
+\DoxyCodeLine{15     \mbox{\hyperlink{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919abde76e129e1e8d7ca615d80ac22a3086}{DELETION}},}
+\DoxyCodeLine{16     \mbox{\hyperlink{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919a67f494aae4b456d5132a37cbf12e19cd}{SUBSTITUTION}},}
+\DoxyCodeLine{17     \mbox{\hyperlink{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919ac157bdf0b85a40d2619cbc8bc1ae5fe2}{NONE}}}
+\DoxyCodeLine{18 \} \mbox{\hyperlink{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919}{LevenshteinEditType}};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{StringDistance_8hpp_aefb44f0d50d4ec3baf6a3346a1f0577d}\label{StringDistance_8hpp_aefb44f0d50d4ec3baf6a3346a1f0577d}} 
+\index{StringDistance.hpp@{StringDistance.hpp}!levenshtein\_distance@{levenshtein\_distance}}
+\index{levenshtein\_distance@{levenshtein\_distance}!StringDistance.hpp@{StringDistance.hpp}}
+\doxysubsubsection{\texorpdfstring{levenshtein\_distance()}{levenshtein\_distance()}}
+{\footnotesize\ttfamily unsigned int levenshtein\+\_\+distance (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str1,  }\item[{const char $\ast$}]{str2,  }\item[{\mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{Levenshtein\+Edit}} $\ast$$\ast$}]{script }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{104 \{}
+\DoxyCodeLine{105     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} len1 = strlen(str1), len2 = strlen(str2);}
+\DoxyCodeLine{106     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i, distance;}
+\DoxyCodeLine{107     \mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{LevenshteinEdit}} **mat, *head;}
+\DoxyCodeLine{108     }
+\DoxyCodeLine{109     \textcolor{comment}{/* If either string is empty, the distance is the other string's length */}}
+\DoxyCodeLine{110     \textcolor{keywordflow}{if} (len1 == 0) \{}
+\DoxyCodeLine{111         \textcolor{keywordflow}{return} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})len2;}
+\DoxyCodeLine{112     \}}
+\DoxyCodeLine{113     \textcolor{keywordflow}{if} (len2 == 0) \{}
+\DoxyCodeLine{114         \textcolor{keywordflow}{return} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})len1;}
+\DoxyCodeLine{115     \}}
+\DoxyCodeLine{116     \textcolor{comment}{/* Initialise the matrix */}}
+\DoxyCodeLine{117     mat = \mbox{\hyperlink{StringDistance_8cpp_abaef3a4815c6d37d86b010afa8083f42}{levenshtein\_matrix\_create}}(len1, len2);}
+\DoxyCodeLine{118     \textcolor{keywordflow}{if} (!mat) \{}
+\DoxyCodeLine{119         *script = NULL;}
+\DoxyCodeLine{120         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{121     \}}
+\DoxyCodeLine{122     \textcolor{comment}{/* Main algorithm */}}
+\DoxyCodeLine{123     distance = \mbox{\hyperlink{StringDistance_8cpp_a3b12d839051fb92dc0afd38445dafdec}{levenshtein\_matrix\_calculate}}(mat, str1, len1, str2, len2);}
+\DoxyCodeLine{124     \textcolor{comment}{/* Read back the edit script */}}
+\DoxyCodeLine{125     *script = (\mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{LevenshteinEdit}} *)malloc(distance * \textcolor{keyword}{sizeof}(\mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{LevenshteinEdit}}));}
+\DoxyCodeLine{126     \textcolor{keywordflow}{if} (*script) \{}
+\DoxyCodeLine{127         i = distance -\/ 1;}
+\DoxyCodeLine{128         \textcolor{keywordflow}{for} (head = \&mat[len1][len2];}
+\DoxyCodeLine{129              head-\/>\mbox{\hyperlink{StringDistance_8hpp_a957e8154d1567c70a86f0b97e9c299a3}{prev}} != NULL;}
+\DoxyCodeLine{130              head = head-\/>\mbox{\hyperlink{StringDistance_8hpp_a957e8154d1567c70a86f0b97e9c299a3}{prev}}) \{}
+\DoxyCodeLine{131             \textcolor{keywordflow}{if} (head-\/>\mbox{\hyperlink{StringDistance_8hpp_afcf648925706bb441df48b249e5edb6a}{type}} != \mbox{\hyperlink{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919ac157bdf0b85a40d2619cbc8bc1ae5fe2}{NONE}}) \{}
+\DoxyCodeLine{132                 memcpy(*script + i, head, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{LevenshteinEdit}}));}
+\DoxyCodeLine{133                 i-\/-\/;}
+\DoxyCodeLine{134             \}}
+\DoxyCodeLine{135         \}}
+\DoxyCodeLine{136     \}}
+\DoxyCodeLine{137     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{138         distance = 0;}
+\DoxyCodeLine{139     \}}
+\DoxyCodeLine{140     \textcolor{comment}{/* Clean up */}}
+\DoxyCodeLine{141     \textcolor{keywordflow}{for} (i = 0; i <= len1; i++) \{}
+\DoxyCodeLine{142         free(mat[i]);}
+\DoxyCodeLine{143     \}}
+\DoxyCodeLine{144     free(mat);}
+\DoxyCodeLine{145     }
+\DoxyCodeLine{146     \textcolor{keywordflow}{return} distance;}
+\DoxyCodeLine{147 \}}
+
+\end{DoxyCode}
+
+
+References levenshtein\+\_\+matrix\+\_\+calculate(), levenshtein\+\_\+matrix\+\_\+create(), N\+O\+NE, Levenshtein\+Edit\+::prev, and Levenshtein\+Edit\+::type.
+
+
+
+Referenced by best\+Match\+Command().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{StringDistance_8hpp_aefb44f0d50d4ec3baf6a3346a1f0577d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{StringDistance_8hpp_aefb44f0d50d4ec3baf6a3346a1f0577d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{StringDistance_8hpp_a3b12d839051fb92dc0afd38445dafdec}\label{StringDistance_8hpp_a3b12d839051fb92dc0afd38445dafdec}} 
+\index{StringDistance.hpp@{StringDistance.hpp}!levenshtein\_matrix\_calculate@{levenshtein\_matrix\_calculate}}
+\index{levenshtein\_matrix\_calculate@{levenshtein\_matrix\_calculate}!StringDistance.hpp@{StringDistance.hpp}}
+\doxysubsubsection{\texorpdfstring{levenshtein\_matrix\_calculate()}{levenshtein\_matrix\_calculate()}}
+{\footnotesize\ttfamily static unsigned int levenshtein\+\_\+matrix\+\_\+calculate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{Levenshtein\+Edit}} $\ast$$\ast$}]{mat,  }\item[{const char $\ast$}]{str1,  }\item[{size\+\_\+t}]{len1,  }\item[{const char $\ast$}]{str2,  }\item[{size\+\_\+t}]{len2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{StringDistance_8hpp_abaef3a4815c6d37d86b010afa8083f42}\label{StringDistance_8hpp_abaef3a4815c6d37d86b010afa8083f42}} 
+\index{StringDistance.hpp@{StringDistance.hpp}!levenshtein\_matrix\_create@{levenshtein\_matrix\_create}}
+\index{levenshtein\_matrix\_create@{levenshtein\_matrix\_create}!StringDistance.hpp@{StringDistance.hpp}}
+\doxysubsubsection{\texorpdfstring{levenshtein\_matrix\_create()}{levenshtein\_matrix\_create()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{Levenshtein\+Edit}}$\ast$$\ast$ levenshtein\+\_\+matrix\+\_\+create (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{len1,  }\item[{size\+\_\+t}]{len2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{StringDistance_8hpp_a433d5257dea0796eeca004cb2549a013}\label{StringDistance_8hpp_a433d5257dea0796eeca004cb2549a013}} 
+\index{StringDistance.hpp@{StringDistance.hpp}!min3@{min3}}
+\index{min3@{min3}!StringDistance.hpp@{StringDistance.hpp}}
+\doxysubsubsection{\texorpdfstring{min3()}{min3()}}
+{\footnotesize\ttfamily static int min3 (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{StringDistance_8hpp_ae2de998c4ba5a28831558e04eae31c00}\label{StringDistance_8hpp_ae2de998c4ba5a28831558e04eae31c00}} 
+\index{StringDistance.hpp@{StringDistance.hpp}!trimwhitespace@{trimwhitespace}}
+\index{trimwhitespace@{trimwhitespace}!StringDistance.hpp@{StringDistance.hpp}}
+\doxysubsubsection{\texorpdfstring{trimwhitespace()}{trimwhitespace()}}
+{\footnotesize\ttfamily size\+\_\+t trimwhitespace (\begin{DoxyParamCaption}\item[{char $\ast$}]{out,  }\item[{size\+\_\+t}]{len,  }\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23   \textcolor{keywordflow}{if}(len == 0)}
+\DoxyCodeLine{24     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26   \textcolor{keyword}{const} \textcolor{keywordtype}{char} *end;}
+\DoxyCodeLine{27   \textcolor{keywordtype}{size\_t} out\_size;}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29   \textcolor{comment}{// Trim leading space}}
+\DoxyCodeLine{30   \textcolor{keywordflow}{while}(\mbox{\hyperlink{CodeAnalysis_8cpp_ae355394eccd800f4a5026180415a93fd}{isspace}}((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})*str)) str++;}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32   \textcolor{keywordflow}{if}(*str == 0)  \textcolor{comment}{// All spaces?}}
+\DoxyCodeLine{33   \{}
+\DoxyCodeLine{34     *out = 0;}
+\DoxyCodeLine{35     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{36   \}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38   \textcolor{comment}{// Trim trailing space}}
+\DoxyCodeLine{39   end = str + strlen(str) -\/ 1;}
+\DoxyCodeLine{40   \textcolor{keywordflow}{while}(end > str \&\& \mbox{\hyperlink{CodeAnalysis_8cpp_ae355394eccd800f4a5026180415a93fd}{isspace}}((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})*end)) end-\/-\/;}
+\DoxyCodeLine{41   end++;}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43   \textcolor{comment}{// Set output size to minimum of trimmed string length and buffer size minus 1}}
+\DoxyCodeLine{44   out\_size = (end -\/ str) < (\textcolor{keywordtype}{long})len -\/ 1 ? (size\_t)(end -\/ str) : len -\/ 1;}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46   \textcolor{comment}{// Copy trimmed string and add null terminator}}
+\DoxyCodeLine{47   memcpy(out, str, out\_size);}
+\DoxyCodeLine{48   out[out\_size] = 0;}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50   \textcolor{keywordflow}{return} out\_size;}
+\DoxyCodeLine{51 \}}
+
+\end{DoxyCode}
+
+
+References isspace().
+
+
+
+Referenced by analyze\+Instruction\+Errors().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{StringDistance_8hpp_ae2de998c4ba5a28831558e04eae31c00_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{StringDistance_8hpp_ae2de998c4ba5a28831558e04eae31c00_icgraph}
+\end{center}
+\end{figure}

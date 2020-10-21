@@ -1,0 +1,261 @@
+\hypertarget{AssemblyDTypes_8hpp}{}\doxysection{Soft\+Processor\+Unit/\+Assembly/\+Helpers/\+Data\+Types/\+Assembly\+D\+Types.hpp File Reference}
+\label{AssemblyDTypes_8hpp}\index{SoftProcessorUnit/Assembly/Helpers/DataTypes/AssemblyDTypes.hpp@{SoftProcessorUnit/Assembly/Helpers/DataTypes/AssemblyDTypes.hpp}}
+{\ttfamily \#include \char`\"{}Labels\+Store.\+hpp\char`\"{}}\newline
+Include dependency graph for Assembly\+D\+Types.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{AssemblyDTypes_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AssemblyDTypes_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}}
+\item 
+struct \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008}{Bin\+File\+Load\+Result}} \{ \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a08c10477e506f1afa81064a9d3873f93}{S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+OK}} = 500, 
+\mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a4cfa2bce094c4d9ccb40e2cc73c2dc3d}{S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+W\+R\+O\+N\+G\+\_\+\+V\+E\+R\+S\+I\+ON}} = 501, 
+\mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008aac42aad69374deaeea0fdbaa39d45f05}{S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+W\+R\+O\+N\+G\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE}} = 502, 
+\mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a24f4dd92ab09d28ecd543638f37dd0a7}{S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED}} = 503
+ \}
+\item 
+enum \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8d}{Label\+Parse}} \{ \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3797776cf338bd2930b7824194685365}{S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+D\+U\+B\+L\+I\+C\+A\+TE}} = 900, 
+\mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3819e9fcd8e4784afc45ae36ad95164b}{S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+OK}} = 901, 
+\mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da6cadd424d5f2177bc2d2ef0a94093533}{S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+N\+O\+T\+F\+O\+U\+ND}} = 902, 
+\mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da160647c003208bcca88f7bfe734e68fd}{S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+I\+N\+V\+A\+L\+ID}} = 903
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Data Structure Documentation}
+\index{AssemblyParams@{AssemblyParams}}\label{structAssemblyParams}
+\Hypertarget{AssemblyDTypes_8hpp_structAssemblyParams}
+\doxysubsubsection{struct Assembly\+Params}
+
+
+Collaboration diagram for Assembly\+Params\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{structAssemblyParams__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{Data Fields}
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_a616b2e98d89547438c5461468f8bef6d}\label{AssemblyDTypes_8hpp_a616b2e98d89547438c5461468f8bef6d}} 
+char $\ast$&
+codeText&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_afdd5808979159dbc6eb8695b8baec28e}\label{AssemblyDTypes_8hpp_afdd5808979159dbc6eb8695b8baec28e}} 
+FILE $\ast$&
+inputFile&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}\label{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}} 
+const char $\ast$&
+inputFileName&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_ae314928dd5afc1ad2eeba02260f7deef}\label{AssemblyDTypes_8hpp_ae314928dd5afc1ad2eeba02260f7deef}} 
+char $\ast$&
+inputFileRealName&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_a8ae3b30ad939ce70f9ad67a845be0bb0}\label{AssemblyDTypes_8hpp_a8ae3b30ad939ce70f9ad67a845be0bb0}} 
+\mbox{\hyperlink{structJMPLabelsStore}{JMPLabelsStore}} $\ast$&
+labelsStore&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}\label{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}} 
+FILE $\ast$&
+lstFile&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_a75d000fc6613c3f0b35cafa512c40c53}\label{AssemblyDTypes_8hpp_a75d000fc6613c3f0b35cafa512c40c53}} 
+const char $\ast$&
+lstFileName&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_ac0b48ee74ddc9903ff9585e3cc8c8851}\label{AssemblyDTypes_8hpp_ac0b48ee74ddc9903ff9585e3cc8c8851}} 
+FILE $\ast$&
+outputFile&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_a9863838bac78631698431987d1431369}\label{AssemblyDTypes_8hpp_a9863838bac78631698431987d1431369}} 
+const char $\ast$&
+outputFileName&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_a8fa74a2c523da8c898363c84e5358a85}\label{AssemblyDTypes_8hpp_a8fa74a2c523da8c898363c84e5358a85}} 
+FILE $\ast$&
+prepFile&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_a17d2d1882578ee764929ced1acca2b47}\label{AssemblyDTypes_8hpp_a17d2d1882578ee764929ced1acca2b47}} 
+const char $\ast$&
+prepFileName&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_a3998875859d91d9614897720dd09aa3a}\label{AssemblyDTypes_8hpp_a3998875859d91d9614897720dd09aa3a}} 
+int&
+verbose&
+\\
+\hline
+
+\end{DoxyFields}
+\index{BinaryFile@{BinaryFile}}\label{structBinaryFile}
+\Hypertarget{AssemblyDTypes_8hpp_structBinaryFile}
+\doxysubsubsection{struct Binary\+File}
+
+
+Collaboration diagram for Binary\+File\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{structBinaryFile__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{Data Fields}
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}\label{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}} 
+char $\ast$&
+code&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_af4388a255703cbbd6ab670fb87a92e93}\label{AssemblyDTypes_8hpp_af4388a255703cbbd6ab670fb87a92e93}} 
+size\_t&
+codeOffset&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}\label{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}} 
+size\_t&
+currentSize&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_acdbb7da29eae2db2e047832a48f5786c}\label{AssemblyDTypes_8hpp_acdbb7da29eae2db2e047832a48f5786c}} 
+size\_t&
+maxSize&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_a8c2db7d9ca8acb01e4b798f6ab16a957}\label{AssemblyDTypes_8hpp_a8c2db7d9ca8acb01e4b798f6ab16a957}} 
+short int&
+prepend&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_a277acb0e778ff5dcf97a507113096c7a}\label{AssemblyDTypes_8hpp_a277acb0e778ff5dcf97a507113096c7a}} 
+int&
+signature&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_abed489abcb0040342f3be1a90ada73f8}\label{AssemblyDTypes_8hpp_abed489abcb0040342f3be1a90ada73f8}} 
+size\_t&
+stackSize&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_a03b95b685119e52b8af067fbb0a92598}\label{AssemblyDTypes_8hpp_a03b95b685119e52b8af067fbb0a92598}} 
+int&
+version&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008}\label{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008}} 
+\index{AssemblyDTypes.hpp@{AssemblyDTypes.hpp}!BinFileLoadResult@{BinFileLoadResult}}
+\index{BinFileLoadResult@{BinFileLoadResult}!AssemblyDTypes.hpp@{AssemblyDTypes.hpp}}
+\doxysubsubsection{\texorpdfstring{BinFileLoadResult}{BinFileLoadResult}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008}{Bin\+File\+Load\+Result}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_BINLOAD\_OK@{SPU\_BINLOAD\_OK}!AssemblyDTypes.hpp@{AssemblyDTypes.hpp}}\index{AssemblyDTypes.hpp@{AssemblyDTypes.hpp}!SPU\_BINLOAD\_OK@{SPU\_BINLOAD\_OK}}}\mbox{\Hypertarget{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a08c10477e506f1afa81064a9d3873f93}\label{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a08c10477e506f1afa81064a9d3873f93}} 
+S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+OK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_BINLOAD\_WRONG\_VERSION@{SPU\_BINLOAD\_WRONG\_VERSION}!AssemblyDTypes.hpp@{AssemblyDTypes.hpp}}\index{AssemblyDTypes.hpp@{AssemblyDTypes.hpp}!SPU\_BINLOAD\_WRONG\_VERSION@{SPU\_BINLOAD\_WRONG\_VERSION}}}\mbox{\Hypertarget{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a4cfa2bce094c4d9ccb40e2cc73c2dc3d}\label{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a4cfa2bce094c4d9ccb40e2cc73c2dc3d}} 
+S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+W\+R\+O\+N\+G\+\_\+\+V\+E\+R\+S\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_BINLOAD\_WRONG\_SIGNATURE@{SPU\_BINLOAD\_WRONG\_SIGNATURE}!AssemblyDTypes.hpp@{AssemblyDTypes.hpp}}\index{AssemblyDTypes.hpp@{AssemblyDTypes.hpp}!SPU\_BINLOAD\_WRONG\_SIGNATURE@{SPU\_BINLOAD\_WRONG\_SIGNATURE}}}\mbox{\Hypertarget{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008aac42aad69374deaeea0fdbaa39d45f05}\label{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008aac42aad69374deaeea0fdbaa39d45f05}} 
+S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+W\+R\+O\+N\+G\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_BINLOAD\_CORRUPTED@{SPU\_BINLOAD\_CORRUPTED}!AssemblyDTypes.hpp@{AssemblyDTypes.hpp}}\index{AssemblyDTypes.hpp@{AssemblyDTypes.hpp}!SPU\_BINLOAD\_CORRUPTED@{SPU\_BINLOAD\_CORRUPTED}}}\mbox{\Hypertarget{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a24f4dd92ab09d28ecd543638f37dd0a7}\label{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a24f4dd92ab09d28ecd543638f37dd0a7}} 
+S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED&\\
+\hline
+
+\end{DoxyEnumFields}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49                       \{}
+\DoxyCodeLine{50     \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a08c10477e506f1afa81064a9d3873f93}{SPU\_BINLOAD\_OK}}              = 500,}
+\DoxyCodeLine{51     \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a4cfa2bce094c4d9ccb40e2cc73c2dc3d}{SPU\_BINLOAD\_WRONG\_VERSION}}   = 501,}
+\DoxyCodeLine{52     \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008aac42aad69374deaeea0fdbaa39d45f05}{SPU\_BINLOAD\_WRONG\_SIGNATURE}} = 502,}
+\DoxyCodeLine{53     \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a24f4dd92ab09d28ecd543638f37dd0a7}{SPU\_BINLOAD\_CORRUPTED}}       = 503}
+\DoxyCodeLine{54 \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8d}\label{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8d}} 
+\index{AssemblyDTypes.hpp@{AssemblyDTypes.hpp}!LabelParse@{LabelParse}}
+\index{LabelParse@{LabelParse}!AssemblyDTypes.hpp@{AssemblyDTypes.hpp}}
+\doxysubsubsection{\texorpdfstring{LabelParse}{LabelParse}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8d}{Label\+Parse}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_LABEL\_DUBLICATE@{SPU\_LABEL\_DUBLICATE}!AssemblyDTypes.hpp@{AssemblyDTypes.hpp}}\index{AssemblyDTypes.hpp@{AssemblyDTypes.hpp}!SPU\_LABEL\_DUBLICATE@{SPU\_LABEL\_DUBLICATE}}}\mbox{\Hypertarget{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3797776cf338bd2930b7824194685365}\label{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3797776cf338bd2930b7824194685365}} 
+S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+D\+U\+B\+L\+I\+C\+A\+TE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_LABEL\_OK@{SPU\_LABEL\_OK}!AssemblyDTypes.hpp@{AssemblyDTypes.hpp}}\index{AssemblyDTypes.hpp@{AssemblyDTypes.hpp}!SPU\_LABEL\_OK@{SPU\_LABEL\_OK}}}\mbox{\Hypertarget{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3819e9fcd8e4784afc45ae36ad95164b}\label{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3819e9fcd8e4784afc45ae36ad95164b}} 
+S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+OK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_LABEL\_NOTFOUND@{SPU\_LABEL\_NOTFOUND}!AssemblyDTypes.hpp@{AssemblyDTypes.hpp}}\index{AssemblyDTypes.hpp@{AssemblyDTypes.hpp}!SPU\_LABEL\_NOTFOUND@{SPU\_LABEL\_NOTFOUND}}}\mbox{\Hypertarget{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da6cadd424d5f2177bc2d2ef0a94093533}\label{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da6cadd424d5f2177bc2d2ef0a94093533}} 
+S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+N\+O\+T\+F\+O\+U\+ND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_LABEL\_INVALID@{SPU\_LABEL\_INVALID}!AssemblyDTypes.hpp@{AssemblyDTypes.hpp}}\index{AssemblyDTypes.hpp@{AssemblyDTypes.hpp}!SPU\_LABEL\_INVALID@{SPU\_LABEL\_INVALID}}}\mbox{\Hypertarget{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da160647c003208bcca88f7bfe734e68fd}\label{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da160647c003208bcca88f7bfe734e68fd}} 
+S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+I\+N\+V\+A\+L\+ID&\\
+\hline
+
+\end{DoxyEnumFields}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56                 \{}
+\DoxyCodeLine{57     \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3797776cf338bd2930b7824194685365}{SPU\_LABEL\_DUBLICATE}}         = 900,}
+\DoxyCodeLine{58     \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3819e9fcd8e4784afc45ae36ad95164b}{SPU\_LABEL\_OK}}                = 901,}
+\DoxyCodeLine{59     \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da6cadd424d5f2177bc2d2ef0a94093533}{SPU\_LABEL\_NOTFOUND}}          = 902,}
+\DoxyCodeLine{60     \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da160647c003208bcca88f7bfe734e68fd}{SPU\_LABEL\_INVALID}}           = 903}
+\DoxyCodeLine{61 \};}
+
+\end{DoxyCode}

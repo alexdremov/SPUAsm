@@ -1,0 +1,182 @@
+\hypertarget{SPUDtypes_8hpp}{}\doxysection{Soft\+Processor\+Unit/\+S\+P\+U/\+Core/\+S\+P\+U\+Dtypes.hpp File Reference}
+\label{SPUDtypes_8hpp}\index{SoftProcessorUnit/SPU/Core/SPUDtypes.hpp@{SoftProcessorUnit/SPU/Core/SPUDtypes.hpp}}
+{\ttfamily \#include \char`\"{}Stack\+Rigid.\+h\char`\"{}}\newline
+Include dependency graph for S\+P\+U\+Dtypes.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{SPUDtypes_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SPUDtypes_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{SPUDtypes_8hpp_structRunParameters}{Run\+Parameters}}
+\item 
+struct \mbox{\hyperlink{SPUDtypes_8hpp_structSPUCore}{S\+P\+U\+Core}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2f}{Instruction\+Exe\+Result}} \{ \newline
+\mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}} = 800, 
+\mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa8f97989cd162132712e7919534d2604a}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+S\+T\+A\+C\+K\+\_\+\+U\+N\+D\+E\+R\+F\+L\+OW}} = 801, 
+\mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fade40cc4c7fe7f735df35e57ee9dbba5e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+S\+T\+A\+C\+K\+\_\+\+O\+V\+E\+R\+F\+L\+OW}} = 802, 
+\mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa6055455fd60dd2f673b2f702685f7a58}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED}} = 803, 
+\newline
+\mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa5da1141c988b4757a50db1ef053b8fc3}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+Z\+E\+R\+O\+D\+IV}} = 804, 
+\mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf0113534f70048df0263a31742bc10ce}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+U\+N\+K\+N\+O\+WN}} = 805, 
+\mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}} = 806, 
+\mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf41640121168996e72b9d0d624f728a7}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+M\+E\+M\+O\+RY}} = 807, 
+\newline
+\mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fad5a2a81664c27b80c90aee5b839992bb}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+I\+N\+P\+UT}} = 808
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Data Structure Documentation}
+\index{RunParameters@{RunParameters}}\label{structRunParameters}
+\Hypertarget{SPUDtypes_8hpp_structRunParameters}
+\doxysubsubsection{struct Run\+Parameters}
+
+
+Collaboration diagram for Run\+Parameters\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{structRunParameters__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{Data Fields}
+\mbox{\Hypertarget{SPUDtypes_8hpp_a2af4e09a5ada13ad50069b8dbf89efd6}\label{SPUDtypes_8hpp_a2af4e09a5ada13ad50069b8dbf89efd6}} 
+FILE $\ast$&
+inputFile&
+\\
+\hline
+
+\mbox{\Hypertarget{SPUDtypes_8hpp_ac75aca7c0a7abd09ad0f8a1d0c1f34be}\label{SPUDtypes_8hpp_ac75aca7c0a7abd09ad0f8a1d0c1f34be}} 
+const char $\ast$&
+inputFileName&
+\\
+\hline
+
+\mbox{\Hypertarget{SPUDtypes_8hpp_a2f52d85470f1a16f8e836db4e7dfcda0}\label{SPUDtypes_8hpp_a2f52d85470f1a16f8e836db4e7dfcda0}} 
+FILE $\ast$&
+outputFile&
+\\
+\hline
+
+\mbox{\Hypertarget{SPUDtypes_8hpp_abab18039b4e5acf3efc51a8a76d6b07a}\label{SPUDtypes_8hpp_abab18039b4e5acf3efc51a8a76d6b07a}} 
+const char $\ast$&
+outputFileName&
+\\
+\hline
+
+\mbox{\Hypertarget{SPUDtypes_8hpp_abe26a421f31a88df230b81e8cc4e087a}\label{SPUDtypes_8hpp_abe26a421f31a88df230b81e8cc4e087a}} 
+int&
+verbose&
+\\
+\hline
+
+\end{DoxyFields}
+\index{SPUCore@{SPUCore}}\label{structSPUCore}
+\Hypertarget{SPUDtypes_8hpp_structSPUCore}
+\doxysubsubsection{struct S\+P\+U\+Core}
+
+
+Collaboration diagram for S\+P\+U\+Core\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{structSPUCore__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{Data Fields}
+\mbox{\Hypertarget{SPUDtypes_8hpp_a73b3a44c7e762d16b1952dad905f39c2}\label{SPUDtypes_8hpp_a73b3a44c7e762d16b1952dad905f39c2}} 
+double&
+REG\mbox{[}4\mbox{]}&
+\\
+\hline
+
+\mbox{\Hypertarget{SPUDtypes_8hpp_a7e53f3d8e7ad44b3dea986b508dddb4e}\label{SPUDtypes_8hpp_a7e53f3d8e7ad44b3dea986b508dddb4e}} 
+StackRigid\_double $\ast$&
+stack&
+\\
+\hline
+
+\mbox{\Hypertarget{SPUDtypes_8hpp_adf0c1553a08f701b4b2fa9bf0aff884b}\label{SPUDtypes_8hpp_adf0c1553a08f701b4b2fa9bf0aff884b}} 
+int&
+terminated&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2f}\label{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2f}} 
+\index{SPUDtypes.hpp@{SPUDtypes.hpp}!InstructionExeResult@{InstructionExeResult}}
+\index{InstructionExeResult@{InstructionExeResult}!SPUDtypes.hpp@{SPUDtypes.hpp}}
+\doxysubsubsection{\texorpdfstring{InstructionExeResult}{InstructionExeResult}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2f}{Instruction\+Exe\+Result}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_EXE\_OK@{SPU\_EXE\_OK}!SPUDtypes.hpp@{SPUDtypes.hpp}}\index{SPUDtypes.hpp@{SPUDtypes.hpp}!SPU\_EXE\_OK@{SPU\_EXE\_OK}}}\mbox{\Hypertarget{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa1e1608a157e7bb2d746ba91df8873e9e}\label{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa1e1608a157e7bb2d746ba91df8873e9e}} 
+S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_EXE\_STACK\_UNDERFLOW@{SPU\_EXE\_STACK\_UNDERFLOW}!SPUDtypes.hpp@{SPUDtypes.hpp}}\index{SPUDtypes.hpp@{SPUDtypes.hpp}!SPU\_EXE\_STACK\_UNDERFLOW@{SPU\_EXE\_STACK\_UNDERFLOW}}}\mbox{\Hypertarget{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa8f97989cd162132712e7919534d2604a}\label{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa8f97989cd162132712e7919534d2604a}} 
+S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+S\+T\+A\+C\+K\+\_\+\+U\+N\+D\+E\+R\+F\+L\+OW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_EXE\_STACK\_OVERFLOW@{SPU\_EXE\_STACK\_OVERFLOW}!SPUDtypes.hpp@{SPUDtypes.hpp}}\index{SPUDtypes.hpp@{SPUDtypes.hpp}!SPU\_EXE\_STACK\_OVERFLOW@{SPU\_EXE\_STACK\_OVERFLOW}}}\mbox{\Hypertarget{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fade40cc4c7fe7f735df35e57ee9dbba5e}\label{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fade40cc4c7fe7f735df35e57ee9dbba5e}} 
+S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+S\+T\+A\+C\+K\+\_\+\+O\+V\+E\+R\+F\+L\+OW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_EXE\_CORRUPTED@{SPU\_EXE\_CORRUPTED}!SPUDtypes.hpp@{SPUDtypes.hpp}}\index{SPUDtypes.hpp@{SPUDtypes.hpp}!SPU\_EXE\_CORRUPTED@{SPU\_EXE\_CORRUPTED}}}\mbox{\Hypertarget{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa6055455fd60dd2f673b2f702685f7a58}\label{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa6055455fd60dd2f673b2f702685f7a58}} 
+S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_EXE\_ZERODIV@{SPU\_EXE\_ZERODIV}!SPUDtypes.hpp@{SPUDtypes.hpp}}\index{SPUDtypes.hpp@{SPUDtypes.hpp}!SPU\_EXE\_ZERODIV@{SPU\_EXE\_ZERODIV}}}\mbox{\Hypertarget{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa5da1141c988b4757a50db1ef053b8fc3}\label{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa5da1141c988b4757a50db1ef053b8fc3}} 
+S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+Z\+E\+R\+O\+D\+IV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_EXE\_UNKNOWN@{SPU\_EXE\_UNKNOWN}!SPUDtypes.hpp@{SPUDtypes.hpp}}\index{SPUDtypes.hpp@{SPUDtypes.hpp}!SPU\_EXE\_UNKNOWN@{SPU\_EXE\_UNKNOWN}}}\mbox{\Hypertarget{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf0113534f70048df0263a31742bc10ce}\label{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf0113534f70048df0263a31742bc10ce}} 
+S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+U\+N\+K\+N\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_EXE\_NOARGS@{SPU\_EXE\_NOARGS}!SPUDtypes.hpp@{SPUDtypes.hpp}}\index{SPUDtypes.hpp@{SPUDtypes.hpp}!SPU\_EXE\_NOARGS@{SPU\_EXE\_NOARGS}}}\mbox{\Hypertarget{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}\label{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}} 
+S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_EXE\_NOMEMORY@{SPU\_EXE\_NOMEMORY}!SPUDtypes.hpp@{SPUDtypes.hpp}}\index{SPUDtypes.hpp@{SPUDtypes.hpp}!SPU\_EXE\_NOMEMORY@{SPU\_EXE\_NOMEMORY}}}\mbox{\Hypertarget{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf41640121168996e72b9d0d624f728a7}\label{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf41640121168996e72b9d0d624f728a7}} 
+S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+M\+E\+M\+O\+RY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_EXE\_INVALIDINPUT@{SPU\_EXE\_INVALIDINPUT}!SPUDtypes.hpp@{SPUDtypes.hpp}}\index{SPUDtypes.hpp@{SPUDtypes.hpp}!SPU\_EXE\_INVALIDINPUT@{SPU\_EXE\_INVALIDINPUT}}}\mbox{\Hypertarget{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fad5a2a81664c27b80c90aee5b839992bb}\label{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fad5a2a81664c27b80c90aee5b839992bb}} 
+S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+I\+N\+P\+UT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                           \{}
+\DoxyCodeLine{31     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa1e1608a157e7bb2d746ba91df8873e9e}{SPU\_EXE\_OK}}              = 800,}
+\DoxyCodeLine{32     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa8f97989cd162132712e7919534d2604a}{SPU\_EXE\_STACK\_UNDERFLOW}} = 801,}
+\DoxyCodeLine{33     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fade40cc4c7fe7f735df35e57ee9dbba5e}{SPU\_EXE\_STACK\_OVERFLOW}}  = 802,}
+\DoxyCodeLine{34     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa6055455fd60dd2f673b2f702685f7a58}{SPU\_EXE\_CORRUPTED}}       = 803,}
+\DoxyCodeLine{35     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa5da1141c988b4757a50db1ef053b8fc3}{SPU\_EXE\_ZERODIV}}         = 804,}
+\DoxyCodeLine{36     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf0113534f70048df0263a31742bc10ce}{SPU\_EXE\_UNKNOWN}}         = 805,}
+\DoxyCodeLine{37     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{SPU\_EXE\_NOARGS}}          = 806,}
+\DoxyCodeLine{38     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf41640121168996e72b9d0d624f728a7}{SPU\_EXE\_NOMEMORY}}        = 807,}
+\DoxyCodeLine{39     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fad5a2a81664c27b80c90aee5b839992bb}{SPU\_EXE\_INVALIDINPUT}}    = 808}
+\DoxyCodeLine{40 \};}
+
+\end{DoxyCode}

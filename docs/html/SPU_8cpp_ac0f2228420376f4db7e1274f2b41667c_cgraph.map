@@ -1,0 +1,22 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,183,56,209"/>
+<area shape="rect" id="node2" href="$SPUCore_8cpp.html#a6a206874805d856f6acaafa7b0151381" title=" " alt="" coords="104,5,239,32"/>
+<area shape="rect" id="node3" href="$AssemblyHelpers_8cpp.html#a8384d0729973f2658ba4e29f66c9a7c7" title=" " alt="" coords="106,56,237,83"/>
+<area shape="rect" id="node4" href="$SPUCoreHelpers_8cpp.html#aaad251afe9f24c4d0160d66b4011d64d" title=" " alt="" coords="108,107,235,133"/>
+<area shape="rect" id="node5" href="$AssemblyHelpers_8cpp.html#a32a156cf9ee4f509e1997eeaf0c28ec7" title=" " alt="" coords="128,157,215,184"/>
+<area shape="rect" id="node8" href="$AssemblyHelpers_8cpp.html#ad7b5ac9bb1240c1f507b4564bc0778fc" title=" " alt="" coords="118,208,225,235"/>
+<area shape="rect" id="node9" href="$SPUCoreHelpers_8cpp.html#a6453a5d405d0626203f8933eefc6948f" title=" " alt="" coords="117,259,226,285"/>
+<area shape="rect" id="node11" href="$SPUCore_8cpp.html#a93857b1d478028ef9ef8aaebd23109c2" title=" " alt="" coords="136,309,207,336"/>
+<area shape="rect" id="node13" href="$StackRigid_8cpp.html#a34ed05fb570dfd9ade77d3c0bd664591" title="Dumps debug information about the stack." alt="" coords="126,411,217,437"/>
+<area shape="rect" id="node6" href="$CommandsParser_8cpp.html#ac4f89e7dbcbb5986315038db16ad2371" title=" " alt="" coords="287,132,417,159"/>
+<area shape="rect" id="node7" href="$AssemblyHelpers_8cpp.html#a286820b83fb7148a89959f78261b479f" title=" " alt="" coords="303,183,401,209"/>
+<area shape="rect" id="node10" href="$SPUCoreHelpers_8cpp.html#a18b2128b1d0621cad7c48e286abb3d06" title=" " alt="" coords="317,259,387,285"/>
+<area shape="rect" id="node12" href="$SPUCore_8cpp.html#a57761c153c17ac44020769b0f979d469" title=" " alt="" coords="287,309,417,336"/>
+<area shape="rect" id="node14" href="$StackRigid_8cpp.html#ad190054fe2653472b68ffe86d6f5dff3" title="Create new stack with pre&#45;defined capacity." alt="" coords="899,385,984,412"/>
+<area shape="rect" id="node15" href="$StackRigid_8cpp.html#a50d9ff70df667de809d39640f33db70b" title="Checks for pointer validity." alt="" coords="487,461,624,488"/>
+<area shape="rect" id="node16" href="$StackRigid_8cpp.html#a269040ce2ab02e681254d1e9f20aff35" title="Memory alocated for the Stack." alt="" coords="693,411,851,437"/>
+<area shape="rect" id="node17" href="$StackRigid_8cpp.html#a8ffebb1dd3f306eca52e8b34ad325f1c" title="Perform all stack checks: checksums, general constrains." alt="" coords="301,512,403,539"/>
+<area shape="rect" id="node18" href="$StackRigid_8cpp.html#a08de7058bae2a1e0c566024850286498" title="Claculates big Stack checksum. Uses Adler&#45;32 method." alt="" coords="478,512,633,539"/>
+<area shape="rect" id="node20" href="$StackRigid_8cpp.html#a2a07c9f65f61c8ca3112dcfaefb4b3be" title="Uses Adler&#45;32 method. Calculates Stack checksum only for the vital parameters. This is necessary beca..." alt="" coords="465,563,645,589"/>
+<area shape="rect" id="node19" href="$StackRigid_8cpp.html#a37faf27d6e9ab4e0a417f29efbda1cbb" title="Calculates Adler&#45;32 checksum from the firstBlock to the firstBlock + len." alt="" coords="715,537,829,564"/>
+</map>

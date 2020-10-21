@@ -1,0 +1,632 @@
+\hypertarget{AssemblyHelpers_8hpp}{}\doxysection{Soft\+Processor\+Unit/\+Assembly/\+Helpers/\+Assembly\+Helpers.hpp File Reference}
+\label{AssemblyHelpers_8hpp}\index{SoftProcessorUnit/Assembly/Helpers/AssemblyHelpers.hpp@{SoftProcessorUnit/Assembly/Helpers/AssemblyHelpers.hpp}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Assembly\+D\+Types.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Labels\+Store.\+hpp\char`\"{}}\newline
+Include dependency graph for Assembly\+Helpers.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{AssemblyHelpers_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AssemblyHelpers_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{AssemblyHelpers_8hpp_a28ee8880df9fb086d561dc286bfdad6e}{append\+To\+Bin\+File}} (\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$bin\+File, char block)
+\item 
+int \mbox{\hyperlink{AssemblyHelpers_8hpp_a92bdd219937b6d50d1e6570172d4d2e5}{append\+To\+Bin\+File}} (\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$bin\+File, double block)
+\item 
+int \mbox{\hyperlink{AssemblyHelpers_8hpp_a34ace815bc5b07c3dd0b9b22acd102f7}{append\+To\+Bin\+File}} (\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$bin\+File, void $\ast$block, size\+\_\+t \mbox{\hyperlink{StackRigid_8cpp_aa778f833989c5b73d0fbe86e9b6ef977}{size}})
+\item 
+int \mbox{\hyperlink{AssemblyHelpers_8hpp_a0047158cc7ad15ef54a884c6b9e5a75d}{command\+Parse}} (\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$bin\+File, char $\ast$command)
+\item 
+void \mbox{\hyperlink{AssemblyHelpers_8hpp_aae008dee6c0428e3c3b6c38284f0e80e}{Destruct\+Assembly\+Params}} (\mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}} $\ast$params)
+\item 
+void \mbox{\hyperlink{AssemblyHelpers_8hpp_a8384d0729973f2658ba4e29f66c9a7c7}{Destruct\+Binary\+File}} (\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$bin\+File)
+\item 
+int \mbox{\hyperlink{AssemblyHelpers_8hpp_a04a770d2b12f163bef10636bfd299fde}{flush\+Bin\+File}} (\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$bin\+File, F\+I\+LE $\ast$output)
+\item 
+\mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008}{Bin\+File\+Load\+Result}} \mbox{\hyperlink{AssemblyHelpers_8hpp_a32a156cf9ee4f509e1997eeaf0c28ec7}{load\+Bin\+File}} (\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$bin\+File, F\+I\+LE $\ast$input\+File)
+\item 
+\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$ \mbox{\hyperlink{AssemblyHelpers_8hpp_ad7b5ac9bb1240c1f507b4564bc0778fc}{New\+Binary\+File}} ()
+\item 
+int \mbox{\hyperlink{AssemblyHelpers_8hpp_a6c4bb8a89afb60b2164c352fec284d61}{parse\+Args}} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}} $\ast$params)
+\item 
+void \mbox{\hyperlink{AssemblyHelpers_8hpp_a5bf1abd7bf8779f4c6fb3eb6efbc31ce}{print\+Assembly\+Help\+Data}} (void)
+\item 
+void \mbox{\hyperlink{AssemblyHelpers_8hpp_a76bb301072f1ce35898cbd2ef5195831}{print\+Assembly\+Version}} (\mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}} $\ast$params)
+\item 
+int \mbox{\hyperlink{AssemblyHelpers_8hpp_a286820b83fb7148a89959f78261b479f}{resize\+Bin\+File}} (\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$bin\+File, size\+\_\+t space\+Needed)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{AssemblyHelpers_8hpp_a28ee8880df9fb086d561dc286bfdad6e}\label{AssemblyHelpers_8hpp_a28ee8880df9fb086d561dc286bfdad6e}} 
+\index{AssemblyHelpers.hpp@{AssemblyHelpers.hpp}!appendToBinFile@{appendToBinFile}}
+\index{appendToBinFile@{appendToBinFile}!AssemblyHelpers.hpp@{AssemblyHelpers.hpp}}
+\doxysubsubsection{\texorpdfstring{appendToBinFile()}{appendToBinFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily int append\+To\+Bin\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{bin\+File,  }\item[{char}]{block }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{148                                                      \{}
+\DoxyCodeLine{149     \textcolor{keywordtype}{int} resizeResult = \mbox{\hyperlink{AssemblyHelpers_8cpp_a286820b83fb7148a89959f78261b479f}{resizeBinFile}}(binFile, 2);}
+\DoxyCodeLine{150     \textcolor{keywordflow}{if} (resizeResult != EXIT\_SUCCESS)}
+\DoxyCodeLine{151         \textcolor{keywordflow}{return} resizeResult;}
+\DoxyCodeLine{152     }
+\DoxyCodeLine{153     binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}}[binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}}] = block;}
+\DoxyCodeLine{154     binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}} += 1;}
+\DoxyCodeLine{155     }
+\DoxyCodeLine{156     \textcolor{keywordflow}{return} EXIT\_SUCCESS;}
+\DoxyCodeLine{157 \}}
+
+\end{DoxyCode}
+
+
+References Binary\+File\+::code, Binary\+File\+::current\+Size, and resize\+Bin\+File().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{AssemblyHelpers_8hpp_a28ee8880df9fb086d561dc286bfdad6e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{AssemblyHelpers_8hpp_a92bdd219937b6d50d1e6570172d4d2e5}\label{AssemblyHelpers_8hpp_a92bdd219937b6d50d1e6570172d4d2e5}} 
+\index{AssemblyHelpers.hpp@{AssemblyHelpers.hpp}!appendToBinFile@{appendToBinFile}}
+\index{appendToBinFile@{appendToBinFile}!AssemblyHelpers.hpp@{AssemblyHelpers.hpp}}
+\doxysubsubsection{\texorpdfstring{appendToBinFile()}{appendToBinFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily int append\+To\+Bin\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{bin\+File,  }\item[{double}]{block }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{159                                                        \{}
+\DoxyCodeLine{160     \textcolor{keywordflow}{return} \mbox{\hyperlink{AssemblyHelpers_8cpp_a34ace815bc5b07c3dd0b9b22acd102f7}{appendToBinFile}}(binFile, (\textcolor{keywordtype}{void}*) \&block, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{161 \}}
+
+\end{DoxyCode}
+
+
+References append\+To\+Bin\+File().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AssemblyHelpers_8hpp_a92bdd219937b6d50d1e6570172d4d2e5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{AssemblyHelpers_8hpp_a34ace815bc5b07c3dd0b9b22acd102f7}\label{AssemblyHelpers_8hpp_a34ace815bc5b07c3dd0b9b22acd102f7}} 
+\index{AssemblyHelpers.hpp@{AssemblyHelpers.hpp}!appendToBinFile@{appendToBinFile}}
+\index{appendToBinFile@{appendToBinFile}!AssemblyHelpers.hpp@{AssemblyHelpers.hpp}}
+\doxysubsubsection{\texorpdfstring{appendToBinFile()}{appendToBinFile()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily int append\+To\+Bin\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{bin\+File,  }\item[{void $\ast$}]{block,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{136                                                                    \{}
+\DoxyCodeLine{137     \textcolor{keywordtype}{int} resizeResult = \mbox{\hyperlink{AssemblyHelpers_8cpp_a286820b83fb7148a89959f78261b479f}{resizeBinFile}}(binFile, \mbox{\hyperlink{StackRigid_8cpp_aa778f833989c5b73d0fbe86e9b6ef977}{size}} + 1);}
+\DoxyCodeLine{138     \textcolor{keywordflow}{if} (resizeResult != EXIT\_SUCCESS)}
+\DoxyCodeLine{139         \textcolor{keywordflow}{return} resizeResult;}
+\DoxyCodeLine{140     }
+\DoxyCodeLine{141     memcpy(binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}} + binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}}, block, \mbox{\hyperlink{StackRigid_8cpp_aa778f833989c5b73d0fbe86e9b6ef977}{size}});}
+\DoxyCodeLine{142     }
+\DoxyCodeLine{143     (binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}}) += \mbox{\hyperlink{StackRigid_8cpp_aa778f833989c5b73d0fbe86e9b6ef977}{size}};}
+\DoxyCodeLine{144     }
+\DoxyCodeLine{145     \textcolor{keywordflow}{return} EXIT\_SUCCESS;}
+\DoxyCodeLine{146 \}}
+
+\end{DoxyCode}
+
+
+References Binary\+File\+::code, Binary\+File\+::current\+Size, resize\+Bin\+File(), and size.
+
+
+
+Referenced by append\+To\+Bin\+File().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{AssemblyHelpers_8hpp_a34ace815bc5b07c3dd0b9b22acd102f7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{AssemblyHelpers_8hpp_a34ace815bc5b07c3dd0b9b22acd102f7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{AssemblyHelpers_8hpp_a0047158cc7ad15ef54a884c6b9e5a75d}\label{AssemblyHelpers_8hpp_a0047158cc7ad15ef54a884c6b9e5a75d}} 
+\index{AssemblyHelpers.hpp@{AssemblyHelpers.hpp}!commandParse@{commandParse}}
+\index{commandParse@{commandParse}!AssemblyHelpers.hpp@{AssemblyHelpers.hpp}}
+\doxysubsubsection{\texorpdfstring{commandParse()}{commandParse()}}
+{\footnotesize\ttfamily int command\+Parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{bin\+File,  }\item[{char $\ast$}]{command }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{AssemblyHelpers_8hpp_aae008dee6c0428e3c3b6c38284f0e80e}\label{AssemblyHelpers_8hpp_aae008dee6c0428e3c3b6c38284f0e80e}} 
+\index{AssemblyHelpers.hpp@{AssemblyHelpers.hpp}!DestructAssemblyParams@{DestructAssemblyParams}}
+\index{DestructAssemblyParams@{DestructAssemblyParams}!AssemblyHelpers.hpp@{AssemblyHelpers.hpp}}
+\doxysubsubsection{\texorpdfstring{DestructAssemblyParams()}{DestructAssemblyParams()}}
+{\footnotesize\ttfamily void Destruct\+Assembly\+Params (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}} $\ast$}]{params }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{199                                                     \{}
+\DoxyCodeLine{200     fclose(params-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_afdd5808979159dbc6eb8695b8baec28e}{inputFile}});}
+\DoxyCodeLine{201     fclose(params-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}});}
+\DoxyCodeLine{202     fclose(params-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_ac0b48ee74ddc9903ff9585e3cc8c8851}{outputFile}});}
+\DoxyCodeLine{203     free(params-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_ae314928dd5afc1ad2eeba02260f7deef}{inputFileRealName}});}
+\DoxyCodeLine{204     \textcolor{keywordflow}{if} (params-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a8fa74a2c523da8c898363c84e5358a85}{prepFile}} != NULL)}
+\DoxyCodeLine{205         fclose(params-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a8fa74a2c523da8c898363c84e5358a85}{prepFile}});}
+\DoxyCodeLine{206     \textcolor{keywordflow}{if} (params-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a8ae3b30ad939ce70f9ad67a845be0bb0}{labelsStore}} != NULL)}
+\DoxyCodeLine{207         \textcolor{keyword}{delete} params-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a8ae3b30ad939ce70f9ad67a845be0bb0}{labelsStore}};}
+\DoxyCodeLine{208 \}}
+
+\end{DoxyCode}
+
+
+References Assembly\+Params\+::input\+File, Assembly\+Params\+::input\+File\+Real\+Name, Assembly\+Params\+::labels\+Store, Assembly\+Params\+::lst\+File, Assembly\+Params\+::output\+File, and Assembly\+Params\+::prep\+File.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{AssemblyHelpers_8hpp_aae008dee6c0428e3c3b6c38284f0e80e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{AssemblyHelpers_8hpp_a8384d0729973f2658ba4e29f66c9a7c7}\label{AssemblyHelpers_8hpp_a8384d0729973f2658ba4e29f66c9a7c7}} 
+\index{AssemblyHelpers.hpp@{AssemblyHelpers.hpp}!DestructBinaryFile@{DestructBinaryFile}}
+\index{DestructBinaryFile@{DestructBinaryFile}!AssemblyHelpers.hpp@{AssemblyHelpers.hpp}}
+\doxysubsubsection{\texorpdfstring{DestructBinaryFile()}{DestructBinaryFile()}}
+{\footnotesize\ttfamily void Destruct\+Binary\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{bin\+File }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{193                                              \{}
+\DoxyCodeLine{194     assert(binFile);}
+\DoxyCodeLine{195     free(binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}});}
+\DoxyCodeLine{196     free(binFile);}
+\DoxyCodeLine{197 \}}
+
+\end{DoxyCode}
+
+
+References Binary\+File\+::code.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{AssemblyHelpers_8hpp_a8384d0729973f2658ba4e29f66c9a7c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{AssemblyHelpers_8hpp_a04a770d2b12f163bef10636bfd299fde}\label{AssemblyHelpers_8hpp_a04a770d2b12f163bef10636bfd299fde}} 
+\index{AssemblyHelpers.hpp@{AssemblyHelpers.hpp}!flushBinFile@{flushBinFile}}
+\index{flushBinFile@{flushBinFile}!AssemblyHelpers.hpp@{AssemblyHelpers.hpp}}
+\doxysubsubsection{\texorpdfstring{flushBinFile()}{flushBinFile()}}
+{\footnotesize\ttfamily int flush\+Bin\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{bin\+File,  }\item[{F\+I\+LE $\ast$}]{output }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{210                                                     \{}
+\DoxyCodeLine{211     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{StackRigid_8cpp_aa778f833989c5b73d0fbe86e9b6ef977}{size}} = binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}};}
+\DoxyCodeLine{212     }
+\DoxyCodeLine{213     fwrite((\textcolor{keywordtype}{char}*)\&binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a8c2db7d9ca8acb01e4b798f6ab16a957}{prepend}}, 1, \textcolor{keyword}{sizeof}(binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a8c2db7d9ca8acb01e4b798f6ab16a957}{prepend}}), output);}
+\DoxyCodeLine{214     fwrite((\textcolor{keywordtype}{char}*)\&binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a03b95b685119e52b8af067fbb0a92598}{version}}, 1, \textcolor{keyword}{sizeof}(binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a03b95b685119e52b8af067fbb0a92598}{version}}), output);}
+\DoxyCodeLine{215     fwrite((\textcolor{keywordtype}{char}*)\&binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a277acb0e778ff5dcf97a507113096c7a}{signature}}, 1, \textcolor{keyword}{sizeof}(binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a277acb0e778ff5dcf97a507113096c7a}{signature}}), output);}
+\DoxyCodeLine{216     fwrite((\textcolor{keywordtype}{char}*)\&binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_abed489abcb0040342f3be1a90ada73f8}{stackSize}}, 1, \textcolor{keyword}{sizeof}(binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_abed489abcb0040342f3be1a90ada73f8}{stackSize}}), output);}
+\DoxyCodeLine{217     fwrite((\textcolor{keywordtype}{char}*)\&binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}}, 1, \textcolor{keyword}{sizeof}(binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}}), output);}
+\DoxyCodeLine{218     }
+\DoxyCodeLine{219     fwrite(binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}}, 1, \mbox{\hyperlink{StackRigid_8cpp_aa778f833989c5b73d0fbe86e9b6ef977}{size}}, output);}
+\DoxyCodeLine{220     }
+\DoxyCodeLine{221     \textcolor{keywordflow}{return} EXIT\_SUCCESS;}
+\DoxyCodeLine{222 \}}
+
+\end{DoxyCode}
+
+
+References Binary\+File\+::code, Binary\+File\+::current\+Size, Binary\+File\+::prepend, Binary\+File\+::signature, size, Binary\+File\+::stack\+Size, and Binary\+File\+::version.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{AssemblyHelpers_8hpp_a04a770d2b12f163bef10636bfd299fde_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{AssemblyHelpers_8hpp_a32a156cf9ee4f509e1997eeaf0c28ec7}\label{AssemblyHelpers_8hpp_a32a156cf9ee4f509e1997eeaf0c28ec7}} 
+\index{AssemblyHelpers.hpp@{AssemblyHelpers.hpp}!loadBinFile@{loadBinFile}}
+\index{loadBinFile@{loadBinFile}!AssemblyHelpers.hpp@{AssemblyHelpers.hpp}}
+\doxysubsubsection{\texorpdfstring{loadBinFile()}{loadBinFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008}{Bin\+File\+Load\+Result}} load\+Bin\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{bin\+File,  }\item[{F\+I\+LE $\ast$}]{input\+File }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{224                                                                     \{}
+\DoxyCodeLine{225     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{StackRigid_8cpp_aa778f833989c5b73d0fbe86e9b6ef977}{size}} = 0;}
+\DoxyCodeLine{226     \textcolor{keywordtype}{char}* data = \mbox{\hyperlink{CommandsParser_8cpp_ac4f89e7dbcbb5986315038db16ad2371}{getSourceFileData}}(inputFile, \&\mbox{\hyperlink{StackRigid_8cpp_aa778f833989c5b73d0fbe86e9b6ef977}{size}});}
+\DoxyCodeLine{227     }
+\DoxyCodeLine{228     \textcolor{keywordtype}{int} currentVersion       = \mbox{\hyperlink{SPUVersion_8hpp_a46cfa984fce0310cc64459db66aba985}{SPU\_VERSION}};}
+\DoxyCodeLine{229     \textcolor{keywordtype}{int} currentSignature     = \mbox{\hyperlink{SPUVersion_8hpp_a355af909fe3d9dc90578b029f084129c}{SPU\_SIGNATURE}};}
+\DoxyCodeLine{230     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} currentPrepend = \mbox{\hyperlink{SPUVersion_8hpp_a60dc54fbd20cd70ebcdf2749fa517e0e}{SPU\_BIN\_PREPEND}};}
+\DoxyCodeLine{231     }
+\DoxyCodeLine{232     \textcolor{keywordflow}{if} (\mbox{\hyperlink{StackRigid_8cpp_aa778f833989c5b73d0fbe86e9b6ef977}{size}} < \textcolor{keyword}{sizeof}(binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a8c2db7d9ca8acb01e4b798f6ab16a957}{prepend}}) + \textcolor{keyword}{sizeof}(binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a277acb0e778ff5dcf97a507113096c7a}{signature}})}
+\DoxyCodeLine{233                                          + \textcolor{keyword}{sizeof}(binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a03b95b685119e52b8af067fbb0a92598}{version}})) \{}
+\DoxyCodeLine{234         \textcolor{keywordflow}{return} \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008aac42aad69374deaeea0fdbaa39d45f05}{SPU\_BINLOAD\_WRONG\_SIGNATURE}};}
+\DoxyCodeLine{235     \}}
+\DoxyCodeLine{236     }
+\DoxyCodeLine{237     \textcolor{keywordtype}{char}* curPos = data;}
+\DoxyCodeLine{238     binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a8c2db7d9ca8acb01e4b798f6ab16a957}{prepend}}    = *((\textcolor{keywordtype}{short} \textcolor{keywordtype}{int}*) curPos);}
+\DoxyCodeLine{239     curPos += \textcolor{keyword}{sizeof}(binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a8c2db7d9ca8acb01e4b798f6ab16a957}{prepend}});}
+\DoxyCodeLine{240     }
+\DoxyCodeLine{241     binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a03b95b685119e52b8af067fbb0a92598}{version}}    = *((\textcolor{keywordtype}{int}*) curPos);}
+\DoxyCodeLine{242     curPos += \textcolor{keyword}{sizeof}(binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a03b95b685119e52b8af067fbb0a92598}{version}});}
+\DoxyCodeLine{243     }
+\DoxyCodeLine{244     binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a277acb0e778ff5dcf97a507113096c7a}{signature}}  = *((\textcolor{keywordtype}{int}*) curPos);}
+\DoxyCodeLine{245     curPos += \textcolor{keyword}{sizeof}(binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a277acb0e778ff5dcf97a507113096c7a}{signature}});}
+\DoxyCodeLine{246     }
+\DoxyCodeLine{247     \textcolor{keywordflow}{if} (binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a8c2db7d9ca8acb01e4b798f6ab16a957}{prepend}} != currentPrepend) \{}
+\DoxyCodeLine{248         \textcolor{keywordflow}{return} \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008aac42aad69374deaeea0fdbaa39d45f05}{SPU\_BINLOAD\_WRONG\_SIGNATURE}};}
+\DoxyCodeLine{249     \}}
+\DoxyCodeLine{250     }
+\DoxyCodeLine{251     \textcolor{keywordflow}{if} (binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a277acb0e778ff5dcf97a507113096c7a}{signature}} != currentSignature) \{}
+\DoxyCodeLine{252         \textcolor{keywordflow}{return} \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008aac42aad69374deaeea0fdbaa39d45f05}{SPU\_BINLOAD\_WRONG\_SIGNATURE}};}
+\DoxyCodeLine{253     \}}
+\DoxyCodeLine{254     }
+\DoxyCodeLine{255     \textcolor{keywordflow}{if} (binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a03b95b685119e52b8af067fbb0a92598}{version}} != currentVersion) \{}
+\DoxyCodeLine{256         \textcolor{keywordflow}{return} \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a4cfa2bce094c4d9ccb40e2cc73c2dc3d}{SPU\_BINLOAD\_WRONG\_VERSION}};}
+\DoxyCodeLine{257     \}}
+\DoxyCodeLine{258     }
+\DoxyCodeLine{259     binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_abed489abcb0040342f3be1a90ada73f8}{stackSize}}    = *((\textcolor{keywordtype}{size\_t}*) curPos);}
+\DoxyCodeLine{260     curPos += \textcolor{keyword}{sizeof}(binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_abed489abcb0040342f3be1a90ada73f8}{stackSize}});}
+\DoxyCodeLine{261     }
+\DoxyCodeLine{262     binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}}    = *((\textcolor{keywordtype}{size\_t}*) curPos);}
+\DoxyCodeLine{263     curPos += \textcolor{keyword}{sizeof}(binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}});}
+\DoxyCodeLine{264     }
+\DoxyCodeLine{265     \mbox{\hyperlink{AssemblyHelpers_8cpp_a286820b83fb7148a89959f78261b479f}{resizeBinFile}}(binFile, binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}} + 20);}
+\DoxyCodeLine{266     memcpy(binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}}, (\textcolor{keywordtype}{char}*) curPos, binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}});}
+\DoxyCodeLine{267     }
+\DoxyCodeLine{268     \textcolor{keywordflow}{return} \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a08c10477e506f1afa81064a9d3873f93}{SPU\_BINLOAD\_OK}};}
+\DoxyCodeLine{269 \}}
+
+\end{DoxyCode}
+
+
+References Binary\+File\+::code, Binary\+File\+::current\+Size, get\+Source\+File\+Data(), Binary\+File\+::prepend, resize\+Bin\+File(), Binary\+File\+::signature, size, S\+P\+U\+\_\+\+B\+I\+N\+\_\+\+P\+R\+E\+P\+E\+ND, S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+OK, S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+W\+R\+O\+N\+G\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE, S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+W\+R\+O\+N\+G\+\_\+\+V\+E\+R\+S\+I\+ON, S\+P\+U\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE, S\+P\+U\+\_\+\+V\+E\+R\+S\+I\+ON, Binary\+File\+::stack\+Size, and Binary\+File\+::version.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{AssemblyHelpers_8hpp_a32a156cf9ee4f509e1997eeaf0c28ec7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{AssemblyHelpers_8hpp_a32a156cf9ee4f509e1997eeaf0c28ec7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{AssemblyHelpers_8hpp_ad7b5ac9bb1240c1f507b4564bc0778fc}\label{AssemblyHelpers_8hpp_ad7b5ac9bb1240c1f507b4564bc0778fc}} 
+\index{AssemblyHelpers.hpp@{AssemblyHelpers.hpp}!NewBinaryFile@{NewBinaryFile}}
+\index{NewBinaryFile@{NewBinaryFile}!AssemblyHelpers.hpp@{AssemblyHelpers.hpp}}
+\doxysubsubsection{\texorpdfstring{NewBinaryFile()}{NewBinaryFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}}$\ast$ New\+Binary\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{117                            \{}
+\DoxyCodeLine{118     \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{BinaryFile}}* newBin = (\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{BinaryFile}}*)calloc(1, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{BinaryFile}}));}
+\DoxyCodeLine{119     newBin-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}} = (\textcolor{keywordtype}{char}*)calloc(256, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{120     }
+\DoxyCodeLine{121     newBin-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}} = 0;}
+\DoxyCodeLine{122     newBin-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_acdbb7da29eae2db2e047832a48f5786c}{maxSize}}     = 256;}
+\DoxyCodeLine{123     newBin-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a8c2db7d9ca8acb01e4b798f6ab16a957}{prepend}}     = \mbox{\hyperlink{SPUVersion_8hpp_a60dc54fbd20cd70ebcdf2749fa517e0e}{SPU\_BIN\_PREPEND}};}
+\DoxyCodeLine{124     newBin-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a03b95b685119e52b8af067fbb0a92598}{version}}     = \mbox{\hyperlink{SPUVersion_8hpp_a46cfa984fce0310cc64459db66aba985}{SPU\_VERSION}};}
+\DoxyCodeLine{125     newBin-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a277acb0e778ff5dcf97a507113096c7a}{signature}}   = \mbox{\hyperlink{SPUVersion_8hpp_a355af909fe3d9dc90578b029f084129c}{SPU\_SIGNATURE}};}
+\DoxyCodeLine{126     newBin-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_af4388a255703cbbd6ab670fb87a92e93}{codeOffset}}  = \textcolor{keyword}{sizeof}(newBin-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a8c2db7d9ca8acb01e4b798f6ab16a957}{prepend}}) +}
+\DoxyCodeLine{127                           \textcolor{keyword}{sizeof}(newBin-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a03b95b685119e52b8af067fbb0a92598}{version}}) +}
+\DoxyCodeLine{128                           \textcolor{keyword}{sizeof}(newBin-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a277acb0e778ff5dcf97a507113096c7a}{signature}}) +}
+\DoxyCodeLine{129                           \textcolor{keyword}{sizeof}(newBin-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_abed489abcb0040342f3be1a90ada73f8}{stackSize}}) +}
+\DoxyCodeLine{130                           \textcolor{keyword}{sizeof}(newBin-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}});}
+\DoxyCodeLine{131     }
+\DoxyCodeLine{132     \textcolor{keywordflow}{return} newBin;}
+\DoxyCodeLine{133 \}}
+
+\end{DoxyCode}
+
+
+References Binary\+File\+::code, Binary\+File\+::code\+Offset, Binary\+File\+::current\+Size, Binary\+File\+::max\+Size, Binary\+File\+::prepend, Binary\+File\+::signature, S\+P\+U\+\_\+\+B\+I\+N\+\_\+\+P\+R\+E\+P\+E\+ND, S\+P\+U\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE, S\+P\+U\+\_\+\+V\+E\+R\+S\+I\+ON, Binary\+File\+::stack\+Size, and Binary\+File\+::version.
+
+
+
+Referenced by generate\+Errors(), and main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AssemblyHelpers_8hpp_ad7b5ac9bb1240c1f507b4564bc0778fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{AssemblyHelpers_8hpp_a6c4bb8a89afb60b2164c352fec284d61}\label{AssemblyHelpers_8hpp_a6c4bb8a89afb60b2164c352fec284d61}} 
+\index{AssemblyHelpers.hpp@{AssemblyHelpers.hpp}!parseArgs@{parseArgs}}
+\index{parseArgs@{parseArgs}!AssemblyHelpers.hpp@{AssemblyHelpers.hpp}}
+\doxysubsubsection{\texorpdfstring{parseArgs()}{parseArgs()}}
+{\footnotesize\ttfamily int parse\+Args (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}} $\ast$}]{params }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17                                                                     \{}
+\DoxyCodeLine{18     \mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{AssemblyParams}} newParams = \{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0\};}
+\DoxyCodeLine{19     \textcolor{keywordflow}{if} (argc <= 1)\{}
+\DoxyCodeLine{20         \mbox{\hyperlink{AssemblyHelpers_8cpp_a5bf1abd7bf8779f4c6fb3eb6efbc31ce}{printAssemblyHelpData}}();}
+\DoxyCodeLine{21     \}}
+\DoxyCodeLine{22     }
+\DoxyCodeLine{23     newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_ae314928dd5afc1ad2eeba02260f7deef}{inputFileRealName}} = (\textcolor{keywordtype}{char}*)calloc(\mbox{\hyperlink{AssemblyHelpers_8cpp_addfa831c1473e710d2b71b72fd7fcfa5}{MAXPATHLEN}}, 1);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 1; i < argc; i++) \{}
+\DoxyCodeLine{26         \textcolor{keywordflow}{if} (strcmp(argv[i], \textcolor{stringliteral}{"{}-\/-\/input"{}}) == 0) \{}
+\DoxyCodeLine{27             \textcolor{keywordflow}{if} (i + 1 > argc)\{}
+\DoxyCodeLine{28                 printf(\textcolor{stringliteral}{"{}error: assembly: No input file specified after -\/-\/input\(\backslash\)n"{}});}
+\DoxyCodeLine{29                 \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{30             \}}
+\DoxyCodeLine{31             FILE* inputFile = fopen(argv[i + 1], \textcolor{stringliteral}{"{}rb"{}});}
+\DoxyCodeLine{32             newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_afdd5808979159dbc6eb8695b8baec28e}{inputFile}} = inputFile;}
+\DoxyCodeLine{33             newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}} = *(argv + i + 1);}
+\DoxyCodeLine{34             realpath((\textcolor{keyword}{const} \textcolor{keywordtype}{char}*)newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}}, newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_ae314928dd5afc1ad2eeba02260f7deef}{inputFileRealName}});}
+\DoxyCodeLine{35             \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_afdd5808979159dbc6eb8695b8baec28e}{inputFile}} == NULL)\{}
+\DoxyCodeLine{36                 printf(\textcolor{stringliteral}{"{}error: assembly: Can't open input file \%s\(\backslash\)n"{}}, newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}});}
+\DoxyCodeLine{37                 \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{38             \}}
+\DoxyCodeLine{39             i++;}
+\DoxyCodeLine{40         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(argv[i], \textcolor{stringliteral}{"{}-\/-\/output"{}}) == 0) \{}
+\DoxyCodeLine{41             \textcolor{keywordflow}{if} (i + 1 > argc)\{}
+\DoxyCodeLine{42                 printf(\textcolor{stringliteral}{"{}error: assembly: No output file specified after -\/-\/output\(\backslash\)n"{}});}
+\DoxyCodeLine{43                 \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{44             \}}
+\DoxyCodeLine{45             FILE* outputFile = fopen(argv[i + 1], \textcolor{stringliteral}{"{}wb"{}});}
+\DoxyCodeLine{46             newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_ac0b48ee74ddc9903ff9585e3cc8c8851}{outputFile}} = outputFile;}
+\DoxyCodeLine{47             newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a9863838bac78631698431987d1431369}{outputFileName}} = *(argv + i + 1);}
+\DoxyCodeLine{48             i++;}
+\DoxyCodeLine{49         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(argv[i], \textcolor{stringliteral}{"{}-\/-\/verbose"{}}) == 0) \{}
+\DoxyCodeLine{50             newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a3998875859d91d9614897720dd09aa3a}{verbose}} = 1;}
+\DoxyCodeLine{51         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(argv[i], \textcolor{stringliteral}{"{}-\/-\/help"{}}) == 0 || strcmp(argv[i], \textcolor{stringliteral}{"{}-\/h"{}}) == 0) \{}
+\DoxyCodeLine{52             \mbox{\hyperlink{AssemblyHelpers_8cpp_a5bf1abd7bf8779f4c6fb3eb6efbc31ce}{printAssemblyHelpData}}();}
+\DoxyCodeLine{53         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(argv[i], \textcolor{stringliteral}{"{}-\/-\/lstfile"{}}) == 0) \{}
+\DoxyCodeLine{54             \textcolor{keywordflow}{if} (i + 1 > argc)\{}
+\DoxyCodeLine{55                 printf(\textcolor{stringliteral}{"{}error: assembly: No lstfile file specified after -\/-\/lstfile\(\backslash\)n"{}});}
+\DoxyCodeLine{56                 \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{57             \}}
+\DoxyCodeLine{58             FILE* lstFile = fopen(argv[i + 1], \textcolor{stringliteral}{"{}wb"{}});}
+\DoxyCodeLine{59             newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}} = lstFile;}
+\DoxyCodeLine{60             newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a75d000fc6613c3f0b35cafa512c40c53}{lstFileName}} = *(argv + i + 1);}
+\DoxyCodeLine{61             i++;}
+\DoxyCodeLine{62         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(argv[i], \textcolor{stringliteral}{"{}-\/E"{}}) == 0) \{}
+\DoxyCodeLine{63             newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a8fa74a2c523da8c898363c84e5358a85}{prepFile}} = (FILE*) 1;}
+\DoxyCodeLine{64         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{65             \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_afdd5808979159dbc6eb8695b8baec28e}{inputFile}} == NULL)\{}
+\DoxyCodeLine{66                 FILE* inputFile = fopen(argv[i], \textcolor{stringliteral}{"{}rb"{}});}
+\DoxyCodeLine{67                 newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_afdd5808979159dbc6eb8695b8baec28e}{inputFile}} = inputFile;}
+\DoxyCodeLine{68                 newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}} = *(argv + i);}
+\DoxyCodeLine{69                 realpath((\textcolor{keyword}{const} \textcolor{keywordtype}{char}*)newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}}, newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_ae314928dd5afc1ad2eeba02260f7deef}{inputFileRealName}});}
+\DoxyCodeLine{70                 \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_afdd5808979159dbc6eb8695b8baec28e}{inputFile}} == NULL)\{}
+\DoxyCodeLine{71                     printf(\textcolor{stringliteral}{"{}error: assembly: Can't open input file \%s\(\backslash\)n"{}}, argv[i]);}
+\DoxyCodeLine{72                     \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{73                 \}}
+\DoxyCodeLine{74             \}}
+\DoxyCodeLine{75         \}}
+\DoxyCodeLine{76     \}}
+\DoxyCodeLine{77     }
+\DoxyCodeLine{78     \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_afdd5808979159dbc6eb8695b8baec28e}{inputFile}} == NULL) \{}
+\DoxyCodeLine{79         printf(\textcolor{stringliteral}{"{}error: assembly: No input file specified\(\backslash\)n"{}});}
+\DoxyCodeLine{80         \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{81     \}}
+\DoxyCodeLine{82     }
+\DoxyCodeLine{83     \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_ac0b48ee74ddc9903ff9585e3cc8c8851}{outputFile}} == NULL) \{}
+\DoxyCodeLine{84         newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_ac0b48ee74ddc9903ff9585e3cc8c8851}{outputFile}} = fopen(\textcolor{stringliteral}{"{}output.spub"{}}, \textcolor{stringliteral}{"{}wb"{}});}
+\DoxyCodeLine{85         newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a9863838bac78631698431987d1431369}{outputFileName}} = \textcolor{stringliteral}{"{}output.spub"{}};}
+\DoxyCodeLine{86         \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_ac0b48ee74ddc9903ff9585e3cc8c8851}{outputFile}} == NULL)\{}
+\DoxyCodeLine{87             printf(\textcolor{stringliteral}{"{}error: assembly: No output file specified\(\backslash\)n"{}});}
+\DoxyCodeLine{88             \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{89         \}}
+\DoxyCodeLine{90     \}}
+\DoxyCodeLine{91     }
+\DoxyCodeLine{92     \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}} == NULL) \{}
+\DoxyCodeLine{93         newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}} = fopen(\textcolor{stringliteral}{"{}assembly.lst"{}}, \textcolor{stringliteral}{"{}wb"{}});}
+\DoxyCodeLine{94         newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a75d000fc6613c3f0b35cafa512c40c53}{lstFileName}} = \textcolor{stringliteral}{"{}assembly.lst"{}};}
+\DoxyCodeLine{95         \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}} == NULL)\{}
+\DoxyCodeLine{96             printf(\textcolor{stringliteral}{"{}error: assembly: No lstFile file specified\(\backslash\)n"{}});}
+\DoxyCodeLine{97             \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{98         \}}
+\DoxyCodeLine{99     \}}
+\DoxyCodeLine{100     }
+\DoxyCodeLine{101     \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a8fa74a2c523da8c898363c84e5358a85}{prepFile}} != NULL) \{}
+\DoxyCodeLine{102         newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a8fa74a2c523da8c898363c84e5358a85}{prepFile}} = fopen(\textcolor{stringliteral}{"{}assembly.spuprep"{}}, \textcolor{stringliteral}{"{}wb"{}});}
+\DoxyCodeLine{103         newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a17d2d1882578ee764929ced1acca2b47}{prepFileName}} = \textcolor{stringliteral}{"{}assembly.spuprep"{}};}
+\DoxyCodeLine{104         \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a17d2d1882578ee764929ced1acca2b47}{prepFileName}} == NULL) \{}
+\DoxyCodeLine{105             printf(\textcolor{stringliteral}{"{}error: assembly: Can't open assembly.spuprep\(\backslash\)n"{}});}
+\DoxyCodeLine{106             \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{107         \}}
+\DoxyCodeLine{108     \}}
+\DoxyCodeLine{109     }
+\DoxyCodeLine{110     newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a8ae3b30ad939ce70f9ad67a845be0bb0}{labelsStore}} = \textcolor{keyword}{new} \mbox{\hyperlink{structJMPLabelsStore}{JMPLabelsStore}}();}
+\DoxyCodeLine{111     *params = newParams;}
+\DoxyCodeLine{112     }
+\DoxyCodeLine{113     \textcolor{keywordflow}{return} EXIT\_SUCCESS;}
+\DoxyCodeLine{114 \}}
+
+\end{DoxyCode}
+
+
+References Assembly\+Params\+::input\+File, Assembly\+Params\+::input\+File\+Name, Assembly\+Params\+::input\+File\+Real\+Name, Assembly\+Params\+::labels\+Store, Assembly\+Params\+::lst\+File, Assembly\+Params\+::lst\+File\+Name, M\+A\+X\+P\+A\+T\+H\+L\+EN, Assembly\+Params\+::output\+File, Assembly\+Params\+::output\+File\+Name, Assembly\+Params\+::prep\+File, Assembly\+Params\+::prep\+File\+Name, print\+Assembly\+Help\+Data(), and Assembly\+Params\+::verbose.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{AssemblyHelpers_8hpp_a6c4bb8a89afb60b2164c352fec284d61_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{AssemblyHelpers_8hpp_a6c4bb8a89afb60b2164c352fec284d61_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{AssemblyHelpers_8hpp_a5bf1abd7bf8779f4c6fb3eb6efbc31ce}\label{AssemblyHelpers_8hpp_a5bf1abd7bf8779f4c6fb3eb6efbc31ce}} 
+\index{AssemblyHelpers.hpp@{AssemblyHelpers.hpp}!printAssemblyHelpData@{printAssemblyHelpData}}
+\index{printAssemblyHelpData@{printAssemblyHelpData}!AssemblyHelpers.hpp@{AssemblyHelpers.hpp}}
+\doxysubsubsection{\texorpdfstring{printAssemblyHelpData()}{printAssemblyHelpData()}}
+{\footnotesize\ttfamily void print\+Assembly\+Help\+Data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{175                                  \{}
+\DoxyCodeLine{176     \textcolor{keywordtype}{int} SPUAssemblyVersion = \mbox{\hyperlink{SPUVersion_8hpp_a46cfa984fce0310cc64459db66aba985}{SPU\_VERSION}};}
+\DoxyCodeLine{177     \textcolor{keywordtype}{char}* SPUAssemblyVersion\_chars = (\textcolor{keywordtype}{char}*)\&SPUAssemblyVersion;}
+\DoxyCodeLine{178     printf(\textcolor{stringliteral}{"{}SPUAssembly v\%c.\%c.\%c\%c help\(\backslash\)n"{}}}
+\DoxyCodeLine{179            \textcolor{stringliteral}{"{}-\/-\/input     <input file> input file to be assembled .spus format (spu source)\(\backslash\)n"{}}}
+\DoxyCodeLine{180            \textcolor{stringliteral}{"{}-\/-\/output    <output file> output file. output.spub by default (spu binary)\(\backslash\)n"{}}}
+\DoxyCodeLine{181            \textcolor{stringliteral}{"{}-\/h, -\/-\/help  show this help message\(\backslash\)n"{}}}
+\DoxyCodeLine{182            \textcolor{stringliteral}{"{}-\/-\/verbose   output assembly debug information to the console\(\backslash\)n"{}}}
+\DoxyCodeLine{183            \textcolor{stringliteral}{"{}-\/-\/lstfile   <.lst file> file to output .lst assembly data assembly.lst by default\(\backslash\)n"{}}}
+\DoxyCodeLine{184            \textcolor{stringliteral}{"{}-\/E          generate preprocessed file assembly.spuprep\(\backslash\)n"{}}}
+\DoxyCodeLine{185            \textcolor{stringliteral}{"{}\(\backslash\)n"{}},}
+\DoxyCodeLine{186            SPUAssemblyVersion\_chars[0],}
+\DoxyCodeLine{187            SPUAssemblyVersion\_chars[1],}
+\DoxyCodeLine{188            SPUAssemblyVersion\_chars[2],}
+\DoxyCodeLine{189            SPUAssemblyVersion\_chars[3]);}
+\DoxyCodeLine{190 \}}
+
+\end{DoxyCode}
+
+
+References S\+P\+U\+\_\+\+V\+E\+R\+S\+I\+ON.
+
+
+
+Referenced by parse\+Args().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AssemblyHelpers_8hpp_a5bf1abd7bf8779f4c6fb3eb6efbc31ce_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{AssemblyHelpers_8hpp_a76bb301072f1ce35898cbd2ef5195831}\label{AssemblyHelpers_8hpp_a76bb301072f1ce35898cbd2ef5195831}} 
+\index{AssemblyHelpers.hpp@{AssemblyHelpers.hpp}!printAssemblyVersion@{printAssemblyVersion}}
+\index{printAssemblyVersion@{printAssemblyVersion}!AssemblyHelpers.hpp@{AssemblyHelpers.hpp}}
+\doxysubsubsection{\texorpdfstring{printAssemblyVersion()}{printAssemblyVersion()}}
+{\footnotesize\ttfamily void print\+Assembly\+Version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}} $\ast$}]{params }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{272                                                   \{}
+\DoxyCodeLine{273     \textcolor{keywordtype}{int} SPUAssemblyVersion = \mbox{\hyperlink{SPUVersion_8hpp_a46cfa984fce0310cc64459db66aba985}{SPU\_VERSION}};}
+\DoxyCodeLine{274     \textcolor{keywordtype}{char}* SPUAssemblyVersion\_chars = (\textcolor{keywordtype}{char}*)\&SPUAssemblyVersion;}
+\DoxyCodeLine{275     \textcolor{keywordflow}{if} (params-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3998875859d91d9614897720dd09aa3a}{verbose}}) \{}
+\DoxyCodeLine{276         }
+\DoxyCodeLine{277         printf(\textcolor{stringliteral}{"{}SPUAssembly v\%c.\%c.\%c\%c\(\backslash\)n"{}},}
+\DoxyCodeLine{278                SPUAssemblyVersion\_chars[0],}
+\DoxyCodeLine{279                SPUAssemblyVersion\_chars[1],}
+\DoxyCodeLine{280                SPUAssemblyVersion\_chars[2],}
+\DoxyCodeLine{281                SPUAssemblyVersion\_chars[3]);}
+\DoxyCodeLine{282     \}}
+\DoxyCodeLine{283     }
+\DoxyCodeLine{284     \textcolor{keywordflow}{if} (params-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}} != NULL) \{}
+\DoxyCodeLine{285         fprintf(params-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}},}
+\DoxyCodeLine{286                 \textcolor{stringliteral}{"{}SPUAssembly v\%c.\%c.\%c\%c "{}},}
+\DoxyCodeLine{287                 SPUAssemblyVersion\_chars[0],}
+\DoxyCodeLine{288                 SPUAssemblyVersion\_chars[1],}
+\DoxyCodeLine{289                 SPUAssemblyVersion\_chars[2],}
+\DoxyCodeLine{290                 SPUAssemblyVersion\_chars[3]);}
+\DoxyCodeLine{291         fprintf(params-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}}, \textcolor{stringliteral}{"{}\%s -\/> \%s\(\backslash\)n"{}}, params-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}} , params-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a9863838bac78631698431987d1431369}{outputFileName}});}
+\DoxyCodeLine{292     \}}
+\DoxyCodeLine{293 \}}
+
+\end{DoxyCode}
+
+
+References Assembly\+Params\+::input\+File\+Name, Assembly\+Params\+::lst\+File, Assembly\+Params\+::output\+File\+Name, S\+P\+U\+\_\+\+V\+E\+R\+S\+I\+ON, and Assembly\+Params\+::verbose.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{AssemblyHelpers_8hpp_a76bb301072f1ce35898cbd2ef5195831_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{AssemblyHelpers_8hpp_a286820b83fb7148a89959f78261b479f}\label{AssemblyHelpers_8hpp_a286820b83fb7148a89959f78261b479f}} 
+\index{AssemblyHelpers.hpp@{AssemblyHelpers.hpp}!resizeBinFile@{resizeBinFile}}
+\index{resizeBinFile@{resizeBinFile}!AssemblyHelpers.hpp@{AssemblyHelpers.hpp}}
+\doxysubsubsection{\texorpdfstring{resizeBinFile()}{resizeBinFile()}}
+{\footnotesize\ttfamily int resize\+Bin\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{bin\+File,  }\item[{size\+\_\+t}]{space\+Needed }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{163                                                           \{}
+\DoxyCodeLine{164     \textcolor{keywordflow}{if} (binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}} + spaceNeeded >= binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_acdbb7da29eae2db2e047832a48f5786c}{maxSize}})\{}
+\DoxyCodeLine{165         \textcolor{keywordtype}{char}* newCode = (\textcolor{keywordtype}{char}*) realloc(binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}}, binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_acdbb7da29eae2db2e047832a48f5786c}{maxSize}} + spaceNeeded);}
+\DoxyCodeLine{166         \textcolor{keywordflow}{if} (newCode == NULL)}
+\DoxyCodeLine{167             \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{168         binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}} = newCode;}
+\DoxyCodeLine{169         binFile-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_acdbb7da29eae2db2e047832a48f5786c}{maxSize}} += spaceNeeded;}
+\DoxyCodeLine{170     \}}
+\DoxyCodeLine{171     \textcolor{keywordflow}{return} EXIT\_SUCCESS;}
+\DoxyCodeLine{172 \}}
+
+\end{DoxyCode}
+
+
+References Binary\+File\+::code, Binary\+File\+::current\+Size, and Binary\+File\+::max\+Size.
+
+
+
+Referenced by append\+To\+Bin\+File(), and load\+Bin\+File().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AssemblyHelpers_8hpp_a286820b83fb7148a89959f78261b479f_icgraph}
+\end{center}
+\end{figure}

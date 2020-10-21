@@ -1,0 +1,139 @@
+\hypertarget{CTBDefs_8h}{}\doxysection{Soft\+Processor\+Unit/\+Syntax/\+Translation/\+Macro\+Syntax/\+C\+T\+B\+Defs.h File Reference}
+\label{CTBDefs_8h}\index{SoftProcessorUnit/Syntax/Translation/MacroSyntax/CTBDefs.h@{SoftProcessorUnit/Syntax/Translation/MacroSyntax/CTBDefs.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Syntax.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Translation\+D\+Types.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assembly\+Helpers.\+hpp\char`\"{}}\newline
+Include dependency graph for C\+T\+B\+Defs.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CTBDefs_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CTBDefs_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{CTBDefs_8h_a935ce0c5b7b54e84859821376fad7cf6}{A\+P\+P\+E\+N\+D\+C\+H\+AR}}(data)~\mbox{\hyperlink{AssemblyHelpers_8hpp_a92bdd219937b6d50d1e6570172d4d2e5}{append\+To\+Bin\+File}}(binary, (char)(data))
+\item 
+\#define \mbox{\hyperlink{CTBDefs_8h_a818bf5a7107808f79febc17f12575517}{A\+P\+P\+E\+N\+D\+D\+A\+TA}}(\mbox{\hyperlink{StackRigid_8cpp_aa353e5db4d253654aaf3aa7725423d79}{pointer}},  \mbox{\hyperlink{StackRigid_8cpp_aa778f833989c5b73d0fbe86e9b6ef977}{size}})~\mbox{\hyperlink{AssemblyHelpers_8hpp_a92bdd219937b6d50d1e6570172d4d2e5}{append\+To\+Bin\+File}}(binary, (void$\ast$)(\mbox{\hyperlink{StackRigid_8cpp_aa353e5db4d253654aaf3aa7725423d79}{pointer}}), \mbox{\hyperlink{StackRigid_8cpp_aa778f833989c5b73d0fbe86e9b6ef977}{size}})
+\item 
+\#define \mbox{\hyperlink{CTBDefs_8h_ad550327644158d58574a917bb0f7c630}{D\+U\+M\+P\+C\+O\+D\+E\+B\+L\+O\+CK}}~for (;starting $<$ ending; starting++) \{ fprintf(compile\+Params-\/$>$lst\+File, \char`\"{}\%-\/3d \char`\"{}, (unsigned char)binary-\/$>$code\mbox{[}starting\mbox{]}); \}
+\item 
+\#define \mbox{\hyperlink{CTBDefs_8h_a6dd95ba5857ae6decf9a4601a205a300}{D\+U\+M\+P\+C\+O\+D\+E\+B\+L\+O\+C\+K\+H\+EX}}~for (;starting $<$ ending; starting++) \{ fprintf(compile\+Params-\/$>$lst\+File, \char`\"{}\%2x \char`\"{}, (unsigned char)binary-\/$>$code\mbox{[}starting\mbox{]}); \}
+\item 
+\#define \mbox{\hyperlink{CTBDefs_8h_a67c48cbedae2e3f42f87f0476a67ba50}{G\+E\+T\+L\+A\+B\+E\+L\+P\+OS}}~(int)(compile\+Params-\/$>$labels\+Store-\/$>$get\+Label\+To\+Position((char$\ast$)argv\mbox{[}1\mbox{]})) -\/ (int)(binary-\/$>$current\+Size) + 1
+\item 
+\#define \mbox{\hyperlink{CTBDefs_8h_aeb786e3a5a82623adb22ae4bf030c7c6}{J\+U\+S\+T\+C\+O\+M\+M\+A\+ND}}~\mbox{\hyperlink{CTBDefs_8h_aed61c14a9a5ce11f5e135d8280dd3316}{L\+S\+T\+D\+U\+M\+P\+ED}}(\{ \mbox{\hyperlink{CTBDefs_8h_a935ce0c5b7b54e84859821376fad7cf6}{A\+P\+P\+E\+N\+D\+C\+H\+AR}}(thou-\/$>$code); \}) return \mbox{\hyperlink{TranslationDTypes_8hpp_aaef4a579ede91cde0e35d0c6d40c8061a7c3c53b3cdfb58d13a224b0b19788161}{S\+P\+U\+\_\+\+C\+T\+B\+\_\+\+OK}};
+\item 
+\#define \mbox{\hyperlink{CTBDefs_8h_aed61c14a9a5ce11f5e135d8280dd3316}{L\+S\+T\+D\+U\+M\+P\+ED}}(code)
+\item 
+\#define \mbox{\hyperlink{CTBDefs_8h_a3fa8ba14d0d39c00e4c920dca5faee7a}{S\+E\+T\+L\+A\+B\+E\+L\+P\+OS}}~\mbox{\hyperlink{EXE_8h_a6838d227c2d074080b1b51f9933d52a5}{if}} (compile\+Params-\/$>$labels\+Store != N\+U\+LL) compile\+Params-\/$>$labels\+Store-\/$>$set\+Label\+From\+Position((char$\ast$)argv\mbox{[}1\mbox{]}, (unsigned int)binary-\/$>$current\+Size)
+\item 
+\#define \mbox{\hyperlink{CTBDefs_8h_a7ccf74837c52aa13556d7d689212c490}{Z\+E\+R\+O\+O\+R\+R\+E\+G\+I\+S\+T\+E\+R\+NO}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{CTBDefs_8h_a935ce0c5b7b54e84859821376fad7cf6}\label{CTBDefs_8h_a935ce0c5b7b54e84859821376fad7cf6}} 
+\index{CTBDefs.h@{CTBDefs.h}!APPENDCHAR@{APPENDCHAR}}
+\index{APPENDCHAR@{APPENDCHAR}!CTBDefs.h@{CTBDefs.h}}
+\doxysubsubsection{\texorpdfstring{APPENDCHAR}{APPENDCHAR}}
+{\footnotesize\ttfamily \#define A\+P\+P\+E\+N\+D\+C\+H\+AR(\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})~\mbox{\hyperlink{AssemblyHelpers_8hpp_a92bdd219937b6d50d1e6570172d4d2e5}{append\+To\+Bin\+File}}(binary, (char)(data))}
+
+\mbox{\Hypertarget{CTBDefs_8h_a818bf5a7107808f79febc17f12575517}\label{CTBDefs_8h_a818bf5a7107808f79febc17f12575517}} 
+\index{CTBDefs.h@{CTBDefs.h}!APPENDDATA@{APPENDDATA}}
+\index{APPENDDATA@{APPENDDATA}!CTBDefs.h@{CTBDefs.h}}
+\doxysubsubsection{\texorpdfstring{APPENDDATA}{APPENDDATA}}
+{\footnotesize\ttfamily \#define A\+P\+P\+E\+N\+D\+D\+A\+TA(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{StackRigid_8cpp_aa353e5db4d253654aaf3aa7725423d79}{pointer}},  }\item[{}]{\mbox{\hyperlink{StackRigid_8cpp_aa778f833989c5b73d0fbe86e9b6ef977}{size}} }\end{DoxyParamCaption})~\mbox{\hyperlink{AssemblyHelpers_8hpp_a92bdd219937b6d50d1e6570172d4d2e5}{append\+To\+Bin\+File}}(binary, (void$\ast$)(\mbox{\hyperlink{StackRigid_8cpp_aa353e5db4d253654aaf3aa7725423d79}{pointer}}), \mbox{\hyperlink{StackRigid_8cpp_aa778f833989c5b73d0fbe86e9b6ef977}{size}})}
+
+\mbox{\Hypertarget{CTBDefs_8h_ad550327644158d58574a917bb0f7c630}\label{CTBDefs_8h_ad550327644158d58574a917bb0f7c630}} 
+\index{CTBDefs.h@{CTBDefs.h}!DUMPCODEBLOCK@{DUMPCODEBLOCK}}
+\index{DUMPCODEBLOCK@{DUMPCODEBLOCK}!CTBDefs.h@{CTBDefs.h}}
+\doxysubsubsection{\texorpdfstring{DUMPCODEBLOCK}{DUMPCODEBLOCK}}
+{\footnotesize\ttfamily \#define D\+U\+M\+P\+C\+O\+D\+E\+B\+L\+O\+CK~for (;starting $<$ ending; starting++) \{ fprintf(compile\+Params-\/$>$lst\+File, \char`\"{}\%-\/3d \char`\"{}, (unsigned char)binary-\/$>$code\mbox{[}starting\mbox{]}); \}}
+
+\mbox{\Hypertarget{CTBDefs_8h_a6dd95ba5857ae6decf9a4601a205a300}\label{CTBDefs_8h_a6dd95ba5857ae6decf9a4601a205a300}} 
+\index{CTBDefs.h@{CTBDefs.h}!DUMPCODEBLOCKHEX@{DUMPCODEBLOCKHEX}}
+\index{DUMPCODEBLOCKHEX@{DUMPCODEBLOCKHEX}!CTBDefs.h@{CTBDefs.h}}
+\doxysubsubsection{\texorpdfstring{DUMPCODEBLOCKHEX}{DUMPCODEBLOCKHEX}}
+{\footnotesize\ttfamily \#define D\+U\+M\+P\+C\+O\+D\+E\+B\+L\+O\+C\+K\+H\+EX~for (;starting $<$ ending; starting++) \{ fprintf(compile\+Params-\/$>$lst\+File, \char`\"{}\%2x \char`\"{}, (unsigned char)binary-\/$>$code\mbox{[}starting\mbox{]}); \}}
+
+\mbox{\Hypertarget{CTBDefs_8h_a67c48cbedae2e3f42f87f0476a67ba50}\label{CTBDefs_8h_a67c48cbedae2e3f42f87f0476a67ba50}} 
+\index{CTBDefs.h@{CTBDefs.h}!GETLABELPOS@{GETLABELPOS}}
+\index{GETLABELPOS@{GETLABELPOS}!CTBDefs.h@{CTBDefs.h}}
+\doxysubsubsection{\texorpdfstring{GETLABELPOS}{GETLABELPOS}}
+{\footnotesize\ttfamily \#define G\+E\+T\+L\+A\+B\+E\+L\+P\+OS~(int)(compile\+Params-\/$>$labels\+Store-\/$>$get\+Label\+To\+Position((char$\ast$)argv\mbox{[}1\mbox{]})) -\/ (int)(binary-\/$>$current\+Size) + 1}
+
+\mbox{\Hypertarget{CTBDefs_8h_aeb786e3a5a82623adb22ae4bf030c7c6}\label{CTBDefs_8h_aeb786e3a5a82623adb22ae4bf030c7c6}} 
+\index{CTBDefs.h@{CTBDefs.h}!JUSTCOMMAND@{JUSTCOMMAND}}
+\index{JUSTCOMMAND@{JUSTCOMMAND}!CTBDefs.h@{CTBDefs.h}}
+\doxysubsubsection{\texorpdfstring{JUSTCOMMAND}{JUSTCOMMAND}}
+{\footnotesize\ttfamily \#define J\+U\+S\+T\+C\+O\+M\+M\+A\+ND~\mbox{\hyperlink{CTBDefs_8h_aed61c14a9a5ce11f5e135d8280dd3316}{L\+S\+T\+D\+U\+M\+P\+ED}}(\{ \mbox{\hyperlink{CTBDefs_8h_a935ce0c5b7b54e84859821376fad7cf6}{A\+P\+P\+E\+N\+D\+C\+H\+AR}}(thou-\/$>$code); \}) return \mbox{\hyperlink{TranslationDTypes_8hpp_aaef4a579ede91cde0e35d0c6d40c8061a7c3c53b3cdfb58d13a224b0b19788161}{S\+P\+U\+\_\+\+C\+T\+B\+\_\+\+OK}};}
+
+\mbox{\Hypertarget{CTBDefs_8h_aed61c14a9a5ce11f5e135d8280dd3316}\label{CTBDefs_8h_aed61c14a9a5ce11f5e135d8280dd3316}} 
+\index{CTBDefs.h@{CTBDefs.h}!LSTDUMPED@{LSTDUMPED}}
+\index{LSTDUMPED@{LSTDUMPED}!CTBDefs.h@{CTBDefs.h}}
+\doxysubsubsection{\texorpdfstring{LSTDUMPED}{LSTDUMPED}}
+{\footnotesize\ttfamily \#define L\+S\+T\+D\+U\+M\+P\+ED(\begin{DoxyParamCaption}\item[{}]{code }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \{ \(\backslash\)}
+\DoxyCodeLine{    size\_t starting = binary-\/>currentSize; \(\backslash\)}
+\DoxyCodeLine{    \{ code \} \(\backslash\)}
+\DoxyCodeLine{    \(\backslash\)}
+\DoxyCodeLine{    size\_t ending = binary-\/>currentSize;\(\backslash\)}
+\DoxyCodeLine{    if (compileParams-\/>lstFile != NULL)\{\(\backslash\)}
+\DoxyCodeLine{    fprintf(compileParams-\/>lstFile, \textcolor{stringliteral}{"{}\%-\/5zu -\/> \%5zu | "{}}, starting + binary-\/>codeOffset, ending + binary-\/>codeOffset -\/ 1);\(\backslash\)}
+\DoxyCodeLine{    fprintf(compileParams-\/>lstFile, \textcolor{stringliteral}{"{}\%-\/3zu | "{}}, ending -\/ starting);\(\backslash\)}
+\DoxyCodeLine{    char* dumpedOp = (\textcolor{keywordtype}{char}*)calloc(50, 1);\(\backslash\)}
+\DoxyCodeLine{    char* curPtr = dumpedOp;\(\backslash\)}
+\DoxyCodeLine{    sprintf(curPtr, \textcolor{stringliteral}{"{}\%s  "{}}, argv[0]);\(\backslash\)}
+\DoxyCodeLine{    curPtr += strlen(argv[0]) + 1;\(\backslash\)}
+\DoxyCodeLine{    for (\textcolor{keywordtype}{int} i = 1; i < argc; i++) \{sprintf(curPtr, \textcolor{stringliteral}{"{}<\%s>"{}}, argv[i]); curPtr += strlen(argv[i]) + 1;\}\(\backslash\)}
+\DoxyCodeLine{    fprintf(compileParams-\/>lstFile, \textcolor{stringliteral}{"{}\%-\/25s | "{}}, dumpedOp);\(\backslash\)}
+\DoxyCodeLine{    free(dumpedOp);\(\backslash\)}
+\DoxyCodeLine{    DUMPCODEBLOCKHEX\(\backslash\)}
+\DoxyCodeLine{    fprintf(compileParams-\/>lstFile, \textcolor{stringliteral}{"{}\(\backslash\)n"{}});\}\(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{CTBDefs_8h_a3fa8ba14d0d39c00e4c920dca5faee7a}\label{CTBDefs_8h_a3fa8ba14d0d39c00e4c920dca5faee7a}} 
+\index{CTBDefs.h@{CTBDefs.h}!SETLABELPOS@{SETLABELPOS}}
+\index{SETLABELPOS@{SETLABELPOS}!CTBDefs.h@{CTBDefs.h}}
+\doxysubsubsection{\texorpdfstring{SETLABELPOS}{SETLABELPOS}}
+{\footnotesize\ttfamily \#define S\+E\+T\+L\+A\+B\+E\+L\+P\+OS~\mbox{\hyperlink{EXE_8h_a6838d227c2d074080b1b51f9933d52a5}{if}} (compile\+Params-\/$>$labels\+Store != N\+U\+LL) compile\+Params-\/$>$labels\+Store-\/$>$set\+Label\+From\+Position((char$\ast$)argv\mbox{[}1\mbox{]}, (unsigned int)binary-\/$>$current\+Size)}
+
+\mbox{\Hypertarget{CTBDefs_8h_a7ccf74837c52aa13556d7d689212c490}\label{CTBDefs_8h_a7ccf74837c52aa13556d7d689212c490}} 
+\index{CTBDefs.h@{CTBDefs.h}!ZEROORREGISTERNO@{ZEROORREGISTERNO}}
+\index{ZEROORREGISTERNO@{ZEROORREGISTERNO}!CTBDefs.h@{CTBDefs.h}}
+\doxysubsubsection{\texorpdfstring{ZEROORREGISTERNO}{ZEROORREGISTERNO}}
+{\footnotesize\ttfamily \#define Z\+E\+R\+O\+O\+R\+R\+E\+G\+I\+S\+T\+E\+R\+NO}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{CTBDefs_8h_aed61c14a9a5ce11f5e135d8280dd3316}{LSTDUMPED}}(\{\{\(\backslash\)}
+\DoxyCodeLine{APPENDCHAR(thou-\/>code);\(\backslash\)}
+\DoxyCodeLine{if (argc == 1) \{\(\backslash\)}
+\DoxyCodeLine{    APPENDCHAR(0);\(\backslash\)}
+\DoxyCodeLine{\} \textcolor{keywordflow}{else} \{\(\backslash\)}
+\DoxyCodeLine{    const \textcolor{keywordtype}{char}* firstArgument = argv[1];\(\backslash\)}
+\DoxyCodeLine{    APPENDCHAR(1);\(\backslash\)}
+\DoxyCodeLine{    \(\backslash\)}
+\DoxyCodeLine{    int registerNo = \mbox{\hyperlink{CommandsParser_8cpp_a339f0d81c397ae53843ca64e2f0c86f0}{registerNoFromName}}((\textcolor{keywordtype}{char}*)firstArgument);\(\backslash\)}
+\DoxyCodeLine{    if (registerNo == -\/1)\(\backslash\)}
+\DoxyCodeLine{        return \mbox{\hyperlink{TranslationDTypes_8hpp_aaef4a579ede91cde0e35d0c6d40c8061afd6e2644760e1a67e9320591bc2a2a0c}{SPU\_CTB\_UNKNOWN\_REGISTER}};\(\backslash\)}
+\DoxyCodeLine{    \(\backslash\)}
+\DoxyCodeLine{    char registerNoCh = (char)registerNo;\(\backslash\)}
+\DoxyCodeLine{    APPENDDATA(\&registerNoCh, \textcolor{keyword}{sizeof}(registerNoCh));\(\backslash\)}
+\DoxyCodeLine{\}\}\}) \textcolor{keywordflow}{return} \mbox{\hyperlink{TranslationDTypes_8hpp_aaef4a579ede91cde0e35d0c6d40c8061a7c3c53b3cdfb58d13a224b0b19788161}{SPU\_CTB\_OK}};\(\backslash\)}
+
+\end{DoxyCode}

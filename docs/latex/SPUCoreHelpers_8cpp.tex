@@ -1,0 +1,186 @@
+\hypertarget{SPUCoreHelpers_8cpp}{}\doxysection{Soft\+Processor\+Unit/\+S\+P\+U/\+Core/\+S\+P\+U\+Core\+Helpers.cpp File Reference}
+\label{SPUCoreHelpers_8cpp}\index{SoftProcessorUnit/SPU/Core/SPUCoreHelpers.cpp@{SoftProcessorUnit/SPU/Core/SPUCoreHelpers.cpp}}
+{\ttfamily \#include \char`\"{}S\+P\+U\+Core\+Helpers.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+P\+U\+Core.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+P\+U\+Version.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for S\+P\+U\+Core\+Helpers.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SPUCoreHelpers_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{SPUCoreHelpers_8cpp_aaad251afe9f24c4d0160d66b4011d64d}{Destruct\+S\+P\+U\+Args}} (\mbox{\hyperlink{SPUDtypes_8hpp_structRunParameters}{Run\+Parameters}} $\ast$parameters)
+\item 
+int \mbox{\hyperlink{SPUCoreHelpers_8cpp_a6453a5d405d0626203f8933eefc6948f}{parse\+S\+P\+U\+Args}} (\mbox{\hyperlink{SPUDtypes_8hpp_structRunParameters}{Run\+Parameters}} $\ast$parameters, int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{SPUCoreHelpers_8cpp_a18b2128b1d0621cad7c48e286abb3d06}{spu\+Help}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{SPUCoreHelpers_8cpp_aaad251afe9f24c4d0160d66b4011d64d}\label{SPUCoreHelpers_8cpp_aaad251afe9f24c4d0160d66b4011d64d}} 
+\index{SPUCoreHelpers.cpp@{SPUCoreHelpers.cpp}!DestructSPUArgs@{DestructSPUArgs}}
+\index{DestructSPUArgs@{DestructSPUArgs}!SPUCoreHelpers.cpp@{SPUCoreHelpers.cpp}}
+\doxysubsubsection{\texorpdfstring{DestructSPUArgs()}{DestructSPUArgs()}}
+{\footnotesize\ttfamily void Destruct\+S\+P\+U\+Args (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{SPUDtypes_8hpp_structRunParameters}{Run\+Parameters}} $\ast$}]{parameters }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{90                                                 \{}
+\DoxyCodeLine{91     fclose(parameters-\/>\mbox{\hyperlink{SPUDtypes_8hpp_a2af4e09a5ada13ad50069b8dbf89efd6}{inputFile}});}
+\DoxyCodeLine{92     fclose(parameters-\/>\mbox{\hyperlink{SPUDtypes_8hpp_a2f52d85470f1a16f8e836db4e7dfcda0}{outputFile}});}
+\DoxyCodeLine{93 \}}
+
+\end{DoxyCode}
+
+
+References Run\+Parameters\+::input\+File, and Run\+Parameters\+::output\+File.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{SPUCoreHelpers_8cpp_aaad251afe9f24c4d0160d66b4011d64d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{SPUCoreHelpers_8cpp_a6453a5d405d0626203f8933eefc6948f}\label{SPUCoreHelpers_8cpp_a6453a5d405d0626203f8933eefc6948f}} 
+\index{SPUCoreHelpers.cpp@{SPUCoreHelpers.cpp}!parseSPUArgs@{parseSPUArgs}}
+\index{parseSPUArgs@{parseSPUArgs}!SPUCoreHelpers.cpp@{SPUCoreHelpers.cpp}}
+\doxysubsubsection{\texorpdfstring{parseSPUArgs()}{parseSPUArgs()}}
+{\footnotesize\ttfamily int parse\+S\+P\+U\+Args (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{SPUDtypes_8hpp_structRunParameters}{Run\+Parameters}} $\ast$}]{parameters,  }\item[{int}]{argc,  }\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13                                                                            \{}
+\DoxyCodeLine{14     \mbox{\hyperlink{SPUDtypes_8hpp_structRunParameters}{RunParameters}} newParams = \{0, 0, 0, 0, 0\};}
+\DoxyCodeLine{15     }
+\DoxyCodeLine{16     \textcolor{keywordflow}{if} (argc <= 1)\{}
+\DoxyCodeLine{17         \mbox{\hyperlink{SPUCoreHelpers_8cpp_a18b2128b1d0621cad7c48e286abb3d06}{spuHelp}}();}
+\DoxyCodeLine{18         \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{19     \}}
+\DoxyCodeLine{20     }
+\DoxyCodeLine{21     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 1; i < argc; i++) \{}
+\DoxyCodeLine{22         \textcolor{keywordflow}{if} (strcmp(argv[i], \textcolor{stringliteral}{"{}-\/-\/input"{}}) == 0) \{}
+\DoxyCodeLine{23             \textcolor{keywordflow}{if} (i + 1 > argc)\{}
+\DoxyCodeLine{24                 printf(\textcolor{stringliteral}{"{}error: spu: No input file specified after -\/-\/input\(\backslash\)n"{}});}
+\DoxyCodeLine{25                 \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{26             \}}
+\DoxyCodeLine{27             FILE* inputFile = fopen(argv[i + 1], \textcolor{stringliteral}{"{}rb"{}});}
+\DoxyCodeLine{28             newParams.\mbox{\hyperlink{SPUDtypes_8hpp_a2af4e09a5ada13ad50069b8dbf89efd6}{inputFile}} = inputFile;}
+\DoxyCodeLine{29             newParams.\mbox{\hyperlink{SPUDtypes_8hpp_ac75aca7c0a7abd09ad0f8a1d0c1f34be}{inputFileName}} = *(argv + i + 1);}
+\DoxyCodeLine{30             \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{SPUDtypes_8hpp_a2af4e09a5ada13ad50069b8dbf89efd6}{inputFile}} == NULL)\{}
+\DoxyCodeLine{31                 printf(\textcolor{stringliteral}{"{}error: spu: Can't open input file\(\backslash\)n"{}});}
+\DoxyCodeLine{32                 \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{33             \}}
+\DoxyCodeLine{34             i++;}
+\DoxyCodeLine{35         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(argv[i], \textcolor{stringliteral}{"{}-\/-\/output"{}}) == 0) \{}
+\DoxyCodeLine{36             \textcolor{keywordflow}{if} (i + 1 > argc)\{}
+\DoxyCodeLine{37                 printf(\textcolor{stringliteral}{"{}error: spu: No output file specified after -\/-\/output\(\backslash\)n"{}});}
+\DoxyCodeLine{38                 \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{39             \}}
+\DoxyCodeLine{40             FILE* outputFile = fopen(argv[i + 1], \textcolor{stringliteral}{"{}wb"{}});}
+\DoxyCodeLine{41             newParams.\mbox{\hyperlink{SPUDtypes_8hpp_a2f52d85470f1a16f8e836db4e7dfcda0}{outputFile}} = outputFile;}
+\DoxyCodeLine{42             newParams.\mbox{\hyperlink{SPUDtypes_8hpp_abab18039b4e5acf3efc51a8a76d6b07a}{outputFileName}} = *(argv + i + 1);}
+\DoxyCodeLine{43             i++;}
+\DoxyCodeLine{44         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(argv[i], \textcolor{stringliteral}{"{}-\/-\/verbose"{}}) == 0) \{}
+\DoxyCodeLine{45             newParams.\mbox{\hyperlink{SPUDtypes_8hpp_abe26a421f31a88df230b81e8cc4e087a}{verbose}} = 1;}
+\DoxyCodeLine{46         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(argv[i], \textcolor{stringliteral}{"{}-\/-\/help"{}}) == 0 || strcmp(argv[i], \textcolor{stringliteral}{"{}-\/h"{}}) == 0) \{}
+\DoxyCodeLine{47             \mbox{\hyperlink{SPUCoreHelpers_8cpp_a18b2128b1d0621cad7c48e286abb3d06}{spuHelp}}();}
+\DoxyCodeLine{48         \}\textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{49             \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{SPUDtypes_8hpp_a2af4e09a5ada13ad50069b8dbf89efd6}{inputFile}} == NULL)\{}
+\DoxyCodeLine{50                 FILE* inputFile = fopen(argv[i], \textcolor{stringliteral}{"{}rb"{}});}
+\DoxyCodeLine{51                 newParams.\mbox{\hyperlink{SPUDtypes_8hpp_a2af4e09a5ada13ad50069b8dbf89efd6}{inputFile}} = inputFile;}
+\DoxyCodeLine{52                 newParams.\mbox{\hyperlink{SPUDtypes_8hpp_ac75aca7c0a7abd09ad0f8a1d0c1f34be}{inputFileName}} = *(argv + i);}
+\DoxyCodeLine{53                 \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{SPUDtypes_8hpp_a2af4e09a5ada13ad50069b8dbf89efd6}{inputFile}} == NULL)\{}
+\DoxyCodeLine{54                     printf(\textcolor{stringliteral}{"{}error: spu: Can't open input file \%s\(\backslash\)n"{}}, argv[i]);}
+\DoxyCodeLine{55                     \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{56                 \}}
+\DoxyCodeLine{57             \}}
+\DoxyCodeLine{58         \}}
+\DoxyCodeLine{59     \}}
+\DoxyCodeLine{60     }
+\DoxyCodeLine{61     \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{SPUDtypes_8hpp_a2af4e09a5ada13ad50069b8dbf89efd6}{inputFile}} == NULL) \{}
+\DoxyCodeLine{62         printf(\textcolor{stringliteral}{"{}error: spu: No input file specified\(\backslash\)n"{}});}
+\DoxyCodeLine{63         \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{64     \}}
+\DoxyCodeLine{65     }
+\DoxyCodeLine{66     \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{SPUDtypes_8hpp_a2f52d85470f1a16f8e836db4e7dfcda0}{outputFile}} == NULL) \{}
+\DoxyCodeLine{67         newParams.\mbox{\hyperlink{SPUDtypes_8hpp_a2f52d85470f1a16f8e836db4e7dfcda0}{outputFile}} = stdout;}
+\DoxyCodeLine{68         newParams.\mbox{\hyperlink{SPUDtypes_8hpp_abab18039b4e5acf3efc51a8a76d6b07a}{outputFileName}} = \textcolor{stringliteral}{"{}stdout"{}};}
+\DoxyCodeLine{69     \}}
+\DoxyCodeLine{70     }
+\DoxyCodeLine{71     *parameters = newParams;}
+\DoxyCodeLine{72     \textcolor{keywordflow}{return} EXIT\_SUCCESS;}
+\DoxyCodeLine{73 \}}
+
+\end{DoxyCode}
+
+
+References Run\+Parameters\+::input\+File, Run\+Parameters\+::input\+File\+Name, Run\+Parameters\+::output\+File, Run\+Parameters\+::output\+File\+Name, spu\+Help(), and Run\+Parameters\+::verbose.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{SPUCoreHelpers_8cpp_a6453a5d405d0626203f8933eefc6948f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{SPUCoreHelpers_8cpp_a6453a5d405d0626203f8933eefc6948f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{SPUCoreHelpers_8cpp_a18b2128b1d0621cad7c48e286abb3d06}\label{SPUCoreHelpers_8cpp_a18b2128b1d0621cad7c48e286abb3d06}} 
+\index{SPUCoreHelpers.cpp@{SPUCoreHelpers.cpp}!spuHelp@{spuHelp}}
+\index{spuHelp@{spuHelp}!SPUCoreHelpers.cpp@{SPUCoreHelpers.cpp}}
+\doxysubsubsection{\texorpdfstring{spuHelp()}{spuHelp()}}
+{\footnotesize\ttfamily void spu\+Help (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75                    \{}
+\DoxyCodeLine{76     \textcolor{keywordtype}{int} SPUAssemblyVersion = \mbox{\hyperlink{SPUVersion_8hpp_a46cfa984fce0310cc64459db66aba985}{SPU\_VERSION}};}
+\DoxyCodeLine{77     \textcolor{keywordtype}{char}* SPUAssemblyVersion\_chars = (\textcolor{keywordtype}{char}*)\&SPUAssemblyVersion;}
+\DoxyCodeLine{78     printf(\textcolor{stringliteral}{"{}SPU v\%c.\%c.\%c\%c help\(\backslash\)n"{}}}
+\DoxyCodeLine{79            \textcolor{stringliteral}{"{}-\/-\/input     <input file> input file to be assembled .spub format (spu binary)\(\backslash\)n"{}}}
+\DoxyCodeLine{80            \textcolor{stringliteral}{"{}-\/-\/output    <output file> output file stdout by default\(\backslash\)n"{}}}
+\DoxyCodeLine{81            \textcolor{stringliteral}{"{}-\/h, -\/-\/help  show this help message\(\backslash\)n"{}}}
+\DoxyCodeLine{82            \textcolor{stringliteral}{"{}-\/-\/verbose   output debug information to the console\(\backslash\)n"{}}}
+\DoxyCodeLine{83            \textcolor{stringliteral}{"{}\(\backslash\)n"{}},}
+\DoxyCodeLine{84            SPUAssemblyVersion\_chars[0],}
+\DoxyCodeLine{85            SPUAssemblyVersion\_chars[1],}
+\DoxyCodeLine{86            SPUAssemblyVersion\_chars[2],}
+\DoxyCodeLine{87            SPUAssemblyVersion\_chars[3]);}
+\DoxyCodeLine{88 \}}
+
+\end{DoxyCode}
+
+
+References S\+P\+U\+\_\+\+V\+E\+R\+S\+I\+ON.
+
+
+
+Referenced by parse\+S\+P\+U\+Args().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{SPUCoreHelpers_8cpp_a18b2128b1d0621cad7c48e286abb3d06_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,17 @@
+\href{https://app.codacy.com/gh/AlexRoar/SPUAsm?utm_source=github.com&utm_medium=referral&utm_content=AlexRoar/SPUAsm&utm_campaign=Badge_Grade}{\texttt{ }} \href{https://www.codefactor.io/repository/github/alexroar/spuasm}{\texttt{ }}
+
+В данном проекте реализован транслятор кода в неравномерный байткод, дизассемблер для байткода, исполнитель байткода (Soft Processor Unit).
+
+В дополнение, присутствует анализатор кода, проверяющий синтаксические ошибки и выбрасывающий отчет в clang формате. Поэтому, X\+Code и другие I\+DE поддерживающие clang подсвечивают неверные выражения, отображают комментарии.
+
+Во время трансляции генерируется .lst файл, содержащий информацию о трансляции, на каком offset бинарника какая команда и тд. Все доступно в примерах.
+
+ 
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/AlexRoar/SPUAsm/blob/main/SoftProcessorUnit/Assembly/SPUAssembly.cpp}{\texttt{ Основной код транслятора}}
+\item \href{https://github.com/AlexRoar/SPUAsm/blob/main/SoftProcessorUnit/Disassembly/SPUDisAssembly.cpp}{\texttt{ Основной код дизассемблера}}
+\item \href{https://github.com/AlexRoar/SPUAsm/blob/main/SoftProcessorUnit/SPU/SPU.cpp}{\texttt{ Основной код S\+PU}}
+\item \href{https://github.com/AlexRoar/SPUAsm/tree/main/Examples/SPUAsm/SPUAsm}{\texttt{ Примеры}} 
+\end{DoxyItemize}

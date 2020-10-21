@@ -1,0 +1,9 @@
+<map id="StackValidate" name="StackValidate">
+<area shape="rect" id="node1" title="Perform all stack checks: checksums, general constrains." alt="" coords="5,56,108,83"/>
+<area shape="rect" id="node2" href="$StackRigid_8cpp.html#a08de7058bae2a1e0c566024850286498" title="Claculates big Stack checksum. Uses Adler&#45;32 method." alt="" coords="169,56,323,83"/>
+<area shape="rect" id="node6" href="$StackRigid_8cpp.html#a2a07c9f65f61c8ca3112dcfaefb4b3be" title="Uses Adler&#45;32 method. Calculates Stack checksum only for the vital parameters. This is necessary beca..." alt="" coords="156,5,336,32"/>
+<area shape="rect" id="node7" href="$StackRigid_8cpp.html#a50d9ff70df667de809d39640f33db70b" title="Checks for pointer validity." alt="" coords="177,107,315,133"/>
+<area shape="rect" id="node3" href="$StackRigid_8cpp.html#a37faf27d6e9ab4e0a417f29efbda1cbb" title="Calculates Adler&#45;32 checksum from the firstBlock to the firstBlock + len." alt="" coords="406,5,519,32"/>
+<area shape="rect" id="node4" href="$StackRigid_8cpp.html#a269040ce2ab02e681254d1e9f20aff35" title="Memory alocated for the Stack." alt="" coords="384,56,541,83"/>
+<area shape="rect" id="node5" href="$StackRigid_8cpp.html#ad190054fe2653472b68ffe86d6f5dff3" title="Create new stack with pre&#45;defined capacity." alt="" coords="589,56,675,83"/>
+</map>

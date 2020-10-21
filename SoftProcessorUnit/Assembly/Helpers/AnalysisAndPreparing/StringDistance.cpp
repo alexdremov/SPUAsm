@@ -21,7 +21,7 @@ static int min3(int a, int b, int c)
     return c;
 }
 
-static unsigned int levenshtein_matrix_calculate(edit **mat, const char *str1, size_t len1,
+static unsigned int levenshtein_matrix_calculate(LevenshteinEdit **mat, const char *str1, size_t len1,
                                                  const char *str2, size_t len2)
 {
     unsigned int i, j;
@@ -66,16 +66,16 @@ static unsigned int levenshtein_matrix_calculate(edit **mat, const char *str1, s
     return mat[len1][len2].score;
 }
 
-static edit **levenshtein_matrix_create(size_t len1,
+static LevenshteinEdit **levenshtein_matrix_create(size_t len1,
                                         size_t len2)
 {
     unsigned int i, j;
-    edit **mat = (edit **)malloc((len1 + 1) * sizeof(edit *));
+    LevenshteinEdit **mat = (LevenshteinEdit **)malloc((len1 + 1) * sizeof(LevenshteinEdit *));
     if (mat == NULL) {
         return NULL;
     }
     for (i = 0; i <= len1; i++) {
-        mat[i] = (edit *)malloc((len2 + 1) * sizeof(edit));
+        mat[i] = (LevenshteinEdit *)malloc((len2 + 1) * sizeof(LevenshteinEdit));
         if (mat[i] == NULL) {
             for (j = 0; j < i; j++) {
                 free(mat[j]);
@@ -100,11 +100,11 @@ static edit **levenshtein_matrix_create(size_t len1,
     return mat;
 }
 
-unsigned int levenshtein_distance(const char *str1, const char *str2, edit **script)
+unsigned int levenshtein_distance(const char *str1, const char *str2, LevenshteinEdit **script)
 {
     const size_t len1 = strlen(str1), len2 = strlen(str2);
     unsigned int i, distance;
-    edit **mat, *head;
+    LevenshteinEdit **mat, *head;
     
     /* If either string is empty, the distance is the other string's length */
     if (len1 == 0) {
@@ -122,14 +122,14 @@ unsigned int levenshtein_distance(const char *str1, const char *str2, edit **scr
     /* Main algorithm */
     distance = levenshtein_matrix_calculate(mat, str1, len1, str2, len2);
     /* Read back the edit script */
-    *script = (edit *)malloc(distance * sizeof(edit));
+    *script = (LevenshteinEdit *)malloc(distance * sizeof(LevenshteinEdit));
     if (*script) {
         i = distance - 1;
         for (head = &mat[len1][len2];
              head->prev != NULL;
              head = head->prev) {
             if (head->type != NONE) {
-                memcpy(*script + i, head, sizeof(edit));
+                memcpy(*script + i, head, sizeof(LevenshteinEdit));
                 i--;
             }
         }

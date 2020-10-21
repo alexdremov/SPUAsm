@@ -1,0 +1,105 @@
+\hypertarget{SPUAssembly_8cpp}{}\doxysection{Soft\+Processor\+Unit/\+Assembly/\+S\+P\+U\+Assembly.cpp File Reference}
+\label{SPUAssembly_8cpp}\index{SoftProcessorUnit/Assembly/SPUAssembly.cpp@{SoftProcessorUnit/Assembly/SPUAssembly.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Syntax.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Assembly\+Helpers.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Commands\+Parser.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+P\+U\+Version.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Code\+Analysis.\+hpp\char`\"{}}\newline
+Include dependency graph for S\+P\+U\+Assembly.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SPUAssembly_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{SPUAssembly_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main}} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{SPUAssembly_8cpp_ac0f2228420376f4db7e1274f2b41667c}\label{SPUAssembly_8cpp_ac0f2228420376f4db7e1274f2b41667c}} 
+\index{SPUAssembly.cpp@{SPUAssembly.cpp}!main@{main}}
+\index{main@{main}!SPUAssembly.cpp@{SPUAssembly.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16                                       \{}
+\DoxyCodeLine{17     \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{SyntaxMapping}} syntax = \mbox{\hyperlink{Syntax_8cpp_ad8883fa3c572ab45fa3459a378708afd}{getSyntaxMapping}}();}
+\DoxyCodeLine{18     \mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{AssemblyParams}} compileParams = \{\};}
+\DoxyCodeLine{19     }
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} parsingResult = \mbox{\hyperlink{AssemblyHelpers_8cpp_a6c4bb8a89afb60b2164c352fec284d61}{parseArgs}}(argc, argv, \&compileParams);}
+\DoxyCodeLine{21     \textcolor{keywordflow}{if} (parsingResult != EXIT\_SUCCESS) \{}
+\DoxyCodeLine{22         printf(\textcolor{stringliteral}{"{}error: assembly: process finished with EXIT\_FAILURE code\(\backslash\)n"{}});}
+\DoxyCodeLine{23         \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{24     \}}
+\DoxyCodeLine{25     }
+\DoxyCodeLine{26     \mbox{\hyperlink{AssemblyHelpers_8cpp_a76bb301072f1ce35898cbd2ef5195831}{printAssemblyVersion}}(\&compileParams);}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{size\_t} codeLen = 0;}
+\DoxyCodeLine{29     \textcolor{keywordtype}{char}* code = \mbox{\hyperlink{CommandsParser_8cpp_ac4f89e7dbcbb5986315038db16ad2371}{getSourceFileData}}(compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_afdd5808979159dbc6eb8695b8baec28e}{inputFile}}, \&codeLen);}
+\DoxyCodeLine{30     compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a616b2e98d89547438c5461468f8bef6d}{codeText}} = code;}
+\DoxyCodeLine{31     }
+\DoxyCodeLine{32     \mbox{\hyperlink{CommandsParser_8cpp_a0f8de65651301114bc7782475cc6ff79}{removeDoubleWhitespaces}}(compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a616b2e98d89547438c5461468f8bef6d}{codeText}}, \&codeLen);}
+\DoxyCodeLine{33     }
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} errorsFound = \mbox{\hyperlink{CodeAnalysis_8cpp_adc769d122142b2a70d004f1c82ca813d}{generateErrors}}(\&syntax, \&compileParams, compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a616b2e98d89547438c5461468f8bef6d}{codeText}});}
+\DoxyCodeLine{35     }
+\DoxyCodeLine{36     \textcolor{keywordflow}{if} (errorsFound == 0)\{}
+\DoxyCodeLine{37         free(code);}
+\DoxyCodeLine{38         \mbox{\hyperlink{AssemblyHelpers_8cpp_aae008dee6c0428e3c3b6c38284f0e80e}{DestructAssemblyParams}}(\&compileParams);}
+\DoxyCodeLine{39         \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{40     \}}
+\DoxyCodeLine{41     }
+\DoxyCodeLine{42     \mbox{\hyperlink{CommandsParser_8cpp_a9c053f5b726840410e982bf98a5dc7ec}{preprocessSource}}(code, \&codeLen);}
+\DoxyCodeLine{43     }
+\DoxyCodeLine{44     \textcolor{keywordflow}{if} (compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a8fa74a2c523da8c898363c84e5358a85}{prepFile}} != NULL) \{}
+\DoxyCodeLine{45         fwrite(code, 1, codeLen,compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a8fa74a2c523da8c898363c84e5358a85}{prepFile}});}
+\DoxyCodeLine{46     \}}
+\DoxyCodeLine{47     }
+\DoxyCodeLine{48     \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{BinaryFile}}* binary = \mbox{\hyperlink{AssemblyHelpers_8cpp_ad7b5ac9bb1240c1f507b4564bc0778fc}{NewBinaryFile}}();}
+\DoxyCodeLine{49     }
+\DoxyCodeLine{50     \mbox{\hyperlink{CommandsDTypes_8hpp_a014dc28c49852c3fac1fa3cd2a95c0d5}{CommandParseResult}} parseRes = \mbox{\hyperlink{CommandsParser_8cpp_a9f77310758d1c97d9ea9e1bb83779d5f}{parseCode}}(\&compileParams,}
+\DoxyCodeLine{51                                             (\textcolor{keyword}{const} \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{SyntaxMapping}}*) \&syntax,}
+\DoxyCodeLine{52                                             binary, compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a616b2e98d89547438c5461468f8bef6d}{codeText}},}
+\DoxyCodeLine{53                                             codeLen);}
+\DoxyCodeLine{54     }
+\DoxyCodeLine{55     \textcolor{keywordflow}{if} (parseRes != \mbox{\hyperlink{CommandsDTypes_8hpp_a014dc28c49852c3fac1fa3cd2a95c0d5aa4efc8f9e76b32072d33a7d67f856d99}{SPU\_PARSE\_OK}})\{}
+\DoxyCodeLine{56         printf(\textcolor{stringliteral}{"{}\%s: error: assembly: syntax error\(\backslash\)n"{}}, compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}});}
+\DoxyCodeLine{57         printf(\textcolor{stringliteral}{"{}\%s: error: assembly: process finished with EXIT\_FAILURE code\(\backslash\)n"{}}, compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}});}
+\DoxyCodeLine{58         \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{59     \}}
+\DoxyCodeLine{60     }
+\DoxyCodeLine{61     \textcolor{keywordflow}{if} (compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a3998875859d91d9614897720dd09aa3a}{verbose}})\{}
+\DoxyCodeLine{62         printf(\textcolor{stringliteral}{"{}Generated code: \(\backslash\)n"{}});}
+\DoxyCodeLine{63         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}}; i++) \{}
+\DoxyCodeLine{64             printf(\textcolor{stringliteral}{"{}\%d "{}}, (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}}[i]);}
+\DoxyCodeLine{65         \}}
+\DoxyCodeLine{66         printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{67     \}}
+\DoxyCodeLine{68     }
+\DoxyCodeLine{69     \mbox{\hyperlink{CommandsParser_8cpp_aede32224521297426a2cfad5d4798384}{codeEstimations}}(binary, code);}
+\DoxyCodeLine{70     \mbox{\hyperlink{AssemblyHelpers_8cpp_a04a770d2b12f163bef10636bfd299fde}{flushBinFile}}(binary, compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_ac0b48ee74ddc9903ff9585e3cc8c8851}{outputFile}});}
+\DoxyCodeLine{71     }
+\DoxyCodeLine{72     free(code);}
+\DoxyCodeLine{73     \mbox{\hyperlink{AssemblyHelpers_8cpp_a8384d0729973f2658ba4e29f66c9a7c7}{DestructBinaryFile}}(binary);}
+\DoxyCodeLine{74     \mbox{\hyperlink{AssemblyHelpers_8cpp_aae008dee6c0428e3c3b6c38284f0e80e}{DestructAssemblyParams}}(\&compileParams);}
+\DoxyCodeLine{75 \}}
+
+\end{DoxyCode}
+
+
+References Binary\+File\+::code, code\+Estimations(), Assembly\+Params\+::code\+Text, Binary\+File\+::current\+Size, Destruct\+Assembly\+Params(), Destruct\+Binary\+File(), flush\+Bin\+File(), generate\+Errors(), get\+Source\+File\+Data(), get\+Syntax\+Mapping(), Assembly\+Params\+::input\+File, Assembly\+Params\+::input\+File\+Name, New\+Binary\+File(), Assembly\+Params\+::output\+File, parse\+Args(), parse\+Code(), Assembly\+Params\+::prep\+File, preprocess\+Source(), print\+Assembly\+Version(), remove\+Double\+Whitespaces(), S\+P\+U\+\_\+\+P\+A\+R\+S\+E\+\_\+\+OK, and Assembly\+Params\+::verbose.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SPUAssembly_8cpp_ac0f2228420376f4db7e1274f2b41667c_cgraph}
+\end{center}
+\end{figure}

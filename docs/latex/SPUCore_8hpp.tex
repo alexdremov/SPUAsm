@@ -1,0 +1,153 @@
+\hypertarget{SPUCore_8hpp}{}\doxysection{Soft\+Processor\+Unit/\+S\+P\+U/\+Core/\+S\+P\+U\+Core.hpp File Reference}
+\label{SPUCore_8hpp}\index{SoftProcessorUnit/SPU/Core/SPUCore.hpp@{SoftProcessorUnit/SPU/Core/SPUCore.hpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Syntax.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+P\+U\+Dtypes.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Stack\+Rigid.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Commands\+Parser.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Commands\+D\+Types.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Instr\+Executors.\+hpp\char`\"{}}\newline
+Include dependency graph for S\+P\+U\+Core.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SPUCore_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SPUCore_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{SPUCore_8hpp_a6a206874805d856f6acaafa7b0151381}{Construct\+S\+P\+U\+Core}} (\mbox{\hyperlink{SPUDtypes_8hpp_structSPUCore}{S\+P\+U\+Core}} $\ast$core, size\+\_\+t init\+Stack\+Size)
+\item 
+\mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2f}{Instruction\+Exe\+Result}} \mbox{\hyperlink{SPUCore_8hpp_a57761c153c17ac44020769b0f979d469}{execute\+Instruction}} (\mbox{\hyperlink{SPUDtypes_8hpp_structSPUCore}{S\+P\+U\+Core}} $\ast$core, \mbox{\hyperlink{SPUDtypes_8hpp_structRunParameters}{Run\+Parameters}} $\ast$params, \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$binary, char $\ast$$\ast$\mbox{\hyperlink{EXE_8h_a37d521d55391bb468bb21c23296e0501}{S\+PI}})
+\item 
+\mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2f}{Instruction\+Exe\+Result}} \mbox{\hyperlink{SPUCore_8hpp_a93857b1d478028ef9ef8aaebd23109c2}{run\+Code}} (\mbox{\hyperlink{SPUDtypes_8hpp_structSPUCore}{S\+P\+U\+Core}} $\ast$core, \mbox{\hyperlink{SPUDtypes_8hpp_structRunParameters}{Run\+Parameters}} $\ast$params, \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$binary)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{SPUCore_8hpp_a6a206874805d856f6acaafa7b0151381}\label{SPUCore_8hpp_a6a206874805d856f6acaafa7b0151381}} 
+\index{SPUCore.hpp@{SPUCore.hpp}!ConstructSPUCore@{ConstructSPUCore}}
+\index{ConstructSPUCore@{ConstructSPUCore}!SPUCore.hpp@{SPUCore.hpp}}
+\doxysubsubsection{\texorpdfstring{ConstructSPUCore()}{ConstructSPUCore()}}
+{\footnotesize\ttfamily void Construct\+S\+P\+U\+Core (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{SPUDtypes_8hpp_structSPUCore}{S\+P\+U\+Core}} $\ast$}]{core,  }\item[{size\+\_\+t}]{init\+Stack\+Size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13                                                            \{}
+\DoxyCodeLine{14     core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_a7e53f3d8e7ad44b3dea986b508dddb4e}{stack}} = NewStackRigid\_double(initStackSize, stderr);}
+\DoxyCodeLine{15     core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_adf0c1553a08f701b4b2fa9bf0aff884b}{terminated}} = 0;}
+\DoxyCodeLine{16 \}}
+
+\end{DoxyCode}
+
+
+References S\+P\+U\+Core\+::stack, and S\+P\+U\+Core\+::terminated.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{SPUCore_8hpp_a6a206874805d856f6acaafa7b0151381_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{SPUCore_8hpp_a57761c153c17ac44020769b0f979d469}\label{SPUCore_8hpp_a57761c153c17ac44020769b0f979d469}} 
+\index{SPUCore.hpp@{SPUCore.hpp}!executeInstruction@{executeInstruction}}
+\index{executeInstruction@{executeInstruction}!SPUCore.hpp@{SPUCore.hpp}}
+\doxysubsubsection{\texorpdfstring{executeInstruction()}{executeInstruction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2f}{Instruction\+Exe\+Result}} execute\+Instruction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{SPUDtypes_8hpp_structSPUCore}{S\+P\+U\+Core}} $\ast$}]{core,  }\item[{\mbox{\hyperlink{SPUDtypes_8hpp_structRunParameters}{Run\+Parameters}} $\ast$}]{params,  }\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{binary,  }\item[{char $\ast$$\ast$}]{S\+PI }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41                                                     \{}
+\DoxyCodeLine{42 \textcolor{comment}{//    printf("{}NOW: \%d\(\backslash\)n"{}, binary-\/>codeOffset + (int)(*SPI -\/ binary-\/>code));}}
+\DoxyCodeLine{43     \textcolor{keywordflow}{switch} (**\mbox{\hyperlink{EXE_8h_a37d521d55391bb468bb21c23296e0501}{SPI}}) \{}
+\DoxyCodeLine{44 \textcolor{preprocessor}{        \#define COMMAND\_INFO(name, code, args, flags) case code : EVALUATE(CALLEXE(EVALUATE(CMDEXE\_ \#\# name)));}}
+\DoxyCodeLine{45             }
+\DoxyCodeLine{46 \textcolor{preprocessor}{        \#include "{}\mbox{\hyperlink{INFO_8h}{INFO.h}}"{}}}
+\DoxyCodeLine{47             }
+\DoxyCodeLine{48 \textcolor{preprocessor}{        \#undef COMMAND\_INFO}}
+\DoxyCodeLine{49             }
+\DoxyCodeLine{50         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{51             \textcolor{keywordflow}{return} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf0113534f70048df0263a31742bc10ce}{SPU\_EXE\_UNKNOWN}};}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53     \textcolor{keywordflow}{return} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa1e1608a157e7bb2d746ba91df8873e9e}{SPU\_EXE\_OK}};}
+\DoxyCodeLine{54 \}}
+
+\end{DoxyCode}
+
+
+References S\+PI, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK, and S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+U\+N\+K\+N\+O\+WN.
+
+
+
+Referenced by run\+Code().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{SPUCore_8hpp_a57761c153c17ac44020769b0f979d469_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{SPUCore_8hpp_a93857b1d478028ef9ef8aaebd23109c2}\label{SPUCore_8hpp_a93857b1d478028ef9ef8aaebd23109c2}} 
+\index{SPUCore.hpp@{SPUCore.hpp}!runCode@{runCode}}
+\index{runCode@{runCode}!SPUCore.hpp@{SPUCore.hpp}}
+\doxysubsubsection{\texorpdfstring{runCode()}{runCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2f}{Instruction\+Exe\+Result}} run\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{SPUDtypes_8hpp_structSPUCore}{S\+P\+U\+Core}} $\ast$}]{core,  }\item[{\mbox{\hyperlink{SPUDtypes_8hpp_structRunParameters}{Run\+Parameters}} $\ast$}]{params,  }\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{binary }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18                                                                                        \{}
+\DoxyCodeLine{19     core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_adf0c1553a08f701b4b2fa9bf0aff884b}{terminated}} = 0;}
+\DoxyCodeLine{20     }
+\DoxyCodeLine{21     \textcolor{keywordtype}{char}* \mbox{\hyperlink{EXE_8h_a37d521d55391bb468bb21c23296e0501}{SPI}} = binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}};}
+\DoxyCodeLine{22     }
+\DoxyCodeLine{23     \textcolor{keywordflow}{while} (!core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_adf0c1553a08f701b4b2fa9bf0aff884b}{terminated}} \&\& SPI < binary-\/>code + binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}}) \{}
+\DoxyCodeLine{24         \textcolor{keywordtype}{char}* prevOffset = \mbox{\hyperlink{EXE_8h_a37d521d55391bb468bb21c23296e0501}{SPI}};}
+\DoxyCodeLine{25         \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2f}{InstructionExeResult}} cmdResult = \mbox{\hyperlink{SPUCore_8cpp_a57761c153c17ac44020769b0f979d469}{executeInstruction}}(core, params, binary, \&\mbox{\hyperlink{EXE_8h_a37d521d55391bb468bb21c23296e0501}{SPI}});}
+\DoxyCodeLine{26         \textcolor{keywordflow}{if} (cmdResult != \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa1e1608a157e7bb2d746ba91df8873e9e}{SPU\_EXE\_OK}})\{}
+\DoxyCodeLine{27             core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_adf0c1553a08f701b4b2fa9bf0aff884b}{terminated}} = 1;}
+\DoxyCodeLine{28             fprintf(stderr, \textcolor{stringliteral}{"{}error: spu: terminated at offset: \%d reached: \%d\(\backslash\)n"{}},}
+\DoxyCodeLine{29                     (\textcolor{keywordtype}{int})((\textcolor{keywordtype}{int})(prevOffset -\/ binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}}) + (\textcolor{keywordtype}{int})(binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_af4388a255703cbbd6ab670fb87a92e93}{codeOffset}})), (\textcolor{keywordtype}{int})((\textcolor{keywordtype}{int})(\mbox{\hyperlink{EXE_8h_a37d521d55391bb468bb21c23296e0501}{SPI}} -\/ binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}}) + (\textcolor{keywordtype}{int})(binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_af4388a255703cbbd6ab670fb87a92e93}{codeOffset}})));}
+\DoxyCodeLine{30             \textcolor{keywordflow}{return} cmdResult;}
+\DoxyCodeLine{31         \}}
+\DoxyCodeLine{32     \}}
+\DoxyCodeLine{33     }
+\DoxyCodeLine{34     \textcolor{keywordflow}{return} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa1e1608a157e7bb2d746ba91df8873e9e}{SPU\_EXE\_OK}};}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+
+
+References Binary\+File\+::code, Binary\+File\+::code\+Offset, Binary\+File\+::current\+Size, execute\+Instruction(), S\+PI, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK, and S\+P\+U\+Core\+::terminated.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{SPUCore_8hpp_a93857b1d478028ef9ef8aaebd23109c2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{SPUCore_8hpp_a93857b1d478028ef9ef8aaebd23109c2_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,69 @@
+\hypertarget{EXEDefs_8h}{}\doxysection{Soft\+Processor\+Unit/\+Syntax/\+Translation/\+Macro\+Syntax/\+E\+X\+E\+Defs.h File Reference}
+\label{EXEDefs_8h}\index{SoftProcessorUnit/Syntax/Translation/MacroSyntax/EXEDefs.h@{SoftProcessorUnit/Syntax/Translation/MacroSyntax/EXEDefs.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Instr\+Executors.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+P\+U\+Dtypes.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+P\+U\+Core.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+P\+U\+Core\+Helpers.\+hpp\char`\"{}}\newline
+Include dependency graph for E\+X\+E\+Defs.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{EXEDefs_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{EXEDefs_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(bytes)~( ( bytes ) + $\ast$\mbox{\hyperlink{EXE_8h_a37d521d55391bb468bb21c23296e0501}{S\+PI}} $<$= binary-\/$>$current\+Size + binary-\/$>$code)
+\item 
+\#define \mbox{\hyperlink{EXEDefs_8h_ac852af7b539a12fedbf5453fed9a708c}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}\label{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}} 
+\index{EXEDefs.h@{EXEDefs.h}!HASBYTES@{HASBYTES}}
+\index{HASBYTES@{HASBYTES}!EXEDefs.h@{EXEDefs.h}}
+\doxysubsubsection{\texorpdfstring{HASBYTES}{HASBYTES}}
+{\footnotesize\ttfamily \#define H\+A\+S\+B\+Y\+T\+ES(\begin{DoxyParamCaption}\item[{}]{bytes }\end{DoxyParamCaption})~( ( bytes ) + $\ast$\mbox{\hyperlink{EXE_8h_a37d521d55391bb468bb21c23296e0501}{S\+PI}} $<$= binary-\/$>$current\+Size + binary-\/$>$code)}
+
+\mbox{\Hypertarget{EXEDefs_8h_ac852af7b539a12fedbf5453fed9a708c}\label{EXEDefs_8h_ac852af7b539a12fedbf5453fed9a708c}} 
+\index{EXEDefs.h@{EXEDefs.h}!STACKRESULT@{STACKRESULT}}
+\index{STACKRESULT@{STACKRESULT}!EXEDefs.h@{EXEDefs.h}}
+\doxysubsubsection{\texorpdfstring{STACKRESULT}{STACKRESULT}}
+{\footnotesize\ttfamily \#define S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{switch} (\mbox{\hyperlink{EXE_8h_a648bf88b6941d0a6f80ee99e8821a527}{result}}) \{\(\backslash\)}
+\DoxyCodeLine{case \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039a049b8238cb27892165351846886d6a2e}{STACK\_OP\_OK}}:\(\backslash\)}
+\DoxyCodeLine{    break;\(\backslash\)}
+\DoxyCodeLine{case \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039aba36d99a3bcd8766e93ebb89f7e2f18c}{STACK\_OP\_UNDERFLOW}}:\(\backslash\)}
+\DoxyCodeLine{    return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa8f97989cd162132712e7919534d2604a}{SPU\_EXE\_STACK\_UNDERFLOW}};\(\backslash\)}
+\DoxyCodeLine{    break;\(\backslash\)}
+\DoxyCodeLine{case \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039a3fd246337bd474e0b0be6c3db2106283}{STACK\_OP\_OVERFLOW}}:\(\backslash\)}
+\DoxyCodeLine{    return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fade40cc4c7fe7f735df35e57ee9dbba5e}{SPU\_EXE\_STACK\_OVERFLOW}};\(\backslash\)}
+\DoxyCodeLine{    break;\(\backslash\)}
+\DoxyCodeLine{case \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039ac5fdd9b73e4decd4f5ddca7b680c345d}{STACK\_OP\_NOMEMORY}}:\(\backslash\)}
+\DoxyCodeLine{    return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf41640121168996e72b9d0d624f728a7}{SPU\_EXE\_NOMEMORY}};\(\backslash\)}
+\DoxyCodeLine{    break;\(\backslash\)}
+\DoxyCodeLine{case \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039afd89a4e74adda7fac95c033ffc862a33}{STACK\_OP\_INTEGRITYERR}}:\(\backslash\)}
+\DoxyCodeLine{    return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa6055455fd60dd2f673b2f702685f7a58}{SPU\_EXE\_CORRUPTED}};\(\backslash\)}
+\DoxyCodeLine{    break;\(\backslash\)}
+\DoxyCodeLine{case \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039ab949780f05a1efd2092dc9057bcf2b4e}{STACK\_OP\_NULL}}:\(\backslash\)}
+\DoxyCodeLine{    return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa6055455fd60dd2f673b2f702685f7a58}{SPU\_EXE\_CORRUPTED}};\(\backslash\)}
+\DoxyCodeLine{    break;\(\backslash\)}
+\DoxyCodeLine{case \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039afd3730a577045e9e7d8e5ccc91b4ad60}{STACK\_OP\_PTRINVALID}}:\(\backslash\)}
+\DoxyCodeLine{    return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa6055455fd60dd2f673b2f702685f7a58}{SPU\_EXE\_CORRUPTED}};\(\backslash\)}
+\DoxyCodeLine{    break;\(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

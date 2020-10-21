@@ -1,15 +1,4 @@
-/**
- * @mainpage
- * @author Aleksandr Dremov
- * @brief This Stack is almost impossible to kill and fool. All undefined behaviour memory accesses will be spoted and reported.
- * @attention Prerequisites.\n Before including .h file, you need to define  StackElementDump(FILE, VALUE) and StackElementType. \n
- * Example:\n
- * #define StackElementDump(FILE, VALUE) {fprintf(FILE, "%g", VALUE);}\n
- * #define StackElementType double\n
- * The system must have uint32_t type available\n
- * @warning Stack can be fully moved in memory during reallocations
- * @copyright Aleksandr Dremov, MIPT 2020
- */
+
 
 #include <stdlib.h>
 
