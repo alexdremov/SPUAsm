@@ -87,7 +87,7 @@
 			buildConfigurationList = A090F0E5253E3C8900342FA0 /* Build configuration list for PBXLegacyTarget "SPUAsmJP" */;
 			buildPhases = (
 			);
-			buildToolPath = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/DerivedData/SoftProcessorUnit/Build/Products/Release/SPUAsm";
+			buildToolPath = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/cmake-build-release/SPUAsm";
 			buildWorkingDirectory = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/Examples/SPUAsm/SPUAsm/Jumps";
 			dependencies = (
 			);
@@ -101,7 +101,7 @@
 			buildConfigurationList = A090F0EC253E418E00342FA0 /* Build configuration list for PBXLegacyTarget "SPUDisAsmJP" */;
 			buildPhases = (
 			);
-			buildToolPath = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/DerivedData/SoftProcessorUnit/Build/Products/Release/SPUDisAsm";
+			buildToolPath = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/cmake-build-release/SPUDisAsm";
 			buildWorkingDirectory = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/Examples/SPUAsm/SPUAsm/Jumps";
 			dependencies = (
 			);
@@ -115,7 +115,7 @@
 			buildConfigurationList = A0DD8BEE25370C7A00CD405B /* Build configuration list for PBXLegacyTarget "SPUAsmSR" */;
 			buildPhases = (
 			);
-			buildToolPath = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/DerivedData/SoftProcessorUnit/Build/Products/Release/SPUAsm";
+			buildToolPath = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/cmake-build-release/SPUAsm";
 			buildWorkingDirectory = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/Examples/SPUAsm/SPUAsm/SquareRoots";
 			dependencies = (
 			);
@@ -129,7 +129,7 @@
 			buildConfigurationList = A0DD8C472537AB2E00CD405B /* Build configuration list for PBXLegacyTarget "SPUDisAsmSR" */;
 			buildPhases = (
 			);
-			buildToolPath = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/DerivedData/SoftProcessorUnit/Build/Products/Release/SPUDisAsm";
+			buildToolPath = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/cmake-build-release/SPUDisAsm";
 			buildWorkingDirectory = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/Examples/SPUAsm/SPUAsm/SquareRoots";
 			dependencies = (
 			);

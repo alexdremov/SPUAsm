@@ -203,8 +203,7 @@ void DestructAssemblyParams(AssemblyParams* params) {
     free(params->inputFileRealName);
     if (params->prepFile != nullptr)
         fclose(params->prepFile);
-
-        delete params->labelsStore;
+    delete params->labelsStore;
 }
 
 int flushBinFile(BinaryFile* binFile, FILE* output) {

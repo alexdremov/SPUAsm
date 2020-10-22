@@ -378,7 +378,7 @@ LabelParse parseLabel(AssemblyParams *compileParams, char *code) {
 
     char *checker = code;
     while (checker < colonFound) {
-        if (!(isalpha(*checker) || isnumber(*checker)))
+        if (!(isalpha(*checker) || isdigit(*checker)))
             return SPU_LABEL_INVALID;
         checker++;
     }
@@ -402,7 +402,7 @@ LabelParse setLabelPos(AssemblyParams *compileParams, char *code, unsigned int p
 
     char *checker = code;
     while (checker < colonFound) {
-        if (!(isalpha(*checker) || isnumber(*checker)))
+        if (!(isalpha(*checker) || isdigit(*checker)))
             return SPU_LABEL_INVALID;
         checker++;
     }
