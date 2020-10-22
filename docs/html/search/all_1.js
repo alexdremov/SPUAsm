@@ -15,5 +15,6 @@ var searchData=
   ['assemblydtypes_2ehpp_388',['AssemblyDTypes.hpp',['../AssemblyDTypes_8hpp.html',1,'']]],
   ['assemblyhelpers_2ecpp_389',['AssemblyHelpers.cpp',['../AssemblyHelpers_8cpp.html',1,'']]],
   ['assemblyhelpers_2ehpp_390',['AssemblyHelpers.hpp',['../AssemblyHelpers_8hpp.html',1,'']]],
-  ['assemblyparams_391',['AssemblyParams',['../AssemblyDTypes_8hpp.html#structAssemblyParams',1,'']]]
+  ['assemblyparams_391',['AssemblyParams',['../AssemblyDTypes_8hpp.html#structAssemblyParams',1,'']]],
+  ['assembly_2dtype_20code_20translator_20and_20spu_2dexecutor_392',['Assembly-type code translator and SPU-executor',['../index.html',1,'']]]
 ];

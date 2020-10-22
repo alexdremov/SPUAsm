@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['Транслятор_20assembly_2dподобного_20кода_20и_20spu_2dисполнитель_1490',['Транслятор assembly-подобного кода и SPU-исполнитель',['../index.html',1,'']]]
+  ['assembly_2dtype_20code_20translator_20and_20spu_2dexecutor_1490',['Assembly-type code translator and SPU-executor',['../index.html',1,'']]]
 ];
