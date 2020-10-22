@@ -328,7 +328,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        this-&gt;<a class="code" href="structJMPLabelsStore.html#a2c011d9327249181f05780a91ef5b9d9">newLabel</a>(label);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        current = this-&gt;<a class="code" href="structJMPLabelsStore.html#a27fe748b8f33ccbed0ba18b8b9128dd2">last</a>;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    current-&gt;<a class="code" href="structJMPLabel.html#adbd2aea889c5e5a61ce1b3a93142e99f">positionFrom</a> = position;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    current-&gt;<a class="code" href="structJMPLabel.html#adbd2aea889c5e5a61ce1b3a93142e99f">positionFrom</a> = (long)position;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="structJMPLabelsStore.html#a11ae202867bee06836e593f33f5954ae">getLabel()</a>, <a class="el" href="structJMPLabelsStore.html#a27fe748b8f33ccbed0ba18b8b9128dd2">last</a>, <a class="el" href="structJMPLabelsStore.html#a2c011d9327249181f05780a91ef5b9d9">newLabel()</a>, and <a class="el" href="structJMPLabel.html#adbd2aea889c5e5a61ce1b3a93142e99f">JMPLabel::positionFrom</a>.</p>
@@ -382,7 +382,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> (current-&gt;<a class="code" href="structJMPLabel.html#ac2f35111d1022a99c505c6a2a88db6bc">used</a> != 1) {</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">throw</span> <span class="stringliteral">&quot;This label was used&quot;</span>;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    current-&gt;<a class="code" href="structJMPLabel.html#a6b67a7b6015f128f7623c1b5854d94d8">positionTo</a> = position;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    current-&gt;<a class="code" href="structJMPLabel.html#a6b67a7b6015f128f7623c1b5854d94d8">positionTo</a> = (long)position;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="structJMPLabelsStore.html#a11ae202867bee06836e593f33f5954ae">getLabel()</a>, <a class="el" href="structJMPLabelsStore.html#a27fe748b8f33ccbed0ba18b8b9128dd2">last</a>, <a class="el" href="structJMPLabelsStore.html#a2c011d9327249181f05780a91ef5b9d9">newLabel()</a>, <a class="el" href="structJMPLabel.html#a6b67a7b6015f128f7623c1b5854d94d8">JMPLabel::positionTo</a>, <a class="el" href="structJMPLabel.html#ac2f35111d1022a99c505c6a2a88db6bc">JMPLabel::used</a>, and <a class="el" href="structJMPLabel.html#a29e184f855c89c13698cacb3b1a82827">JMPLabel::wasUsed()</a>.</p>
