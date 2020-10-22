@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A04D828E2541B9F00095FB80 /* ParseHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A04D828C2541B9F00095FB80 /* ParseHelpers.cpp */; };
+		A04D828F2541B9F00095FB80 /* ParseHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A04D828C2541B9F00095FB80 /* ParseHelpers.cpp */; };
 		A071A8FE2534D1C9008711EF /* Syntax.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A071A8FB2534D1C9008711EF /* Syntax.cpp */; };
 		A071A8FF2534D1C9008711EF /* SPU.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A071A8FC2534D1C9008711EF /* SPU.cpp */; };
 		A071A9172534DC2D008711EF /* Syntax.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A071A8FB2534D1C9008711EF /* Syntax.cpp */; };
@@ -69,6 +71,8 @@
 
 /* Begin PBXFileReference section */
 		A04D82862540A91D0095FB80 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = CMakeLists.txt; sourceTree = "<group>"; };
+		A04D828C2541B9F00095FB80 /* ParseHelpers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ParseHelpers.cpp; path = SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.cpp; sourceTree = SOURCE_ROOT; };
+		A04D828D2541B9F00095FB80 /* ParseHelpers.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ParseHelpers.hpp; sourceTree = "<group>"; };
 		A071A8EE2534D19D008711EF /* SPU */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SPU; sourceTree = BUILT_PRODUCTS_DIR; };
 		A071A8FA2534D1C9008711EF /* Syntax.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Syntax.hpp; path = SoftProcessorUnit/Syntax/Translation/Syntax.hpp; sourceTree = SOURCE_ROOT; };
 		A071A8FB2534D1C9008711EF /* Syntax.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Syntax.cpp; sourceTree = "<group>"; };
@@ -290,6 +294,8 @@
 				A071A96B25351576008711EF /* CommandToBytecode.cpp */,
 				A071A9A225360AA5008711EF /* BytecodeToCommand.cpp */,
 				A0DD8C182537412900CD405B /* InstrExecutors.cpp */,
+				A04D828C2541B9F00095FB80 /* ParseHelpers.cpp */,
+				A04D828D2541B9F00095FB80 /* ParseHelpers.hpp */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -459,6 +465,7 @@
 				A0DD8BC2253653B400CD405B /* AssemblyHelpers.cpp in Sources */,
 				A0DD8C0025372E2300CD405B /* SPUCoreHelpers.cpp in Sources */,
 				A0DD8C102537343200CD405B /* StackRigid.cpp in Sources */,
+				A04D828E2541B9F00095FB80 /* ParseHelpers.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +497,7 @@
 				A071A96F25351576008711EF /* CommandToBytecode.cpp in Sources */,
 				A071A92F2534DD5A008711EF /* SPUDisAssembly.cpp in Sources */,
 				A071A98B2535F6D2008711EF /* AssemblyHelpers.cpp in Sources */,
+				A04D828F2541B9F00095FB80 /* ParseHelpers.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

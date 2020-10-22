@@ -8,6 +8,8 @@
 #ifndef BTCDefs_h
 #define BTCDefs_h
 
+#include "ParseHelpers.hpp"
+
 #define OPBACKGENERAL(code) { \
 fprintf(params->outputFile, "%s ", thou->naming);\
 if (checkBytesEnough(thou, binary, *SPI) == 0) {return SPU_DISASM_NOTENOUGHARGS;}\

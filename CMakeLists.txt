@@ -118,6 +118,7 @@ SoftProcessorUnit/SPU/SPU.cpp
 SoftProcessorUnit/Syntax/Translation/Helpers/BytecodeToCommand.cpp
 SoftProcessorUnit/Syntax/Translation/Helpers/CommandToBytecode.cpp
 SoftProcessorUnit/Syntax/Translation/Helpers/InstrExecutors.cpp
+SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.cpp
 SoftProcessorUnit/Syntax/Translation/Syntax.cpp
 )
 
@@ -145,6 +146,7 @@ SoftProcessorUnit/Assembly/Helpers/LabelHandlers/LabelsStore.cpp
 SoftProcessorUnit/Assembly/SPUAssembly.cpp
 SoftProcessorUnit/Syntax/Translation/Helpers/BytecodeToCommand.cpp
 SoftProcessorUnit/Syntax/Translation/Helpers/CommandToBytecode.cpp
+SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.cpp
 SoftProcessorUnit/Syntax/Translation/Syntax.cpp
 )
 
@@ -171,6 +173,7 @@ SoftProcessorUnit/Disassembly/Helpers/DisAssemblyHelpers.cpp
 SoftProcessorUnit/Disassembly/SPUDisAssembly.cpp
 SoftProcessorUnit/Syntax/Translation/Helpers/BytecodeToCommand.cpp
 SoftProcessorUnit/Syntax/Translation/Helpers/CommandToBytecode.cpp
+SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.cpp
 SoftProcessorUnit/Syntax/Translation/Syntax.cpp
 )
 

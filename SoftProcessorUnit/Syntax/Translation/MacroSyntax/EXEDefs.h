@@ -14,6 +14,7 @@
 #include "SPUDtypes.hpp"
 #include "SPUCore.hpp"
 #include "SPUCoreHelpers.hpp"
+#include "ParseHelpers.hpp"
 
 #define HASBYTES(bytes) ( ( bytes ) + *SPI <= binary->currentSize + binary->code)
 

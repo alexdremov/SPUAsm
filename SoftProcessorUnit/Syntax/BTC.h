@@ -18,7 +18,7 @@ OPBACKTRANSLATE_FUNC(push, {
             if (!checkBytesEnoughNumber( binary, *SPI, 10)){
                 return SPU_DISASM_NOTENOUGHARGS;
             }
-            double value = *((double*)(localSPI + 2));
+            double value = getDoubleFromBuffer(localSPI + 2);
             fprintf(params->outputFile, "%lg", value);
             ADDSPI(sizeof(double) + 2);
         } else {

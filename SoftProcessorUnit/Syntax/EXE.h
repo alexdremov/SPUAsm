@@ -21,7 +21,7 @@ OPEXE_FUNC(push,  {
     if(flagByte == 0){
         if (!HASBYTES(sizeof(double) + 2))
             return SPU_EXE_NOARGS;
-        double value = *((double*)(localSPI + 2));
+        double value = getDoubleFromBuffer(localSPI + 2);
         StackRigidOperationCodes result = StackPush(&(core->stack), value);
         
         STACKRESULT
