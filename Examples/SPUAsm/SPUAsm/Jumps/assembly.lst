@@ -1,19 +1,18 @@
-SPUAssembly v2.0.1r jp.spus -> jp.spub
-26    ->    26 | 1   | het                       |  d 
-27    ->    29 | 3   | in <rbx>                  |  2  1  1 
-30    ->    39 | 10  | push <0>                  |  0  0  0  0  0  0  0  0  0  0 
-40    ->    42 | 3   | pop <rax>                 |  1  1  0 
+SPUAssembly v2.0.1r jp.spus -> output.spub
+18    ->    20 | 3   | in <rbx>                  |  2  1  1 
+21    ->    30 | 10  | push <0>                  |  0  0  0  0  0  0  0  0  0  0 
+31    ->    33 | 3   | pop <rax>                 |  1  1  0 
 x     ->     x | 0   | loop:                     | 
-43    ->    45 | 3   | dec <rbx>                 | 18  1  1 
-46    ->    48 | 3   | push <rax>                |  0  1  0 
-49    ->    51 | 3   | push <rax>                |  0  1  0 
-52    ->    52 | 1   | mul                       |  7 
-53    ->    54 | 2   | out                       |  e  0 
-55    ->    56 | 2   | pop                       |  1  0 
-57    ->    59 | 3   | inc <rax>                 | 17  1  0 
-60    ->    64 | 5   | jm <mondayOnly>           | 16 17  0  0  0 
-65    ->    74 | 10  | push <0>                  |  0  0  0  0  0  0  0  0  0  0 
-75    ->    77 | 3   | push <rbx>                |  0  1  1 
-78    ->    82 | 5   | jne <loop>                | 13 dd ff ff ff 
+34    ->    36 | 3   | dec <rbx>                 | 18  1  1 
+37    ->    39 | 3   | push <rax>                |  0  1  0 
+40    ->    42 | 3   | push <rax>                |  0  1  0 
+43    ->    43 | 1   | mul                       |  7 
+44    ->    45 | 2   | out                       |  e  0 
+46    ->    47 | 2   | pop                       |  1  0 
+48    ->    50 | 3   | inc <rax>                 | 17  1  0 
+51    ->    55 | 5   | jm <mondayOnly>           | 16 17  0  0  0 
+56    ->    65 | 10  | push <0>                  |  0  0  0  0  0  0  0  0  0  0 
+66    ->    68 | 3   | push <rbx>                |  0  1  1 
+69    ->    73 | 5   | jne <loop>                | 13 dd ff ff ff 
 x     ->     x | 0   | mondayOnly:               | 
-83    ->    83 | 1   | het                       |  d 
+74    ->    74 | 1   | het                       |  d 
