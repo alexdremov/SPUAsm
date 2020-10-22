@@ -74,40 +74,41 @@ $(function() {
 <div class="textblock"><code>#include &quot;<a class="el" href="">AssemblyHelpers.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="">CommandsParser.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="">Syntax.hpp</a>&quot;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
-<code>#include &lt;ctype.h&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;cctype&gt;</code><br />
 <code>#include &quot;<a class="el" href="">CTBDefs.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="">CTB.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for CommandToBytecode.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="CommandToBytecode_8cpp__incl.png" border="0" usemap="#aSoftProcessorUnit_2Syntax_2Translation_2Helpers_2CommandToBytecode_8cpp" alt=""/></div>
-<map name="SoftProcessorUnit_2Syntax_2Translation_2Helpers_2CommandToBytecode_8cpp" id="aSoftProcessorUnit_2Syntax_2Translation_2Helpers_2CommandToBytecode_8cpp">
-<area shape="rect" title=" " alt="" coords="782,5,999,61"/>
-<area shape="rect" href="AssemblyHelpers_8hpp.html" title=" " alt="" coords="413,483,563,509"/>
-<area shape="rect" href="CommandsParser_8hpp.html" title=" " alt="" coords="279,109,430,136"/>
-<area shape="rect" href="Syntax_8hpp.html" title=" " alt="" coords="545,184,633,211"/>
-<area shape="rect" href="CTBDefs_8h.html" title=" " alt="" coords="709,408,797,435"/>
-<area shape="rect" href="CTB_8h.html" title=" " alt="" coords="791,333,851,360"/>
-<area shape="rect" title=" " alt="" coords="1030,109,1095,136"/>
-<area shape="rect" title=" " alt="" coords="1119,109,1185,136"/>
-<area shape="rect" title=" " alt="" coords="589,557,653,584"/>
-<area shape="rect" title=" " alt="" coords="272,707,333,733"/>
-<area shape="rect" href="AssemblyDTypes_8hpp.html" title=" " alt="" coords="414,557,565,584"/>
-<area shape="rect" href="LabelsStore_8hpp.html" title=" " alt="" coords="341,632,457,659"/>
-<area shape="rect" href="CommandsDTypes_8hpp.html" title=" " alt="" coords="217,184,375,211"/>
-<area shape="rect" href="TranslationDTypes_8hpp.html" title=" " alt="" coords="729,483,885,509"/>
-<area shape="rect" href="CommandToBytecode_8hpp.html" title=" " alt="" coords="677,259,853,285"/>
-<area shape="rect" href="BytecodeToCommand_8hpp.html" title=" " alt="" coords="325,259,501,285"/>
-<area shape="rect" href="DisAssemblyDTypes_8hpp.html" title=" " alt="" coords="280,333,451,360"/>
-<area shape="rect" href="BTC_8h.html" title=" " alt="" coords="195,333,255,360"/>
-<area shape="rect" href="BTCDefs_8h.html" title=" " alt="" coords="195,408,283,435"/>
+<map name="SoftProcessorUnit_2Syntax_2Translation_2Helpers_2CommandToBytecode_8cpp" id="SoftProcessorUnit_2Syntax_2Translation_2Helpers_2CommandToBytecode_8cpp">
+<area shape="rect" title=" " alt="" coords="338,5,555,61"/>
+<area shape="rect" href="AssemblyHelpers_8hpp.html" title=" " alt="" coords="343,483,494,509"/>
+<area shape="rect" href="CommandsParser_8hpp.html" title=" " alt="" coords="485,109,635,136"/>
+<area shape="rect" href="Syntax_8hpp.html" title=" " alt="" coords="415,184,503,211"/>
+<area shape="rect" href="CTBDefs_8h.html" title=" " alt="" coords="261,408,349,435"/>
+<area shape="rect" href="CTB_8h.html" title=" " alt="" coords="202,333,262,360"/>
+<area shape="rect" title=" " alt="" coords="660,109,721,136"/>
+<area shape="rect" title=" " alt="" coords="745,109,807,136"/>
+<area shape="rect" title=" " alt="" coords="651,557,711,584"/>
+<area shape="rect" title=" " alt="" coords="569,707,626,733"/>
+<area shape="rect" href="AssemblyDTypes_8hpp.html" title=" " alt="" coords="343,557,494,584"/>
+<area shape="rect" href="LabelsStore_8hpp.html" title=" " alt="" coords="443,632,559,659"/>
+<area shape="rect" href="CommandsDTypes_8hpp.html" title=" " alt="" coords="1114,184,1273,211"/>
+<area shape="rect" href="TranslationDTypes_8hpp.html" title=" " alt="" coords="518,483,674,509"/>
+<area shape="rect" href="CommandToBytecode_8hpp.html" title=" " alt="" coords="144,259,320,285"/>
+<area shape="rect" href="BytecodeToCommand_8hpp.html" title=" " alt="" coords="597,259,773,285"/>
+<area shape="rect" href="DisAssemblyDTypes_8hpp.html" title=" " alt="" coords="699,333,869,360"/>
+<area shape="rect" href="BTC_8h.html" title=" " alt="" coords="945,333,1005,360"/>
+<area shape="rect" href="BTCDefs_8h.html" title=" " alt="" coords="931,408,1019,435"/>
+<area shape="rect" href="ParseHelpers_8hpp.html" title=" " alt="" coords="911,483,1038,509"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a4f9606c049250e90aca7bf81b0537189"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CommandToBytecode_8cpp.html#a4f9606c049250e90aca7bf81b0537189">OPTRANSLATE_FUNC</a>(name,  code)&#160;&#160;&#160;<a class="el" href="TranslationDTypes_8hpp.html#aaef4a579ede91cde0e35d0c6d40c8061">CommandToBytesResult</a> CMDCTB_ ## name (const struct <a class="el" href="structSyntaxEntity.html">SyntaxEntity</a>* thou, <a class="el" href="AssemblyDTypes_8hpp.html#structAssemblyParams">AssemblyParams</a>* compileParams, <a class="el" href="AssemblyDTypes_8hpp.html#structBinaryFile">BinaryFile</a>* binary, int argc, const char** argv) { code }</td></tr>
+<tr class="memitem:a4f9606c049250e90aca7bf81b0537189"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CommandToBytecode_8cpp.html#a4f9606c049250e90aca7bf81b0537189">OPTRANSLATE_FUNC</a>(name,  code)&#160;&#160;&#160;<a class="el" href="TranslationDTypes_8hpp.html#aaef4a579ede91cde0e35d0c6d40c8061">CommandToBytesResult</a> CMDCTB_ ## name (const struct <a class="el" href="structSyntaxEntity.html">SyntaxEntity</a>* thou, <a class="el" href="AssemblyDTypes_8hpp.html#structAssemblyParams">AssemblyParams</a>* compileParams, <a class="el" href="AssemblyDTypes_8hpp.html#structBinaryFile">BinaryFile</a>* binary, <a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> argc, const <a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a>** argv) { code }</td></tr>
 <tr class="separator:a4f9606c049250e90aca7bf81b0537189"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -132,7 +133,7 @@ Macros</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="TranslationDTypes_8hpp.html#aaef4a579ede91cde0e35d0c6d40c8061">CommandToBytesResult</a> CMDCTB_ ## name (const struct <a class="el" href="structSyntaxEntity.html">SyntaxEntity</a>* thou, <a class="el" href="AssemblyDTypes_8hpp.html#structAssemblyParams">AssemblyParams</a>* compileParams, <a class="el" href="AssemblyDTypes_8hpp.html#structBinaryFile">BinaryFile</a>* binary, int argc, const char** argv) { code }</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="TranslationDTypes_8hpp.html#aaef4a579ede91cde0e35d0c6d40c8061">CommandToBytesResult</a> CMDCTB_ ## name (const struct <a class="el" href="structSyntaxEntity.html">SyntaxEntity</a>* thou, <a class="el" href="AssemblyDTypes_8hpp.html#structAssemblyParams">AssemblyParams</a>* compileParams, <a class="el" href="AssemblyDTypes_8hpp.html#structBinaryFile">BinaryFile</a>* binary, <a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> argc, const <a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a>** argv) { code }</td>
         </tr>
       </table>
 </div><div class="memdoc">

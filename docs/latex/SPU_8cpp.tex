@@ -1,12 +1,11 @@
 \hypertarget{SPU_8cpp}{}\doxysection{Soft\+Processor\+Unit/\+S\+P\+U/\+S\+PU.cpp File Reference}
 \label{SPU_8cpp}\index{SoftProcessorUnit/SPU/SPU.cpp@{SoftProcessorUnit/SPU/SPU.cpp}}
-{\ttfamily \#include $<$stdio.\+h$>$}\newline
-{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
 {\ttfamily \#include \char`\"{}S\+P\+U\+Core.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}S\+P\+U\+Core\+Helpers.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Syntax.\+hpp\char`\"{}}\newline
-Include dependency graph for S\+P\+U.\+cpp\+:
-\nopagebreak
+Include dependency graph for S\+P\+U.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,7 +15,7 @@ Include dependency graph for S\+P\+U.\+cpp\+:
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{SPU_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main}} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
+\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{SPU_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main}} (\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} argc, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$argv\mbox{[}$\,$\mbox{]})
 \end{DoxyCompactItemize}
 
 
@@ -25,7 +24,7 @@ int \mbox{\hyperlink{SPU_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main}} (int arg
 \index{SPU.cpp@{SPU.cpp}!main@{main}}
 \index{main@{main}!SPU.cpp@{SPU.cpp}}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
-{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}}}]{argc,  }\item[{const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
 
 \begin{DoxyCode}{0}
@@ -104,8 +103,8 @@ int \mbox{\hyperlink{SPU_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main}} (int arg
 \DoxyCodeLine{87         \textcolor{keywordflow}{if} (params.\mbox{\hyperlink{SPUDtypes_8hpp_abe26a421f31a88df230b81e8cc4e087a}{verbose}})\{}
 \DoxyCodeLine{88             \mbox{\hyperlink{StackRigid_8cpp_a34ed05fb570dfd9ade77d3c0bd664591}{StackDump}}(core.\mbox{\hyperlink{SPUDtypes_8hpp_a7e53f3d8e7ad44b3dea986b508dddb4e}{stack}}, -\/1, params.\mbox{\hyperlink{SPUDtypes_8hpp_ac75aca7c0a7abd09ad0f8a1d0c1f34be}{inputFileName}}, \textcolor{stringliteral}{"{}ERROR"{}});}
 \DoxyCodeLine{89             printf(\textcolor{stringliteral}{"{}REGs: "{}});}
-\DoxyCodeLine{90             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \textcolor{keyword}{sizeof}(core.\mbox{\hyperlink{SPUDtypes_8hpp_a73b3a44c7e762d16b1952dad905f39c2}{REG}}) / \textcolor{keyword}{sizeof}(core.\mbox{\hyperlink{SPUDtypes_8hpp_a73b3a44c7e762d16b1952dad905f39c2}{REG}}[0]); i++)\{}
-\DoxyCodeLine{91                 printf(\textcolor{stringliteral}{"{}\%lg "{}}, core.\mbox{\hyperlink{SPUDtypes_8hpp_a73b3a44c7e762d16b1952dad905f39c2}{REG}}[i]);}
+\DoxyCodeLine{90             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 0;  \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} < \textcolor{keyword}{sizeof}(core.\mbox{\hyperlink{SPUDtypes_8hpp_a73b3a44c7e762d16b1952dad905f39c2}{REG}}) / \textcolor{keyword}{sizeof}(core.\mbox{\hyperlink{SPUDtypes_8hpp_a73b3a44c7e762d16b1952dad905f39c2}{REG}}[0]); \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++ )\{}
+\DoxyCodeLine{91                 printf(\textcolor{stringliteral}{"{}\%lg "{}}, core.\mbox{\hyperlink{SPUDtypes_8hpp_a73b3a44c7e762d16b1952dad905f39c2}{REG}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}]);}
 \DoxyCodeLine{92             \}}
 \DoxyCodeLine{93             printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
 \DoxyCodeLine{94         \}}
@@ -126,10 +125,9 @@ int \mbox{\hyperlink{SPU_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main}} (int arg
 \end{DoxyCode}
 
 
-References Construct\+S\+P\+U\+Core(), Destruct\+Binary\+File(), Destruct\+S\+P\+U\+Args(), Run\+Parameters\+::input\+File, Run\+Parameters\+::input\+File\+Name, load\+Bin\+File(), New\+Binary\+File(), Run\+Parameters\+::output\+File\+Name, parse\+S\+P\+U\+Args(), S\+P\+U\+Core\+::\+R\+EG, result, run\+Code(), S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED, S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+OK, S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+W\+R\+O\+N\+G\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE, S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+W\+R\+O\+N\+G\+\_\+\+V\+E\+R\+S\+I\+ON, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+I\+N\+P\+UT, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+M\+E\+M\+O\+RY, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+S\+T\+A\+C\+K\+\_\+\+O\+V\+E\+R\+F\+L\+OW, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+S\+T\+A\+C\+K\+\_\+\+U\+N\+D\+E\+R\+F\+L\+OW, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+U\+N\+K\+N\+O\+WN, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+Z\+E\+R\+O\+D\+IV, S\+P\+U\+Core\+::stack, Stack\+Dump(), Binary\+File\+::stack\+Size, and Run\+Parameters\+::verbose.
+References Construct\+S\+P\+U\+Core(), Destruct\+Binary\+File(), Destruct\+S\+P\+U\+Args(), i, Run\+Parameters\+::input\+File, Run\+Parameters\+::input\+File\+Name, load\+Bin\+File(), New\+Binary\+File(), Run\+Parameters\+::output\+File\+Name, parse\+S\+P\+U\+Args(), S\+P\+U\+Core\+::\+R\+EG, result, run\+Code(), S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED, S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+OK, S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+W\+R\+O\+N\+G\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE, S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+W\+R\+O\+N\+G\+\_\+\+V\+E\+R\+S\+I\+ON, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+I\+N\+P\+UT, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+M\+E\+M\+O\+RY, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+S\+T\+A\+C\+K\+\_\+\+O\+V\+E\+R\+F\+L\+OW, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+S\+T\+A\+C\+K\+\_\+\+U\+N\+D\+E\+R\+F\+L\+OW, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+U\+N\+K\+N\+O\+WN, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+Z\+E\+R\+O\+D\+IV, S\+P\+U\+Core\+::stack, Stack\+Dump(), Binary\+File\+::stack\+Size, and Run\+Parameters\+::verbose.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

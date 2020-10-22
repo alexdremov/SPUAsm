@@ -73,6 +73,7 @@
 		A04D82862540A91D0095FB80 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = CMakeLists.txt; sourceTree = "<group>"; };
 		A04D828C2541B9F00095FB80 /* ParseHelpers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ParseHelpers.cpp; path = SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.cpp; sourceTree = SOURCE_ROOT; };
 		A04D828D2541B9F00095FB80 /* ParseHelpers.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ParseHelpers.hpp; sourceTree = "<group>"; };
+		A04D82952541FA040095FB80 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A071A8EE2534D19D008711EF /* SPU */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SPU; sourceTree = BUILT_PRODUCTS_DIR; };
 		A071A8FA2534D1C9008711EF /* Syntax.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Syntax.hpp; path = SoftProcessorUnit/Syntax/Translation/Syntax.hpp; sourceTree = SOURCE_ROOT; };
 		A071A8FB2534D1C9008711EF /* Syntax.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Syntax.cpp; sourceTree = "<group>"; };
@@ -154,6 +155,7 @@
 		A071A8E52534D19D008711EF = {
 			isa = PBXGroup;
 			children = (
+				A04D82952541FA040095FB80 /* README.md */,
 				A04D82862540A91D0095FB80 /* CMakeLists.txt */,
 				A071A8F02534D19D008711EF /* SoftProcessorUnit */,
 				A071A8EF2534D19D008711EF /* Products */,

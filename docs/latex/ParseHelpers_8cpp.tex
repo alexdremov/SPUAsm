@@ -1,0 +1,45 @@
+\hypertarget{ParseHelpers_8cpp}{}\doxysection{Soft\+Processor\+Unit/\+Syntax/\+Translation/\+Helpers/\+Parse\+Helpers.cpp File Reference}
+\label{ParseHelpers_8cpp}\index{SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.cpp@{SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.cpp}}
+{\ttfamily \#include \char`\"{}Parse\+Helpers.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+Include dependency graph for Parse\+Helpers.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{ParseHelpers_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{ParseHelpers_8cpp_a644e4038f72d7d9d4bf39f75a5aab4a8}{get\+Double\+From\+Buffer}} (\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$start)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ParseHelpers_8cpp_a644e4038f72d7d9d4bf39f75a5aab4a8}\label{ParseHelpers_8cpp_a644e4038f72d7d9d4bf39f75a5aab4a8}} 
+\index{ParseHelpers.cpp@{ParseHelpers.cpp}!getDoubleFromBuffer@{getDoubleFromBuffer}}
+\index{getDoubleFromBuffer@{getDoubleFromBuffer}!ParseHelpers.cpp@{ParseHelpers.cpp}}
+\doxysubsubsection{\texorpdfstring{getDoubleFromBuffer()}{getDoubleFromBuffer()}}
+{\footnotesize\ttfamily double get\+Double\+From\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$}]{start }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11                                         \{}
+\DoxyCodeLine{12     \textcolor{keywordtype}{double} value = 0;}
+\DoxyCodeLine{13     memcpy(\&value, start, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{14     \textcolor{keywordflow}{return} value;}
+\DoxyCodeLine{15 \}}
+
+\end{DoxyCode}
+
+
+Referenced by O\+P\+B\+A\+C\+K\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+N\+C(), and O\+P\+E\+X\+E\+\_\+\+F\+U\+N\+C().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ParseHelpers_8cpp_a644e4038f72d7d9d4bf39f75a5aab4a8_icgraph}
+\end{center}
+\end{figure}

@@ -1,9 +1,10 @@
 <map id="generateErrors" name="generateErrors">
-<area shape="rect" id="node1" title=" " alt="" coords="5,423,112,450"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,449,112,475"/>
 <area shape="rect" id="node2" href="$CodeAnalysis_8cpp.html#a66a44b980a24ff0e0579f7de4f7cdc95" title=" " alt="" coords="160,271,323,298"/>
 <area shape="rect" id="node21" href="$CodeAnalysis_8cpp.html#a741d17d321cfb9f97aa32bf56eb51370" title=" " alt="" coords="171,398,311,425"/>
-<area shape="rect" id="node23" href="$CommandsParser_8cpp.html#ac706821978aab6d75c0e673fac677e75" title=" " alt="" coords="170,449,313,475"/>
-<area shape="rect" id="node24" href="$AssemblyHelpers_8cpp.html#ad7b5ac9bb1240c1f507b4564bc0778fc" title=" " alt="" coords="188,499,295,526"/>
+<area shape="rect" id="node23" href="$AssemblyHelpers_8cpp.html#a8384d0729973f2658ba4e29f66c9a7c7" title=" " alt="" coords="176,449,307,475"/>
+<area shape="rect" id="node24" href="$CommandsParser_8cpp.html#ac706821978aab6d75c0e673fac677e75" title=" " alt="" coords="170,499,313,526"/>
+<area shape="rect" id="node25" href="$AssemblyHelpers_8cpp.html#ad7b5ac9bb1240c1f507b4564bc0778fc" title=" " alt="" coords="188,550,295,577"/>
 <area shape="rect" id="node3" href="$CodeAnalysis_8cpp.html#a57fe90fac2ee85896e2daa97406b8e12" title=" " alt="" coords="384,45,527,71"/>
 <area shape="rect" id="node8" href="$CommandsParser_8cpp.html#a2d524ace1c28ad2095fd220f34a2f929" title=" " alt="" coords="400,95,511,122"/>
 <area shape="rect" id="node10" href="$CommandsParser_8cpp.html#a11175231a266da4b41b7e1e1f2bf2a3a" title=" " alt="" coords="413,146,498,173"/>
@@ -19,7 +20,7 @@
 <area shape="rect" id="node9" href="$Syntax_8cpp.html#a76535d86348655e2d276eddf51dd809f" title=" " alt="" coords="592,95,759,122"/>
 <area shape="rect" id="node14" href="$structJMPLabelsStore.html#a2c011d9327249181f05780a91ef5b9d9" title=" " alt="" coords="811,318,992,345"/>
 <area shape="rect" id="node16" href="$structJMPLabelsStore.html#adc8bdb4dfb06275a44fa33811a5e008a" title=" " alt="" coords="588,365,763,407"/>
-<area shape="rect" id="node17" href="$structJMPLabelsStore.html#a1e18dbe6b6e1c892fa36e114d60b4246" title=" " alt="" coords="814,371,989,398"/>
+<area shape="rect" id="node17" href="$structJMPLabelsStore.html#a11ae202867bee06836e593f33f5954ae" title=" " alt="" coords="814,371,989,398"/>
 <area shape="rect" id="node18" href="$structJMPLabel.html#a29e184f855c89c13698cacb3b1a82827" title=" " alt="" coords="830,422,973,449"/>
 <area shape="rect" id="node20" href="$CodeAnalysis_8cpp.html#ae355394eccd800f4a5026180415a93fd" title=" " alt="" coords="642,431,709,458"/>
 <area shape="rect" id="node22" href="$CodeAnalysis_8cpp.html#aab15e5719e1f19f1edd3ab0b15cb6335" title=" " alt="" coords="379,474,532,501"/>

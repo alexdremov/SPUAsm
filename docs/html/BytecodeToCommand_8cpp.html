@@ -72,7 +72,7 @@ $(function() {
 <div class="title">BytecodeToCommand.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;string.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;cstring&gt;</code><br />
 <code>#include &quot;<a class="el" href="">BytecodeToCommand.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="">DisAssemblyDTypes.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="">TranslationDTypes.hpp</a>&quot;</code><br />
@@ -84,39 +84,40 @@ $(function() {
 Include dependency graph for BytecodeToCommand.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="BytecodeToCommand_8cpp__incl.png" border="0" usemap="#aSoftProcessorUnit_2Syntax_2Translation_2Helpers_2BytecodeToCommand_8cpp" alt=""/></div>
-<map name="SoftProcessorUnit_2Syntax_2Translation_2Helpers_2BytecodeToCommand_8cpp" id="aSoftProcessorUnit_2Syntax_2Translation_2Helpers_2BytecodeToCommand_8cpp">
-<area shape="rect" title=" " alt="" coords="348,5,560,61"/>
-<area shape="rect" title=" " alt="" coords="5,109,71,136"/>
-<area shape="rect" href="BytecodeToCommand_8hpp.html" title=" " alt="" coords="430,109,606,136"/>
-<area shape="rect" href="DisAssemblyDTypes_8hpp.html" title=" " alt="" coords="197,184,367,211"/>
-<area shape="rect" href="TranslationDTypes_8hpp.html" title=" " alt="" coords="115,557,271,584"/>
-<area shape="rect" href="AssemblyHelpers_8hpp.html" title=" " alt="" coords="549,557,700,584"/>
-<area shape="rect" href="CommandsParser_8hpp.html" title=" " alt="" coords="701,184,852,211"/>
-<area shape="rect" href="Syntax_8hpp.html" title=" " alt="" coords="467,259,555,285"/>
-<area shape="rect" href="BTC_8h.html" title=" " alt="" coords="876,184,936,211"/>
-<area shape="rect" title=" " alt="" coords="546,781,607,808"/>
-<area shape="rect" title=" " alt="" coords="475,632,539,659"/>
-<area shape="rect" href="AssemblyDTypes_8hpp.html" title=" " alt="" coords="665,632,816,659"/>
-<area shape="rect" href="LabelsStore_8hpp.html" title=" " alt="" coords="615,707,731,733"/>
-<area shape="rect" href="CommandsDTypes_8hpp.html" title=" " alt="" coords="752,259,911,285"/>
-<area shape="rect" href="CommandToBytecode_8hpp.html" title=" " alt="" coords="298,333,474,360"/>
-<area shape="rect" href="CTBDefs_8h.html" title=" " alt="" coords="322,483,410,509"/>
-<area shape="rect" href="CTB_8h.html" title=" " alt="" coords="372,408,432,435"/>
-<area shape="rect" href="BTCDefs_8h.html" title=" " alt="" coords="986,259,1074,285"/>
+<map name="SoftProcessorUnit_2Syntax_2Translation_2Helpers_2BytecodeToCommand_8cpp" id="SoftProcessorUnit_2Syntax_2Translation_2Helpers_2BytecodeToCommand_8cpp">
+<area shape="rect" title=" " alt="" coords="407,5,619,61"/>
+<area shape="rect" title=" " alt="" coords="5,109,67,136"/>
+<area shape="rect" href="BytecodeToCommand_8hpp.html" title=" " alt="" coords="488,109,664,136"/>
+<area shape="rect" href="DisAssemblyDTypes_8hpp.html" title=" " alt="" coords="141,184,312,211"/>
+<area shape="rect" href="TranslationDTypes_8hpp.html" title=" " alt="" coords="869,557,1025,584"/>
+<area shape="rect" href="AssemblyHelpers_8hpp.html" title=" " alt="" coords="431,557,582,584"/>
+<area shape="rect" href="CommandsParser_8hpp.html" title=" " alt="" coords="387,184,538,211"/>
+<area shape="rect" href="Syntax_8hpp.html" title=" " alt="" coords="595,259,683,285"/>
+<area shape="rect" href="BTC_8h.html" title=" " alt="" coords="1010,184,1070,211"/>
+<area shape="rect" title=" " alt="" coords="350,781,407,808"/>
+<area shape="rect" title=" " alt="" coords="585,632,645,659"/>
+<area shape="rect" href="AssemblyDTypes_8hpp.html" title=" " alt="" coords="347,632,498,659"/>
+<area shape="rect" href="LabelsStore_8hpp.html" title=" " alt="" coords="321,707,437,733"/>
+<area shape="rect" href="CommandsDTypes_8hpp.html" title=" " alt="" coords="277,259,435,285"/>
+<area shape="rect" href="CommandToBytecode_8hpp.html" title=" " alt="" coords="657,333,833,360"/>
+<area shape="rect" href="CTBDefs_8h.html" title=" " alt="" coords="708,483,796,509"/>
+<area shape="rect" href="CTB_8h.html" title=" " alt="" coords="743,408,803,435"/>
+<area shape="rect" href="BTCDefs_8h.html" title=" " alt="" coords="1020,259,1108,285"/>
+<area shape="rect" href="ParseHelpers_8hpp.html" title=" " alt="" coords="1010,333,1137,360"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ac2e3e406431a5cda030b97179bd48346"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BytecodeToCommand_8cpp.html#ac2e3e406431a5cda030b97179bd48346">OPBACKTRANSLATE_FUNC</a>(name,  code)&#160;&#160;&#160;<a class="el" href="DisAssemblyDTypes_8hpp.html#a036295b5e6cf46921aa175807d40fefd">DisassemblyParseResult</a> CMDBTC_ ## name (const <a class="el" href="structSyntaxEntity.html">SyntaxEntity</a>* thou, <a class="el" href="DisAssemblyDTypes_8hpp.html#structDisassemblyParams">DisassemblyParams</a>* params, <a class="el" href="AssemblyDTypes_8hpp.html#structBinaryFile">BinaryFile</a>* binary, char** <a class="el" href="EXE_8h.html#a37d521d55391bb468bb21c23296e0501">SPI</a>) { code }</td></tr>
+<tr class="memitem:ac2e3e406431a5cda030b97179bd48346"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BytecodeToCommand_8cpp.html#ac2e3e406431a5cda030b97179bd48346">OPBACKTRANSLATE_FUNC</a>(name,  code)&#160;&#160;&#160;<a class="el" href="DisAssemblyDTypes_8hpp.html#a036295b5e6cf46921aa175807d40fefd">DisassemblyParseResult</a> CMDBTC_ ## name (const <a class="el" href="structSyntaxEntity.html">SyntaxEntity</a>* thou, <a class="el" href="DisAssemblyDTypes_8hpp.html#structDisassemblyParams">DisassemblyParams</a>* params, <a class="el" href="AssemblyDTypes_8hpp.html#structBinaryFile">BinaryFile</a>* binary, <a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a>** <a class="el" href="EXE_8h.html#a5456c3f6e0c919dee1b2a7ccd65aaa4e">SPI</a>) { code }</td></tr>
 <tr class="separator:ac2e3e406431a5cda030b97179bd48346"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ade73f65d7d4d27f2b675d578b9e3e05c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BytecodeToCommand_8cpp.html#ade73f65d7d4d27f2b675d578b9e3e05c">checkBytesEnough</a> (const <a class="el" href="structSyntaxEntity.html">SyntaxEntity</a> *thou, <a class="el" href="AssemblyDTypes_8hpp.html#structBinaryFile">BinaryFile</a> *binary, char *<a class="el" href="EXE_8h.html#a37d521d55391bb468bb21c23296e0501">SPI</a>)</td></tr>
+<tr class="memitem:ade73f65d7d4d27f2b675d578b9e3e05c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BytecodeToCommand_8cpp.html#ade73f65d7d4d27f2b675d578b9e3e05c">checkBytesEnough</a> (const <a class="el" href="structSyntaxEntity.html">SyntaxEntity</a> *thou, <a class="el" href="AssemblyDTypes_8hpp.html#structBinaryFile">BinaryFile</a> *binary, <a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a> *<a class="el" href="EXE_8h.html#a5456c3f6e0c919dee1b2a7ccd65aaa4e">SPI</a>)</td></tr>
 <tr class="separator:ade73f65d7d4d27f2b675d578b9e3e05c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9958a727a568ee7ce1f13b515104efd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BytecodeToCommand_8cpp.html#ab9958a727a568ee7ce1f13b515104efd">checkBytesEnoughNumber</a> (<a class="el" href="AssemblyDTypes_8hpp.html#structBinaryFile">BinaryFile</a> *binary, char *<a class="el" href="EXE_8h.html#a37d521d55391bb468bb21c23296e0501">SPI</a>, size_t bytes)</td></tr>
-<tr class="separator:ab9958a727a568ee7ce1f13b515104efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0ffc9a54e506a0006a551640cf92b63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BytecodeToCommand_8cpp.html#ab0ffc9a54e506a0006a551640cf92b63">checkBytesEnoughNumber</a> (<a class="el" href="AssemblyDTypes_8hpp.html#structBinaryFile">BinaryFile</a> *binary, const <a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a> *<a class="el" href="EXE_8h.html#a5456c3f6e0c919dee1b2a7ccd65aaa4e">SPI</a>, size_t bytes)</td></tr>
+<tr class="separator:ab0ffc9a54e506a0006a551640cf92b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ac2e3e406431a5cda030b97179bd48346"></a>
@@ -140,7 +141,7 @@ Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="DisAssemblyDTypes_8hpp.html#a036295b5e6cf46921aa175807d40fefd">DisassemblyParseResult</a> CMDBTC_ ## name (const <a class="el" href="structSyntaxEntity.html">SyntaxEntity</a>* thou, <a class="el" href="DisAssemblyDTypes_8hpp.html#structDisassemblyParams">DisassemblyParams</a>* params, <a class="el" href="AssemblyDTypes_8hpp.html#structBinaryFile">BinaryFile</a>* binary, char** <a class="el" href="EXE_8h.html#a37d521d55391bb468bb21c23296e0501">SPI</a>) { code }</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="DisAssemblyDTypes_8hpp.html#a036295b5e6cf46921aa175807d40fefd">DisassemblyParseResult</a> CMDBTC_ ## name (const <a class="el" href="structSyntaxEntity.html">SyntaxEntity</a>* thou, <a class="el" href="DisAssemblyDTypes_8hpp.html#structDisassemblyParams">DisassemblyParams</a>* params, <a class="el" href="AssemblyDTypes_8hpp.html#structBinaryFile">BinaryFile</a>* binary, <a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a>** <a class="el" href="EXE_8h.html#a5456c3f6e0c919dee1b2a7ccd65aaa4e">SPI</a>) { code }</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -155,7 +156,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int checkBytesEnough </td>
+          <td class="memname"><a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> checkBytesEnough </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structSyntaxEntity.html">SyntaxEntity</a> *&#160;</td>
           <td class="paramname"><em>thou</em>, </td>
@@ -169,7 +170,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype"><a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a> *&#160;</td>
           <td class="paramname"><em>SPI</em>&#160;</td>
         </tr>
         <tr>
@@ -183,35 +184,35 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">size_t</span> neededBytes = 1;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    neededBytes += (size_t)(thou-&gt;<a class="code" href="structSyntaxEntity.html#a37a9b200016059d71f0d2116f9e96cfd">flagBytes</a>);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; strlen(thou-&gt;<a class="code" href="structSyntaxEntity.html#a02a711b31d8895f3ffaaa71bdc6c918e">format</a>); i++) {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">if</span> (thou-&gt;<a class="code" href="structSyntaxEntity.html#a02a711b31d8895f3ffaaa71bdc6c918e">format</a>[i] == <span class="charliteral">&#39;*&#39;</span>)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a> = 0; <a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a> &lt; strlen(thou-&gt;<a class="code" href="structSyntaxEntity.html#a02a711b31d8895f3ffaaa71bdc6c918e">format</a>); <a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>++) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">if</span> (thou-&gt;<a class="code" href="structSyntaxEntity.html#a02a711b31d8895f3ffaaa71bdc6c918e">format</a>[<a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>] == <span class="charliteral">&#39;*&#39;</span>)</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            neededBytes++;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="BytecodeToCommand_8cpp.html#ab9958a727a568ee7ce1f13b515104efd">checkBytesEnoughNumber</a>(binary, <a class="code" href="EXE_8h.html#a37d521d55391bb468bb21c23296e0501">SPI</a>, neededBytes);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="BytecodeToCommand_8cpp.html#ab0ffc9a54e506a0006a551640cf92b63">checkBytesEnoughNumber</a>(binary, <a class="code" href="EXE_8h.html#a5456c3f6e0c919dee1b2a7ccd65aaa4e">SPI</a>, neededBytes);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="BytecodeToCommand_8cpp.html#ab9958a727a568ee7ce1f13b515104efd">checkBytesEnoughNumber()</a>, <a class="el" href="structSyntaxEntity.html#a37a9b200016059d71f0d2116f9e96cfd">SyntaxEntity::flagBytes</a>, <a class="el" href="structSyntaxEntity.html#a02a711b31d8895f3ffaaa71bdc6c918e">SyntaxEntity::format</a>, and <a class="el" href="EXE_8h.html#a37d521d55391bb468bb21c23296e0501">SPI</a>.</p>
+<p class="reference">References <a class="el" href="BytecodeToCommand_8cpp.html#ab0ffc9a54e506a0006a551640cf92b63">checkBytesEnoughNumber()</a>, <a class="el" href="structSyntaxEntity.html#a37a9b200016059d71f0d2116f9e96cfd">SyntaxEntity::flagBytes</a>, <a class="el" href="structSyntaxEntity.html#a02a711b31d8895f3ffaaa71bdc6c918e">SyntaxEntity::format</a>, <a class="el" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>, and <a class="el" href="EXE_8h.html#a5456c3f6e0c919dee1b2a7ccd65aaa4e">SPI</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BytecodeToCommand_8cpp_ade73f65d7d4d27f2b675d578b9e3e05c_cgraph.png" border="0" usemap="#aBytecodeToCommand_8cpp_ade73f65d7d4d27f2b675d578b9e3e05c_cgraph" alt=""/></div>
-<map name="BytecodeToCommand_8cpp_ade73f65d7d4d27f2b675d578b9e3e05c_cgraph" id="aBytecodeToCommand_8cpp_ade73f65d7d4d27f2b675d578b9e3e05c_cgraph">
+<map name="BytecodeToCommand_8cpp_ade73f65d7d4d27f2b675d578b9e3e05c_cgraph" id="BytecodeToCommand_8cpp_ade73f65d7d4d27f2b675d578b9e3e05c_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,140,32"/>
-<area shape="rect" href="BytecodeToCommand_8cpp.html#ab9958a727a568ee7ce1f13b515104efd" title=" " alt="" coords="188,5,369,32"/>
+<area shape="rect" href="BytecodeToCommand_8cpp.html#ab0ffc9a54e506a0006a551640cf92b63" title=" " alt="" coords="188,5,369,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ab9958a727a568ee7ce1f13b515104efd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9958a727a568ee7ce1f13b515104efd">&#9670;&nbsp;</a></span>checkBytesEnoughNumber()</h2>
+<a id="ab0ffc9a54e506a0006a551640cf92b63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0ffc9a54e506a0006a551640cf92b63">&#9670;&nbsp;</a></span>checkBytesEnoughNumber()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int checkBytesEnoughNumber </td>
+          <td class="memname"><a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> checkBytesEnoughNumber </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="AssemblyDTypes_8hpp.html#structBinaryFile">BinaryFile</a> *&#160;</td>
           <td class="paramname"><em>binary</em>, </td>
@@ -219,7 +220,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const <a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a> *&#160;</td>
           <td class="paramname"><em>SPI</em>, </td>
         </tr>
         <tr>
@@ -235,23 +236,23 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                                                        {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="EXE_8h.html#a37d521d55391bb468bb21c23296e0501">SPI</a> + bytes &gt; binary-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#a5a2cf3ef6bbd4fa8beb8f39b1c383c92">code</a> + binary-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#a3e976fdc373fa869cdc9bc127239ac97">currentSize</a>)</div>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                                                              {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="EXE_8h.html#a5456c3f6e0c919dee1b2a7ccd65aaa4e">SPI</a> + bytes &gt; binary-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#a5a2cf3ef6bbd4fa8beb8f39b1c383c92">code</a> + binary-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#a3e976fdc373fa869cdc9bc127239ac97">currentSize</a>)</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="AssemblyDTypes_8hpp.html#a5a2cf3ef6bbd4fa8beb8f39b1c383c92">BinaryFile::code</a>, <a class="el" href="AssemblyDTypes_8hpp.html#a3e976fdc373fa869cdc9bc127239ac97">BinaryFile::currentSize</a>, and <a class="el" href="EXE_8h.html#a37d521d55391bb468bb21c23296e0501">SPI</a>.</p>
+<p class="reference">References <a class="el" href="AssemblyDTypes_8hpp.html#a5a2cf3ef6bbd4fa8beb8f39b1c383c92">BinaryFile::code</a>, <a class="el" href="AssemblyDTypes_8hpp.html#a3e976fdc373fa869cdc9bc127239ac97">BinaryFile::currentSize</a>, and <a class="el" href="EXE_8h.html#a5456c3f6e0c919dee1b2a7ccd65aaa4e">SPI</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BTCDefs_8h.html#ade73f65d7d4d27f2b675d578b9e3e05c">checkBytesEnough()</a>, and <a class="el" href="BTC_8h.html#a3aab6d3eb3e47c9dae898d39df127ff1">OPBACKTRANSLATE_FUNC()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BTCDefs_8h.html#ade73f65d7d4d27f2b675d578b9e3e05c">checkBytesEnough()</a>, and <a class="el" href="BTC_8h.html#aeabc66d65cf31c70cee162505d19f14a">OPBACKTRANSLATE_FUNC()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="BytecodeToCommand_8cpp_ab9958a727a568ee7ce1f13b515104efd_icgraph.png" border="0" usemap="#aBytecodeToCommand_8cpp_ab9958a727a568ee7ce1f13b515104efd_icgraph" alt=""/></div>
-<map name="BytecodeToCommand_8cpp_ab9958a727a568ee7ce1f13b515104efd_icgraph" id="aBytecodeToCommand_8cpp_ab9958a727a568ee7ce1f13b515104efd_icgraph">
+<div class="center"><img src="BytecodeToCommand_8cpp_ab0ffc9a54e506a0006a551640cf92b63_icgraph.png" border="0" usemap="#aBytecodeToCommand_8cpp_ab0ffc9a54e506a0006a551640cf92b63_icgraph" alt=""/></div>
+<map name="BytecodeToCommand_8cpp_ab0ffc9a54e506a0006a551640cf92b63_icgraph" id="BytecodeToCommand_8cpp_ab0ffc9a54e506a0006a551640cf92b63_icgraph">
 <area shape="rect" title=" " alt="" coords="255,31,436,57"/>
 <area shape="rect" href="BTCDefs_8h.html#ade73f65d7d4d27f2b675d578b9e3e05c" title=" " alt="" coords="39,5,173,32"/>
-<area shape="rect" href="BTC_8h.html#a3aab6d3eb3e47c9dae898d39df127ff1" title=" " alt="" coords="5,56,207,83"/>
+<area shape="rect" href="BTC_8h.html#aeabc66d65cf31c70cee162505d19f14a" title=" " alt="" coords="5,56,207,83"/>
 </map>
 </div>
 
@@ -259,10 +260,11 @@ Here is the caller graph for this function:</div>
 </div>
 </div><!-- contents -->
 <div class="ttc" id="aAssemblyDTypes_8hpp_html_a5a2cf3ef6bbd4fa8beb8f39b1c383c92"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a5a2cf3ef6bbd4fa8beb8f39b1c383c92">BinaryFile::code</a></div><div class="ttdeci">char * code</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:42</div></div>
+<div class="ttc" id="aEXE_8h_html_a5456c3f6e0c919dee1b2a7ccd65aaa4e"><div class="ttname"><a href="EXE_8h.html#a5456c3f6e0c919dee1b2a7ccd65aaa4e">SPI</a></div><div class="ttdeci">STACKRESULT SPI</div><div class="ttdef"><b>Definition:</b> EXE.h:57</div></div>
 <div class="ttc" id="astructSyntaxEntity_html_a37a9b200016059d71f0d2116f9e96cfd"><div class="ttname"><a href="structSyntaxEntity.html#a37a9b200016059d71f0d2116f9e96cfd">SyntaxEntity::flagBytes</a></div><div class="ttdeci">const char flagBytes</div><div class="ttdef"><b>Definition:</b> Syntax.hpp:23</div></div>
-<div class="ttc" id="aEXE_8h_html_a37d521d55391bb468bb21c23296e0501"><div class="ttname"><a href="EXE_8h.html#a37d521d55391bb468bb21c23296e0501">SPI</a></div><div class="ttdeci">STACKRESULT SPI</div><div class="ttdef"><b>Definition:</b> EXE.h:54</div></div>
+<div class="ttc" id="aBytecodeToCommand_8cpp_html_ab0ffc9a54e506a0006a551640cf92b63"><div class="ttname"><a href="BytecodeToCommand_8cpp.html#ab0ffc9a54e506a0006a551640cf92b63">checkBytesEnoughNumber</a></div><div class="ttdeci">int checkBytesEnoughNumber(BinaryFile *binary, const char *SPI, size_t bytes)</div><div class="ttdef"><b>Definition:</b> BytecodeToCommand.cpp:28</div></div>
 <div class="ttc" id="aAssemblyDTypes_8hpp_html_a3e976fdc373fa869cdc9bc127239ac97"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a3e976fdc373fa869cdc9bc127239ac97">BinaryFile::currentSize</a></div><div class="ttdeci">size_t currentSize</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:39</div></div>
-<div class="ttc" id="aBytecodeToCommand_8cpp_html_ab9958a727a568ee7ce1f13b515104efd"><div class="ttname"><a href="BytecodeToCommand_8cpp.html#ab9958a727a568ee7ce1f13b515104efd">checkBytesEnoughNumber</a></div><div class="ttdeci">int checkBytesEnoughNumber(BinaryFile *binary, char *SPI, size_t bytes)</div><div class="ttdef"><b>Definition:</b> BytecodeToCommand.cpp:28</div></div>
+<div class="ttc" id="aCMakeCache_8txt_html_a7e98b8a17c0aad30ba64d47b74e2a6c1"><div class="ttname"><a href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> CMakeCache.txt:304</div></div>
 <div class="ttc" id="astructSyntaxEntity_html_a02a711b31d8895f3ffaaa71bdc6c918e"><div class="ttname"><a href="structSyntaxEntity.html#a02a711b31d8895f3ffaaa71bdc6c918e">SyntaxEntity::format</a></div><div class="ttdeci">const char * format</div><div class="ttdef"><b>Definition:</b> Syntax.hpp:22</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

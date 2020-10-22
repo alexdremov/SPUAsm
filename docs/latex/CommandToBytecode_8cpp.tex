@@ -3,12 +3,11 @@
 {\ttfamily \#include \char`\"{}Assembly\+Helpers.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Commands\+Parser.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Syntax.\+hpp\char`\"{}}\newline
-{\ttfamily \#include $<$string.\+h$>$}\newline
-{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
 {\ttfamily \#include \char`\"{}C\+T\+B\+Defs.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}C\+T\+B.\+h\char`\"{}}\newline
-Include dependency graph for Command\+To\+Bytecode.\+cpp\+:
-\nopagebreak
+Include dependency graph for Command\+To\+Bytecode.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -18,7 +17,7 @@ Include dependency graph for Command\+To\+Bytecode.\+cpp\+:
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{CommandToBytecode_8cpp_a4f9606c049250e90aca7bf81b0537189}{O\+P\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+NC}}(name,  code)~\mbox{\hyperlink{TranslationDTypes_8hpp_aaef4a579ede91cde0e35d0c6d40c8061}{Command\+To\+Bytes\+Result}} C\+M\+D\+C\+T\+B\+\_\+ \#\# name (const struct \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}}$\ast$ thou, \mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}}$\ast$ compile\+Params, \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}}$\ast$ binary, int argc, const char$\ast$$\ast$ argv) \{ code \}
+\#define \mbox{\hyperlink{CommandToBytecode_8cpp_a4f9606c049250e90aca7bf81b0537189}{O\+P\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+NC}}(name,  code)~\mbox{\hyperlink{TranslationDTypes_8hpp_aaef4a579ede91cde0e35d0c6d40c8061}{Command\+To\+Bytes\+Result}} C\+M\+D\+C\+T\+B\+\_\+ \#\# name (const struct \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}}$\ast$ thou, \mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}}$\ast$ compile\+Params, \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}}$\ast$ binary, \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} argc, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}}$\ast$$\ast$ argv) \{ code \}
 \end{DoxyCompactItemize}
 
 
@@ -27,5 +26,5 @@ Include dependency graph for Command\+To\+Bytecode.\+cpp\+:
 \index{CommandToBytecode.cpp@{CommandToBytecode.cpp}!OPTRANSLATE\_FUNC@{OPTRANSLATE\_FUNC}}
 \index{OPTRANSLATE\_FUNC@{OPTRANSLATE\_FUNC}!CommandToBytecode.cpp@{CommandToBytecode.cpp}}
 \doxysubsubsection{\texorpdfstring{OPTRANSLATE\_FUNC}{OPTRANSLATE\_FUNC}}
-{\footnotesize\ttfamily \#define O\+P\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+NC(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{code }\end{DoxyParamCaption})~\mbox{\hyperlink{TranslationDTypes_8hpp_aaef4a579ede91cde0e35d0c6d40c8061}{Command\+To\+Bytes\+Result}} C\+M\+D\+C\+T\+B\+\_\+ \#\# name (const struct \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}}$\ast$ thou, \mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}}$\ast$ compile\+Params, \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}}$\ast$ binary, int argc, const char$\ast$$\ast$ argv) \{ code \}}
+{\footnotesize\ttfamily \#define O\+P\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+NC(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{code }\end{DoxyParamCaption})~\mbox{\hyperlink{TranslationDTypes_8hpp_aaef4a579ede91cde0e35d0c6d40c8061}{Command\+To\+Bytes\+Result}} C\+M\+D\+C\+T\+B\+\_\+ \#\# name (const struct \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}}$\ast$ thou, \mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}}$\ast$ compile\+Params, \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}}$\ast$ binary, \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} argc, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}}$\ast$$\ast$ argv) \{ code \}}
 

@@ -1,6 +1,6 @@
 \hypertarget{BytecodeToCommand_8cpp}{}\doxysection{Soft\+Processor\+Unit/\+Syntax/\+Translation/\+Helpers/\+Bytecode\+To\+Command.cpp File Reference}
 \label{BytecodeToCommand_8cpp}\index{SoftProcessorUnit/Syntax/Translation/Helpers/BytecodeToCommand.cpp@{SoftProcessorUnit/Syntax/Translation/Helpers/BytecodeToCommand.cpp}}
-{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
 {\ttfamily \#include \char`\"{}Bytecode\+To\+Command.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Dis\+Assembly\+D\+Types.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Translation\+D\+Types.\+hpp\char`\"{}}\newline
@@ -8,8 +8,7 @@
 {\ttfamily \#include \char`\"{}Commands\+Parser.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Syntax.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}B\+T\+C.\+h\char`\"{}}\newline
-Include dependency graph for Bytecode\+To\+Command.\+cpp\+:
-\nopagebreak
+Include dependency graph for Bytecode\+To\+Command.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -19,14 +18,14 @@ Include dependency graph for Bytecode\+To\+Command.\+cpp\+:
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{BytecodeToCommand_8cpp_ac2e3e406431a5cda030b97179bd48346}{O\+P\+B\+A\+C\+K\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+NC}}(name,  code)~\mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefd}{Disassembly\+Parse\+Result}} C\+M\+D\+B\+T\+C\+\_\+ \#\# name (const \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}}$\ast$ thou, \mbox{\hyperlink{DisAssemblyDTypes_8hpp_structDisassemblyParams}{Disassembly\+Params}}$\ast$ params, \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}}$\ast$ binary, char$\ast$$\ast$ \mbox{\hyperlink{EXE_8h_a37d521d55391bb468bb21c23296e0501}{S\+PI}}) \{ code \}
+\#define \mbox{\hyperlink{BytecodeToCommand_8cpp_ac2e3e406431a5cda030b97179bd48346}{O\+P\+B\+A\+C\+K\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+NC}}(name,  code)~\mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefd}{Disassembly\+Parse\+Result}} C\+M\+D\+B\+T\+C\+\_\+ \#\# name (const \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}}$\ast$ thou, \mbox{\hyperlink{DisAssemblyDTypes_8hpp_structDisassemblyParams}{Disassembly\+Params}}$\ast$ params, \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}}$\ast$ binary, \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}}$\ast$$\ast$ \mbox{\hyperlink{EXE_8h_a5456c3f6e0c919dee1b2a7ccd65aaa4e}{S\+PI}}) \{ code \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{BytecodeToCommand_8cpp_ade73f65d7d4d27f2b675d578b9e3e05c}{check\+Bytes\+Enough}} (const \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}} $\ast$thou, \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$binary, char $\ast$\mbox{\hyperlink{EXE_8h_a37d521d55391bb468bb21c23296e0501}{S\+PI}})
+\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{BytecodeToCommand_8cpp_ade73f65d7d4d27f2b675d578b9e3e05c}{check\+Bytes\+Enough}} (const \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}} $\ast$thou, \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$binary, \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$\mbox{\hyperlink{EXE_8h_a5456c3f6e0c919dee1b2a7ccd65aaa4e}{S\+PI}})
 \item 
-int \mbox{\hyperlink{BytecodeToCommand_8cpp_ab9958a727a568ee7ce1f13b515104efd}{check\+Bytes\+Enough\+Number}} (\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$binary, char $\ast$\mbox{\hyperlink{EXE_8h_a37d521d55391bb468bb21c23296e0501}{S\+PI}}, size\+\_\+t bytes)
+\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{BytecodeToCommand_8cpp_ab0ffc9a54e506a0006a551640cf92b63}{check\+Bytes\+Enough\+Number}} (\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$binary, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$\mbox{\hyperlink{EXE_8h_a5456c3f6e0c919dee1b2a7ccd65aaa4e}{S\+PI}}, size\+\_\+t bytes)
 \end{DoxyCompactItemize}
 
 
@@ -35,7 +34,7 @@ int \mbox{\hyperlink{BytecodeToCommand_8cpp_ab9958a727a568ee7ce1f13b515104efd}{c
 \index{BytecodeToCommand.cpp@{BytecodeToCommand.cpp}!OPBACKTRANSLATE\_FUNC@{OPBACKTRANSLATE\_FUNC}}
 \index{OPBACKTRANSLATE\_FUNC@{OPBACKTRANSLATE\_FUNC}!BytecodeToCommand.cpp@{BytecodeToCommand.cpp}}
 \doxysubsubsection{\texorpdfstring{OPBACKTRANSLATE\_FUNC}{OPBACKTRANSLATE\_FUNC}}
-{\footnotesize\ttfamily \#define O\+P\+B\+A\+C\+K\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+NC(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{code }\end{DoxyParamCaption})~\mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefd}{Disassembly\+Parse\+Result}} C\+M\+D\+B\+T\+C\+\_\+ \#\# name (const \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}}$\ast$ thou, \mbox{\hyperlink{DisAssemblyDTypes_8hpp_structDisassemblyParams}{Disassembly\+Params}}$\ast$ params, \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}}$\ast$ binary, char$\ast$$\ast$ \mbox{\hyperlink{EXE_8h_a37d521d55391bb468bb21c23296e0501}{S\+PI}}) \{ code \}}
+{\footnotesize\ttfamily \#define O\+P\+B\+A\+C\+K\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+NC(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{code }\end{DoxyParamCaption})~\mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefd}{Disassembly\+Parse\+Result}} C\+M\+D\+B\+T\+C\+\_\+ \#\# name (const \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}}$\ast$ thou, \mbox{\hyperlink{DisAssemblyDTypes_8hpp_structDisassemblyParams}{Disassembly\+Params}}$\ast$ params, \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}}$\ast$ binary, \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}}$\ast$$\ast$ \mbox{\hyperlink{EXE_8h_a5456c3f6e0c919dee1b2a7ccd65aaa4e}{S\+PI}}) \{ code \}}
 
 
 
@@ -44,7 +43,7 @@ int \mbox{\hyperlink{BytecodeToCommand_8cpp_ab9958a727a568ee7ce1f13b515104efd}{c
 \index{BytecodeToCommand.cpp@{BytecodeToCommand.cpp}!checkBytesEnough@{checkBytesEnough}}
 \index{checkBytesEnough@{checkBytesEnough}!BytecodeToCommand.cpp@{BytecodeToCommand.cpp}}
 \doxysubsubsection{\texorpdfstring{checkBytesEnough()}{checkBytesEnough()}}
-{\footnotesize\ttfamily int check\+Bytes\+Enough (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}} $\ast$}]{thou,  }\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{binary,  }\item[{char $\ast$}]{S\+PI }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} check\+Bytes\+Enough (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}} $\ast$}]{thou,  }\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{binary,  }\item[{\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$}]{S\+PI }\end{DoxyParamCaption})}
 
 
 \begin{DoxyCode}{0}
@@ -52,37 +51,36 @@ int \mbox{\hyperlink{BytecodeToCommand_8cpp_ab9958a727a568ee7ce1f13b515104efd}{c
 \DoxyCodeLine{17     \textcolor{keywordtype}{size\_t} neededBytes = 1;}
 \DoxyCodeLine{18     }
 \DoxyCodeLine{19     neededBytes += (size\_t)(thou-\/>\mbox{\hyperlink{structSyntaxEntity_a37a9b200016059d71f0d2116f9e96cfd}{flagBytes}});}
-\DoxyCodeLine{20     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < strlen(thou-\/>\mbox{\hyperlink{structSyntaxEntity_a02a711b31d8895f3ffaaa71bdc6c918e}{format}}); i++) \{}
-\DoxyCodeLine{21         \textcolor{keywordflow}{if} (thou-\/>\mbox{\hyperlink{structSyntaxEntity_a02a711b31d8895f3ffaaa71bdc6c918e}{format}}[i] == \textcolor{charliteral}{'*'})}
+\DoxyCodeLine{20     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 0; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} < strlen(thou-\/>\mbox{\hyperlink{structSyntaxEntity_a02a711b31d8895f3ffaaa71bdc6c918e}{format}}); \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++) \{}
+\DoxyCodeLine{21         \textcolor{keywordflow}{if} (thou-\/>\mbox{\hyperlink{structSyntaxEntity_a02a711b31d8895f3ffaaa71bdc6c918e}{format}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}] == \textcolor{charliteral}{'*'})}
 \DoxyCodeLine{22             neededBytes++;}
 \DoxyCodeLine{23     \}}
 \DoxyCodeLine{24     }
-\DoxyCodeLine{25     \textcolor{keywordflow}{return} \mbox{\hyperlink{BytecodeToCommand_8cpp_ab9958a727a568ee7ce1f13b515104efd}{checkBytesEnoughNumber}}(binary, \mbox{\hyperlink{EXE_8h_a37d521d55391bb468bb21c23296e0501}{SPI}}, neededBytes);}
+\DoxyCodeLine{25     \textcolor{keywordflow}{return} \mbox{\hyperlink{BytecodeToCommand_8cpp_ab0ffc9a54e506a0006a551640cf92b63}{checkBytesEnoughNumber}}(binary, \mbox{\hyperlink{EXE_8h_a5456c3f6e0c919dee1b2a7ccd65aaa4e}{SPI}}, neededBytes);}
 \DoxyCodeLine{26 \}}
 
 \end{DoxyCode}
 
 
-References check\+Bytes\+Enough\+Number(), Syntax\+Entity\+::flag\+Bytes, Syntax\+Entity\+::format, and S\+PI.
+References check\+Bytes\+Enough\+Number(), Syntax\+Entity\+::flag\+Bytes, Syntax\+Entity\+::format, i, and S\+PI.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{BytecodeToCommand_8cpp_ade73f65d7d4d27f2b675d578b9e3e05c_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{BytecodeToCommand_8cpp_ab9958a727a568ee7ce1f13b515104efd}\label{BytecodeToCommand_8cpp_ab9958a727a568ee7ce1f13b515104efd}} 
+\mbox{\Hypertarget{BytecodeToCommand_8cpp_ab0ffc9a54e506a0006a551640cf92b63}\label{BytecodeToCommand_8cpp_ab0ffc9a54e506a0006a551640cf92b63}} 
 \index{BytecodeToCommand.cpp@{BytecodeToCommand.cpp}!checkBytesEnoughNumber@{checkBytesEnoughNumber}}
 \index{checkBytesEnoughNumber@{checkBytesEnoughNumber}!BytecodeToCommand.cpp@{BytecodeToCommand.cpp}}
 \doxysubsubsection{\texorpdfstring{checkBytesEnoughNumber()}{checkBytesEnoughNumber()}}
-{\footnotesize\ttfamily int check\+Bytes\+Enough\+Number (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{binary,  }\item[{char $\ast$}]{S\+PI,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} check\+Bytes\+Enough\+Number (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{binary,  }\item[{const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$}]{S\+PI,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{28                                                                         \{}
-\DoxyCodeLine{29     \textcolor{keywordflow}{if} (\mbox{\hyperlink{EXE_8h_a37d521d55391bb468bb21c23296e0501}{SPI}} + bytes > binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}} + binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}})}
+\DoxyCodeLine{28                                                                               \{}
+\DoxyCodeLine{29     \textcolor{keywordflow}{if} (\mbox{\hyperlink{EXE_8h_a5456c3f6e0c919dee1b2a7ccd65aaa4e}{SPI}} + bytes > binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}} + binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}})}
 \DoxyCodeLine{30         \textcolor{keywordflow}{return} 0;}
 \DoxyCodeLine{31     \textcolor{keywordflow}{return} 1;}
 \DoxyCodeLine{32 \}}
@@ -96,11 +94,10 @@ References Binary\+File\+::code, Binary\+File\+::current\+Size, and S\+PI.
 
 Referenced by check\+Bytes\+Enough(), and O\+P\+B\+A\+C\+K\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+N\+C().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{BytecodeToCommand_8cpp_ab9958a727a568ee7ce1f13b515104efd_icgraph}
+\includegraphics[width=350pt]{BytecodeToCommand_8cpp_ab0ffc9a54e506a0006a551640cf92b63_icgraph}
 \end{center}
 \end{figure}

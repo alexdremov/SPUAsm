@@ -1,0 +1,77 @@
+\hypertarget{namespaceCMakeHelper}{}\doxysection{C\+Make\+Helper Namespace Reference}
+\label{namespaceCMakeHelper}\index{CMakeHelper@{CMakeHelper}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceCMakeHelper_ad8cf773fe8ca1085106720268920f9b3}{fetch\+Tree}} (\mbox{\hyperlink{namespaceCMakeHelper_ab603b959866b24014025bd12aff5c543}{dirs}}, current)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{namespaceCMakeHelper_ab603b959866b24014025bd12aff5c543}{dirs}}
+\item 
+list \mbox{\hyperlink{namespaceCMakeHelper_a5c52b18734a5c12c1bec1f0976fea774}{final\+Paths}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespaceCMakeHelper_a4482d332165e689497870c82f374e84a}{out\+File}} = open(\char`\"{}C\+Make\+Lists.\+txt\char`\"{}, \char`\"{}w\char`\"{})
+\item 
+\mbox{\hyperlink{namespaceCMakeHelper_a0c403d6dba1ea75faff40fdf1714e7c3}{template}} = template\+File.\+read()
+\item 
+\mbox{\hyperlink{namespaceCMakeHelper_a32456e74d8a43cbe03d2de8eb3a9f1d9}{template\+File}} = open(\char`\"{}C\+Make\+Lists.\+template.\+txt\char`\"{}, \char`\"{}r\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceCMakeHelper_ad8cf773fe8ca1085106720268920f9b3}\label{namespaceCMakeHelper_ad8cf773fe8ca1085106720268920f9b3}} 
+\index{CMakeHelper@{CMakeHelper}!fetchTree@{fetchTree}}
+\index{fetchTree@{fetchTree}!CMakeHelper@{CMakeHelper}}
+\doxysubsubsection{\texorpdfstring{fetchTree()}{fetchTree()}}
+{\footnotesize\ttfamily def C\+Make\+Helper.\+fetch\+Tree (\begin{DoxyParamCaption}\item[{}]{dirs,  }\item[{}]{current }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10 \textcolor{keyword}{def }\mbox{\hyperlink{namespaceCMakeHelper_ad8cf773fe8ca1085106720268920f9b3}{fetchTree}}(dirs, current):}
+\DoxyCodeLine{11     \textcolor{keywordflow}{for} (dirpath, \_, \_) \textcolor{keywordflow}{in} walk(current):}
+\DoxyCodeLine{12         dirs.append(dirpath)}
+\DoxyCodeLine{13 }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceCMakeHelper_ab603b959866b24014025bd12aff5c543}\label{namespaceCMakeHelper_ab603b959866b24014025bd12aff5c543}} 
+\index{CMakeHelper@{CMakeHelper}!dirs@{dirs}}
+\index{dirs@{dirs}!CMakeHelper@{CMakeHelper}}
+\doxysubsubsection{\texorpdfstring{dirs}{dirs}}
+{\footnotesize\ttfamily list C\+Make\+Helper.\+dirs}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  [}
+\DoxyCodeLine{2 \textcolor{stringliteral}{"{}SoftProcessorUnit/"{}}}
+\DoxyCodeLine{3 ]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceCMakeHelper_a5c52b18734a5c12c1bec1f0976fea774}\label{namespaceCMakeHelper_a5c52b18734a5c12c1bec1f0976fea774}} 
+\index{CMakeHelper@{CMakeHelper}!finalPaths@{finalPaths}}
+\index{finalPaths@{finalPaths}!CMakeHelper@{CMakeHelper}}
+\doxysubsubsection{\texorpdfstring{finalPaths}{finalPaths}}
+{\footnotesize\ttfamily string C\+Make\+Helper.\+final\+Paths = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{namespaceCMakeHelper_a4482d332165e689497870c82f374e84a}\label{namespaceCMakeHelper_a4482d332165e689497870c82f374e84a}} 
+\index{CMakeHelper@{CMakeHelper}!outFile@{outFile}}
+\index{outFile@{outFile}!CMakeHelper@{CMakeHelper}}
+\doxysubsubsection{\texorpdfstring{outFile}{outFile}}
+{\footnotesize\ttfamily C\+Make\+Helper.\+out\+File = open(\char`\"{}C\+Make\+Lists.\+txt\char`\"{}, \char`\"{}w\char`\"{})}
+
+\mbox{\Hypertarget{namespaceCMakeHelper_a0c403d6dba1ea75faff40fdf1714e7c3}\label{namespaceCMakeHelper_a0c403d6dba1ea75faff40fdf1714e7c3}} 
+\index{CMakeHelper@{CMakeHelper}!template@{template}}
+\index{template@{template}!CMakeHelper@{CMakeHelper}}
+\doxysubsubsection{\texorpdfstring{template}{template}}
+{\footnotesize\ttfamily C\+Make\+Helper.\+template = template\+File.\+read()}
+
+\mbox{\Hypertarget{namespaceCMakeHelper_a32456e74d8a43cbe03d2de8eb3a9f1d9}\label{namespaceCMakeHelper_a32456e74d8a43cbe03d2de8eb3a9f1d9}} 
+\index{CMakeHelper@{CMakeHelper}!templateFile@{templateFile}}
+\index{templateFile@{templateFile}!CMakeHelper@{CMakeHelper}}
+\doxysubsubsection{\texorpdfstring{templateFile}{templateFile}}
+{\footnotesize\ttfamily C\+Make\+Helper.\+template\+File = open(\char`\"{}C\+Make\+Lists.\+template.\+txt\char`\"{}, \char`\"{}r\char`\"{})}
+

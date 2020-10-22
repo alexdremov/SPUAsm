@@ -1,21 +1,19 @@
 \hypertarget{DisAssemblyHelpers_8hpp}{}\doxysection{Soft\+Processor\+Unit/\+Disassembly/\+Helpers/\+Dis\+Assembly\+Helpers.hpp File Reference}
 \label{DisAssemblyHelpers_8hpp}\index{SoftProcessorUnit/Disassembly/Helpers/DisAssemblyHelpers.hpp@{SoftProcessorUnit/Disassembly/Helpers/DisAssemblyHelpers.hpp}}
-{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
 {\ttfamily \#include \char`\"{}Dis\+Assembly\+D\+Types.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Translation\+D\+Types.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Assembly\+Helpers.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Commands\+Parser.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Syntax.\+hpp\char`\"{}}\newline
-Include dependency graph for Dis\+Assembly\+Helpers.\+hpp\+:
-\nopagebreak
+Include dependency graph for Dis\+Assembly\+Helpers.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{DisAssemblyHelpers_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -29,11 +27,11 @@ void \mbox{\hyperlink{DisAssemblyHelpers_8hpp_afdf4987b03f2d17e9c945165e27d2c27}
 \item 
 \mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefd}{Disassembly\+Parse\+Result}} \mbox{\hyperlink{DisAssemblyHelpers_8hpp_a0dfce63afcb5e97ccdc8cfe8cc913a5c}{dis\+Assambly\+Code}} (\mbox{\hyperlink{DisAssemblyDTypes_8hpp_structDisassemblyParams}{Disassembly\+Params}} $\ast$params, \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$mapping, \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$binary)
 \item 
-\mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefd}{Disassembly\+Parse\+Result}} \mbox{\hyperlink{DisAssemblyHelpers_8hpp_a5565186704b0cd16cfb8076ebb5b7460}{dis\+Assambly\+Instruction}} (\mbox{\hyperlink{DisAssemblyDTypes_8hpp_structDisassemblyParams}{Disassembly\+Params}} $\ast$params, \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$mapping, \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$binary, char $\ast$$\ast$instruction)
+\mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefd}{Disassembly\+Parse\+Result}} \mbox{\hyperlink{DisAssemblyHelpers_8hpp_a5565186704b0cd16cfb8076ebb5b7460}{dis\+Assambly\+Instruction}} (\mbox{\hyperlink{DisAssemblyDTypes_8hpp_structDisassemblyParams}{Disassembly\+Params}} $\ast$params, \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$mapping, \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$binary, \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$$\ast$instruction)
 \item 
-int \mbox{\hyperlink{DisAssemblyHelpers_8hpp_aa49203c20a4b7afd1ae91e70a9dc2ec4}{parse\+Args}} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{DisAssemblyDTypes_8hpp_structDisassemblyParams}{Disassembly\+Params}} $\ast$params)
+\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{DisAssemblyHelpers_8hpp_aa49203c20a4b7afd1ae91e70a9dc2ec4}{parse\+Args}} (\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} argc, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$argv\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{DisAssemblyDTypes_8hpp_structDisassemblyParams}{Disassembly\+Params}} $\ast$params)
 \item 
-void \mbox{\hyperlink{DisAssemblyHelpers_8hpp_a8d3739712afd69a337f158f0d12c9844}{print\+Dis\+Assembly\+Help\+Data}} (void)
+void \mbox{\hyperlink{DisAssemblyHelpers_8hpp_a2646c39b04bc6f2a554883c09ccbcb64}{print\+Dis\+Assembly\+Help\+Data}} ()
 \end{DoxyCompactItemize}
 
 
@@ -60,8 +58,7 @@ References Disassembly\+Params\+::input\+File, and Disassembly\+Params\+::output
 
 Referenced by main().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -77,10 +74,10 @@ Here is the caller graph for this function\+:
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{106                                                            \{}
-\DoxyCodeLine{107     \textcolor{keywordtype}{char}* \mbox{\hyperlink{EXE_8h_a37d521d55391bb468bb21c23296e0501}{SPI}} = binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}};}
+\DoxyCodeLine{107     \textcolor{keywordtype}{char}* \mbox{\hyperlink{EXE_8h_a5456c3f6e0c919dee1b2a7ccd65aaa4e}{SPI}} = binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}};}
 \DoxyCodeLine{108     }
 \DoxyCodeLine{109     \textcolor{keywordflow}{while}(SPI < binary-\/>code + binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}}) \{}
-\DoxyCodeLine{110         \mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefd}{DisassemblyParseResult}} cmdRes = \mbox{\hyperlink{DisAssemblyHelpers_8cpp_a486e42fcf2e1de01e4bf039dcf45ffd1}{disAssamblyInstruction}}(params, mapping, binary, \&\mbox{\hyperlink{EXE_8h_a37d521d55391bb468bb21c23296e0501}{SPI}});}
+\DoxyCodeLine{110         \mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefd}{DisassemblyParseResult}} cmdRes = \mbox{\hyperlink{DisAssemblyHelpers_8cpp_a486e42fcf2e1de01e4bf039dcf45ffd1}{disAssamblyInstruction}}(params, mapping, binary, \&\mbox{\hyperlink{EXE_8h_a5456c3f6e0c919dee1b2a7ccd65aaa4e}{SPI}});}
 \DoxyCodeLine{111         \textcolor{keywordflow}{if} (cmdRes != \mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefda9e0876ec84fe99948945c4cddfbe1b35}{SPU\_DISASM\_OK}}) \{}
 \DoxyCodeLine{112             \textcolor{keywordflow}{return} cmdRes;}
 \DoxyCodeLine{113         \}}
@@ -98,16 +95,14 @@ References Binary\+File\+::code, Binary\+File\+::current\+Size, dis\+Assambly\+I
 
 Referenced by main().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{DisAssemblyHelpers_8hpp_a0dfce63afcb5e97ccdc8cfe8cc913a5c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -118,7 +113,7 @@ Here is the caller graph for this function\+:
 \index{DisAssemblyHelpers.hpp@{DisAssemblyHelpers.hpp}!disAssamblyInstruction@{disAssamblyInstruction}}
 \index{disAssamblyInstruction@{disAssamblyInstruction}!DisAssemblyHelpers.hpp@{DisAssemblyHelpers.hpp}}
 \doxysubsubsection{\texorpdfstring{disAssamblyInstruction()}{disAssamblyInstruction()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefd}{Disassembly\+Parse\+Result}} dis\+Assambly\+Instruction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{DisAssemblyDTypes_8hpp_structDisassemblyParams}{Disassembly\+Params}} $\ast$}]{params,  }\item[{\mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$}]{mapping,  }\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{binary,  }\item[{char $\ast$$\ast$}]{instruction }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefd}{Disassembly\+Parse\+Result}} dis\+Assambly\+Instruction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{DisAssemblyDTypes_8hpp_structDisassemblyParams}{Disassembly\+Params}} $\ast$}]{params,  }\item[{\mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$}]{mapping,  }\item[{\mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$}]{binary,  }\item[{\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$$\ast$}]{instruction }\end{DoxyParamCaption})}
 
 
 \begin{DoxyCode}{0}
@@ -127,7 +122,7 @@ Here is the caller graph for this function\+:
 \DoxyCodeLine{124     }
 \DoxyCodeLine{125     \textcolor{keyword}{const} \mbox{\hyperlink{structSyntaxEntity}{SyntaxEntity}}* entity = \mbox{\hyperlink{Syntax_8cpp_a30812d9f8f71323b317050e3cdc2a0ff}{getSyntaxEntityByCode}}(mapping, instructionId);}
 \DoxyCodeLine{126     }
-\DoxyCodeLine{127     \textcolor{keywordflow}{if} (entity == NULL) \{}
+\DoxyCodeLine{127     \textcolor{keywordflow}{if} (entity == \textcolor{keyword}{nullptr}) \{}
 \DoxyCodeLine{128         printf(\textcolor{stringliteral}{"{}error: disassembly: found unknown command (\%d) or invalid sequence formation\(\backslash\)n"{}}, instructionId);}
 \DoxyCodeLine{129         \textcolor{keywordflow}{return} \mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefda100d5684dfab0597dda42ca7ecd3d28c}{SPU\_DISASM\_UNKNOWN\_CMD}};}
 \DoxyCodeLine{130     \}}
@@ -155,16 +150,14 @@ References Syntax\+Entity\+::b\+Processor, get\+Syntax\+Entity\+By\+Code(), Synt
 
 Referenced by dis\+Assambly\+Code().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{DisAssemblyHelpers_8hpp_a5565186704b0cd16cfb8076ebb5b7460_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -175,65 +168,65 @@ Here is the caller graph for this function\+:
 \index{DisAssemblyHelpers.hpp@{DisAssemblyHelpers.hpp}!parseArgs@{parseArgs}}
 \index{parseArgs@{parseArgs}!DisAssemblyHelpers.hpp@{DisAssemblyHelpers.hpp}}
 \doxysubsubsection{\texorpdfstring{parseArgs()}{parseArgs()}}
-{\footnotesize\ttfamily int parse\+Args (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{DisAssemblyDTypes_8hpp_structDisassemblyParams}{Disassembly\+Params}} $\ast$}]{params }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} parse\+Args (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}}}]{argc,  }\item[{const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{DisAssemblyDTypes_8hpp_structDisassemblyParams}{Disassembly\+Params}} $\ast$}]{params }\end{DoxyParamCaption})}
 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{18                                                                        \{}
-\DoxyCodeLine{19     \mbox{\hyperlink{DisAssemblyDTypes_8hpp_structDisassemblyParams}{DisassemblyParams}} newParams = \{0, 0, 0, 0, 0\};}
+\DoxyCodeLine{19     \mbox{\hyperlink{DisAssemblyDTypes_8hpp_structDisassemblyParams}{DisassemblyParams}} newParams = \{\textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}, \textcolor{keyword}{nullptr}, 0\};}
 \DoxyCodeLine{20     \textcolor{keywordflow}{if} (argc <= 1)\{}
-\DoxyCodeLine{21         \mbox{\hyperlink{DisAssemblyHelpers_8cpp_a8d3739712afd69a337f158f0d12c9844}{printDisAssemblyHelpData}}();}
+\DoxyCodeLine{21         \mbox{\hyperlink{DisAssemblyHelpers_8cpp_a2646c39b04bc6f2a554883c09ccbcb64}{printDisAssemblyHelpData}}();}
 \DoxyCodeLine{22     \}}
 \DoxyCodeLine{23 }
-\DoxyCodeLine{24     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 1; i < argc; i++) \{}
-\DoxyCodeLine{25         \textcolor{keywordflow}{if} (strcmp(argv[i], \textcolor{stringliteral}{"{}-\/-\/input"{}}) == 0) \{}
-\DoxyCodeLine{26             \textcolor{keywordflow}{if} (i + 1 > argc)\{}
+\DoxyCodeLine{24     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 1; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} < argc; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++) \{}
+\DoxyCodeLine{25         \textcolor{keywordflow}{if} (strcmp(argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}], \textcolor{stringliteral}{"{}-\/-\/input"{}}) == 0) \{}
+\DoxyCodeLine{26             \textcolor{keywordflow}{if} (\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} + 1 > argc)\{}
 \DoxyCodeLine{27                 printf(\textcolor{stringliteral}{"{}error: disassembly: No input file specified after -\/-\/input\(\backslash\)n"{}});}
 \DoxyCodeLine{28                 \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{29             \}}
-\DoxyCodeLine{30             FILE* inputFile = fopen(argv[i + 1], \textcolor{stringliteral}{"{}rb"{}});}
+\DoxyCodeLine{30             FILE* inputFile = fopen(argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} + 1], \textcolor{stringliteral}{"{}rb"{}});}
 \DoxyCodeLine{31             newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_aa7ea61367548771299ea35cfbf0754d7}{inputFile}} = inputFile;}
-\DoxyCodeLine{32             newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_a52ee658edbd6e1fd089cda4342fc1522}{inputFileName}} = *(argv + i + 1);}
-\DoxyCodeLine{33             \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_aa7ea61367548771299ea35cfbf0754d7}{inputFile}} == NULL)\{}
+\DoxyCodeLine{32             newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_a52ee658edbd6e1fd089cda4342fc1522}{inputFileName}} = *(argv + \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} + 1);}
+\DoxyCodeLine{33             \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_aa7ea61367548771299ea35cfbf0754d7}{inputFile}} == \textcolor{keyword}{nullptr})\{}
 \DoxyCodeLine{34                 printf(\textcolor{stringliteral}{"{}error: disassembly: Can't open input file\(\backslash\)n"{}});}
 \DoxyCodeLine{35                 \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{36             \}}
-\DoxyCodeLine{37             i++;}
-\DoxyCodeLine{38         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(argv[i], \textcolor{stringliteral}{"{}-\/-\/output"{}}) == 0) \{}
-\DoxyCodeLine{39             \textcolor{keywordflow}{if} (i + 1 > argc)\{}
+\DoxyCodeLine{37             \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++;}
+\DoxyCodeLine{38         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}], \textcolor{stringliteral}{"{}-\/-\/output"{}}) == 0) \{}
+\DoxyCodeLine{39             \textcolor{keywordflow}{if} (\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} + 1 > argc)\{}
 \DoxyCodeLine{40                 printf(\textcolor{stringliteral}{"{}error: disassembly: No output file specified after -\/-\/output\(\backslash\)n"{}});}
 \DoxyCodeLine{41                 \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{42             \}}
-\DoxyCodeLine{43             FILE* outputFile = fopen(argv[i + 1], \textcolor{stringliteral}{"{}wb"{}});}
+\DoxyCodeLine{43             FILE* outputFile = fopen(argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} + 1], \textcolor{stringliteral}{"{}wb"{}});}
 \DoxyCodeLine{44             newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_a2d3611a91789364eacf43f48a73c9bdb}{outputFile}} = outputFile;}
-\DoxyCodeLine{45             newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_a506556f42bf7ddc6148115053865514b}{outputFileName}} = *(argv + i + 1);}
-\DoxyCodeLine{46             i++;}
-\DoxyCodeLine{47         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(argv[i], \textcolor{stringliteral}{"{}-\/-\/verbose"{}}) == 0) \{}
+\DoxyCodeLine{45             newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_a506556f42bf7ddc6148115053865514b}{outputFileName}} = *(argv + \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} + 1);}
+\DoxyCodeLine{46             \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++;}
+\DoxyCodeLine{47         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}], \textcolor{stringliteral}{"{}-\/-\/verbose"{}}) == 0) \{}
 \DoxyCodeLine{48             newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_ada63b720c3b6ff9803a16f6cefbd493b}{verbose}} = 1;}
-\DoxyCodeLine{49         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(argv[i], \textcolor{stringliteral}{"{}-\/-\/help"{}}) == 0 || strcmp(argv[i], \textcolor{stringliteral}{"{}-\/h"{}}) == 0) \{}
-\DoxyCodeLine{50             \mbox{\hyperlink{DisAssemblyHelpers_8cpp_a8d3739712afd69a337f158f0d12c9844}{printDisAssemblyHelpData}}();}
+\DoxyCodeLine{49         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}], \textcolor{stringliteral}{"{}-\/-\/help"{}}) == 0 || strcmp(argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}], \textcolor{stringliteral}{"{}-\/h"{}}) == 0) \{}
+\DoxyCodeLine{50             \mbox{\hyperlink{DisAssemblyHelpers_8cpp_a2646c39b04bc6f2a554883c09ccbcb64}{printDisAssemblyHelpData}}();}
 \DoxyCodeLine{51         \}\textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{52             \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_aa7ea61367548771299ea35cfbf0754d7}{inputFile}} == NULL)\{}
-\DoxyCodeLine{53                 FILE* inputFile = fopen(argv[i], \textcolor{stringliteral}{"{}rb"{}});}
+\DoxyCodeLine{52             \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_aa7ea61367548771299ea35cfbf0754d7}{inputFile}} == \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{53                 FILE* inputFile = fopen(argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}], \textcolor{stringliteral}{"{}rb"{}});}
 \DoxyCodeLine{54                 newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_aa7ea61367548771299ea35cfbf0754d7}{inputFile}} = inputFile;}
-\DoxyCodeLine{55                 newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_a52ee658edbd6e1fd089cda4342fc1522}{inputFileName}} = *(argv + i);}
-\DoxyCodeLine{56                 \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_aa7ea61367548771299ea35cfbf0754d7}{inputFile}} == NULL)\{}
-\DoxyCodeLine{57                     printf(\textcolor{stringliteral}{"{}error: disassembly: Can't open input file \%s\(\backslash\)n"{}}, argv[i]);}
+\DoxyCodeLine{55                 newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_a52ee658edbd6e1fd089cda4342fc1522}{inputFileName}} = *(argv + \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}});}
+\DoxyCodeLine{56                 \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_aa7ea61367548771299ea35cfbf0754d7}{inputFile}} == \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{57                     printf(\textcolor{stringliteral}{"{}error: disassembly: Can't open input file \%s\(\backslash\)n"{}}, argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}]);}
 \DoxyCodeLine{58                     \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{59                 \}}
 \DoxyCodeLine{60             \}}
 \DoxyCodeLine{61         \}}
 \DoxyCodeLine{62     \}}
 \DoxyCodeLine{63     }
-\DoxyCodeLine{64     \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_aa7ea61367548771299ea35cfbf0754d7}{inputFile}} == NULL) \{}
+\DoxyCodeLine{64     \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_aa7ea61367548771299ea35cfbf0754d7}{inputFile}} == \textcolor{keyword}{nullptr}) \{}
 \DoxyCodeLine{65         printf(\textcolor{stringliteral}{"{}error: disassembly: No input file specified\(\backslash\)n"{}});}
 \DoxyCodeLine{66         \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{67     \}}
 \DoxyCodeLine{68     }
-\DoxyCodeLine{69     \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_a2d3611a91789364eacf43f48a73c9bdb}{outputFile}} == NULL) \{}
+\DoxyCodeLine{69     \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_a2d3611a91789364eacf43f48a73c9bdb}{outputFile}} == \textcolor{keyword}{nullptr}) \{}
 \DoxyCodeLine{70         newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_a2d3611a91789364eacf43f48a73c9bdb}{outputFile}} = stdout;}
 \DoxyCodeLine{71         newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_a506556f42bf7ddc6148115053865514b}{outputFileName}} = \textcolor{stringliteral}{"{}stdout"{}};}
-\DoxyCodeLine{72         \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_a2d3611a91789364eacf43f48a73c9bdb}{outputFile}} == NULL)\{}
+\DoxyCodeLine{72         \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{DisAssemblyDTypes_8hpp_a2d3611a91789364eacf43f48a73c9bdb}{outputFile}} == \textcolor{keyword}{nullptr})\{}
 \DoxyCodeLine{73             printf(\textcolor{stringliteral}{"{}error: disassembly: No output file specified\(\backslash\)n"{}});}
 \DoxyCodeLine{74             \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{75         \}}
@@ -247,25 +240,24 @@ Here is the caller graph for this function\+:
 \end{DoxyCode}
 
 
-References Disassembly\+Params\+::input\+File, Disassembly\+Params\+::input\+File\+Name, Disassembly\+Params\+::output\+File, Disassembly\+Params\+::output\+File\+Name, print\+Dis\+Assembly\+Help\+Data(), and Disassembly\+Params\+::verbose.
+References i, Disassembly\+Params\+::input\+File, Disassembly\+Params\+::input\+File\+Name, Disassembly\+Params\+::output\+File, Disassembly\+Params\+::output\+File\+Name, print\+Dis\+Assembly\+Help\+Data(), and Disassembly\+Params\+::verbose.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=312pt]{DisAssemblyHelpers_8hpp_aa49203c20a4b7afd1ae91e70a9dc2ec4_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{DisAssemblyHelpers_8hpp_a8d3739712afd69a337f158f0d12c9844}\label{DisAssemblyHelpers_8hpp_a8d3739712afd69a337f158f0d12c9844}} 
+\mbox{\Hypertarget{DisAssemblyHelpers_8hpp_a2646c39b04bc6f2a554883c09ccbcb64}\label{DisAssemblyHelpers_8hpp_a2646c39b04bc6f2a554883c09ccbcb64}} 
 \index{DisAssemblyHelpers.hpp@{DisAssemblyHelpers.hpp}!printDisAssemblyHelpData@{printDisAssemblyHelpData}}
 \index{printDisAssemblyHelpData@{printDisAssemblyHelpData}!DisAssemblyHelpers.hpp@{DisAssemblyHelpers.hpp}}
 \doxysubsubsection{\texorpdfstring{printDisAssemblyHelpData()}{printDisAssemblyHelpData()}}
-{\footnotesize\ttfamily void print\+Dis\+Assembly\+Help\+Data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void print\+Dis\+Assembly\+Help\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{84                                     \{}
+\DoxyCodeLine{84                                 \{}
 \DoxyCodeLine{85     \textcolor{keywordtype}{int} SPUAssemblyVersion = \mbox{\hyperlink{SPUVersion_8hpp_a46cfa984fce0310cc64459db66aba985}{SPU\_VERSION}};}
 \DoxyCodeLine{86     \textcolor{keywordtype}{char}* SPUAssemblyVersion\_chars = (\textcolor{keywordtype}{char}*)\&SPUAssemblyVersion;}
 \DoxyCodeLine{87     printf(\textcolor{stringliteral}{"{}SPUDisAssembly v\%c.\%c.\%c\%c help\(\backslash\)n"{}}}
@@ -289,11 +281,10 @@ References S\+P\+U\+\_\+\+V\+E\+R\+S\+I\+ON.
 
 Referenced by parse\+Args().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=312pt]{DisAssemblyHelpers_8hpp_a8d3739712afd69a337f158f0d12c9844_icgraph}
+\includegraphics[width=312pt]{DisAssemblyHelpers_8hpp_a2646c39b04bc6f2a554883c09ccbcb64_icgraph}
 \end{center}
 \end{figure}

@@ -24,7 +24,12 @@
 */
 var menudata={children:[
 {text:"Main Page",url:"index.html"},
-{text:"Related Pages",url:"pages.html"},
+{text:"Namespaces",url:"namespaces.html",children:[
+{text:"Namespace List",url:"namespaces.html"},
+{text:"Namespace Members",url:"namespacemembers.html",children:[
+{text:"All",url:"namespacemembers.html"},
+{text:"Functions",url:"namespacemembers_func.html"},
+{text:"Variables",url:"namespacemembers_vars.html"}]}]},
 {text:"Data Structures",url:"annotated.html",children:[
 {text:"Data Structures",url:"annotated.html"},
 {text:"Data Structure Index",url:"classes.html"},
@@ -91,6 +96,8 @@ var menudata={children:[
 {text:"r",url:"globals_r.html#index_r"},
 {text:"s",url:"globals_s.html#index_s"},
 {text:"t",url:"globals_t.html#index_t"},
+{text:"u",url:"globals_u.html#index_u"},
+{text:"x",url:"globals_x.html#index_x"},
 {text:"z",url:"globals_z.html#index_z"}]},
 {text:"Functions",url:"globals_func.html",children:[
 {text:"_",url:"globals_func.html#index__5F"},
@@ -110,7 +117,25 @@ var menudata={children:[
 {text:"r",url:"globals_func_r.html#index_r"},
 {text:"s",url:"globals_func_s.html#index_s"},
 {text:"t",url:"globals_func_t.html#index_t"}]},
-{text:"Variables",url:"globals_vars.html"},
+{text:"Variables",url:"globals_vars.html",children:[
+{text:"_",url:"globals_vars.html#index__5F"},
+{text:"a",url:"globals_vars_a.html#index_a"},
+{text:"c",url:"globals_vars_c.html#index_c"},
+{text:"d",url:"globals_vars_d.html#index_d"},
+{text:"e",url:"globals_vars_e.html#index_e"},
+{text:"f",url:"globals_vars_f.html#index_f"},
+{text:"h",url:"globals_vars_h.html#index_h"},
+{text:"i",url:"globals_vars_i.html#index_i"},
+{text:"l",url:"globals_vars_l.html#index_l"},
+{text:"m",url:"globals_vars_m.html#index_m"},
+{text:"n",url:"globals_vars_n.html#index_n"},
+{text:"o",url:"globals_vars_o.html#index_o"},
+{text:"p",url:"globals_vars_p.html#index_p"},
+{text:"r",url:"globals_vars_r.html#index_r"},
+{text:"s",url:"globals_vars_s.html#index_s"},
+{text:"t",url:"globals_vars_t.html#index_t"},
+{text:"u",url:"globals_vars_u.html#index_u"},
+{text:"x",url:"globals_vars_x.html#index_x"}]},
 {text:"Typedefs",url:"globals_type.html"},
 {text:"Enumerations",url:"globals_enum.html"},
 {text:"Enumerator",url:"globals_eval.html",children:[

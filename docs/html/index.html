@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SPU: Main Page</title>
+<title>SPU: Транслятор assembly-подобного кода и SPU-исполнитель</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,11 +60,92 @@ $(function() {
 </iframe>
 </div>
 
-<div class="header">
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">SPU Documentation</div>  </div>
+<div class="title">Транслятор assembly-подобного кода и SPU-исполнитель </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_README"></a> <a href="https://app.codacy.com/gh/AlexRoar/SPUAsm?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AlexRoar/SPUAsm&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/0ef56e0968ad4689a264716b9becbd09" alt="Codacy Badge" class="inline"/></a> <a href="https://www.codefactor.io/repository/github/alexroar/spuasm"><img src="https://www.codefactor.io/repository/github/alexroar/spuasm/badge" alt="CodeFactor" class="inline"/></a></p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Описание</h1>
+<p>В данном проекте реализован транслятор кода в неравномерный байткод, дизассемблер для байткода, исполнитель байткода (Soft Processor Unit).</p>
+<p>В дополнение, присутствует анализатор кода, проверяющий синтаксические ошибки и выбрасывающий отчет в clang формате. Поэтому, XCode и другие IDE поддерживающие clang подсвечивают неверные выражения, отображают комментарии.</p>
+<p>Во время трансляции генерируется .lst файл, содержащий информацию о трансляции, на каком offset бинарника какая команда и тд. Все доступно в примерах.</p>
+<p><img src="https://github.com/AlexRoar/SPUAsm/raw/main/Images/generalview.png" alt="" style="max-height: 250px" class="inline"/> <img src="https://github.com/AlexRoar/SPUAsm/raw/main/Images/errors.png" alt="" style="max-height: 100px" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Ссылки</h1>
+<ul>
+<li><a href="https://alexroar.github.io/SPUAsm/html/">Документация</a></li>
+<li><a href="https://github.com/AlexRoar/SPUAsm/blob/main/SoftProcessorUnit/Assembly/SPUAssembly.cpp">Основной код транслятора</a></li>
+<li><a href="https://github.com/AlexRoar/SPUAsm/blob/main/SoftProcessorUnit/Disassembly/SPUDisAssembly.cpp">Основной код дизассемблера</a></li>
+<li><a href="https://github.com/AlexRoar/SPUAsm/blob/main/SoftProcessorUnit/SPU/SPU.cpp">Основной код SPU</a></li>
+<li><a href="https://github.com/AlexRoar/SPUAsm/tree/main/Examples/SPUAsm/SPUAsm">Примеры</a></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Установка</h1>
+<p>Перейти в директорию проекта и выполнить:</p>
+<div class="fragment"><div class="line">mkdir build</div>
+<div class="line">cd build</div>
+<div class="line">cmake -DCMAKE_BUILD_TYPE=Release ..</div>
+<div class="line">cmake --build .</div>
+</div><!-- fragment --><p>Создадутся 3 исполняемых файла:</p><ul>
+<li><b>SPU</b> - Soft Processor Unit, выполняет созданные программы</li>
+<li><b>SPUAsm</b> - транслирует программу в файл для исполнения SPU</li>
+<li><b>SPUDisAsm</b> - дизассемблер файлов сгенерированных SPUAsm</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Использование</h1>
+<p><b>SPUAsm</b> </p><div class="fragment"><div class="line">$ SPUAsm &lt;source file&gt;</div>
+<div class="line">        -E                          - generate preprocessed file</div>
+<div class="line">        --verbose                   - output assembly debug information</div>
+<div class="line">        --lst &lt;filename.lst&gt;        - listing file ofgenerated code </div>
+<div class="line">        --input &lt;filename.spus&gt;     - source file (can be specified without --input)</div>
+<div class="line">        --output &lt;filename.spub&gt;    - binary assembled file</div>
+<div class="line">        -h, --help                  - show help message</div>
+</div><!-- fragment --><p><b>SPUDisAsm</b> </p><div class="fragment"><div class="line">$ SPUDisAsm &lt;binary file&gt;</div>
+<div class="line">        --verbose                   - output assembly debug information</div>
+<div class="line">        --input &lt;filename.spub&gt;     - binary assembled file</div>
+<div class="line">        --output &lt;filename.spus&gt;    - source file (if not specified, stdout selected)</div>
+<div class="line">        -h, --help                  - show help message</div>
+</div><!-- fragment --><p><b>SPU</b> </p><div class="fragment"><div class="line">$ SPU &lt;binary file&gt;</div>
+<div class="line">        --verbose                   - output assembly debug information</div>
+<div class="line">        --input &lt;filename.spub&gt;     - binary assembled file</div>
+<div class="line">        --output &lt;filename.spus&gt;    - source file (if not specified, stdout selected)</div>
+<div class="line">        -h, --help                  - show help message</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
+Примеры программ</h1>
+<p>Квадраты первых n чисел </p><div class="fragment"><div class="line">;</div>
+<div class="line">; Squares</div>
+<div class="line">;</div>
+<div class="line"> </div>
+<div class="line">in rbx  ; rbx as counter</div>
+<div class="line"> </div>
+<div class="line">push 0</div>
+<div class="line">pop rax</div>
+<div class="line"> </div>
+<div class="line">loop:</div>
+<div class="line">dec rbx  ; decrease counter</div>
+<div class="line"> </div>
+<div class="line">; Calculating square</div>
+<div class="line">push rax</div>
+<div class="line">push rax</div>
+<div class="line">mul</div>
+<div class="line">out</div>
+<div class="line"> </div>
+<div class="line">; Prepare for the next loop</div>
+<div class="line">pop</div>
+<div class="line">inc rax</div>
+<div class="line"> </div>
+<div class="line">jm mondayOnly ; exit if it is monday</div>
+<div class="line"> </div>
+<div class="line">; Insert conditional jump operands</div>
+<div class="line">push 0</div>
+<div class="line">push rbx</div>
+<div class="line"> </div>
+<div class="line">jne loop</div>
+<div class="line"> </div>
+<div class="line">mondayOnly:</div>
+</div><!-- fragment --> </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

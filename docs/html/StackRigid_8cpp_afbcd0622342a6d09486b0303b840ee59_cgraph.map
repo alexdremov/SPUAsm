@@ -1,0 +1,4 @@
+<map id="__StackGetChecksumVital" name="__StackGetChecksumVital">
+<area shape="rect" id="node1" title="Uses Adler&#45;32 method. Calculates Stack checksum only for the vital parameters. This is necessary beca..." alt="" coords="5,5,185,32"/>
+<area shape="rect" id="node2" href="$StackRigid_8cpp.html#abc79f40e23ef3b974d01a80274a3df1d" title="Calculates Adler&#45;32 checksum from the firstBlock to the firstBlock + len." alt="" coords="233,5,347,32"/>
+</map>

@@ -87,8 +87,8 @@ int main(int argc, const char * argv[]) {
         if (params.verbose){
             StackDump(core.stack, -1, params.inputFileName, "ERROR");
             printf("REGs: ");
-            for (double i : core.REG){
-                printf("%lg ", i);
+            for (size_t i = 0;  i < sizeof(core.REG) / sizeof(core.REG[0]); i++ ){
+                printf("%lg ", core.REG[i]);
             }
             printf("\n");
         }

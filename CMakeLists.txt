@@ -1,7 +1,9 @@
 # Generated on 2020-10-21 21:12:23 by version 0.9.0 of mulle-xcode-to-cmake
 # Command line:
 #    mulle-xcode-to-cmake -l c++ -f export SoftProcessorUnit.xcodeproj
-
+#
+# cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build
+# cmake -DCMAKE_BUILD_TYPE=Debug   .. && cmake --build
 
 cmake_minimum_required (VERSION 3.4)
 project( SoftProcessorUnit CXX)
@@ -10,8 +12,8 @@ if(NOT CMAKE_BUILD_TYPE)
    set(CMAKE_BUILD_TYPE Release)
 endif()
 
-set(CMAKE_CXX_FLAGS "-Wall -Wextra")
-set(CMAKE_CXX_FLAGS_DEBUG "-g")
+set(CMAKE_CXX_FLAGS "-Wall -Wextra -Werror -Wshadow -Wdouble-promotion -Wformat=2 -Wundef -fno-common -Wconversion")
+set(CMAKE_CXX_FLAGS_DEBUG "-g3 -O0 -ffunction-sections -fdata-sections")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 # ###

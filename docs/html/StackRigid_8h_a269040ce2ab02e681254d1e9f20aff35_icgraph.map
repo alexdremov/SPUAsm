@@ -1,6 +1,6 @@
 <map id="StackRigidMemoryUse" name="StackRigidMemoryUse">
 <area shape="rect" id="node1" title="Memory alocated for the Stack." alt="" coords="747,233,904,260"/>
-<area shape="rect" id="node2" href="$StackRigid_8cpp.html#a08de7058bae2a1e0c566024850286498" title="Claculates big Stack checksum. Uses Adler&#45;32 method." alt="" coords="544,157,699,184"/>
+<area shape="rect" id="node2" href="$StackRigid_8cpp.html#a2dbfc90e6e980278704961c949b0bf58" title="Claculates big Stack checksum. Uses Adler&#45;32 method." alt="" coords="544,157,699,184"/>
 <area shape="rect" id="node14" href="$StackRigid_8h.html#a3addcf7a8000baf1be4d91a779f293e8" title="Free stack memory." alt="" coords="167,259,273,285"/>
 <area shape="rect" id="node15" href="$StackRigid_8h.html#a34ed05fb570dfd9ade77d3c0bd664591" title="Dumps debug information about the stack." alt="" coords="175,309,265,336"/>
 <area shape="rect" id="node17" href="$StackRigid_8cpp.html#a20779cbd888e42054835b58a527bc0e8" title="Reallocates Stack if needed." alt="" coords="343,107,475,133"/>
@@ -10,7 +10,7 @@
 <area shape="rect" id="node7" href="$StackRigid_8h.html#a72e1abcd508a113d2731a622322f0624" title="Push the value to the stack The operation can perform reallocations if there is not enough space." alt="" coords="177,107,263,133"/>
 <area shape="rect" id="node5" href="$EXE_8h.html#a6838d227c2d074080b1b51f9933d52a5" title=" " alt="" coords="43,5,81,32"/>
 <area shape="rect" id="node6" href="$EXE_8h.html#a506d3b0f2bf97707452b7f9605e33c06" title=" " alt="" coords="5,56,119,83"/>
-<area shape="rect" id="node8" href="$EXE_8h.html#a6b6b4f2a625643c9a6adcc67eaadf79c" title=" " alt="" coords="5,107,119,133"/>
+<area shape="rect" id="node8" href="$EXE_8h.html#ae79000a9319a73a135ae724488306b3c" title=" " alt="" coords="5,107,119,133"/>
 <area shape="rect" id="node10" href="$StackRigid_8h.html#a81920cc1380e65ab9173893cb1772d86" title="Free stack memory." alt="" coords="177,157,263,184"/>
 <area shape="rect" id="node12" href="$StackRigid_8h.html#ae1c69d86c62460d198142773ee201d80" title="Clear the stack." alt="" coords="177,208,263,235"/>
 <area shape="rect" id="node11" href="$EXE_8h.html#a5af0df6bc3861faf5a95b122f9fe2856" title=" " alt="" coords="5,157,119,184"/>

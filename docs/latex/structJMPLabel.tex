@@ -6,8 +6,7 @@
 
 
 
-Collaboration diagram for J\+M\+P\+Label\+:
-\nopagebreak
+Collaboration diagram for J\+M\+P\+Label\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,28 +16,28 @@ Collaboration diagram for J\+M\+P\+Label\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structJMPLabel_a0770003bdd8f469a5de65ea9e7302f1d}{J\+M\+P\+Label}} (\mbox{\hyperlink{structJMPLabel}{J\+M\+P\+Label}} $\ast$previous, char $\ast$\mbox{\hyperlink{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}{name}})
+\mbox{\hyperlink{structJMPLabel_a0770003bdd8f469a5de65ea9e7302f1d}{J\+M\+P\+Label}} (\mbox{\hyperlink{structJMPLabel}{J\+M\+P\+Label}} $\ast$previous, \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$\mbox{\hyperlink{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}{name}})
 \item 
 \mbox{\hyperlink{structJMPLabel_a3457883cc04a0209a93359c4e3317669}{$\sim$\+J\+M\+P\+Label}} ()
 \item 
-void \mbox{\hyperlink{structJMPLabel_a2347c15c448293079ae7e1b039643a74}{found\+To\+Position}} (unsigned int position)
+void \mbox{\hyperlink{structJMPLabel_a2347c15c448293079ae7e1b039643a74}{found\+To\+Position}} (unsigned \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} position)
 \item 
 void \mbox{\hyperlink{structJMPLabel_a29e184f855c89c13698cacb3b1a82827}{was\+Used}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-char $\ast$ \mbox{\hyperlink{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}{name}} = N\+U\+LL
+\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$ \mbox{\hyperlink{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}{name}}
 \item 
-size\+\_\+t \mbox{\hyperlink{structJMPLabel_a24a8ba098a8dc8eaf36193998ebdf2f6}{name\+Len}} = 0
+size\+\_\+t \mbox{\hyperlink{structJMPLabel_a24a8ba098a8dc8eaf36193998ebdf2f6}{name\+Len}}
 \item 
-\mbox{\hyperlink{structJMPLabel}{J\+M\+P\+Label}} $\ast$ \mbox{\hyperlink{structJMPLabel_a18b0eaf5621254a95518ced33c188226}{next}} = N\+U\+LL
+\mbox{\hyperlink{structJMPLabel}{J\+M\+P\+Label}} $\ast$ \mbox{\hyperlink{structJMPLabel_a18b0eaf5621254a95518ced33c188226}{next}}
 \item 
-long int \mbox{\hyperlink{structJMPLabel_adbd2aea889c5e5a61ce1b3a93142e99f}{position\+From}} = -\/1
+long \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{structJMPLabel_adbd2aea889c5e5a61ce1b3a93142e99f}{position\+From}}
 \item 
-long int \mbox{\hyperlink{structJMPLabel_a6b67a7b6015f128f7623c1b5854d94d8}{position\+To}} = -\/1
+long \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{structJMPLabel_a6b67a7b6015f128f7623c1b5854d94d8}{position\+To}}
 \item 
-unsigned int \mbox{\hyperlink{structJMPLabel_ac2f35111d1022a99c505c6a2a88db6bc}{used}} = 0
+unsigned \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{structJMPLabel_ac2f35111d1022a99c505c6a2a88db6bc}{used}}
 \end{DoxyCompactItemize}
 
 
@@ -47,16 +46,16 @@ unsigned int \mbox{\hyperlink{structJMPLabel_ac2f35111d1022a99c505c6a2a88db6bc}{
 \index{JMPLabel@{JMPLabel}!JMPLabel@{JMPLabel}}
 \index{JMPLabel@{JMPLabel}!JMPLabel@{JMPLabel}}
 \doxysubsubsection{\texorpdfstring{JMPLabel()}{JMPLabel()}}
-{\footnotesize\ttfamily J\+M\+P\+Label\+::\+J\+M\+P\+Label (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structJMPLabel}{J\+M\+P\+Label}} $\ast$}]{previous,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily J\+M\+P\+Label\+::\+J\+M\+P\+Label (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structJMPLabel}{J\+M\+P\+Label}} $\ast$}]{previous,  }\item[{\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$}]{name }\end{DoxyParamCaption})}
 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{13                                                  \{}
-\DoxyCodeLine{14     \textcolor{keywordflow}{if} (previous != NULL)}
+\DoxyCodeLine{14     \textcolor{keywordflow}{if} (previous != \textcolor{keyword}{nullptr})}
 \DoxyCodeLine{15         previous-\/>\mbox{\hyperlink{structJMPLabel_a18b0eaf5621254a95518ced33c188226}{next}} = \textcolor{keyword}{this};}
 \DoxyCodeLine{16     this-\/>\mbox{\hyperlink{structJMPLabel_a24a8ba098a8dc8eaf36193998ebdf2f6}{nameLen}} = strlen(\mbox{\hyperlink{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}{name}});}
 \DoxyCodeLine{17     this-\/>\mbox{\hyperlink{structJMPLabel_a4efe0b78e5fe8a58a4c62925424affd3}{name}} = (\textcolor{keywordtype}{char}*)calloc(this-\/>\mbox{\hyperlink{structJMPLabel_a24a8ba098a8dc8eaf36193998ebdf2f6}{nameLen}} + 1, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
-\DoxyCodeLine{18     this-\/>\mbox{\hyperlink{structJMPLabel_a18b0eaf5621254a95518ced33c188226}{next}} = NULL;}
+\DoxyCodeLine{18     this-\/>\mbox{\hyperlink{structJMPLabel_a18b0eaf5621254a95518ced33c188226}{next}} = \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{19     this-\/>\mbox{\hyperlink{structJMPLabel_ac2f35111d1022a99c505c6a2a88db6bc}{used}} = 0;}
 \DoxyCodeLine{20     this-\/>\mbox{\hyperlink{structJMPLabel_a6b67a7b6015f128f7623c1b5854d94d8}{positionTo}} = -\/1;}
 \DoxyCodeLine{21     this-\/>\mbox{\hyperlink{structJMPLabel_adbd2aea889c5e5a61ce1b3a93142e99f}{positionFrom}} = -\/1;}
@@ -92,7 +91,7 @@ References name.
 \index{JMPLabel@{JMPLabel}!foundToPosition@{foundToPosition}}
 \index{foundToPosition@{foundToPosition}!JMPLabel@{JMPLabel}}
 \doxysubsubsection{\texorpdfstring{foundToPosition()}{foundToPosition()}}
-{\footnotesize\ttfamily void J\+M\+P\+Label\+::found\+To\+Position (\begin{DoxyParamCaption}\item[{unsigned int}]{position }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void J\+M\+P\+Label\+::found\+To\+Position (\begin{DoxyParamCaption}\item[{unsigned \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}}}]{position }\end{DoxyParamCaption})}
 
 
 \begin{DoxyCode}{0}
@@ -126,8 +125,7 @@ References used.
 
 Referenced by J\+M\+P\+Labels\+Store\+::set\+Label\+To\+Position().
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -141,7 +139,7 @@ Here is the caller graph for this function\+:
 \index{JMPLabel@{JMPLabel}!name@{name}}
 \index{name@{name}!JMPLabel@{JMPLabel}}
 \doxysubsubsection{\texorpdfstring{name}{name}}
-{\footnotesize\ttfamily char$\ast$ J\+M\+P\+Label\+::name = N\+U\+LL}
+{\footnotesize\ttfamily \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}}$\ast$ J\+M\+P\+Label\+::name}
 
 
 
@@ -151,7 +149,7 @@ Referenced by J\+M\+P\+Label(), $\sim$\+J\+M\+P\+Label(), analyze\+Labels\+Error
 \index{JMPLabel@{JMPLabel}!nameLen@{nameLen}}
 \index{nameLen@{nameLen}!JMPLabel@{JMPLabel}}
 \doxysubsubsection{\texorpdfstring{nameLen}{nameLen}}
-{\footnotesize\ttfamily size\+\_\+t J\+M\+P\+Label\+::name\+Len = 0}
+{\footnotesize\ttfamily size\+\_\+t J\+M\+P\+Label\+::name\+Len}
 
 
 
@@ -161,7 +159,7 @@ Referenced by J\+M\+P\+Label().
 \index{JMPLabel@{JMPLabel}!next@{next}}
 \index{next@{next}!JMPLabel@{JMPLabel}}
 \doxysubsubsection{\texorpdfstring{next}{next}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structJMPLabel}{J\+M\+P\+Label}}$\ast$ J\+M\+P\+Label\+::next = N\+U\+LL}
+{\footnotesize\ttfamily \mbox{\hyperlink{structJMPLabel}{J\+M\+P\+Label}}$\ast$ J\+M\+P\+Label\+::next}
 
 
 
@@ -171,7 +169,7 @@ Referenced by J\+M\+P\+Label(), J\+M\+P\+Labels\+Store\+::$\sim$\+J\+M\+P\+Label
 \index{JMPLabel@{JMPLabel}!positionFrom@{positionFrom}}
 \index{positionFrom@{positionFrom}!JMPLabel@{JMPLabel}}
 \doxysubsubsection{\texorpdfstring{positionFrom}{positionFrom}}
-{\footnotesize\ttfamily long int J\+M\+P\+Label\+::position\+From = -\/1}
+{\footnotesize\ttfamily long \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} J\+M\+P\+Label\+::position\+From}
 
 
 
@@ -181,7 +179,7 @@ Referenced by J\+M\+P\+Label(), analyze\+Labels\+Errors(), evaluate\+Labels(), l
 \index{JMPLabel@{JMPLabel}!positionTo@{positionTo}}
 \index{positionTo@{positionTo}!JMPLabel@{JMPLabel}}
 \doxysubsubsection{\texorpdfstring{positionTo}{positionTo}}
-{\footnotesize\ttfamily long int J\+M\+P\+Label\+::position\+To = -\/1}
+{\footnotesize\ttfamily long \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} J\+M\+P\+Label\+::position\+To}
 
 
 
@@ -191,7 +189,7 @@ Referenced by J\+M\+P\+Label(), analyze\+Labels\+Errors(), evaluate\+Labels(), f
 \index{JMPLabel@{JMPLabel}!used@{used}}
 \index{used@{used}!JMPLabel@{JMPLabel}}
 \doxysubsubsection{\texorpdfstring{used}{used}}
-{\footnotesize\ttfamily unsigned int J\+M\+P\+Label\+::used = 0}
+{\footnotesize\ttfamily unsigned \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} J\+M\+P\+Label\+::used}
 
 
 

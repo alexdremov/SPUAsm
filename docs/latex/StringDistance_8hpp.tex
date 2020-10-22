@@ -1,16 +1,14 @@
 \hypertarget{StringDistance_8hpp}{}\doxysection{Soft\+Processor\+Unit/\+Assembly/\+Helpers/\+Analysis\+And\+Preparing/\+String\+Distance.hpp File Reference}
 \label{StringDistance_8hpp}\index{SoftProcessorUnit/Assembly/Helpers/AnalysisAndPreparing/StringDistance.hpp@{SoftProcessorUnit/Assembly/Helpers/AnalysisAndPreparing/StringDistance.hpp}}
-{\ttfamily \#include $<$stdio.\+h$>$}\newline
-Include dependency graph for String\+Distance.\+hpp\+:
-\nopagebreak
+{\ttfamily \#include $<$cstdio$>$}\newline
+Include dependency graph for String\+Distance.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=232pt]{StringDistance_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -39,15 +37,15 @@ enum \mbox{\hyperlink{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919}{Lev
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-unsigned int \mbox{\hyperlink{StringDistance_8hpp_aefb44f0d50d4ec3baf6a3346a1f0577d}{levenshtein\+\_\+distance}} (const char $\ast$str1, const char $\ast$str2, \mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{Levenshtein\+Edit}} $\ast$$\ast$script)
+unsigned \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{StringDistance_8hpp_aefb44f0d50d4ec3baf6a3346a1f0577d}{levenshtein\+\_\+distance}} (const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$str1, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$str2, \mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{Levenshtein\+Edit}} $\ast$$\ast$script)
 \item 
-static unsigned int \mbox{\hyperlink{StringDistance_8hpp_a3b12d839051fb92dc0afd38445dafdec}{levenshtein\+\_\+matrix\+\_\+calculate}} (\mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{Levenshtein\+Edit}} $\ast$$\ast$mat, const char $\ast$str1, size\+\_\+t len1, const char $\ast$str2, size\+\_\+t len2)
+static unsigned \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{StringDistance_8hpp_a3b12d839051fb92dc0afd38445dafdec}{levenshtein\+\_\+matrix\+\_\+calculate}} (\mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{Levenshtein\+Edit}} $\ast$$\ast$mat, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$str1, size\+\_\+t len1, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$str2, size\+\_\+t len2)
 \item 
 static \mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{Levenshtein\+Edit}} $\ast$$\ast$ \mbox{\hyperlink{StringDistance_8hpp_abaef3a4815c6d37d86b010afa8083f42}{levenshtein\+\_\+matrix\+\_\+create}} (size\+\_\+t len1, size\+\_\+t len2)
 \item 
-static int \mbox{\hyperlink{StringDistance_8hpp_a433d5257dea0796eeca004cb2549a013}{min3}} (int a, int b, int c)
+static \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{StringDistance_8hpp_a433d5257dea0796eeca004cb2549a013}{min3}} (\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} a, \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} b, \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} c)
 \item 
-size\+\_\+t \mbox{\hyperlink{StringDistance_8hpp_ae2de998c4ba5a28831558e04eae31c00}{trimwhitespace}} (char $\ast$out, size\+\_\+t len, const char $\ast$str)
+size\+\_\+t \mbox{\hyperlink{StringDistance_8hpp_ae2de998c4ba5a28831558e04eae31c00}{trimwhitespace}} (\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$out, size\+\_\+t len, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$str)
 \end{DoxyCompactItemize}
 
 
@@ -57,8 +55,7 @@ size\+\_\+t \mbox{\hyperlink{StringDistance_8hpp_ae2de998c4ba5a28831558e04eae31c
 \doxysubsubsection{struct Levenshtein\+Edit}
 
 
-Collaboration diagram for Levenshtein\+Edit\+:
-\nopagebreak
+Collaboration diagram for Levenshtein\+Edit\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -67,19 +64,19 @@ Collaboration diagram for Levenshtein\+Edit\+:
 \end{figure}
 \begin{DoxyFields}{Data Fields}
 \mbox{\Hypertarget{StringDistance_8hpp_a173ccf0048be38dde941393205c3311b}\label{StringDistance_8hpp_a173ccf0048be38dde941393205c3311b}} 
-char&
+\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}}&
 arg1&
 \\
 \hline
 
 \mbox{\Hypertarget{StringDistance_8hpp_af15ee0351e4507cc44ac9f3ba6f661e4}\label{StringDistance_8hpp_af15ee0351e4507cc44ac9f3ba6f661e4}} 
-char&
+\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}}&
 arg2&
 \\
 \hline
 
 \mbox{\Hypertarget{StringDistance_8hpp_ad0007a839231496fc1e6ac08d4aa0aa7}\label{StringDistance_8hpp_ad0007a839231496fc1e6ac08d4aa0aa7}} 
-unsigned int&
+unsigned \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}}&
 pos&
 \\
 \hline
@@ -91,7 +88,7 @@ prev&
 \hline
 
 \mbox{\Hypertarget{StringDistance_8hpp_aaa7a506415d915062595e69e6ffed3b5}\label{StringDistance_8hpp_aaa7a506415d915062595e69e6ffed3b5}} 
-unsigned int&
+unsigned \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}}&
 score&
 \\
 \hline
@@ -156,13 +153,13 @@ N\+O\+NE&\\
 \index{StringDistance.hpp@{StringDistance.hpp}!levenshtein\_distance@{levenshtein\_distance}}
 \index{levenshtein\_distance@{levenshtein\_distance}!StringDistance.hpp@{StringDistance.hpp}}
 \doxysubsubsection{\texorpdfstring{levenshtein\_distance()}{levenshtein\_distance()}}
-{\footnotesize\ttfamily unsigned int levenshtein\+\_\+distance (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str1,  }\item[{const char $\ast$}]{str2,  }\item[{\mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{Levenshtein\+Edit}} $\ast$$\ast$}]{script }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily unsigned \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} levenshtein\+\_\+distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$}]{str1,  }\item[{const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$}]{str2,  }\item[{\mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{Levenshtein\+Edit}} $\ast$$\ast$}]{script }\end{DoxyParamCaption})}
 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{104 \{}
 \DoxyCodeLine{105     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} len1 = strlen(str1), len2 = strlen(str2);}
-\DoxyCodeLine{106     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i, distance;}
+\DoxyCodeLine{106     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}, distance;}
 \DoxyCodeLine{107     \mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{LevenshteinEdit}} **mat, *head;}
 \DoxyCodeLine{108     }
 \DoxyCodeLine{109     \textcolor{comment}{/* If either string is empty, the distance is the other string's length */}}
@@ -175,7 +172,7 @@ N\+O\+NE&\\
 \DoxyCodeLine{116     \textcolor{comment}{/* Initialise the matrix */}}
 \DoxyCodeLine{117     mat = \mbox{\hyperlink{StringDistance_8cpp_abaef3a4815c6d37d86b010afa8083f42}{levenshtein\_matrix\_create}}(len1, len2);}
 \DoxyCodeLine{118     \textcolor{keywordflow}{if} (!mat) \{}
-\DoxyCodeLine{119         *script = NULL;}
+\DoxyCodeLine{119         *script = \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{120         \textcolor{keywordflow}{return} 0;}
 \DoxyCodeLine{121     \}}
 \DoxyCodeLine{122     \textcolor{comment}{/* Main algorithm */}}
@@ -183,13 +180,13 @@ N\+O\+NE&\\
 \DoxyCodeLine{124     \textcolor{comment}{/* Read back the edit script */}}
 \DoxyCodeLine{125     *script = (\mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{LevenshteinEdit}} *)malloc(distance * \textcolor{keyword}{sizeof}(\mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{LevenshteinEdit}}));}
 \DoxyCodeLine{126     \textcolor{keywordflow}{if} (*script) \{}
-\DoxyCodeLine{127         i = distance -\/ 1;}
+\DoxyCodeLine{127         \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = distance -\/ 1;}
 \DoxyCodeLine{128         \textcolor{keywordflow}{for} (head = \&mat[len1][len2];}
-\DoxyCodeLine{129              head-\/>\mbox{\hyperlink{StringDistance_8hpp_a957e8154d1567c70a86f0b97e9c299a3}{prev}} != NULL;}
+\DoxyCodeLine{129              head-\/>\mbox{\hyperlink{StringDistance_8hpp_a957e8154d1567c70a86f0b97e9c299a3}{prev}} != \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{130              head = head-\/>\mbox{\hyperlink{StringDistance_8hpp_a957e8154d1567c70a86f0b97e9c299a3}{prev}}) \{}
 \DoxyCodeLine{131             \textcolor{keywordflow}{if} (head-\/>\mbox{\hyperlink{StringDistance_8hpp_afcf648925706bb441df48b249e5edb6a}{type}} != \mbox{\hyperlink{StringDistance_8hpp_a4e87054b7bc083ef8dd6058e04d4e919ac157bdf0b85a40d2619cbc8bc1ae5fe2}{NONE}}) \{}
-\DoxyCodeLine{132                 memcpy(*script + i, head, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{LevenshteinEdit}}));}
-\DoxyCodeLine{133                 i-\/-\/;}
+\DoxyCodeLine{132                 memcpy(*script + \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}, head, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{LevenshteinEdit}}));}
+\DoxyCodeLine{133                 \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}-\/-\/;}
 \DoxyCodeLine{134             \}}
 \DoxyCodeLine{135         \}}
 \DoxyCodeLine{136     \}}
@@ -197,8 +194,8 @@ N\+O\+NE&\\
 \DoxyCodeLine{138         distance = 0;}
 \DoxyCodeLine{139     \}}
 \DoxyCodeLine{140     \textcolor{comment}{/* Clean up */}}
-\DoxyCodeLine{141     \textcolor{keywordflow}{for} (i = 0; i <= len1; i++) \{}
-\DoxyCodeLine{142         free(mat[i]);}
+\DoxyCodeLine{141     \textcolor{keywordflow}{for} (\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 0; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} <= len1; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++) \{}
+\DoxyCodeLine{142         free(mat[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}]);}
 \DoxyCodeLine{143     \}}
 \DoxyCodeLine{144     free(mat);}
 \DoxyCodeLine{145     }
@@ -208,22 +205,20 @@ N\+O\+NE&\\
 \end{DoxyCode}
 
 
-References levenshtein\+\_\+matrix\+\_\+calculate(), levenshtein\+\_\+matrix\+\_\+create(), N\+O\+NE, Levenshtein\+Edit\+::prev, and Levenshtein\+Edit\+::type.
+References i, levenshtein\+\_\+matrix\+\_\+calculate(), levenshtein\+\_\+matrix\+\_\+create(), N\+O\+NE, Levenshtein\+Edit\+::prev, and Levenshtein\+Edit\+::type.
 
 
 
 Referenced by best\+Match\+Command().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{StringDistance_8hpp_aefb44f0d50d4ec3baf6a3346a1f0577d_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -234,7 +229,7 @@ Here is the caller graph for this function\+:
 \index{StringDistance.hpp@{StringDistance.hpp}!levenshtein\_matrix\_calculate@{levenshtein\_matrix\_calculate}}
 \index{levenshtein\_matrix\_calculate@{levenshtein\_matrix\_calculate}!StringDistance.hpp@{StringDistance.hpp}}
 \doxysubsubsection{\texorpdfstring{levenshtein\_matrix\_calculate()}{levenshtein\_matrix\_calculate()}}
-{\footnotesize\ttfamily static unsigned int levenshtein\+\_\+matrix\+\_\+calculate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{Levenshtein\+Edit}} $\ast$$\ast$}]{mat,  }\item[{const char $\ast$}]{str1,  }\item[{size\+\_\+t}]{len1,  }\item[{const char $\ast$}]{str2,  }\item[{size\+\_\+t}]{len2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static unsigned \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} levenshtein\+\_\+matrix\+\_\+calculate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{StringDistance_8hpp_structLevenshteinEdit}{Levenshtein\+Edit}} $\ast$$\ast$}]{mat,  }\item[{const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$}]{str1,  }\item[{size\+\_\+t}]{len1,  }\item[{const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$}]{str2,  }\item[{size\+\_\+t}]{len2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{StringDistance_8hpp_abaef3a4815c6d37d86b010afa8083f42}\label{StringDistance_8hpp_abaef3a4815c6d37d86b010afa8083f42}} 
 \index{StringDistance.hpp@{StringDistance.hpp}!levenshtein\_matrix\_create@{levenshtein\_matrix\_create}}
@@ -246,13 +241,13 @@ Here is the caller graph for this function\+:
 \index{StringDistance.hpp@{StringDistance.hpp}!min3@{min3}}
 \index{min3@{min3}!StringDistance.hpp@{StringDistance.hpp}}
 \doxysubsubsection{\texorpdfstring{min3()}{min3()}}
-{\footnotesize\ttfamily static int min3 (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} min3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}}}]{a,  }\item[{\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}}}]{b,  }\item[{\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}}}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{StringDistance_8hpp_ae2de998c4ba5a28831558e04eae31c00}\label{StringDistance_8hpp_ae2de998c4ba5a28831558e04eae31c00}} 
 \index{StringDistance.hpp@{StringDistance.hpp}!trimwhitespace@{trimwhitespace}}
 \index{trimwhitespace@{trimwhitespace}!StringDistance.hpp@{StringDistance.hpp}}
 \doxysubsubsection{\texorpdfstring{trimwhitespace()}{trimwhitespace()}}
-{\footnotesize\ttfamily size\+\_\+t trimwhitespace (\begin{DoxyParamCaption}\item[{char $\ast$}]{out,  }\item[{size\+\_\+t}]{len,  }\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily size\+\_\+t trimwhitespace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$}]{out,  }\item[{size\+\_\+t}]{len,  }\item[{const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$}]{str }\end{DoxyParamCaption})}
 
 
 \begin{DoxyCode}{0}
@@ -296,16 +291,14 @@ References isspace().
 
 Referenced by analyze\+Instruction\+Errors().
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=249pt]{StringDistance_8hpp_ae2de998c4ba5a28831558e04eae31c00_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

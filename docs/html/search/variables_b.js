@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['reg_486',['REG',['../SPUDtypes_8hpp.html#a73b3a44c7e762d16b1952dad905f39c2',1,'SPUCore::REG()'],['../EXE_8h.html#a38c8209dd3635b1b8bedfb5718247d09',1,'REG():&#160;EXE.h']]],
-  ['result_487',['result',['../EXE_8h.html#a648bf88b6941d0a6f80ee99e8821a527',1,'EXE.h']]],
-  ['right_488',['right',['../EXE_8h.html#ab833bacb3fa8d1a189efcbba74f10fa1',1,'EXE.h']]]
+  ['name_1342',['name',['../structJMPLabel.html#a4efe0b78e5fe8a58a4c62925424affd3',1,'JMPLabel']]],
+  ['namelen_1343',['nameLen',['../structJMPLabel.html#a24a8ba098a8dc8eaf36193998ebdf2f6',1,'JMPLabel']]],
+  ['naming_1344',['naming',['../structSyntaxEntity.html#a252ef676e30b71d20885c1c5de0be82d',1,'SyntaxEntity']]],
+  ['next_1345',['next',['../structJMPLabel.html#a18b0eaf5621254a95518ced33c188226',1,'JMPLabel']]],
+  ['noargs_1346',['NOARGS',['../INFO_8h.html#a91824da07e6f417f6429ac06bb354484',1,'INFO.h']]],
+  ['number_1347',['number',['../Syntax_8hpp.html#ae87ea199cc92a108e220ba6eb7a46462',1,'SyntaxMapping']]]
 ];

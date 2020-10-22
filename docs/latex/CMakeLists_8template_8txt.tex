@@ -1,0 +1,73 @@
+\hypertarget{CMakeLists_8template_8txt}{}\doxysection{C\+Make\+Lists.\+template.\+txt File Reference}
+\label{CMakeLists_8template_8txt}\index{CMakeLists.template.txt@{CMakeLists.template.txt}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{CMakeLists_8template_8txt_a2090fa0d42af52be9dcebbead0ccbccf}{cmake\+\_\+minimum\+\_\+required}} (V\+E\+R\+S\+I\+ON 3.\+4) project(Soft\+Processor\+Unit C\+XX) \mbox{\hyperlink{EXE_8h_ac87ca7fc2f6296d74a119abbbde005e7}{if}}(N\+OT D\+E\+P\+E\+N\+D\+E\+N\+C\+Y\+\_\+\+D\+IR) \mbox{\hyperlink{CMakeLists_8template_8txt_aa3074bf1aaa414d9ed16204b2eee8d28}{set}}(D\+E\+P\+E\+N\+D\+E\+N\+C\+Y\+\_\+\+D\+IR \char`\"{}\$E\+NV
+\item 
+\mbox{\hyperlink{CMakeLists_8template_8txt_a274534a1fb64b25ca5ef0343efb122ff}{endif}} () \mbox{\hyperlink{EXE_8h_ac87ca7fc2f6296d74a119abbbde005e7}{if}}(N\+OT D\+E\+P\+E\+N\+D\+E\+N\+C\+Y\+\_\+\+D\+IR) \mbox{\hyperlink{CMakeLists_8template_8txt_aa3074bf1aaa414d9ed16204b2eee8d28}{set}}(D\+E\+P\+E\+N\+D\+E\+N\+C\+Y\+\_\+\+D\+IR \char`\"{}\$
+\item 
+\mbox{\hyperlink{CMakeLists_8template_8txt_a2f7607e8ab34d96082f7535abdc83d5c}{if}} (N\+OT A\+D\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+IR) get\+\_\+filename\+\_\+component(A\+D\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+IR \char`\"{}\$
+\item 
+D\+I\+R\+E\+C\+T\+O\+RY \mbox{\hyperlink{CMakeLists_8template_8txt_aa3074bf1aaa414d9ed16204b2eee8d28}{set}} (A\+D\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+IR \char`\"{}\$\{A\+D\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+IR\}/addiction\char`\"{}) endif() set(C\+M\+A\+K\+E\+\_\+\+F\+I\+N\+D\+\_\+\+F\+R\+A\+M\+E\+W\+O\+RK \char`\"{}L\+A\+ST\char`\"{}) include\+\_\+directories(B\+E\+F\+O\+RE S\+Y\+S\+T\+EM \$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{CMakeLists_8template_8txt_a2090fa0d42af52be9dcebbead0ccbccf}\label{CMakeLists_8template_8txt_a2090fa0d42af52be9dcebbead0ccbccf}} 
+\index{CMakeLists.template.txt@{CMakeLists.template.txt}!cmake\_minimum\_required@{cmake\_minimum\_required}}
+\index{cmake\_minimum\_required@{cmake\_minimum\_required}!CMakeLists.template.txt@{CMakeLists.template.txt}}
+\doxysubsubsection{\texorpdfstring{cmake\_minimum\_required()}{cmake\_minimum\_required()}}
+{\footnotesize\ttfamily cmake\+\_\+minimum\+\_\+required (\begin{DoxyParamCaption}\item[{V\+E\+R\+S\+I\+ON 3.}]{4 }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10                              :\textcolor{comment}{//mulle-\/objc.github.io/):}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#    mulle-\/sde init -\/m foundation/objc-\/porter executable}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#    mulle-\/sde craft}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\# [mulle-\/clang >= 8.0.0.0 and mulle-\/objc >= 0.15 required]}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keywordflow}{if}( NOT DEPENDENCY\_DIR)}
+\DoxyCodeLine{19    \mbox{\hyperlink{CMakeLists_8template_8txt_aa3074bf1aaa414d9ed16204b2eee8d28}{set}}( DEPENDENCY\_DIR \textcolor{stringliteral}{"{}\$ENV\{DEPENDENCY\_DIR\}"{}})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{CMakeLists_8template_8txt_a274534a1fb64b25ca5ef0343efb122ff}\label{CMakeLists_8template_8txt_a274534a1fb64b25ca5ef0343efb122ff}} 
+\index{CMakeLists.template.txt@{CMakeLists.template.txt}!endif@{endif}}
+\index{endif@{endif}!CMakeLists.template.txt@{CMakeLists.template.txt}}
+\doxysubsubsection{\texorpdfstring{endif()}{endif()}}
+{\footnotesize\ttfamily dependency endif (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22                          \{PROJECT\_SOURCE\_DIR\}/dependency\textcolor{stringliteral}{"{})}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{CMakeLists_8template_8txt_a2f7607e8ab34d96082f7535abdc83d5c}\label{CMakeLists_8template_8txt_a2f7607e8ab34d96082f7535abdc83d5c}} 
+\index{CMakeLists.template.txt@{CMakeLists.template.txt}!if@{if}}
+\index{if@{if}!CMakeLists.template.txt@{CMakeLists.template.txt}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{N\+OT}]{A\+D\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+IR }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26                                               \{DEPENDENCY\_DIR\}\textcolor{stringliteral}{"{} DIRECTORY)}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{CMakeLists_8template_8txt_aa3074bf1aaa414d9ed16204b2eee8d28}\label{CMakeLists_8template_8txt_aa3074bf1aaa414d9ed16204b2eee8d28}} 
+\index{CMakeLists.template.txt@{CMakeLists.template.txt}!set@{set}}
+\index{set@{set}!CMakeLists.template.txt@{CMakeLists.template.txt}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily D\+I\+R\+E\+C\+T\+O\+RY set (\begin{DoxyParamCaption}\item[{A\+D\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+IR \char`\"{}\$\{A\+D\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+IR\}/addiction\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27                            \{ADDICTION\_DIR\}/addiction\textcolor{stringliteral}{"{})}}
+\DoxyCodeLine{28 \textcolor{stringliteral}{   endif()}}
+\DoxyCodeLine{29 \textcolor{stringliteral}{   set( CMAKE\_FIND\_FRAMEWORK "{}}LAST\textcolor{stringliteral}{"{})}}
+\DoxyCodeLine{30 \textcolor{stringliteral}{   include\_directories( BEFORE SYSTEM}}
+\DoxyCodeLine{31 \textcolor{stringliteral}{      \$\{DEPENDENCY\_DIR\}/include}}
+
+\end{DoxyCode}

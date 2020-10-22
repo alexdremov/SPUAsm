@@ -1,0 +1,101 @@
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+ \href{https://app.codacy.com/gh/AlexRoar/SPUAsm?utm_source=github.com&utm_medium=referral&utm_content=AlexRoar/SPUAsm&utm_campaign=Badge_Grade}{\texttt{ }} \href{https://www.codefactor.io/repository/github/alexroar/spuasm}{\texttt{ }}\hypertarget{index_autotoc_md1}{}\doxysection{Описание}\label{index_autotoc_md1}
+В данном проекте реализован транслятор кода в неравномерный байткод, дизассемблер для байткода, исполнитель байткода (Soft Processor Unit).
+
+В дополнение, присутствует анализатор кода, проверяющий синтаксические ошибки и выбрасывающий отчет в clang формате. Поэтому, X\+Code и другие I\+DE поддерживающие clang подсвечивают неверные выражения, отображают комментарии.
+
+Во время трансляции генерируется .lst файл, содержащий информацию о трансляции, на каком offset бинарника какая команда и тд. Все доступно в примерах.
+
+ \hypertarget{index_autotoc_md2}{}\doxysection{Ссылки}\label{index_autotoc_md2}
+
+\begin{DoxyItemize}
+\item \href{https://alexroar.github.io/SPUAsm/html/}{\texttt{ Документация}}
+\item \href{https://github.com/AlexRoar/SPUAsm/blob/main/SoftProcessorUnit/Assembly/SPUAssembly.cpp}{\texttt{ Основной код транслятора}}
+\item \href{https://github.com/AlexRoar/SPUAsm/blob/main/SoftProcessorUnit/Disassembly/SPUDisAssembly.cpp}{\texttt{ Основной код дизассемблера}}
+\item \href{https://github.com/AlexRoar/SPUAsm/blob/main/SoftProcessorUnit/SPU/SPU.cpp}{\texttt{ Основной код S\+PU}}
+\item \href{https://github.com/AlexRoar/SPUAsm/tree/main/Examples/SPUAsm/SPUAsm}{\texttt{ Примеры}}
+\end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysection{Установка}\label{index_autotoc_md3}
+Перейти в директорию проекта и выполнить\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{cmake -\/DCMAKE\_BUILD\_TYPE=Release ..}
+\DoxyCodeLine{cmake -\/-\/build .}
+\end{DoxyCode}
+
+
+Создадутся 3 исполняемых файла\+:
+\begin{DoxyItemize}
+\item {\bfseries{S\+PU}} -\/ Soft Processor Unit, выполняет созданные программы
+\item {\bfseries{S\+P\+U\+Asm}} -\/ транслирует программу в файл для исполнения S\+PU
+\item {\bfseries{S\+P\+U\+Dis\+Asm}} -\/ дизассемблер файлов сгенерированных S\+P\+U\+Asm
+\end{DoxyItemize}\hypertarget{index_autotoc_md4}{}\doxysection{Использование}\label{index_autotoc_md4}
+{\bfseries{S\+P\+U\+Asm}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ SPUAsm <source file>}
+\DoxyCodeLine{        -\/E                          -\/ generate preprocessed file}
+\DoxyCodeLine{        -\/-\/verbose                   -\/ output assembly debug information}
+\DoxyCodeLine{        -\/-\/lst <filename.lst>        -\/ listing file ofgenerated code }
+\DoxyCodeLine{        -\/-\/input <filename.spus>     -\/ source file (can be specified without -\/-\/input)}
+\DoxyCodeLine{        -\/-\/output <filename.spub>    -\/ binary assembled file}
+\DoxyCodeLine{        -\/h, -\/-\/help                  -\/ show help message}
+\end{DoxyCode}
+
+
+{\bfseries{S\+P\+U\+Dis\+Asm}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ SPUDisAsm <binary file>}
+\DoxyCodeLine{        -\/-\/verbose                   -\/ output assembly debug information}
+\DoxyCodeLine{        -\/-\/input <filename.spub>     -\/ binary assembled file}
+\DoxyCodeLine{        -\/-\/output <filename.spus>    -\/ source file (if not specified, stdout selected)}
+\DoxyCodeLine{        -\/h, -\/-\/help                  -\/ show help message}
+\end{DoxyCode}
+
+
+{\bfseries{S\+PU}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ SPU <binary file>}
+\DoxyCodeLine{        -\/-\/verbose                   -\/ output assembly debug information}
+\DoxyCodeLine{        -\/-\/input <filename.spub>     -\/ binary assembled file}
+\DoxyCodeLine{        -\/-\/output <filename.spus>    -\/ source file (if not specified, stdout selected)}
+\DoxyCodeLine{        -\/h, -\/-\/help                  -\/ show help message}
+\end{DoxyCode}
+\hypertarget{index_autotoc_md5}{}\doxysection{Примеры программ}\label{index_autotoc_md5}
+Квадраты первых n чисел 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{;}
+\DoxyCodeLine{; Squares}
+\DoxyCodeLine{;}
+\DoxyCodeLine{}
+\DoxyCodeLine{in rbx  ; rbx as counter}
+\DoxyCodeLine{}
+\DoxyCodeLine{push 0}
+\DoxyCodeLine{pop rax}
+\DoxyCodeLine{}
+\DoxyCodeLine{loop:}
+\DoxyCodeLine{dec rbx  ; decrease counter}
+\DoxyCodeLine{}
+\DoxyCodeLine{; Calculating square}
+\DoxyCodeLine{push rax}
+\DoxyCodeLine{push rax}
+\DoxyCodeLine{mul}
+\DoxyCodeLine{out}
+\DoxyCodeLine{}
+\DoxyCodeLine{; Prepare for the next loop}
+\DoxyCodeLine{pop}
+\DoxyCodeLine{inc rax}
+\DoxyCodeLine{}
+\DoxyCodeLine{jm mondayOnly ; exit if it is monday}
+\DoxyCodeLine{}
+\DoxyCodeLine{; Insert conditional jump operands}
+\DoxyCodeLine{push 0}
+\DoxyCodeLine{push rbx}
+\DoxyCodeLine{}
+\DoxyCodeLine{jne loop}
+\DoxyCodeLine{}
+\DoxyCodeLine{mondayOnly:}
+\end{DoxyCode}
+ 

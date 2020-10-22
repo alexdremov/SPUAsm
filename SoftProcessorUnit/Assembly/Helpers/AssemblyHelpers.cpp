@@ -50,9 +50,9 @@ int parseArgs(int argc, const char* argv[], AssemblyParams* params) {
             newParams.verbose = 1;
         }else if (strcmp(argv[i], "--help") == 0 || strcmp(argv[i], "-h") == 0) {
             printAssemblyHelpData();
-        }else if (strcmp(argv[i], "--lstfile") == 0) {
+        }else if (strcmp(argv[i], "--lst") == 0) {
             if (i + 1 > argc){
-                printf("error: assembly: No lstfile file specified after --lstfile\n");
+                printf("error: assembly: No lstfile file specified after --lst\n");
                 return EXIT_FAILURE;
             }
             FILE* lstFile = fopen(argv[i + 1], "wb");
@@ -180,7 +180,7 @@ void printAssemblyHelpData() {
            "--output    <output file> output file. output.spub by default (spu binary)\n"
            "-h, --help  show this help message\n"
            "--verbose   output assembly debug information to the console\n"
-           "--lstfile   <.lst file> file to output .lst assembly data assembly.lst by default\n"
+           "--lst   <.lst file> file to output .lst assembly data assembly.lst by default\n"
            "-E          generate preprocessed file assembly.spuprep\n"
            "\n",
            SPUAssemblyVersion_chars[0],

@@ -1,13 +1,12 @@
 \hypertarget{SPUAssembly_8cpp}{}\doxysection{Soft\+Processor\+Unit/\+Assembly/\+S\+P\+U\+Assembly.cpp File Reference}
 \label{SPUAssembly_8cpp}\index{SoftProcessorUnit/Assembly/SPUAssembly.cpp@{SoftProcessorUnit/Assembly/SPUAssembly.cpp}}
-{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
 {\ttfamily \#include \char`\"{}Syntax.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Assembly\+Helpers.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Commands\+Parser.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}S\+P\+U\+Version.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Code\+Analysis.\+hpp\char`\"{}}\newline
-Include dependency graph for S\+P\+U\+Assembly.\+cpp\+:
-\nopagebreak
+Include dependency graph for S\+P\+U\+Assembly.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,7 +16,7 @@ Include dependency graph for S\+P\+U\+Assembly.\+cpp\+:
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{SPUAssembly_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main}} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
+\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{SPUAssembly_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main}} (\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} argc, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$argv\mbox{[}$\,$\mbox{]})
 \end{DoxyCompactItemize}
 
 
@@ -26,7 +25,7 @@ int \mbox{\hyperlink{SPUAssembly_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main}} 
 \index{SPUAssembly.cpp@{SPUAssembly.cpp}!main@{main}}
 \index{main@{main}!SPUAssembly.cpp@{SPUAssembly.cpp}}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
-{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}}}]{argc,  }\item[{const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
 
 \begin{DoxyCode}{0}
@@ -58,7 +57,7 @@ int \mbox{\hyperlink{SPUAssembly_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main}} 
 \DoxyCodeLine{41     }
 \DoxyCodeLine{42     \mbox{\hyperlink{CommandsParser_8cpp_a9c053f5b726840410e982bf98a5dc7ec}{preprocessSource}}(code, \&codeLen);}
 \DoxyCodeLine{43     }
-\DoxyCodeLine{44     \textcolor{keywordflow}{if} (compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a8fa74a2c523da8c898363c84e5358a85}{prepFile}} != NULL) \{}
+\DoxyCodeLine{44     \textcolor{keywordflow}{if} (compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a8fa74a2c523da8c898363c84e5358a85}{prepFile}} != \textcolor{keyword}{nullptr}) \{}
 \DoxyCodeLine{45         fwrite(code, 1, codeLen,compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a8fa74a2c523da8c898363c84e5358a85}{prepFile}});}
 \DoxyCodeLine{46     \}}
 \DoxyCodeLine{47     }
@@ -77,8 +76,8 @@ int \mbox{\hyperlink{SPUAssembly_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main}} 
 \DoxyCodeLine{60     }
 \DoxyCodeLine{61     \textcolor{keywordflow}{if} (compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a3998875859d91d9614897720dd09aa3a}{verbose}})\{}
 \DoxyCodeLine{62         printf(\textcolor{stringliteral}{"{}Generated code: \(\backslash\)n"{}});}
-\DoxyCodeLine{63         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}}; i++) \{}
-\DoxyCodeLine{64             printf(\textcolor{stringliteral}{"{}\%d "{}}, (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}}[i]);}
+\DoxyCodeLine{63         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 0; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} < binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}}; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++) \{}
+\DoxyCodeLine{64             printf(\textcolor{stringliteral}{"{}\%d "{}}, (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}]);}
 \DoxyCodeLine{65         \}}
 \DoxyCodeLine{66         printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
 \DoxyCodeLine{67     \}}
@@ -94,10 +93,9 @@ int \mbox{\hyperlink{SPUAssembly_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main}} 
 \end{DoxyCode}
 
 
-References Binary\+File\+::code, code\+Estimations(), Assembly\+Params\+::code\+Text, Binary\+File\+::current\+Size, Destruct\+Assembly\+Params(), Destruct\+Binary\+File(), flush\+Bin\+File(), generate\+Errors(), get\+Source\+File\+Data(), get\+Syntax\+Mapping(), Assembly\+Params\+::input\+File, Assembly\+Params\+::input\+File\+Name, New\+Binary\+File(), Assembly\+Params\+::output\+File, parse\+Args(), parse\+Code(), Assembly\+Params\+::prep\+File, preprocess\+Source(), print\+Assembly\+Version(), remove\+Double\+Whitespaces(), S\+P\+U\+\_\+\+P\+A\+R\+S\+E\+\_\+\+OK, and Assembly\+Params\+::verbose.
+References Binary\+File\+::code, code\+Estimations(), Assembly\+Params\+::code\+Text, Binary\+File\+::current\+Size, Destruct\+Assembly\+Params(), Destruct\+Binary\+File(), flush\+Bin\+File(), generate\+Errors(), get\+Source\+File\+Data(), get\+Syntax\+Mapping(), i, Assembly\+Params\+::input\+File, Assembly\+Params\+::input\+File\+Name, New\+Binary\+File(), Assembly\+Params\+::output\+File, parse\+Args(), parse\+Code(), Assembly\+Params\+::prep\+File, preprocess\+Source(), print\+Assembly\+Version(), remove\+Double\+Whitespaces(), S\+P\+U\+\_\+\+P\+A\+R\+S\+E\+\_\+\+OK, and Assembly\+Params\+::verbose.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
