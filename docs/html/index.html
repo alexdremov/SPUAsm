@@ -73,7 +73,7 @@ Description</h1>
 <p><img src="https://github.com/AlexRoar/SPUAsm/raw/main/Images/errors.png" alt="" style="max-height: 100px" class="inline"/></p>
 <p>During the translation, .lst file is generated. It provides information about bytecode generation and what command at what offset is located.</p>
 <p><img src="https://github.com/AlexRoar/SPUAsm/raw/main/Images/generalview.png" alt="" style="max-height: 250px" class="inline"/></p>
-<p><a href="https://alexroar.github.io/SPUAsm/html/"><b>Docs</b></a></p>
+<p><a href="https://alexroar.github.io/SPUAsm/html/"><b>Documentation</b></a></p>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Installation</h1>
 <p>Enter project's directory and execute:</p>
@@ -89,21 +89,21 @@ Installation</h1>
 <h1><a class="anchor" id="autotoc_md3"></a>
 Usage</h1>
 <p><b>SPUAsm</b> </p><div class="fragment"><div class="line">$ SPUAsm &lt;source file&gt;</div>
+<div class="line">        --input &lt;filename.spus&gt;     - source file (can be specified without --input)</div>
+<div class="line">        --output &lt;filename.spub&gt;    - binary assembled file</div>
 <div class="line">        -E                          - generate preprocessed file</div>
 <div class="line">        --verbose                   - output assembly debug information</div>
 <div class="line">        --lst &lt;filename.lst&gt;        - listing file of generated code (assembly.lst by default) </div>
-<div class="line">        --input &lt;filename.spus&gt;     - source file (can be specified without --input)</div>
-<div class="line">        --output &lt;filename.spub&gt;    - binary assembled file</div>
 <div class="line">        -h, --help                  - show help message</div>
 </div><!-- fragment --><p><b>SPUDisAsm</b> </p><div class="fragment"><div class="line">$ SPUDisAsm &lt;binary file&gt;</div>
-<div class="line">        --verbose                   - output assembly debug information</div>
 <div class="line">        --input &lt;filename.spub&gt;     - binary assembled file</div>
 <div class="line">        --output &lt;filename.spus&gt;    - source file (if not specified, stdout selected)</div>
+<div class="line">        --verbose                   - output assembly debug information</div>
 <div class="line">        -h, --help                  - show help message</div>
 </div><!-- fragment --><p><b>SPU</b> </p><div class="fragment"><div class="line">$ SPU &lt;binary file&gt;</div>
-<div class="line">        --verbose                   - output assembly debug information</div>
 <div class="line">        --input &lt;filename.spub&gt;     - binary assembled file</div>
 <div class="line">        --output &lt;filename.spus&gt;    - source file (if not specified, stdout selected)</div>
+<div class="line">        --verbose                   - output assembly debug information</div>
 <div class="line">        -h, --help                  - show help message</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md4"></a>
 Algorithm description</h1>
@@ -115,7 +115,7 @@ Algorithm description</h1>
 <li>Translation</li>
 <li>Final checks</li>
 </ul>
-<p>If process fails on any part, the nest parts are not executed.</p>
+<p>If process fails on any part, the next parts are not executed.</p>
 <h3><a class="anchor" id="autotoc_md5"></a>
 Cleanup</h3>
 <p>Just double whitespaces, trailing/leading whitespaces removed. Operations that does not change code structure, lines number etc.</p>
@@ -132,9 +132,52 @@ Translation</h3>
 Final checks</h3>
 <p>Check that all operations completed correctly; labels table is complete and not redundant.</p>
 <h1><a class="anchor" id="autotoc_md10"></a>
+Syntax</h1>
+<p><b>push</b> &lt;instant value/register&gt; Push value to the stack</p>
+<p><b>pop</b> &lt;empty/register&gt; Pop value from the stack</p><ul>
+<li>no args - just delete</li>
+<li>register - pop and save to register</li>
+</ul>
+<p><b>in</b> &lt;empty/register&gt; Request value from the console</p><ul>
+<li>no args - push value to the stack</li>
+<li>register - save to the register</li>
+</ul>
+<p><b>out</b> &lt;empty/register&gt; Prints value to the console</p><ul>
+<li>no args - last stack value</li>
+<li>register - register value</li>
+</ul>
+<p><b>inc</b> &lt;empty/register&gt; Increments the value</p><ul>
+<li>no args - increment the last stack element</li>
+<li>register - increment the register</li>
+</ul>
+<p><b>dec</b> &lt;empty/register&gt; Decrements the value</p><ul>
+<li>no args - increment the last stack element</li>
+<li>register - increment the register</li>
+</ul>
+<p><b>dump</b> Dump stack information</p>
+<p><b>clear</b> Clear stack</p>
+<p><b>add</b> Add two last stack values and push to the stack</p>
+<p><b>sub</b> Substract two last stack values and push to the stack</p>
+<p><b>mul</b> Multiply two last stack values and push to the stack</p>
+<p><b>div</b> Divide two last stack values and push to the stack</p>
+<p><b>sin</b> Sin of the last stack value</p>
+<p><b>cos</b> Cos of the last stack value</p>
+<p><b>sqrt</b> Square root of the last stack value</p>
+<p><b>pow</b> The pre-last element of the stack to the power of the last one</p>
+<p><b>het</b> Finish the program</p>
+<p><b>jmp</b> &lt;label&gt; Jump to the label</p>
+<p><b>jb</b> &lt;label&gt; Jump if last element is bigger than pre-last. Removes both operands from the stack</p>
+<p><b>jbe</b> &lt;label&gt; Jump if last element is bigger-or-equal than pre-last. Removes both operands from the stack</p>
+<p><b>je</b> &lt;label&gt; Jump if last element is equal to the pre-last one. Removes both operands from the stack</p>
+<p><b>jne</b> &lt;label&gt; Jump if last element is not equal to the pre-last one. Removes both operands from the stack</p>
+<p><b>ja</b> &lt;label&gt; Jump if last element is lower than pre-last. Removes both operands from the stack</p>
+<p><b>jae</b> &lt;label&gt; Jump if last element is lower-or-equal than pre-last. Removes both operands from the stack</p>
+<p><b>jm</b> &lt;label&gt; Jump if it's Monday.</p>
+<p>**&lt;labelName&gt;:** Creates label</p>
+<h1><a class="anchor" id="autotoc_md11"></a>
 Examples</h1>
 <p>All examples are available <a href="https://github.com/AlexRoar/SPUAsm/tree/main/Examples/SPUAsm/SPUAsm">in this dir</a>.</p>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 Squares of first n numbers</h2>
 <div class="fragment"><div class="line">;</div>
 <div class="line">; Squares</div>
@@ -167,7 +210,7 @@ Squares of first n numbers</h2>
 <div class="line">jne loop</div>
 <div class="line"> </div>
 <div class="line">mondayOnly:</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md12"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md13"></a>
 Square equation solutions</h2>
 <div class="fragment"><div class="line">;</div>
 <div class="line">; Data input</div>
@@ -229,7 +272,7 @@ Square equation solutions</h2>
 <div class="line">;</div>
 <div class="line">out     rax</div>
 <div class="line">out     rcx</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md13"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md14"></a>
 Links</h1>
 <ul>
 <li><a href="https://github.com/AlexRoar/SPUAsm/blob/main/SoftProcessorUnit/Assembly/SPUAssembly.cpp">SPUAsm code</a></li>

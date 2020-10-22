@@ -11,7 +11,7 @@ During the translation, .lst file is generated. It provides information about by
 
 
 
-\href{https://alexroar.github.io/SPUAsm/html/}{\texttt{ {\bfseries{Docs}}}}\hypertarget{index_autotoc_md2}{}\doxysection{Installation}\label{index_autotoc_md2}
+\href{https://alexroar.github.io/SPUAsm/html/}{\texttt{ {\bfseries{Documentation}}}}\hypertarget{index_autotoc_md2}{}\doxysection{Installation}\label{index_autotoc_md2}
 Enter project\textquotesingle{}s directory and execute\+:
 
 
@@ -32,11 +32,11 @@ Three files will be created\+:
 {\bfseries{S\+P\+U\+Asm}} 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\$ SPUAsm <source file>}
+\DoxyCodeLine{        -\/-\/input <filename.spus>     -\/ source file (can be specified without -\/-\/input)}
+\DoxyCodeLine{        -\/-\/output <filename.spub>    -\/ binary assembled file}
 \DoxyCodeLine{        -\/E                          -\/ generate preprocessed file}
 \DoxyCodeLine{        -\/-\/verbose                   -\/ output assembly debug information}
 \DoxyCodeLine{        -\/-\/lst <filename.lst>        -\/ listing file of generated code (assembly.lst by default) }
-\DoxyCodeLine{        -\/-\/input <filename.spus>     -\/ source file (can be specified without -\/-\/input)}
-\DoxyCodeLine{        -\/-\/output <filename.spub>    -\/ binary assembled file}
 \DoxyCodeLine{        -\/h, -\/-\/help                  -\/ show help message}
 \end{DoxyCode}
 
@@ -44,9 +44,9 @@ Three files will be created\+:
 {\bfseries{S\+P\+U\+Dis\+Asm}} 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\$ SPUDisAsm <binary file>}
-\DoxyCodeLine{        -\/-\/verbose                   -\/ output assembly debug information}
 \DoxyCodeLine{        -\/-\/input <filename.spub>     -\/ binary assembled file}
 \DoxyCodeLine{        -\/-\/output <filename.spus>    -\/ source file (if not specified, stdout selected)}
+\DoxyCodeLine{        -\/-\/verbose                   -\/ output assembly debug information}
 \DoxyCodeLine{        -\/h, -\/-\/help                  -\/ show help message}
 \end{DoxyCode}
 
@@ -54,9 +54,9 @@ Three files will be created\+:
 {\bfseries{S\+PU}} 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\$ SPU <binary file>}
-\DoxyCodeLine{        -\/-\/verbose                   -\/ output assembly debug information}
 \DoxyCodeLine{        -\/-\/input <filename.spub>     -\/ binary assembled file}
 \DoxyCodeLine{        -\/-\/output <filename.spus>    -\/ source file (if not specified, stdout selected)}
+\DoxyCodeLine{        -\/-\/verbose                   -\/ output assembly debug information}
 \DoxyCodeLine{        -\/h, -\/-\/help                  -\/ show help message}
 \end{DoxyCode}
 \hypertarget{index_autotoc_md4}{}\doxysection{Algorithm description}\label{index_autotoc_md4}
@@ -71,13 +71,84 @@ Binary generation can be splitted into several parts\+:
 \item Final checks
 \end{DoxyItemize}
 
-If process fails on any part, the nest parts are not executed.\hypertarget{index_autotoc_md5}{}\doxysubsubsection{Cleanup}\label{index_autotoc_md5}
+If process fails on any part, the next parts are not executed.\hypertarget{index_autotoc_md5}{}\doxysubsubsection{Cleanup}\label{index_autotoc_md5}
 Just double whitespaces, trailing/leading whitespaces removed. Operations that does not change code structure, lines number etc.\hypertarget{index_autotoc_md6}{}\doxysubsubsection{Analysis}\label{index_autotoc_md6}
 Analyses code for syntax errors, builds temporary code to calculate labels offsets. Prints errors descriptions in clang format.\hypertarget{index_autotoc_md7}{}\doxysubsubsection{Final cleanup}\label{index_autotoc_md7}
 All unnecessary indent symbols removed (comments, blank lines, unneded whitespaces). Code structure will be altered, line numbers are not preserved.\hypertarget{index_autotoc_md8}{}\doxysubsubsection{Translation}\label{index_autotoc_md8}
 Code is translated using labels table generated on analysis step. At this point, all errors must be catched by analysis, but still some can make thir way to this point. In this case, generation will fail, dumping wrong instruction and its number.\hypertarget{index_autotoc_md9}{}\doxysubsubsection{Final checks}\label{index_autotoc_md9}
-Check that all operations completed correctly; labels table is complete and not redundant.\hypertarget{index_autotoc_md10}{}\doxysection{Examples}\label{index_autotoc_md10}
-All examples are available \href{https://github.com/AlexRoar/SPUAsm/tree/main/Examples/SPUAsm/SPUAsm}{\texttt{ in this dir}}.\hypertarget{index_autotoc_md11}{}\doxysubsection{Squares of first n numbers}\label{index_autotoc_md11}
+Check that all operations completed correctly; labels table is complete and not redundant.\hypertarget{index_autotoc_md10}{}\doxysection{Syntax}\label{index_autotoc_md10}
+{\bfseries{push}} $<$instant value/register$>$ Push value to the stack
+
+{\bfseries{pop}} $<$empty/register$>$ Pop value from the stack
+\begin{DoxyItemize}
+\item no args -\/ just delete
+\item register -\/ pop and save to register
+\end{DoxyItemize}
+
+{\bfseries{in}} $<$empty/register$>$ Request value from the console
+\begin{DoxyItemize}
+\item no args -\/ push value to the stack
+\item register -\/ save to the register
+\end{DoxyItemize}
+
+{\bfseries{out}} $<$empty/register$>$ Prints value to the console
+\begin{DoxyItemize}
+\item no args -\/ last stack value
+\item register -\/ register value
+\end{DoxyItemize}
+
+{\bfseries{inc}} $<$empty/register$>$ Increments the value
+\begin{DoxyItemize}
+\item no args -\/ increment the last stack element
+\item register -\/ increment the register
+\end{DoxyItemize}
+
+{\bfseries{dec}} $<$empty/register$>$ Decrements the value
+\begin{DoxyItemize}
+\item no args -\/ increment the last stack element
+\item register -\/ increment the register
+\end{DoxyItemize}
+
+{\bfseries{dump}} Dump stack information
+
+{\bfseries{clear}} Clear stack
+
+{\bfseries{add}} Add two last stack values and push to the stack
+
+{\bfseries{sub}} Substract two last stack values and push to the stack
+
+{\bfseries{mul}} Multiply two last stack values and push to the stack
+
+{\bfseries{div}} Divide two last stack values and push to the stack
+
+{\bfseries{sin}} Sin of the last stack value
+
+{\bfseries{cos}} Cos of the last stack value
+
+{\bfseries{sqrt}} Square root of the last stack value
+
+{\bfseries{pow}} The pre-\/last element of the stack to the power of the last one
+
+{\bfseries{het}} Finish the program
+
+{\bfseries{jmp}} $<$label$>$ Jump to the label
+
+{\bfseries{jb}} $<$label$>$ Jump if last element is bigger than pre-\/last. Removes both operands from the stack
+
+{\bfseries{jbe}} $<$label$>$ Jump if last element is bigger-\/or-\/equal than pre-\/last. Removes both operands from the stack
+
+{\bfseries{je}} $<$label$>$ Jump if last element is equal to the pre-\/last one. Removes both operands from the stack
+
+{\bfseries{jne}} $<$label$>$ Jump if last element is not equal to the pre-\/last one. Removes both operands from the stack
+
+{\bfseries{ja}} $<$label$>$ Jump if last element is lower than pre-\/last. Removes both operands from the stack
+
+{\bfseries{jae}} $<$label$>$ Jump if last element is lower-\/or-\/equal than pre-\/last. Removes both operands from the stack
+
+{\bfseries{jm}} $<$label$>$ Jump if it\textquotesingle{}s Monday.
+
+$\ast$$\ast$$<$label\+Name$>$\+:$\ast$$\ast$ Creates label\hypertarget{index_autotoc_md11}{}\doxysection{Examples}\label{index_autotoc_md11}
+All examples are available \href{https://github.com/AlexRoar/SPUAsm/tree/main/Examples/SPUAsm/SPUAsm}{\texttt{ in this dir}}.\hypertarget{index_autotoc_md12}{}\doxysubsection{Squares of first n numbers}\label{index_autotoc_md12}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{;}
@@ -112,7 +183,7 @@ All examples are available \href{https://github.com/AlexRoar/SPUAsm/tree/main/Ex
 \DoxyCodeLine{}
 \DoxyCodeLine{mondayOnly:}
 \end{DoxyCode}
-\hypertarget{index_autotoc_md12}{}\doxysubsection{Square equation solutions}\label{index_autotoc_md12}
+\hypertarget{index_autotoc_md13}{}\doxysubsection{Square equation solutions}\label{index_autotoc_md13}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{;}
@@ -176,7 +247,7 @@ All examples are available \href{https://github.com/AlexRoar/SPUAsm/tree/main/Ex
 \DoxyCodeLine{out     rax}
 \DoxyCodeLine{out     rcx}
 \end{DoxyCode}
-\hypertarget{index_autotoc_md13}{}\doxysection{Links}\label{index_autotoc_md13}
+\hypertarget{index_autotoc_md14}{}\doxysection{Links}\label{index_autotoc_md14}
 
 \begin{DoxyItemize}
 \item \href{https://github.com/AlexRoar/SPUAsm/blob/main/SoftProcessorUnit/Assembly/SPUAssembly.cpp}{\texttt{ S\+P\+U\+Asm code}}

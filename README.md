@@ -14,7 +14,7 @@ During the translation, .lst file is generated. It provides information about by
 
 <img style="max-height: 250px" src="https://github.com/AlexRoar/SPUAsm/raw/main/Images/generalview.png">
 
-[**Docs**](https://alexroar.github.io/SPUAsm/html/)
+[**Documentation**](https://alexroar.github.io/SPUAsm/html/)
 
 ## Installation
 
@@ -27,38 +27,38 @@ cmake -DCMAKE_BUILD_TYPE=Release ..
 cmake --build .
 ```
 Three files will be created: 
--  **SPU** - Soft Processor Unit, executes created programs 
--  **SPUAsm** - translates source file (.spus) to binary file (.spub) that can be executed by SPU
--  **SPUDisAsm** - disassembly for generated binary files
+-  **SPU**               - Soft Processor Unit, executes created programs 
+-  **SPUAsm**       - translates source file (.spus) to binary file (.spub) that can be executed by SPU
+-  **SPUDisAsm**  - disassembly for generated binary files
 
 ## Usage
 
 **SPUAsm**
 ```bash
 $ SPUAsm <source file>
+        --input <filename.spus>     - source file (can be specified without --input)
+        --output <filename.spub>    - binary assembled file
         -E                          - generate preprocessed file
         --verbose                   - output assembly debug information
         --lst <filename.lst>        - listing file of generated code (assembly.lst by default) 
-        --input <filename.spus>     - source file (can be specified without --input)
-        --output <filename.spub>    - binary assembled file
         -h, --help                  - show help message
 ```
 
 **SPUDisAsm**
 ```bash
 $ SPUDisAsm <binary file>
-        --verbose                   - output assembly debug information
         --input <filename.spub>     - binary assembled file
         --output <filename.spus>    - source file (if not specified, stdout selected)
+        --verbose                   - output assembly debug information
         -h, --help                  - show help message
 ```
 
 **SPU**
 ```bash
 $ SPU <binary file>
-        --verbose                   - output assembly debug information
         --input <filename.spub>     - binary assembled file
         --output <filename.spus>    - source file (if not specified, stdout selected)
+        --verbose                   - output assembly debug information
         -h, --help                  - show help message
 ```
 
@@ -72,7 +72,7 @@ Binary generation can be splitted into several parts:
 - Translation
 - Final checks
 
-If process fails on any part, the nest parts are not executed.
+If process fails on any part, the next parts are not executed.
 
 #### Cleanup
 Just double whitespaces, trailing/leading whitespaces removed. Operations that does not change code structure, lines number etc.
@@ -89,6 +89,101 @@ Code is translated using labels table generated on analysis step. At this point,
 #### Final checks
 Check that all operations completed correctly; labels table is complete and not redundant.
 
+## Syntax
+
+**push**    <instant value/register>
+Push value to the stack
+
+**pop**      <empty/register>
+Pop value from the stack
+-  no args - just delete
+-  register - pop and save to register
+
+**in**          <empty/register>
+Request value from the console
+-  no args - push value to the stack
+-  register - save to the register
+
+**out**       <empty/register>
+Prints value to the console
+-  no args - last stack value
+-  register - register value
+
+**inc**       <empty/register>
+Increments the value
+-  no args - increment the last stack element
+-  register - increment the register
+
+**dec**      <empty/register>
+Decrements the value
+-  no args - increment the last stack element
+-  register - increment the register
+
+**dump**
+Dump stack information
+
+**clear**
+Clear stack
+
+**add**
+Add two last stack values and push to the stack
+
+**sub**
+Substract two last stack values and push to the stack
+
+**mul**
+Multiply two last stack values and push to the stack
+
+**div**
+Divide two last stack values and push to the stack
+
+**sin**
+Sin of the last stack value
+
+**cos**
+Cos of the last stack value
+
+**sqrt**
+Square root of the last stack value
+
+**pow**
+The pre-last element of the stack to the power of the last one
+
+**het**
+Finish the program
+
+**jmp**      <label>
+Jump to the label
+
+**jb**         <label>
+Jump if last element is bigger than pre-last. 
+Removes both operands from the stack
+
+**jbe**       <label>
+Jump if last element is bigger-or-equal than pre-last. 
+Removes both operands from the stack
+
+**je**         <label>
+Jump if last element is equal to the pre-last one. 
+Removes both operands from the stack
+
+**jne**       <label>
+Jump if last element is not equal to the pre-last one. 
+Removes both operands from the stack
+
+**ja**         <label>
+Jump if last element is lower than pre-last. 
+Removes both operands from the stack
+
+**jae**       <label>
+Jump if last element is lower-or-equal than pre-last. 
+Removes both operands from the stack
+
+**jm**        <label>
+Jump if it's Monday. 
+
+**<labelName>:**
+Creates label
 
 ## Examples
 

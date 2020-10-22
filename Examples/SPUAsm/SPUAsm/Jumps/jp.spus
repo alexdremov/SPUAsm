@@ -29,3 +29,4 @@ push rbx
 jne loop
 
 mondayOnly:
+het

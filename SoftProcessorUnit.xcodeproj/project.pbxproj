@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A04D828E2541B9F00095FB80 /* ParseHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A04D828C2541B9F00095FB80 /* ParseHelpers.cpp */; };
 		A04D828F2541B9F00095FB80 /* ParseHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A04D828C2541B9F00095FB80 /* ParseHelpers.cpp */; };
+		A04D8299254220A70095FB80 /* ParseHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A04D828C2541B9F00095FB80 /* ParseHelpers.cpp */; };
 		A071A8FE2534D1C9008711EF /* Syntax.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A071A8FB2534D1C9008711EF /* Syntax.cpp */; };
 		A071A8FF2534D1C9008711EF /* SPU.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A071A8FC2534D1C9008711EF /* SPU.cpp */; };
 		A071A9172534DC2D008711EF /* Syntax.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A071A8FB2534D1C9008711EF /* Syntax.cpp */; };
@@ -480,6 +481,7 @@
 				A0DD8CBE2539F09500CD405B /* LabelsStore.cpp in Sources */,
 				A071A96E25351576008711EF /* CommandToBytecode.cpp in Sources */,
 				A071A9BF2536159B008711EF /* BytecodeToCommand.cpp in Sources */,
+				A04D8299254220A70095FB80 /* ParseHelpers.cpp in Sources */,
 				A071A9642534FA51008711EF /* CommandsParser.cpp in Sources */,
 				A0DD8C8C2538DC8A00CD405B /* StringDistance.cpp in Sources */,
 				A0DD8C862538889900CD405B /* CodeAnalysis.cpp in Sources */,
