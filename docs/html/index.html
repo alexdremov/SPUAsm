@@ -114,7 +114,9 @@ $(function() {
 <div class="line">        -h, --help                  - show help message</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
 Примеры программ</h1>
-<p>Квадраты первых n чисел </p><div class="fragment"><div class="line">;</div>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Квадраты первых n чисел</h2>
+<div class="fragment"><div class="line">;</div>
 <div class="line">; Squares</div>
 <div class="line">;</div>
 <div class="line"> </div>
@@ -145,6 +147,68 @@ $(function() {
 <div class="line">jne loop</div>
 <div class="line"> </div>
 <div class="line">mondayOnly:</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md7"></a>
+Решение квадратного уравнения</h2>
+<div class="fragment"><div class="line">;</div>
+<div class="line">; Data input</div>
+<div class="line">; (a, b, c)</div>
+<div class="line">;</div>
+<div class="line">in      rax</div>
+<div class="line">in      rbx</div>
+<div class="line">in      rcx</div>
+<div class="line"> </div>
+<div class="line">;</div>
+<div class="line">; D calculation</div>
+<div class="line">;</div>
+<div class="line">push    rbx</div>
+<div class="line">push    2</div>
+<div class="line">pow</div>
+<div class="line"> </div>
+<div class="line">push    4</div>
+<div class="line">push    rax</div>
+<div class="line">mul</div>
+<div class="line">push    rcx</div>
+<div class="line">mul</div>
+<div class="line">sub</div>
+<div class="line">sqrt</div>
+<div class="line">pop     rdx</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">;</div>
+<div class="line">; First x</div>
+<div class="line">;</div>
+<div class="line">clear</div>
+<div class="line">push    -1</div>
+<div class="line">push    rbx</div>
+<div class="line">mul</div>
+<div class="line">push    rdx</div>
+<div class="line">sub</div>
+<div class="line">push    2</div>
+<div class="line">div</div>
+<div class="line">push    rax</div>
+<div class="line">div</div>
+<div class="line">pop     rcx</div>
+<div class="line"> </div>
+<div class="line">;</div>
+<div class="line">; Second x</div>
+<div class="line">;</div>
+<div class="line">clear</div>
+<div class="line">push    -1</div>
+<div class="line">push    rbx</div>
+<div class="line">mul</div>
+<div class="line">push    rdx</div>
+<div class="line">add</div>
+<div class="line">push    2</div>
+<div class="line">div</div>
+<div class="line">push    rax</div>
+<div class="line">div</div>
+<div class="line">pop     rax</div>
+<div class="line"> </div>
+<div class="line">;</div>
+<div class="line">; Output</div>
+<div class="line">;</div>
+<div class="line">out     rax</div>
+<div class="line">out     rcx</div>
 </div><!-- fragment --> </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
