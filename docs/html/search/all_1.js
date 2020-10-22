@@ -1,7 +1,7 @@
 var searchData=
 [
   ['added_376',['added',['../StackRigid_8cpp.html#abc72ff9c357136a52ae7f00fbaf9a645',1,'StackRigid.cpp']]],
-  ['addspi_377',['ADDSPI',['../BTCDefs_8h.html#afb07dc00b8d773f2889e83f3579b1068',1,'BTCDefs.h']]],
+  ['addspi_377',['ADDSPI',['../BTCDefs_8h.html#afb07dc00b8d773f2889e83f3579b1068',1,'ADDSPI():&#160;BTCDefs.h'],['../EXEDefs_8h.html#afb07dc00b8d773f2889e83f3579b1068',1,'ADDSPI():&#160;EXEDefs.h'],['../EXE_8h.html#a84389e6776840159762cabe09458c5e7',1,'ADDSPI(3):&#160;EXE.h'],['../EXE_8h.html#ab3547cfc211b1fd3a0d712493b64c46d',1,'ADDSPI(getIntFromBuffer(localSPI+1)):&#160;EXE.h'],['../EXE_8h.html#aa7627babb7e2db2ba52209b8517e92c2',1,'ADDSPI(5):&#160;EXE.h']]],
   ['adlerchecksum_378',['adlerChecksum',['../StackRigid_8cpp.html#abc79f40e23ef3b974d01a80274a3df1d',1,'StackRigid.cpp']]],
   ['analyzeinstructionerrors_379',['analyzeInstructionErrors',['../CodeAnalysis_8cpp.html#a66a44b980a24ff0e0579f7de4f7cdc95',1,'analyzeInstructionErrors(SyntaxMapping *mapping, AssemblyParams *params, BinaryFile *binary, char *line, int lineNo):&#160;CodeAnalysis.cpp'],['../CodeAnalysis_8hpp.html#a66a44b980a24ff0e0579f7de4f7cdc95',1,'analyzeInstructionErrors(SyntaxMapping *mapping, AssemblyParams *params, BinaryFile *binary, char *line, int lineNo):&#160;CodeAnalysis.cpp']]],
   ['analyzeinstructionwarnings_380',['analyzeInstructionWarnings',['../CodeAnalysis_8hpp.html#a53641ab0f1c76e521f1b7219ca14f755',1,'CodeAnalysis.hpp']]],

@@ -11,6 +11,8 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 double \mbox{\hyperlink{ParseHelpers_8hpp_a644e4038f72d7d9d4bf39f75a5aab4a8}{get\+Double\+From\+Buffer}} (\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$start)
+\item 
+\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{ParseHelpers_8hpp_a503732ecee5e0f7a02f23c8381727ed6}{get\+Int\+From\+Buffer}} (\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$start)
 \end{DoxyCompactItemize}
 
 
@@ -34,10 +36,38 @@ double \mbox{\hyperlink{ParseHelpers_8hpp_a644e4038f72d7d9d4bf39f75a5aab4a8}{get
 
 Referenced by O\+P\+B\+A\+C\+K\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+N\+C(), and O\+P\+E\+X\+E\+\_\+\+F\+U\+N\+C().
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{ParseHelpers_8hpp_a644e4038f72d7d9d4bf39f75a5aab4a8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{ParseHelpers_8hpp_a503732ecee5e0f7a02f23c8381727ed6}\label{ParseHelpers_8hpp_a503732ecee5e0f7a02f23c8381727ed6}} 
+\index{ParseHelpers.hpp@{ParseHelpers.hpp}!getIntFromBuffer@{getIntFromBuffer}}
+\index{getIntFromBuffer@{getIntFromBuffer}!ParseHelpers.hpp@{ParseHelpers.hpp}}
+\doxysubsubsection{\texorpdfstring{getIntFromBuffer()}{getIntFromBuffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} get\+Int\+From\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$}]{start }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17                                   \{}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} value = 0;}
+\DoxyCodeLine{19     memcpy(\&value, start, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{20     \textcolor{keywordflow}{return} value;}
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}
+
+
+Referenced by O\+P\+E\+X\+E\+\_\+\+F\+U\+N\+C().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{ParseHelpers_8hpp_a503732ecee5e0f7a02f23c8381727ed6_icgraph}
 \end{center}
 \end{figure}

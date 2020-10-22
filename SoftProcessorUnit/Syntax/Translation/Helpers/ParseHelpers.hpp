@@ -10,4 +10,6 @@
 
 double getDoubleFromBuffer(char* start);
 
+int getIntFromBuffer(char* start);
+
 #endif /* ParseHelpers_hpp */

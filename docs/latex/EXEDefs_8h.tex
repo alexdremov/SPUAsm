@@ -23,18 +23,58 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(bytes)~( ( bytes ) + $\ast$\mbox{\hyperlink{EXE_8h_a5456c3f6e0c919dee1b2a7ccd65aaa4e}{S\+PI}} $<$= binary-\/$>$current\+Size + binary-\/$>$code)
+\#define \mbox{\hyperlink{EXEDefs_8h_afb07dc00b8d773f2889e83f3579b1068}{A\+D\+D\+S\+PI}}(n)~($\ast$S\+PI) += (n)
+\item 
+\#define \mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(bytes)~( ( bytes ) + $\ast$S\+PI $<$= binary-\/$>$current\+Size + binary-\/$>$code)
+\item 
+\#define \mbox{\hyperlink{EXEDefs_8h_a1ddfc7dddb5759e4291d8069d87c7a35}{I\+N\+C\+S\+PI}}~($\ast$S\+PI)++
+\item 
+\#define \mbox{\hyperlink{EXEDefs_8h_a498a442635405b9571ad6912ae85a478}{M\+O\+V\+S\+PI}}(n)~($\ast$S\+PI) = (n)
+\item 
+\#define \mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(data)~\mbox{\hyperlink{StackRigid_8h_a3da847c6aaf3f472d56d528de1a0f6f7}{Stack\+Pop}}(\&(core-\/$>$stack), (data))
+\item 
+\#define \mbox{\hyperlink{EXEDefs_8h_a9bd299905b65faef2943ad1b91e71236}{P\+U\+SH}}(data)~\mbox{\hyperlink{StackRigid_8h_a72e1abcd508a113d2731a622322f0624}{Stack\+Push}}(\&(core-\/$>$stack), (data))
 \item 
 \#define \mbox{\hyperlink{EXEDefs_8h_ac852af7b539a12fedbf5453fed9a708c}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{EXEDefs_8h_afb07dc00b8d773f2889e83f3579b1068}\label{EXEDefs_8h_afb07dc00b8d773f2889e83f3579b1068}} 
+\index{EXEDefs.h@{EXEDefs.h}!ADDSPI@{ADDSPI}}
+\index{ADDSPI@{ADDSPI}!EXEDefs.h@{EXEDefs.h}}
+\doxysubsubsection{\texorpdfstring{ADDSPI}{ADDSPI}}
+{\footnotesize\ttfamily \#define A\+D\+D\+S\+PI(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})~($\ast$S\+PI) += (n)}
+
 \mbox{\Hypertarget{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}\label{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}} 
 \index{EXEDefs.h@{EXEDefs.h}!HASBYTES@{HASBYTES}}
 \index{HASBYTES@{HASBYTES}!EXEDefs.h@{EXEDefs.h}}
 \doxysubsubsection{\texorpdfstring{HASBYTES}{HASBYTES}}
-{\footnotesize\ttfamily \#define H\+A\+S\+B\+Y\+T\+ES(\begin{DoxyParamCaption}\item[{}]{bytes }\end{DoxyParamCaption})~( ( bytes ) + $\ast$\mbox{\hyperlink{EXE_8h_a5456c3f6e0c919dee1b2a7ccd65aaa4e}{S\+PI}} $<$= binary-\/$>$current\+Size + binary-\/$>$code)}
+{\footnotesize\ttfamily \#define H\+A\+S\+B\+Y\+T\+ES(\begin{DoxyParamCaption}\item[{}]{bytes }\end{DoxyParamCaption})~( ( bytes ) + $\ast$S\+PI $<$= binary-\/$>$current\+Size + binary-\/$>$code)}
+
+\mbox{\Hypertarget{EXEDefs_8h_a1ddfc7dddb5759e4291d8069d87c7a35}\label{EXEDefs_8h_a1ddfc7dddb5759e4291d8069d87c7a35}} 
+\index{EXEDefs.h@{EXEDefs.h}!INCSPI@{INCSPI}}
+\index{INCSPI@{INCSPI}!EXEDefs.h@{EXEDefs.h}}
+\doxysubsubsection{\texorpdfstring{INCSPI}{INCSPI}}
+{\footnotesize\ttfamily \#define I\+N\+C\+S\+PI~($\ast$S\+PI)++}
+
+\mbox{\Hypertarget{EXEDefs_8h_a498a442635405b9571ad6912ae85a478}\label{EXEDefs_8h_a498a442635405b9571ad6912ae85a478}} 
+\index{EXEDefs.h@{EXEDefs.h}!MOVSPI@{MOVSPI}}
+\index{MOVSPI@{MOVSPI}!EXEDefs.h@{EXEDefs.h}}
+\doxysubsubsection{\texorpdfstring{MOVSPI}{MOVSPI}}
+{\footnotesize\ttfamily \#define M\+O\+V\+S\+PI(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})~($\ast$S\+PI) = (n)}
+
+\mbox{\Hypertarget{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}\label{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}} 
+\index{EXEDefs.h@{EXEDefs.h}!POP@{POP}}
+\index{POP@{POP}!EXEDefs.h@{EXEDefs.h}}
+\doxysubsubsection{\texorpdfstring{POP}{POP}}
+{\footnotesize\ttfamily \#define P\+OP(\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})~\mbox{\hyperlink{StackRigid_8h_a3da847c6aaf3f472d56d528de1a0f6f7}{Stack\+Pop}}(\&(core-\/$>$stack), (data))}
+
+\mbox{\Hypertarget{EXEDefs_8h_a9bd299905b65faef2943ad1b91e71236}\label{EXEDefs_8h_a9bd299905b65faef2943ad1b91e71236}} 
+\index{EXEDefs.h@{EXEDefs.h}!PUSH@{PUSH}}
+\index{PUSH@{PUSH}!EXEDefs.h@{EXEDefs.h}}
+\doxysubsubsection{\texorpdfstring{PUSH}{PUSH}}
+{\footnotesize\ttfamily \#define P\+U\+SH(\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})~\mbox{\hyperlink{StackRigid_8h_a72e1abcd508a113d2731a622322f0624}{Stack\+Push}}(\&(core-\/$>$stack), (data))}
 
 \mbox{\Hypertarget{EXEDefs_8h_ac852af7b539a12fedbf5453fed9a708c}\label{EXEDefs_8h_ac852af7b539a12fedbf5453fed9a708c}} 
 \index{EXEDefs.h@{EXEDefs.h}!STACKRESULT@{STACKRESULT}}

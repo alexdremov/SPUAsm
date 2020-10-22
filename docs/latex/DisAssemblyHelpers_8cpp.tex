@@ -69,10 +69,10 @@ Here is the caller graph for this function\+:\nopagebreak
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{106                                                            \{}
-\DoxyCodeLine{107     \textcolor{keywordtype}{char}* \mbox{\hyperlink{EXE_8h_a5456c3f6e0c919dee1b2a7ccd65aaa4e}{SPI}} = binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}};}
+\DoxyCodeLine{107     \textcolor{keywordtype}{char}* SPI = binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}};}
 \DoxyCodeLine{108     }
 \DoxyCodeLine{109     \textcolor{keywordflow}{while}(SPI < binary-\/>code + binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}}) \{}
-\DoxyCodeLine{110         \mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefd}{DisassemblyParseResult}} cmdRes = \mbox{\hyperlink{DisAssemblyHelpers_8cpp_a486e42fcf2e1de01e4bf039dcf45ffd1}{disAssamblyInstruction}}(params, mapping, binary, \&\mbox{\hyperlink{EXE_8h_a5456c3f6e0c919dee1b2a7ccd65aaa4e}{SPI}});}
+\DoxyCodeLine{110         \mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefd}{DisassemblyParseResult}} cmdRes = \mbox{\hyperlink{DisAssemblyHelpers_8cpp_a486e42fcf2e1de01e4bf039dcf45ffd1}{disAssamblyInstruction}}(params, mapping, binary, \&SPI);}
 \DoxyCodeLine{111         \textcolor{keywordflow}{if} (cmdRes != \mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefda9e0876ec84fe99948945c4cddfbe1b35}{SPU\_DISASM\_OK}}) \{}
 \DoxyCodeLine{112             \textcolor{keywordflow}{return} cmdRes;}
 \DoxyCodeLine{113         \}}
@@ -84,7 +84,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \end{DoxyCode}
 
 
-References Binary\+File\+::code, Binary\+File\+::current\+Size, dis\+Assambly\+Instruction(), S\+PI, and S\+P\+U\+\_\+\+D\+I\+S\+A\+S\+M\+\_\+\+OK.
+References Binary\+File\+::code, Binary\+File\+::current\+Size, dis\+Assambly\+Instruction(), and S\+P\+U\+\_\+\+D\+I\+S\+A\+S\+M\+\_\+\+OK.
 
 
 

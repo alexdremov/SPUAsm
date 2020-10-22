@@ -128,12 +128,40 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a301649058f4c3cef20f99c5792e0b027"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>(bytes)&#160;&#160;&#160;( ( bytes ) + *<a class="el" href="EXE_8h.html#a5456c3f6e0c919dee1b2a7ccd65aaa4e">SPI</a> &lt;= binary-&gt;currentSize + binary-&gt;code)</td></tr>
+<tr class="memitem:afb07dc00b8d773f2889e83f3579b1068"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXEDefs_8h.html#afb07dc00b8d773f2889e83f3579b1068">ADDSPI</a>(n)&#160;&#160;&#160;(*SPI) += (n)</td></tr>
+<tr class="separator:afb07dc00b8d773f2889e83f3579b1068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a301649058f4c3cef20f99c5792e0b027"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>(bytes)&#160;&#160;&#160;( ( bytes ) + *SPI &lt;= binary-&gt;currentSize + binary-&gt;code)</td></tr>
 <tr class="separator:a301649058f4c3cef20f99c5792e0b027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ddfc7dddb5759e4291d8069d87c7a35"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXEDefs_8h.html#a1ddfc7dddb5759e4291d8069d87c7a35">INCSPI</a>&#160;&#160;&#160;(*SPI)++</td></tr>
+<tr class="separator:a1ddfc7dddb5759e4291d8069d87c7a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a498a442635405b9571ad6912ae85a478"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXEDefs_8h.html#a498a442635405b9571ad6912ae85a478">MOVSPI</a>(n)&#160;&#160;&#160;(*SPI) = (n)</td></tr>
+<tr class="separator:a498a442635405b9571ad6912ae85a478"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1dcc2d6eda6e79d7bdda5f8dd461c39"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXEDefs_8h.html#aa1dcc2d6eda6e79d7bdda5f8dd461c39">POP</a>(data)&#160;&#160;&#160;<a class="el" href="StackRigid_8h.html#a3da847c6aaf3f472d56d528de1a0f6f7">StackPop</a>(&amp;(core-&gt;stack), (data))</td></tr>
+<tr class="separator:aa1dcc2d6eda6e79d7bdda5f8dd461c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bd299905b65faef2943ad1b91e71236"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXEDefs_8h.html#a9bd299905b65faef2943ad1b91e71236">PUSH</a>(data)&#160;&#160;&#160;<a class="el" href="StackRigid_8h.html#a72e1abcd508a113d2731a622322f0624">StackPush</a>(&amp;(core-&gt;stack), (data))</td></tr>
+<tr class="separator:a9bd299905b65faef2943ad1b91e71236"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac852af7b539a12fedbf5453fed9a708c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXEDefs_8h.html#ac852af7b539a12fedbf5453fed9a708c">STACKRESULT</a></td></tr>
 <tr class="separator:ac852af7b539a12fedbf5453fed9a708c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="afb07dc00b8d773f2889e83f3579b1068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb07dc00b8d773f2889e83f3579b1068">&#9670;&nbsp;</a></span>ADDSPI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADDSPI</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n</td><td>)</td>
+          <td>&#160;&#160;&#160;(*SPI) += (n)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a301649058f4c3cef20f99c5792e0b027"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a301649058f4c3cef20f99c5792e0b027">&#9670;&nbsp;</a></span>HASBYTES</h2>
 
@@ -145,7 +173,75 @@ Macros</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">bytes</td><td>)</td>
-          <td>&#160;&#160;&#160;( ( bytes ) + *<a class="el" href="EXE_8h.html#a5456c3f6e0c919dee1b2a7ccd65aaa4e">SPI</a> &lt;= binary-&gt;currentSize + binary-&gt;code)</td>
+          <td>&#160;&#160;&#160;( ( bytes ) + *SPI &lt;= binary-&gt;currentSize + binary-&gt;code)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ddfc7dddb5759e4291d8069d87c7a35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ddfc7dddb5759e4291d8069d87c7a35">&#9670;&nbsp;</a></span>INCSPI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INCSPI&#160;&#160;&#160;(*SPI)++</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a498a442635405b9571ad6912ae85a478"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a498a442635405b9571ad6912ae85a478">&#9670;&nbsp;</a></span>MOVSPI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MOVSPI</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n</td><td>)</td>
+          <td>&#160;&#160;&#160;(*SPI) = (n)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1dcc2d6eda6e79d7bdda5f8dd461c39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1dcc2d6eda6e79d7bdda5f8dd461c39">&#9670;&nbsp;</a></span>POP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="StackRigid_8h.html#a3da847c6aaf3f472d56d528de1a0f6f7">StackPop</a>(&amp;(core-&gt;stack), (data))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9bd299905b65faef2943ad1b91e71236"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bd299905b65faef2943ad1b91e71236">&#9670;&nbsp;</a></span>PUSH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PUSH</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="StackRigid_8h.html#a72e1abcd508a113d2731a622322f0624">StackPush</a>(&amp;(core-&gt;stack), (data))</td>
         </tr>
       </table>
 </div><div class="memdoc">

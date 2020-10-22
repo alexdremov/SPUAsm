@@ -40,5 +40,18 @@ case STACK_OP_PTRINVALID:\
     return SPU_EXE_CORRUPTED;\
     break;\
 }
+#ifdef ADDSPI
+#undef ADDSPI
+#endif
+#define ADDSPI(n) (*SPI) += (n)
+
+#ifdef MOVSPI
+#undef MOVSPI
+#endif
+#define MOVSPI(n) (*SPI) = (n)
+#define INCSPI (*SPI)++
+
+#define PUSH(data) StackPush(&(core->stack), (data))
+#define POP(data) StackPop(&(core->stack), (data))
 
 #endif /* EXEDefs_h */

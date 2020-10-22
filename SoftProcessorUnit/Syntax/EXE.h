@@ -22,19 +22,19 @@ OPEXE_FUNC(push,  {
         if (!HASBYTES(sizeof(double) + 2))
             return SPU_EXE_NOARGS;
         double value = getDoubleFromBuffer(localSPI + 2);
-        StackRigidOperationCodes result = StackPush(&(core->stack), value);
+        StackRigidOperationCodes result = PUSH(value);
         
         STACKRESULT
         
-        (*SPI) += sizeof(double) + 2;
+        ADDSPI(sizeof(double) + 2);
     } else {
         char reg = *(localSPI + 2);
         
-        StackRigidOperationCodes result = StackPush(&(core->stack), core->REG[reg]);
+        StackRigidOperationCodes result = PUSH(core->REG[reg]);
         
         STACKRESULT
         
-        (*SPI) += 3;
+        ADDSPI(3);
     }
     return SPU_EXE_OK;
 })
@@ -47,14 +47,14 @@ OPEXE_FUNC(pop,  {
     char flagByte = *(localSPI + 1);
     if (flagByte == 0) {
         double tmp = 0;
-        StackRigidOperationCodes result = StackPop(&(core->stack), &tmp);
+        StackRigidOperationCodes result = POP(&tmp);
         STACKRESULT
-        (*SPI) += 2;
+        ADDSPI(2);
     } else {
         char reg = *(localSPI + 2);
-        StackRigidOperationCodes result = StackPop(&(core->stack), core->REG + reg);
+        StackRigidOperationCodes result = POP(core->REG + reg);
         STACKRESULT
-        (*SPI) += 3;
+        ADDSPI(3);
     }
     return SPU_EXE_OK;
 })
@@ -74,15 +74,13 @@ OPEXE_FUNC(in,  {
     }
     
     if (flagByte == 0) {
-        StackRigidOperationCodes result = StackPush(&(core->stack), newVal);
-        
+        StackRigidOperationCodes result = PUSH(newVal);
         STACKRESULT
-
-        (*SPI) += 2;
+        ADDSPI(2);
     } else {
         char reg = *(localSPI + 2);
         core->REG[reg] = newVal;
-        (*SPI) += 3;
+        ADDSPI(3);
     }
     return SPU_EXE_OK;
 })
@@ -92,7 +90,7 @@ OPEXE_FUNC(dump,  {
     if (!HASBYTES(1))
         return SPU_EXE_NOARGS;
     StackDump(core->stack, -1, params->inputFileName, "dump requested");
-    (*SPI)++;
+    INCSPI;
     return SPU_EXE_OK;
 })
 
@@ -102,7 +100,7 @@ OPEXE_FUNC(clear,  {
         return SPU_EXE_NOARGS;
     StackRigidOperationCodes result = StackClear(core->stack);
     STACKRESULT
-    (*SPI)++;
+    INCSPI;
     return SPU_EXE_OK;
 })
 
@@ -114,17 +112,13 @@ OPEXE_FUNC(add,  {
     double left = 0;
     double right = 0;
     
-    StackRigidOperationCodes result = StackPop(&(core->stack), &right);
-    
+    StackRigidOperationCodes result = POP(&right);
     STACKRESULT
-    
-    result = StackPop(&(core->stack), &left);
-    
+    result = POP(&left);
     STACKRESULT
-    
-    result = StackPush(&(core->stack), left + right);
+    result = PUSH(left + right);
     STACKRESULT
-    (*SPI)++;
+    INCSPI;
     return SPU_EXE_OK;
 })
 
@@ -135,16 +129,16 @@ OPEXE_FUNC(sub,  {
     
     double left = 0;
     double right = 0;
-    StackRigidOperationCodes result = StackPop(&(core->stack), &right);
+    StackRigidOperationCodes result = POP(&right);
     
     STACKRESULT
     
-    result = StackPop(&(core->stack), &left);
+    result = POP(&left);
     STACKRESULT
     
-    result = StackPush(&(core->stack), left - right);
+    result = PUSH(left - right);
     STACKRESULT
-    (*SPI)++;
+    INCSPI;
     return SPU_EXE_OK;
 })
 
@@ -154,17 +148,17 @@ OPEXE_FUNC(mul,  {
         return SPU_EXE_NOARGS;
     double left = 0;
     double right = 0;
-    StackRigidOperationCodes result = StackPop(&(core->stack), &right);
+    StackRigidOperationCodes result = POP(&right);
     
     STACKRESULT
     
-    result = StackPop(&(core->stack), &left);
+    result = POP(&left);
     
     STACKRESULT
     
-    result = StackPush(&(core->stack), left * right);
+    result = PUSH(left * right);
     STACKRESULT
-    (*SPI)++;
+    INCSPI;
     return SPU_EXE_OK;
 })
 
@@ -174,17 +168,17 @@ OPEXE_FUNC(div,  {
         return SPU_EXE_NOARGS;
     double left = 0;
     double right = 0;
-    StackRigidOperationCodes result = StackPop(&(core->stack), &right);
+    StackRigidOperationCodes result = POP(&right);
     
     STACKRESULT
     
-    result = StackPop(&(core->stack), &left);
+    result = POP(&left);
     
     STACKRESULT
     
-    result = StackPush(&(core->stack), left / right);
+    result = PUSH(left / right);
     STACKRESULT
-    (*SPI)++;
+    INCSPI;
     return SPU_EXE_OK;
 })
 
@@ -193,12 +187,12 @@ OPEXE_FUNC(sin,  {
     if (!HASBYTES(1))
         return SPU_EXE_NOARGS;
     double left = 0;
-    StackRigidOperationCodes result = StackPop(&(core->stack), &left);
+    StackRigidOperationCodes result = POP(&left);
     STACKRESULT
-    
-    result = StackPush(&(core->stack), sin(left));
+
+    result = PUSH(sin(left));
     STACKRESULT
-    (*SPI)++;
+    INCSPI;
     return SPU_EXE_OK;
 })
 
@@ -207,12 +201,12 @@ OPEXE_FUNC(cos,  {
     if (!HASBYTES(1))
         return SPU_EXE_NOARGS;
     double left = 0;
-    StackRigidOperationCodes result = StackPop(&(core->stack), &left);
+    StackRigidOperationCodes result = POP(&left);
     STACKRESULT
     
-    result = StackPush(&(core->stack), cos(left));
+    result = PUSH(cos(left));
     STACKRESULT
-    (*SPI)++;
+    INCSPI;
     return SPU_EXE_OK;
 })
 
@@ -221,12 +215,12 @@ OPEXE_FUNC(sqrt,  {
     if (!HASBYTES(1))
         return SPU_EXE_NOARGS;
     double left = 0;
-    StackRigidOperationCodes result = StackPop(&(core->stack), &left);
+    StackRigidOperationCodes result = POP(&left);
     STACKRESULT
     
-    result = StackPush(&(core->stack), sqrt(left));
+    result = PUSH(sqrt(left));
     STACKRESULT
-    (*SPI)++;
+    INCSPI;
     return SPU_EXE_OK;
 })
 
@@ -236,14 +230,14 @@ OPEXE_FUNC(pow,  {
         return SPU_EXE_NOARGS;
     double left = 0;
     double right = 0;
-    StackRigidOperationCodes result = StackPop(&(core->stack), &right);
+    StackRigidOperationCodes result = POP(&right);
     STACKRESULT
-    result = StackPop(&(core->stack), &left);
+    result = POP(&left);
     STACKRESULT
     
-    result = StackPush(&(core->stack), pow(left, right));
+    result = PUSH(pow(left, right));
     STACKRESULT
-    (*SPI)++;
+    INCSPI;
     return SPU_EXE_OK;
 })
 
@@ -252,7 +246,7 @@ OPEXE_FUNC(het,  {
     if (!HASBYTES(1))
         return SPU_EXE_NOARGS;
     core->terminated = 1;
-    (*SPI)++;
+    INCSPI;
     return SPU_EXE_OK;
 })
 
@@ -270,7 +264,7 @@ OPEXE_FUNC(out,  {
         STACKRESULT
         
         printf("%lf\n", value);
-        (*SPI) += 2;
+        ADDSPI(2);
     } else {
         if (!HASBYTES(3))
             return SPU_EXE_NOARGS;
@@ -278,7 +272,7 @@ OPEXE_FUNC(out,  {
         
         printf("%lf\n", core->REG[reg]);
         
-        (*SPI) += 3;
+        ADDSPI(3);
     }
     return SPU_EXE_OK;
 })
@@ -287,7 +281,7 @@ OPEXE_FUNC(jmp,  {
     if (!HASBYTES(5))
         return SPU_EXE_NOARGS;
     char* localSPI = *SPI;
-    (*SPI) += *((int*)(localSPI + 1));
+    ADDSPI(getIntFromBuffer(localSPI + 1));
     return SPU_EXE_OK;
 })
 
@@ -303,9 +297,9 @@ OPEXE_FUNC(jb,  {
     result = StackPop(&(core->stack), &left);
     STACKRESULT
     if (left < right)
-        (*SPI) += *((int*)(localSPI + 1));
+        ADDSPI(getIntFromBuffer(localSPI + 1));
     else
-        (*SPI) += 5;
+        ADDSPI(5);
     return SPU_EXE_OK;
 })
 
@@ -315,14 +309,14 @@ OPEXE_FUNC(jbe,  {
     char* localSPI = *SPI;
     double left = 0;
     double right = 0;
-    StackRigidOperationCodes result = StackPop(&(core->stack), &right);
+    StackRigidOperationCodes result = POP(&right);
     STACKRESULT
-    result = StackPop(&(core->stack), &left);
+    result = POP(&left);
     STACKRESULT
     if (left <= right)
-        (*SPI) += *((int*)(localSPI + 1));
+        ADDSPI(getIntFromBuffer(localSPI + 1));
     else
-        (*SPI) += 5;
+        ADDSPI(5);
     return SPU_EXE_OK;
 })
 
@@ -332,14 +326,14 @@ OPEXE_FUNC(je,  {
     char* localSPI = *SPI;
     double left = 0;
     double right = 0;
-    StackRigidOperationCodes result = StackPop(&(core->stack), &right);
+    StackRigidOperationCodes result = POP(&right);
     STACKRESULT
-    result = StackPop(&(core->stack), &left);
+    result = POP(&left);
     STACKRESULT
     if (left == right)
-        (*SPI) += *((int*)(localSPI + 1));
+        ADDSPI(getIntFromBuffer(localSPI + 1));
     else
-        (*SPI) += 5;
+        ADDSPI(5);
     return SPU_EXE_OK;
 })
 
@@ -349,14 +343,14 @@ OPEXE_FUNC(jne,  {
     char* localSPI = *SPI;
     double left = 0;
     double right = 0;
-    StackRigidOperationCodes result = StackPop(&(core->stack), &right);
+    StackRigidOperationCodes result = POP(&right);
     STACKRESULT
-    result = StackPop(&(core->stack), &left);
+    result = POP(&left);
     STACKRESULT
     if (left != right)
-        (*SPI) += *((int*)(localSPI + 1));
+        ADDSPI(getIntFromBuffer(localSPI + 1));
     else
-        (*SPI) += 5;
+        ADDSPI(5);
     return SPU_EXE_OK;
 })
 
@@ -366,14 +360,14 @@ OPEXE_FUNC(ja,  {
     char* localSPI = *SPI;
     double left = 0;
     double right = 0;
-    StackRigidOperationCodes result = StackPop(&(core->stack), &right);
+    StackRigidOperationCodes result = POP(&right);
     STACKRESULT
-    result = StackPop(&(core->stack), &left);
+    result = POP(&left);
     STACKRESULT
     if (left > right)
-        (*SPI) += *((int*)(localSPI + 1));
+        ADDSPI(getIntFromBuffer(localSPI + 1));
     else
-        (*SPI) += 5;
+        ADDSPI(5);
     return SPU_EXE_OK;
 })
 
@@ -383,14 +377,14 @@ OPEXE_FUNC(jae,  {
     char* localSPI = *SPI;
     double left = 0;
     double right = 0;
-    StackRigidOperationCodes result = StackPop(&(core->stack), &right);
+    StackRigidOperationCodes result = POP(&right);
     STACKRESULT
-    result = StackPop(&(core->stack), &left);
+    result = POP(&left);
     STACKRESULT
     if (left >= right)
-        (*SPI) += *((int*)(localSPI + 1));
+        ADDSPI(getIntFromBuffer(localSPI + 1));
     else
-        (*SPI) += 5;
+        ADDSPI(5);
     return SPU_EXE_OK;
 })
 
@@ -408,9 +402,9 @@ OPEXE_FUNC(jm,  {
     int weekday  = (d += m < 3 ? y-- : y - 2, 23*m/9 + d + 4 + y/4- y/100 + y/400)%7;
     
     if (weekday == 1)
-        (*SPI) += *((int*)(localSPI + 1));
+        ADDSPI(getIntFromBuffer(localSPI + 1));
     else
-        (*SPI) += 5;
+        ADDSPI(5);
     return SPU_EXE_OK;
 })
 
@@ -422,19 +416,19 @@ OPEXE_FUNC(inc,  {
     
     if (flagByte == 0) {
         double value = 0;
-        StackRigidOperationCodes result = StackBack(core->stack, &value);
+        StackRigidOperationCodes result = POP(&value);
         
         STACKRESULT
         
-        result = StackPush(&(core->stack), value + 1);
+        result = PUSH(value + 1);
         
         STACKRESULT
 
-        (*SPI) += 2;
+        ADDSPI(2);
     } else {
         char reg = *(localSPI + 2);
         core->REG[reg] += 1;
-        (*SPI) += 3;
+        ADDSPI(3);
     }
     return SPU_EXE_OK;
 })
@@ -447,19 +441,19 @@ OPEXE_FUNC(dec,  {
     
     if (flagByte == 0) {
         double value = 0;
-        StackRigidOperationCodes result = StackBack(core->stack, &value);
+        StackRigidOperationCodes result = POP(&value);
         
         STACKRESULT
         
-        result = StackPush(&(core->stack), value - 1);
+        result = PUSH(value - 1);
         
         STACKRESULT
 
-        (*SPI) += 2;
+        ADDSPI(2);
     } else {
         char reg = *(localSPI + 2);
         core->REG[reg] -= 1;
-        (*SPI) += 3;
+        ADDSPI(3);
     }
     return SPU_EXE_OK;
 })

@@ -13,3 +13,9 @@ double getDoubleFromBuffer(char* start) {
     memcpy(&value, start, sizeof(double));
     return value;
 }
+
+int getIntFromBuffer(char* start) {
+    int value = 0;
+    memcpy(&value, start, sizeof(int));
+    return value;
+}

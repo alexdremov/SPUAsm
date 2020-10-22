@@ -1,3 +1,4 @@
+het
 in rbx
 push 0
 pop rax
@@ -14,3 +15,4 @@ push 0
 push rbx
 jne loop
 mondayOnly:
+het
