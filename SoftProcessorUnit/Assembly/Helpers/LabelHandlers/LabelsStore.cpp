@@ -31,7 +31,7 @@ void JMPLabel::wasUsed() {
 }
 
 void JMPLabel::foundToPosition(unsigned int position) {
-    this->positionTo = position;
+    this->positionTo = (long)position;
 }
 
 
@@ -69,7 +69,7 @@ void JMPLabelsStore::setLabelToPosition(char* label, unsigned int position) {
     if (current->used != 1) {
         throw "This label was used";
     }
-    current->positionTo = position;
+    current->positionTo = (long)position;
 }
 
 void JMPLabelsStore::setLabelFromPosition(char* label, unsigned int position) {
@@ -79,7 +79,7 @@ void JMPLabelsStore::setLabelFromPosition(char* label, unsigned int position) {
         this->newLabel(label);
         current = this->last;
     }
-    current->positionFrom = position;
+    current->positionFrom = (long)position;
 }
 
 JMPLabel* JMPLabelsStore::getLabel(char* label) const {
