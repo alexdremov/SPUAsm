@@ -447,6 +447,8 @@ size_t StackRigidMemoryUse( __overload(StackRigid)* stack) {
 
 
 void StackDump( __overload(StackRigid)* stack, const int line, const char* file, const char* why) {
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wformat"
     time_t rawtime = time(NULL);
     struct tm *ptm = localtime(&rawtime);
     
@@ -493,8 +495,8 @@ void StackDump( __overload(StackRigid)* stack, const int line, const char* file,
         }
         fprintf(output, "\t         size : %lu\n", stack->size);
         fprintf(output, "\t     capacity : %lu\n", stack->capacity);
-        fprintf(output, "\t     checkSum : %x\n", stack->checkSumVital);
-        fprintf(output, "\tcheckSumVital : %x\n", stack->checkSum);
+        fprintf(output, "\t     checkSum : %lx\n", stack->checkSumVital);
+        fprintf(output, "\tcheckSumVital : %lx\n", stack->checkSum);
         
         fprintf(output, "\tdata [%p]: {\n", (void*)stack->data);
         if (checks == STACK_ST_OK) {
@@ -534,7 +536,7 @@ void StackDump( __overload(StackRigid)* stack, const int line, const char* file,
     }
     fprintf(output, "=================================\n");
     fflush(NULL);
-    
+    #pragma clang diagnostic pop
 }
 
 
