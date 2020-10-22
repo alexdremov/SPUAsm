@@ -1,0 +1,15 @@
+<map id="OPEXE_FUNC" name="OPEXE_FUNC">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,119,83"/>
+<area shape="rect" id="node2" href="$EXE_8h.html#a84389e6776840159762cabe09458c5e7" title=" " alt="" coords="190,5,263,32"/>
+<area shape="rect" id="node3" href="$ParseHelpers_8cpp.html#a503732ecee5e0f7a02f23c8381727ed6" title=" " alt="" coords="167,56,287,83"/>
+<area shape="rect" id="node4" href="$StackRigid_8cpp.html#a3da847c6aaf3f472d56d528de1a0f6f7" title="Pop value from the end of the stack The operation can perform reallocations if there is too much spac..." alt="" coords="187,107,266,133"/>
+<area shape="rect" id="node5" href="$StackRigid_8cpp.html#a20779cbd888e42054835b58a527bc0e8" title="Reallocates Stack if needed." alt="" coords="356,31,488,57"/>
+<area shape="rect" id="node7" href="$StackRigid_8cpp.html#a50d9ff70df667de809d39640f33db70b" title="Checks for pointer validity." alt="" coords="579,81,716,108"/>
+<area shape="rect" id="node9" href="$StackRigid_8cpp.html#aafaff2554f25a2dd6681bf409da8fe8e" title="Updates Stack checksums. Does not take into account bytes inside the stack but outside of its last el..." alt="" coords="335,183,509,209"/>
+<area shape="rect" id="node13" href="$StackRigid_8cpp.html#a8ffebb1dd3f306eca52e8b34ad325f1c" title="Perform all stack checks: checksums, general constrains." alt="" coords="371,132,473,159"/>
+<area shape="rect" id="node6" href="$StackRigid_8cpp.html#ad190054fe2653472b68ffe86d6f5dff3" title="Create new stack with pre&#45;defined capacity." alt="" coords="991,5,1076,32"/>
+<area shape="rect" id="node8" href="$StackRigid_8cpp.html#a269040ce2ab02e681254d1e9f20aff35" title="Memory alocated for the Stack." alt="" coords="785,31,943,57"/>
+<area shape="rect" id="node10" href="$StackRigid_8cpp.html#a2dbfc90e6e980278704961c949b0bf58" title="Claculates big Stack checksum. Uses Adler&#45;32 method." alt="" coords="570,132,725,159"/>
+<area shape="rect" id="node12" href="$StackRigid_8cpp.html#afbcd0622342a6d09486b0303b840ee59" title="Uses Adler&#45;32 method. Calculates Stack checksum only for the vital parameters. This is necessary beca..." alt="" coords="557,183,737,209"/>
+<area shape="rect" id="node11" href="$StackRigid_8cpp.html#abc79f40e23ef3b974d01a80274a3df1d" title="Calculates Adler&#45;32 checksum from the firstBlock to the firstBlock + len." alt="" coords="807,157,921,184"/>
+</map>
