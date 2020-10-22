@@ -427,8 +427,10 @@ static StackRigidOperationCodes __StackReallocate( __overload(StackRigid)** stac
         if (memoryNew <= memoryNow) {
              __overload(StackRigid)* newStack = ( __overload(StackRigid)*) realloc((*stack), memoryNew);
             if (!istack_pointer_valid(newStack, sizeof(newStack))){
-                if (newStack != NULL)
+                if (newStack != NULL) {
                     free(newStack);
+                    free((*stack));
+                }
                 return STACK_OP_NOMEMORY;
             }
             

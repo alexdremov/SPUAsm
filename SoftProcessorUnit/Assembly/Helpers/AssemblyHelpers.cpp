@@ -263,6 +263,8 @@ BinFileLoadResult loadBinFile(BinaryFile* binFile, FILE* inputFile) {
     
     resizeBinFile(binFile, binFile->currentSize + 20);
     memcpy(binFile->code, curPos, binFile->currentSize);
+
+    free(data);
     
     return SPU_BINLOAD_OK;
 }

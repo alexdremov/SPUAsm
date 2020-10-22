@@ -1,13 +1,16 @@
+in rbx
 push 0
 pop rax
-forewer:
+loop:
+dec rbx
 push rax
 push rax
 mul
 out
 pop
-push rax
-push 1
-add
-pop rax
-jmp forewer
+inc rax
+jm mondayOnly
+push 0
+push rbx
+jne loop
+mondayOnly:
