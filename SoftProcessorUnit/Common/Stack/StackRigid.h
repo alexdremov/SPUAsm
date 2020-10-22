@@ -44,8 +44,8 @@
  * The main StackRigid struct
  */
 struct __overload(StackRigid) {
-    uint32_t checkSum;
-    uint32_t checkSumVital;
+    unsigned long checkSum;
+    unsigned long checkSumVital;
     size_t capacity;
     size_t size;
     FILE* logFile;
@@ -203,7 +203,7 @@ static void __StackUpdateChecksum( __overload(StackRigid)* stack);
  * @endverbatim
  * @param[in] stack Stack that checksums are needed to be updated
  */
-static uint32_t __StackGetChecksum( __overload(StackRigid)* stack);
+static unsigned long __StackGetChecksum( __overload(StackRigid)* stack);
 
 
 /**
@@ -217,7 +217,7 @@ static uint32_t __StackGetChecksum( __overload(StackRigid)* stack);
  * @endverbatim
  * @param[in] stack Stack that checksums are needed to be updated
  */
-static uint32_t __StackGetChecksumVital( __overload(StackRigid)* stack);
+static unsigned long __StackGetChecksumVital( __overload(StackRigid)* stack);
 
 
 /**

@@ -34,9 +34,9 @@
  * @param[in] len length of byte sequence
  * @return checksum
  */
-static uint32_t adlerChecksum(const void* firstBlock, size_t len) {
-    uint32_t a = 1, b = 0;
-    const uint32_t MOD_ADLER = 65521;
+static unsigned long adlerChecksum(const void* firstBlock, size_t len) {
+    unsigned long a = 1, b = 0;
+    const unsigned long MOD_ADLER = 65521;
     for (size_t index = 0; index < len; ++index) {
         a = (a + ((unsigned char*)firstBlock)[index]) % MOD_ADLER;
         b = (b + a) % MOD_ADLER;
@@ -53,7 +53,7 @@ static uint32_t adlerChecksum(const void* firstBlock, size_t len) {
  * @return checksum
  */
 static bool istack_pointer_valid(void* addr, int size) {
-    if ((uint64_t)addr < 4096 || (uint64_t)addr % (uint64_t)size != 0) {
+    if ((unsigned long long)addr < 4096 || (unsigned long long)addr % (unsigned long long)size != 0) {
         return false;
     }
     return true;
@@ -151,7 +151,7 @@ static void __StackUpdateChecksum( __overload(StackRigid)* stack);
  * @endverbatim
  * @param[in] stack Stack that checksums are needed to be updated
  */
-static uint32_t __StackGetChecksum( __overload(StackRigid)* stack);
+static unsigned long __StackGetChecksum( __overload(StackRigid)* stack);
 
 
 /**
@@ -165,7 +165,7 @@ static uint32_t __StackGetChecksum( __overload(StackRigid)* stack);
  * @endverbatim
  * @param[in] stack Stack that checksums are needed to be updated
  */
-static uint32_t __StackGetChecksumVital( __overload(StackRigid)* stack);
+static unsigned long __StackGetChecksumVital( __overload(StackRigid)* stack);
 
 
 /**
@@ -324,11 +324,11 @@ StackRigidState StackValidate( __overload(StackRigid)* stack) {
             return STACK_ST_INTEGRITYERR;
     #endif
     #ifndef IGNORE_VALIDITY
-        uint32_t currentChecksumVital = __StackGetChecksumVital(stack);
+        unsigned long currentChecksumVital = __StackGetChecksumVital(stack);
         if (currentChecksumVital != stack->checkSumVital || currentChecksumVital == 0)
             return STACK_ST_INTEGRITYERR;
         
-        uint32_t currentChecksum = __StackGetChecksum(stack);
+        unsigned long currentChecksum = __StackGetChecksum(stack);
         if (currentChecksum != stack->checkSum || currentChecksum == 0)
             return STACK_ST_INTEGRITYERR;
     #endif
@@ -346,7 +346,7 @@ static void __StackUpdateChecksum( __overload(StackRigid)* stack) {
 }
 
 
-static uint32_t __StackGetChecksumVital( __overload(StackRigid)* stack) {
+static unsigned long __StackGetChecksumVital( __overload(StackRigid)* stack) {
     assert(stack);
     
     void* firstBlock = (char*)stack + sizeof(stack->checkSum) + sizeof(stack->checkSumVital);
@@ -359,7 +359,7 @@ static uint32_t __StackGetChecksumVital( __overload(StackRigid)* stack) {
 }
 
 
-static uint32_t __StackGetChecksum( __overload(StackRigid)* stack) {
+static unsigned long __StackGetChecksum( __overload(StackRigid)* stack) {
     assert(stack);
     
     void* firstBlock = (char*)stack + sizeof(stack->checkSum);
