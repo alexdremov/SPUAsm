@@ -281,7 +281,7 @@ parseCode(AssemblyParams *compileParams, const SyntaxMapping *mapping, BinaryFil
     char *lastBlockPos = code;
 
     size_t instrUct = 0;
-    while (lastBlockPos != nullptr && lastBlockPos != (char *)(nullptr) + 1) {
+    while (lastBlockPos != nullptr && lastBlockPos > (char *)(1)) {
         if (!codeBlockEmpty(lastBlockPos)) {
             CommandParseResult res = parseCommand(compileParams, mapping, binary, lastBlockPos);
             instrUct++;

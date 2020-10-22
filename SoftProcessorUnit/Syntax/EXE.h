@@ -9,6 +9,7 @@
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunused-parameter"
+#pragma clang diagnostic ignored "-Wchar-subscripts"
 
 // (SPUCore* core, RunParameters* params, BinaryFile* binary, char** SPI)
 
