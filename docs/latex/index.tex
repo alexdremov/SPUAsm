@@ -77,78 +77,54 @@ Analyses code for syntax errors, builds temporary code to calculate labels offse
 All unnecessary indent symbols removed (comments, blank lines, unneded whitespaces). Code structure will be altered, line numbers are not preserved.\hypertarget{index_autotoc_md8}{}\doxysubsubsection{Translation}\label{index_autotoc_md8}
 Code is translated using labels table generated on analysis step. At this point, all errors must be catched by analysis, but still some can make thir way to this point. In this case, generation will fail, dumping wrong instruction and its number.\hypertarget{index_autotoc_md9}{}\doxysubsubsection{Final checks}\label{index_autotoc_md9}
 Check that all operations completed correctly; labels table is complete and not redundant.\hypertarget{index_autotoc_md10}{}\doxysection{Syntax}\label{index_autotoc_md10}
-{\bfseries{push}} $<$instant value/register$>$ Push value to the stack
-
-{\bfseries{pop}} $<$empty/register$>$ Pop value from the stack
+\hypertarget{index_autotoc_md11}{}\doxysubsubsection{push    $<$instant value/register$>$}\label{index_autotoc_md11}
+Push value to the stack\hypertarget{index_autotoc_md12}{}\doxysubsubsection{pop      $<$empty/register$>$}\label{index_autotoc_md12}
+Pop value from the stack
 \begin{DoxyItemize}
 \item no args -\/ just delete
 \item register -\/ pop and save to register
-\end{DoxyItemize}
-
-{\bfseries{in}} $<$empty/register$>$ Request value from the console
+\end{DoxyItemize}\hypertarget{index_autotoc_md13}{}\doxysubsubsection{in          $<$empty/register$>$}\label{index_autotoc_md13}
+Request value from the console
 \begin{DoxyItemize}
 \item no args -\/ push value to the stack
 \item register -\/ save to the register
-\end{DoxyItemize}
-
-{\bfseries{out}} $<$empty/register$>$ Prints value to the console
+\end{DoxyItemize}\hypertarget{index_autotoc_md14}{}\doxysubsubsection{out       $<$empty/register$>$}\label{index_autotoc_md14}
+Prints value to the console
 \begin{DoxyItemize}
 \item no args -\/ last stack value
 \item register -\/ register value
-\end{DoxyItemize}
-
-{\bfseries{inc}} $<$empty/register$>$ Increments the value
+\end{DoxyItemize}\hypertarget{index_autotoc_md15}{}\doxysubsubsection{inc       $<$empty/register$>$}\label{index_autotoc_md15}
+Increments the value
 \begin{DoxyItemize}
 \item no args -\/ increment the last stack element
 \item register -\/ increment the register
-\end{DoxyItemize}
-
-{\bfseries{dec}} $<$empty/register$>$ Decrements the value
+\end{DoxyItemize}\hypertarget{index_autotoc_md16}{}\doxysubsubsection{dec      $<$empty/register$>$}\label{index_autotoc_md16}
+Decrements the value
 \begin{DoxyItemize}
 \item no args -\/ increment the last stack element
 \item register -\/ increment the register
-\end{DoxyItemize}
-
-{\bfseries{dump}} Dump stack information
-
-{\bfseries{clear}} Clear stack
-
-{\bfseries{add}} Add two last stack values and push to the stack
-
-{\bfseries{sub}} Substract two last stack values and push to the stack
-
-{\bfseries{mul}} Multiply two last stack values and push to the stack
-
-{\bfseries{div}} Divide two last stack values and push to the stack
-
-{\bfseries{sin}} Sin of the last stack value
-
-{\bfseries{cos}} Cos of the last stack value
-
-{\bfseries{sqrt}} Square root of the last stack value
-
-{\bfseries{pow}} The pre-\/last element of the stack to the power of the last one
-
-{\bfseries{het}} Finish the program
-
-{\bfseries{jmp}} $<$label$>$ Jump to the label
-
-{\bfseries{jb}} $<$label$>$ Jump if last element is bigger than pre-\/last. Removes both operands from the stack
-
-{\bfseries{jbe}} $<$label$>$ Jump if last element is bigger-\/or-\/equal than pre-\/last. Removes both operands from the stack
-
-{\bfseries{je}} $<$label$>$ Jump if last element is equal to the pre-\/last one. Removes both operands from the stack
-
-{\bfseries{jne}} $<$label$>$ Jump if last element is not equal to the pre-\/last one. Removes both operands from the stack
-
-{\bfseries{ja}} $<$label$>$ Jump if last element is lower than pre-\/last. Removes both operands from the stack
-
-{\bfseries{jae}} $<$label$>$ Jump if last element is lower-\/or-\/equal than pre-\/last. Removes both operands from the stack
-
-{\bfseries{jm}} $<$label$>$ Jump if it\textquotesingle{}s Monday.
-
-$\ast$$\ast$$<$label\+Name$>$\+:$\ast$$\ast$ Creates label\hypertarget{index_autotoc_md11}{}\doxysection{Examples}\label{index_autotoc_md11}
-All examples are available \href{https://github.com/AlexRoar/SPUAsm/tree/main/Examples/SPUAsm/SPUAsm}{\texttt{ in this dir}}.\hypertarget{index_autotoc_md12}{}\doxysubsection{Squares of first n numbers}\label{index_autotoc_md12}
+\end{DoxyItemize}\hypertarget{index_autotoc_md17}{}\doxysubsubsection{dump}\label{index_autotoc_md17}
+Dump stack information\hypertarget{index_autotoc_md18}{}\doxysubsubsection{clear}\label{index_autotoc_md18}
+Clear stack\hypertarget{index_autotoc_md19}{}\doxysubsubsection{add}\label{index_autotoc_md19}
+Add two last stack values and push to the stack\hypertarget{index_autotoc_md20}{}\doxysubsubsection{sub}\label{index_autotoc_md20}
+Substract two last stack values and push to the stack\hypertarget{index_autotoc_md21}{}\doxysubsubsection{mul}\label{index_autotoc_md21}
+Multiply two last stack values and push to the stack\hypertarget{index_autotoc_md22}{}\doxysubsubsection{div}\label{index_autotoc_md22}
+Divide two last stack values and push to the stack\hypertarget{index_autotoc_md23}{}\doxysubsubsection{sin}\label{index_autotoc_md23}
+Sin of the last stack value\hypertarget{index_autotoc_md24}{}\doxysubsubsection{cos}\label{index_autotoc_md24}
+Cos of the last stack value\hypertarget{index_autotoc_md25}{}\doxysubsubsection{sqrt}\label{index_autotoc_md25}
+Square root of the last stack value\hypertarget{index_autotoc_md26}{}\doxysubsubsection{pow}\label{index_autotoc_md26}
+The pre-\/last element of the stack to the power of the last one\hypertarget{index_autotoc_md27}{}\doxysubsubsection{het}\label{index_autotoc_md27}
+Finish the program\hypertarget{index_autotoc_md28}{}\doxysubsubsection{jmp      $<$label$>$}\label{index_autotoc_md28}
+Jump to the label\hypertarget{index_autotoc_md29}{}\doxysubsubsection{jb         $<$label$>$}\label{index_autotoc_md29}
+Jump if last element is bigger than pre-\/last. Removes both operands from the stack\hypertarget{index_autotoc_md30}{}\doxysubsubsection{jbe       $<$label$>$}\label{index_autotoc_md30}
+Jump if last element is bigger-\/or-\/equal than pre-\/last. Removes both operands from the stack\hypertarget{index_autotoc_md31}{}\doxysubsubsection{je         $<$label$>$}\label{index_autotoc_md31}
+Jump if last element is equal to the pre-\/last one. Removes both operands from the stack\hypertarget{index_autotoc_md32}{}\doxysubsubsection{jne       $<$label$>$}\label{index_autotoc_md32}
+Jump if last element is not equal to the pre-\/last one. Removes both operands from the stack\hypertarget{index_autotoc_md33}{}\doxysubsubsection{ja         $<$label$>$}\label{index_autotoc_md33}
+Jump if last element is lower than pre-\/last. Removes both operands from the stack\hypertarget{index_autotoc_md34}{}\doxysubsubsection{jae       $<$label$>$}\label{index_autotoc_md34}
+Jump if last element is lower-\/or-\/equal than pre-\/last. Removes both operands from the stack\hypertarget{index_autotoc_md35}{}\doxysubsubsection{jm        $<$label$>$}\label{index_autotoc_md35}
+Jump if it\textquotesingle{}s Monday.\hypertarget{index_autotoc_md36}{}\doxysubsubsection{label\+Name\+:}\label{index_autotoc_md36}
+Creates label\hypertarget{index_autotoc_md37}{}\doxysection{Examples}\label{index_autotoc_md37}
+All examples are available \href{https://github.com/AlexRoar/SPUAsm/tree/main/Examples/SPUAsm/SPUAsm}{\texttt{ in this dir}}.\hypertarget{index_autotoc_md38}{}\doxysubsection{Squares of first n numbers}\label{index_autotoc_md38}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{;}
@@ -183,7 +159,7 @@ All examples are available \href{https://github.com/AlexRoar/SPUAsm/tree/main/Ex
 \DoxyCodeLine{}
 \DoxyCodeLine{mondayOnly:}
 \end{DoxyCode}
-\hypertarget{index_autotoc_md13}{}\doxysubsection{Square equation solutions}\label{index_autotoc_md13}
+\hypertarget{index_autotoc_md39}{}\doxysubsection{Square equation solutions}\label{index_autotoc_md39}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{;}
@@ -247,7 +223,7 @@ All examples are available \href{https://github.com/AlexRoar/SPUAsm/tree/main/Ex
 \DoxyCodeLine{out     rax}
 \DoxyCodeLine{out     rcx}
 \end{DoxyCode}
-\hypertarget{index_autotoc_md14}{}\doxysection{Links}\label{index_autotoc_md14}
+\hypertarget{index_autotoc_md40}{}\doxysection{Links}\label{index_autotoc_md40}
 
 \begin{DoxyItemize}
 \item \href{https://github.com/AlexRoar/SPUAsm/blob/main/SoftProcessorUnit/Assembly/SPUAssembly.cpp}{\texttt{ S\+P\+U\+Asm code}}

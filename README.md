@@ -91,98 +91,98 @@ Check that all operations completed correctly; labels table is complete and not 
 
 ## Syntax
 
-**push**    <instant value/register>
+#### push    <instant value/register>
 Push value to the stack
 
-**pop**      <empty/register>
+#### pop      <empty/register>
 Pop value from the stack
 -  no args - just delete
 -  register - pop and save to register
 
-**in**          <empty/register>
+#### in          <empty/register>
 Request value from the console
 -  no args - push value to the stack
 -  register - save to the register
 
-**out**       <empty/register>
+#### out       <empty/register>
 Prints value to the console
 -  no args - last stack value
 -  register - register value
 
-**inc**       <empty/register>
+#### inc       <empty/register>
 Increments the value
 -  no args - increment the last stack element
 -  register - increment the register
 
-**dec**      <empty/register>
+#### dec      <empty/register>
 Decrements the value
 -  no args - increment the last stack element
 -  register - increment the register
 
-**dump**
+#### dump
 Dump stack information
 
-**clear**
+#### clear
 Clear stack
 
-**add**
+#### add
 Add two last stack values and push to the stack
 
-**sub**
+#### sub
 Substract two last stack values and push to the stack
 
-**mul**
+#### mul
 Multiply two last stack values and push to the stack
 
-**div**
+#### div
 Divide two last stack values and push to the stack
 
-**sin**
+#### sin
 Sin of the last stack value
 
-**cos**
+#### cos
 Cos of the last stack value
 
-**sqrt**
+#### sqrt
 Square root of the last stack value
 
-**pow**
+#### pow
 The pre-last element of the stack to the power of the last one
 
-**het**
+#### het
 Finish the program
 
-**jmp**      <label>
+#### jmp      <label>
 Jump to the label
 
-**jb**         <label>
+#### jb         <label>
 Jump if last element is bigger than pre-last. 
 Removes both operands from the stack
 
-**jbe**       <label>
+#### jbe       <label>
 Jump if last element is bigger-or-equal than pre-last. 
 Removes both operands from the stack
 
-**je**         <label>
+#### je         <label>
 Jump if last element is equal to the pre-last one. 
 Removes both operands from the stack
 
-**jne**       <label>
+#### jne       <label>
 Jump if last element is not equal to the pre-last one. 
 Removes both operands from the stack
 
-**ja**         <label>
+#### ja         <label>
 Jump if last element is lower than pre-last. 
 Removes both operands from the stack
 
-**jae**       <label>
+#### jae       <label>
 Jump if last element is lower-or-equal than pre-last. 
 Removes both operands from the stack
 
-**jm**        <label>
+#### jm        <label>
 Jump if it's Monday. 
 
-**<labelName>:**
+#### labelName:
 Creates label
 
 ## Examples

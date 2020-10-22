@@ -133,51 +133,103 @@ Final checks</h3>
 <p>Check that all operations completed correctly; labels table is complete and not redundant.</p>
 <h1><a class="anchor" id="autotoc_md10"></a>
 Syntax</h1>
-<p><b>push</b> &lt;instant value/register&gt; Push value to the stack</p>
-<p><b>pop</b> &lt;empty/register&gt; Pop value from the stack</p><ul>
+<h3><a class="anchor" id="autotoc_md11"></a>
+push    &lt;instant value/register&gt;</h3>
+<p>Push value to the stack</p>
+<h3><a class="anchor" id="autotoc_md12"></a>
+pop      &lt;empty/register&gt;</h3>
+<p>Pop value from the stack</p><ul>
 <li>no args - just delete</li>
 <li>register - pop and save to register</li>
 </ul>
-<p><b>in</b> &lt;empty/register&gt; Request value from the console</p><ul>
+<h3><a class="anchor" id="autotoc_md13"></a>
+in          &lt;empty/register&gt;</h3>
+<p>Request value from the console</p><ul>
 <li>no args - push value to the stack</li>
 <li>register - save to the register</li>
 </ul>
-<p><b>out</b> &lt;empty/register&gt; Prints value to the console</p><ul>
+<h3><a class="anchor" id="autotoc_md14"></a>
+out       &lt;empty/register&gt;</h3>
+<p>Prints value to the console</p><ul>
 <li>no args - last stack value</li>
 <li>register - register value</li>
 </ul>
-<p><b>inc</b> &lt;empty/register&gt; Increments the value</p><ul>
+<h3><a class="anchor" id="autotoc_md15"></a>
+inc       &lt;empty/register&gt;</h3>
+<p>Increments the value</p><ul>
 <li>no args - increment the last stack element</li>
 <li>register - increment the register</li>
 </ul>
-<p><b>dec</b> &lt;empty/register&gt; Decrements the value</p><ul>
+<h3><a class="anchor" id="autotoc_md16"></a>
+dec      &lt;empty/register&gt;</h3>
+<p>Decrements the value</p><ul>
 <li>no args - increment the last stack element</li>
 <li>register - increment the register</li>
 </ul>
-<p><b>dump</b> Dump stack information</p>
-<p><b>clear</b> Clear stack</p>
-<p><b>add</b> Add two last stack values and push to the stack</p>
-<p><b>sub</b> Substract two last stack values and push to the stack</p>
-<p><b>mul</b> Multiply two last stack values and push to the stack</p>
-<p><b>div</b> Divide two last stack values and push to the stack</p>
-<p><b>sin</b> Sin of the last stack value</p>
-<p><b>cos</b> Cos of the last stack value</p>
-<p><b>sqrt</b> Square root of the last stack value</p>
-<p><b>pow</b> The pre-last element of the stack to the power of the last one</p>
-<p><b>het</b> Finish the program</p>
-<p><b>jmp</b> &lt;label&gt; Jump to the label</p>
-<p><b>jb</b> &lt;label&gt; Jump if last element is bigger than pre-last. Removes both operands from the stack</p>
-<p><b>jbe</b> &lt;label&gt; Jump if last element is bigger-or-equal than pre-last. Removes both operands from the stack</p>
-<p><b>je</b> &lt;label&gt; Jump if last element is equal to the pre-last one. Removes both operands from the stack</p>
-<p><b>jne</b> &lt;label&gt; Jump if last element is not equal to the pre-last one. Removes both operands from the stack</p>
-<p><b>ja</b> &lt;label&gt; Jump if last element is lower than pre-last. Removes both operands from the stack</p>
-<p><b>jae</b> &lt;label&gt; Jump if last element is lower-or-equal than pre-last. Removes both operands from the stack</p>
-<p><b>jm</b> &lt;label&gt; Jump if it's Monday.</p>
-<p>**&lt;labelName&gt;:** Creates label</p>
-<h1><a class="anchor" id="autotoc_md11"></a>
+<h3><a class="anchor" id="autotoc_md17"></a>
+dump</h3>
+<p>Dump stack information</p>
+<h3><a class="anchor" id="autotoc_md18"></a>
+clear</h3>
+<p>Clear stack</p>
+<h3><a class="anchor" id="autotoc_md19"></a>
+add</h3>
+<p>Add two last stack values and push to the stack</p>
+<h3><a class="anchor" id="autotoc_md20"></a>
+sub</h3>
+<p>Substract two last stack values and push to the stack</p>
+<h3><a class="anchor" id="autotoc_md21"></a>
+mul</h3>
+<p>Multiply two last stack values and push to the stack</p>
+<h3><a class="anchor" id="autotoc_md22"></a>
+div</h3>
+<p>Divide two last stack values and push to the stack</p>
+<h3><a class="anchor" id="autotoc_md23"></a>
+sin</h3>
+<p>Sin of the last stack value</p>
+<h3><a class="anchor" id="autotoc_md24"></a>
+cos</h3>
+<p>Cos of the last stack value</p>
+<h3><a class="anchor" id="autotoc_md25"></a>
+sqrt</h3>
+<p>Square root of the last stack value</p>
+<h3><a class="anchor" id="autotoc_md26"></a>
+pow</h3>
+<p>The pre-last element of the stack to the power of the last one</p>
+<h3><a class="anchor" id="autotoc_md27"></a>
+het</h3>
+<p>Finish the program</p>
+<h3><a class="anchor" id="autotoc_md28"></a>
+jmp      &lt;label&gt;</h3>
+<p>Jump to the label</p>
+<h3><a class="anchor" id="autotoc_md29"></a>
+jb         &lt;label&gt;</h3>
+<p>Jump if last element is bigger than pre-last. Removes both operands from the stack</p>
+<h3><a class="anchor" id="autotoc_md30"></a>
+jbe       &lt;label&gt;</h3>
+<p>Jump if last element is bigger-or-equal than pre-last. Removes both operands from the stack</p>
+<h3><a class="anchor" id="autotoc_md31"></a>
+je         &lt;label&gt;</h3>
+<p>Jump if last element is equal to the pre-last one. Removes both operands from the stack</p>
+<h3><a class="anchor" id="autotoc_md32"></a>
+jne       &lt;label&gt;</h3>
+<p>Jump if last element is not equal to the pre-last one. Removes both operands from the stack</p>
+<h3><a class="anchor" id="autotoc_md33"></a>
+ja         &lt;label&gt;</h3>
+<p>Jump if last element is lower than pre-last. Removes both operands from the stack</p>
+<h3><a class="anchor" id="autotoc_md34"></a>
+jae       &lt;label&gt;</h3>
+<p>Jump if last element is lower-or-equal than pre-last. Removes both operands from the stack</p>
+<h3><a class="anchor" id="autotoc_md35"></a>
+jm        &lt;label&gt;</h3>
+<p>Jump if it's Monday.</p>
+<h3><a class="anchor" id="autotoc_md36"></a>
+labelName:</h3>
+<p>Creates label</p>
+<h1><a class="anchor" id="autotoc_md37"></a>
 Examples</h1>
 <p>All examples are available <a href="https://github.com/AlexRoar/SPUAsm/tree/main/Examples/SPUAsm/SPUAsm">in this dir</a>.</p>
-<h2><a class="anchor" id="autotoc_md12"></a>
+<h2><a class="anchor" id="autotoc_md38"></a>
 Squares of first n numbers</h2>
 <div class="fragment"><div class="line">;</div>
 <div class="line">; Squares</div>
@@ -210,7 +262,7 @@ Squares of first n numbers</h2>
 <div class="line">jne loop</div>
 <div class="line"> </div>
 <div class="line">mondayOnly:</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md13"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md39"></a>
 Square equation solutions</h2>
 <div class="fragment"><div class="line">;</div>
 <div class="line">; Data input</div>
@@ -272,7 +324,7 @@ Square equation solutions</h2>
 <div class="line">;</div>
 <div class="line">out     rax</div>
 <div class="line">out     rcx</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md14"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md40"></a>
 Links</h1>
 <ul>
 <li><a href="https://github.com/AlexRoar/SPUAsm/blob/main/SoftProcessorUnit/Assembly/SPUAssembly.cpp">SPUAsm code</a></li>
