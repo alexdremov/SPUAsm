@@ -1,9 +1,11 @@
 
 
-#include <stdlib.h>
 
 #ifndef StackRigid_h
 #define StackRigid_h
+
+#include <stdlib.h>
+#include <stdio.h>
 
 #define IGNORE_VALIDITY
 

@@ -12,13 +12,14 @@
 #include "AssemblyHelpers.hpp"
 #include "Syntax.hpp"
 #include "CommandsDTypes.hpp"
+#include "SPUDtypes.hpp"
 
 
 char *getSourceFileData(FILE *inputFile, size_t *length) {
     fseek(inputFile, 0, SEEK_END);
     *length = (size_t) ftell(inputFile);
     fseek(inputFile, 0, SEEK_SET);
-
+    
     char *buffer = (char *) calloc(*length + 2, sizeof(char));
     if (buffer) {
         fread(buffer, 1, *length, inputFile);
@@ -26,7 +27,7 @@ char *getSourceFileData(FILE *inputFile, size_t *length) {
     } else {
         return nullptr;
     }
-
+    
     return buffer;
 }
 
@@ -45,7 +46,7 @@ void removeDoubleWhitespaces(char *code, size_t *length) {
 
 void preprocessSource(char *code, size_t *length) {
     removeDoubleWhitespaces(code, length);
-
+    
     char *commentPos = strchr(code, ';');
     while (commentPos != nullptr) {
         char *commentPosNext = strchr(commentPos, '\n');
@@ -63,7 +64,7 @@ void preprocessSource(char *code, size_t *length) {
         *length = strlen(code);
         commentPos = strchr(commentPos + 1, ';');
     }
-
+    
     for (size_t i = 0; i + 1 < *length;) {
         if (code[i] == '\n' && (code[i + 1] == '\n' || code[(i > 0) ? i - 1 : i] == '\n')) {
             for (size_t j = i; j < *length; j++) {
@@ -75,6 +76,7 @@ void preprocessSource(char *code, size_t *length) {
         }
     }
     removeWhitespacesInTheEnd(code, length);
+    removeWhitespacesInTheBeginning(code, length);
 }
 
 const SyntaxEntity *fetchCommand(const SyntaxMapping *mapping, char *codeBlock) {
@@ -89,9 +91,9 @@ const SyntaxEntity *fetchCommand(const SyntaxMapping *mapping, char *codeBlock) 
             *firstWhitespace = '\0';
         }
     }
-
+    
     const SyntaxEntity *foundCommand = getSyntaxEntityByName(mapping, (const char *) command);
-
+    
     free(command);
     return foundCommand;
 }
@@ -104,17 +106,17 @@ const char **getArgList(char *codeBlock, int *argc, int *argLens) {
     *argc = 1;
     char **args = (char **) calloc(SPU_CMD_MAXARGS, sizeof(char *));
     char *firstWhitespace = strchr(codeBlock, ' ');
-
+    
     size_t maxLen = strlen(codeBlock);
-
+    
     args[0] = (char *) calloc(maxLen, sizeof(char));
     sscanf(codeBlock, "%s", args[0]);
-
+    
     if (firstWhitespace == nullptr)
         return (const char **) args;
-
+    
     int argumentsAvailable = 1;
-
+    
     firstWhitespace = strchr(codeBlock, ' ');
     while (firstWhitespace != nullptr) {
         if (!codeBlockEmpty(firstWhitespace)) {
@@ -124,14 +126,15 @@ const char **getArgList(char *codeBlock, int *argc, int *argLens) {
         }
         firstWhitespace = strchr(firstWhitespace + 1, ' ');
     }
+    
     *argc = argumentsAvailable;
-
+    
     if (argLens != nullptr) {
         for (int i = 0; i < argumentsAvailable; i++) {
             argLens[i] = (int) strlen(args[i]);
         }
     }
-
+    
     return (const char **) args;
 }
 
@@ -145,7 +148,7 @@ void freeArgList(char **argv, int argc) {
 
 int isValidArgumentsNumber(const SyntaxEntity *mapping, int argc) {
     const char *formatPtr = mapping->format;
-
+    
     int maxPossible = 0;
     int argumentsTotal = argc;
     int argumentsAvailable = argc;
@@ -156,10 +159,10 @@ int isValidArgumentsNumber(const SyntaxEntity *mapping, int argc) {
         formatPtr++;
         maxPossible++;
     }
-
+    
     if (argumentsTotal > maxPossible)
         return 0;
-
+    
     return 1;
 }
 
@@ -169,20 +172,20 @@ parseCommand(AssemblyParams *compileParams, const SyntaxMapping *mapping, Binary
     if (newlinePos != nullptr) {
         *newlinePos = '\0';
     }
-
+    
     char *commPos = strchr(codeBlock, ';');
     if (commPos != nullptr) {
         *commPos = '\0';
     }
-
+    
     const SyntaxEntity *foundEntity = fetchCommand(mapping, codeBlock);
-
+    
     if (foundEntity == nullptr) {
         LabelParse resLabel = setLabelPos(compileParams, codeBlock, (unsigned int) binary->currentSize);
         if (resLabel == SPU_LABEL_NOTFOUND) {
             printf("%s: error: assembly: unknown instruction '%s' found\n", compileParams->inputFileName,
                    codeBlock);
-
+            
             fprintf(compileParams->lstFile, "error: assembly: unknown instruction '%s' found\n", codeBlock);
             return SPU_UNKNOWN_COMMAND;
         } else {
@@ -207,12 +210,12 @@ parseCommand(AssemblyParams *compileParams, const SyntaxMapping *mapping, Binary
             }
         }
     } else {
-
+        
         int argc = 0;
         const char **argv = getArgList(codeBlock, &argc);
-
+        
         int validArguments = isValidArgumentsNumber(foundEntity, argc - 1);
-
+        
         if (validArguments == 0) {
             if (compileParams->verbose) {
                 printf("%s: error: assembly: wrong instruction '%s' found. "
@@ -220,14 +223,14 @@ parseCommand(AssemblyParams *compileParams, const SyntaxMapping *mapping, Binary
                        "Valid format: '%s'\n", compileParams->inputFileName, codeBlock, foundEntity->format);
             }
             fprintf(compileParams->lstFile, "error: assembly: wrong instruction '%s' found. "
-                                            "Arguments number is not valid. "
-                                            "Valid format: '%s'\n", codeBlock, foundEntity->format);
+                    "Arguments number is not valid. "
+                    "Valid format: '%s'\n", codeBlock, foundEntity->format);
             freeArgList((char **) argv, argc);
             return SPU_CMD_WRONG_ARGUMENTS;
         }
-
+        
         CommandToBytesResult parseRes = foundEntity->cProcessor(foundEntity, compileParams, binary, argc, argv);
-
+        
         switch (parseRes) {
             case SPU_CTB_ERROR: {
                 printf("%s: error: assembly: general syntax error\n", compileParams->inputFileName);
@@ -247,21 +250,31 @@ parseCommand(AssemblyParams *compileParams, const SyntaxMapping *mapping, Binary
             case SPU_CTB_OK: {
                 break;
             }
+            case SPU_CTB_INVALID_ARGSTRUCTURE: {
+                printf("%s error: assembly: invalid arguments structure\n", compileParams->inputFileName);
+                fprintf(compileParams->lstFile, "error: assembly: invalid number of arguments\n");
+                break;
+            }
+            case SPU_CTB_NONASSIGNABLE: {
+                printf("%s error: assembly: invalid argument is not assignable\n", compileParams->inputFileName);
+                fprintf(compileParams->lstFile, "error: assembly: invalid argument is not assignable\n");
+                break;
+            }
         }
-
+        
         if (parseRes != SPU_CTB_OK) {
             return SPU_FINALPARSE_ERROR;
         }
         freeArgList((char **) argv, argc);
     }
-
+    
     if (newlinePos != nullptr) {
         *newlinePos = '\n';
     }
     if (commPos != nullptr) {
         *commPos = ';';
     }
-
+    
     return SPU_PARSE_OK;
 }
 
@@ -279,7 +292,7 @@ int codeBlockEmpty(char *codeBlock) {
 CommandParseResult
 parseCode(AssemblyParams *compileParams, const SyntaxMapping *mapping, BinaryFile *binary, char *code, size_t length) {
     char *lastBlockPos = code;
-
+    
     size_t instrUct = 0;
     while (lastBlockPos != nullptr && lastBlockPos > (char *)(1)) {
         if (!codeBlockEmpty(lastBlockPos)) {
@@ -295,11 +308,11 @@ parseCode(AssemblyParams *compileParams, const SyntaxMapping *mapping, BinaryFil
                 return res;
             }
         }
-
+        
         lastBlockPos = ((char *) memchr(lastBlockPos, '\n', (size_t) length - (size_t) (lastBlockPos - code))) + 1;
     }
-
-
+    
+    
     return SPU_PARSE_OK;
 }
 
@@ -360,7 +373,7 @@ void removeWhitespacesInTheEnd(char *code, size_t *length) {
                     *(mover - 1) = *(mover);
                     mover++;
                 }
-
+                
                 *length -= 1;
             }
         }
@@ -368,21 +381,41 @@ void removeWhitespacesInTheEnd(char *code, size_t *length) {
     }
 }
 
+void removeWhitespacesInTheBeginning(char *code, size_t *length){
+    char *newLinePos = code;
+    while (newLinePos >= (char*)2) {
+        char* startPos = newLinePos;
+        char* moverPos = newLinePos;
+        while (*moverPos == ' ' && *moverPos != '\0' && *moverPos != '\n') {
+            moverPos++;
+        }
+        if (startPos != moverPos){
+            while (moverPos <= code + *length) {
+                *(startPos++) = *(moverPos++);
+            }
+            
+            *(startPos) = '\0';
+        }
+        
+        newLinePos = strchr(newLinePos + 1, '\n') + 1;
+    }
+}
+
 
 LabelParse parseLabel(AssemblyParams *compileParams, char *code) {
     char *colonFound = strchr(code, ':');
-
+    
     if (colonFound == nullptr)
         return SPU_LABEL_NOTFOUND;
     *colonFound = '\0';
-
+    
     char *checker = code;
     while (checker < colonFound) {
         if (!(isalpha(*checker) || isdigit(*checker)))
             return SPU_LABEL_INVALID;
         checker++;
     }
-
+    
     try {
         compileParams->labelsStore->newLabel(code);
     } catch(const char* e) {
@@ -395,18 +428,18 @@ LabelParse parseLabel(AssemblyParams *compileParams, char *code) {
 
 LabelParse setLabelPos(AssemblyParams *compileParams, char *code, unsigned int pos) {
     char *colonFound = strchr(code, ':');
-
+    
     if (colonFound == nullptr)
         return SPU_LABEL_NOTFOUND;
     *colonFound = '\0';
-
+    
     char *checker = code;
     while (checker < colonFound) {
         if (!(isalpha(*checker) || isdigit(*checker)))
             return SPU_LABEL_INVALID;
         checker++;
     }
-
+    
     try {
         compileParams->labelsStore->setLabelToPosition(code, pos);
     } catch(const char* e) {
@@ -423,20 +456,20 @@ LabelParse evaluateLabels(AssemblyParams *compileParams, BinaryFile *binary) {
         return completeTable;
     }
     JMPLabel *current = compileParams->labelsStore->first;
-
+    
     while (current != nullptr) {
         int offset = (int) (current->positionTo - current->positionFrom + 1);
         memcpy(binary->code + current->positionFrom, &offset, sizeof(offset));
         current = current->next;
     }
-
+    
     return SPU_LABEL_OK;
 }
 
 
 LabelParse labelsTableComplete(AssemblyParams *compileParams, int quiet) {
     JMPLabel *current = compileParams->labelsStore->first;
-
+    
     while (current != nullptr) {
         if (current->positionTo == -1) {
             if (quiet != 1)
@@ -447,7 +480,7 @@ LabelParse labelsTableComplete(AssemblyParams *compileParams, int quiet) {
                         compileParams->inputFileName, current->name);
             return SPU_LABEL_NOTFOUND;
         }
-
+        
         if (current->positionFrom == -1) {
             if (quiet != 1)
                 printf("%s: error: assembly: label '%s' has no jump instructions\n", compileParams->inputFileName,
@@ -457,7 +490,7 @@ LabelParse labelsTableComplete(AssemblyParams *compileParams, int quiet) {
                         compileParams->inputFileName, current->name);
             return SPU_LABEL_INVALID;
         }
-
+        
         if (current->used > 1) {
             if (quiet != 1)
                 printf("%s: error: assembly: label '%s' has several definitions\n", compileParams->inputFileName,
@@ -467,9 +500,154 @@ LabelParse labelsTableComplete(AssemblyParams *compileParams, int quiet) {
                         compileParams->inputFileName, current->name);
             return SPU_LABEL_DUBLICATE;
         }
-
+        
         current = current->next;
     }
-
+    
     return SPU_LABEL_OK;
+}
+
+
+ComplexValue retrieveComplexValueFromArg(char* argument){
+    ComplexValue result = {0,0,0, SPU_CV_OK};
+    result.success = SPU_CV_OK;
+    
+    int size = (int)strlen(argument);
+    
+    char argMask = 0;
+    
+    char* ramFound = strchr(argument, '[');
+    char* closeBrackRam = nullptr;
+    if (ramFound != nullptr){
+        argMask |= (char)4;
+        argument++;
+        closeBrackRam = strchr(argument, ']');
+        if (closeBrackRam == nullptr){
+            result.success = SPU_CV_WRONGSTRUCT;
+            return result;
+        }
+        *closeBrackRam = '\0';
+    }
+    
+    char* vidFound = strchr(argument, '(');
+    char* closeBrackVid = nullptr;
+    if (vidFound != nullptr){
+        argMask |= (char)8;
+        argument++;
+        closeBrackVid = strchr(argument, ')');
+        if (closeBrackVid == nullptr){
+            result.success = SPU_CV_WRONGSTRUCT;
+            return result;
+        }
+        *closeBrackVid = '\0';
+    }
+    size = (int)strlen(argument);
+    if (size == 0){
+        result.success = SPU_CV_WRONGSTRUCT;
+        return result;
+    }
+    
+    // Try finding register
+    if (size >= 3) {
+        char tmpThird = *(argument + 3);
+        *(argument + 3) = '\0';
+        int regNo = registerNoFromName(argument);
+        *(argument + 3) = tmpThird;
+        if (regNo != -1) {
+            result.reg = (char)regNo;
+            argMask |= (char)2;
+            if (tmpThird == '+' || tmpThird == '-'){
+                double value = 0;
+                if (size >= 4){
+                    int scanfRes = sscanf(argument + 4, "%lg", &value);
+                    if (scanfRes == -1) {
+                        result.success = SPU_CV_WRONGNUM;
+                        return result;
+                    } else {
+                        result.value += value * ((tmpThird == '-')? -1: 1);
+                        argMask |= (char)1;
+                    }
+                } else {
+                    result.success = SPU_CV_WRONGOP;
+                    return result;
+                }
+            }else if (tmpThird != '\0'){
+                result.success = SPU_CV_WRONGREG;
+                return result;
+            }
+        } else {
+            
+            double value = 0;
+            int scanfRes = sscanf(argument, "%lg", &value);
+            if (scanfRes == -1) {
+                result.success = SPU_CV_WRONGNUM;
+                return result;
+            } else {
+                result.value += value;
+                argMask |= (char)1;
+            }
+            
+        }
+    } else {
+        double value = 0;
+        int scanfRes = sscanf(argument, "%lg", &value);
+        if (scanfRes == -1) {
+            result.success = SPU_CV_WRONGNUM;
+            return result;
+        } else {
+            result.value += value;
+            argMask |= (char)1;
+        }
+    }
+    
+    if (closeBrackVid != nullptr){
+        *closeBrackVid = ')';
+    }
+
+    if (closeBrackRam != nullptr){
+        *closeBrackRam = ']';
+    }
+    
+    result.argMask = argMask;
+    
+    return result;
+}
+
+void writeComplexArg(ComplexValue* cvalue, BinaryFile* binary) {
+    appendToBinFile(binary, cvalue->argMask);
+    
+    if ((cvalue->argMask & 1) == 1){
+        appendToBinFile(binary, &(cvalue->value), sizeof(cvalue->value));
+    }
+    
+    if ((cvalue->argMask & 2) == 2){
+        appendToBinFile(binary, &(cvalue->reg), sizeof(cvalue->reg));
+    }
+}
+
+ComplexValue retrieveComplexValueFromFlow(char* SPI) {
+    ComplexValue result = {0,0,0,SPU_CV_OK};
+    result.success = SPU_CV_OK;
+    
+    char argMask = *SPI;
+    
+    result.argMask = argMask;
+    
+    SPI += 1;
+    
+    if (argMask == 0) {
+        result.success = SPU_CV_NOARG;
+        return result;
+    }
+    
+    if ((argMask & 1) == 1){
+        memcpy(&(result.value), SPI, sizeof(double));
+        SPI += sizeof(double);
+    }
+    
+    if ((argMask & 2) == 2){
+        result.reg = *SPI;
+    }
+    
+    return result;
 }

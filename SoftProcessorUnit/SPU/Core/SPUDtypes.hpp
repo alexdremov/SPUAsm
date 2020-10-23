@@ -10,10 +10,14 @@
 
 #include "StackRigid.h"
 
+#define VRAMOFFSET 512
+
 struct SPUCore {
-    double             REG[4];
+    double             RAM  [612];
+    double             REG  [4];
     int            terminated;
     StackRigid_double*  stack;
+    StackRigid_double*  callStack;
 };
 
 

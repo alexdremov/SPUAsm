@@ -21,6 +21,8 @@ void removeDoubleWhitespaces(char* code, size_t* length);
 
 void removeWhitespacesInTheEnd(char* code, size_t* length);
 
+void removeWhitespacesInTheBeginning(char *code, size_t *length);
+
 int codeBlockEmpty(char* codeBlock);
 
 CommandParseResult parseCommand(AssemblyParams* compileParams, const struct SyntaxMapping* mapping, BinaryFile* binary, char* codeBlock);
@@ -48,5 +50,11 @@ LabelParse setLabelPos(AssemblyParams* compileParams, char* code, unsigned int p
 LabelParse labelsTableComplete(AssemblyParams* compileParams, int quiet);
 
 LabelParse evaluateLabels(AssemblyParams* compileParams, BinaryFile* binary);
+
+ComplexValue retrieveComplexValueFromArg(char* argument);
+
+ComplexValue retrieveComplexValueFromFlow(char* SPI);
+
+void writeComplexArg(ComplexValue* cvalue, BinaryFile* binary);
 
 #endif /* CommandsParser_hpp */

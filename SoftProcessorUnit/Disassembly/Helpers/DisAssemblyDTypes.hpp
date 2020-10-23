@@ -8,12 +8,16 @@
 #ifndef DisAssemblyDTypes_h
 #define DisAssemblyDTypes_h
 
+#include "LabelsStore.hpp"
+
 struct DisassemblyParams{
     FILE* inputFile;
     const char* inputFileName;
     
     FILE* outputFile;
     const char* outputFileName;
+    
+    JMPLabelsStore* labels;
     
     int   verbose;
 };

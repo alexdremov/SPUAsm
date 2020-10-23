@@ -20,6 +20,20 @@
                ReferencedContainer = "container:SoftProcessorUnit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A071A90D2534DC17008711EF"
+               BuildableName = "SPUAsm"
+               BlueprintName = "SPUAsm"
+               ReferencedContainer = "container:SoftProcessorUnit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -35,7 +49,8 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
-      useCustomWorkingDirectory = "NO"
+      useCustomWorkingDirectory = "YES"
+      customWorkingDirectory = "/Users/aleksandrdremov/Desktop/&#x41e;&#x431;&#x443;&#x447;&#x435;&#x43d;&#x438;&#x435;/&#x41c;&#x424;&#x422;&#x418;/&#x424;&#x41f;&#x41c;&#x418;/BigProjects/SPUAsm/SoftProcessorUnit/WorkingDirectory"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
@@ -50,6 +65,16 @@
             ReferencedContainer = "container:SoftProcessorUnit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "output.spub"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "--verbose"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

@@ -14,13 +14,13 @@ dec rbx  ; decrease counter
 push rax
 push rax
 mul
+
 out
 
 ; Prepare for the next loop
 pop
-inc rax
 
-jm mondayOnly ; exit if it is monday
+inc rax
 
 ; Insert conditional jump operands
 push 0
@@ -28,5 +28,4 @@ push rbx
 
 jne loop
 
-mondayOnly:
-het
+hlt

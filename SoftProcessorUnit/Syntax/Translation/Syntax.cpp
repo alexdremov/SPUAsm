@@ -19,10 +19,11 @@
 
 #define OPBACKTRANSLATE_FUNC(name) DisassemblyParseResult name (const SyntaxEntity* thou, DisassemblyParams* params, BinaryFile* binary, char** SPI)
 
-static SyntaxEntity makeEntity(const char* name, const char code, const char* format, const char flagBytes,
+static SyntaxEntity makeEntity(const char* name, const char code, const char* format, const char flagBytes
+                               , const char isValue,
                                OPTRANSLATE_FUNC((*cProcessor)),
                                OPBACKTRANSLATE_FUNC((*bProcessor))){
-    SyntaxEntity newEntity = {name, code, format, flagBytes, cProcessor, bProcessor};
+    SyntaxEntity newEntity = {name, code, format, flagBytes, isValue, cProcessor, bProcessor};
     return newEntity;
 }
 
@@ -30,7 +31,7 @@ static SyntaxEntity makeEntity(const char* name, const char code, const char* fo
 SyntaxMapping getSyntaxMapping(void) {
     static SyntaxEntity operations[] = {
 
-#define COMMAND_INFO(name, code, args, flags) makeEntity(#name, code , args, flags, &EVALUATE(CMDCTB_ ## name  ) ,&EVALUATE(CMDBTC_ ## name)),
+#define COMMAND_INFO(name, code, args, flags, isValue) makeEntity(#name, code , args, flags, isValue, &EVALUATE(CMDCTB_ ## name  ) ,&EVALUATE(CMDBTC_ ## name)),
 #include "INFO.h"
         
 #undef COMMAND_INFO

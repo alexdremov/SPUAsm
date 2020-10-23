@@ -94,6 +94,7 @@ int main(int argc, const char * argv[]) {
         }
         DestructSPUArgs(&params);
         DestructBinaryFile(binary);
+        DestructSPUCore(&core);
         return EXIT_FAILURE;
     }
     
@@ -103,5 +104,6 @@ int main(int argc, const char * argv[]) {
     
     DestructSPUArgs(&params);
     DestructBinaryFile(binary);
+    DestructSPUCore(&core);
     return EXIT_SUCCESS;
 }

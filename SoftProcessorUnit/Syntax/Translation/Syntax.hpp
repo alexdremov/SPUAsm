@@ -21,6 +21,7 @@ struct SyntaxEntity {
     const char              code;
     const char*             format;
     const char              flagBytes;
+    const char              isValue;
     CommandToBytesResult    (*cProcessor) (const struct SyntaxEntity* thou,
                                            AssemblyParams* compileParams,
                                            BinaryFile* binary,

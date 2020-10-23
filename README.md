@@ -149,7 +149,7 @@ Square root of the last stack value
 #### pow
 The pre-last element of the stack to the power of the last one
 
-#### het
+#### hlt
 Finish the program
 
 #### jmp      <label>

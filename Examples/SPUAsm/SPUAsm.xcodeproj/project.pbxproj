@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		A0648E4A25438C36003AD222 /* fact.spus */ = {isa = PBXFileReference; explicitFileType = sourcecode.asm; path = fact.spus; sourceTree = "<group>"; };
+		A0648E4F2543910E003AD222 /* assembly.spuprep */ = {isa = PBXFileReference; lastKnownFileType = text; path = assembly.spuprep; sourceTree = "<group>"; };
+		A0648E5025439577003AD222 /* assembly.lst */ = {isa = PBXFileReference; lastKnownFileType = text; path = assembly.lst; sourceTree = "<group>"; };
 		A090F0E3253E3C7B00342FA0 /* jp.spus */ = {isa = PBXFileReference; explicitFileType = sourcecode.asm; path = jp.spus; sourceTree = "<group>"; usesTabs = 0; wrapsLines = 1; };
 		A090F0E8253E3CF100342FA0 /* assembly.lst */ = {isa = PBXFileReference; lastKnownFileType = text; path = assembly.lst; sourceTree = "<group>"; };
 		A090F0E9253E3CF100342FA0 /* jp.spub */ = {isa = PBXFileReference; lastKnownFileType = file; path = jp.spub; sourceTree = "<group>"; };
@@ -25,6 +28,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		A0648E4925438C22003AD222 /* Fact */ = {
+			isa = PBXGroup;
+			children = (
+				A0648E4A25438C36003AD222 /* fact.spus */,
+				A0648E4F2543910E003AD222 /* assembly.spuprep */,
+				A0648E5025439577003AD222 /* assembly.lst */,
+			);
+			path = Fact;
+			sourceTree = "<group>";
+		};
 		A090F0E2253E3C6800342FA0 /* Jumps */ = {
 			isa = PBXGroup;
 			children = (
@@ -47,6 +60,7 @@
 		A0DD8B91253644FF00CD405B /* SPUAsm */ = {
 			isa = PBXGroup;
 			children = (
+				A0648E4925438C22003AD222 /* Fact */,
 				A090F0E2253E3C6800342FA0 /* Jumps */,
 				A0DD8BEB25370C2B00CD405B /* SquareRoots */,
 				A0DD8B93253646A900CD405B /* AllCommands */,
@@ -81,13 +95,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
+		A0648E4B25439059003AD222 /* SPUAsmFact */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--input $(INPUT_FILE) --output $(OUTPUT_FILE) $(VERBOSE) $(PREPROCESSINGOUT) --lstfile";
+			buildConfigurationList = A0648E4C25439059003AD222 /* Build configuration list for PBXLegacyTarget "SPUAsmFact" */;
+			buildPhases = (
+			);
+			buildToolPath = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/DerivedData/SoftProcessorUnit/Build/Products/Debug/SPUAsm";
+			buildWorkingDirectory = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/Examples/SPUAsm/SPUAsm/Fact";
+			dependencies = (
+			);
+			name = SPUAsmFact;
+			passBuildSettingsInEnvironment = 1;
+			productName = SPUAsm;
+		};
 		A090F0E4253E3C8900342FA0 /* SPUAsmJP */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "--input $(INPUT_FILE) --output $(OUTPUT_FILE) $(VERBOSE) $(PREPROCESSINGOUT) --lstfile";
 			buildConfigurationList = A090F0E5253E3C8900342FA0 /* Build configuration list for PBXLegacyTarget "SPUAsmJP" */;
 			buildPhases = (
 			);
-			buildToolPath = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/build/SPUAsm";
+			buildToolPath = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/DerivedData/SoftProcessorUnit/Build/Products/Debug/SPUAsm";
 			buildWorkingDirectory = "/Users/aleksandrdremov/Desktop/Обучение/МФТИ/ФПМИ/BigProjects/SPUAsm/Examples/SPUAsm/SPUAsm/Jumps";
 			dependencies = (
 			);
@@ -164,11 +192,34 @@
 				A0DD8BED25370C7A00CD405B /* SPUAsmSR */,
 				A090F0EB253E418E00342FA0 /* SPUDisAsmJP */,
 				A090F0E4253E3C8900342FA0 /* SPUAsmJP */,
+				A0648E4B25439059003AD222 /* SPUAsmFact */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin XCBuildConfiguration section */
+		A0648E4D25439059003AD222 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INPUT_FILE = fact.spus;
+				OUTPUT_FILE = fact.spub;
+				PREPROCESSINGOUT = "-E";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERBOSE = "--verbose";
+			};
+			name = Debug;
+		};
+		A0648E4E25439059003AD222 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INPUT_FILE = fact.spus;
+				OUTPUT_FILE = fact.spub;
+				PREPROCESSINGOUT = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERBOSE = "";
+			};
+			name = Release;
+		};
 		A090F0E6253E3C8900342FA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -365,6 +416,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A0648E4C25439059003AD222 /* Build configuration list for PBXLegacyTarget "SPUAsmFact" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0648E4D25439059003AD222 /* Debug */,
+				A0648E4E25439059003AD222 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A090F0E5253E3C8900342FA0 /* Build configuration list for PBXLegacyTarget "SPUAsmJP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

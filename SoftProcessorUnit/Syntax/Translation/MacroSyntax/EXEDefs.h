@@ -52,6 +52,26 @@ case STACK_OP_PTRINVALID:\
 #define INCSPI (*SPI)++
 
 #define PUSH(data) StackPush(&(core->stack), (data))
+#define callPUSH(data) StackPush(&(core->callStack), (data))
+
 #define POP(data) StackPop(&(core->stack), (data))
+#define callPOP(data) StackPop(&(core->callStack), (data))
+
+#undef COMPLEXVALOK
+#define COMPLEXVALOK switch(val) { \
+case SPU_CV_WRONGSTRUCT: \
+return SPU_EXE_CORRUPTED;\
+case SPU_CV_WRONGREG: \
+return SPU_EXE_CORRUPTED; \
+case SPU_CV_WRONGNUM: \
+return SPU_EXE_CORRUPTED; \
+case SPU_CV_WRONGOP: \
+return SPU_EXE_CORRUPTED; \
+case SPU_CV_NOARG:\
+return SPU_EXE_CORRUPTED; \
+case SPU_CV_OK: \
+break;\
+} \
+
 
 #endif /* EXEDefs_h */

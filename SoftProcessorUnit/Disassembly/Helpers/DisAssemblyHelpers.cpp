@@ -16,7 +16,9 @@
 
 
 int parseArgs(int argc, const char* argv[], DisassemblyParams* params) {
-    DisassemblyParams newParams = {nullptr, nullptr, nullptr, nullptr, 0};
+    DisassemblyParams newParams = {nullptr, nullptr, nullptr, nullptr, nullptr, 0};
+    newParams.labels = new JMPLabelsStore();
+    
     if (argc <= 1){
         printDisAssemblyHelpData();
     }
@@ -99,6 +101,7 @@ void printDisAssemblyHelpData() {
 void DestructDisAssemblyParams(DisassemblyParams* params) {
     fclose(params->inputFile);
     fclose(params->outputFile);
+    delete params->labels;
 }
 
 DisassemblyParseResult disAssamblyCode(DisassemblyParams* params,

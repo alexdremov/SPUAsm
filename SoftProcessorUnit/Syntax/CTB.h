@@ -12,34 +12,19 @@
 OPTRANSLATE_FUNC(push, {
     LSTDUMPED({
         APPENDCHAR(thou->code);
-        const char* firstArgument = argv[1];
-        if (isdigit(*firstArgument) || *firstArgument == '-') {
-            APPENDCHAR(0);
-            double number = 0;
-            int parsed = sscanf(firstArgument, "%lg", &number);
-            if (parsed <= 0)
-                return SPU_CTB_INVALID_NUMBER;
-            APPENDDATA(&number, sizeof(number));
-        } else {
-            APPENDCHAR(1); // flag is 1 if there's register
-            
-            int registerNo = registerNoFromName((char*)firstArgument);
-            if (registerNo == -1)
-                return SPU_CTB_UNKNOWN_REGISTER;
-            char registerNoCh = (char)registerNo;
-            
-            APPENDDATA(&registerNoCh, sizeof(registerNoCh));
-        }
+        ComplexValue val = retrieveComplexValueFromArg((char*)argv[1]);
+        COMPLEXVALOK
+        writeComplexArg(&val, binary);
     })
     return SPU_CTB_OK;
 });
 
 OPTRANSLATE_FUNC(pop, {
-    ZEROORREGISTERNO;
+    ZEROORSTORAGE;
 }) ;
 
 OPTRANSLATE_FUNC(in, {
-    ZEROORREGISTERNO;
+    ZEROORSTORAGE;
 });
 
 OPTRANSLATE_FUNC(dump, {
@@ -82,12 +67,12 @@ OPTRANSLATE_FUNC(pow, {
     JUSTCOMMAND
 });
 
-OPTRANSLATE_FUNC(het, {
+OPTRANSLATE_FUNC(hlt, {
     JUSTCOMMAND
 });
 
 OPTRANSLATE_FUNC(out, {
-    ZEROORREGISTERNO;
+    ZEROORVAL;
 });
 
 OPTRANSLATE_FUNC(jmp, {
@@ -171,9 +156,23 @@ OPTRANSLATE_FUNC(jm, {
 });
 
 OPTRANSLATE_FUNC(inc, {
-    ZEROORREGISTERNO;
+    ZEROORSTORAGE;
 });
 
 OPTRANSLATE_FUNC(dec, {
-    ZEROORREGISTERNO;
+    ZEROORSTORAGE;
+});
+
+OPTRANSLATE_FUNC(call, {
+    LSTDUMPED({
+        APPENDCHAR(thou->code);
+        SETLABELPOS;
+        int jumpOffset = (int)( GETLABELPOS );
+        APPENDDATA(&jumpOffset, sizeof(jumpOffset));
+    })
+    return SPU_CTB_OK;
+});
+
+OPTRANSLATE_FUNC(ret, {
+    JUSTCOMMAND;
 });

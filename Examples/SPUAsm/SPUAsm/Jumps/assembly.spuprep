@@ -1,4 +1,3 @@
-het
 in rbx
 push 0
 pop rax
@@ -10,9 +9,7 @@ mul
 out
 pop
 inc rax
-jm mondayOnly
 push 0
 push rbx
 jne loop
-mondayOnly:
-het
+hlt

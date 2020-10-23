@@ -55,6 +55,10 @@ int generateErrors(SyntaxMapping* mapping, AssemblyParams* params, char* code) {
     int result = 1;
     int lineNo = 0;
     
+    size_t length = strlen(code);
+    removeWhitespacesInTheEnd(code, &length);
+    removeWhitespacesInTheBeginning(code, &length);
+    
     AssemblyParams localParams = {};
     localParams.labelsStore = new JMPLabelsStore();
     localParams.verbose = 0;
@@ -187,7 +191,15 @@ int analyzeInstructionErrors(SyntaxMapping* mapping, AssemblyParams* params, Bin
             fprintf(stderr, "%s:%d:1: error: assembly: invalid number of arguments\n", params->inputFileRealName, lineNo);
             break;
         }
+        case SPU_CTB_INVALID_ARGSTRUCTURE: {
+            fprintf(stderr, "%s:%d:1: error: assembly: invalid argument structure\n", params->inputFileRealName, lineNo);
+            break;
+        }
         case SPU_CTB_OK:{
+            break;
+        }
+        case SPU_CTB_NONASSIGNABLE: {
+            fprintf(stderr, "%s:%d:1: error: assembly: argument is nonassignable\n", params->inputFileRealName, lineNo);
             break;
         }
     }

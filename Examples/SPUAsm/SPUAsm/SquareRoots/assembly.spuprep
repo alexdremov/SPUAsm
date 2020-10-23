@@ -10,13 +10,13 @@ mul
 push rcx
 mul
 sub
-sqrt
 pop rdx
 clear
 push -1
 push rbx
 mul
 push rdx
+sqrt
 sub
 push 2
 div
@@ -28,11 +28,29 @@ push -1
 push rbx
 mul
 push rdx
+sqrt
 add
 push 2
 div
 push rax
 div
 pop rax
+push 0
+push rdx
+ja noSolutions
+push 0
+push rdx
+je oneSolution
+jmp twoSolutions
+twoSolutions:
+out 2
 out rax
 out rcx
+hlt
+oneSolution:
+out 1
+out rax
+hlt
+noSolutions:
+out 0
+hlt

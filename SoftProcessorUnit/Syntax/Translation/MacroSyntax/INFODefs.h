@@ -9,4 +9,5 @@
 #define CMD_CODE
 #define CMD_ARGRULES
 #define CMD_FLAGBYTES
+#define CMD_VALUETYPE
 #define NOARGS ""

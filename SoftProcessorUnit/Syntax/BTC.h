@@ -130,7 +130,7 @@ OPBACKTRANSLATE_FUNC(pow, {
     return SPU_DISASM_OK;
 })
 
-OPBACKTRANSLATE_FUNC(het, {
+OPBACKTRANSLATE_FUNC(hlt, {
     OPBACKGENERAL({
         INCSPI;
     })
@@ -258,6 +258,24 @@ OPBACKTRANSLATE_FUNC(dec, {
             fprintf(params->outputFile, "%s", reg);
             ADDSPI(3);
         }
+    })
+    return SPU_DISASM_OK;
+})
+
+
+OPBACKTRANSLATE_FUNC(call, {
+    OPBACKGENERAL({
+        char* localSPI = *SPI;
+        int* val = (int*)(localSPI + 1);
+        fprintf(params->outputFile, "%d", *val);
+        ADDSPI(5);
+    })
+    return SPU_DISASM_OK;
+})
+
+OPBACKTRANSLATE_FUNC(ret, {
+    OPBACKGENERAL({
+        INCSPI;
     })
     return SPU_DISASM_OK;
 })

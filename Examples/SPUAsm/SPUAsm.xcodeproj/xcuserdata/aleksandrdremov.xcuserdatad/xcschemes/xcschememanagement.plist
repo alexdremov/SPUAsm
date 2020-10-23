@@ -4,19 +4,29 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>SPUAsmFact.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>SPUAsmJP.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>1</integer>
 		</dict>
 		<key>SPUAsmSR.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>A0648E4B25439059003AD222</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A090F0E4253E3C8900342FA0</key>
 		<dict>
 			<key>primary</key>

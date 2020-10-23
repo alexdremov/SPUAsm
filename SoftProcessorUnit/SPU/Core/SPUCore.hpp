@@ -18,6 +18,8 @@
 
 void ConstructSPUCore(SPUCore* core, size_t initStackSize);
 
+void DestructSPUCore(SPUCore* core);
+
 InstructionExeResult runCode(SPUCore* core, RunParameters* params, BinaryFile* binary);
 
 InstructionExeResult executeInstruction(SPUCore* core, RunParameters* params, BinaryFile* binary, char** SPI);

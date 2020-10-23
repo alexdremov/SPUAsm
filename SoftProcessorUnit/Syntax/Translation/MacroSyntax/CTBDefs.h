@@ -44,19 +44,42 @@
 
 #define GETLABELPOS ((int)(compileParams->labelsStore->getLabelToPosition((char*)argv[1])) - (int)(binary->currentSize) + 1)
 
-#define ZEROORREGISTERNO LSTDUMPED({{\
+#define ZEROORSTORAGE LSTDUMPED({{\
 APPENDCHAR(thou->code);\
 if (argc == 1) {\
     APPENDCHAR(0);\
 } else {\
-    const char* firstArgument = argv[1];\
-    APPENDCHAR(1);\
-    \
-    int registerNo = registerNoFromName((char*)firstArgument);\
-    if (registerNo == -1)\
-        return SPU_CTB_UNKNOWN_REGISTER;\
-    \
-    char registerNoCh = (char)registerNo;\
-    APPENDDATA(&registerNoCh, sizeof(registerNoCh));\
+ComplexValue val = retrieveComplexValueFromArg((char*)argv[1]);\
+COMPLEXVALOK;\
+int assignable = complexValueAssignable(&val);\
+if (assignable != 1) return SPU_CTB_NONASSIGNABLE; \
+writeComplexArg(&val, binary);\
 }}}) return SPU_CTB_OK;\
 
+
+#define COMPLEXVALOK switch(val.success) { \
+case SPU_CV_WRONGSTRUCT: \
+    return SPU_CTB_INVALID_ARGSTRUCTURE;\
+case SPU_CV_WRONGREG: \
+    return SPU_CTB_UNKNOWN_REGISTER; \
+case SPU_CV_WRONGNUM: \
+    return SPU_CTB_INVALID_NUMBER; \
+case SPU_CV_WRONGOP: \
+    return SPU_CTB_INVALID_ARGSTRUCTURE; \
+    break; \
+case SPU_CV_NOARG: \
+    return SPU_CTB_INVALID_ARGSTRUCTURE; \
+    break; \
+case SPU_CV_OK: \
+    break;\
+} \
+
+#define ZEROORVAL LSTDUMPED({{\
+APPENDCHAR(thou->code);\
+if (argc == 1) {\
+    APPENDCHAR(0);\
+} else {\
+ComplexValue val = retrieveComplexValueFromArg((char*)argv[1]);\
+COMPLEXVALOK;\
+writeComplexArg(&val, binary);\
+}}}) return SPU_CTB_OK;\

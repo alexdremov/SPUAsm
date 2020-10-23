@@ -40,6 +40,8 @@ struct JMPLabelsStore {
     
     long int getLabelToPosition(char* label) const;
     
+    JMPLabel* getLabelByToPosition(long int pos) const;
+    
     JMPLabel* getLabel(char* label) const;
     
     JMPLabelsStore();

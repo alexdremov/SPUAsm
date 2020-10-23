@@ -1,16 +1,3 @@
-het 
-in rbx
-push 0
-pop rax
-dec rbx
-push rax
-push rax
-mul 
-out 
+in rax
+push 2.41582e-231
 pop 
-inc rax
-jm 23
-push 0
-push rbx
-jne -35
-het 

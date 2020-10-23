@@ -2,26 +2,27 @@
 ; Factorial calculation
 ;
 
-in; Requested factorial
+in ; Requested factorial
 
 call fact
 out
+
 hlt
 
 fact:
-    out 123
     pop rax
     push 1
     call factRec
     ret
 
 factRec:
-    out 1234
     push rax
+    mul
     dec rax
+    
     push 1
     push rax
-    jae noCall
-    call factRec
-    noCall:
-    ret
+    jae noDepth
+        call factRec
+    noDepth:
+        ret

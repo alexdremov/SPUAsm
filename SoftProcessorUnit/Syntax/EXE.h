@@ -16,26 +16,38 @@
 OPEXE_FUNC(push,  {
     if (!HASBYTES(3))
         return SPU_EXE_NOARGS;
-    char* localSPI = *SPI;
-    char flagByte = *(localSPI + 1);
-    if(flagByte == 0){
-        if (!HASBYTES(sizeof(double) + 2))
-            return SPU_EXE_NOARGS;
-        double value = getDoubleFromBuffer(localSPI + 2);
-        StackRigidOperationCodes result = PUSH(value);
-        
+    double value = 0;
+    ADDSPI(1);
+    ComplexValueResult val = retrieveComplexValue(core, SPI, &value);
+    
+    COMPLEXVALOK;
+    
+    StackRigidOperationCodes result = PUSH(value);
+    
+    STACKRESULT
+    return SPU_EXE_OK;
+})
+
+OPEXE_FUNC(out,  {
+    if (!HASBYTES(2))
+        return SPU_EXE_NOARGS;
+    
+    double value = 0;
+    ADDSPI(1);
+    ComplexValueResult val = retrieveComplexValue(core, SPI, &value);
+    
+    if (val == SPU_CV_NOARG){
+        StackRigidOperationCodes result = StackBack(core->stack, &value);
         STACKRESULT
-        
-        ADDSPI(sizeof(double) + 2);
-    } else {
-        char reg = *(localSPI + 2);
-        
-        StackRigidOperationCodes result = PUSH(core->REG[reg]);
-        
-        STACKRESULT
-        
-        ADDSPI(3);
+        ADDSPI(1);
+//        printf("off: %d\n", (int)(*SPI - binary->code));
+        printf("%lf\n", value);
+        return SPU_EXE_OK;
     }
+    COMPLEXVALOK;
+    
+    printf("%lf\n", value);
+
     return SPU_EXE_OK;
 })
 
@@ -43,19 +55,30 @@ OPEXE_FUNC(push,  {
 OPEXE_FUNC(pop,  {
     if (!HASBYTES(2))
         return SPU_EXE_NOARGS;
-    char* localSPI = *SPI;
-    char flagByte = *(localSPI + 1);
-    if (flagByte == 0) {
-        double tmp = 0;
-        StackRigidOperationCodes result = POP(&tmp);
-        STACKRESULT
-        ADDSPI(2);
-    } else {
-        char reg = *(localSPI + 2);
-        StackRigidOperationCodes result = POP(core->REG + reg);
-        STACKRESULT
-        ADDSPI(3);
+    double* valueTo = nullptr;
+    ComplexValue cvalue = {};
+    ADDSPI(1);
+    ComplexValueResult val = pointerToComplexValue(core, SPI, &valueTo, &cvalue);
+    
+    if (val == SPU_CV_NOARG){
+        double value = 0;
+        StackRigidOperationCodes result = POP(&value);
+        STACKRESULT;
+        return SPU_EXE_OK;
     }
+    
+    COMPLEXVALOK;
+    
+    double value = 0;
+    StackRigidOperationCodes result = POP(&value);
+    STACKRESULT;
+    
+    if(charAdress(&cvalue)){
+        *((char*)valueTo) = (char)value;
+    } else {
+        *valueTo = value;
+    }
+    
     return SPU_EXE_OK;
 })
 
@@ -63,25 +86,31 @@ OPEXE_FUNC(pop,  {
 OPEXE_FUNC(in,  {
     if (!HASBYTES(2))
         return SPU_EXE_NOARGS;
-    char* localSPI = *SPI;
-    char flagByte = *(localSPI + 1);
-    
     double newVal = 0;
     printf("Requested value: ");
     int scanned = scanf("%lg", &newVal);
-    if (scanned == 0){
+    if (scanned <= 0){
         return SPU_EXE_INVALIDINPUT;
     }
+    double* valueTo = nullptr;
+    ComplexValue cvalue = {};
+    ADDSPI(1);
+    ComplexValueResult val = pointerToComplexValue(core, SPI, &valueTo, &cvalue);
     
-    if (flagByte == 0) {
+    if (val == SPU_CV_NOARG){
         StackRigidOperationCodes result = PUSH(newVal);
-        STACKRESULT
-        ADDSPI(2);
-    } else {
-        char reg = *(localSPI + 2);
-        core->REG[reg] = newVal;
-        ADDSPI(3);
+        STACKRESULT;
+        return SPU_EXE_OK;
     }
+    
+    COMPLEXVALOK;
+    
+    if(charAdress(&cvalue)){
+        *((char*)valueTo) = (char)newVal;
+    } else {
+        *valueTo = newVal;
+    }
+    
     return SPU_EXE_OK;
 })
 
@@ -242,7 +271,7 @@ OPEXE_FUNC(pow,  {
 })
 
 
-OPEXE_FUNC(het,  {
+OPEXE_FUNC(hlt,  {
     if (!HASBYTES(1))
         return SPU_EXE_NOARGS;
     core->terminated = 1;
@@ -250,32 +279,6 @@ OPEXE_FUNC(het,  {
     return SPU_EXE_OK;
 })
 
-
-OPEXE_FUNC(out,  {
-    if (!HASBYTES(2))
-        return SPU_EXE_NOARGS;
-    
-    char* localSPI = *SPI;
-    char flagByte = *(localSPI + 1);
-    if(flagByte == 0){
-        double value = 0;
-        StackRigidOperationCodes result = StackBack(core->stack, &value);
-        
-        STACKRESULT
-        
-        printf("%lf\n", value);
-        ADDSPI(2);
-    } else {
-        if (!HASBYTES(3))
-            return SPU_EXE_NOARGS;
-        char reg = *(localSPI + 2);
-        
-        printf("%lf\n", core->REG[reg]);
-        
-        ADDSPI(3);
-    }
-    return SPU_EXE_OK;
-})
 
 OPEXE_FUNC(jmp,  {
     if (!HASBYTES(5))
@@ -411,50 +414,82 @@ OPEXE_FUNC(jm,  {
 OPEXE_FUNC(inc,  {
     if (!HASBYTES(2))
         return SPU_EXE_NOARGS;
-    char* localSPI = *SPI;
-    char flagByte = *(localSPI + 1);
+    double* valueTo = nullptr;
+    ComplexValue cvalue = {};
+    ADDSPI(1);
+    ComplexValueResult val = pointerToComplexValue(core, SPI, &valueTo, &cvalue);
     
-    if (flagByte == 0) {
+    if (val == SPU_CV_NOARG){
         double value = 0;
         StackRigidOperationCodes result = POP(&value);
-        
-        STACKRESULT
-        
+        STACKRESULT;
         result = PUSH(value + 1);
-        
-        STACKRESULT
-
-        ADDSPI(2);
-    } else {
-        char reg = *(localSPI + 2);
-        core->REG[reg] += 1;
-        ADDSPI(3);
+        STACKRESULT;
+        return SPU_EXE_OK;
     }
+    
+    COMPLEXVALOK;
+    
+    double value = *valueTo + 1;
+    
+    if(charAdress(&cvalue)){
+        *((char*)valueTo) = (char)value;
+    } else {
+        *valueTo = value;
+    }
+    
     return SPU_EXE_OK;
 })
 
 OPEXE_FUNC(dec,  {
     if (!HASBYTES(2))
         return SPU_EXE_NOARGS;
-    char* localSPI = *SPI;
-    char flagByte = *(localSPI + 1);
+    double* valueTo = nullptr;
+    ComplexValue cvalue = {};
+    ADDSPI(1);
+    ComplexValueResult val = pointerToComplexValue(core, SPI, &valueTo, &cvalue);
     
-    if (flagByte == 0) {
+    if (val == SPU_CV_NOARG){
         double value = 0;
         StackRigidOperationCodes result = POP(&value);
-        
-        STACKRESULT
-        
+        STACKRESULT;
         result = PUSH(value - 1);
-        
-        STACKRESULT
-
-        ADDSPI(2);
-    } else {
-        char reg = *(localSPI + 2);
-        core->REG[reg] -= 1;
-        ADDSPI(3);
+        STACKRESULT;
+        return SPU_EXE_OK;
     }
+    
+    COMPLEXVALOK;
+    
+    double value = *valueTo - 1;
+    
+    if(charAdress(&cvalue)){
+        *((char*)valueTo) = (char)value;
+    } else {
+        *valueTo = value;
+    }
+    
+    return SPU_EXE_OK;
+})
+
+
+OPEXE_FUNC(call,  {
+    if (!HASBYTES(5))
+        return SPU_EXE_NOARGS;
+    char* localSPI = *SPI;
+    StackRigidOperationCodes result = callPUSH((int)(localSPI - binary->code) + 5);
+    STACKRESULT;
+    ADDSPI(getIntFromBuffer(localSPI + 1));
+    return SPU_EXE_OK;
+})
+
+OPEXE_FUNC(ret,  {
+    if (!HASBYTES(1))
+        return SPU_EXE_NOARGS;
+    double offset = 0;
+    StackRigidOperationCodes result = callPOP(&offset);
+    STACKRESULT;
+//    printf("%d\n", (int)offset);
+    MOVSPI(binary->code + (int)offset);
     return SPU_EXE_OK;
 })
 

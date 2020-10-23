@@ -20,20 +20,6 @@
                ReferencedContainer = "container:SPUAsm.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A090F0EB253E418E00342FA0"
-               BuildableName = "SPUDisAsmJP"
-               BlueprintName = "SPUDisAsmJP"
-               ReferencedContainer = "container:SPUAsm.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -59,7 +45,7 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
-         FilePath = "/Users/aleksandrdremov/Desktop/&#x41e;&#x431;&#x443;&#x447;&#x435;&#x43d;&#x438;&#x435;/&#x41c;&#x424;&#x422;&#x418;/&#x424;&#x41f;&#x41c;&#x418;/BigProjects/SPUAsm/DerivedData/SoftProcessorUnit/Build/Products/Release/SPU">
+         FilePath = "/Users/aleksandrdremov/Desktop/&#x41e;&#x431;&#x443;&#x447;&#x435;&#x43d;&#x438;&#x435;/&#x41c;&#x424;&#x422;&#x418;/&#x424;&#x41f;&#x41c;&#x418;/BigProjects/SPUAsm/DerivedData/SoftProcessorUnit/Build/Products/Debug/SPU">
       </PathRunnable>
       <CommandLineArguments>
          <CommandLineArgument

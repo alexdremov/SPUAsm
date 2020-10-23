@@ -2,37 +2,46 @@ in rax
 in rbx
 in rcx
 push rbx
-push 2
-pow 
-push 4
 push rax
-mul 
-push rcx
-mul 
+push 7.31293e-304
+push 4.85304e-299
+push rax
+in <UNKNOWN REGISTER>
 sub 
-sqrt 
 pop rdx
 clear 
-push -1
-push rbx
+push rax
+push 8.20385e-304
 mul 
 push rdx
+sqrt 
 sub 
-push 2
-div 
 push rax
-div 
-pop rcx
-clear 
-push -1
+push 4.78793e-299
 push rbx
+in <UNKNOWN REGISTER>
+push rax
+push 8.20385e-304
 mul 
 push rdx
+sqrt 
 add 
-push 2
-div 
 push rax
-div 
-pop rax
+push 4.78793e-299
+push rbx
+in 
+push rax
+push 3.52295e-294
+ja 58
+push rax
+push 3.52295e-294
+je 26
+jmp 5
 out rax
+push 2.85875e-309
 out rcx
+out rax
+push 2.85875e-309
+hlt 
+out rax
+push 

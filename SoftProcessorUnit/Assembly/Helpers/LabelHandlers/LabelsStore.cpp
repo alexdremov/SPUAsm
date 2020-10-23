@@ -119,3 +119,14 @@ JMPLabelsStore::JMPLabelsStore() {
     this->first = nullptr;
     this->last = nullptr;
 }
+
+JMPLabel* JMPLabelsStore::getLabelByToPosition(long int pos) const {
+    JMPLabel* current = this->first;
+    while (current != nullptr) {
+        if (current->positionTo == pos) {
+            return current;
+        }
+        current = current->next;
+    }
+    return nullptr;
+}
