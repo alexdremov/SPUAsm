@@ -7,7 +7,7 @@
 
 #include "CodeAnalysis.hpp"
 #include "CommandToBytecode.hpp"
-#include <cstring>
+#include <string.h>
 #include "StringDistance.hpp"
 
 static int isspace(unsigned char a){
