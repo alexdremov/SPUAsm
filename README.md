@@ -27,9 +27,9 @@ cmake -DCMAKE_BUILD_TYPE=Release ..
 cmake --build .
 ```
 Three files will be created: 
--  **SPU**               - Soft Processor Unit, executes created programs 
--  **SPUAsm**       - translates source file (.spus) to binary file (.spub) that can be executed by SPU
--  **SPUDisAsm**  - disassembly for generated binary files
+-   **SPU**                  - Soft Processor Unit, executes created programs 
+-   **SPUAsm**          - translates source file (.spus) to binary file (.spub) that can be executed by SPU
+-   **SPUDisAsm**     - disassembly for generated binary files
 
 ## Usage
 
