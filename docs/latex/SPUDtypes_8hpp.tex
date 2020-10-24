@@ -1,14 +1,16 @@
 \hypertarget{SPUDtypes_8hpp}{}\doxysection{Soft\+Processor\+Unit/\+S\+P\+U/\+Core/\+S\+P\+U\+Dtypes.hpp File Reference}
 \label{SPUDtypes_8hpp}\index{SoftProcessorUnit/SPU/Core/SPUDtypes.hpp@{SoftProcessorUnit/SPU/Core/SPUDtypes.hpp}}
 {\ttfamily \#include \char`\"{}Stack\+Rigid.\+h\char`\"{}}\newline
-Include dependency graph for S\+P\+U\+Dtypes.\+hpp\+:\nopagebreak
+Include dependency graph for S\+P\+U\+Dtypes.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=201pt]{SPUDtypes_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,6 +23,11 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 struct \mbox{\hyperlink{SPUDtypes_8hpp_structRunParameters}{Run\+Parameters}}
 \item 
 struct \mbox{\hyperlink{SPUDtypes_8hpp_structSPUCore}{S\+P\+U\+Core}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{SPUDtypes_8hpp_abafbf2243996a233e58663b2c0bb08be}{V\+R\+A\+M\+O\+F\+F\+S\+ET}}~512
 \end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
@@ -91,7 +98,8 @@ verbose&
 \doxysubsubsection{struct S\+P\+U\+Core}
 
 
-Collaboration diagram for S\+P\+U\+Core\+:\nopagebreak
+Collaboration diagram for S\+P\+U\+Core\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -99,6 +107,18 @@ Collaboration diagram for S\+P\+U\+Core\+:\nopagebreak
 \end{center}
 \end{figure}
 \begin{DoxyFields}{Data Fields}
+\mbox{\Hypertarget{SPUDtypes_8hpp_a391debfb1295dd029871b695abaa1091}\label{SPUDtypes_8hpp_a391debfb1295dd029871b695abaa1091}} 
+StackRigid\_double $\ast$&
+callStack&
+\\
+\hline
+
+\mbox{\Hypertarget{SPUDtypes_8hpp_aab096a6470240daa314d893ec2dfe67a}\label{SPUDtypes_8hpp_aab096a6470240daa314d893ec2dfe67a}} 
+double&
+RAM\mbox{[}612\mbox{]}&
+\\
+\hline
+
 \mbox{\Hypertarget{SPUDtypes_8hpp_a73b3a44c7e762d16b1952dad905f39c2}\label{SPUDtypes_8hpp_a73b3a44c7e762d16b1952dad905f39c2}} 
 double&
 REG\mbox{[}4\mbox{]}&
@@ -118,6 +138,15 @@ terminated&
 \hline
 
 \end{DoxyFields}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{SPUDtypes_8hpp_abafbf2243996a233e58663b2c0bb08be}\label{SPUDtypes_8hpp_abafbf2243996a233e58663b2c0bb08be}} 
+\index{SPUDtypes.hpp@{SPUDtypes.hpp}!VRAMOFFSET@{VRAMOFFSET}}
+\index{VRAMOFFSET@{VRAMOFFSET}!SPUDtypes.hpp@{SPUDtypes.hpp}}
+\doxysubsubsection{\texorpdfstring{VRAMOFFSET}{VRAMOFFSET}}
+{\footnotesize\ttfamily \#define V\+R\+A\+M\+O\+F\+F\+S\+ET~512}
+
 
 
 \doxysubsection{Enumeration Type Documentation}
@@ -167,16 +196,16 @@ S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+I\+N\+P\+UT&\\
 \end{DoxyEnumFields}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{30                           \{}
-\DoxyCodeLine{31     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa1e1608a157e7bb2d746ba91df8873e9e}{SPU\_EXE\_OK}}              = 800,}
-\DoxyCodeLine{32     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa8f97989cd162132712e7919534d2604a}{SPU\_EXE\_STACK\_UNDERFLOW}} = 801,}
-\DoxyCodeLine{33     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fade40cc4c7fe7f735df35e57ee9dbba5e}{SPU\_EXE\_STACK\_OVERFLOW}}  = 802,}
-\DoxyCodeLine{34     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa6055455fd60dd2f673b2f702685f7a58}{SPU\_EXE\_CORRUPTED}}       = 803,}
-\DoxyCodeLine{35     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa5da1141c988b4757a50db1ef053b8fc3}{SPU\_EXE\_ZERODIV}}         = 804,}
-\DoxyCodeLine{36     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf0113534f70048df0263a31742bc10ce}{SPU\_EXE\_UNKNOWN}}         = 805,}
-\DoxyCodeLine{37     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{SPU\_EXE\_NOARGS}}          = 806,}
-\DoxyCodeLine{38     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf41640121168996e72b9d0d624f728a7}{SPU\_EXE\_NOMEMORY}}        = 807,}
-\DoxyCodeLine{39     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fad5a2a81664c27b80c90aee5b839992bb}{SPU\_EXE\_INVALIDINPUT}}    = 808}
-\DoxyCodeLine{40 \};}
+\DoxyCodeLine{34                           \{}
+\DoxyCodeLine{35     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa1e1608a157e7bb2d746ba91df8873e9e}{SPU\_EXE\_OK}}              = 800,}
+\DoxyCodeLine{36     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa8f97989cd162132712e7919534d2604a}{SPU\_EXE\_STACK\_UNDERFLOW}} = 801,}
+\DoxyCodeLine{37     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fade40cc4c7fe7f735df35e57ee9dbba5e}{SPU\_EXE\_STACK\_OVERFLOW}}  = 802,}
+\DoxyCodeLine{38     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa6055455fd60dd2f673b2f702685f7a58}{SPU\_EXE\_CORRUPTED}}       = 803,}
+\DoxyCodeLine{39     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa5da1141c988b4757a50db1ef053b8fc3}{SPU\_EXE\_ZERODIV}}         = 804,}
+\DoxyCodeLine{40     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf0113534f70048df0263a31742bc10ce}{SPU\_EXE\_UNKNOWN}}         = 805,}
+\DoxyCodeLine{41     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{SPU\_EXE\_NOARGS}}          = 806,}
+\DoxyCodeLine{42     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf41640121168996e72b9d0d624f728a7}{SPU\_EXE\_NOMEMORY}}        = 807,}
+\DoxyCodeLine{43     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fad5a2a81664c27b80c90aee5b839992bb}{SPU\_EXE\_INVALIDINPUT}}    = 808}
+\DoxyCodeLine{44 \};}
 
 \end{DoxyCode}

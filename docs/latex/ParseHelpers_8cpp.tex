@@ -1,12 +1,16 @@
 \hypertarget{ParseHelpers_8cpp}{}\doxysection{Soft\+Processor\+Unit/\+Syntax/\+Translation/\+Helpers/\+Parse\+Helpers.cpp File Reference}
 \label{ParseHelpers_8cpp}\index{SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.cpp@{SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.cpp}}
 {\ttfamily \#include \char`\"{}Parse\+Helpers.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Commands\+Parser.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+P\+U\+Dtypes.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Complex\+Value\+Tools.\+hpp\char`\"{}}\newline
 {\ttfamily \#include $<$cstring$>$}\newline
-Include dependency graph for Parse\+Helpers.\+cpp\+:\nopagebreak
+Include dependency graph for Parse\+Helpers.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=265pt]{ParseHelpers_8cpp__incl}
+\includegraphics[width=350pt]{ParseHelpers_8cpp__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Functions}
@@ -27,24 +31,17 @@ double \mbox{\hyperlink{ParseHelpers_8cpp_a644e4038f72d7d9d4bf39f75a5aab4a8}{get
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{11                                         \{}
-\DoxyCodeLine{12     \textcolor{keywordtype}{double} value = 0;}
-\DoxyCodeLine{13     memcpy(\&value, start, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
-\DoxyCodeLine{14     \textcolor{keywordflow}{return} value;}
-\DoxyCodeLine{15 \}}
+\DoxyCodeLine{14                                         \{}
+\DoxyCodeLine{15     \textcolor{keywordtype}{double} \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}} = 0;}
+\DoxyCodeLine{16     memcpy(\&\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}}, start, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{17     \textcolor{keywordflow}{return} \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}};}
+\DoxyCodeLine{18 \}}
 
 \end{DoxyCode}
 
 
-Referenced by O\+P\+B\+A\+C\+K\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+N\+C(), and O\+P\+E\+X\+E\+\_\+\+F\+U\+N\+C().
+References value.
 
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{ParseHelpers_8cpp_a644e4038f72d7d9d4bf39f75a5aab4a8_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{ParseHelpers_8cpp_a503732ecee5e0f7a02f23c8381727ed6}\label{ParseHelpers_8cpp_a503732ecee5e0f7a02f23c8381727ed6}} 
 \index{ParseHelpers.cpp@{ParseHelpers.cpp}!getIntFromBuffer@{getIntFromBuffer}}
 \index{getIntFromBuffer@{getIntFromBuffer}!ParseHelpers.cpp@{ParseHelpers.cpp}}
@@ -53,13 +50,17 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{17                                   \{}
-\DoxyCodeLine{18     \textcolor{keywordtype}{int} value = 0;}
-\DoxyCodeLine{19     memcpy(\&value, start, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
-\DoxyCodeLine{20     \textcolor{keywordflow}{return} value;}
-\DoxyCodeLine{21 \}}
+\DoxyCodeLine{20                                   \{}
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}} = 0;}
+\DoxyCodeLine{22     memcpy(\&\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}}, start, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{23     \textcolor{keywordflow}{return} \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}};}
+\DoxyCodeLine{24 \}}
 
 \end{DoxyCode}
+
+
+References value.
+
 
 
 Referenced by O\+P\+E\+X\+E\+\_\+\+F\+U\+N\+C().

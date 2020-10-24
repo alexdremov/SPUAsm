@@ -6,7 +6,8 @@
 
 
 
-Collaboration diagram for J\+M\+P\+Labels\+Store\+:\nopagebreak
+Collaboration diagram for J\+M\+P\+Labels\+Store\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,6 +22,8 @@ Collaboration diagram for J\+M\+P\+Labels\+Store\+:\nopagebreak
 \mbox{\hyperlink{structJMPLabelsStore_a2fd4e86a17748c8baee34cb5e44c0466}{$\sim$\+J\+M\+P\+Labels\+Store}} ()
 \item 
 \mbox{\hyperlink{structJMPLabel}{J\+M\+P\+Label}} $\ast$ \mbox{\hyperlink{structJMPLabelsStore_a11ae202867bee06836e593f33f5954ae}{get\+Label}} (\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$label) const
+\item 
+\mbox{\hyperlink{structJMPLabel}{J\+M\+P\+Label}} $\ast$ \mbox{\hyperlink{structJMPLabelsStore_ac7bc84521393d689984fbe49b05f5012}{get\+Label\+By\+To\+Position}} (long \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} pos) const
 \item 
 long \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{structJMPLabelsStore_a7fa654d51d71f8d0ae30af0df519a8ca}{get\+Label\+To\+Position}} (\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$label) const
 \item 
@@ -120,6 +123,30 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{structJMPLabelsStore_a11ae202867bee06836e593f33f5954ae_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{structJMPLabelsStore_ac7bc84521393d689984fbe49b05f5012}\label{structJMPLabelsStore_ac7bc84521393d689984fbe49b05f5012}} 
+\index{JMPLabelsStore@{JMPLabelsStore}!getLabelByToPosition@{getLabelByToPosition}}
+\index{getLabelByToPosition@{getLabelByToPosition}!JMPLabelsStore@{JMPLabelsStore}}
+\doxysubsubsection{\texorpdfstring{getLabelByToPosition()}{getLabelByToPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structJMPLabel}{J\+M\+P\+Label}} $\ast$ J\+M\+P\+Labels\+Store\+::get\+Label\+By\+To\+Position (\begin{DoxyParamCaption}\item[{long \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}}}]{pos }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{123                                                                  \{}
+\DoxyCodeLine{124     \mbox{\hyperlink{structJMPLabel}{JMPLabel}}* current = this-\/>\mbox{\hyperlink{structJMPLabelsStore_af23849f04d27c00662e235598f3ca6c5}{first}};}
+\DoxyCodeLine{125     \textcolor{keywordflow}{while} (current != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{126         \textcolor{keywordflow}{if} (current-\/>\mbox{\hyperlink{structJMPLabel_a6b67a7b6015f128f7623c1b5854d94d8}{positionTo}} == pos) \{}
+\DoxyCodeLine{127             \textcolor{keywordflow}{return} current;}
+\DoxyCodeLine{128         \}}
+\DoxyCodeLine{129         current = current-\/>\mbox{\hyperlink{structJMPLabel_a18b0eaf5621254a95518ced33c188226}{next}};}
+\DoxyCodeLine{130     \}}
+\DoxyCodeLine{131     \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{132 \}}
+
+\end{DoxyCode}
+
+
+References first, J\+M\+P\+Label\+::next, and J\+M\+P\+Label\+::position\+To.
+
 \mbox{\Hypertarget{structJMPLabelsStore_a7fa654d51d71f8d0ae30af0df519a8ca}\label{structJMPLabelsStore_a7fa654d51d71f8d0ae30af0df519a8ca}} 
 \index{JMPLabelsStore@{JMPLabelsStore}!getLabelToPosition@{getLabelToPosition}}
 \index{getLabelToPosition@{getLabelToPosition}!JMPLabelsStore@{JMPLabelsStore}}
@@ -277,7 +304,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Referenced by J\+M\+P\+Labels\+Store(), $\sim$\+J\+M\+P\+Labels\+Store(), analyze\+Labels\+Errors(), evaluate\+Labels(), get\+Label(), get\+Label\+To\+Position(), labels\+Table\+Complete(), and new\+Label().
+Referenced by J\+M\+P\+Labels\+Store(), $\sim$\+J\+M\+P\+Labels\+Store(), analyze\+Labels\+Errors(), evaluate\+Labels(), get\+Label(), get\+Label\+By\+To\+Position(), get\+Label\+To\+Position(), labels\+Table\+Complete(), and new\+Label().
 
 \mbox{\Hypertarget{structJMPLabelsStore_a27fe748b8f33ccbed0ba18b8b9128dd2}\label{structJMPLabelsStore_a27fe748b8f33ccbed0ba18b8b9128dd2}} 
 \index{JMPLabelsStore@{JMPLabelsStore}!last@{last}}

@@ -1,18 +1,19 @@
 <map id="__overload" name="__overload">
-<area shape="rect" id="node1" title="Create new stack with pre&#45;defined capacity." alt="" coords="952,183,1037,209"/>
-<area shape="rect" id="node2" href="$StackRigid_8cpp.html#a20779cbd888e42054835b58a527bc0e8" title="Reallocates Stack if needed." alt="" coords="555,81,687,108"/>
-<area shape="rect" id="node6" href="$StackRigid_8h.html#a34ed05fb570dfd9ade77d3c0bd664591" title="Dumps debug information about the stack." alt="" coords="175,259,265,285"/>
-<area shape="rect" id="node8" href="$StackRigid_8h.html#a269040ce2ab02e681254d1e9f20aff35" title="Memory alocated for the Stack." alt="" coords="747,183,904,209"/>
-<area shape="rect" id="node3" href="$StackRigid_8h.html#a3da847c6aaf3f472d56d528de1a0f6f7" title="Pop value from the end of the stack The operation can perform reallocations if there is too much spac..." alt="" coords="181,5,259,32"/>
-<area shape="rect" id="node5" href="$StackRigid_8h.html#a72e1abcd508a113d2731a622322f0624" title="Push the value to the stack The operation can perform reallocations if there is not enough space." alt="" coords="177,56,263,83"/>
-<area shape="rect" id="node4" href="$EXE_8h.html#a20936b51fc3be86fb2849172b6f01f41" title=" " alt="" coords="5,5,119,32"/>
-<area shape="rect" id="node7" href="$SPU_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="37,259,87,285"/>
-<area shape="rect" id="node9" href="$StackRigid_8cpp.html#a2dbfc90e6e980278704961c949b0bf58" title="Claculates big Stack checksum. Uses Adler&#45;32 method." alt="" coords="544,157,699,184"/>
-<area shape="rect" id="node16" href="$StackRigid_8h.html#a3addcf7a8000baf1be4d91a779f293e8" title="Free stack memory." alt="" coords="167,208,273,235"/>
-<area shape="rect" id="node10" href="$StackRigid_8cpp.html#aafaff2554f25a2dd6681bf409da8fe8e" title="Updates Stack checksums. Does not take into account bytes inside the stack but outside of its last el..." alt="" coords="321,107,496,133"/>
-<area shape="rect" id="node11" href="$StackRigid_8h.html#a8ffebb1dd3f306eca52e8b34ad325f1c" title="Perform all stack checks: checksums, general constrains." alt="" coords="357,157,460,184"/>
-<area shape="rect" id="node12" href="$StackRigid_8h.html#a81920cc1380e65ab9173893cb1772d86" title="Free stack memory." alt="" coords="177,157,263,184"/>
-<area shape="rect" id="node14" href="$StackRigid_8h.html#ae1c69d86c62460d198142773ee201d80" title="Clear the stack." alt="" coords="177,107,263,133"/>
-<area shape="rect" id="node13" href="$EXE_8h.html#a12cafb4648b6683de59bffe9b5905ae3" title=" " alt="" coords="5,157,119,184"/>
-<area shape="rect" id="node15" href="$EXE_8h.html#ac7be82c50998024b6a3a89ec18133d6a" title=" " alt="" coords="5,107,119,133"/>
+<area shape="rect" id="node1" title="Create new stack with pre&#45;defined capacity." alt="" coords="1065,183,1151,209"/>
+<area shape="rect" id="node2" href="$StackRigid_8cpp.html#a20779cbd888e42054835b58a527bc0e8" title="Reallocates Stack if needed." alt="" coords="669,81,801,108"/>
+<area shape="rect" id="node6" href="$StackRigid_8h.html#a34ed05fb570dfd9ade77d3c0bd664591" title="Dumps debug information about the stack." alt="" coords="288,259,379,285"/>
+<area shape="rect" id="node9" href="$StackRigid_8h.html#a269040ce2ab02e681254d1e9f20aff35" title="Memory alocated for the Stack." alt="" coords="860,183,1017,209"/>
+<area shape="rect" id="node3" href="$StackRigid_8h.html#a3da847c6aaf3f472d56d528de1a0f6f7" title="Pop value from the end of the stack The operation can perform reallocations if there is too much spac..." alt="" coords="294,5,373,32"/>
+<area shape="rect" id="node5" href="$StackRigid_8h.html#a72e1abcd508a113d2731a622322f0624" title="Push the value to the stack The operation can perform reallocations if there is not enough space." alt="" coords="290,56,377,83"/>
+<area shape="rect" id="node4" href="$EXE_8h.html#a20936b51fc3be86fb2849172b6f01f41" title=" " alt="" coords="111,5,225,32"/>
+<area shape="rect" id="node7" href="$SPU_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,259,56,285"/>
+<area shape="rect" id="node8" href="$EXE_8h.html#aa33f433d3ffa06d1d01567b282d8706b" title=" " alt="" coords="111,259,225,285"/>
+<area shape="rect" id="node10" href="$StackRigid_8cpp.html#a2dbfc90e6e980278704961c949b0bf58" title="Claculates big Stack checksum. Uses Adler&#45;32 method." alt="" coords="657,157,812,184"/>
+<area shape="rect" id="node16" href="$StackRigid_8h.html#a3addcf7a8000baf1be4d91a779f293e8" title="Free stack memory." alt="" coords="280,208,387,235"/>
+<area shape="rect" id="node11" href="$StackRigid_8cpp.html#aafaff2554f25a2dd6681bf409da8fe8e" title="Updates Stack checksums. Does not take into account bytes inside the stack but outside of its last el..." alt="" coords="435,107,609,133"/>
+<area shape="rect" id="node12" href="$StackRigid_8h.html#a8ffebb1dd3f306eca52e8b34ad325f1c" title="Perform all stack checks: checksums, general constrains." alt="" coords="471,157,573,184"/>
+<area shape="rect" id="node13" href="$StackRigid_8h.html#a81920cc1380e65ab9173893cb1772d86" title="Free stack memory." alt="" coords="290,157,377,184"/>
+<area shape="rect" id="node15" href="$StackRigid_8h.html#ae1c69d86c62460d198142773ee201d80" title="Clear the stack." alt="" coords="290,107,377,133"/>
+<area shape="rect" id="node14" href="$EXE_8h.html#aefbba8e6103e96f02f9dab0aeaab3c00" title=" " alt="" coords="149,157,187,184"/>
+<area shape="rect" id="node17" href="$SPUCore_8hpp.html#abcc188767bfe5fedeec886779e9f1bb3" title=" " alt="" coords="104,208,232,235"/>
 </map>

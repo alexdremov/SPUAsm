@@ -1,0 +1,12 @@
+<map id="OPEXE_FUNC" name="OPEXE_FUNC">
+<area shape="rect" id="node1" title=" " alt="" coords="5,87,119,114"/>
+<area shape="rect" id="node2" href="$StackRigid_8cpp.html#a34ed05fb570dfd9ade77d3c0bd664591" title="Dumps debug information about the stack." alt="" coords="167,87,257,114"/>
+<area shape="rect" id="node3" href="$StackRigid_8cpp.html#ad190054fe2653472b68ffe86d6f5dff3" title="Create new stack with pre&#45;defined capacity." alt="" coords="889,11,975,38"/>
+<area shape="rect" id="node4" href="$StackRigid_8cpp.html#a50d9ff70df667de809d39640f33db70b" title="Checks for pointer validity." alt="" coords="477,138,615,164"/>
+<area shape="rect" id="node5" href="$EXE_8h.html#ab99234c936a3345fdf76f51743a997ea" title=" " alt="" coords="331,87,382,114"/>
+<area shape="rect" id="node6" href="$StackRigid_8cpp.html#a269040ce2ab02e681254d1e9f20aff35" title="Memory alocated for the Stack." alt="" coords="684,36,841,63"/>
+<area shape="rect" id="node7" href="$StackRigid_8cpp.html#a8ffebb1dd3f306eca52e8b34ad325f1c" title="Perform all stack checks: checksums, general constrains." alt="" coords="305,188,408,215"/>
+<area shape="rect" id="node8" href="$StackRigid_8cpp.html#a2dbfc90e6e980278704961c949b0bf58" title="Claculates big Stack checksum. Uses Adler&#45;32 method." alt="" coords="469,188,623,215"/>
+<area shape="rect" id="node10" href="$StackRigid_8cpp.html#afbcd0622342a6d09486b0303b840ee59" title="Uses Adler&#45;32 method. Calculates Stack checksum only for the vital parameters. This is necessary beca..." alt="" coords="456,239,636,266"/>
+<area shape="rect" id="node9" href="$StackRigid_8cpp.html#abc79f40e23ef3b974d01a80274a3df1d" title="Calculates Adler&#45;32 checksum from the firstBlock to the firstBlock + len." alt="" coords="706,214,819,240"/>
+</map>

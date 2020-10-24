@@ -1,16 +1,20 @@
 var searchData=
 [
-  ['capacity_1286',['capacity',['../StackRigid_8cpp.html#abc869d0afb33fc960e297465165cd334',1,'StackRigid.cpp']]],
-  ['char_1287',['char',['../CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09',1,'CMakeCache.txt']]],
-  ['checksum_1288',['checkSum',['../StackRigid_8cpp.html#a8a32205e08c87c56f05f432202831329',1,'StackRigid.cpp']]],
-  ['checksumvital_1289',['checkSumVital',['../StackRigid_8cpp.html#abada3e312a622648ad335f352a42fb77',1,'StackRigid.cpp']]],
-  ['clang_1290',['clang',['../CMakeCache_8txt.html#a6f5fe5d7799f31b07a022ed28443a8eb',1,'CMakeCache.txt']]],
-  ['cmake_5fextra_5fgenerator_5fc_5fsystem_5fdefined_5fmacros_1291',['CMAKE_EXTRA_GENERATOR_C_SYSTEM_DEFINED_MACROS',['../CMakeCache_8txt.html#add3f4cb7bf58f1dd0e1b6139f59a8bf4',1,'CMakeCache.txt']]],
-  ['cmd_5fargrules_1292',['CMD_ARGRULES',['../INFO_8h.html#a6fe274caf7d4f7b8172d608c7451a8ba',1,'INFO.h']]],
-  ['cmd_5fcode_1293',['CMD_CODE',['../INFO_8h.html#a92033888694126ddcb3b6c13ee102dc2',1,'INFO.h']]],
-  ['code_1294',['code',['../AssemblyDTypes_8hpp.html#a5a2cf3ef6bbd4fa8beb8f39b1c383c92',1,'BinaryFile::code()'],['../structSyntaxEntity.html#ab8de28b350eba81b20adc899f41e596f',1,'SyntaxEntity::code()']]],
-  ['codeoffset_1295',['codeOffset',['../AssemblyDTypes_8hpp.html#af4388a255703cbbd6ab670fb87a92e93',1,'BinaryFile']]],
-  ['codetext_1296',['codeText',['../AssemblyDTypes_8hpp.html#a616b2e98d89547438c5461468f8bef6d',1,'AssemblyParams']]],
-  ['cprocessor_1297',['cProcessor',['../structSyntaxEntity.html#ae017135ccefa21c7c462806baac1f7d7',1,'SyntaxEntity']]],
-  ['currentsize_1298',['currentSize',['../AssemblyDTypes_8hpp.html#a3e976fdc373fa869cdc9bc127239ac97',1,'BinaryFile']]]
+  ['callstack_1343',['callStack',['../SPUDtypes_8hpp.html#a391debfb1295dd029871b695abaa1091',1,'SPUCore']]],
+  ['capacity_1344',['capacity',['../StackRigid_8cpp.html#abc869d0afb33fc960e297465165cd334',1,'StackRigid.cpp']]],
+  ['char_1345',['char',['../CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09',1,'CMakeCache.txt']]],
+  ['checksum_1346',['checkSum',['../StackRigid_8cpp.html#a8a32205e08c87c56f05f432202831329',1,'StackRigid.cpp']]],
+  ['checksumvital_1347',['checkSumVital',['../StackRigid_8cpp.html#abada3e312a622648ad335f352a42fb77',1,'StackRigid.cpp']]],
+  ['clang_1348',['clang',['../CMakeCache_8txt.html#a6f5fe5d7799f31b07a022ed28443a8eb',1,'CMakeCache.txt']]],
+  ['cmake_5fextra_5fgenerator_5fc_5fsystem_5fdefined_5fmacros_1349',['CMAKE_EXTRA_GENERATOR_C_SYSTEM_DEFINED_MACROS',['../CMakeCache_8txt.html#add3f4cb7bf58f1dd0e1b6139f59a8bf4',1,'CMakeCache.txt']]],
+  ['cmd_5fargrules_1350',['CMD_ARGRULES',['../INFO_8h.html#abd77ca7092b88a15fe191b2e4120d406',1,'INFO.h']]],
+  ['cmd_5fcode_1351',['CMD_CODE',['../INFO_8h.html#a47d8cd076f9bcb4d63a5671d97229770',1,'INFO.h']]],
+  ['cmd_5fflagbytes_1352',['CMD_FLAGBYTES',['../INFO_8h.html#abebfaff7662b3a95ae07bc17b2269d06',1,'INFO.h']]],
+  ['code_1353',['code',['../AssemblyDTypes_8hpp.html#a5a2cf3ef6bbd4fa8beb8f39b1c383c92',1,'BinaryFile::code()'],['../structSyntaxEntity.html#ab8de28b350eba81b20adc899f41e596f',1,'SyntaxEntity::code()']]],
+  ['codeoffset_1354',['codeOffset',['../AssemblyDTypes_8hpp.html#af4388a255703cbbd6ab670fb87a92e93',1,'BinaryFile']]],
+  ['codetext_1355',['codeText',['../AssemblyDTypes_8hpp.html#a616b2e98d89547438c5461468f8bef6d',1,'AssemblyParams']]],
+  ['complexvalok_1356',['COMPLEXVALOK',['../EXE_8h.html#add5ada3745a53f8fa6baeb3da47800ff',1,'EXE.h']]],
+  ['cprocessor_1357',['cProcessor',['../structSyntaxEntity.html#ae017135ccefa21c7c462806baac1f7d7',1,'SyntaxEntity']]],
+  ['currentsize_1358',['currentSize',['../AssemblyDTypes_8hpp.html#a3e976fdc373fa869cdc9bc127239ac97',1,'BinaryFile']]],
+  ['cvalue_1359',['cvalue',['../EXE_8h.html#afd28069fe7ee361686d9303957752105',1,'EXE.h']]]
 ];

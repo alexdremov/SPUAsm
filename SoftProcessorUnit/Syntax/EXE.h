@@ -493,4 +493,28 @@ OPEXE_FUNC(ret,  {
     return SPU_EXE_OK;
 })
 
+
+OPEXE_FUNC(mov,  {
+    if (!HASBYTES(3))
+        return SPU_EXE_NOARGS;
+    double* valueTo = nullptr;
+    ComplexValue cvalue = {};
+    ADDSPI(1);
+    ComplexValueResult val = pointerToComplexValue(core, SPI, &valueTo, &cvalue);
+    
+    COMPLEXVALOK;
+    
+    double value = 0;
+    val = retrieveComplexValue(core, SPI, &value);
+    COMPLEXVALOK;
+    
+    if(charAdress(&cvalue)){
+        *((char*)valueTo) = (char)value;
+    } else {
+        *valueTo = value;
+    }
+    
+    return SPU_EXE_OK;
+})
+
 #pragma clang diagnostic pop

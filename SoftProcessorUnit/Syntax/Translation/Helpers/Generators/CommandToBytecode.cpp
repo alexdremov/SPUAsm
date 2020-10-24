@@ -7,6 +7,7 @@
 
 #include "AssemblyHelpers.hpp"
 #include "CommandsParser.hpp"
+#include "ComplexValueTools.hpp"
 #include "Syntax.hpp"
 #include <cstring>
 #include <cctype>

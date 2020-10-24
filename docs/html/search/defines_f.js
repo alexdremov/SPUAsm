@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zeroorregisterno_1503',['ZEROORREGISTERNO',['../CTBDefs_8h.html#a7ccf74837c52aa13556d7d689212c490',1,'CTBDefs.h']]]
+  ['vramoffset_1587',['VRAMOFFSET',['../SPUDtypes_8hpp.html#abafbf2243996a233e58663b2c0bb08be',1,'SPUDtypes.hpp']]]
 ];

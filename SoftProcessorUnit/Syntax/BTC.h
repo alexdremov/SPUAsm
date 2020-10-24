@@ -12,50 +12,40 @@
 
 OPBACKTRANSLATE_FUNC(push, {
     OPBACKGENERAL({
-        char* localSPI = *SPI;
-        char flagByte = *(localSPI + 1);
-        if (flagByte == 0) {
-            if (!checkBytesEnoughNumber( binary, *SPI, 10)){
-                return SPU_DISASM_NOTENOUGHARGS;
-            }
-            double value = getDoubleFromBuffer(localSPI + 2);
-            fprintf(params->outputFile, "%lg", value);
-            ADDSPI(sizeof(double) + 2);
-        } else {
-            const char* reg = registerNameFromNo(*(localSPI + 2));
-            fprintf(params->outputFile, "%s", reg);
-            ADDSPI(3);
+        if (!checkBytesEnoughNumber( binary, *SPI, 10)){
+            return SPU_DISASM_NOTENOUGHARGS;
         }
+        ADDSPI(1);
+        ComplexValue val = {};
+        ComplexValueResult valResult = retrieveComplexValue(SPI, &val);
+        COMPLEXVALOK;
+        renderComplexValue(&val, params->outputFile);
     })
     return SPU_DISASM_OK;
 })
 
 OPBACKTRANSLATE_FUNC(pop, {
     OPBACKGENERAL({
-        char* localSPI = *SPI;
-        char flagByte = *(localSPI + 1);
-        if (flagByte == 0) {
-            ADDSPI(2);
-        } else {
-            const char* reg = registerNameFromNo(*(localSPI + 2));
-            fprintf(params->outputFile, "%s", reg);
-            ADDSPI(3);
-        }
+        ADDSPI(1);
+        ComplexValue val = {};
+        ComplexValueResult valResult = retrieveComplexValue(SPI, &val);
+        if (valResult == SPU_CV_NOARG)
+            return SPU_DISASM_OK;
+        COMPLEXVALOK;
+        renderComplexValue(&val, params->outputFile);
     })
     return SPU_DISASM_OK;
 })
 
 OPBACKTRANSLATE_FUNC(in, {
     OPBACKGENERAL({
-        char* localSPI = *SPI;
-        char flagByte = *(localSPI + 1);
-        if (flagByte == 0) {
-            ADDSPI(2);
-        } else {
-            const char* reg = registerNameFromNo(*(localSPI + 2));
-            fprintf(params->outputFile, "%s", reg);
-            ADDSPI(3);
-        }
+        ADDSPI(1);
+        ComplexValue val = {};
+        ComplexValueResult valResult = retrieveComplexValue(SPI, &val);
+        if (valResult == SPU_CV_NOARG)
+            return SPU_DISASM_OK;
+        COMPLEXVALOK;
+        renderComplexValue(&val, params->outputFile);
     })
     return SPU_DISASM_OK;
 })
@@ -139,15 +129,13 @@ OPBACKTRANSLATE_FUNC(hlt, {
 
 OPBACKTRANSLATE_FUNC(out, {
     OPBACKGENERAL({
-        char* localSPI = *SPI;
-        char flagByte = *(localSPI + 1);
-        if (flagByte == 0) {
-            ADDSPI(2);
-        } else {
-            const char* reg = registerNameFromNo(*(localSPI + 2));
-            fprintf(params->outputFile, "%s", reg);
-            ADDSPI(3);
-        }
+        ADDSPI(1);
+        ComplexValue val = {};
+        ComplexValueResult valResult = retrieveComplexValue(SPI, &val);
+        if (valResult == SPU_CV_NOARG)
+            return SPU_DISASM_OK;
+        COMPLEXVALOK;
+        renderComplexValue(&val, params->outputFile);
     })
     return SPU_DISASM_OK;
 })
@@ -234,30 +222,26 @@ OPBACKTRANSLATE_FUNC(jm, {
 
 OPBACKTRANSLATE_FUNC(inc, {
     OPBACKGENERAL({
-        char* localSPI = *SPI;
-        char flagByte = *(localSPI + 1);
-        if (flagByte == 0) {
-            ADDSPI(2);
-        } else {
-            const char* reg = registerNameFromNo(*(localSPI + 2));
-            fprintf(params->outputFile, "%s", reg);
-            ADDSPI(3);
-        }
+        ADDSPI(1);
+        ComplexValue val = {};
+        ComplexValueResult valResult = retrieveComplexValue(SPI, &val);
+        if (valResult == SPU_CV_NOARG)
+            return SPU_DISASM_OK;
+        COMPLEXVALOK;
+        renderComplexValue(&val, params->outputFile);
     })
     return SPU_DISASM_OK;
 })
 
 OPBACKTRANSLATE_FUNC(dec, {
     OPBACKGENERAL({
-        char* localSPI = *SPI;
-        char flagByte = *(localSPI + 1);
-        if (flagByte == 0) {
-            ADDSPI(2);
-        } else {
-            const char* reg = registerNameFromNo(*(localSPI + 2));
-            fprintf(params->outputFile, "%s", reg);
-            ADDSPI(3);
-        }
+        ADDSPI(1);
+        ComplexValue val = {};
+        ComplexValueResult valResult = retrieveComplexValue(SPI, &val);
+        if (valResult == SPU_CV_NOARG)
+            return SPU_DISASM_OK;
+        COMPLEXVALOK;
+        renderComplexValue(&val, params->outputFile);
     })
     return SPU_DISASM_OK;
 })
@@ -274,6 +258,13 @@ OPBACKTRANSLATE_FUNC(call, {
 })
 
 OPBACKTRANSLATE_FUNC(ret, {
+    OPBACKGENERAL({
+        INCSPI;
+    })
+    return SPU_DISASM_OK;
+})
+
+OPBACKTRANSLATE_FUNC(mov, {
     OPBACKGENERAL({
         INCSPI;
     })

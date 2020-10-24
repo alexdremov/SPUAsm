@@ -91,39 +91,65 @@ Check that all operations completed correctly; labels table is complete and not 
 
 ## Syntax
 
-#### push    <instant value/register>
+### Complex value (cvalue)
+Operators with arguments accept *complex value* argument. Argument can be **assignable** or **not assignable**
+
+Complex value examples:
+-  [rax+5]       - assignable, RAM on adress rax+5 with double adressation 
+-  4                - not assignable, immediate value 4 
+-  [5]              - assignable, RAM on adress 5 with double adressation 
+-  [rcx]           - assignable, RAM on adress rcx with double adressation 
+-  rcx             - assignable, register rcx 
+-  (rcx)           - assignable, RAM on adress rcx with **char** adressation
+-  (rcx+10)     - assignable, RAM on adress rcx+10 with **char** adressation
+-  (10)            - assignable, RAM on adress 10 with **char** adressation
+
+**Notice:** whitespaces inside complex value are not allowed and considered as syntax error.
+
+### General purpose
+
+#### push    <any cvalue>
 Push value to the stack
 
-#### pop      <empty/register>
+#### pop      <nothing/assignable cvalue>
 Pop value from the stack
 -  no args - just delete
--  register - pop and save to register
+-  cvalue  - pop and save to assignable cvalue
 
-#### in          <empty/register>
+#### in          <nothing/assignable cvalue>
 Request value from the console
 -  no args - push value to the stack
--  register - save to the register
+-  cvalue   - save to assignable cvalue
 
-#### out       <empty/register>
+#### out       <nothing/any cvalue>
 Prints value to the console
 -  no args - last stack value
--  register - register value
+-  cvalue  - cvalue value
 
-#### inc       <empty/register>
-Increments the value
--  no args - increment the last stack element
--  register - increment the register
-
-#### dec      <empty/register>
-Decrements the value
--  no args - increment the last stack element
--  register - increment the register
+#### mov       <assignable cvalue>  <any cvalue>
+                  destination          source
+Sets the first argument value to the secon argument's value
 
 #### dump
 Dump stack information
 
 #### clear
 Clear stack
+
+#### hlt
+Finish the program
+
+### Math
+
+#### inc       <nothing/assignable cvalue>
+Increments the value
+-  no args - last stack value
+-  cvalue  - cvalue value
+
+#### dec       <nothing/assignable cvalue>
+Decrements the value
+-  no args - last stack value
+-  cvalue  - cvalue value
 
 #### add
 Add two last stack values and push to the stack
@@ -149,8 +175,14 @@ Square root of the last stack value
 #### pow
 The pre-last element of the stack to the power of the last one
 
-#### hlt
-Finish the program
+### Codeflow modifiers
+
+#### call       <label>
+Gives execution to the label block. Can be returned to the call instruction using *ret*
+
+#### ret
+Returnes to the last call position.
+May fail if there were no calls.
 
 #### jmp      <label>
 Jump to the label

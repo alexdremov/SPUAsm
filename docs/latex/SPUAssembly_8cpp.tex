@@ -6,7 +6,8 @@
 {\ttfamily \#include \char`\"{}Commands\+Parser.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}S\+P\+U\+Version.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Code\+Analysis.\+hpp\char`\"{}}\newline
-Include dependency graph for S\+P\+U\+Assembly.\+cpp\+:\nopagebreak
+Include dependency graph for S\+P\+U\+Assembly.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -35,7 +36,7 @@ Include dependency graph for S\+P\+U\+Assembly.\+cpp\+:\nopagebreak
 \DoxyCodeLine{19     }
 \DoxyCodeLine{20     \textcolor{keywordtype}{int} parsingResult = \mbox{\hyperlink{AssemblyHelpers_8cpp_a6c4bb8a89afb60b2164c352fec284d61}{parseArgs}}(argc, argv, \&compileParams);}
 \DoxyCodeLine{21     \textcolor{keywordflow}{if} (parsingResult != EXIT\_SUCCESS) \{}
-\DoxyCodeLine{22         printf(\textcolor{stringliteral}{"{}error: assembly: process finished with EXIT\_FAILURE code\(\backslash\)n"{}});}
+\DoxyCodeLine{22         \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: assembly: process finished with EXIT\_FAILURE code\(\backslash\)n"{}});}
 \DoxyCodeLine{23         \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{24     \}}
 \DoxyCodeLine{25     }
@@ -69,17 +70,17 @@ Include dependency graph for S\+P\+U\+Assembly.\+cpp\+:\nopagebreak
 \DoxyCodeLine{53                                             codeLen);}
 \DoxyCodeLine{54     }
 \DoxyCodeLine{55     \textcolor{keywordflow}{if} (parseRes != \mbox{\hyperlink{CommandsDTypes_8hpp_a014dc28c49852c3fac1fa3cd2a95c0d5aa4efc8f9e76b32072d33a7d67f856d99}{SPU\_PARSE\_OK}})\{}
-\DoxyCodeLine{56         printf(\textcolor{stringliteral}{"{}\%s: error: assembly: syntax error\(\backslash\)n"{}}, compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}});}
-\DoxyCodeLine{57         printf(\textcolor{stringliteral}{"{}\%s: error: assembly: process finished with EXIT\_FAILURE code\(\backslash\)n"{}}, compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}});}
+\DoxyCodeLine{56         \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}\%s: error: assembly: syntax error\(\backslash\)n"{}}, compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}});}
+\DoxyCodeLine{57         \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}\%s: error: assembly: process finished with EXIT\_FAILURE code\(\backslash\)n"{}}, compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}});}
 \DoxyCodeLine{58         \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{59     \}}
 \DoxyCodeLine{60     }
 \DoxyCodeLine{61     \textcolor{keywordflow}{if} (compileParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a3998875859d91d9614897720dd09aa3a}{verbose}})\{}
-\DoxyCodeLine{62         printf(\textcolor{stringliteral}{"{}Generated code: \(\backslash\)n"{}});}
+\DoxyCodeLine{62         \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}Generated code: \(\backslash\)n"{}});}
 \DoxyCodeLine{63         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 0; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} < binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}}; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++) \{}
-\DoxyCodeLine{64             printf(\textcolor{stringliteral}{"{}\%d "{}}, (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}]);}
+\DoxyCodeLine{64             \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}\%d "{}}, (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}]);}
 \DoxyCodeLine{65         \}}
-\DoxyCodeLine{66         printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{66         \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
 \DoxyCodeLine{67     \}}
 \DoxyCodeLine{68     }
 \DoxyCodeLine{69     \mbox{\hyperlink{CommandsParser_8cpp_aede32224521297426a2cfad5d4798384}{codeEstimations}}(binary, code);}
@@ -93,9 +94,10 @@ Include dependency graph for S\+P\+U\+Assembly.\+cpp\+:\nopagebreak
 \end{DoxyCode}
 
 
-References Binary\+File\+::code, code\+Estimations(), Assembly\+Params\+::code\+Text, Binary\+File\+::current\+Size, Destruct\+Assembly\+Params(), Destruct\+Binary\+File(), flush\+Bin\+File(), generate\+Errors(), get\+Source\+File\+Data(), get\+Syntax\+Mapping(), i, Assembly\+Params\+::input\+File, Assembly\+Params\+::input\+File\+Name, New\+Binary\+File(), Assembly\+Params\+::output\+File, parse\+Args(), parse\+Code(), Assembly\+Params\+::prep\+File, preprocess\+Source(), print\+Assembly\+Version(), remove\+Double\+Whitespaces(), S\+P\+U\+\_\+\+P\+A\+R\+S\+E\+\_\+\+OK, and Assembly\+Params\+::verbose.
+References Binary\+File\+::code, code\+Estimations(), Assembly\+Params\+::code\+Text, Binary\+File\+::current\+Size, Destruct\+Assembly\+Params(), Destruct\+Binary\+File(), flush\+Bin\+File(), generate\+Errors(), get\+Source\+File\+Data(), get\+Syntax\+Mapping(), i, Assembly\+Params\+::input\+File, Assembly\+Params\+::input\+File\+Name, New\+Binary\+File(), Assembly\+Params\+::output\+File, parse\+Args(), parse\+Code(), Assembly\+Params\+::prep\+File, preprocess\+Source(), print\+Assembly\+Version(), printf(), remove\+Double\+Whitespaces(), S\+P\+U\+\_\+\+P\+A\+R\+S\+E\+\_\+\+OK, and Assembly\+Params\+::verbose.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

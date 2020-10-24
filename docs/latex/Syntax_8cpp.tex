@@ -5,7 +5,8 @@
 {\ttfamily \#include \char`\"{}Assembly\+Helpers.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}I\+N\+F\+O.\+h\char`\"{}}\newline
-Include dependency graph for Syntax.\+cpp\+:\nopagebreak
+Include dependency graph for Syntax.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,7 +16,7 @@ Include dependency graph for Syntax.\+cpp\+:\nopagebreak
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{Syntax_8cpp_a4c0b67c13ff416818ca7d64ffabfb48d}{C\+O\+M\+M\+A\+N\+D\+\_\+\+I\+N\+FO}}(name,  code,  args,  flags)~\mbox{\hyperlink{Syntax_8cpp_ac311532f04f531b82a66a258fd66441f}{make\+Entity}}(\#name, code , args, flags, \&\mbox{\hyperlink{Syntax_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}{E\+V\+A\+L\+U\+A\+TE}}(C\+M\+D\+C\+T\+B\+\_\+ \#\# name  ) ,\&\mbox{\hyperlink{Syntax_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}{E\+V\+A\+L\+U\+A\+TE}}(C\+M\+D\+B\+T\+C\+\_\+ \#\# name)),
+\#define \mbox{\hyperlink{Syntax_8cpp_a14e8a765037199e80f2a5e98a0e50d4e}{C\+O\+M\+M\+A\+N\+D\+\_\+\+I\+N\+FO}}(name,  code,  args,  flags,  is\+Value)~\mbox{\hyperlink{Syntax_8cpp_a80c456e7fbf7b23f7db599eaaa9b6032}{make\+Entity}}(\#name, code , args, flags, is\+Value, \&\mbox{\hyperlink{Syntax_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}{E\+V\+A\+L\+U\+A\+TE}}(C\+M\+D\+C\+T\+B\+\_\+ \#\# name  ) ,\&\mbox{\hyperlink{Syntax_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}{E\+V\+A\+L\+U\+A\+TE}}(C\+M\+D\+B\+T\+C\+\_\+ \#\# name)),
 \item 
 \#define \mbox{\hyperlink{Syntax_8cpp_a88fa737059e67b4b17ec980e5877361e}{C\+O\+N\+C\+AT}}(a,  b)~\mbox{\hyperlink{Syntax_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}{E\+V\+A\+L\+U\+A\+TE}}(a) \#\# \mbox{\hyperlink{Syntax_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}{E\+V\+A\+L\+U\+A\+TE}}(b)
 \item 
@@ -38,16 +39,16 @@ const \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}} $\ast$ \mbox{\hyperl
 \item 
 const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$ \mbox{\hyperlink{Syntax_8cpp_a81c3f483230c9c0d37f4cc118b75826f}{get\+Syntax\+Name}} (const \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{Syntax\+Mapping}} $\ast$mapping, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} code)
 \item 
-static \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}} \mbox{\hyperlink{Syntax_8cpp_ac311532f04f531b82a66a258fd66441f}{make\+Entity}} (const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$name, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} code, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$format, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} flag\+Bytes, \mbox{\hyperlink{CTB_8h_a63b3f58d58da717f495331ff2b1db979}{O\+P\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+NC}}(($\ast$c\+Processor)), \mbox{\hyperlink{BTC_8h_a8c04685046b0aa21a8a810f36023ca7a}{O\+P\+B\+A\+C\+K\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+NC}}(($\ast$b\+Processor)))
+static \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}} \mbox{\hyperlink{Syntax_8cpp_a80c456e7fbf7b23f7db599eaaa9b6032}{make\+Entity}} (const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$name, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} code, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$format, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} flag\+Bytes, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} is\+Value, \mbox{\hyperlink{CTB_8h_ad2405f5ca2529cdf21579610d9115dd1}{O\+P\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+NC}}(($\ast$c\+Processor)), \mbox{\hyperlink{BTC_8h_a91b714ade6e6019652948e4d5a61251b}{O\+P\+B\+A\+C\+K\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+NC}}(($\ast$b\+Processor)))
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{Syntax_8cpp_a4c0b67c13ff416818ca7d64ffabfb48d}\label{Syntax_8cpp_a4c0b67c13ff416818ca7d64ffabfb48d}} 
+\mbox{\Hypertarget{Syntax_8cpp_a14e8a765037199e80f2a5e98a0e50d4e}\label{Syntax_8cpp_a14e8a765037199e80f2a5e98a0e50d4e}} 
 \index{Syntax.cpp@{Syntax.cpp}!COMMAND\_INFO@{COMMAND\_INFO}}
 \index{COMMAND\_INFO@{COMMAND\_INFO}!Syntax.cpp@{Syntax.cpp}}
 \doxysubsubsection{\texorpdfstring{COMMAND\_INFO}{COMMAND\_INFO}}
-{\footnotesize\ttfamily \#define C\+O\+M\+M\+A\+N\+D\+\_\+\+I\+N\+FO(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{code,  }\item[{}]{args,  }\item[{}]{flags }\end{DoxyParamCaption})~\mbox{\hyperlink{Syntax_8cpp_ac311532f04f531b82a66a258fd66441f}{make\+Entity}}(\#name, code , args, flags, \&\mbox{\hyperlink{Syntax_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}{E\+V\+A\+L\+U\+A\+TE}}(C\+M\+D\+C\+T\+B\+\_\+ \#\# name  ) ,\&\mbox{\hyperlink{Syntax_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}{E\+V\+A\+L\+U\+A\+TE}}(C\+M\+D\+B\+T\+C\+\_\+ \#\# name)),}
+{\footnotesize\ttfamily \#define C\+O\+M\+M\+A\+N\+D\+\_\+\+I\+N\+FO(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{code,  }\item[{}]{args,  }\item[{}]{flags,  }\item[{}]{is\+Value }\end{DoxyParamCaption})~\mbox{\hyperlink{Syntax_8cpp_a80c456e7fbf7b23f7db599eaaa9b6032}{make\+Entity}}(\#name, code , args, flags, is\+Value, \&\mbox{\hyperlink{Syntax_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}{E\+V\+A\+L\+U\+A\+TE}}(C\+M\+D\+C\+T\+B\+\_\+ \#\# name  ) ,\&\mbox{\hyperlink{Syntax_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}{E\+V\+A\+L\+U\+A\+TE}}(C\+M\+D\+B\+T\+C\+\_\+ \#\# name)),}
 
 \mbox{\Hypertarget{Syntax_8cpp_a88fa737059e67b4b17ec980e5877361e}\label{Syntax_8cpp_a88fa737059e67b4b17ec980e5877361e}} 
 \index{Syntax.cpp@{Syntax.cpp}!CONCAT@{CONCAT}}
@@ -84,14 +85,14 @@ static \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}} \mbox{\hyperlink{Sy
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{44                                                                   \{}
-\DoxyCodeLine{45     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 0; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} < mapping-\/>\mbox{\hyperlink{Syntax_8hpp_ae87ea199cc92a108e220ba6eb7a46462}{number}}; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++)\{}
-\DoxyCodeLine{46         \textcolor{keywordflow}{if} (strcmp(mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}].\mbox{\hyperlink{structSyntaxEntity_a252ef676e30b71d20885c1c5de0be82d}{naming}}, name) == 0)\{}
-\DoxyCodeLine{47             \textcolor{keywordflow}{return} mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}].\mbox{\hyperlink{structSyntaxEntity_ab8de28b350eba81b20adc899f41e596f}{code}};}
-\DoxyCodeLine{48         \}}
-\DoxyCodeLine{49     \}}
-\DoxyCodeLine{50     \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{51 \}}
+\DoxyCodeLine{45                                                                   \{}
+\DoxyCodeLine{46     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 0; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} < mapping-\/>\mbox{\hyperlink{Syntax_8hpp_ae87ea199cc92a108e220ba6eb7a46462}{number}}; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++)\{}
+\DoxyCodeLine{47         \textcolor{keywordflow}{if} (strcmp(mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}].\mbox{\hyperlink{structSyntaxEntity_a252ef676e30b71d20885c1c5de0be82d}{naming}}, name) == 0)\{}
+\DoxyCodeLine{48             \textcolor{keywordflow}{return} mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}].\mbox{\hyperlink{structSyntaxEntity_ab8de28b350eba81b20adc899f41e596f}{code}};}
+\DoxyCodeLine{49         \}}
+\DoxyCodeLine{50     \}}
+\DoxyCodeLine{51     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{52 \}}
 
 \end{DoxyCode}
 
@@ -106,14 +107,14 @@ References Syntax\+Entity\+::code, Syntax\+Mapping\+::entities, i, Syntax\+Entit
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{63                                                                                          \{}
-\DoxyCodeLine{64     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 0; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} < mapping-\/>\mbox{\hyperlink{Syntax_8hpp_ae87ea199cc92a108e220ba6eb7a46462}{number}}; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++)\{}
-\DoxyCodeLine{65         \textcolor{keywordflow}{if} (code == mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}].\mbox{\hyperlink{structSyntaxEntity_ab8de28b350eba81b20adc899f41e596f}{code}})\{}
-\DoxyCodeLine{66             \textcolor{keywordflow}{return} \&mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}];}
-\DoxyCodeLine{67         \}}
-\DoxyCodeLine{68     \}}
-\DoxyCodeLine{69     \textcolor{keywordflow}{return} NULL;}
-\DoxyCodeLine{70 \}}
+\DoxyCodeLine{64                                                                                          \{}
+\DoxyCodeLine{65     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 0; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} < mapping-\/>\mbox{\hyperlink{Syntax_8hpp_ae87ea199cc92a108e220ba6eb7a46462}{number}}; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++)\{}
+\DoxyCodeLine{66         \textcolor{keywordflow}{if} (code == mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}].\mbox{\hyperlink{structSyntaxEntity_ab8de28b350eba81b20adc899f41e596f}{code}})\{}
+\DoxyCodeLine{67             \textcolor{keywordflow}{return} \&mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}];}
+\DoxyCodeLine{68         \}}
+\DoxyCodeLine{69     \}}
+\DoxyCodeLine{70     \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{71 \}}
 
 \end{DoxyCode}
 
@@ -139,14 +140,14 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{72                                                                                           \{}
-\DoxyCodeLine{73     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 0; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} < mapping-\/>\mbox{\hyperlink{Syntax_8hpp_ae87ea199cc92a108e220ba6eb7a46462}{number}}; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++)\{}
-\DoxyCodeLine{74         \textcolor{keywordflow}{if} (strcmp(mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}].\mbox{\hyperlink{structSyntaxEntity_a252ef676e30b71d20885c1c5de0be82d}{naming}}, name) == 0)\{}
-\DoxyCodeLine{75             \textcolor{keywordflow}{return} \&mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}];}
-\DoxyCodeLine{76         \}}
-\DoxyCodeLine{77     \}}
-\DoxyCodeLine{78     \textcolor{keywordflow}{return} NULL;}
-\DoxyCodeLine{79 \}}
+\DoxyCodeLine{73                                                                                           \{}
+\DoxyCodeLine{74     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 0; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} < mapping-\/>\mbox{\hyperlink{Syntax_8hpp_ae87ea199cc92a108e220ba6eb7a46462}{number}}; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++)\{}
+\DoxyCodeLine{75         \textcolor{keywordflow}{if} (strcmp(mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}].\mbox{\hyperlink{structSyntaxEntity_a252ef676e30b71d20885c1c5de0be82d}{naming}}, name) == 0)\{}
+\DoxyCodeLine{76             \textcolor{keywordflow}{return} \&mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}];}
+\DoxyCodeLine{77         \}}
+\DoxyCodeLine{78     \}}
+\DoxyCodeLine{79     \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{80 \}}
 
 \end{DoxyCode}
 
@@ -172,18 +173,18 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{30                                      \{}
-\DoxyCodeLine{31     \textcolor{keyword}{static} \mbox{\hyperlink{structSyntaxEntity}{SyntaxEntity}} operations[] = \{}
-\DoxyCodeLine{32 }
-\DoxyCodeLine{33 \textcolor{preprocessor}{\#define COMMAND\_INFO(name, code, args, flags) makeEntity(\#name, code , args, flags, \&EVALUATE(CMDCTB\_ \#\# name  ) ,\&EVALUATE(CMDBTC\_ \#\# name)),}}
-\DoxyCodeLine{34 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{INFO_8h}{INFO.h}}"{}}}
-\DoxyCodeLine{35         }
-\DoxyCodeLine{36 \textcolor{preprocessor}{\#undef COMMAND\_INFO}}
-\DoxyCodeLine{37     \};}
-\DoxyCodeLine{38     \textcolor{keyword}{static} \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{SyntaxMapping}} mapping = \{operations, \textcolor{keyword}{sizeof}(operations) / \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structSyntaxEntity}{SyntaxEntity}})\};}
-\DoxyCodeLine{39     }
-\DoxyCodeLine{40     \textcolor{keywordflow}{return} mapping;}
-\DoxyCodeLine{41 \}}
+\DoxyCodeLine{31                                      \{}
+\DoxyCodeLine{32     \textcolor{keyword}{static} \mbox{\hyperlink{structSyntaxEntity}{SyntaxEntity}} operations[] = \{}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#define COMMAND\_INFO(name, code, args, flags, isValue) makeEntity(\#name, code , args, flags, isValue, \&EVALUATE(CMDCTB\_ \#\# name  ) ,\&EVALUATE(CMDBTC\_ \#\# name)),}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{INFO_8h}{INFO.h}}"{}}}
+\DoxyCodeLine{36         }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#undef COMMAND\_INFO}}
+\DoxyCodeLine{38     \};}
+\DoxyCodeLine{39     \textcolor{keyword}{static} \mbox{\hyperlink{Syntax_8hpp_structSyntaxMapping}{SyntaxMapping}} mapping = \{operations, \textcolor{keyword}{sizeof}(operations) / \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structSyntaxEntity}{SyntaxEntity}})\};}
+\DoxyCodeLine{40     }
+\DoxyCodeLine{41     \textcolor{keywordflow}{return} mapping;}
+\DoxyCodeLine{42 \}}
 
 \end{DoxyCode}
 
@@ -205,31 +206,31 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{54                                                                          \{}
-\DoxyCodeLine{55     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 0; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} < mapping-\/>\mbox{\hyperlink{Syntax_8hpp_ae87ea199cc92a108e220ba6eb7a46462}{number}}; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++)\{}
-\DoxyCodeLine{56         \textcolor{keywordflow}{if} (code == mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}].\mbox{\hyperlink{structSyntaxEntity_ab8de28b350eba81b20adc899f41e596f}{code}})\{}
-\DoxyCodeLine{57             \textcolor{keywordflow}{return} mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}].\mbox{\hyperlink{structSyntaxEntity_a252ef676e30b71d20885c1c5de0be82d}{naming}};}
-\DoxyCodeLine{58         \}}
-\DoxyCodeLine{59     \}}
-\DoxyCodeLine{60     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{61 \}}
+\DoxyCodeLine{55                                                                          \{}
+\DoxyCodeLine{56     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 0; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} < mapping-\/>\mbox{\hyperlink{Syntax_8hpp_ae87ea199cc92a108e220ba6eb7a46462}{number}}; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++)\{}
+\DoxyCodeLine{57         \textcolor{keywordflow}{if} (code == mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}].\mbox{\hyperlink{structSyntaxEntity_ab8de28b350eba81b20adc899f41e596f}{code}})\{}
+\DoxyCodeLine{58             \textcolor{keywordflow}{return} mapping-\/>\mbox{\hyperlink{Syntax_8hpp_a6ff32bce522e167a6410dda5c170ef5c}{entities}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}].\mbox{\hyperlink{structSyntaxEntity_a252ef676e30b71d20885c1c5de0be82d}{naming}};}
+\DoxyCodeLine{59         \}}
+\DoxyCodeLine{60     \}}
+\DoxyCodeLine{61     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{62 \}}
 
 \end{DoxyCode}
 
 
 References Syntax\+Entity\+::code, Syntax\+Mapping\+::entities, i, Syntax\+Entity\+::naming, and Syntax\+Mapping\+::number.
 
-\mbox{\Hypertarget{Syntax_8cpp_ac311532f04f531b82a66a258fd66441f}\label{Syntax_8cpp_ac311532f04f531b82a66a258fd66441f}} 
+\mbox{\Hypertarget{Syntax_8cpp_a80c456e7fbf7b23f7db599eaaa9b6032}\label{Syntax_8cpp_a80c456e7fbf7b23f7db599eaaa9b6032}} 
 \index{Syntax.cpp@{Syntax.cpp}!makeEntity@{makeEntity}}
 \index{makeEntity@{makeEntity}!Syntax.cpp@{Syntax.cpp}}
 \doxysubsubsection{\texorpdfstring{makeEntity()}{makeEntity()}}
-{\footnotesize\ttfamily static \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}} make\+Entity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$}]{name,  }\item[{const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}}}]{code,  }\item[{const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$}]{format,  }\item[{const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}}}]{flag\+Bytes,  }\item[{\mbox{\hyperlink{CTB_8h_a63b3f58d58da717f495331ff2b1db979}{O\+P\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+NC}}(($\ast$c\+Processor))}]{,  }\item[{\mbox{\hyperlink{BTC_8h_a8c04685046b0aa21a8a810f36023ca7a}{O\+P\+B\+A\+C\+K\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+NC}}(($\ast$b\+Processor))}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structSyntaxEntity}{Syntax\+Entity}} make\+Entity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$}]{name,  }\item[{const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}}}]{code,  }\item[{const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$}]{format,  }\item[{const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}}}]{flag\+Bytes,  }\item[{const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}}}]{is\+Value,  }\item[{\mbox{\hyperlink{CTB_8h_ad2405f5ca2529cdf21579610d9115dd1}{O\+P\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+NC}}(($\ast$c\+Processor))}]{,  }\item[{\mbox{\hyperlink{BTC_8h_a91b714ade6e6019652948e4d5a61251b}{O\+P\+B\+A\+C\+K\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+NC}}(($\ast$b\+Processor))}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{24                                                                    \{}
-\DoxyCodeLine{25     \mbox{\hyperlink{structSyntaxEntity}{SyntaxEntity}} newEntity = \{name, code, format, flagBytes, cProcessor, bProcessor\};}
-\DoxyCodeLine{26     \textcolor{keywordflow}{return} newEntity;}
-\DoxyCodeLine{27 \}}
+\DoxyCodeLine{25                                                                    \{}
+\DoxyCodeLine{26     \mbox{\hyperlink{structSyntaxEntity}{SyntaxEntity}} newEntity = \{name, code, format, flagBytes, isValue, cProcessor, bProcessor\};}
+\DoxyCodeLine{27     \textcolor{keywordflow}{return} newEntity;}
+\DoxyCodeLine{28 \}}
 
 \end{DoxyCode}

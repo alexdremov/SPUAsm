@@ -72,15 +72,39 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="">ParseHelpers.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="">CommandsParser.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="">SPUDtypes.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="">ComplexValueTools.hpp</a>&quot;</code><br />
 <code>#include &lt;cstring&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ParseHelpers.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="ParseHelpers_8cpp__incl.png" border="0" usemap="#aSoftProcessorUnit_2Syntax_2Translation_2Helpers_2ParseHelpers_8cpp" alt=""/></div>
-<map name="SoftProcessorUnit_2Syntax_2Translation_2Helpers_2ParseHelpers_8cpp" id="SoftProcessorUnit_2Syntax_2Translation_2Helpers_2ParseHelpers_8cpp">
-<area shape="rect" title=" " alt="" coords="5,5,252,47"/>
-<area shape="rect" href="ParseHelpers_8hpp.html" title=" " alt="" coords="7,95,133,121"/>
-<area shape="rect" title=" " alt="" coords="158,95,219,121"/>
+<map name="SoftProcessorUnit_2Syntax_2Translation_2Helpers_2ParseHelpers_8cpp" id="aSoftProcessorUnit_2Syntax_2Translation_2Helpers_2ParseHelpers_8cpp">
+<area shape="rect" title=" " alt="" coords="78,5,325,47"/>
+<area shape="rect" href="ParseHelpers_8hpp.html" title=" " alt="" coords="67,617,194,644"/>
+<area shape="rect" href="SPUDtypes_8hpp.html" title=" " alt="" coords="21,692,139,719"/>
+<area shape="rect" href="CommandsParser_8hpp.html" title=" " alt="" coords="307,95,458,121"/>
+<area shape="rect" href="ComplexValueTools_8hpp.html" title=" " alt="" coords="120,95,283,121"/>
+<area shape="rect" title=" " alt="" coords="483,95,544,121"/>
+<area shape="rect" href="StackRigid_8h.html" title=" " alt="" coords="31,767,129,793"/>
+<area shape="rect" title=" " alt="" coords="5,841,69,868"/>
+<area shape="rect" title=" " alt="" coords="93,841,155,868"/>
+<area shape="rect" title=" " alt="" coords="671,692,729,719"/>
+<area shape="rect" href="CommandsDTypes_8hpp.html" title=" " alt="" coords="154,169,313,196"/>
+<area shape="rect" href="AssemblyHelpers_8hpp.html" title=" " alt="" coords="354,468,505,495"/>
+<area shape="rect" href="Syntax_8hpp.html" title=" " alt="" coords="471,169,559,196"/>
+<area shape="rect" title=" " alt="" coords="785,543,845,569"/>
+<area shape="rect" href="AssemblyDTypes_8hpp.html" title=" " alt="" coords="215,543,366,569"/>
+<area shape="rect" href="LabelsStore_8hpp.html" title=" " alt="" coords="407,617,523,644"/>
+<area shape="rect" href="TranslationDTypes_8hpp.html" title=" " alt="" coords="685,468,841,495"/>
+<area shape="rect" href="CommandToBytecode_8hpp.html" title=" " alt="" coords="615,244,791,271"/>
+<area shape="rect" href="BytecodeToCommand_8hpp.html" title=" " alt="" coords="467,393,643,420"/>
+<area shape="rect" href="CTBDefs_8h.html" title=" " alt="" coords="696,393,784,420"/>
+<area shape="rect" href="CTB_8h.html" title=" " alt="" coords="721,319,781,345"/>
+<area shape="rect" href="DisAssemblyDTypes_8hpp.html" title=" " alt="" coords="441,543,612,569"/>
+<area shape="rect" href="BTC_8h.html" title=" " alt="" coords="182,468,242,495"/>
+<area shape="rect" href="BTCDefs_8h.html" title=" " alt="" coords="103,543,191,569"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -107,23 +131,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                                        {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">double</span> value = 0;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    memcpy(&amp;value, start, <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> value;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                                        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a> = 0;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    memcpy(&amp;<a class="code" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>, start, <span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="BTC_8h.html#aeabc66d65cf31c70cee162505d19f14a">OPBACKTRANSLATE_FUNC()</a>, and <a class="el" href="EXE_8h.html#ad198800a088778f730b52daf05838b22">OPEXE_FUNC()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="ParseHelpers_8cpp_a644e4038f72d7d9d4bf39f75a5aab4a8_icgraph.png" border="0" usemap="#aParseHelpers_8cpp_a644e4038f72d7d9d4bf39f75a5aab4a8_icgraph" alt=""/></div>
-<map name="ParseHelpers_8cpp_a644e4038f72d7d9d4bf39f75a5aab4a8_icgraph" id="ParseHelpers_8cpp_a644e4038f72d7d9d4bf39f75a5aab4a8_icgraph">
-<area shape="rect" title=" " alt="" coords="255,31,401,57"/>
-<area shape="rect" href="BTC_8h.html#aeabc66d65cf31c70cee162505d19f14a" title=" " alt="" coords="5,5,207,32"/>
-<area shape="rect" href="EXE_8h.html#ad198800a088778f730b52daf05838b22" title=" " alt="" coords="49,56,163,83"/>
-</map>
-</div>
+<p class="reference">References <a class="el" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>.</p>
 
 </div>
 </div>
@@ -142,12 +156,14 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                                  {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span> value = 0;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    memcpy(&amp;value, start, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> value;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                                  {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a> = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    memcpy(&amp;<a class="code" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>, start, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="EXE_8h.html#a20936b51fc3be86fb2849172b6f01f41">OPEXE_FUNC()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -162,6 +178,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="aEXE_8h_html_aee90379adb0307effb138f4871edbc5c"><div class="ttname"><a href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a></div><div class="ttdeci">double value</div><div class="ttdef"><b>Definition:</b> EXE.h:35</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

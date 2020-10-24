@@ -1,20 +1,4 @@
-SPUAssembly v2.0.1r fact.spus -> fact.spub
+SPUAssembly v2.2.1r fact.spus -> fact.spub
 26    ->    27 | 2   | in                        |  2  0 
-28    ->    32 | 5   | call <fact>               | 19  8  0  0  0 
-33    ->    34 | 2   | out                       |  e  0 
-35    ->    35 | 1   | hlt                       |  d 
-x     ->     x | 0   | fact:                     | 
-36    ->    38 | 3   | pop <rax>                 |  1  2  0 
-39    ->    48 | 10  | push <1>                  |  0  1  0  0  0  0  0  0 f0 3f 
-49    ->    53 | 5   | call <factRec>            | 19  6  0  0  0 
-54    ->    54 | 1   | ret                       | 1a 
-x     ->     x | 0   | factRec:                  | 
-55    ->    57 | 3   | push <rax>                |  0  2  0 
-58    ->    58 | 1   | mul                       |  7 
-59    ->    61 | 3   | dec <rax>                 | 18  2  0 
-62    ->    71 | 10  | push <1>                  |  0  1  0  0  0  0  0  0 f0 3f 
-72    ->    74 | 3   | push <rax>                |  0  2  0 
-75    ->    79 | 5   | jae <noDepth>             | 15  a  0  0  0 
-80    ->    84 | 5   | call <factRec>            | 19 e7 ff ff ff 
-x     ->     x | 0   | noDepth:                  | 
-85    ->    85 | 1   | ret                       | 1a 
+error: assembly: invalid argument is not assignable
+error: assembly: failed to parse instruction no. 2 'mov 4 [rax]'

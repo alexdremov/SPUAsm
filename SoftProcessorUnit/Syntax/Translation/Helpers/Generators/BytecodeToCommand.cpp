@@ -12,6 +12,7 @@
 #include "AssemblyHelpers.hpp"
 #include "CommandsParser.hpp"
 #include "Syntax.hpp"
+#include "ComplexValueTools.hpp"
 
 int checkBytesEnough(const SyntaxEntity* thou, BinaryFile* binary, char* SPI) {
     size_t neededBytes = 1;

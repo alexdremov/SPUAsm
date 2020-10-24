@@ -225,3 +225,11 @@ COMMAND_INFO(
              CMD_FLAGBYTES 0,
              CMD_VALUETYPE 0
              )
+
+COMMAND_INFO(
+             mov,
+             CMD_CODE 27,
+             CMD_ARGRULES "**",
+             CMD_FLAGBYTES 2,
+             CMD_VALUETYPE 0
+             )

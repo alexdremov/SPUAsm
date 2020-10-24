@@ -1,7 +1,7 @@
 var searchData=
 [
   ['added_376',['added',['../StackRigid_8cpp.html#abc72ff9c357136a52ae7f00fbaf9a645',1,'StackRigid.cpp']]],
-  ['addspi_377',['ADDSPI',['../BTCDefs_8h.html#afb07dc00b8d773f2889e83f3579b1068',1,'ADDSPI():&#160;BTCDefs.h'],['../EXEDefs_8h.html#afb07dc00b8d773f2889e83f3579b1068',1,'ADDSPI():&#160;EXEDefs.h'],['../EXE_8h.html#a84389e6776840159762cabe09458c5e7',1,'ADDSPI(3):&#160;EXE.h'],['../EXE_8h.html#ab3547cfc211b1fd3a0d712493b64c46d',1,'ADDSPI(getIntFromBuffer(localSPI+1)):&#160;EXE.h'],['../EXE_8h.html#aa7627babb7e2db2ba52209b8517e92c2',1,'ADDSPI(5):&#160;EXE.h']]],
+  ['addspi_377',['ADDSPI',['../BTCDefs_8h.html#afb07dc00b8d773f2889e83f3579b1068',1,'ADDSPI():&#160;BTCDefs.h'],['../EXEDefs_8h.html#afb07dc00b8d773f2889e83f3579b1068',1,'ADDSPI():&#160;EXEDefs.h'],['../EXE_8h.html#ae3570cefbbd9fc7b1e80de402477a790',1,'ADDSPI(1):&#160;EXE.h'],['../EXE_8h.html#ab3547cfc211b1fd3a0d712493b64c46d',1,'ADDSPI(getIntFromBuffer(localSPI+1)):&#160;EXE.h'],['../EXE_8h.html#aa7627babb7e2db2ba52209b8517e92c2',1,'ADDSPI(5):&#160;EXE.h']]],
   ['adlerchecksum_378',['adlerChecksum',['../StackRigid_8cpp.html#abc79f40e23ef3b974d01a80274a3df1d',1,'StackRigid.cpp']]],
   ['analyzeinstructionerrors_379',['analyzeInstructionErrors',['../CodeAnalysis_8cpp.html#a66a44b980a24ff0e0579f7de4f7cdc95',1,'analyzeInstructionErrors(SyntaxMapping *mapping, AssemblyParams *params, BinaryFile *binary, char *line, int lineNo):&#160;CodeAnalysis.cpp'],['../CodeAnalysis_8hpp.html#a66a44b980a24ff0e0579f7de4f7cdc95',1,'analyzeInstructionErrors(SyntaxMapping *mapping, AssemblyParams *params, BinaryFile *binary, char *line, int lineNo):&#160;CodeAnalysis.cpp']]],
   ['analyzeinstructionwarnings_380',['analyzeInstructionWarnings',['../CodeAnalysis_8hpp.html#a53641ab0f1c76e521f1b7219ca14f755',1,'CodeAnalysis.hpp']]],
@@ -12,9 +12,10 @@ var searchData=
   ['architecture_5fid_385',['ARCHITECTURE_ID',['../CMakeCCompilerId_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCXXCompilerId.cpp']]],
   ['arg1_386',['arg1',['../StringDistance_8hpp.html#a173ccf0048be38dde941393205c3311b',1,'LevenshteinEdit']]],
   ['arg2_387',['arg2',['../StringDistance_8hpp.html#af15ee0351e4507cc44ac9f3ba6f661e4',1,'LevenshteinEdit']]],
-  ['assemblydtypes_2ehpp_388',['AssemblyDTypes.hpp',['../AssemblyDTypes_8hpp.html',1,'']]],
-  ['assemblyhelpers_2ecpp_389',['AssemblyHelpers.cpp',['../AssemblyHelpers_8cpp.html',1,'']]],
-  ['assemblyhelpers_2ehpp_390',['AssemblyHelpers.hpp',['../AssemblyHelpers_8hpp.html',1,'']]],
-  ['assemblyparams_391',['AssemblyParams',['../AssemblyDTypes_8hpp.html#structAssemblyParams',1,'']]],
-  ['assembly_2dtype_20code_20translator_20and_20spu_2dexecutor_392',['Assembly-type code translator and SPU-executor',['../index.html',1,'']]]
+  ['argmask_388',['argMask',['../AssemblyDTypes_8hpp.html#a054e8e27ec479293da3373464bf51488',1,'ComplexValue']]],
+  ['assemblydtypes_2ehpp_389',['AssemblyDTypes.hpp',['../AssemblyDTypes_8hpp.html',1,'']]],
+  ['assemblyhelpers_2ecpp_390',['AssemblyHelpers.cpp',['../AssemblyHelpers_8cpp.html',1,'']]],
+  ['assemblyhelpers_2ehpp_391',['AssemblyHelpers.hpp',['../AssemblyHelpers_8hpp.html',1,'']]],
+  ['assemblyparams_392',['AssemblyParams',['../AssemblyDTypes_8hpp.html#structAssemblyParams',1,'']]],
+  ['assembly_2dtype_20code_20translator_20and_20spu_2dexecutor_393',['Assembly-type code translator and SPU-executor',['../index.html',1,'']]]
 ];

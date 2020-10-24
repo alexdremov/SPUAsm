@@ -6,14 +6,16 @@
 {\ttfamily \#include \char`\"{}S\+P\+U\+Core.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}S\+P\+U\+Core\+Helpers.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Parse\+Helpers.\+hpp\char`\"{}}\newline
-Include dependency graph for E\+X\+E\+Defs.\+h\+:\nopagebreak
+Include dependency graph for E\+X\+E\+Defs.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{EXEDefs_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,6 +26,12 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{EXEDefs_8h_afb07dc00b8d773f2889e83f3579b1068}{A\+D\+D\+S\+PI}}(n)~($\ast$S\+PI) += (n)
+\item 
+\#define \mbox{\hyperlink{EXEDefs_8h_a5aeb7890f48c90ba4eb4c3dde56aec5d}{call\+P\+OP}}(data)~\mbox{\hyperlink{StackRigid_8h_a3da847c6aaf3f472d56d528de1a0f6f7}{Stack\+Pop}}(\&(core-\/$>$call\+Stack), (data))
+\item 
+\#define \mbox{\hyperlink{EXEDefs_8h_a7c1582a36c3fdee2141f0b69b18799c6}{call\+P\+U\+SH}}(data)~\mbox{\hyperlink{StackRigid_8h_a72e1abcd508a113d2731a622322f0624}{Stack\+Push}}(\&(core-\/$>$call\+Stack), (data))
+\item 
+\#define \mbox{\hyperlink{EXEDefs_8h_a673fb8af507dc6377b1c213e604d67e9}{C\+O\+M\+P\+L\+E\+X\+V\+A\+L\+OK}}
 \item 
 \#define \mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(bytes)~( ( bytes ) + $\ast$S\+PI $<$= binary-\/$>$current\+Size + binary-\/$>$code)
 \item 
@@ -46,6 +54,42 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsubsection{\texorpdfstring{ADDSPI}{ADDSPI}}
 {\footnotesize\ttfamily \#define A\+D\+D\+S\+PI(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})~($\ast$S\+PI) += (n)}
 
+\mbox{\Hypertarget{EXEDefs_8h_a5aeb7890f48c90ba4eb4c3dde56aec5d}\label{EXEDefs_8h_a5aeb7890f48c90ba4eb4c3dde56aec5d}} 
+\index{EXEDefs.h@{EXEDefs.h}!callPOP@{callPOP}}
+\index{callPOP@{callPOP}!EXEDefs.h@{EXEDefs.h}}
+\doxysubsubsection{\texorpdfstring{callPOP}{callPOP}}
+{\footnotesize\ttfamily \#define call\+P\+OP(\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})~\mbox{\hyperlink{StackRigid_8h_a3da847c6aaf3f472d56d528de1a0f6f7}{Stack\+Pop}}(\&(core-\/$>$call\+Stack), (data))}
+
+\mbox{\Hypertarget{EXEDefs_8h_a7c1582a36c3fdee2141f0b69b18799c6}\label{EXEDefs_8h_a7c1582a36c3fdee2141f0b69b18799c6}} 
+\index{EXEDefs.h@{EXEDefs.h}!callPUSH@{callPUSH}}
+\index{callPUSH@{callPUSH}!EXEDefs.h@{EXEDefs.h}}
+\doxysubsubsection{\texorpdfstring{callPUSH}{callPUSH}}
+{\footnotesize\ttfamily \#define call\+P\+U\+SH(\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})~\mbox{\hyperlink{StackRigid_8h_a72e1abcd508a113d2731a622322f0624}{Stack\+Push}}(\&(core-\/$>$call\+Stack), (data))}
+
+\mbox{\Hypertarget{EXEDefs_8h_a673fb8af507dc6377b1c213e604d67e9}\label{EXEDefs_8h_a673fb8af507dc6377b1c213e604d67e9}} 
+\index{EXEDefs.h@{EXEDefs.h}!COMPLEXVALOK@{COMPLEXVALOK}}
+\index{COMPLEXVALOK@{COMPLEXVALOK}!EXEDefs.h@{EXEDefs.h}}
+\doxysubsubsection{\texorpdfstring{COMPLEXVALOK}{COMPLEXVALOK}}
+{\footnotesize\ttfamily \#define C\+O\+M\+P\+L\+E\+X\+V\+A\+L\+OK}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{switch}(\mbox{\hyperlink{EXE_8h_a9ab9d7057831483025a5c168d2308109}{val}}) \{ \(\backslash\)}
+\DoxyCodeLine{case \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba7c553218731efc8153852484febe3d2d}{SPU\_CV\_WRONGSTRUCT}}: \(\backslash\)}
+\DoxyCodeLine{return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa6055455fd60dd2f673b2f702685f7a58}{SPU\_EXE\_CORRUPTED}};\(\backslash\)}
+\DoxyCodeLine{case \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faebafe28959c136e1cbbe6bbef4397de1b50}{SPU\_CV\_WRONGREG}}: \(\backslash\)}
+\DoxyCodeLine{return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa6055455fd60dd2f673b2f702685f7a58}{SPU\_EXE\_CORRUPTED}}; \(\backslash\)}
+\DoxyCodeLine{case \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba4a1f60d63bf941be38f1d6ce5112295e}{SPU\_CV\_WRONGNUM}}: \(\backslash\)}
+\DoxyCodeLine{return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa6055455fd60dd2f673b2f702685f7a58}{SPU\_EXE\_CORRUPTED}}; \(\backslash\)}
+\DoxyCodeLine{case \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faebaaa36217cb7d15a536c7466503a96f632}{SPU\_CV\_WRONGOP}}: \(\backslash\)}
+\DoxyCodeLine{return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa6055455fd60dd2f673b2f702685f7a58}{SPU\_EXE\_CORRUPTED}}; \(\backslash\)}
+\DoxyCodeLine{case \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba9b917da5e21d036fbc6af5d22dd64d2c}{SPU\_CV\_NOARG}}:\(\backslash\)}
+\DoxyCodeLine{return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa6055455fd60dd2f673b2f702685f7a58}{SPU\_EXE\_CORRUPTED}}; \(\backslash\)}
+\DoxyCodeLine{case \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba5f66e97c52f7197a515c702ff8675ede}{SPU\_CV\_OK}}: \(\backslash\)}
+\DoxyCodeLine{break;\(\backslash\)}
+\DoxyCodeLine{\} \(\backslash\)}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}\label{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}} 
 \index{EXEDefs.h@{EXEDefs.h}!HASBYTES@{HASBYTES}}
 \index{HASBYTES@{HASBYTES}!EXEDefs.h@{EXEDefs.h}}
@@ -84,7 +128,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordflow}{switch} (\mbox{\hyperlink{EXE_8h_a648bf88b6941d0a6f80ee99e8821a527}{result}}) \{\(\backslash\)}
+\DoxyCodeLine{\textcolor{keywordflow}{switch} (\mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}) \{\(\backslash\)}
 \DoxyCodeLine{case \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039a049b8238cb27892165351846886d6a2e}{STACK\_OP\_OK}}:\(\backslash\)}
 \DoxyCodeLine{    break;\(\backslash\)}
 \DoxyCodeLine{case \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039aba36d99a3bcd8766e93ebb89f7e2f18c}{STACK\_OP\_UNDERFLOW}}:\(\backslash\)}

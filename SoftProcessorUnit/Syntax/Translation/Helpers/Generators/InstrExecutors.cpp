@@ -9,6 +9,7 @@
 #include "InstrExecutors.hpp"
 #include <cmath>
 #include "EXEDefs.h"
+#include "ComplexValueTools.hpp"
 
 #undef OPEXE_FUNC
 

@@ -3,7 +3,8 @@
 {\ttfamily \#include \char`\"{}S\+P\+U\+Core\+Helpers.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}S\+P\+U\+Version.\+hpp\char`\"{}}\newline
 {\ttfamily \#include $<$cstring$>$}\newline
-Include dependency graph for S\+P\+U\+Core\+Helpers.\+cpp\+:\nopagebreak
+Include dependency graph for S\+P\+U\+Core\+Helpers.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -70,20 +71,20 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{20     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 1; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} < argc; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++) \{}
 \DoxyCodeLine{21         \textcolor{keywordflow}{if} (strcmp(argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}], \textcolor{stringliteral}{"{}-\/-\/input"{}}) == 0) \{}
 \DoxyCodeLine{22             \textcolor{keywordflow}{if} (\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} + 1 > argc)\{}
-\DoxyCodeLine{23                 printf(\textcolor{stringliteral}{"{}error: spu: No input file specified after -\/-\/input\(\backslash\)n"{}});}
+\DoxyCodeLine{23                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: No input file specified after -\/-\/input\(\backslash\)n"{}});}
 \DoxyCodeLine{24                 \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{25             \}}
 \DoxyCodeLine{26             FILE* inputFile = fopen(argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} + 1], \textcolor{stringliteral}{"{}rb"{}});}
 \DoxyCodeLine{27             newParams.\mbox{\hyperlink{SPUDtypes_8hpp_a2af4e09a5ada13ad50069b8dbf89efd6}{inputFile}} = inputFile;}
 \DoxyCodeLine{28             newParams.\mbox{\hyperlink{SPUDtypes_8hpp_ac75aca7c0a7abd09ad0f8a1d0c1f34be}{inputFileName}} = *(argv + \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} + 1);}
 \DoxyCodeLine{29             \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{SPUDtypes_8hpp_a2af4e09a5ada13ad50069b8dbf89efd6}{inputFile}} == \textcolor{keyword}{nullptr})\{}
-\DoxyCodeLine{30                 printf(\textcolor{stringliteral}{"{}error: spu: Can't open input file\(\backslash\)n"{}});}
+\DoxyCodeLine{30                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: Can't open input file\(\backslash\)n"{}});}
 \DoxyCodeLine{31                 \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{32             \}}
 \DoxyCodeLine{33             \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++;}
 \DoxyCodeLine{34         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}], \textcolor{stringliteral}{"{}-\/-\/output"{}}) == 0) \{}
 \DoxyCodeLine{35             \textcolor{keywordflow}{if} (\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} + 1 > argc)\{}
-\DoxyCodeLine{36                 printf(\textcolor{stringliteral}{"{}error: spu: No output file specified after -\/-\/output\(\backslash\)n"{}});}
+\DoxyCodeLine{36                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: No output file specified after -\/-\/output\(\backslash\)n"{}});}
 \DoxyCodeLine{37                 \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{38             \}}
 \DoxyCodeLine{39             FILE* outputFile = fopen(argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} + 1], \textcolor{stringliteral}{"{}wb"{}});}
@@ -100,7 +101,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{50                 newParams.\mbox{\hyperlink{SPUDtypes_8hpp_a2af4e09a5ada13ad50069b8dbf89efd6}{inputFile}} = inputFile;}
 \DoxyCodeLine{51                 newParams.\mbox{\hyperlink{SPUDtypes_8hpp_ac75aca7c0a7abd09ad0f8a1d0c1f34be}{inputFileName}} = *(argv + \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}});}
 \DoxyCodeLine{52                 \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{SPUDtypes_8hpp_a2af4e09a5ada13ad50069b8dbf89efd6}{inputFile}} == \textcolor{keyword}{nullptr})\{}
-\DoxyCodeLine{53                     printf(\textcolor{stringliteral}{"{}error: spu: Can't open input file \%s\(\backslash\)n"{}}, argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}]);}
+\DoxyCodeLine{53                     \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: Can't open input file \%s\(\backslash\)n"{}}, argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}]);}
 \DoxyCodeLine{54                     \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{55                 \}}
 \DoxyCodeLine{56             \}}
@@ -108,7 +109,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{58     \}}
 \DoxyCodeLine{59     }
 \DoxyCodeLine{60     \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{SPUDtypes_8hpp_a2af4e09a5ada13ad50069b8dbf89efd6}{inputFile}} == \textcolor{keyword}{nullptr}) \{}
-\DoxyCodeLine{61         printf(\textcolor{stringliteral}{"{}error: spu: No input file specified\(\backslash\)n"{}});}
+\DoxyCodeLine{61         \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: No input file specified\(\backslash\)n"{}});}
 \DoxyCodeLine{62         \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{63     \}}
 \DoxyCodeLine{64     }
@@ -124,17 +125,18 @@ Here is the caller graph for this function\+:\nopagebreak
 \end{DoxyCode}
 
 
-References i, Run\+Parameters\+::input\+File, Run\+Parameters\+::input\+File\+Name, Run\+Parameters\+::output\+File, Run\+Parameters\+::output\+File\+Name, spu\+Help(), and Run\+Parameters\+::verbose.
+References i, Run\+Parameters\+::input\+File, Run\+Parameters\+::input\+File\+Name, Run\+Parameters\+::output\+File, Run\+Parameters\+::output\+File\+Name, printf(), spu\+Help(), and Run\+Parameters\+::verbose.
 
 
 
 Referenced by main().
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=251pt]{SPUCoreHelpers_8cpp_a6453a5d405d0626203f8933eefc6948f_cgraph}
+\includegraphics[width=325pt]{SPUCoreHelpers_8cpp_a6453a5d405d0626203f8933eefc6948f_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
@@ -155,7 +157,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{74                \{}
 \DoxyCodeLine{75     \textcolor{keywordtype}{int} SPUAssemblyVersion = \mbox{\hyperlink{SPUVersion_8hpp_a46cfa984fce0310cc64459db66aba985}{SPU\_VERSION}};}
 \DoxyCodeLine{76     \textcolor{keywordtype}{char}* SPUAssemblyVersion\_chars = (\textcolor{keywordtype}{char}*)\&SPUAssemblyVersion;}
-\DoxyCodeLine{77     printf(\textcolor{stringliteral}{"{}SPU v\%c.\%c.\%c\%c help\(\backslash\)n"{}}}
+\DoxyCodeLine{77     \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}SPU v\%c.\%c.\%c\%c help\(\backslash\)n"{}}}
 \DoxyCodeLine{78            \textcolor{stringliteral}{"{}-\/-\/input     <input file> input file to be assembled .spub format (spu binary)\(\backslash\)n"{}}}
 \DoxyCodeLine{79            \textcolor{stringliteral}{"{}-\/-\/output    <output file> output file stdout by default\(\backslash\)n"{}}}
 \DoxyCodeLine{80            \textcolor{stringliteral}{"{}-\/h, -\/-\/help  show this help message\(\backslash\)n"{}}}
@@ -170,12 +172,20 @@ Here is the caller graph for this function\+:\nopagebreak
 \end{DoxyCode}
 
 
-References S\+P\+U\+\_\+\+V\+E\+R\+S\+I\+ON.
+References printf(), and S\+P\+U\+\_\+\+V\+E\+R\+S\+I\+ON.
 
 
 
 Referenced by parse\+S\+P\+U\+Args().
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{SPUCoreHelpers_8cpp_ac7a309a014bd981682f3e640d670050b_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}

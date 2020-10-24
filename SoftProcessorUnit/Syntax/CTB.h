@@ -176,3 +176,18 @@ OPTRANSLATE_FUNC(call, {
 OPTRANSLATE_FUNC(ret, {
     JUSTCOMMAND;
 });
+
+OPTRANSLATE_FUNC(mov, {
+    LSTDUMPED({
+        APPENDCHAR(thou->code);
+        ComplexValue val = retrieveComplexValueFromArg((char*)argv[1]);
+        COMPLEXVALOK
+        int assignable = complexValueAssignable(&val);\
+        if (assignable != 1) return SPU_CTB_NONASSIGNABLE; \
+        writeComplexArg(&val, binary);
+        val = retrieveComplexValueFromArg((char*)argv[2]);\
+        COMPLEXVALOK;\
+        writeComplexArg(&val, binary);\
+    })
+    return SPU_CTB_OK;
+});

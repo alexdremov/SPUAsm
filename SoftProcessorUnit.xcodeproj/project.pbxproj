@@ -10,6 +10,9 @@
 		A04D828E2541B9F00095FB80 /* ParseHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A04D828C2541B9F00095FB80 /* ParseHelpers.cpp */; };
 		A04D828F2541B9F00095FB80 /* ParseHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A04D828C2541B9F00095FB80 /* ParseHelpers.cpp */; };
 		A04D8299254220A70095FB80 /* ParseHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A04D828C2541B9F00095FB80 /* ParseHelpers.cpp */; };
+		A0648E5525440A24003AD222 /* ComplexValueTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0648E5325440A24003AD222 /* ComplexValueTools.cpp */; };
+		A0648E5625440A24003AD222 /* ComplexValueTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0648E5325440A24003AD222 /* ComplexValueTools.cpp */; };
+		A0648E5725440A24003AD222 /* ComplexValueTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0648E5325440A24003AD222 /* ComplexValueTools.cpp */; };
 		A071A8FE2534D1C9008711EF /* Syntax.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A071A8FB2534D1C9008711EF /* Syntax.cpp */; };
 		A071A8FF2534D1C9008711EF /* SPU.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A071A8FC2534D1C9008711EF /* SPU.cpp */; };
 		A071A9172534DC2D008711EF /* Syntax.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A071A8FB2534D1C9008711EF /* Syntax.cpp */; };
@@ -76,6 +79,8 @@
 		A04D828D2541B9F00095FB80 /* ParseHelpers.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ParseHelpers.hpp; sourceTree = "<group>"; };
 		A04D82952541FA040095FB80 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A04D829D25423DE40095FB80 /* CMakeLists.template.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.template.txt; sourceTree = "<group>"; };
+		A0648E5325440A24003AD222 /* ComplexValueTools.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ComplexValueTools.cpp; path = SoftProcessorUnit/Assembly/Helpers/ComplexValueTools.cpp; sourceTree = SOURCE_ROOT; };
+		A0648E5425440A24003AD222 /* ComplexValueTools.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ComplexValueTools.hpp; sourceTree = "<group>"; };
 		A071A8EE2534D19D008711EF /* SPU */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SPU; sourceTree = BUILT_PRODUCTS_DIR; };
 		A071A8FA2534D1C9008711EF /* Syntax.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Syntax.hpp; path = SoftProcessorUnit/Syntax/Translation/Syntax.hpp; sourceTree = SOURCE_ROOT; };
 		A071A8FB2534D1C9008711EF /* Syntax.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Syntax.cpp; sourceTree = "<group>"; };
@@ -154,6 +159,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0648E52254409A0003AD222 /* Generators */ = {
+			isa = PBXGroup;
+			children = (
+				A0DD8C192537412900CD405B /* InstrExecutors.hpp */,
+				A071A96C25351576008711EF /* CommandToBytecode.hpp */,
+				A071A9A325360AA5008711EF /* BytecodeToCommand.hpp */,
+				A071A9A225360AA5008711EF /* BytecodeToCommand.cpp */,
+				A071A96B25351576008711EF /* CommandToBytecode.cpp */,
+				A0DD8C182537412900CD405B /* InstrExecutors.cpp */,
+			);
+			path = Generators;
+			sourceTree = "<group>";
+		};
 		A071A8E52534D19D008711EF = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +285,8 @@
 				A071A9402534DE1B008711EF /* AssemblyHelpers.cpp */,
 				A071A9632534FA51008711EF /* CommandsParser.hpp */,
 				A071A9622534FA51008711EF /* CommandsParser.cpp */,
+				A0648E5325440A24003AD222 /* ComplexValueTools.cpp */,
+				A0648E5425440A24003AD222 /* ComplexValueTools.hpp */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -295,10 +315,8 @@
 		A090F0C6253E189800342FA0 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A0648E52254409A0003AD222 /* Generators */,
 				A071A9A825360E57008711EF /* TranslationDTypes.hpp */,
-				A071A96B25351576008711EF /* CommandToBytecode.cpp */,
-				A071A9A225360AA5008711EF /* BytecodeToCommand.cpp */,
-				A0DD8C182537412900CD405B /* InstrExecutors.cpp */,
 				A04D828C2541B9F00095FB80 /* ParseHelpers.cpp */,
 				A04D828D2541B9F00095FB80 /* ParseHelpers.hpp */,
 			);
@@ -308,9 +326,6 @@
 		A090F0C8253E190000342FA0 /* MacroSyntax */ = {
 			isa = PBXGroup;
 			children = (
-				A071A9A325360AA5008711EF /* BytecodeToCommand.hpp */,
-				A071A96C25351576008711EF /* CommandToBytecode.hpp */,
-				A0DD8C192537412900CD405B /* InstrExecutors.hpp */,
 				A090F0C7253E18F200342FA0 /* CTBDefs.h */,
 				A090F0D1253E26D800342FA0 /* BTCDefs.h */,
 				A090F0D6253E298800342FA0 /* EXEDefs.h */,
@@ -470,6 +485,7 @@
 				A0DD8BC2253653B400CD405B /* AssemblyHelpers.cpp in Sources */,
 				A0DD8C0025372E2300CD405B /* SPUCoreHelpers.cpp in Sources */,
 				A0DD8C102537343200CD405B /* StackRigid.cpp in Sources */,
+				A0648E5525440A24003AD222 /* ComplexValueTools.cpp in Sources */,
 				A04D828E2541B9F00095FB80 /* ParseHelpers.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +500,7 @@
 				A071A96E25351576008711EF /* CommandToBytecode.cpp in Sources */,
 				A071A9BF2536159B008711EF /* BytecodeToCommand.cpp in Sources */,
 				A04D8299254220A70095FB80 /* ParseHelpers.cpp in Sources */,
+				A0648E5625440A24003AD222 /* ComplexValueTools.cpp in Sources */,
 				A071A9642534FA51008711EF /* CommandsParser.cpp in Sources */,
 				A0DD8C8C2538DC8A00CD405B /* StringDistance.cpp in Sources */,
 				A0DD8C862538889900CD405B /* CodeAnalysis.cpp in Sources */,
@@ -499,6 +516,7 @@
 				A071A98F2535F6D5008711EF /* CommandsParser.cpp in Sources */,
 				A071A9A425360AA5008711EF /* BytecodeToCommand.cpp in Sources */,
 				A071A93C2534DDB1008711EF /* Syntax.cpp in Sources */,
+				A0648E5725440A24003AD222 /* ComplexValueTools.cpp in Sources */,
 				A071A9962535FACD008711EF /* DisAssemblyHelpers.cpp in Sources */,
 				A071A96F25351576008711EF /* CommandToBytecode.cpp in Sources */,
 				A071A92F2534DD5A008711EF /* SPUDisAssembly.cpp in Sources */,

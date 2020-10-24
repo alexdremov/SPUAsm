@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['levenshteinedit_749',['LevenshteinEdit',['../StringDistance_8hpp.html#structLevenshteinEdit',1,'']]]
+  ['jmplabel_789',['JMPLabel',['../structJMPLabel.html',1,'']]],
+  ['jmplabelsstore_790',['JMPLabelsStore',['../structJMPLabelsStore.html',1,'']]]
 ];

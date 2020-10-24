@@ -1,12 +1,36 @@
 \hypertarget{ParseHelpers_8hpp}{}\doxysection{Soft\+Processor\+Unit/\+Syntax/\+Translation/\+Helpers/\+Parse\+Helpers.hpp File Reference}
 \label{ParseHelpers_8hpp}\index{SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.hpp@{SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.hpp}}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+{\ttfamily \#include \char`\"{}S\+P\+U\+Dtypes.\+hpp\char`\"{}}\newline
+Include dependency graph for Parse\+Helpers.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{ParseHelpers_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{ParseHelpers_8hpp__dep__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeb}{Complex\+Value\+Result}} \{ \newline
+\mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba5f66e97c52f7197a515c702ff8675ede}{S\+P\+U\+\_\+\+C\+V\+\_\+\+OK}} = 1200, 
+\mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faebafe28959c136e1cbbe6bbef4397de1b50}{S\+P\+U\+\_\+\+C\+V\+\_\+\+W\+R\+O\+N\+G\+R\+EG}} = 1201, 
+\mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba4a1f60d63bf941be38f1d6ce5112295e}{S\+P\+U\+\_\+\+C\+V\+\_\+\+W\+R\+O\+N\+G\+N\+UM}} = 1202, 
+\mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba7c553218731efc8153852484febe3d2d}{S\+P\+U\+\_\+\+C\+V\+\_\+\+W\+R\+O\+N\+G\+S\+T\+R\+U\+CT}} = 1203, 
+\newline
+\mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faebaaa36217cb7d15a536c7466503a96f632}{S\+P\+U\+\_\+\+C\+V\+\_\+\+W\+R\+O\+N\+G\+OP}} = 1204, 
+\mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faebab72d0c480edda756c3b12cd3a3aa59d8}{S\+P\+U\+\_\+\+C\+V\+\_\+\+N\+O\+N\+A\+S\+S\+I\+G\+N\+A\+B\+LE}} = 1204, 
+\mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba9b917da5e21d036fbc6af5d22dd64d2c}{S\+P\+U\+\_\+\+C\+V\+\_\+\+N\+O\+A\+RG}} = 1205
+ \}
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -14,6 +38,58 @@ double \mbox{\hyperlink{ParseHelpers_8hpp_a644e4038f72d7d9d4bf39f75a5aab4a8}{get
 \item 
 \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{ParseHelpers_8hpp_a503732ecee5e0f7a02f23c8381727ed6}{get\+Int\+From\+Buffer}} (\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$start)
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeb}\label{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeb}} 
+\index{ParseHelpers.hpp@{ParseHelpers.hpp}!ComplexValueResult@{ComplexValueResult}}
+\index{ComplexValueResult@{ComplexValueResult}!ParseHelpers.hpp@{ParseHelpers.hpp}}
+\doxysubsubsection{\texorpdfstring{ComplexValueResult}{ComplexValueResult}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeb}{Complex\+Value\+Result}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_CV\_OK@{SPU\_CV\_OK}!ParseHelpers.hpp@{ParseHelpers.hpp}}\index{ParseHelpers.hpp@{ParseHelpers.hpp}!SPU\_CV\_OK@{SPU\_CV\_OK}}}\mbox{\Hypertarget{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba5f66e97c52f7197a515c702ff8675ede}\label{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba5f66e97c52f7197a515c702ff8675ede}} 
+S\+P\+U\+\_\+\+C\+V\+\_\+\+OK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_CV\_WRONGREG@{SPU\_CV\_WRONGREG}!ParseHelpers.hpp@{ParseHelpers.hpp}}\index{ParseHelpers.hpp@{ParseHelpers.hpp}!SPU\_CV\_WRONGREG@{SPU\_CV\_WRONGREG}}}\mbox{\Hypertarget{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faebafe28959c136e1cbbe6bbef4397de1b50}\label{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faebafe28959c136e1cbbe6bbef4397de1b50}} 
+S\+P\+U\+\_\+\+C\+V\+\_\+\+W\+R\+O\+N\+G\+R\+EG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_CV\_WRONGNUM@{SPU\_CV\_WRONGNUM}!ParseHelpers.hpp@{ParseHelpers.hpp}}\index{ParseHelpers.hpp@{ParseHelpers.hpp}!SPU\_CV\_WRONGNUM@{SPU\_CV\_WRONGNUM}}}\mbox{\Hypertarget{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba4a1f60d63bf941be38f1d6ce5112295e}\label{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba4a1f60d63bf941be38f1d6ce5112295e}} 
+S\+P\+U\+\_\+\+C\+V\+\_\+\+W\+R\+O\+N\+G\+N\+UM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_CV\_WRONGSTRUCT@{SPU\_CV\_WRONGSTRUCT}!ParseHelpers.hpp@{ParseHelpers.hpp}}\index{ParseHelpers.hpp@{ParseHelpers.hpp}!SPU\_CV\_WRONGSTRUCT@{SPU\_CV\_WRONGSTRUCT}}}\mbox{\Hypertarget{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba7c553218731efc8153852484febe3d2d}\label{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba7c553218731efc8153852484febe3d2d}} 
+S\+P\+U\+\_\+\+C\+V\+\_\+\+W\+R\+O\+N\+G\+S\+T\+R\+U\+CT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_CV\_WRONGOP@{SPU\_CV\_WRONGOP}!ParseHelpers.hpp@{ParseHelpers.hpp}}\index{ParseHelpers.hpp@{ParseHelpers.hpp}!SPU\_CV\_WRONGOP@{SPU\_CV\_WRONGOP}}}\mbox{\Hypertarget{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faebaaa36217cb7d15a536c7466503a96f632}\label{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faebaaa36217cb7d15a536c7466503a96f632}} 
+S\+P\+U\+\_\+\+C\+V\+\_\+\+W\+R\+O\+N\+G\+OP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_CV\_NONASSIGNABLE@{SPU\_CV\_NONASSIGNABLE}!ParseHelpers.hpp@{ParseHelpers.hpp}}\index{ParseHelpers.hpp@{ParseHelpers.hpp}!SPU\_CV\_NONASSIGNABLE@{SPU\_CV\_NONASSIGNABLE}}}\mbox{\Hypertarget{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faebab72d0c480edda756c3b12cd3a3aa59d8}\label{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faebab72d0c480edda756c3b12cd3a3aa59d8}} 
+S\+P\+U\+\_\+\+C\+V\+\_\+\+N\+O\+N\+A\+S\+S\+I\+G\+N\+A\+B\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPU\_CV\_NOARG@{SPU\_CV\_NOARG}!ParseHelpers.hpp@{ParseHelpers.hpp}}\index{ParseHelpers.hpp@{ParseHelpers.hpp}!SPU\_CV\_NOARG@{SPU\_CV\_NOARG}}}\mbox{\Hypertarget{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba9b917da5e21d036fbc6af5d22dd64d2c}\label{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba9b917da5e21d036fbc6af5d22dd64d2c}} 
+S\+P\+U\+\_\+\+C\+V\+\_\+\+N\+O\+A\+RG&\\
+\hline
+
+\end{DoxyEnumFields}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13                         \{}
+\DoxyCodeLine{14     \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba5f66e97c52f7197a515c702ff8675ede}{SPU\_CV\_OK}}                = 1200,}
+\DoxyCodeLine{15     \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faebafe28959c136e1cbbe6bbef4397de1b50}{SPU\_CV\_WRONGREG}}          = 1201,}
+\DoxyCodeLine{16     \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba4a1f60d63bf941be38f1d6ce5112295e}{SPU\_CV\_WRONGNUM}}          = 1202,}
+\DoxyCodeLine{17     \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba7c553218731efc8153852484febe3d2d}{SPU\_CV\_WRONGSTRUCT}}       = 1203,}
+\DoxyCodeLine{18     \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faebaaa36217cb7d15a536c7466503a96f632}{SPU\_CV\_WRONGOP}}           = 1204,}
+\DoxyCodeLine{19     \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faebab72d0c480edda756c3b12cd3a3aa59d8}{SPU\_CV\_NONASSIGNABLE}}     = 1204,}
+\DoxyCodeLine{20     \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba9b917da5e21d036fbc6af5d22dd64d2c}{SPU\_CV\_NOARG}}             = 1205}
+\DoxyCodeLine{21 \};}
+
+\end{DoxyCode}
 
 
 \doxysubsection{Function Documentation}
@@ -25,24 +101,17 @@ double \mbox{\hyperlink{ParseHelpers_8hpp_a644e4038f72d7d9d4bf39f75a5aab4a8}{get
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{11                                         \{}
-\DoxyCodeLine{12     \textcolor{keywordtype}{double} value = 0;}
-\DoxyCodeLine{13     memcpy(\&value, start, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
-\DoxyCodeLine{14     \textcolor{keywordflow}{return} value;}
-\DoxyCodeLine{15 \}}
+\DoxyCodeLine{14                                         \{}
+\DoxyCodeLine{15     \textcolor{keywordtype}{double} \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}} = 0;}
+\DoxyCodeLine{16     memcpy(\&\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}}, start, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{17     \textcolor{keywordflow}{return} \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}};}
+\DoxyCodeLine{18 \}}
 
 \end{DoxyCode}
 
 
-Referenced by O\+P\+B\+A\+C\+K\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+N\+C(), and O\+P\+E\+X\+E\+\_\+\+F\+U\+N\+C().
+References value.
 
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{ParseHelpers_8hpp_a644e4038f72d7d9d4bf39f75a5aab4a8_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{ParseHelpers_8hpp_a503732ecee5e0f7a02f23c8381727ed6}\label{ParseHelpers_8hpp_a503732ecee5e0f7a02f23c8381727ed6}} 
 \index{ParseHelpers.hpp@{ParseHelpers.hpp}!getIntFromBuffer@{getIntFromBuffer}}
 \index{getIntFromBuffer@{getIntFromBuffer}!ParseHelpers.hpp@{ParseHelpers.hpp}}
@@ -51,13 +120,17 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{17                                   \{}
-\DoxyCodeLine{18     \textcolor{keywordtype}{int} value = 0;}
-\DoxyCodeLine{19     memcpy(\&value, start, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
-\DoxyCodeLine{20     \textcolor{keywordflow}{return} value;}
-\DoxyCodeLine{21 \}}
+\DoxyCodeLine{20                                   \{}
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}} = 0;}
+\DoxyCodeLine{22     memcpy(\&\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}}, start, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{23     \textcolor{keywordflow}{return} \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}};}
+\DoxyCodeLine{24 \}}
 
 \end{DoxyCode}
+
+
+References value.
+
 
 
 Referenced by O\+P\+E\+X\+E\+\_\+\+F\+U\+N\+C().

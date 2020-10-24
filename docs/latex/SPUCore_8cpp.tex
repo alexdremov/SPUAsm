@@ -2,7 +2,8 @@
 \label{SPUCore_8cpp}\index{SoftProcessorUnit/SPU/Core/SPUCore.cpp@{SoftProcessorUnit/SPU/Core/SPUCore.cpp}}
 {\ttfamily \#include \char`\"{}S\+P\+U\+Core.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}I\+N\+F\+O.\+h\char`\"{}}\newline
-Include dependency graph for S\+P\+U\+Core.\+cpp\+:\nopagebreak
+Include dependency graph for S\+P\+U\+Core.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -14,7 +15,7 @@ Include dependency graph for S\+P\+U\+Core.\+cpp\+:\nopagebreak
 \item 
 \#define \mbox{\hyperlink{SPUCore_8cpp_a8ccbace149a74901c09a6a28736bb100}{C\+A\+L\+L\+E\+XE}}(name)~return name (core,  params, binary, S\+PI)
 \item 
-\#define \mbox{\hyperlink{SPUCore_8cpp_a4c0b67c13ff416818ca7d64ffabfb48d}{C\+O\+M\+M\+A\+N\+D\+\_\+\+I\+N\+FO}}(name,  code,  args,  flags)~case code \+: \mbox{\hyperlink{Syntax_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}{E\+V\+A\+L\+U\+A\+TE}}(\mbox{\hyperlink{SPUCore_8cpp_a8ccbace149a74901c09a6a28736bb100}{C\+A\+L\+L\+E\+XE}}(\mbox{\hyperlink{Syntax_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}{E\+V\+A\+L\+U\+A\+TE}}(C\+M\+D\+E\+X\+E\+\_\+ \#\# name)));
+\#define \mbox{\hyperlink{SPUCore_8cpp_a14e8a765037199e80f2a5e98a0e50d4e}{C\+O\+M\+M\+A\+N\+D\+\_\+\+I\+N\+FO}}(name,  code,  args,  flags,  is\+Value)~case code \+: \mbox{\hyperlink{Syntax_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}{E\+V\+A\+L\+U\+A\+TE}}(\mbox{\hyperlink{SPUCore_8cpp_a8ccbace149a74901c09a6a28736bb100}{C\+A\+L\+L\+E\+XE}}(\mbox{\hyperlink{Syntax_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}{E\+V\+A\+L\+U\+A\+TE}}(C\+M\+D\+E\+X\+E\+\_\+ \#\# name)));
 \item 
 \#define \mbox{\hyperlink{SPUCore_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}{E\+V\+A\+L\+U\+A\+TE}}(a)~a
 \end{DoxyCompactItemize}
@@ -22,6 +23,8 @@ Include dependency graph for S\+P\+U\+Core.\+cpp\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{SPUCore_8cpp_a6a206874805d856f6acaafa7b0151381}{Construct\+S\+P\+U\+Core}} (\mbox{\hyperlink{SPUDtypes_8hpp_structSPUCore}{S\+P\+U\+Core}} $\ast$core, size\+\_\+t init\+Stack\+Size)
+\item 
+void \mbox{\hyperlink{SPUCore_8cpp_abcc188767bfe5fedeec886779e9f1bb3}{Destruct\+S\+P\+U\+Core}} (\mbox{\hyperlink{SPUDtypes_8hpp_structSPUCore}{S\+P\+U\+Core}} $\ast$core)
 \item 
 \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2f}{Instruction\+Exe\+Result}} \mbox{\hyperlink{SPUCore_8cpp_a57761c153c17ac44020769b0f979d469}{execute\+Instruction}} (\mbox{\hyperlink{SPUDtypes_8hpp_structSPUCore}{S\+P\+U\+Core}} $\ast$core, \mbox{\hyperlink{SPUDtypes_8hpp_structRunParameters}{Run\+Parameters}} $\ast$params, \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}} $\ast$binary, \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$$\ast$S\+PI)
 \item 
@@ -36,11 +39,11 @@ void \mbox{\hyperlink{SPUCore_8cpp_a6a206874805d856f6acaafa7b0151381}{Construct\
 \doxysubsubsection{\texorpdfstring{CALLEXE}{CALLEXE}}
 {\footnotesize\ttfamily \#define C\+A\+L\+L\+E\+XE(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~return name (core,  params, binary, S\+PI)}
 
-\mbox{\Hypertarget{SPUCore_8cpp_a4c0b67c13ff416818ca7d64ffabfb48d}\label{SPUCore_8cpp_a4c0b67c13ff416818ca7d64ffabfb48d}} 
+\mbox{\Hypertarget{SPUCore_8cpp_a14e8a765037199e80f2a5e98a0e50d4e}\label{SPUCore_8cpp_a14e8a765037199e80f2a5e98a0e50d4e}} 
 \index{SPUCore.cpp@{SPUCore.cpp}!COMMAND\_INFO@{COMMAND\_INFO}}
 \index{COMMAND\_INFO@{COMMAND\_INFO}!SPUCore.cpp@{SPUCore.cpp}}
 \doxysubsubsection{\texorpdfstring{COMMAND\_INFO}{COMMAND\_INFO}}
-{\footnotesize\ttfamily \#define C\+O\+M\+M\+A\+N\+D\+\_\+\+I\+N\+FO(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{code,  }\item[{}]{args,  }\item[{}]{flags }\end{DoxyParamCaption})~case code \+: \mbox{\hyperlink{Syntax_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}{E\+V\+A\+L\+U\+A\+TE}}(\mbox{\hyperlink{SPUCore_8cpp_a8ccbace149a74901c09a6a28736bb100}{C\+A\+L\+L\+E\+XE}}(\mbox{\hyperlink{Syntax_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}{E\+V\+A\+L\+U\+A\+TE}}(C\+M\+D\+E\+X\+E\+\_\+ \#\# name)));}
+{\footnotesize\ttfamily \#define C\+O\+M\+M\+A\+N\+D\+\_\+\+I\+N\+FO(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{code,  }\item[{}]{args,  }\item[{}]{flags,  }\item[{}]{is\+Value }\end{DoxyParamCaption})~case code \+: \mbox{\hyperlink{Syntax_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}{E\+V\+A\+L\+U\+A\+TE}}(\mbox{\hyperlink{SPUCore_8cpp_a8ccbace149a74901c09a6a28736bb100}{C\+A\+L\+L\+E\+XE}}(\mbox{\hyperlink{Syntax_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}{E\+V\+A\+L\+U\+A\+TE}}(C\+M\+D\+E\+X\+E\+\_\+ \#\# name)));}
 
 \mbox{\Hypertarget{SPUCore_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}\label{SPUCore_8cpp_a04c0b4dc9ebbdefa097faf08ba14e916}} 
 \index{SPUCore.cpp@{SPUCore.cpp}!EVALUATE@{EVALUATE}}
@@ -61,13 +64,14 @@ void \mbox{\hyperlink{SPUCore_8cpp_a6a206874805d856f6acaafa7b0151381}{Construct\
 \begin{DoxyCode}{0}
 \DoxyCodeLine{13                                                            \{}
 \DoxyCodeLine{14     core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_a7e53f3d8e7ad44b3dea986b508dddb4e}{stack}} = NewStackRigid\_double(initStackSize, stderr);}
-\DoxyCodeLine{15     core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_adf0c1553a08f701b4b2fa9bf0aff884b}{terminated}} = 0;}
-\DoxyCodeLine{16 \}}
+\DoxyCodeLine{15     core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_a391debfb1295dd029871b695abaa1091}{callStack}} = NewStackRigid\_double(16, stderr);}
+\DoxyCodeLine{16     core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_adf0c1553a08f701b4b2fa9bf0aff884b}{terminated}} = 0;}
+\DoxyCodeLine{17 \}}
 
 \end{DoxyCode}
 
 
-References S\+P\+U\+Core\+::stack, and S\+P\+U\+Core\+::terminated.
+References S\+P\+U\+Core\+::call\+Stack, S\+P\+U\+Core\+::stack, and S\+P\+U\+Core\+::terminated.
 
 
 
@@ -80,6 +84,44 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=255pt]{SPUCore_8cpp_a6a206874805d856f6acaafa7b0151381_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{SPUCore_8cpp_abcc188767bfe5fedeec886779e9f1bb3}\label{SPUCore_8cpp_abcc188767bfe5fedeec886779e9f1bb3}} 
+\index{SPUCore.cpp@{SPUCore.cpp}!DestructSPUCore@{DestructSPUCore}}
+\index{DestructSPUCore@{DestructSPUCore}!SPUCore.cpp@{SPUCore.cpp}}
+\doxysubsubsection{\texorpdfstring{DestructSPUCore()}{DestructSPUCore()}}
+{\footnotesize\ttfamily void Destruct\+S\+P\+U\+Core (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{SPUDtypes_8hpp_structSPUCore}{S\+P\+U\+Core}} $\ast$}]{core }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56                                     \{}
+\DoxyCodeLine{57     \mbox{\hyperlink{StackRigid_8cpp_a3addcf7a8000baf1be4d91a779f293e8}{StackDestruct}}(\&(core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_a7e53f3d8e7ad44b3dea986b508dddb4e}{stack}}));}
+\DoxyCodeLine{58     \mbox{\hyperlink{StackRigid_8cpp_a3addcf7a8000baf1be4d91a779f293e8}{StackDestruct}}(\&(core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_a391debfb1295dd029871b695abaa1091}{callStack}}));}
+\DoxyCodeLine{59 \}}
+
+\end{DoxyCode}
+
+
+References S\+P\+U\+Core\+::call\+Stack, S\+P\+U\+Core\+::stack, and Stack\+Destruct().
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SPUCore_8cpp_abcc188767bfe5fedeec886779e9f1bb3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{SPUCore_8cpp_abcc188767bfe5fedeec886779e9f1bb3_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{SPUCore_8cpp_a57761c153c17ac44020769b0f979d469}\label{SPUCore_8cpp_a57761c153c17ac44020769b0f979d469}} 
 \index{SPUCore.cpp@{SPUCore.cpp}!executeInstruction@{executeInstruction}}
 \index{executeInstruction@{executeInstruction}!SPUCore.cpp@{SPUCore.cpp}}
@@ -88,19 +130,19 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{41                                                     \{}
-\DoxyCodeLine{42 \textcolor{comment}{//    printf("{}NOW: \%d\(\backslash\)n"{}, binary-\/>codeOffset + (int)(*SPI -\/ binary-\/>code));}}
-\DoxyCodeLine{43     \textcolor{keywordflow}{switch} (**SPI) \{}
-\DoxyCodeLine{44 \textcolor{preprocessor}{        \#define COMMAND\_INFO(name, code, args, flags) case code : EVALUATE(CALLEXE(EVALUATE(CMDEXE\_ \#\# name)));}}
-\DoxyCodeLine{45             }
-\DoxyCodeLine{46 \textcolor{preprocessor}{        \#include "{}\mbox{\hyperlink{INFO_8h}{INFO.h}}"{}}}
-\DoxyCodeLine{47             }
-\DoxyCodeLine{48 \textcolor{preprocessor}{        \#undef COMMAND\_INFO}}
-\DoxyCodeLine{49             }
-\DoxyCodeLine{50         \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{51             \textcolor{keywordflow}{return} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf0113534f70048df0263a31742bc10ce}{SPU\_EXE\_UNKNOWN}};}
-\DoxyCodeLine{52     \}}
-\DoxyCodeLine{53 \}}
+\DoxyCodeLine{42                                                     \{}
+\DoxyCodeLine{43 \textcolor{comment}{//    printf("{}NOW: \%d\(\backslash\)n"{}, binary-\/>codeOffset + (int)(*SPI -\/ binary-\/>code));}}
+\DoxyCodeLine{44     \textcolor{keywordflow}{switch} (**SPI) \{}
+\DoxyCodeLine{45 \textcolor{preprocessor}{        \#define COMMAND\_INFO(name, code, args, flags, isValue) case code : EVALUATE(CALLEXE(EVALUATE(CMDEXE\_ \#\# name)));}}
+\DoxyCodeLine{46             }
+\DoxyCodeLine{47 \textcolor{preprocessor}{        \#include "{}\mbox{\hyperlink{INFO_8h}{INFO.h}}"{}}}
+\DoxyCodeLine{48             }
+\DoxyCodeLine{49 \textcolor{preprocessor}{        \#undef COMMAND\_INFO}}
+\DoxyCodeLine{50             }
+\DoxyCodeLine{51         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{52             \textcolor{keywordflow}{return} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf0113534f70048df0263a31742bc10ce}{SPU\_EXE\_UNKNOWN}};}
+\DoxyCodeLine{53     \}}
+\DoxyCodeLine{54 \}}
 
 \end{DoxyCode}
 
@@ -126,24 +168,24 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{18                                                                                        \{}
-\DoxyCodeLine{19     core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_adf0c1553a08f701b4b2fa9bf0aff884b}{terminated}} = 0;}
-\DoxyCodeLine{20     }
-\DoxyCodeLine{21     \textcolor{keywordtype}{char}* SPI = binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}};}
-\DoxyCodeLine{22     }
-\DoxyCodeLine{23     \textcolor{keywordflow}{while} (!core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_adf0c1553a08f701b4b2fa9bf0aff884b}{terminated}} \&\& SPI < binary-\/>code + binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}}) \{}
-\DoxyCodeLine{24         \textcolor{keywordtype}{char}* prevOffset = SPI;}
-\DoxyCodeLine{25         \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2f}{InstructionExeResult}} cmdResult = \mbox{\hyperlink{SPUCore_8cpp_a57761c153c17ac44020769b0f979d469}{executeInstruction}}(core, params, binary, \&SPI);}
-\DoxyCodeLine{26         \textcolor{keywordflow}{if} (cmdResult != \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa1e1608a157e7bb2d746ba91df8873e9e}{SPU\_EXE\_OK}})\{}
-\DoxyCodeLine{27             core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_adf0c1553a08f701b4b2fa9bf0aff884b}{terminated}} = 1;}
-\DoxyCodeLine{28             fprintf(stderr, \textcolor{stringliteral}{"{}error: spu: terminated at offset: \%d reached: \%d\(\backslash\)n"{}},}
-\DoxyCodeLine{29                     (\textcolor{keywordtype}{int})((\textcolor{keywordtype}{int})(prevOffset -\/ binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}}) + (\textcolor{keywordtype}{int})(binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_af4388a255703cbbd6ab670fb87a92e93}{codeOffset}})), (\textcolor{keywordtype}{int})((\textcolor{keywordtype}{int})(SPI -\/ binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}}) + (\textcolor{keywordtype}{int})(binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_af4388a255703cbbd6ab670fb87a92e93}{codeOffset}})));}
-\DoxyCodeLine{30             \textcolor{keywordflow}{return} cmdResult;}
-\DoxyCodeLine{31         \}}
-\DoxyCodeLine{32     \}}
-\DoxyCodeLine{33     }
-\DoxyCodeLine{34     \textcolor{keywordflow}{return} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa1e1608a157e7bb2d746ba91df8873e9e}{SPU\_EXE\_OK}};}
-\DoxyCodeLine{35 \}}
+\DoxyCodeLine{19                                                                                        \{}
+\DoxyCodeLine{20     core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_adf0c1553a08f701b4b2fa9bf0aff884b}{terminated}} = 0;}
+\DoxyCodeLine{21     }
+\DoxyCodeLine{22     \textcolor{keywordtype}{char}* SPI = binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}};}
+\DoxyCodeLine{23     }
+\DoxyCodeLine{24     \textcolor{keywordflow}{while} (!core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_adf0c1553a08f701b4b2fa9bf0aff884b}{terminated}} \&\& SPI < binary-\/>code + binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}}) \{}
+\DoxyCodeLine{25         \textcolor{keywordtype}{char}* prevOffset = SPI;}
+\DoxyCodeLine{26         \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2f}{InstructionExeResult}} cmdResult = \mbox{\hyperlink{SPUCore_8cpp_a57761c153c17ac44020769b0f979d469}{executeInstruction}}(core, params, binary, \&SPI);}
+\DoxyCodeLine{27         \textcolor{keywordflow}{if} (cmdResult != \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa1e1608a157e7bb2d746ba91df8873e9e}{SPU\_EXE\_OK}})\{}
+\DoxyCodeLine{28             core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_adf0c1553a08f701b4b2fa9bf0aff884b}{terminated}} = 1;}
+\DoxyCodeLine{29             fprintf(stderr, \textcolor{stringliteral}{"{}error: spu: terminated at offset: \%d reached: \%d\(\backslash\)n"{}},}
+\DoxyCodeLine{30                     (\textcolor{keywordtype}{int})((\textcolor{keywordtype}{int})(prevOffset -\/ binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}}) + (\textcolor{keywordtype}{int})(binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_af4388a255703cbbd6ab670fb87a92e93}{codeOffset}})), (\textcolor{keywordtype}{int})((\textcolor{keywordtype}{int})(SPI -\/ binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}}) + (\textcolor{keywordtype}{int})(binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_af4388a255703cbbd6ab670fb87a92e93}{codeOffset}})));}
+\DoxyCodeLine{31             \textcolor{keywordflow}{return} cmdResult;}
+\DoxyCodeLine{32         \}}
+\DoxyCodeLine{33     \}}
+\DoxyCodeLine{34     }
+\DoxyCodeLine{35     \textcolor{keywordflow}{return} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa1e1608a157e7bb2d746ba91df8873e9e}{SPU\_EXE\_OK}};}
+\DoxyCodeLine{36 \}}
 
 \end{DoxyCode}
 

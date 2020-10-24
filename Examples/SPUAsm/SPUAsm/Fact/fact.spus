@@ -12,10 +12,10 @@ hlt
 fact:
     pop rax
     push 1
-    call factRec
+    call factRecursion
     ret
 
-factRec:
+factRecursion:
     push rax
     mul
     dec rax
@@ -23,6 +23,6 @@ factRec:
     push 1
     push rax
     jae noDepth
-        call factRec
+        call factRecursion
     noDepth:
         ret

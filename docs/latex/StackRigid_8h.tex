@@ -1,14 +1,17 @@
 \hypertarget{StackRigid_8h}{}\doxysection{Soft\+Processor\+Unit/\+Common/\+Stack/\+Stack\+Rigid.h File Reference}
 \label{StackRigid_8h}\index{SoftProcessorUnit/Common/Stack/StackRigid.h@{SoftProcessorUnit/Common/Stack/StackRigid.h}}
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
-Include dependency graph for Stack\+Rigid.\+h\+:\nopagebreak
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for Stack\+Rigid.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=220pt]{StackRigid_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -70,7 +73,7 @@ static \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+
 \begin{DoxyCompactList}\small\item\em Reallocates Stack if needed. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{StackRigid_8h_aafaff2554f25a2dd6681bf409da8fe8e}{\+\_\+\+\_\+\+Stack\+Update\+Checksum}} (\mbox{\hyperlink{StackRigid_8h_a8b31ca8d81282523c7fcb49b23df1d8f}{\+\_\+\+\_\+overload}}(Stack\+Rigid) $\ast$stack)
 \begin{DoxyCompactList}\small\item\em Updates Stack checksums. Does not take into account bytes inside the stack but outside of its last element. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{StackRigid_8h_a81920cc1380e65ab9173893cb1772d86}{Stack\+Back}} (\mbox{\hyperlink{StackRigid_8h_a8b31ca8d81282523c7fcb49b23df1d8f}{\+\_\+\+\_\+overload}}(Stack\+Rigid) $\ast$stack, \mbox{\hyperlink{StackRigid_8h_a5d5557764da222ed9bdc5f5aba30da9d}{Stack\+Element\+Type}} $\ast$value)
+\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{StackRigid_8h_a81920cc1380e65ab9173893cb1772d86}{Stack\+Back}} (\mbox{\hyperlink{StackRigid_8h_a8b31ca8d81282523c7fcb49b23df1d8f}{\+\_\+\+\_\+overload}}(Stack\+Rigid) $\ast$stack, \mbox{\hyperlink{StackRigid_8h_a5d5557764da222ed9bdc5f5aba30da9d}{Stack\+Element\+Type}} $\ast$\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}})
 \begin{DoxyCompactList}\small\item\em Free stack memory. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{StackRigid_8h_ae1c69d86c62460d198142773ee201d80}{Stack\+Clear}} (\mbox{\hyperlink{StackRigid_8h_a8b31ca8d81282523c7fcb49b23df1d8f}{\+\_\+\+\_\+overload}}(Stack\+Rigid) $\ast$stack)
 \begin{DoxyCompactList}\small\item\em Clear the stack. \end{DoxyCompactList}\item 
@@ -78,9 +81,9 @@ static void \mbox{\hyperlink{StackRigid_8h_aafaff2554f25a2dd6681bf409da8fe8e}{\+
 \begin{DoxyCompactList}\small\item\em Free stack memory. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{StackRigid_8h_a34ed05fb570dfd9ade77d3c0bd664591}{Stack\+Dump}} (\mbox{\hyperlink{StackRigid_8h_a8b31ca8d81282523c7fcb49b23df1d8f}{\+\_\+\+\_\+overload}}(Stack\+Rigid) $\ast$stack, const \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} line, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$file, const \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$why)
 \begin{DoxyCompactList}\small\item\em Dumps debug information about the stack. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{StackRigid_8h_a3da847c6aaf3f472d56d528de1a0f6f7}{Stack\+Pop}} (\mbox{\hyperlink{StackRigid_8h_a8b31ca8d81282523c7fcb49b23df1d8f}{\+\_\+\+\_\+overload}}(Stack\+Rigid) $\ast$$\ast$stack, \mbox{\hyperlink{StackRigid_8h_a5d5557764da222ed9bdc5f5aba30da9d}{Stack\+Element\+Type}} $\ast$value)
+\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{StackRigid_8h_a3da847c6aaf3f472d56d528de1a0f6f7}{Stack\+Pop}} (\mbox{\hyperlink{StackRigid_8h_a8b31ca8d81282523c7fcb49b23df1d8f}{\+\_\+\+\_\+overload}}(Stack\+Rigid) $\ast$$\ast$stack, \mbox{\hyperlink{StackRigid_8h_a5d5557764da222ed9bdc5f5aba30da9d}{Stack\+Element\+Type}} $\ast$\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}})
 \begin{DoxyCompactList}\small\item\em Pop value from the end of the stack The operation can perform reallocations if there is too much space. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{StackRigid_8h_a72e1abcd508a113d2731a622322f0624}{Stack\+Push}} (\mbox{\hyperlink{StackRigid_8h_a8b31ca8d81282523c7fcb49b23df1d8f}{\+\_\+\+\_\+overload}}(Stack\+Rigid) $\ast$$\ast$stack, \mbox{\hyperlink{StackRigid_8h_a5d5557764da222ed9bdc5f5aba30da9d}{Stack\+Element\+Type}} value)
+\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{StackRigid_8h_a72e1abcd508a113d2731a622322f0624}{Stack\+Push}} (\mbox{\hyperlink{StackRigid_8h_a8b31ca8d81282523c7fcb49b23df1d8f}{\+\_\+\+\_\+overload}}(Stack\+Rigid) $\ast$$\ast$stack, \mbox{\hyperlink{StackRigid_8h_a5d5557764da222ed9bdc5f5aba30da9d}{Stack\+Element\+Type}} \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}})
 \begin{DoxyCompactList}\small\item\em Push the value to the stack The operation can perform reallocations if there is not enough space. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{StackRigid_8h_a269040ce2ab02e681254d1e9f20aff35}{Stack\+Rigid\+Memory\+Use}} (\mbox{\hyperlink{StackRigid_8h_a8b31ca8d81282523c7fcb49b23df1d8f}{\+\_\+\+\_\+overload}}(Stack\+Rigid) $\ast$stack)
 \begin{DoxyCompactList}\small\item\em Memory alocated for the Stack. \end{DoxyCompactList}\item 
@@ -202,21 +205,21 @@ S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+P\+T\+R\+I\+N\+V\+A\+L\+ID&Found invalid pointe
 \end{DoxyEnumFields}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{60                                      \{}
-\DoxyCodeLine{62     \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039a049b8238cb27892165351846886d6a2e}{STACK\_OP\_OK}},}
-\DoxyCodeLine{63 }
-\DoxyCodeLine{65     \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039aba36d99a3bcd8766e93ebb89f7e2f18c}{STACK\_OP\_UNDERFLOW}},}
-\DoxyCodeLine{66 }
-\DoxyCodeLine{68     \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039a3fd246337bd474e0b0be6c3db2106283}{STACK\_OP\_OVERFLOW}},}
-\DoxyCodeLine{69 }
-\DoxyCodeLine{71     \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039ac5fdd9b73e4decd4f5ddca7b680c345d}{STACK\_OP\_NOMEMORY}},}
-\DoxyCodeLine{72 }
-\DoxyCodeLine{74     \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039afd89a4e74adda7fac95c033ffc862a33}{STACK\_OP\_INTEGRITYERR}},}
-\DoxyCodeLine{75 }
-\DoxyCodeLine{77     \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039ab949780f05a1efd2092dc9057bcf2b4e}{STACK\_OP\_NULL}},}
-\DoxyCodeLine{78 }
-\DoxyCodeLine{80     \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039afd3730a577045e9e7d8e5ccc91b4ad60}{STACK\_OP\_PTRINVALID}}}
-\DoxyCodeLine{81 \} \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{StackRigidOperationCodes}};}
+\DoxyCodeLine{62                                      \{}
+\DoxyCodeLine{64     \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039a049b8238cb27892165351846886d6a2e}{STACK\_OP\_OK}},}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{67     \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039aba36d99a3bcd8766e93ebb89f7e2f18c}{STACK\_OP\_UNDERFLOW}},}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{70     \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039a3fd246337bd474e0b0be6c3db2106283}{STACK\_OP\_OVERFLOW}},}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{73     \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039ac5fdd9b73e4decd4f5ddca7b680c345d}{STACK\_OP\_NOMEMORY}},}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{76     \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039afd89a4e74adda7fac95c033ffc862a33}{STACK\_OP\_INTEGRITYERR}},}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{79     \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039ab949780f05a1efd2092dc9057bcf2b4e}{STACK\_OP\_NULL}},}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{82     \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039afd3730a577045e9e7d8e5ccc91b4ad60}{STACK\_OP\_PTRINVALID}}}
+\DoxyCodeLine{83 \} \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{StackRigidOperationCodes}};}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{StackRigid_8h_a3afb87b043e438be2a48ba69fe4deb5f}\label{StackRigid_8h_a3afb87b043e438be2a48ba69fe4deb5f}} 
@@ -249,15 +252,15 @@ S\+T\+A\+C\+K\+\_\+\+S\+T\+\_\+\+N\+U\+LL&Found N\+U\+LL pointer during the oper
 \end{DoxyEnumFields}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{87                             \{}
-\DoxyCodeLine{89     \mbox{\hyperlink{StackRigid_8h_a3afb87b043e438be2a48ba69fe4deb5fa4b2b5de94a6d5cbd85ca204c433b6e74}{STACK\_ST\_OK}},}
-\DoxyCodeLine{90 }
-\DoxyCodeLine{92     \mbox{\hyperlink{StackRigid_8h_a3afb87b043e438be2a48ba69fe4deb5fa4efc249e686cc284db2f5c3c694c94d0}{STACK\_ST\_INTEGRITYERR}},}
-\DoxyCodeLine{93 }
-\DoxyCodeLine{95     \mbox{\hyperlink{StackRigid_8h_a3afb87b043e438be2a48ba69fe4deb5fa61adf5622b3c4fa9e8bb422932e3ed58}{STACK\_ST\_UNINITIALIZED}},}
-\DoxyCodeLine{96 }
-\DoxyCodeLine{98     \mbox{\hyperlink{StackRigid_8h_a3afb87b043e438be2a48ba69fe4deb5fae8a01dc716200146f1c2488155a40ecb}{STACK\_ST\_NULL}}}
-\DoxyCodeLine{99 \} \mbox{\hyperlink{StackRigid_8h_a3afb87b043e438be2a48ba69fe4deb5f}{StackRigidState}};}
+\DoxyCodeLine{89                             \{}
+\DoxyCodeLine{91     \mbox{\hyperlink{StackRigid_8h_a3afb87b043e438be2a48ba69fe4deb5fa4b2b5de94a6d5cbd85ca204c433b6e74}{STACK\_ST\_OK}},}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{94     \mbox{\hyperlink{StackRigid_8h_a3afb87b043e438be2a48ba69fe4deb5fa4efc249e686cc284db2f5c3c694c94d0}{STACK\_ST\_INTEGRITYERR}},}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{97     \mbox{\hyperlink{StackRigid_8h_a3afb87b043e438be2a48ba69fe4deb5fa61adf5622b3c4fa9e8bb422932e3ed58}{STACK\_ST\_UNINITIALIZED}},}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{100     \mbox{\hyperlink{StackRigid_8h_a3afb87b043e438be2a48ba69fe4deb5fae8a01dc716200146f1c2488155a40ecb}{STACK\_ST\_NULL}}}
+\DoxyCodeLine{101 \} \mbox{\hyperlink{StackRigid_8h_a3afb87b043e438be2a48ba69fe4deb5f}{StackRigidState}};}
 
 \end{DoxyCode}
 
@@ -287,14 +290,14 @@ new stack pointer or N\+U\+LL if impossible
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{46                               \{}
-\DoxyCodeLine{47     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{StackRigid_8cpp_a8a32205e08c87c56f05f432202831329}{checkSum}};}
-\DoxyCodeLine{48     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{StackRigid_8cpp_abada3e312a622648ad335f352a42fb77}{checkSumVital}};}
-\DoxyCodeLine{49     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{StackRigid_8cpp_abc869d0afb33fc960e297465165cd334}{capacity}};}
-\DoxyCodeLine{50     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{StackRigid_8cpp_aa778f833989c5b73d0fbe86e9b6ef977}{size}};}
-\DoxyCodeLine{51     FILE* \mbox{\hyperlink{StackRigid_8h_a3c4a30fb69c55f449605ba662e0cf5c0}{logFile}};}
-\DoxyCodeLine{52     \mbox{\hyperlink{StackRigid_8h_a5d5557764da222ed9bdc5f5aba30da9d}{StackElementType}} data[1];}
-\DoxyCodeLine{53 \};}
+\DoxyCodeLine{48                               \{}
+\DoxyCodeLine{49     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{StackRigid_8cpp_a8a32205e08c87c56f05f432202831329}{checkSum}};}
+\DoxyCodeLine{50     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{StackRigid_8cpp_abada3e312a622648ad335f352a42fb77}{checkSumVital}};}
+\DoxyCodeLine{51     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{StackRigid_8cpp_abc869d0afb33fc960e297465165cd334}{capacity}};}
+\DoxyCodeLine{52     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{StackRigid_8cpp_aa778f833989c5b73d0fbe86e9b6ef977}{size}};}
+\DoxyCodeLine{53     FILE* \mbox{\hyperlink{StackRigid_8h_a3c4a30fb69c55f449605ba662e0cf5c0}{logFile}};}
+\DoxyCodeLine{54     \mbox{\hyperlink{StackRigid_8h_a5d5557764da222ed9bdc5f5aba30da9d}{StackElementType}} data[1];}
+\DoxyCodeLine{55 \};}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{StackRigid_8h_a2dbfc90e6e980278704961c949b0bf58}\label{StackRigid_8h_a2dbfc90e6e980278704961c949b0bf58}} 
@@ -418,18 +421,18 @@ the outcome of the operation
 \DoxyCodeLine{286     \textcolor{keywordflow}{if}(stack-\/>size == 0)}
 \DoxyCodeLine{287         \textcolor{keywordflow}{return} \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039aba36d99a3bcd8766e93ebb89f7e2f18c}{STACK\_OP\_UNDERFLOW}};}
 \DoxyCodeLine{288     }
-\DoxyCodeLine{289     *value = stack-\/>data[stack-\/>size -\/ 1];}
+\DoxyCodeLine{289     *\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}} = stack-\/>data[stack-\/>size -\/ 1];}
 \DoxyCodeLine{290     \textcolor{keywordflow}{return} \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039a049b8238cb27892165351846886d6a2e}{STACK\_OP\_OK}};}
 \DoxyCodeLine{291 \}}
 
 \end{DoxyCode}
 
 
-References istack\+\_\+pointer\+\_\+valid(), S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+I\+N\+T\+E\+G\+R\+I\+T\+Y\+E\+RR, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+N\+U\+LL, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+OK, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+U\+N\+D\+E\+R\+F\+L\+OW, S\+T\+A\+C\+K\+\_\+\+S\+T\+\_\+\+OK, Stack\+Dump\+Wrapper\+Why, and Stack\+Validate().
+References istack\+\_\+pointer\+\_\+valid(), S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+I\+N\+T\+E\+G\+R\+I\+T\+Y\+E\+RR, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+N\+U\+LL, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+OK, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+U\+N\+D\+E\+R\+F\+L\+OW, S\+T\+A\+C\+K\+\_\+\+S\+T\+\_\+\+OK, Stack\+Dump\+Wrapper\+Why, Stack\+Validate(), and value.
 
 
 
-Referenced by O\+P\+E\+X\+E\+\_\+\+F\+U\+N\+C().
+Referenced by if().
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -438,11 +441,12 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{StackRigid_8h_a81920cc1380e65ab9173893cb1772d86_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=266pt]{StackRigid_8h_a81920cc1380e65ab9173893cb1772d86_icgraph}
+\includegraphics[width=210pt]{StackRigid_8h_a81920cc1380e65ab9173893cb1772d86_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{StackRigid_8h_ae1c69d86c62460d198142773ee201d80}\label{StackRigid_8h_ae1c69d86c62460d198142773ee201d80}} 
@@ -487,22 +491,11 @@ the outcome of the operation
 
 References istack\+\_\+pointer\+\_\+valid(), S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+I\+N\+T\+E\+G\+R\+I\+T\+Y\+E\+RR, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+N\+U\+LL, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+OK, S\+T\+A\+C\+K\+\_\+\+S\+T\+\_\+\+OK, Stack\+Dump\+Wrapper\+Why, and Stack\+Validate().
 
-
-
-Referenced by O\+P\+E\+X\+E\+\_\+\+F\+U\+N\+C().
-
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{StackRigid_8h_ae1c69d86c62460d198142773ee201d80_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=266pt]{StackRigid_8h_ae1c69d86c62460d198142773ee201d80_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{StackRigid_8h_a3addcf7a8000baf1be4d91a779f293e8}\label{StackRigid_8h_a3addcf7a8000baf1be4d91a779f293e8}} 
@@ -547,11 +540,23 @@ the outcome of the operation
 
 References istack\+\_\+pointer\+\_\+valid(), S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+N\+U\+LL, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+OK, S\+T\+A\+C\+K\+\_\+\+S\+T\+\_\+\+OK, Stack\+Rigid\+Memory\+Use(), and Stack\+Validate().
 
+
+
+Referenced by Destruct\+S\+P\+U\+Core().
+
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{StackRigid_8h_a3addcf7a8000baf1be4d91a779f293e8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{StackRigid_8h_a3addcf7a8000baf1be4d91a779f293e8_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{StackRigid_8h_a34ed05fb570dfd9ade77d3c0bd664591}\label{StackRigid_8h_a34ed05fb570dfd9ade77d3c0bd664591}} 
@@ -585,7 +590,7 @@ Dumps debug information about the stack.
 \DoxyCodeLine{462     FILE* output = stack-\/>logFile;}
 \DoxyCodeLine{463     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{StackRigid_8cpp_a50d9ff70df667de809d39640f33db70b}{istack\_pointer\_valid}}(output, \textcolor{keyword}{sizeof}(output))) \{}
 \DoxyCodeLine{464         output = stdout;}
-\DoxyCodeLine{465         printf(\textcolor{stringliteral}{"{}\(\backslash\)nWarning! Specified dump output is inavailbale! Selecting stdout.\(\backslash\)n"{}});}
+\DoxyCodeLine{465         \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}\(\backslash\)nWarning! Specified dump output is inavailbale! Selecting stdout.\(\backslash\)n"{}});}
 \DoxyCodeLine{466     \}}
 \DoxyCodeLine{467     }
 \DoxyCodeLine{468     fprintf(output, \textcolor{stringliteral}{"{}=================================\(\backslash\)n"{}});}
@@ -667,24 +672,26 @@ Dumps debug information about the stack.
 \end{DoxyCode}
 
 
-References \+\_\+\+\_\+overload(), i, istack\+\_\+pointer\+\_\+valid(), memory, S\+T\+A\+C\+K\+\_\+\+S\+T\+\_\+\+I\+N\+T\+E\+G\+R\+I\+T\+Y\+E\+RR, S\+T\+A\+C\+K\+\_\+\+S\+T\+\_\+\+N\+U\+LL, S\+T\+A\+C\+K\+\_\+\+S\+T\+\_\+\+OK, S\+T\+A\+C\+K\+\_\+\+S\+T\+\_\+\+U\+N\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED, Stack\+Element\+Dump, Stack\+Element\+Type, Stack\+Rigid\+Memory\+Use(), and Stack\+Validate().
+References \+\_\+\+\_\+overload(), i, istack\+\_\+pointer\+\_\+valid(), memory, printf(), S\+T\+A\+C\+K\+\_\+\+S\+T\+\_\+\+I\+N\+T\+E\+G\+R\+I\+T\+Y\+E\+RR, S\+T\+A\+C\+K\+\_\+\+S\+T\+\_\+\+N\+U\+LL, S\+T\+A\+C\+K\+\_\+\+S\+T\+\_\+\+OK, S\+T\+A\+C\+K\+\_\+\+S\+T\+\_\+\+U\+N\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED, Stack\+Element\+Dump, Stack\+Element\+Type, Stack\+Rigid\+Memory\+Use(), and Stack\+Validate().
 
 
 
-Referenced by main().
+Referenced by main(), and O\+P\+E\+X\+E\+\_\+\+F\+U\+N\+C().
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{StackRigid_8h_a34ed05fb570dfd9ade77d3c0bd664591_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=222pt]{StackRigid_8h_a34ed05fb570dfd9ade77d3c0bd664591_icgraph}
+\includegraphics[width=269pt]{StackRigid_8h_a34ed05fb570dfd9ade77d3c0bd664591_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{StackRigid_8h_a3da847c6aaf3f472d56d528de1a0f6f7}\label{StackRigid_8h_a3da847c6aaf3f472d56d528de1a0f6f7}} 
@@ -723,7 +730,7 @@ the outcome of the operation
 \DoxyCodeLine{258     \textcolor{keywordflow}{if}((*stack)-\/>size == 0)}
 \DoxyCodeLine{259         \textcolor{keywordflow}{return} \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039aba36d99a3bcd8766e93ebb89f7e2f18c}{STACK\_OP\_UNDERFLOW}};}
 \DoxyCodeLine{260     }
-\DoxyCodeLine{261     *value = (*stack)-\/>data[(*stack)-\/>size -\/ 1];}
+\DoxyCodeLine{261     *\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}} = (*stack)-\/>data[(*stack)-\/>size -\/ 1];}
 \DoxyCodeLine{262     (*stack)-\/>size -\/= 1;}
 \DoxyCodeLine{263     }
 \DoxyCodeLine{264     \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{StackRigidOperationCodes}} realocRes = \mbox{\hyperlink{StackRigid_8cpp_a20779cbd888e42054835b58a527bc0e8}{\_\_StackReallocate}}(stack, -\/1);}
@@ -738,7 +745,7 @@ the outcome of the operation
 \end{DoxyCode}
 
 
-References \+\_\+\+\_\+\+Stack\+Reallocate(), \+\_\+\+\_\+\+Stack\+Update\+Checksum(), istack\+\_\+pointer\+\_\+valid(), S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+I\+N\+T\+E\+G\+R\+I\+T\+Y\+E\+RR, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+N\+U\+LL, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+OK, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+U\+N\+D\+E\+R\+F\+L\+OW, S\+T\+A\+C\+K\+\_\+\+S\+T\+\_\+\+OK, Stack\+Dump\+Wrapper\+Why, and Stack\+Validate().
+References \+\_\+\+\_\+\+Stack\+Reallocate(), \+\_\+\+\_\+\+Stack\+Update\+Checksum(), istack\+\_\+pointer\+\_\+valid(), S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+I\+N\+T\+E\+G\+R\+I\+T\+Y\+E\+RR, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+N\+U\+LL, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+OK, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+U\+N\+D\+E\+R\+F\+L\+OW, S\+T\+A\+C\+K\+\_\+\+S\+T\+\_\+\+OK, Stack\+Dump\+Wrapper\+Why, Stack\+Validate(), and value.
 
 
 
@@ -802,7 +809,7 @@ the outcome of the operation
 \DoxyCodeLine{199         \textcolor{keywordflow}{return} reallocResult;}
 \DoxyCodeLine{200     \}}
 \DoxyCodeLine{201     }
-\DoxyCodeLine{202     (*stack)-\/>data[(*stack)-\/>size] = value;}
+\DoxyCodeLine{202     (*stack)-\/>data[(*stack)-\/>size] = \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}};}
 \DoxyCodeLine{203     (*stack)-\/>size += 1;}
 \DoxyCodeLine{204     }
 \DoxyCodeLine{205     \mbox{\hyperlink{StackRigid_8cpp_aafaff2554f25a2dd6681bf409da8fe8e}{\_\_StackUpdateChecksum}}(*stack);}
@@ -816,7 +823,7 @@ the outcome of the operation
 \end{DoxyCode}
 
 
-References \+\_\+\+\_\+\+Stack\+Reallocate(), \+\_\+\+\_\+\+Stack\+Update\+Checksum(), istack\+\_\+pointer\+\_\+valid(), S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+I\+N\+T\+E\+G\+R\+I\+T\+Y\+E\+RR, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+OK, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+O\+V\+E\+R\+F\+L\+OW, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+P\+T\+R\+I\+N\+V\+A\+L\+ID, S\+T\+A\+C\+K\+\_\+\+S\+T\+\_\+\+OK, Stack\+Dump\+Wrapper\+Why, and Stack\+Validate().
+References \+\_\+\+\_\+\+Stack\+Reallocate(), \+\_\+\+\_\+\+Stack\+Update\+Checksum(), istack\+\_\+pointer\+\_\+valid(), S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+I\+N\+T\+E\+G\+R\+I\+T\+Y\+E\+RR, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+OK, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+O\+V\+E\+R\+F\+L\+OW, S\+T\+A\+C\+K\+\_\+\+O\+P\+\_\+\+P\+T\+R\+I\+N\+V\+A\+L\+ID, S\+T\+A\+C\+K\+\_\+\+S\+T\+\_\+\+OK, Stack\+Dump\+Wrapper\+Why, Stack\+Validate(), and value.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -866,7 +873,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=298pt]{StackRigid_8h_a269040ce2ab02e681254d1e9f20aff35_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -934,7 +942,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{StackRigid_8h_a8ffebb1dd3f306eca52e8b34ad325f1c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

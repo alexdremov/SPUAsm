@@ -1,14 +1,17 @@
 \hypertarget{AssemblyDTypes_8hpp}{}\doxysection{Soft\+Processor\+Unit/\+Assembly/\+Helpers/\+Data\+Types/\+Assembly\+D\+Types.hpp File Reference}
 \label{AssemblyDTypes_8hpp}\index{SoftProcessorUnit/Assembly/Helpers/DataTypes/AssemblyDTypes.hpp@{SoftProcessorUnit/Assembly/Helpers/DataTypes/AssemblyDTypes.hpp}}
 {\ttfamily \#include \char`\"{}Labels\+Store.\+hpp\char`\"{}}\newline
-Include dependency graph for Assembly\+D\+Types.\+hpp\+:\nopagebreak
+{\ttfamily \#include \char`\"{}Parse\+Helpers.\+hpp\char`\"{}}\newline
+Include dependency graph for Assembly\+D\+Types.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=283pt]{AssemblyDTypes_8hpp__incl}
+\includegraphics[width=293pt]{AssemblyDTypes_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,6 +24,8 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 struct \mbox{\hyperlink{AssemblyDTypes_8hpp_structAssemblyParams}{Assembly\+Params}}
 \item 
 struct \mbox{\hyperlink{AssemblyDTypes_8hpp_structBinaryFile}{Binary\+File}}
+\item 
+struct \mbox{\hyperlink{AssemblyDTypes_8hpp_structComplexValue}{Complex\+Value}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
@@ -45,7 +50,8 @@ enum \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8d}{Lab
 \doxysubsubsection{struct Assembly\+Params}
 
 
-Collaboration diagram for Assembly\+Params\+:\nopagebreak
+Collaboration diagram for Assembly\+Params\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -188,6 +194,45 @@ version&
 \hline
 
 \end{DoxyFields}
+\index{ComplexValue@{ComplexValue}}\label{structComplexValue}
+\Hypertarget{AssemblyDTypes_8hpp_structComplexValue}
+\doxysubsubsection{struct Complex\+Value}
+
+
+Collaboration diagram for Complex\+Value\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{structComplexValue__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{Data Fields}
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_a054e8e27ec479293da3373464bf51488}\label{AssemblyDTypes_8hpp_a054e8e27ec479293da3373464bf51488}} 
+\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}}&
+argMask&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_a34b986e960ed19a4ea0a071d4ba16014}\label{AssemblyDTypes_8hpp_a34b986e960ed19a4ea0a071d4ba16014}} 
+\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}}&
+reg&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_a2236e0432c20b0b9c7b50e71b605259b}\label{AssemblyDTypes_8hpp_a2236e0432c20b0b9c7b50e71b605259b}} 
+\mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeb}{ComplexValueResult}}&
+success&
+\\
+\hline
+
+\mbox{\Hypertarget{AssemblyDTypes_8hpp_ab83e0c3bc53a5eee84be61bf61592dff}\label{AssemblyDTypes_8hpp_ab83e0c3bc53a5eee84be61bf61592dff}} 
+double&
+value&
+\\
+\hline
+
+\end{DoxyFields}
 
 
 \doxysubsection{Enumeration Type Documentation}
@@ -217,12 +262,12 @@ S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED&\\
 \end{DoxyEnumFields}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{49                       \{}
-\DoxyCodeLine{50     \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a08c10477e506f1afa81064a9d3873f93}{SPU\_BINLOAD\_OK}}              = 500,}
-\DoxyCodeLine{51     \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a4cfa2bce094c4d9ccb40e2cc73c2dc3d}{SPU\_BINLOAD\_WRONG\_VERSION}}   = 501,}
-\DoxyCodeLine{52     \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008aac42aad69374deaeea0fdbaa39d45f05}{SPU\_BINLOAD\_WRONG\_SIGNATURE}} = 502,}
-\DoxyCodeLine{53     \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a24f4dd92ab09d28ecd543638f37dd0a7}{SPU\_BINLOAD\_CORRUPTED}}       = 503}
-\DoxyCodeLine{54 \};}
+\DoxyCodeLine{57                       \{}
+\DoxyCodeLine{58     \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a08c10477e506f1afa81064a9d3873f93}{SPU\_BINLOAD\_OK}}              = 500,}
+\DoxyCodeLine{59     \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a4cfa2bce094c4d9ccb40e2cc73c2dc3d}{SPU\_BINLOAD\_WRONG\_VERSION}}   = 501,}
+\DoxyCodeLine{60     \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008aac42aad69374deaeea0fdbaa39d45f05}{SPU\_BINLOAD\_WRONG\_SIGNATURE}} = 502,}
+\DoxyCodeLine{61     \mbox{\hyperlink{AssemblyDTypes_8hpp_adf5ef888dd0695e3b3dcdf5230a5f008a24f4dd92ab09d28ecd543638f37dd0a7}{SPU\_BINLOAD\_CORRUPTED}}       = 503}
+\DoxyCodeLine{62 \};}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8d}\label{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8d}} 
@@ -251,11 +296,11 @@ S\+P\+U\+\_\+\+L\+A\+B\+E\+L\+\_\+\+I\+N\+V\+A\+L\+ID&\\
 \end{DoxyEnumFields}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{56                 \{}
-\DoxyCodeLine{57     \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3797776cf338bd2930b7824194685365}{SPU\_LABEL\_DUBLICATE}}         = 900,}
-\DoxyCodeLine{58     \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3819e9fcd8e4784afc45ae36ad95164b}{SPU\_LABEL\_OK}}                = 901,}
-\DoxyCodeLine{59     \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da6cadd424d5f2177bc2d2ef0a94093533}{SPU\_LABEL\_NOTFOUND}}          = 902,}
-\DoxyCodeLine{60     \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da160647c003208bcca88f7bfe734e68fd}{SPU\_LABEL\_INVALID}}           = 903}
-\DoxyCodeLine{61 \};}
+\DoxyCodeLine{64                 \{}
+\DoxyCodeLine{65     \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3797776cf338bd2930b7824194685365}{SPU\_LABEL\_DUBLICATE}}         = 900,}
+\DoxyCodeLine{66     \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da3819e9fcd8e4784afc45ae36ad95164b}{SPU\_LABEL\_OK}}                = 901,}
+\DoxyCodeLine{67     \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da6cadd424d5f2177bc2d2ef0a94093533}{SPU\_LABEL\_NOTFOUND}}          = 902,}
+\DoxyCodeLine{68     \mbox{\hyperlink{AssemblyDTypes_8hpp_a2ce75c6e983bb6a5f736645f11770c8da160647c003208bcca88f7bfe734e68fd}{SPU\_LABEL\_INVALID}}           = 903}
+\DoxyCodeLine{69 \};}
 
 \end{DoxyCode}

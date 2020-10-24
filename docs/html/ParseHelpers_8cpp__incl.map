@@ -1,5 +1,26 @@
 <map id="SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.cpp" name="SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,252,47"/>
-<area shape="rect" id="node2" href="$ParseHelpers_8hpp.html" title=" " alt="" coords="7,95,133,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="158,95,219,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="78,5,325,47"/>
+<area shape="rect" id="node2" href="$ParseHelpers_8hpp.html" title=" " alt="" coords="67,617,194,644"/>
+<area shape="rect" id="node3" href="$SPUDtypes_8hpp.html" title=" " alt="" coords="21,692,139,719"/>
+<area shape="rect" id="node7" href="$CommandsParser_8hpp.html" title=" " alt="" coords="307,95,458,121"/>
+<area shape="rect" id="node23" href="$ComplexValueTools_8hpp.html" title=" " alt="" coords="120,95,283,121"/>
+<area shape="rect" id="node24" title=" " alt="" coords="483,95,544,121"/>
+<area shape="rect" id="node4" href="$StackRigid_8h.html" title=" " alt="" coords="31,767,129,793"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,841,69,868"/>
+<area shape="rect" id="node6" title=" " alt="" coords="93,841,155,868"/>
+<area shape="rect" id="node8" title=" " alt="" coords="671,692,729,719"/>
+<area shape="rect" id="node9" href="$CommandsDTypes_8hpp.html" title=" " alt="" coords="154,169,313,196"/>
+<area shape="rect" id="node10" href="$AssemblyHelpers_8hpp.html" title=" " alt="" coords="354,468,505,495"/>
+<area shape="rect" id="node14" href="$Syntax_8hpp.html" title=" " alt="" coords="471,169,559,196"/>
+<area shape="rect" id="node11" title=" " alt="" coords="785,543,845,569"/>
+<area shape="rect" id="node12" href="$AssemblyDTypes_8hpp.html" title=" " alt="" coords="215,543,366,569"/>
+<area shape="rect" id="node13" href="$LabelsStore_8hpp.html" title=" " alt="" coords="407,617,523,644"/>
+<area shape="rect" id="node15" href="$TranslationDTypes_8hpp.html" title=" " alt="" coords="685,468,841,495"/>
+<area shape="rect" id="node16" href="$CommandToBytecode_8hpp.html" title=" " alt="" coords="615,244,791,271"/>
+<area shape="rect" id="node19" href="$BytecodeToCommand_8hpp.html" title=" " alt="" coords="467,393,643,420"/>
+<area shape="rect" id="node17" href="$CTBDefs_8h.html" title=" " alt="" coords="696,393,784,420"/>
+<area shape="rect" id="node18" href="$CTB_8h.html" title=" " alt="" coords="721,319,781,345"/>
+<area shape="rect" id="node20" href="$DisAssemblyDTypes_8hpp.html" title=" " alt="" coords="441,543,612,569"/>
+<area shape="rect" id="node21" href="$BTC_8h.html" title=" " alt="" coords="182,468,242,495"/>
+<area shape="rect" id="node22" href="$BTCDefs_8h.html" title=" " alt="" coords="103,543,191,569"/>
 </map>

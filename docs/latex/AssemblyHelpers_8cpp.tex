@@ -6,7 +6,8 @@
 {\ttfamily \#include \char`\"{}Commands\+Parser.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Assembly\+D\+Types.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}S\+P\+U\+Version.\+hpp\char`\"{}}\newline
-Include dependency graph for Assembly\+Helpers.\+cpp\+:\nopagebreak
+Include dependency graph for Assembly\+Helpers.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -139,7 +140,7 @@ References Binary\+File\+::code, Binary\+File\+::current\+Size, resize\+Bin\+Fil
 
 
 
-Referenced by append\+To\+Bin\+File().
+Referenced by append\+To\+Bin\+File(), and write\+Complex\+Arg().
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -148,11 +149,12 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=278pt]{AssemblyHelpers_8cpp_a34ace815bc5b07c3dd0b9b22acd102f7_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=294pt]{AssemblyHelpers_8cpp_a34ace815bc5b07c3dd0b9b22acd102f7_icgraph}
+\includegraphics[width=350pt]{AssemblyHelpers_8cpp_a34ace815bc5b07c3dd0b9b22acd102f7_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{AssemblyHelpers_8cpp_aae008dee6c0428e3c3b6c38284f0e80e}\label{AssemblyHelpers_8cpp_aae008dee6c0428e3c3b6c38284f0e80e}} 
@@ -398,7 +400,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{25     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 1; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} < argc; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++) \{}
 \DoxyCodeLine{26         \textcolor{keywordflow}{if} (strcmp(argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}], \textcolor{stringliteral}{"{}-\/-\/input"{}}) == 0) \{}
 \DoxyCodeLine{27             \textcolor{keywordflow}{if} (\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} + 1 > argc)\{}
-\DoxyCodeLine{28                 printf(\textcolor{stringliteral}{"{}error: assembly: No input file specified after -\/-\/input\(\backslash\)n"{}});}
+\DoxyCodeLine{28                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: assembly: No input file specified after -\/-\/input\(\backslash\)n"{}});}
 \DoxyCodeLine{29                 \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{30             \}}
 \DoxyCodeLine{31             FILE* inputFile = fopen(argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} + 1], \textcolor{stringliteral}{"{}rb"{}});}
@@ -406,13 +408,13 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{33             newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}} = *(argv + \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} + 1);}
 \DoxyCodeLine{34             realpath(newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}}, newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_ae314928dd5afc1ad2eeba02260f7deef}{inputFileRealName}});}
 \DoxyCodeLine{35             \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_afdd5808979159dbc6eb8695b8baec28e}{inputFile}} == \textcolor{keyword}{nullptr})\{}
-\DoxyCodeLine{36                 printf(\textcolor{stringliteral}{"{}error: assembly: Can't open input file \%s\(\backslash\)n"{}}, newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}});}
+\DoxyCodeLine{36                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: assembly: Can't open input file \%s\(\backslash\)n"{}}, newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}});}
 \DoxyCodeLine{37                 \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{38             \}}
 \DoxyCodeLine{39             \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++;}
 \DoxyCodeLine{40         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}], \textcolor{stringliteral}{"{}-\/-\/output"{}}) == 0) \{}
 \DoxyCodeLine{41             \textcolor{keywordflow}{if} (\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} + 1 > argc)\{}
-\DoxyCodeLine{42                 printf(\textcolor{stringliteral}{"{}error: assembly: No output file specified after -\/-\/output\(\backslash\)n"{}});}
+\DoxyCodeLine{42                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: assembly: No output file specified after -\/-\/output\(\backslash\)n"{}});}
 \DoxyCodeLine{43                 \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{44             \}}
 \DoxyCodeLine{45             FILE* outputFile = fopen(argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} + 1], \textcolor{stringliteral}{"{}wb"{}});}
@@ -425,7 +427,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{52             \mbox{\hyperlink{AssemblyHelpers_8cpp_ae88ab93d0f7a91de8f099375012b69f1}{printAssemblyHelpData}}();}
 \DoxyCodeLine{53         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}], \textcolor{stringliteral}{"{}-\/-\/lst"{}}) == 0) \{}
 \DoxyCodeLine{54             \textcolor{keywordflow}{if} (\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} + 1 > argc)\{}
-\DoxyCodeLine{55                 printf(\textcolor{stringliteral}{"{}error: assembly: No lstfile file specified after -\/-\/lst\(\backslash\)n"{}});}
+\DoxyCodeLine{55                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: assembly: No lstfile file specified after -\/-\/lst\(\backslash\)n"{}});}
 \DoxyCodeLine{56                 \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{57             \}}
 \DoxyCodeLine{58             FILE* lstFile = fopen(argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} + 1], \textcolor{stringliteral}{"{}wb"{}});}
@@ -441,7 +443,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{68                 newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}} = *(argv + \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}});}
 \DoxyCodeLine{69                 realpath(newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a0a2789916bd42777c9359d5ce15812f6}{inputFileName}}, newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_ae314928dd5afc1ad2eeba02260f7deef}{inputFileRealName}});}
 \DoxyCodeLine{70                 \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_afdd5808979159dbc6eb8695b8baec28e}{inputFile}} == \textcolor{keyword}{nullptr})\{}
-\DoxyCodeLine{71                     printf(\textcolor{stringliteral}{"{}error: assembly: Can't open input file \%s\(\backslash\)n"{}}, argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}]);}
+\DoxyCodeLine{71                     \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: assembly: Can't open input file \%s\(\backslash\)n"{}}, argv[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}]);}
 \DoxyCodeLine{72                     \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{73                 \}}
 \DoxyCodeLine{74             \}}
@@ -449,7 +451,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{76     \}}
 \DoxyCodeLine{77     }
 \DoxyCodeLine{78     \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_afdd5808979159dbc6eb8695b8baec28e}{inputFile}} == \textcolor{keyword}{nullptr}) \{}
-\DoxyCodeLine{79         printf(\textcolor{stringliteral}{"{}error: assembly: No input file specified\(\backslash\)n"{}});}
+\DoxyCodeLine{79         \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: assembly: No input file specified\(\backslash\)n"{}});}
 \DoxyCodeLine{80         \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{81     \}}
 \DoxyCodeLine{82     }
@@ -457,7 +459,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{84         newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_ac0b48ee74ddc9903ff9585e3cc8c8851}{outputFile}} = fopen(\textcolor{stringliteral}{"{}output.spub"{}}, \textcolor{stringliteral}{"{}wb"{}});}
 \DoxyCodeLine{85         newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a9863838bac78631698431987d1431369}{outputFileName}} = \textcolor{stringliteral}{"{}output.spub"{}};}
 \DoxyCodeLine{86         \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_ac0b48ee74ddc9903ff9585e3cc8c8851}{outputFile}} == \textcolor{keyword}{nullptr})\{}
-\DoxyCodeLine{87             printf(\textcolor{stringliteral}{"{}error: assembly: No output file specified\(\backslash\)n"{}});}
+\DoxyCodeLine{87             \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: assembly: No output file specified\(\backslash\)n"{}});}
 \DoxyCodeLine{88             \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{89         \}}
 \DoxyCodeLine{90     \}}
@@ -466,7 +468,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{93         newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}} = fopen(\textcolor{stringliteral}{"{}assembly.lst"{}}, \textcolor{stringliteral}{"{}wb"{}});}
 \DoxyCodeLine{94         newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a75d000fc6613c3f0b35cafa512c40c53}{lstFileName}} = \textcolor{stringliteral}{"{}assembly.lst"{}};}
 \DoxyCodeLine{95         \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a4f55e0424fe57585b32370e9b5b61a34}{lstFile}} == \textcolor{keyword}{nullptr})\{}
-\DoxyCodeLine{96             printf(\textcolor{stringliteral}{"{}error: assembly: No lstFile file specified\(\backslash\)n"{}});}
+\DoxyCodeLine{96             \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: assembly: No lstFile file specified\(\backslash\)n"{}});}
 \DoxyCodeLine{97             \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{98         \}}
 \DoxyCodeLine{99     \}}
@@ -475,7 +477,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{102         newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a8fa74a2c523da8c898363c84e5358a85}{prepFile}} = fopen(\textcolor{stringliteral}{"{}assembly.spuprep"{}}, \textcolor{stringliteral}{"{}wb"{}});}
 \DoxyCodeLine{103         newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a17d2d1882578ee764929ced1acca2b47}{prepFileName}} = \textcolor{stringliteral}{"{}assembly.spuprep"{}};}
 \DoxyCodeLine{104         \textcolor{keywordflow}{if} (newParams.\mbox{\hyperlink{AssemblyDTypes_8hpp_a17d2d1882578ee764929ced1acca2b47}{prepFileName}} == \textcolor{keyword}{nullptr}) \{}
-\DoxyCodeLine{105             printf(\textcolor{stringliteral}{"{}error: assembly: Can't open assembly.spuprep\(\backslash\)n"{}});}
+\DoxyCodeLine{105             \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: assembly: Can't open assembly.spuprep\(\backslash\)n"{}});}
 \DoxyCodeLine{106             \textcolor{keywordflow}{return} EXIT\_FAILURE;}
 \DoxyCodeLine{107         \}}
 \DoxyCodeLine{108     \}}
@@ -489,17 +491,18 @@ Here is the caller graph for this function\+:\nopagebreak
 \end{DoxyCode}
 
 
-References i, Assembly\+Params\+::input\+File, Assembly\+Params\+::input\+File\+Name, Assembly\+Params\+::input\+File\+Real\+Name, Assembly\+Params\+::labels\+Store, Assembly\+Params\+::lst\+File, Assembly\+Params\+::lst\+File\+Name, M\+A\+X\+P\+A\+T\+H\+L\+EN, Assembly\+Params\+::output\+File, Assembly\+Params\+::output\+File\+Name, Assembly\+Params\+::prep\+File, Assembly\+Params\+::prep\+File\+Name, print\+Assembly\+Help\+Data(), and Assembly\+Params\+::verbose.
+References i, Assembly\+Params\+::input\+File, Assembly\+Params\+::input\+File\+Name, Assembly\+Params\+::input\+File\+Real\+Name, Assembly\+Params\+::labels\+Store, Assembly\+Params\+::lst\+File, Assembly\+Params\+::lst\+File\+Name, M\+A\+X\+P\+A\+T\+H\+L\+EN, Assembly\+Params\+::output\+File, Assembly\+Params\+::output\+File\+Name, Assembly\+Params\+::prep\+File, Assembly\+Params\+::prep\+File\+Name, print\+Assembly\+Help\+Data(), printf(), and Assembly\+Params\+::verbose.
 
 
 
 Referenced by main().
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=297pt]{AssemblyHelpers_8cpp_a6c4bb8a89afb60b2164c352fec284d61_cgraph}
+\includegraphics[width=350pt]{AssemblyHelpers_8cpp_a6c4bb8a89afb60b2164c352fec284d61_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
@@ -520,7 +523,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{175                              \{}
 \DoxyCodeLine{176     \textcolor{keywordtype}{int} SPUAssemblyVersion = \mbox{\hyperlink{SPUVersion_8hpp_a46cfa984fce0310cc64459db66aba985}{SPU\_VERSION}};}
 \DoxyCodeLine{177     \textcolor{keywordtype}{char}* SPUAssemblyVersion\_chars = (\textcolor{keywordtype}{char}*)\&SPUAssemblyVersion;}
-\DoxyCodeLine{178     printf(\textcolor{stringliteral}{"{}SPUAssembly v\%c.\%c.\%c\%c help\(\backslash\)n"{}}}
+\DoxyCodeLine{178     \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}SPUAssembly v\%c.\%c.\%c\%c help\(\backslash\)n"{}}}
 \DoxyCodeLine{179            \textcolor{stringliteral}{"{}-\/-\/input     <input file> input file to be assembled .spus format (spu source)\(\backslash\)n"{}}}
 \DoxyCodeLine{180            \textcolor{stringliteral}{"{}-\/-\/output    <output file> output file. output.spub by default (spu binary)\(\backslash\)n"{}}}
 \DoxyCodeLine{181            \textcolor{stringliteral}{"{}-\/h, -\/-\/help  show this help message\(\backslash\)n"{}}}
@@ -537,12 +540,20 @@ Here is the caller graph for this function\+:\nopagebreak
 \end{DoxyCode}
 
 
-References S\+P\+U\+\_\+\+V\+E\+R\+S\+I\+ON.
+References printf(), and S\+P\+U\+\_\+\+V\+E\+R\+S\+I\+ON.
 
 
 
 Referenced by parse\+Args().
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{AssemblyHelpers_8cpp_ae88ab93d0f7a91de8f099375012b69f1_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -563,7 +574,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{275     \textcolor{keywordtype}{char}* SPUAssemblyVersion\_chars = (\textcolor{keywordtype}{char}*)\&SPUAssemblyVersion;}
 \DoxyCodeLine{276     \textcolor{keywordflow}{if} (params-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3998875859d91d9614897720dd09aa3a}{verbose}}) \{}
 \DoxyCodeLine{277         }
-\DoxyCodeLine{278         printf(\textcolor{stringliteral}{"{}SPUAssembly v\%c.\%c.\%c\%c\(\backslash\)n"{}},}
+\DoxyCodeLine{278         \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}SPUAssembly v\%c.\%c.\%c\%c\(\backslash\)n"{}},}
 \DoxyCodeLine{279                SPUAssemblyVersion\_chars[0],}
 \DoxyCodeLine{280                SPUAssemblyVersion\_chars[1],}
 \DoxyCodeLine{281                SPUAssemblyVersion\_chars[2],}
@@ -584,12 +595,20 @@ Here is the caller graph for this function\+:\nopagebreak
 \end{DoxyCode}
 
 
-References Assembly\+Params\+::input\+File\+Name, Assembly\+Params\+::lst\+File, Assembly\+Params\+::output\+File\+Name, S\+P\+U\+\_\+\+V\+E\+R\+S\+I\+ON, and Assembly\+Params\+::verbose.
+References Assembly\+Params\+::input\+File\+Name, Assembly\+Params\+::lst\+File, Assembly\+Params\+::output\+File\+Name, printf(), S\+P\+U\+\_\+\+V\+E\+R\+S\+I\+ON, and Assembly\+Params\+::verbose.
 
 
 
 Referenced by main().
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{AssemblyHelpers_8cpp_a76bb301072f1ce35898cbd2ef5195831_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -625,7 +644,8 @@ References Binary\+File\+::code, Binary\+File\+::current\+Size, and Binary\+File
 
 Referenced by append\+To\+Bin\+File(), and load\+Bin\+File().
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['runparameters_750',['RunParameters',['../SPUDtypes_8hpp.html#structRunParameters',1,'']]]
+  ['levenshteinedit_791',['LevenshteinEdit',['../StringDistance_8hpp.html#structLevenshteinEdit',1,'']]]
 ];

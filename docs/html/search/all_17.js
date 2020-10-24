@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zeroorregisterno_741',['ZEROORREGISTERNO',['../CTBDefs_8h.html#a7ccf74837c52aa13556d7d689212c490',1,'CTBDefs.h']]]
+  ['zeroorstorage_782',['ZEROORSTORAGE',['../CTBDefs_8h.html#a50efb823f71a6c6cde80cf1a39b08f30',1,'CTBDefs.h']]]
 ];

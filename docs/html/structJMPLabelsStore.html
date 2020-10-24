@@ -74,8 +74,8 @@ $(function() {
 Collaboration diagram for JMPLabelsStore:</div>
 <div class="dyncontent">
 <div class="center"><img src="structJMPLabelsStore__coll__graph.png" border="0" usemap="#aJMPLabelsStore_coll__map" alt="Collaboration graph"/></div>
-<map name="JMPLabelsStore_coll__map" id="JMPLabelsStore_coll__map">
-<area shape="rect" title=" " alt="" coords="5,263,173,428"/>
+<map name="JMPLabelsStore_coll__map" id="aJMPLabelsStore_coll__map">
+<area shape="rect" title=" " alt="" coords="5,263,173,443"/>
 <area shape="rect" href="structJMPLabel.html" title=" " alt="" coords="22,5,157,185"/>
 </map>
 </div>
@@ -88,6 +88,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2fd4e86a17748c8baee34cb5e44c0466"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11ae202867bee06836e593f33f5954ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJMPLabel.html">JMPLabel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJMPLabelsStore.html#a11ae202867bee06836e593f33f5954ae">getLabel</a> (<a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a> *label) const</td></tr>
 <tr class="separator:a11ae202867bee06836e593f33f5954ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7bc84521393d689984fbe49b05f5012"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structJMPLabel.html">JMPLabel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJMPLabelsStore.html#ac7bc84521393d689984fbe49b05f5012">getLabelByToPosition</a> (long <a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> pos) const</td></tr>
+<tr class="separator:ac7bc84521393d689984fbe49b05f5012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fa654d51d71f8d0ae30af0df519a8ca"><td class="memItemLeft" align="right" valign="top">long <a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJMPLabelsStore.html#a7fa654d51d71f8d0ae30af0df519a8ca">getLabelToPosition</a> (<a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a> *label) const</td></tr>
 <tr class="separator:a7fa654d51d71f8d0ae30af0df519a8ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c011d9327249181f05780a91ef5b9d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJMPLabelsStore.html#a2c011d9327249181f05780a91ef5b9d9">newLabel</a> (<a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a> *label)</td></tr>
@@ -203,6 +205,36 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="CommandsParser_8cpp.html#a9f77310758d1c97d9ea9e1bb83779d5f" title=" " alt="" coords="115,103,200,130"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="ac7bc84521393d689984fbe49b05f5012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7bc84521393d689984fbe49b05f5012">&#9670;&nbsp;</a></span>getLabelByToPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structJMPLabel.html">JMPLabel</a> * JMPLabelsStore::getLabelByToPosition </td>
+          <td>(</td>
+          <td class="paramtype">long <a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a>&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                                                                 {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="structJMPLabel.html">JMPLabel</a>* current = this-&gt;<a class="code" href="structJMPLabelsStore.html#af23849f04d27c00662e235598f3ca6c5">first</a>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">while</span> (current != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">if</span> (current-&gt;<a class="code" href="structJMPLabel.html#a6b67a7b6015f128f7623c1b5854d94d8">positionTo</a> == pos) {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="keywordflow">return</span> current;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        current = current-&gt;<a class="code" href="structJMPLabel.html#a18b0eaf5621254a95518ced33c188226">next</a>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="structJMPLabelsStore.html#af23849f04d27c00662e235598f3ca6c5">first</a>, <a class="el" href="structJMPLabel.html#a18b0eaf5621254a95518ced33c188226">JMPLabel::next</a>, and <a class="el" href="structJMPLabel.html#a6b67a7b6015f128f7623c1b5854d94d8">JMPLabel::positionTo</a>.</p>
 
 </div>
 </div>
@@ -429,7 +461,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="structJMPLabelsStore.html#ac8d264e42d469a55693a7dd71a4bf70b">JMPLabelsStore()</a>, <a class="el" href="structJMPLabelsStore.html#a2fd4e86a17748c8baee34cb5e44c0466">~JMPLabelsStore()</a>, <a class="el" href="CodeAnalysis_8hpp.html#a741d17d321cfb9f97aa32bf56eb51370">analyzeLabelsErrors()</a>, <a class="el" href="CommandsParser_8hpp.html#a5f07be82b880dc88bb95bd6085e8399a">evaluateLabels()</a>, <a class="el" href="structJMPLabelsStore.html#a11ae202867bee06836e593f33f5954ae">getLabel()</a>, <a class="el" href="structJMPLabelsStore.html#a7fa654d51d71f8d0ae30af0df519a8ca">getLabelToPosition()</a>, <a class="el" href="CommandsParser_8hpp.html#ac706821978aab6d75c0e673fac677e75">labelsTableComplete()</a>, and <a class="el" href="structJMPLabelsStore.html#a2c011d9327249181f05780a91ef5b9d9">newLabel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="structJMPLabelsStore.html#ac8d264e42d469a55693a7dd71a4bf70b">JMPLabelsStore()</a>, <a class="el" href="structJMPLabelsStore.html#a2fd4e86a17748c8baee34cb5e44c0466">~JMPLabelsStore()</a>, <a class="el" href="CodeAnalysis_8hpp.html#a741d17d321cfb9f97aa32bf56eb51370">analyzeLabelsErrors()</a>, <a class="el" href="CommandsParser_8hpp.html#a5f07be82b880dc88bb95bd6085e8399a">evaluateLabels()</a>, <a class="el" href="structJMPLabelsStore.html#a11ae202867bee06836e593f33f5954ae">getLabel()</a>, <a class="el" href="structJMPLabelsStore.html#ac7bc84521393d689984fbe49b05f5012">getLabelByToPosition()</a>, <a class="el" href="structJMPLabelsStore.html#a7fa654d51d71f8d0ae30af0df519a8ca">getLabelToPosition()</a>, <a class="el" href="CommandsParser_8hpp.html#ac706821978aab6d75c0e673fac677e75">labelsTableComplete()</a>, and <a class="el" href="structJMPLabelsStore.html#a2c011d9327249181f05780a91ef5b9d9">newLabel()</a>.</p>
 
 </div>
 </div>

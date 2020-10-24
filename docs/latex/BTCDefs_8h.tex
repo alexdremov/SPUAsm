@@ -1,14 +1,16 @@
 \hypertarget{BTCDefs_8h}{}\doxysection{Soft\+Processor\+Unit/\+Syntax/\+Translation/\+Macro\+Syntax/\+B\+T\+C\+Defs.h File Reference}
 \label{BTCDefs_8h}\index{SoftProcessorUnit/Syntax/Translation/MacroSyntax/BTCDefs.h@{SoftProcessorUnit/Syntax/Translation/MacroSyntax/BTCDefs.h}}
 {\ttfamily \#include \char`\"{}Parse\+Helpers.\+hpp\char`\"{}}\newline
-Include dependency graph for B\+T\+C\+Defs.\+h\+:\nopagebreak
+Include dependency graph for B\+T\+C\+Defs.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=211pt]{BTCDefs_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -19,6 +21,8 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{BTCDefs_8h_afb07dc00b8d773f2889e83f3579b1068}{A\+D\+D\+S\+PI}}(n)~($\ast$S\+PI) += n
+\item 
+\#define \mbox{\hyperlink{BTCDefs_8h_a673fb8af507dc6377b1c213e604d67e9}{C\+O\+M\+P\+L\+E\+X\+V\+A\+L\+OK}}
 \item 
 \#define \mbox{\hyperlink{BTCDefs_8h_a2f7c8a600c42c1dfd1cd779f10aca47c}{I\+N\+C\+S\+PI}}~($\ast$S\+PI)++
 \item 
@@ -42,11 +46,35 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsubsection{\texorpdfstring{ADDSPI}{ADDSPI}}
 {\footnotesize\ttfamily \#define A\+D\+D\+S\+PI(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})~($\ast$S\+PI) += n}
 
+\mbox{\Hypertarget{BTCDefs_8h_a673fb8af507dc6377b1c213e604d67e9}\label{BTCDefs_8h_a673fb8af507dc6377b1c213e604d67e9}} 
+\index{BTCDefs.h@{BTCDefs.h}!COMPLEXVALOK@{COMPLEXVALOK}}
+\index{COMPLEXVALOK@{COMPLEXVALOK}!BTCDefs.h@{BTCDefs.h}}
+\doxysubsubsection{\texorpdfstring{COMPLEXVALOK}{COMPLEXVALOK}}
+{\footnotesize\ttfamily \#define C\+O\+M\+P\+L\+E\+X\+V\+A\+L\+OK}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{switch}(valResult) \{ \(\backslash\)}
+\DoxyCodeLine{case \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba7c553218731efc8153852484febe3d2d}{SPU\_CV\_WRONGSTRUCT}}: \(\backslash\)}
+\DoxyCodeLine{return \mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefdafaea22a9b856bcfe0ebb1485926adb06}{SPU\_DISASM\_WRONG\_CMDFORMAT}};\(\backslash\)}
+\DoxyCodeLine{case \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faebafe28959c136e1cbbe6bbef4397de1b50}{SPU\_CV\_WRONGREG}}: \(\backslash\)}
+\DoxyCodeLine{return \mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefdafaea22a9b856bcfe0ebb1485926adb06}{SPU\_DISASM\_WRONG\_CMDFORMAT}}; \(\backslash\)}
+\DoxyCodeLine{case \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba4a1f60d63bf941be38f1d6ce5112295e}{SPU\_CV\_WRONGNUM}}: \(\backslash\)}
+\DoxyCodeLine{return \mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefdafaea22a9b856bcfe0ebb1485926adb06}{SPU\_DISASM\_WRONG\_CMDFORMAT}}; \(\backslash\)}
+\DoxyCodeLine{case \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faebaaa36217cb7d15a536c7466503a96f632}{SPU\_CV\_WRONGOP}}: \(\backslash\)}
+\DoxyCodeLine{return \mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefdafaea22a9b856bcfe0ebb1485926adb06}{SPU\_DISASM\_WRONG\_CMDFORMAT}}; \(\backslash\)}
+\DoxyCodeLine{case \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba9b917da5e21d036fbc6af5d22dd64d2c}{SPU\_CV\_NOARG}}:\(\backslash\)}
+\DoxyCodeLine{return \mbox{\hyperlink{DisAssemblyDTypes_8hpp_a036295b5e6cf46921aa175807d40fefdafaea22a9b856bcfe0ebb1485926adb06}{SPU\_DISASM\_WRONG\_CMDFORMAT}}; \(\backslash\)}
+\DoxyCodeLine{case \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba5f66e97c52f7197a515c702ff8675ede}{SPU\_CV\_OK}}: \(\backslash\)}
+\DoxyCodeLine{break;\(\backslash\)}
+\DoxyCodeLine{\} \(\backslash\)}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{BTCDefs_8h_a2f7c8a600c42c1dfd1cd779f10aca47c}\label{BTCDefs_8h_a2f7c8a600c42c1dfd1cd779f10aca47c}} 
 \index{BTCDefs.h@{BTCDefs.h}!INCSPI@{INCSPI}}
 \index{INCSPI@{INCSPI}!BTCDefs.h@{BTCDefs.h}}
 \doxysubsubsection{\texorpdfstring{INCSPI}{INCSPI}}
-{\footnotesize\ttfamily \mbox{\hyperlink{EXEDefs_8h_ac852af7b539a12fedbf5453fed9a708c}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} I\+N\+C\+S\+PI~($\ast$S\+PI)++}
+{\footnotesize\ttfamily \mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} I\+N\+C\+S\+PI~($\ast$S\+PI)++}
 
 \mbox{\Hypertarget{BTCDefs_8h_a498a442635405b9571ad6912ae85a478}\label{BTCDefs_8h_a498a442635405b9571ad6912ae85a478}} 
 \index{BTCDefs.h@{BTCDefs.h}!MOVSPI@{MOVSPI}}
@@ -80,17 +108,17 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{16                                                                               \{}
-\DoxyCodeLine{17     \textcolor{keywordtype}{size\_t} neededBytes = 1;}
-\DoxyCodeLine{18     }
-\DoxyCodeLine{19     neededBytes += (size\_t)(thou-\/>\mbox{\hyperlink{structSyntaxEntity_a37a9b200016059d71f0d2116f9e96cfd}{flagBytes}});}
-\DoxyCodeLine{20     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 0; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} < strlen(thou-\/>\mbox{\hyperlink{structSyntaxEntity_a02a711b31d8895f3ffaaa71bdc6c918e}{format}}); \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++) \{}
-\DoxyCodeLine{21         \textcolor{keywordflow}{if} (thou-\/>\mbox{\hyperlink{structSyntaxEntity_a02a711b31d8895f3ffaaa71bdc6c918e}{format}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}] == \textcolor{charliteral}{'*'})}
-\DoxyCodeLine{22             neededBytes++;}
-\DoxyCodeLine{23     \}}
-\DoxyCodeLine{24     }
-\DoxyCodeLine{25     \textcolor{keywordflow}{return} \mbox{\hyperlink{BytecodeToCommand_8cpp_ab0ffc9a54e506a0006a551640cf92b63}{checkBytesEnoughNumber}}(binary, SPI, neededBytes);}
-\DoxyCodeLine{26 \}}
+\DoxyCodeLine{17                                                                               \{}
+\DoxyCodeLine{18     \textcolor{keywordtype}{size\_t} neededBytes = 1;}
+\DoxyCodeLine{19     }
+\DoxyCodeLine{20     neededBytes += (size\_t)(thou-\/>\mbox{\hyperlink{structSyntaxEntity_a37a9b200016059d71f0d2116f9e96cfd}{flagBytes}});}
+\DoxyCodeLine{21     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 0; \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} < strlen(thou-\/>\mbox{\hyperlink{structSyntaxEntity_a02a711b31d8895f3ffaaa71bdc6c918e}{format}}); \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++) \{}
+\DoxyCodeLine{22         \textcolor{keywordflow}{if} (thou-\/>\mbox{\hyperlink{structSyntaxEntity_a02a711b31d8895f3ffaaa71bdc6c918e}{format}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}] == \textcolor{charliteral}{'*'})}
+\DoxyCodeLine{23             neededBytes++;}
+\DoxyCodeLine{24     \}}
+\DoxyCodeLine{25     }
+\DoxyCodeLine{26     \textcolor{keywordflow}{return} \mbox{\hyperlink{BytecodeToCommand_8cpp_ab0ffc9a54e506a0006a551640cf92b63}{checkBytesEnoughNumber}}(binary, SPI, neededBytes);}
+\DoxyCodeLine{27 \}}
 
 \end{DoxyCode}
 
@@ -112,11 +140,11 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{28                                                                               \{}
-\DoxyCodeLine{29     \textcolor{keywordflow}{if} (SPI + bytes > binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}} + binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}})}
-\DoxyCodeLine{30         \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{31     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{32 \}}
+\DoxyCodeLine{29                                                                               \{}
+\DoxyCodeLine{30     \textcolor{keywordflow}{if} (SPI + bytes > binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a5a2cf3ef6bbd4fa8beb8f39b1c383c92}{code}} + binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a3e976fdc373fa869cdc9bc127239ac97}{currentSize}})}
+\DoxyCodeLine{31         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{32     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{33 \}}
 
 \end{DoxyCode}
 
@@ -127,7 +155,8 @@ References Binary\+File\+::code, and Binary\+File\+::current\+Size.
 
 Referenced by check\+Bytes\+Enough(), and O\+P\+B\+A\+C\+K\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+N\+C().
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

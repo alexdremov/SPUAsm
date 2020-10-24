@@ -23,11 +23,11 @@
     if (compileParams->lstFile != NULL){\
     fprintf(compileParams->lstFile, "%-5zu -> %5zu | ", starting + binary->codeOffset, ending + binary->codeOffset - 1);\
     fprintf(compileParams->lstFile, "%-3zu | ", ending - starting);\
-    char* dumpedOp = (char*)calloc(50, 1);\
+    char* dumpedOp = (char*)calloc(150, 1);\
     char* curPtr = dumpedOp;\
     sprintf(curPtr, "%s  ", argv[0]);\
     curPtr += strlen(argv[0]) + 1;\
-    for (int i = 1; i < argc; i++) {sprintf(curPtr, "<%s>", argv[i]); curPtr += strlen(argv[i]) + 1;}\
+    for (int i = 1; i < argc; i++) {sprintf(curPtr, "<%s>", argv[i]); curPtr += strlen(argv[i]) + 2;}\
     fprintf(compileParams->lstFile, "%-25s | ", dumpedOp);\
     free(dumpedOp);\
     DUMPCODEBLOCKHEX\
@@ -56,7 +56,7 @@ if (assignable != 1) return SPU_CTB_NONASSIGNABLE; \
 writeComplexArg(&val, binary);\
 }}}) return SPU_CTB_OK;\
 
-
+#undef COMPLEXVALOK
 #define COMPLEXVALOK switch(val.success) { \
 case SPU_CV_WRONGSTRUCT: \
     return SPU_CTB_INVALID_ARGSTRUCTURE;\

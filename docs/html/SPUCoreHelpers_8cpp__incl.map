@@ -1,10 +1,11 @@
 <map id="SoftProcessorUnit/SPU/Core/SPUCoreHelpers.cpp" name="SoftProcessorUnit/SPU/Core/SPUCoreHelpers.cpp">
 <area shape="rect" id="node1" title=" " alt="" coords="155,5,339,47"/>
 <area shape="rect" id="node2" href="$SPUCoreHelpers_8hpp.html" title=" " alt="" coords="16,95,164,121"/>
-<area shape="rect" id="node7" href="$SPUVersion_8hpp.html" title=" " alt="" coords="188,95,307,121"/>
-<area shape="rect" id="node8" title=" " alt="" coords="331,95,393,121"/>
+<area shape="rect" id="node8" href="$SPUVersion_8hpp.html" title=" " alt="" coords="188,95,307,121"/>
+<area shape="rect" id="node9" title=" " alt="" coords="331,95,393,121"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,169,63,196"/>
 <area shape="rect" id="node4" href="$SPUDtypes_8hpp.html" title=" " alt="" coords="87,169,205,196"/>
 <area shape="rect" id="node5" href="$StackRigid_8h.html" title=" " alt="" coords="97,244,195,271"/>
-<area shape="rect" id="node6" title=" " alt="" coords="114,319,178,345"/>
+<area shape="rect" id="node6" title=" " alt="" coords="71,319,135,345"/>
+<area shape="rect" id="node7" title=" " alt="" coords="159,319,221,345"/>
 </map>

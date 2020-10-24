@@ -81,28 +81,32 @@ $(function() {
 Include dependency graph for SPUAssembly.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="SPUAssembly_8cpp__incl.png" border="0" usemap="#aSoftProcessorUnit_2Assembly_2SPUAssembly_8cpp" alt=""/></div>
-<map name="SoftProcessorUnit_2Assembly_2SPUAssembly_8cpp" id="SoftProcessorUnit_2Assembly_2SPUAssembly_8cpp">
-<area shape="rect" title=" " alt="" coords="170,5,361,47"/>
-<area shape="rect" title=" " alt="" coords="847,692,905,719"/>
-<area shape="rect" href="Syntax_8hpp.html" title=" " alt="" coords="512,169,600,196"/>
-<area shape="rect" href="AssemblyHelpers_8hpp.html" title=" " alt="" coords="317,468,467,495"/>
-<area shape="rect" href="CommandsParser_8hpp.html" title=" " alt="" coords="203,319,354,345"/>
-<area shape="rect" href="SPUVersion_8hpp.html" title=" " alt="" coords="557,95,675,121"/>
-<area shape="rect" href="CodeAnalysis_8hpp.html" title=" " alt="" coords="404,95,532,121"/>
-<area shape="rect" title=" " alt="" coords="478,543,538,569"/>
-<area shape="rect" href="TranslationDTypes_8hpp.html" title=" " alt="" coords="797,468,953,495"/>
-<area shape="rect" href="CommandToBytecode_8hpp.html" title=" " alt="" coords="837,244,1013,271"/>
-<area shape="rect" href="BytecodeToCommand_8hpp.html" title=" " alt="" coords="531,244,707,271"/>
-<area shape="rect" href="AssemblyDTypes_8hpp.html" title=" " alt="" coords="683,543,834,569"/>
-<area shape="rect" href="LabelsStore_8hpp.html" title=" " alt="" coords="701,617,817,644"/>
-<area shape="rect" href="CTBDefs_8h.html" title=" " alt="" coords="912,393,1000,420"/>
-<area shape="rect" href="CTB_8h.html" title=" " alt="" coords="1014,319,1074,345"/>
-<area shape="rect" href="DisAssemblyDTypes_8hpp.html" title=" " alt="" coords="667,319,837,345"/>
-<area shape="rect" href="BTC_8h.html" title=" " alt="" coords="582,319,642,345"/>
-<area shape="rect" href="CommandsDTypes_8hpp.html" title=" " alt="" coords="145,393,303,420"/>
-<area shape="rect" href="BTCDefs_8h.html" title=" " alt="" coords="581,393,669,420"/>
-<area shape="rect" href="ParseHelpers_8hpp.html" title=" " alt="" coords="562,468,689,495"/>
-<area shape="rect" href="StringDistance_8hpp.html" title=" " alt="" coords="1135,617,1268,644"/>
+<map name="SoftProcessorUnit_2Assembly_2SPUAssembly_8cpp" id="aSoftProcessorUnit_2Assembly_2SPUAssembly_8cpp">
+<area shape="rect" title=" " alt="" coords="474,5,665,47"/>
+<area shape="rect" title=" " alt="" coords="265,692,322,719"/>
+<area shape="rect" href="Syntax_8hpp.html" title=" " alt="" coords="615,169,703,196"/>
+<area shape="rect" href="AssemblyHelpers_8hpp.html" title=" " alt="" coords="446,468,597,495"/>
+<area shape="rect" href="CommandsParser_8hpp.html" title=" " alt="" coords="242,393,393,420"/>
+<area shape="rect" href="SPUVersion_8hpp.html" title=" " alt="" coords="1142,95,1261,121"/>
+<area shape="rect" href="CodeAnalysis_8hpp.html" title=" " alt="" coords="367,95,495,121"/>
+<area shape="rect" title=" " alt="" coords="491,543,551,569"/>
+<area shape="rect" href="TranslationDTypes_8hpp.html" title=" " alt="" coords="859,468,1015,495"/>
+<area shape="rect" href="CommandToBytecode_8hpp.html" title=" " alt="" coords="831,244,1007,271"/>
+<area shape="rect" href="BytecodeToCommand_8hpp.html" title=" " alt="" coords="620,319,796,345"/>
+<area shape="rect" href="AssemblyDTypes_8hpp.html" title=" " alt="" coords="317,543,467,569"/>
+<area shape="rect" href="LabelsStore_8hpp.html" title=" " alt="" coords="299,617,415,644"/>
+<area shape="rect" href="ParseHelpers_8hpp.html" title=" " alt="" coords="585,617,711,644"/>
+<area shape="rect" href="SPUDtypes_8hpp.html" title=" " alt="" coords="589,692,707,719"/>
+<area shape="rect" href="StackRigid_8h.html" title=" " alt="" coords="599,767,697,793"/>
+<area shape="rect" title=" " alt="" coords="573,841,637,868"/>
+<area shape="rect" title=" " alt="" coords="661,841,723,868"/>
+<area shape="rect" href="CTBDefs_8h.html" title=" " alt="" coords="909,393,997,420"/>
+<area shape="rect" href="CTB_8h.html" title=" " alt="" coords="875,319,935,345"/>
+<area shape="rect" href="DisAssemblyDTypes_8hpp.html" title=" " alt="" coords="576,543,747,569"/>
+<area shape="rect" href="BTC_8h.html" title=" " alt="" coords="723,393,783,420"/>
+<area shape="rect" href="CommandsDTypes_8hpp.html" title=" " alt="" coords="211,468,370,495"/>
+<area shape="rect" href="BTCDefs_8h.html" title=" " alt="" coords="771,543,859,569"/>
+<area shape="rect" href="StringDistance_8hpp.html" title=" " alt="" coords="5,244,139,271"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -143,7 +147,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> parsingResult = <a class="code" href="AssemblyHelpers_8cpp.html#a6c4bb8a89afb60b2164c352fec284d61">parseArgs</a>(argc, argv, &amp;compileParams);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span> (parsingResult != EXIT_SUCCESS) {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        printf(<span class="stringliteral">&quot;error: assembly: process finished with EXIT_FAILURE code\n&quot;</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf</a>(<span class="stringliteral">&quot;error: assembly: process finished with EXIT_FAILURE code\n&quot;</span>);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
@@ -177,17 +181,17 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                            codeLen);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span> (parseRes != <a class="code" href="CommandsDTypes_8hpp.html#a014dc28c49852c3fac1fa3cd2a95c0d5aa4efc8f9e76b32072d33a7d67f856d99">SPU_PARSE_OK</a>){</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        printf(<span class="stringliteral">&quot;%s: error: assembly: syntax error\n&quot;</span>, compileParams.<a class="code" href="AssemblyDTypes_8hpp.html#a0a2789916bd42777c9359d5ce15812f6">inputFileName</a>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        printf(<span class="stringliteral">&quot;%s: error: assembly: process finished with EXIT_FAILURE code\n&quot;</span>, compileParams.<a class="code" href="AssemblyDTypes_8hpp.html#a0a2789916bd42777c9359d5ce15812f6">inputFileName</a>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf</a>(<span class="stringliteral">&quot;%s: error: assembly: syntax error\n&quot;</span>, compileParams.<a class="code" href="AssemblyDTypes_8hpp.html#a0a2789916bd42777c9359d5ce15812f6">inputFileName</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf</a>(<span class="stringliteral">&quot;%s: error: assembly: process finished with EXIT_FAILURE code\n&quot;</span>, compileParams.<a class="code" href="AssemblyDTypes_8hpp.html#a0a2789916bd42777c9359d5ce15812f6">inputFileName</a>);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (compileParams.<a class="code" href="AssemblyDTypes_8hpp.html#a3998875859d91d9614897720dd09aa3a">verbose</a>){</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        printf(<span class="stringliteral">&quot;Generated code: \n&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf</a>(<span class="stringliteral">&quot;Generated code: \n&quot;</span>);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a> = 0; <a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a> &lt; binary-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#a3e976fdc373fa869cdc9bc127239ac97">currentSize</a>; <a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>++) {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            printf(<span class="stringliteral">&quot;%d &quot;</span>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)binary-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#a5a2cf3ef6bbd4fa8beb8f39b1c383c92">code</a>[<a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>]);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf</a>(<span class="stringliteral">&quot;%d &quot;</span>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)binary-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#a5a2cf3ef6bbd4fa8beb8f39b1c383c92">code</a>[<a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>]);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf</a>(<span class="stringliteral">&quot;\n&quot;</span>);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="CommandsParser_8cpp.html#aede32224521297426a2cfad5d4798384">codeEstimations</a>(binary, code);</div>
@@ -198,85 +202,88 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="AssemblyHelpers_8cpp.html#aae008dee6c0428e3c3b6c38284f0e80e">DestructAssemblyParams</a>(&amp;compileParams);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="AssemblyDTypes_8hpp.html#a5a2cf3ef6bbd4fa8beb8f39b1c383c92">BinaryFile::code</a>, <a class="el" href="CommandsParser_8cpp.html#aede32224521297426a2cfad5d4798384">codeEstimations()</a>, <a class="el" href="AssemblyDTypes_8hpp.html#a616b2e98d89547438c5461468f8bef6d">AssemblyParams::codeText</a>, <a class="el" href="AssemblyDTypes_8hpp.html#a3e976fdc373fa869cdc9bc127239ac97">BinaryFile::currentSize</a>, <a class="el" href="AssemblyHelpers_8cpp.html#aae008dee6c0428e3c3b6c38284f0e80e">DestructAssemblyParams()</a>, <a class="el" href="AssemblyHelpers_8cpp.html#a8384d0729973f2658ba4e29f66c9a7c7">DestructBinaryFile()</a>, <a class="el" href="AssemblyHelpers_8cpp.html#a04a770d2b12f163bef10636bfd299fde">flushBinFile()</a>, <a class="el" href="CodeAnalysis_8cpp.html#adc769d122142b2a70d004f1c82ca813d">generateErrors()</a>, <a class="el" href="CommandsParser_8cpp.html#ac4f89e7dbcbb5986315038db16ad2371">getSourceFileData()</a>, <a class="el" href="Syntax_8cpp.html#ad8883fa3c572ab45fa3459a378708afd">getSyntaxMapping()</a>, <a class="el" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>, <a class="el" href="AssemblyDTypes_8hpp.html#afdd5808979159dbc6eb8695b8baec28e">AssemblyParams::inputFile</a>, <a class="el" href="AssemblyDTypes_8hpp.html#a0a2789916bd42777c9359d5ce15812f6">AssemblyParams::inputFileName</a>, <a class="el" href="AssemblyHelpers_8cpp.html#ad7b5ac9bb1240c1f507b4564bc0778fc">NewBinaryFile()</a>, <a class="el" href="AssemblyDTypes_8hpp.html#ac0b48ee74ddc9903ff9585e3cc8c8851">AssemblyParams::outputFile</a>, <a class="el" href="AssemblyHelpers_8cpp.html#a6c4bb8a89afb60b2164c352fec284d61">parseArgs()</a>, <a class="el" href="CommandsParser_8cpp.html#a9f77310758d1c97d9ea9e1bb83779d5f">parseCode()</a>, <a class="el" href="AssemblyDTypes_8hpp.html#a8fa74a2c523da8c898363c84e5358a85">AssemblyParams::prepFile</a>, <a class="el" href="CommandsParser_8cpp.html#a9c053f5b726840410e982bf98a5dc7ec">preprocessSource()</a>, <a class="el" href="AssemblyHelpers_8cpp.html#a76bb301072f1ce35898cbd2ef5195831">printAssemblyVersion()</a>, <a class="el" href="CommandsParser_8cpp.html#a0f8de65651301114bc7782475cc6ff79">removeDoubleWhitespaces()</a>, <a class="el" href="CommandsDTypes_8hpp.html#a014dc28c49852c3fac1fa3cd2a95c0d5aa4efc8f9e76b32072d33a7d67f856d99">SPU_PARSE_OK</a>, and <a class="el" href="AssemblyDTypes_8hpp.html#a3998875859d91d9614897720dd09aa3a">AssemblyParams::verbose</a>.</p>
+<p class="reference">References <a class="el" href="AssemblyDTypes_8hpp.html#a5a2cf3ef6bbd4fa8beb8f39b1c383c92">BinaryFile::code</a>, <a class="el" href="CommandsParser_8cpp.html#aede32224521297426a2cfad5d4798384">codeEstimations()</a>, <a class="el" href="AssemblyDTypes_8hpp.html#a616b2e98d89547438c5461468f8bef6d">AssemblyParams::codeText</a>, <a class="el" href="AssemblyDTypes_8hpp.html#a3e976fdc373fa869cdc9bc127239ac97">BinaryFile::currentSize</a>, <a class="el" href="AssemblyHelpers_8cpp.html#aae008dee6c0428e3c3b6c38284f0e80e">DestructAssemblyParams()</a>, <a class="el" href="AssemblyHelpers_8cpp.html#a8384d0729973f2658ba4e29f66c9a7c7">DestructBinaryFile()</a>, <a class="el" href="AssemblyHelpers_8cpp.html#a04a770d2b12f163bef10636bfd299fde">flushBinFile()</a>, <a class="el" href="CodeAnalysis_8cpp.html#adc769d122142b2a70d004f1c82ca813d">generateErrors()</a>, <a class="el" href="CommandsParser_8cpp.html#ac4f89e7dbcbb5986315038db16ad2371">getSourceFileData()</a>, <a class="el" href="Syntax_8cpp.html#ad8883fa3c572ab45fa3459a378708afd">getSyntaxMapping()</a>, <a class="el" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>, <a class="el" href="AssemblyDTypes_8hpp.html#afdd5808979159dbc6eb8695b8baec28e">AssemblyParams::inputFile</a>, <a class="el" href="AssemblyDTypes_8hpp.html#a0a2789916bd42777c9359d5ce15812f6">AssemblyParams::inputFileName</a>, <a class="el" href="AssemblyHelpers_8cpp.html#ad7b5ac9bb1240c1f507b4564bc0778fc">NewBinaryFile()</a>, <a class="el" href="AssemblyDTypes_8hpp.html#ac0b48ee74ddc9903ff9585e3cc8c8851">AssemblyParams::outputFile</a>, <a class="el" href="AssemblyHelpers_8cpp.html#a6c4bb8a89afb60b2164c352fec284d61">parseArgs()</a>, <a class="el" href="CommandsParser_8cpp.html#a9f77310758d1c97d9ea9e1bb83779d5f">parseCode()</a>, <a class="el" href="AssemblyDTypes_8hpp.html#a8fa74a2c523da8c898363c84e5358a85">AssemblyParams::prepFile</a>, <a class="el" href="CommandsParser_8cpp.html#a9c053f5b726840410e982bf98a5dc7ec">preprocessSource()</a>, <a class="el" href="AssemblyHelpers_8cpp.html#a76bb301072f1ce35898cbd2ef5195831">printAssemblyVersion()</a>, <a class="el" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf()</a>, <a class="el" href="CommandsParser_8cpp.html#a0f8de65651301114bc7782475cc6ff79">removeDoubleWhitespaces()</a>, <a class="el" href="CommandsDTypes_8hpp.html#a014dc28c49852c3fac1fa3cd2a95c0d5aa4efc8f9e76b32072d33a7d67f856d99">SPU_PARSE_OK</a>, and <a class="el" href="AssemblyDTypes_8hpp.html#a3998875859d91d9614897720dd09aa3a">AssemblyParams::verbose</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="SPUAssembly_8cpp_ac0f2228420376f4db7e1274f2b41667c_cgraph.png" border="0" usemap="#aSPUAssembly_8cpp_ac0f2228420376f4db7e1274f2b41667c_cgraph" alt=""/></div>
-<map name="SPUAssembly_8cpp_ac0f2228420376f4db7e1274f2b41667c_cgraph" id="SPUAssembly_8cpp_ac0f2228420376f4db7e1274f2b41667c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,309,56,336"/>
+<map name="SPUAssembly_8cpp_ac0f2228420376f4db7e1274f2b41667c_cgraph" id="aSPUAssembly_8cpp_ac0f2228420376f4db7e1274f2b41667c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,385,56,412"/>
 <area shape="rect" href="CommandsParser_8cpp.html#aede32224521297426a2cfad5d4798384" title=" " alt="" coords="132,5,251,32"/>
 <area shape="rect" href="AssemblyHelpers_8cpp.html#aae008dee6c0428e3c3b6c38284f0e80e" title=" " alt="" coords="104,56,279,83"/>
-<area shape="rect" href="AssemblyHelpers_8cpp.html#a8384d0729973f2658ba4e29f66c9a7c7" title=" " alt="" coords="360,157,491,184"/>
-<area shape="rect" href="AssemblyHelpers_8cpp.html#a04a770d2b12f163bef10636bfd299fde" title=" " alt="" coords="146,309,237,336"/>
-<area shape="rect" href="CodeAnalysis_8cpp.html#adc769d122142b2a70d004f1c82ca813d" title=" " alt="" coords="138,208,245,235"/>
-<area shape="rect" href="AssemblyHelpers_8cpp.html#ad7b5ac9bb1240c1f507b4564bc0778fc" title=" " alt="" coords="372,360,479,387"/>
-<area shape="rect" href="CommandsParser_8cpp.html#ac4f89e7dbcbb5986315038db16ad2371" title=" " alt="" coords="126,360,257,387"/>
-<area shape="rect" href="Syntax_8cpp.html#ad8883fa3c572ab45fa3459a378708afd" title=" " alt="" coords="126,411,257,437"/>
-<area shape="rect" href="AssemblyHelpers_8cpp.html#a6c4bb8a89afb60b2164c352fec284d61" title=" " alt="" coords="151,461,232,488"/>
-<area shape="rect" href="CommandsParser_8cpp.html#a9f77310758d1c97d9ea9e1bb83779d5f" title=" " alt="" coords="149,107,234,133"/>
-<area shape="rect" href="CommandsParser_8cpp.html#a9c053f5b726840410e982bf98a5dc7ec" title=" " alt="" coords="128,563,255,589"/>
-<area shape="rect" href="CommandsParser_8cpp.html#a0f8de65651301114bc7782475cc6ff79" title=" " alt="" coords="334,512,517,539"/>
-<area shape="rect" href="AssemblyHelpers_8cpp.html#a76bb301072f1ce35898cbd2ef5195831" title=" " alt="" coords="117,613,266,640"/>
-<area shape="rect" href="CodeAnalysis_8cpp.html#a66a44b980a24ff0e0579f7de4f7cdc95" title=" " alt="" coords="344,259,507,285"/>
-<area shape="rect" href="CodeAnalysis_8cpp.html#a741d17d321cfb9f97aa32bf56eb51370" title=" " alt="" coords="355,309,495,336"/>
-<area shape="rect" href="CommandsParser_8cpp.html#ac706821978aab6d75c0e673fac677e75" title=" " alt="" coords="354,208,497,235"/>
-<area shape="rect" href="CodeAnalysis_8cpp.html#a57fe90fac2ee85896e2daa97406b8e12" title=" " alt="" coords="585,335,728,361"/>
-<area shape="rect" href="CommandsParser_8cpp.html#a2d524ace1c28ad2095fd220f34a2f929" title=" " alt="" coords="601,233,712,260"/>
-<area shape="rect" href="CommandsParser_8cpp.html#a11175231a266da4b41b7e1e1f2bf2a3a" title=" " alt="" coords="614,183,699,209"/>
-<area shape="rect" href="CommandsParser_8cpp.html#a4a20084f6e89bbc776e21d9adc16af7c" title=" " alt="" coords="616,31,697,57"/>
-<area shape="rect" href="CommandsParser_8cpp.html#a609cbe8a40a0ba73594e8b89f570b074" title=" " alt="" coords="572,81,741,108"/>
-<area shape="rect" href="CommandsParser_8cpp.html#ac0521cbcbec1bbac34e44d3051b24915" title=" " alt="" coords="834,284,919,311"/>
-<area shape="rect" href="CommandsParser_8cpp.html#a63dde4ce36e120b062e0bc7127eb4ab4" title=" " alt="" coords="609,132,704,159"/>
-<area shape="rect" href="CodeAnalysis_8cpp.html#ae2de998c4ba5a28831558e04eae31c00" title=" " alt="" coords="601,385,712,412"/>
-<area shape="rect" href="StringDistance_8cpp.html#aefb44f0d50d4ec3baf6a3346a1f0577d" title=" " alt="" coords="805,335,949,361"/>
-<area shape="rect" href="StringDistance_8cpp.html#a3b12d839051fb92dc0afd38445dafdec" title=" " alt="" coords="1037,315,1168,357"/>
-<area shape="rect" href="StringDistance_8cpp.html#abaef3a4815c6d37d86b010afa8083f42" title=" " alt="" coords="1037,381,1168,422"/>
-<area shape="rect" href="StringDistance_8cpp.html#a433d5257dea0796eeca004cb2549a013" title=" " alt="" coords="1241,323,1292,349"/>
-<area shape="rect" href="Syntax_8cpp.html#a76535d86348655e2d276eddf51dd809f" title=" " alt="" coords="793,233,960,260"/>
-<area shape="rect" href="structJMPLabelsStore.html#a2c011d9327249181f05780a91ef5b9d9" title=" " alt="" coords="1012,252,1193,279"/>
-<area shape="rect" href="structJMPLabelsStore.html#adc8bdb4dfb06275a44fa33811a5e008a" title=" " alt="" coords="789,146,964,187"/>
-<area shape="rect" href="structJMPLabelsStore.html#a11ae202867bee06836e593f33f5954ae" title=" " alt="" coords="1015,179,1190,205"/>
-<area shape="rect" href="structJMPLabel.html#a29e184f855c89c13698cacb3b1a82827" title=" " alt="" coords="1031,128,1174,155"/>
-<area shape="rect" href="CodeAnalysis_8cpp.html#ae355394eccd800f4a5026180415a93fd" title=" " alt="" coords="843,385,910,412"/>
-<area shape="rect" href="CodeAnalysis_8cpp.html#aab15e5719e1f19f1edd3ab0b15cb6335" title=" " alt="" coords="580,436,733,463"/>
-<area shape="rect" href="AssemblyHelpers_8cpp.html#ae88ab93d0f7a91de8f099375012b69f1" title=" " alt="" coords="345,461,505,488"/>
-<area shape="rect" href="CommandsParser_8cpp.html#aea7d9cd65610cbe3c3b768677f857fbd" title=" " alt="" coords="365,56,486,83"/>
-<area shape="rect" href="CommandsParser_8cpp.html#ab7c640fc2a8dcec923fa8ffb2844da87" title=" " alt="" coords="368,107,483,133"/>
-<area shape="rect" href="CommandsParser_8cpp.html#af1235b39d424529890580e134c7b3138" title=" " alt="" coords="327,563,524,589"/>
+<area shape="rect" href="AssemblyHelpers_8cpp.html#a8384d0729973f2658ba4e29f66c9a7c7" title=" " alt="" coords="377,360,507,387"/>
+<area shape="rect" href="AssemblyHelpers_8cpp.html#a04a770d2b12f163bef10636bfd299fde" title=" " alt="" coords="146,613,237,640"/>
+<area shape="rect" href="CodeAnalysis_8cpp.html#adc769d122142b2a70d004f1c82ca813d" title=" " alt="" coords="138,461,245,488"/>
+<area shape="rect" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea" title=" " alt="" coords="665,259,715,285"/>
+<area shape="rect" href="AssemblyHelpers_8cpp.html#ad7b5ac9bb1240c1f507b4564bc0778fc" title=" " alt="" coords="389,411,495,437"/>
+<area shape="rect" href="CommandsParser_8cpp.html#ac4f89e7dbcbb5986315038db16ad2371" title=" " alt="" coords="126,664,257,691"/>
+<area shape="rect" href="Syntax_8cpp.html#ad8883fa3c572ab45fa3459a378708afd" title=" " alt="" coords="126,715,257,741"/>
+<area shape="rect" href="AssemblyHelpers_8cpp.html#a6c4bb8a89afb60b2164c352fec284d61" title=" " alt="" coords="151,107,232,133"/>
+<area shape="rect" href="CommandsParser_8cpp.html#a9f77310758d1c97d9ea9e1bb83779d5f" title=" " alt="" coords="149,309,234,336"/>
+<area shape="rect" href="CommandsParser_8cpp.html#a9c053f5b726840410e982bf98a5dc7ec" title=" " alt="" coords="128,512,255,539"/>
+<area shape="rect" href="CommandsParser_8cpp.html#a0f8de65651301114bc7782475cc6ff79" title=" " alt="" coords="351,765,533,792"/>
+<area shape="rect" href="AssemblyHelpers_8cpp.html#a76bb301072f1ce35898cbd2ef5195831" title=" " alt="" coords="117,233,266,260"/>
+<area shape="rect" href="CodeAnalysis_8cpp.html#a66a44b980a24ff0e0579f7de4f7cdc95" title=" " alt="" coords="361,613,523,640"/>
+<area shape="rect" href="CodeAnalysis_8cpp.html#a741d17d321cfb9f97aa32bf56eb51370" title=" " alt="" coords="372,512,512,539"/>
+<area shape="rect" href="CommandsParser_8cpp.html#ac706821978aab6d75c0e673fac677e75" title=" " alt="" coords="371,461,513,488"/>
+<area shape="rect" href="CommandsParser_8cpp.html#aee32fc0d000b115fad30ba77bde880b1" title=" " alt="" coords="327,664,557,691"/>
+<area shape="rect" href="CommandsParser_8cpp.html#af1235b39d424529890580e134c7b3138" title=" " alt="" coords="343,715,541,741"/>
+<area shape="rect" href="CodeAnalysis_8cpp.html#a57fe90fac2ee85896e2daa97406b8e12" title=" " alt="" coords="619,777,761,804"/>
+<area shape="rect" href="CommandsParser_8cpp.html#a2d524ace1c28ad2095fd220f34a2f929" title=" " alt="" coords="635,551,745,577"/>
+<area shape="rect" href="CommandsParser_8cpp.html#a11175231a266da4b41b7e1e1f2bf2a3a" title=" " alt="" coords="647,449,733,476"/>
+<area shape="rect" href="CommandsParser_8cpp.html#a4a20084f6e89bbc776e21d9adc16af7c" title=" " alt="" coords="649,625,731,652"/>
+<area shape="rect" href="CommandsParser_8cpp.html#a609cbe8a40a0ba73594e8b89f570b074" title=" " alt="" coords="605,676,775,703"/>
+<area shape="rect" href="CommandsParser_8cpp.html#ac0521cbcbec1bbac34e44d3051b24915" title=" " alt="" coords="867,668,953,695"/>
+<area shape="rect" href="CommandsParser_8cpp.html#a63dde4ce36e120b062e0bc7127eb4ab4" title=" " alt="" coords="643,500,737,527"/>
+<area shape="rect" href="CodeAnalysis_8cpp.html#ae2de998c4ba5a28831558e04eae31c00" title=" " alt="" coords="635,828,745,855"/>
+<area shape="rect" href="StringDistance_8cpp.html#aefb44f0d50d4ec3baf6a3346a1f0577d" title=" " alt="" coords="838,777,982,804"/>
+<area shape="rect" href="StringDistance_8cpp.html#a3b12d839051fb92dc0afd38445dafdec" title=" " alt="" coords="1071,803,1201,845"/>
+<area shape="rect" href="StringDistance_8cpp.html#abaef3a4815c6d37d86b010afa8083f42" title=" " alt="" coords="1071,738,1201,779"/>
+<area shape="rect" href="StringDistance_8cpp.html#a433d5257dea0796eeca004cb2549a013" title=" " alt="" coords="1275,811,1325,837"/>
+<area shape="rect" href="Syntax_8cpp.html#a76535d86348655e2d276eddf51dd809f" title=" " alt="" coords="827,559,993,585"/>
+<area shape="rect" href="structJMPLabelsStore.html#a2c011d9327249181f05780a91ef5b9d9" title=" " alt="" coords="1045,621,1227,648"/>
+<area shape="rect" href="structJMPLabelsStore.html#adc8bdb4dfb06275a44fa33811a5e008a" title=" " alt="" coords="823,493,997,534"/>
+<area shape="rect" href="structJMPLabelsStore.html#a11ae202867bee06836e593f33f5954ae" title=" " alt="" coords="1049,525,1223,552"/>
+<area shape="rect" href="structJMPLabel.html#a29e184f855c89c13698cacb3b1a82827" title=" " alt="" coords="1065,475,1207,501"/>
+<area shape="rect" href="CodeAnalysis_8cpp.html#ae355394eccd800f4a5026180415a93fd" title=" " alt="" coords="877,828,943,855"/>
+<area shape="rect" href="CodeAnalysis_8cpp.html#aab15e5719e1f19f1edd3ab0b15cb6335" title=" " alt="" coords="613,399,767,425"/>
+<area shape="rect" href="AssemblyHelpers_8cpp.html#ae88ab93d0f7a91de8f099375012b69f1" title=" " alt="" coords="362,56,522,83"/>
+<area shape="rect" href="CommandsParser_8cpp.html#aea7d9cd65610cbe3c3b768677f857fbd" title=" " alt="" coords="381,259,503,285"/>
+<area shape="rect" href="CommandsParser_8cpp.html#ab7c640fc2a8dcec923fa8ffb2844da87" title=" " alt="" coords="385,563,499,589"/>
 </map>
 </div>
 
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aAssemblyDTypes_8hpp_html_a5a2cf3ef6bbd4fa8beb8f39b1c383c92"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a5a2cf3ef6bbd4fa8beb8f39b1c383c92">BinaryFile::code</a></div><div class="ttdeci">char * code</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:42</div></div>
-<div class="ttc" id="aAssemblyDTypes_8hpp_html_structBinaryFile"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#structBinaryFile">BinaryFile</a></div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:34</div></div>
+<div class="ttc" id="aAssemblyDTypes_8hpp_html_a5a2cf3ef6bbd4fa8beb8f39b1c383c92"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a5a2cf3ef6bbd4fa8beb8f39b1c383c92">BinaryFile::code</a></div><div class="ttdeci">char * code</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:43</div></div>
+<div class="ttc" id="aAssemblyDTypes_8hpp_html_structBinaryFile"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#structBinaryFile">BinaryFile</a></div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:35</div></div>
 <div class="ttc" id="aAssemblyHelpers_8cpp_html_a8384d0729973f2658ba4e29f66c9a7c7"><div class="ttname"><a href="AssemblyHelpers_8cpp.html#a8384d0729973f2658ba4e29f66c9a7c7">DestructBinaryFile</a></div><div class="ttdeci">void DestructBinaryFile(BinaryFile *binFile)</div><div class="ttdef"><b>Definition:</b> AssemblyHelpers.cpp:193</div></div>
+<div class="ttc" id="aEXE_8h_html_ab99234c936a3345fdf76f51743a997ea"><div class="ttname"><a href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf</a></div><div class="ttdeci">printf(&quot;%lf\n&quot;, value)</div></div>
 <div class="ttc" id="aAssemblyHelpers_8cpp_html_aae008dee6c0428e3c3b6c38284f0e80e"><div class="ttname"><a href="AssemblyHelpers_8cpp.html#aae008dee6c0428e3c3b6c38284f0e80e">DestructAssemblyParams</a></div><div class="ttdeci">void DestructAssemblyParams(AssemblyParams *params)</div><div class="ttdef"><b>Definition:</b> AssemblyHelpers.cpp:199</div></div>
-<div class="ttc" id="aAssemblyDTypes_8hpp_html_a3998875859d91d9614897720dd09aa3a"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a3998875859d91d9614897720dd09aa3a">AssemblyParams::verbose</a></div><div class="ttdeci">int verbose</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:31</div></div>
-<div class="ttc" id="aCommandsParser_8cpp_html_a9c053f5b726840410e982bf98a5dc7ec"><div class="ttname"><a href="CommandsParser_8cpp.html#a9c053f5b726840410e982bf98a5dc7ec">preprocessSource</a></div><div class="ttdeci">void preprocessSource(char *code, size_t *length)</div><div class="ttdef"><b>Definition:</b> CommandsParser.cpp:46</div></div>
+<div class="ttc" id="aAssemblyDTypes_8hpp_html_a3998875859d91d9614897720dd09aa3a"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a3998875859d91d9614897720dd09aa3a">AssemblyParams::verbose</a></div><div class="ttdeci">int verbose</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:32</div></div>
+<div class="ttc" id="aCommandsParser_8cpp_html_a9c053f5b726840410e982bf98a5dc7ec"><div class="ttname"><a href="CommandsParser_8cpp.html#a9c053f5b726840410e982bf98a5dc7ec">preprocessSource</a></div><div class="ttdeci">void preprocessSource(char *code, size_t *length)</div><div class="ttdef"><b>Definition:</b> CommandsParser.cpp:47</div></div>
 <div class="ttc" id="aCommandsDTypes_8hpp_html_a014dc28c49852c3fac1fa3cd2a95c0d5aa4efc8f9e76b32072d33a7d67f856d99"><div class="ttname"><a href="CommandsDTypes_8hpp.html#a014dc28c49852c3fac1fa3cd2a95c0d5aa4efc8f9e76b32072d33a7d67f856d99">SPU_PARSE_OK</a></div><div class="ttdeci">@ SPU_PARSE_OK</div><div class="ttdef"><b>Definition:</b> CommandsDTypes.hpp:13</div></div>
-<div class="ttc" id="aSyntax_8hpp_html_structSyntaxMapping"><div class="ttname"><a href="Syntax_8hpp.html#structSyntaxMapping">SyntaxMapping</a></div><div class="ttdef"><b>Definition:</b> Syntax.hpp:36</div></div>
-<div class="ttc" id="aAssemblyDTypes_8hpp_html_a3e976fdc373fa869cdc9bc127239ac97"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a3e976fdc373fa869cdc9bc127239ac97">BinaryFile::currentSize</a></div><div class="ttdeci">size_t currentSize</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:39</div></div>
-<div class="ttc" id="aAssemblyDTypes_8hpp_html_ac0b48ee74ddc9903ff9585e3cc8c8851"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#ac0b48ee74ddc9903ff9585e3cc8c8851">AssemblyParams::outputFile</a></div><div class="ttdeci">FILE * outputFile</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:18</div></div>
-<div class="ttc" id="aCommandsParser_8cpp_html_a0f8de65651301114bc7782475cc6ff79"><div class="ttname"><a href="CommandsParser_8cpp.html#a0f8de65651301114bc7782475cc6ff79">removeDoubleWhitespaces</a></div><div class="ttdeci">void removeDoubleWhitespaces(char *code, size_t *length)</div><div class="ttdef"><b>Definition:</b> CommandsParser.cpp:33</div></div>
-<div class="ttc" id="aAssemblyDTypes_8hpp_html_afdd5808979159dbc6eb8695b8baec28e"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#afdd5808979159dbc6eb8695b8baec28e">AssemblyParams::inputFile</a></div><div class="ttdeci">FILE * inputFile</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:14</div></div>
-<div class="ttc" id="aAssemblyDTypes_8hpp_html_structAssemblyParams"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#structAssemblyParams">AssemblyParams</a></div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:13</div></div>
+<div class="ttc" id="aSyntax_8hpp_html_structSyntaxMapping"><div class="ttname"><a href="Syntax_8hpp.html#structSyntaxMapping">SyntaxMapping</a></div><div class="ttdef"><b>Definition:</b> Syntax.hpp:37</div></div>
+<div class="ttc" id="aAssemblyDTypes_8hpp_html_a3e976fdc373fa869cdc9bc127239ac97"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a3e976fdc373fa869cdc9bc127239ac97">BinaryFile::currentSize</a></div><div class="ttdeci">size_t currentSize</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:40</div></div>
+<div class="ttc" id="aAssemblyDTypes_8hpp_html_ac0b48ee74ddc9903ff9585e3cc8c8851"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#ac0b48ee74ddc9903ff9585e3cc8c8851">AssemblyParams::outputFile</a></div><div class="ttdeci">FILE * outputFile</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:19</div></div>
+<div class="ttc" id="aCommandsParser_8cpp_html_a0f8de65651301114bc7782475cc6ff79"><div class="ttname"><a href="CommandsParser_8cpp.html#a0f8de65651301114bc7782475cc6ff79">removeDoubleWhitespaces</a></div><div class="ttdeci">void removeDoubleWhitespaces(char *code, size_t *length)</div><div class="ttdef"><b>Definition:</b> CommandsParser.cpp:34</div></div>
+<div class="ttc" id="aAssemblyDTypes_8hpp_html_afdd5808979159dbc6eb8695b8baec28e"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#afdd5808979159dbc6eb8695b8baec28e">AssemblyParams::inputFile</a></div><div class="ttdeci">FILE * inputFile</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:15</div></div>
+<div class="ttc" id="aAssemblyDTypes_8hpp_html_structAssemblyParams"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#structAssemblyParams">AssemblyParams</a></div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:14</div></div>
 <div class="ttc" id="aAssemblyHelpers_8cpp_html_a76bb301072f1ce35898cbd2ef5195831"><div class="ttname"><a href="AssemblyHelpers_8cpp.html#a76bb301072f1ce35898cbd2ef5195831">printAssemblyVersion</a></div><div class="ttdeci">void printAssemblyVersion(AssemblyParams *params)</div><div class="ttdef"><b>Definition:</b> AssemblyHelpers.cpp:273</div></div>
-<div class="ttc" id="aAssemblyDTypes_8hpp_html_a0a2789916bd42777c9359d5ce15812f6"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a0a2789916bd42777c9359d5ce15812f6">AssemblyParams::inputFileName</a></div><div class="ttdeci">const char * inputFileName</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:15</div></div>
-<div class="ttc" id="aAssemblyDTypes_8hpp_html_a8fa74a2c523da8c898363c84e5358a85"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a8fa74a2c523da8c898363c84e5358a85">AssemblyParams::prepFile</a></div><div class="ttdeci">FILE * prepFile</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:24</div></div>
+<div class="ttc" id="aAssemblyDTypes_8hpp_html_a0a2789916bd42777c9359d5ce15812f6"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a0a2789916bd42777c9359d5ce15812f6">AssemblyParams::inputFileName</a></div><div class="ttdeci">const char * inputFileName</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:16</div></div>
+<div class="ttc" id="aAssemblyDTypes_8hpp_html_a8fa74a2c523da8c898363c84e5358a85"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a8fa74a2c523da8c898363c84e5358a85">AssemblyParams::prepFile</a></div><div class="ttdeci">FILE * prepFile</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:25</div></div>
 <div class="ttc" id="aCMakeCache_8txt_html_a7e98b8a17c0aad30ba64d47b74e2a6c1"><div class="ttname"><a href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> CMakeCache.txt:304</div></div>
-<div class="ttc" id="aCommandsParser_8cpp_html_a9f77310758d1c97d9ea9e1bb83779d5f"><div class="ttname"><a href="CommandsParser_8cpp.html#a9f77310758d1c97d9ea9e1bb83779d5f">parseCode</a></div><div class="ttdeci">CommandParseResult parseCode(AssemblyParams *compileParams, const SyntaxMapping *mapping, BinaryFile *binary, char *code, size_t length)</div><div class="ttdef"><b>Definition:</b> CommandsParser.cpp:280</div></div>
+<div class="ttc" id="aCommandsParser_8cpp_html_a9f77310758d1c97d9ea9e1bb83779d5f"><div class="ttname"><a href="CommandsParser_8cpp.html#a9f77310758d1c97d9ea9e1bb83779d5f">parseCode</a></div><div class="ttdeci">CommandParseResult parseCode(AssemblyParams *compileParams, const SyntaxMapping *mapping, BinaryFile *binary, char *code, size_t length)</div><div class="ttdef"><b>Definition:</b> CommandsParser.cpp:293</div></div>
 <div class="ttc" id="aCommandsDTypes_8hpp_html_a014dc28c49852c3fac1fa3cd2a95c0d5"><div class="ttname"><a href="CommandsDTypes_8hpp.html#a014dc28c49852c3fac1fa3cd2a95c0d5">CommandParseResult</a></div><div class="ttdeci">CommandParseResult</div><div class="ttdef"><b>Definition:</b> CommandsDTypes.hpp:12</div></div>
 <div class="ttc" id="aAssemblyHelpers_8cpp_html_ad7b5ac9bb1240c1f507b4564bc0778fc"><div class="ttname"><a href="AssemblyHelpers_8cpp.html#ad7b5ac9bb1240c1f507b4564bc0778fc">NewBinaryFile</a></div><div class="ttdeci">BinaryFile * NewBinaryFile()</div><div class="ttdef"><b>Definition:</b> AssemblyHelpers.cpp:117</div></div>
 <div class="ttc" id="aAssemblyHelpers_8cpp_html_a04a770d2b12f163bef10636bfd299fde"><div class="ttname"><a href="AssemblyHelpers_8cpp.html#a04a770d2b12f163bef10636bfd299fde">flushBinFile</a></div><div class="ttdeci">int flushBinFile(BinaryFile *binFile, FILE *output)</div><div class="ttdef"><b>Definition:</b> AssemblyHelpers.cpp:209</div></div>
-<div class="ttc" id="aCommandsParser_8cpp_html_aede32224521297426a2cfad5d4798384"><div class="ttname"><a href="CommandsParser_8cpp.html#aede32224521297426a2cfad5d4798384">codeEstimations</a></div><div class="ttdeci">void codeEstimations(BinaryFile *binary, char *code)</div><div class="ttdef"><b>Definition:</b> CommandsParser.cpp:341</div></div>
-<div class="ttc" id="aCommandsParser_8cpp_html_ac4f89e7dbcbb5986315038db16ad2371"><div class="ttname"><a href="CommandsParser_8cpp.html#ac4f89e7dbcbb5986315038db16ad2371">getSourceFileData</a></div><div class="ttdeci">char * getSourceFileData(FILE *inputFile, size_t *length)</div><div class="ttdef"><b>Definition:</b> CommandsParser.cpp:17</div></div>
-<div class="ttc" id="aSyntax_8cpp_html_ad8883fa3c572ab45fa3459a378708afd"><div class="ttname"><a href="Syntax_8cpp.html#ad8883fa3c572ab45fa3459a378708afd">getSyntaxMapping</a></div><div class="ttdeci">SyntaxMapping getSyntaxMapping(void)</div><div class="ttdef"><b>Definition:</b> Syntax.cpp:30</div></div>
+<div class="ttc" id="aCommandsParser_8cpp_html_aede32224521297426a2cfad5d4798384"><div class="ttname"><a href="CommandsParser_8cpp.html#aede32224521297426a2cfad5d4798384">codeEstimations</a></div><div class="ttdeci">void codeEstimations(BinaryFile *binary, char *code)</div><div class="ttdef"><b>Definition:</b> CommandsParser.cpp:354</div></div>
+<div class="ttc" id="aCommandsParser_8cpp_html_ac4f89e7dbcbb5986315038db16ad2371"><div class="ttname"><a href="CommandsParser_8cpp.html#ac4f89e7dbcbb5986315038db16ad2371">getSourceFileData</a></div><div class="ttdeci">char * getSourceFileData(FILE *inputFile, size_t *length)</div><div class="ttdef"><b>Definition:</b> CommandsParser.cpp:18</div></div>
+<div class="ttc" id="aSyntax_8cpp_html_ad8883fa3c572ab45fa3459a378708afd"><div class="ttname"><a href="Syntax_8cpp.html#ad8883fa3c572ab45fa3459a378708afd">getSyntaxMapping</a></div><div class="ttdeci">SyntaxMapping getSyntaxMapping(void)</div><div class="ttdef"><b>Definition:</b> Syntax.cpp:31</div></div>
 <div class="ttc" id="aAssemblyHelpers_8cpp_html_a6c4bb8a89afb60b2164c352fec284d61"><div class="ttname"><a href="AssemblyHelpers_8cpp.html#a6c4bb8a89afb60b2164c352fec284d61">parseArgs</a></div><div class="ttdeci">int parseArgs(int argc, const char *argv[], AssemblyParams *params)</div><div class="ttdef"><b>Definition:</b> AssemblyHelpers.cpp:17</div></div>
 <div class="ttc" id="aCodeAnalysis_8cpp_html_adc769d122142b2a70d004f1c82ca813d"><div class="ttname"><a href="CodeAnalysis_8cpp.html#adc769d122142b2a70d004f1c82ca813d">generateErrors</a></div><div class="ttdeci">int generateErrors(SyntaxMapping *mapping, AssemblyParams *params, char *code)</div><div class="ttdef"><b>Definition:</b> CodeAnalysis.cpp:53</div></div>
-<div class="ttc" id="aAssemblyDTypes_8hpp_html_a616b2e98d89547438c5461468f8bef6d"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a616b2e98d89547438c5461468f8bef6d">AssemblyParams::codeText</a></div><div class="ttdeci">char * codeText</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:27</div></div>
+<div class="ttc" id="aAssemblyDTypes_8hpp_html_a616b2e98d89547438c5461468f8bef6d"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a616b2e98d89547438c5461468f8bef6d">AssemblyParams::codeText</a></div><div class="ttdeci">char * codeText</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:28</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

@@ -1,20 +1,10 @@
 # Generated on 2020-10-21 21:12:23 by version 0.9.0 of mulle-xcode-to-cmake
 # Command line:
 #    mulle-xcode-to-cmake -l c++ -f export SoftProcessorUnit.xcodeproj
-#
-# cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build
-# cmake -DCMAKE_BUILD_TYPE=Debug   .. && cmake --build
+
 
 cmake_minimum_required (VERSION 3.4)
 project( SoftProcessorUnit CXX)
-
-if(NOT CMAKE_BUILD_TYPE)
-   set(CMAKE_BUILD_TYPE Release)
-endif()
-
-set(CMAKE_CXX_FLAGS "-Wall -Wextra -Werror -Wshadow -Wdouble-promotion -Wformat=2 -Wundef -fno-common -Wconversion")
-set(CMAKE_CXX_FLAGS_DEBUG "-g3 -O0 -ffunction-sections -fdata-sections")
-set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 # ###
 # Build for mulle-objc (https://mulle-objc.github.io/):
@@ -101,6 +91,27 @@ else()
    endif()
 endif()
 
+include_directories(
+SoftProcessorUnit/
+SoftProcessorUnit/Disassembly
+SoftProcessorUnit/Disassembly/Helpers
+SoftProcessorUnit/Assembly
+SoftProcessorUnit/Assembly/Helpers
+SoftProcessorUnit/Assembly/Helpers/LabelHandlers
+SoftProcessorUnit/Assembly/Helpers/DataTypes
+SoftProcessorUnit/Assembly/Helpers/AnalysisAndPreparing
+SoftProcessorUnit/Common
+SoftProcessorUnit/Common/Stack
+SoftProcessorUnit/SPU
+SoftProcessorUnit/SPU/Core
+SoftProcessorUnit/Syntax
+SoftProcessorUnit/Syntax/Translation
+SoftProcessorUnit/Syntax/Translation/MacroSyntax
+SoftProcessorUnit/Syntax/Translation/Helpers
+SoftProcessorUnit/Syntax/Translation/Helpers/Generators
+SoftProcessorUnit/WorkingDirectory
+)
+
 
 ##
 ## SPU Files
@@ -117,11 +128,12 @@ SoftProcessorUnit/Common/Stack/StackRigid.cpp
 SoftProcessorUnit/SPU/Core/SPUCore.cpp
 SoftProcessorUnit/SPU/Core/SPUCoreHelpers.cpp
 SoftProcessorUnit/SPU/SPU.cpp
-SoftProcessorUnit/Syntax/Translation/Helpers/BytecodeToCommand.cpp
-SoftProcessorUnit/Syntax/Translation/Helpers/CommandToBytecode.cpp
-SoftProcessorUnit/Syntax/Translation/Helpers/InstrExecutors.cpp
-SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.cpp
+SoftProcessorUnit/Syntax/Translation/Helpers/Generators/BytecodeToCommand.cpp
+SoftProcessorUnit/Syntax/Translation/Helpers/Generators/CommandToBytecode.cpp
+SoftProcessorUnit/Syntax/Translation/Helpers/Generators/InstrExecutors.cpp
 SoftProcessorUnit/Syntax/Translation/Syntax.cpp
+SoftProcessorUnit/Assembly/Helpers/ComplexValueTools.cpp
+SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.cpp
 )
 
 set( SPU_STATIC_DEPENDENCIES
@@ -146,10 +158,10 @@ SoftProcessorUnit/Assembly/Helpers/AssemblyHelpers.cpp
 SoftProcessorUnit/Assembly/Helpers/CommandsParser.cpp
 SoftProcessorUnit/Assembly/Helpers/LabelHandlers/LabelsStore.cpp
 SoftProcessorUnit/Assembly/SPUAssembly.cpp
-SoftProcessorUnit/Syntax/Translation/Helpers/BytecodeToCommand.cpp
-SoftProcessorUnit/Syntax/Translation/Helpers/CommandToBytecode.cpp
-SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.cpp
+SoftProcessorUnit/Syntax/Translation/Helpers/Generators/BytecodeToCommand.cpp
+SoftProcessorUnit/Syntax/Translation/Helpers/Generators/CommandToBytecode.cpp
 SoftProcessorUnit/Syntax/Translation/Syntax.cpp
+SoftProcessorUnit/Assembly/Helpers/ComplexValueTools.cpp
 )
 
 set( SPUASM_STATIC_DEPENDENCIES
@@ -173,10 +185,10 @@ SoftProcessorUnit/Assembly/Helpers/CommandsParser.cpp
 SoftProcessorUnit/Assembly/Helpers/LabelHandlers/LabelsStore.cpp
 SoftProcessorUnit/Disassembly/Helpers/DisAssemblyHelpers.cpp
 SoftProcessorUnit/Disassembly/SPUDisAssembly.cpp
-SoftProcessorUnit/Syntax/Translation/Helpers/BytecodeToCommand.cpp
-SoftProcessorUnit/Syntax/Translation/Helpers/CommandToBytecode.cpp
-SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.cpp
+SoftProcessorUnit/Syntax/Translation/Helpers/Generators/BytecodeToCommand.cpp
+SoftProcessorUnit/Syntax/Translation/Helpers/Generators/CommandToBytecode.cpp
 SoftProcessorUnit/Syntax/Translation/Syntax.cpp
+SoftProcessorUnit/Assembly/Helpers/ComplexValueTools.cpp
 )
 
 set( SPUDIS_ASM_STATIC_DEPENDENCIES
@@ -184,26 +196,6 @@ set( SPUDIS_ASM_STATIC_DEPENDENCIES
 
 set( SPUDIS_ASM_DEPENDENCIES
 
-)
-
-include_directories(
-SoftProcessorUnit/
-SoftProcessorUnit/Disassembly
-SoftProcessorUnit/Disassembly/Helpers
-SoftProcessorUnit/Assembly
-SoftProcessorUnit/Assembly/Helpers
-SoftProcessorUnit/Assembly/Helpers/LabelHandlers
-SoftProcessorUnit/Assembly/Helpers/DataTypes
-SoftProcessorUnit/Assembly/Helpers/AnalysisAndPreparing
-SoftProcessorUnit/Common
-SoftProcessorUnit/Common/Stack
-SoftProcessorUnit/SPU
-SoftProcessorUnit/SPU/Core
-SoftProcessorUnit/Syntax
-SoftProcessorUnit/Syntax/Translation
-SoftProcessorUnit/Syntax/Translation/MacroSyntax
-SoftProcessorUnit/Syntax/Translation/Helpers
-SoftProcessorUnit/WorkingDirectory
 )
 
 

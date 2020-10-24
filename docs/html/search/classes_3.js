@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['jmplabel_747',['JMPLabel',['../structJMPLabel.html',1,'']]],
-  ['jmplabelsstore_748',['JMPLabelsStore',['../structJMPLabelsStore.html',1,'']]]
+  ['disassemblyparams_788',['DisassemblyParams',['../DisAssemblyDTypes_8hpp.html#structDisassemblyParams',1,'']]]
 ];

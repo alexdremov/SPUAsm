@@ -1,7 +1,12 @@
 <map id="SoftProcessorUnit/Assembly/Helpers/AssemblyHelpers.hpp" name="SoftProcessorUnit/Assembly/Helpers/AssemblyHelpers.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="58,5,261,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="27,5,230,47"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,95,65,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="131,244,188,271"/>
-<area shape="rect" id="node4" href="$AssemblyDTypes_8hpp.html" title=" " alt="" coords="141,95,292,121"/>
-<area shape="rect" id="node5" href="$LabelsStore_8hpp.html" title=" " alt="" coords="159,169,275,196"/>
+<area shape="rect" id="node3" title=" " alt="" coords="123,244,180,271"/>
+<area shape="rect" id="node4" href="$AssemblyDTypes_8hpp.html" title=" " alt="" coords="192,95,343,121"/>
+<area shape="rect" id="node5" href="$LabelsStore_8hpp.html" title=" " alt="" coords="141,169,257,196"/>
+<area shape="rect" id="node6" href="$ParseHelpers_8hpp.html" title=" " alt="" coords="281,169,408,196"/>
+<area shape="rect" id="node7" href="$SPUDtypes_8hpp.html" title=" " alt="" coords="286,244,403,271"/>
+<area shape="rect" id="node8" href="$StackRigid_8h.html" title=" " alt="" coords="296,319,393,345"/>
+<area shape="rect" id="node9" title=" " alt="" coords="270,393,334,420"/>
+<area shape="rect" id="node10" title=" " alt="" coords="358,393,419,420"/>
 </map>

@@ -51,10 +51,4 @@ LabelParse labelsTableComplete(AssemblyParams* compileParams, int quiet);
 
 LabelParse evaluateLabels(AssemblyParams* compileParams, BinaryFile* binary);
 
-ComplexValue retrieveComplexValueFromArg(char* argument);
-
-ComplexValue retrieveComplexValueFromFlow(char* SPI);
-
-void writeComplexArg(ComplexValue* cvalue, BinaryFile* binary);
-
 #endif /* CommandsParser_hpp */

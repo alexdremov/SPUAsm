@@ -483,12 +483,12 @@ LabelParse labelsTableComplete(AssemblyParams *compileParams, int quiet) {
         
         if (current->positionFrom == -1) {
             if (quiet != 1)
-                printf("%s: error: assembly: label '%s' has no jump instructions\n", compileParams->inputFileName,
+                printf("%s: warning: assembly: label '%s' has no jump instructions\n", compileParams->inputFileName,
                        current->name);
             if (compileParams->lstFile != nullptr)
-                fprintf(compileParams->lstFile, "%s: error: assembly: label '%s' has no jump instructions\n",
+                fprintf(compileParams->lstFile, "%s: warning: assembly: label '%s' has no jump instructions\n",
                         compileParams->inputFileName, current->name);
-            return SPU_LABEL_INVALID;
+//            return SPU_LABEL_INVALID;
         }
         
         if (current->used > 1) {
@@ -505,149 +505,4 @@ LabelParse labelsTableComplete(AssemblyParams *compileParams, int quiet) {
     }
     
     return SPU_LABEL_OK;
-}
-
-
-ComplexValue retrieveComplexValueFromArg(char* argument){
-    ComplexValue result = {0,0,0, SPU_CV_OK};
-    result.success = SPU_CV_OK;
-    
-    int size = (int)strlen(argument);
-    
-    char argMask = 0;
-    
-    char* ramFound = strchr(argument, '[');
-    char* closeBrackRam = nullptr;
-    if (ramFound != nullptr){
-        argMask |= (char)4;
-        argument++;
-        closeBrackRam = strchr(argument, ']');
-        if (closeBrackRam == nullptr){
-            result.success = SPU_CV_WRONGSTRUCT;
-            return result;
-        }
-        *closeBrackRam = '\0';
-    }
-    
-    char* vidFound = strchr(argument, '(');
-    char* closeBrackVid = nullptr;
-    if (vidFound != nullptr){
-        argMask |= (char)8;
-        argument++;
-        closeBrackVid = strchr(argument, ')');
-        if (closeBrackVid == nullptr){
-            result.success = SPU_CV_WRONGSTRUCT;
-            return result;
-        }
-        *closeBrackVid = '\0';
-    }
-    size = (int)strlen(argument);
-    if (size == 0){
-        result.success = SPU_CV_WRONGSTRUCT;
-        return result;
-    }
-    
-    // Try finding register
-    if (size >= 3) {
-        char tmpThird = *(argument + 3);
-        *(argument + 3) = '\0';
-        int regNo = registerNoFromName(argument);
-        *(argument + 3) = tmpThird;
-        if (regNo != -1) {
-            result.reg = (char)regNo;
-            argMask |= (char)2;
-            if (tmpThird == '+' || tmpThird == '-'){
-                double value = 0;
-                if (size >= 4){
-                    int scanfRes = sscanf(argument + 4, "%lg", &value);
-                    if (scanfRes == -1) {
-                        result.success = SPU_CV_WRONGNUM;
-                        return result;
-                    } else {
-                        result.value += value * ((tmpThird == '-')? -1: 1);
-                        argMask |= (char)1;
-                    }
-                } else {
-                    result.success = SPU_CV_WRONGOP;
-                    return result;
-                }
-            }else if (tmpThird != '\0'){
-                result.success = SPU_CV_WRONGREG;
-                return result;
-            }
-        } else {
-            
-            double value = 0;
-            int scanfRes = sscanf(argument, "%lg", &value);
-            if (scanfRes == -1) {
-                result.success = SPU_CV_WRONGNUM;
-                return result;
-            } else {
-                result.value += value;
-                argMask |= (char)1;
-            }
-            
-        }
-    } else {
-        double value = 0;
-        int scanfRes = sscanf(argument, "%lg", &value);
-        if (scanfRes == -1) {
-            result.success = SPU_CV_WRONGNUM;
-            return result;
-        } else {
-            result.value += value;
-            argMask |= (char)1;
-        }
-    }
-    
-    if (closeBrackVid != nullptr){
-        *closeBrackVid = ')';
-    }
-
-    if (closeBrackRam != nullptr){
-        *closeBrackRam = ']';
-    }
-    
-    result.argMask = argMask;
-    
-    return result;
-}
-
-void writeComplexArg(ComplexValue* cvalue, BinaryFile* binary) {
-    appendToBinFile(binary, cvalue->argMask);
-    
-    if ((cvalue->argMask & 1) == 1){
-        appendToBinFile(binary, &(cvalue->value), sizeof(cvalue->value));
-    }
-    
-    if ((cvalue->argMask & 2) == 2){
-        appendToBinFile(binary, &(cvalue->reg), sizeof(cvalue->reg));
-    }
-}
-
-ComplexValue retrieveComplexValueFromFlow(char* SPI) {
-    ComplexValue result = {0,0,0,SPU_CV_OK};
-    result.success = SPU_CV_OK;
-    
-    char argMask = *SPI;
-    
-    result.argMask = argMask;
-    
-    SPI += 1;
-    
-    if (argMask == 0) {
-        result.success = SPU_CV_NOARG;
-        return result;
-    }
-    
-    if ((argMask & 1) == 1){
-        memcpy(&(result.value), SPI, sizeof(double));
-        SPI += sizeof(double);
-    }
-    
-    if ((argMask & 2) == 2){
-        result.reg = *SPI;
-    }
-    
-    return result;
 }

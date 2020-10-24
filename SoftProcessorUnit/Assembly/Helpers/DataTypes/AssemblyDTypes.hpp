@@ -68,14 +68,4 @@ enum LabelParse {
     SPU_LABEL_INVALID           = 903
 };
 
-int complexValueAssignable(ComplexValue* value);
-
-int charAdress(ComplexValue* value);
-
-ComplexValueResult retrieveComplexValue(SPUCore* core, char** SPI, double* value);
-
-ComplexValueResult pointerToComplexValue(SPUCore* core, char** SPI, char** value, ComplexValue* cvalue);
-
-ComplexValueResult pointerToComplexValue(SPUCore* core, char** SPI, double** value, ComplexValue* cvalue);
-
 #endif /* AssemblyDTypes_h */

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SPU: SoftProcessorUnit/Syntax/Translation/Helpers/BytecodeToCommand.cpp File Reference</title>
+<title>SPU: SoftProcessorUnit/Syntax/Translation/Helpers/Generators/BytecodeToCommand.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_acdb384f02925027ec961ea4ebea2498.html">SoftProcessorUnit</a></li><li class="navelem"><a class="el" href="dir_bad38aac3fbf79cf2f31309d74c15e04.html">Syntax</a></li><li class="navelem"><a class="el" href="dir_49893eedc69b3e24258404a713ce9405.html">Translation</a></li><li class="navelem"><a class="el" href="dir_30c0854670f543d77a5de595cf3baf44.html">Helpers</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_acdb384f02925027ec961ea4ebea2498.html">SoftProcessorUnit</a></li><li class="navelem"><a class="el" href="dir_bad38aac3fbf79cf2f31309d74c15e04.html">Syntax</a></li><li class="navelem"><a class="el" href="dir_49893eedc69b3e24258404a713ce9405.html">Translation</a></li><li class="navelem"><a class="el" href="dir_30c0854670f543d77a5de595cf3baf44.html">Helpers</a></li><li class="navelem"><a class="el" href="dir_ad195e09a4bc2737d1d44cd9f926e365.html">Generators</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -79,31 +79,37 @@ $(function() {
 <code>#include &quot;<a class="el" href="">AssemblyHelpers.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="">CommandsParser.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="">Syntax.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="">ComplexValueTools.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="">BTC.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for BytecodeToCommand.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="BytecodeToCommand_8cpp__incl.png" border="0" usemap="#aSoftProcessorUnit_2Syntax_2Translation_2Helpers_2BytecodeToCommand_8cpp" alt=""/></div>
-<map name="SoftProcessorUnit_2Syntax_2Translation_2Helpers_2BytecodeToCommand_8cpp" id="SoftProcessorUnit_2Syntax_2Translation_2Helpers_2BytecodeToCommand_8cpp">
-<area shape="rect" title=" " alt="" coords="407,5,619,61"/>
-<area shape="rect" title=" " alt="" coords="5,109,67,136"/>
-<area shape="rect" href="BytecodeToCommand_8hpp.html" title=" " alt="" coords="488,109,664,136"/>
-<area shape="rect" href="DisAssemblyDTypes_8hpp.html" title=" " alt="" coords="141,184,312,211"/>
-<area shape="rect" href="TranslationDTypes_8hpp.html" title=" " alt="" coords="869,557,1025,584"/>
-<area shape="rect" href="AssemblyHelpers_8hpp.html" title=" " alt="" coords="431,557,582,584"/>
-<area shape="rect" href="CommandsParser_8hpp.html" title=" " alt="" coords="387,184,538,211"/>
-<area shape="rect" href="Syntax_8hpp.html" title=" " alt="" coords="595,259,683,285"/>
-<area shape="rect" href="BTC_8h.html" title=" " alt="" coords="1010,184,1070,211"/>
-<area shape="rect" title=" " alt="" coords="350,781,407,808"/>
-<area shape="rect" title=" " alt="" coords="585,632,645,659"/>
+<div class="center"><img src="BytecodeToCommand_8cpp__incl.png" border="0" usemap="#aSoftProcessorUnit_2Syntax_2Translation_2Helpers_2Generators_2BytecodeToCommand_8cpp" alt=""/></div>
+<map name="SoftProcessorUnit_2Syntax_2Translation_2Helpers_2Generators_2BytecodeToCommand_8cpp" id="aSoftProcessorUnit_2Syntax_2Translation_2Helpers_2Generators_2BytecodeToCommand_8cpp">
+<area shape="rect" title=" " alt="" coords="410,5,617,61"/>
+<area shape="rect" title=" " alt="" coords="64,109,125,136"/>
+<area shape="rect" href="BytecodeToCommand_8hpp.html" title=" " alt="" coords="601,109,777,136"/>
+<area shape="rect" href="DisAssemblyDTypes_8hpp.html" title=" " alt="" coords="5,184,176,211"/>
+<area shape="rect" href="TranslationDTypes_8hpp.html" title=" " alt="" coords="917,557,1073,584"/>
+<area shape="rect" href="AssemblyHelpers_8hpp.html" title=" " alt="" coords="398,557,549,584"/>
+<area shape="rect" href="CommandsParser_8hpp.html" title=" " alt="" coords="438,184,589,211"/>
+<area shape="rect" href="Syntax_8hpp.html" title=" " alt="" coords="645,259,733,285"/>
+<area shape="rect" href="BTC_8h.html" title=" " alt="" coords="1167,184,1227,211"/>
+<area shape="rect" href="ComplexValueTools_8hpp.html" title=" " alt="" coords="251,184,413,211"/>
+<area shape="rect" title=" " alt="" coords="558,781,615,808"/>
+<area shape="rect" href="LabelsStore_8hpp.html" title=" " alt="" coords="309,707,425,733"/>
+<area shape="rect" title=" " alt="" coords="635,632,695,659"/>
 <area shape="rect" href="AssemblyDTypes_8hpp.html" title=" " alt="" coords="347,632,498,659"/>
-<area shape="rect" href="LabelsStore_8hpp.html" title=" " alt="" coords="321,707,437,733"/>
+<area shape="rect" href="ParseHelpers_8hpp.html" title=" " alt="" coords="1167,707,1294,733"/>
+<area shape="rect" href="SPUDtypes_8hpp.html" title=" " alt="" coords="1172,781,1289,808"/>
+<area shape="rect" href="StackRigid_8h.html" title=" " alt="" coords="1182,856,1279,883"/>
+<area shape="rect" title=" " alt="" coords="1156,931,1220,957"/>
+<area shape="rect" title=" " alt="" coords="1244,931,1305,957"/>
 <area shape="rect" href="CommandsDTypes_8hpp.html" title=" " alt="" coords="277,259,435,285"/>
-<area shape="rect" href="CommandToBytecode_8hpp.html" title=" " alt="" coords="657,333,833,360"/>
-<area shape="rect" href="CTBDefs_8h.html" title=" " alt="" coords="708,483,796,509"/>
-<area shape="rect" href="CTB_8h.html" title=" " alt="" coords="743,408,803,435"/>
-<area shape="rect" href="BTCDefs_8h.html" title=" " alt="" coords="1020,259,1108,285"/>
-<area shape="rect" href="ParseHelpers_8hpp.html" title=" " alt="" coords="1010,333,1137,360"/>
+<area shape="rect" href="CommandToBytecode_8hpp.html" title=" " alt="" coords="713,333,889,360"/>
+<area shape="rect" href="CTBDefs_8h.html" title=" " alt="" coords="760,483,848,509"/>
+<area shape="rect" href="CTB_8h.html" title=" " alt="" coords="801,408,861,435"/>
+<area shape="rect" href="BTCDefs_8h.html" title=" " alt="" coords="1172,333,1260,360"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -180,17 +186,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                                                                              {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">size_t</span> neededBytes = 1;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    neededBytes += (size_t)(thou-&gt;<a class="code" href="structSyntaxEntity.html#a37a9b200016059d71f0d2116f9e96cfd">flagBytes</a>);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a> = 0; <a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a> &lt; strlen(thou-&gt;<a class="code" href="structSyntaxEntity.html#a02a711b31d8895f3ffaaa71bdc6c918e">format</a>); <a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>++) {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">if</span> (thou-&gt;<a class="code" href="structSyntaxEntity.html#a02a711b31d8895f3ffaaa71bdc6c918e">format</a>[<a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>] == <span class="charliteral">&#39;*&#39;</span>)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            neededBytes++;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="BytecodeToCommand_8cpp.html#ab0ffc9a54e506a0006a551640cf92b63">checkBytesEnoughNumber</a>(binary, SPI, neededBytes);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                                                                              {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">size_t</span> neededBytes = 1;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    neededBytes += (size_t)(thou-&gt;<a class="code" href="structSyntaxEntity.html#a37a9b200016059d71f0d2116f9e96cfd">flagBytes</a>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a> = 0; <a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a> &lt; strlen(thou-&gt;<a class="code" href="structSyntaxEntity.html#a02a711b31d8895f3ffaaa71bdc6c918e">format</a>); <a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>++) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">if</span> (thou-&gt;<a class="code" href="structSyntaxEntity.html#a02a711b31d8895f3ffaaa71bdc6c918e">format</a>[<a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>] == <span class="charliteral">&#39;*&#39;</span>)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            neededBytes++;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="BytecodeToCommand_8cpp.html#ab0ffc9a54e506a0006a551640cf92b63">checkBytesEnoughNumber</a>(binary, SPI, neededBytes);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="BytecodeToCommand_8cpp.html#ab0ffc9a54e506a0006a551640cf92b63">checkBytesEnoughNumber()</a>, <a class="el" href="structSyntaxEntity.html#a37a9b200016059d71f0d2116f9e96cfd">SyntaxEntity::flagBytes</a>, <a class="el" href="structSyntaxEntity.html#a02a711b31d8895f3ffaaa71bdc6c918e">SyntaxEntity::format</a>, and <a class="el" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>.</p>
 <div class="dynheader">
@@ -236,33 +242,33 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                                                              {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (SPI + bytes &gt; binary-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#a5a2cf3ef6bbd4fa8beb8f39b1c383c92">code</a> + binary-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#a3e976fdc373fa869cdc9bc127239ac97">currentSize</a>)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                                                              {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span> (SPI + bytes &gt; binary-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#a5a2cf3ef6bbd4fa8beb8f39b1c383c92">code</a> + binary-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#a3e976fdc373fa869cdc9bc127239ac97">currentSize</a>)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="AssemblyDTypes_8hpp.html#a5a2cf3ef6bbd4fa8beb8f39b1c383c92">BinaryFile::code</a>, and <a class="el" href="AssemblyDTypes_8hpp.html#a3e976fdc373fa869cdc9bc127239ac97">BinaryFile::currentSize</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BTCDefs_8h.html#ade73f65d7d4d27f2b675d578b9e3e05c">checkBytesEnough()</a>, and <a class="el" href="BTC_8h.html#aeabc66d65cf31c70cee162505d19f14a">OPBACKTRANSLATE_FUNC()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BTCDefs_8h.html#ade73f65d7d4d27f2b675d578b9e3e05c">checkBytesEnough()</a>, and <a class="el" href="BTC_8h.html#a05ff730541c033e42d099664fa663477">OPBACKTRANSLATE_FUNC()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BytecodeToCommand_8cpp_ab0ffc9a54e506a0006a551640cf92b63_icgraph.png" border="0" usemap="#aBytecodeToCommand_8cpp_ab0ffc9a54e506a0006a551640cf92b63_icgraph" alt=""/></div>
-<map name="BytecodeToCommand_8cpp_ab0ffc9a54e506a0006a551640cf92b63_icgraph" id="BytecodeToCommand_8cpp_ab0ffc9a54e506a0006a551640cf92b63_icgraph">
+<map name="BytecodeToCommand_8cpp_ab0ffc9a54e506a0006a551640cf92b63_icgraph" id="aBytecodeToCommand_8cpp_ab0ffc9a54e506a0006a551640cf92b63_icgraph">
 <area shape="rect" title=" " alt="" coords="255,31,436,57"/>
 <area shape="rect" href="BTCDefs_8h.html#ade73f65d7d4d27f2b675d578b9e3e05c" title=" " alt="" coords="39,5,173,32"/>
-<area shape="rect" href="BTC_8h.html#aeabc66d65cf31c70cee162505d19f14a" title=" " alt="" coords="5,56,207,83"/>
+<area shape="rect" href="BTC_8h.html#a05ff730541c033e42d099664fa663477" title=" " alt="" coords="5,56,207,83"/>
 </map>
 </div>
 
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aAssemblyDTypes_8hpp_html_a5a2cf3ef6bbd4fa8beb8f39b1c383c92"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a5a2cf3ef6bbd4fa8beb8f39b1c383c92">BinaryFile::code</a></div><div class="ttdeci">char * code</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:42</div></div>
+<div class="ttc" id="aAssemblyDTypes_8hpp_html_a5a2cf3ef6bbd4fa8beb8f39b1c383c92"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a5a2cf3ef6bbd4fa8beb8f39b1c383c92">BinaryFile::code</a></div><div class="ttdeci">char * code</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:43</div></div>
 <div class="ttc" id="astructSyntaxEntity_html_a37a9b200016059d71f0d2116f9e96cfd"><div class="ttname"><a href="structSyntaxEntity.html#a37a9b200016059d71f0d2116f9e96cfd">SyntaxEntity::flagBytes</a></div><div class="ttdeci">const char flagBytes</div><div class="ttdef"><b>Definition:</b> Syntax.hpp:23</div></div>
-<div class="ttc" id="aBytecodeToCommand_8cpp_html_ab0ffc9a54e506a0006a551640cf92b63"><div class="ttname"><a href="BytecodeToCommand_8cpp.html#ab0ffc9a54e506a0006a551640cf92b63">checkBytesEnoughNumber</a></div><div class="ttdeci">int checkBytesEnoughNumber(BinaryFile *binary, const char *SPI, size_t bytes)</div><div class="ttdef"><b>Definition:</b> BytecodeToCommand.cpp:28</div></div>
-<div class="ttc" id="aAssemblyDTypes_8hpp_html_a3e976fdc373fa869cdc9bc127239ac97"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a3e976fdc373fa869cdc9bc127239ac97">BinaryFile::currentSize</a></div><div class="ttdeci">size_t currentSize</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:39</div></div>
+<div class="ttc" id="aBytecodeToCommand_8cpp_html_ab0ffc9a54e506a0006a551640cf92b63"><div class="ttname"><a href="BytecodeToCommand_8cpp.html#ab0ffc9a54e506a0006a551640cf92b63">checkBytesEnoughNumber</a></div><div class="ttdeci">int checkBytesEnoughNumber(BinaryFile *binary, const char *SPI, size_t bytes)</div><div class="ttdef"><b>Definition:</b> BytecodeToCommand.cpp:29</div></div>
+<div class="ttc" id="aAssemblyDTypes_8hpp_html_a3e976fdc373fa869cdc9bc127239ac97"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a3e976fdc373fa869cdc9bc127239ac97">BinaryFile::currentSize</a></div><div class="ttdeci">size_t currentSize</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:40</div></div>
 <div class="ttc" id="aCMakeCache_8txt_html_a7e98b8a17c0aad30ba64d47b74e2a6c1"><div class="ttname"><a href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> CMakeCache.txt:304</div></div>
 <div class="ttc" id="astructSyntaxEntity_html_a02a711b31d8895f3ffaaa71bdc6c918e"><div class="ttname"><a href="structSyntaxEntity.html#a02a711b31d8895f3ffaaa71bdc6c918e">SyntaxEntity::format</a></div><div class="ttdeci">const char * format</div><div class="ttdef"><b>Definition:</b> Syntax.hpp:22</div></div>
 <!-- start footer part -->

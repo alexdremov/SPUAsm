@@ -101,9 +101,8 @@ int generateErrors(SyntaxMapping* mapping, AssemblyParams* params, char* code) {
 
     DestructBinaryFile(binary);
     LabelParse completeTable = labelsTableComplete(&localParams, 1);
-    
+    analyzeLabelsErrors(&localParams);
     if (completeTable != SPU_LABEL_OK) {
-        analyzeLabelsErrors(&localParams);
         labelsTableComplete(&localParams, 0);
         delete localParams.labelsStore;
         return 0;
@@ -245,7 +244,7 @@ void analyzeLabelsErrors(AssemblyParams* params){
         
         if (current->positionFrom == -1) {
             int lineNo = findLineWithSubstrung(params->codeText, current->name);
-            printf("%s:%d:1: error: assembly: label '%s' has no jump instructions\n",  params->inputFileRealName,lineNo, current->name);
+            printf("%s:%d:1: warning: assembly: label '%s' has no jump instructions\n",  params->inputFileRealName,lineNo, current->name);
         }
         
         if (current->used > 1) {
