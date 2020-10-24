@@ -63,6 +63,215 @@ $ SPU <binary file>
         -h, --help                  - show help message
 ```
 
+## Examples
+
+All examples are available [in this dir](https://github.com/AlexRoar/SPUAsm/tree/main/Examples/SPUAsm/SPUAsm).
+
+### Squares of first n numbers
+<details>
+  <summary>Show code</summary>
+  
+```asm
+;
+; Squares
+;
+
+in rbx  ; rbx as counter
+
+push 0
+pop rax
+
+loop:
+dec rbx  ; decrease counter
+
+; Calculating square
+push rax
+push rax
+mul
+out
+
+; Prepare for the next loop
+pop
+inc rax
+
+jm mondayOnly ; exit if it is monday
+
+; Insert conditional jump operands
+push 0
+push rbx
+
+jne loop
+
+mondayOnly:
+```
+</details>
+
+### Popping circles
+
+<img style="max-height: 100px" src="https://github.com/AlexRoar/SPUAsm/raw/main/Images/circles.gif">
+
+<details>
+  <summary>Show code</summary>
+  
+```asm
+; height 32
+; width  64
+
+push 32
+push 16
+push 10
+push 35
+call drawCircle
+
+clrscr
+
+push 32
+push 16
+push 4
+push 42
+call drawCircle
+
+clrscr
+
+push 16
+push 8
+push 2
+push 42
+call drawCircle
+
+clrscr
+rend
+
+push 40
+push 25
+push 4
+push 48
+call drawCircle
+
+clrscr
+rend
+
+push 60
+push 13
+push 8
+push 48
+call drawCircle
+
+
+hlt
+
+drawCircle: ;(x0, y0, r, symbol)
+    pop [2]
+    pop rcx  ; r
+    pop rbx  ; y0
+    pop rax  ; x0
+
+    mov rdx 0   ; initial angle
+    loop:
+        push rbx
+        push rdx
+        sin
+        push rcx
+        mul
+        add ; y0 + r*sin(alpha)
+
+        pop [0] ; y coordinate
+
+        push rax
+        push rdx
+        cos
+        push rcx
+        push 2
+        mul
+        mul
+        add ; x0 + r*cos(alpha)
+
+        pop [1] ; x coordinate
+
+        pixset [1] [0] [2]
+        
+        rend
+        slp 10000
+    ; loop params
+    mov rdx rdx+0.1
+    push rdx
+    push 3.1415926535897
+    push 2
+    mul
+    jbe loop
+    ret
+```
+</details>
+
+### Square equation solutions
+
+<details>
+  <summary>Show code</summary>
+  
+```asm
+;
+; Data input
+; (a, b, c)
+;
+in      rax
+in      rbx
+in      rcx
+
+;
+; D calculation
+;
+push    rbx
+push    2
+pow
+
+push    4
+push    rax
+mul
+push    rcx
+mul
+sub
+sqrt
+pop     rdx
+
+
+;
+; First x
+;
+clear
+push    -1
+push    rbx
+mul
+push    rdx
+sub
+push    2
+div
+push    rax
+div
+pop     rcx
+
+;
+; Second x
+;
+clear
+push    -1
+push    rbx
+mul
+push    rdx
+add
+push    2
+div
+push    rax
+div
+pop     rax
+
+;
+; Output
+;
+out     rax
+out     rcx
+```
+</details>
+
 ## Algorithm description
 
 Binary generation can be splitted into several parts:
@@ -236,205 +445,6 @@ Jump if it's Monday.
 #### labelName:
 Creates label
 
-## Examples
-
-All examples are available [in this dir](https://github.com/AlexRoar/SPUAsm/tree/main/Examples/SPUAsm/SPUAsm).
-
-### Squares of first n numbers
-
-```asm
-;
-; Squares
-;
-
-in rbx  ; rbx as counter
-
-push 0
-pop rax
-
-loop:
-dec rbx  ; decrease counter
-
-; Calculating square
-push rax
-push rax
-mul
-out
-
-; Prepare for the next loop
-pop
-inc rax
-
-jm mondayOnly ; exit if it is monday
-
-; Insert conditional jump operands
-push 0
-push rbx
-
-jne loop
-
-mondayOnly:
-```
-
-### Popping circles
-
-<img style="max-height: 200px" src="https://github.com/AlexRoar/SPUAsm/raw/main/Images/circles.gif">
-
-
-```asm
-; height 32
-; width  64
-
-push 32
-push 16
-push 10
-push 35
-call drawCircle
-
-clrscr
-
-push 32
-push 16
-push 4
-push 42
-call drawCircle
-
-clrscr
-
-push 16
-push 8
-push 2
-push 42
-call drawCircle
-
-clrscr
-rend
-
-push 40
-push 25
-push 4
-push 48
-call drawCircle
-
-clrscr
-rend
-
-push 60
-push 13
-push 8
-push 48
-call drawCircle
-
-
-hlt
-
-drawCircle: ;(x0, y0, r, symbol)
-    pop [2]
-    pop rcx  ; r
-    pop rbx  ; y0
-    pop rax  ; x0
-
-    mov rdx 0   ; initial angle
-    loop:
-        push rbx
-        push rdx
-        sin
-        push rcx
-        mul
-        add ; y0 + r*sin(alpha)
-
-        pop [0] ; y coordinate
-
-        push rax
-        push rdx
-        cos
-        push rcx
-        push 2
-        mul
-        mul
-        add ; x0 + r*cos(alpha)
-
-        pop [1] ; x coordinate
-
-        pixset [1] [0] [2]
-        
-        rend
-        slp 10000
-    ; loop params
-    mov rdx rdx+0.1
-    push rdx
-    push 3.1415926535897
-    push 2
-    mul
-    jbe loop
-    ret
-```
-
-
-### Square equation solutions
-
-```asm
-;
-; Data input
-; (a, b, c)
-;
-in      rax
-in      rbx
-in      rcx
-
-;
-; D calculation
-;
-push    rbx
-push    2
-pow
-
-push    4
-push    rax
-mul
-push    rcx
-mul
-sub
-sqrt
-pop     rdx
-
-
-;
-; First x
-;
-clear
-push    -1
-push    rbx
-mul
-push    rdx
-sub
-push    2
-div
-push    rax
-div
-pop     rcx
-
-;
-; Second x
-;
-clear
-push    -1
-push    rbx
-mul
-push    rdx
-add
-push    2
-div
-push    rax
-div
-pop     rax
-
-;
-; Output
-;
-out     rax
-out     rcx
-```
 
 ## Links
 
