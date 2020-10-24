@@ -127,7 +127,8 @@ Prints value to the console
 -  cvalue  - cvalue value
 
 #### mov       <assignable cvalue>  <any cvalue>
-                  destination          source
+destination -> source
+
 Sets the first argument value to the secon argument's value
 
 #### dump
