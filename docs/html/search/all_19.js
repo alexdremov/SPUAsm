@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['Транслятор_20assembly_2dподобного_20кода_20и_20spu_2dисполнитель_737',['Транслятор assembly-подобного кода и SPU-исполнитель',['../index.html',1,'']]]
+  ['zeroorstorage_798',['ZEROORSTORAGE',['../CTBDefs_8h.html#a50efb823f71a6c6cde80cf1a39b08f30',1,'CTBDefs.h']]]
 ];

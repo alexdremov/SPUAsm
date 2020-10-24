@@ -5,7 +5,8 @@
 {\ttfamily \#include \char`\"{}S\+P\+U\+Core.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}S\+P\+U\+Core\+Helpers.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Syntax.\+hpp\char`\"{}}\newline
-Include dependency graph for S\+P\+U.\+cpp\+:\nopagebreak
+Include dependency graph for S\+P\+U.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -67,69 +68,71 @@ Include dependency graph for S\+P\+U.\+cpp\+:\nopagebreak
 \DoxyCodeLine{51     }
 \DoxyCodeLine{52     \mbox{\hyperlink{SPUDtypes_8hpp_structSPUCore}{SPUCore}} core = \{\};}
 \DoxyCodeLine{53     }
-\DoxyCodeLine{54     \mbox{\hyperlink{SPUCore_8cpp_a6a206874805d856f6acaafa7b0151381}{ConstructSPUCore}}(\&core, binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_abed489abcb0040342f3be1a90ada73f8}{stackSize}});}
-\DoxyCodeLine{55     }
-\DoxyCodeLine{56     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2f}{InstructionExeResult}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}} = \mbox{\hyperlink{SPUCore_8cpp_a93857b1d478028ef9ef8aaebd23109c2}{runCode}}(\&core, \&params, binary);}
-\DoxyCodeLine{57     }
-\DoxyCodeLine{58     \textcolor{keywordflow}{if} (\mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}} != \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa1e1608a157e7bb2d746ba91df8873e9e}{SPU\_EXE\_OK}}) \{}
-\DoxyCodeLine{59         \textcolor{keywordflow}{switch} (\mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}) \{}
-\DoxyCodeLine{60             \textcolor{keywordflow}{case} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa1e1608a157e7bb2d746ba91df8873e9e}{SPU\_EXE\_OK}}:}
-\DoxyCodeLine{61                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{62             \textcolor{keywordflow}{case} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa8f97989cd162132712e7919534d2604a}{SPU\_EXE\_STACK\_UNDERFLOW}}:}
-\DoxyCodeLine{63                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: stack underflow detected\(\backslash\)n"{}});}
-\DoxyCodeLine{64                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{65             \textcolor{keywordflow}{case} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fade40cc4c7fe7f735df35e57ee9dbba5e}{SPU\_EXE\_STACK\_OVERFLOW}}:}
-\DoxyCodeLine{66                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: stack owerflow detected\(\backslash\)n"{}});}
-\DoxyCodeLine{67                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{68             \textcolor{keywordflow}{case} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa6055455fd60dd2f673b2f702685f7a58}{SPU\_EXE\_CORRUPTED}}:}
-\DoxyCodeLine{69                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: binary structure invalid\(\backslash\)n"{}});}
-\DoxyCodeLine{70                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{71             \textcolor{keywordflow}{case} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa5da1141c988b4757a50db1ef053b8fc3}{SPU\_EXE\_ZERODIV}}:}
-\DoxyCodeLine{72                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: division by zero\(\backslash\)n"{}});}
-\DoxyCodeLine{73                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{74             \textcolor{keywordflow}{case} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf0113534f70048df0263a31742bc10ce}{SPU\_EXE\_UNKNOWN}}:}
-\DoxyCodeLine{75                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: unknown command\(\backslash\)n"{}});}
-\DoxyCodeLine{76                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{77             \textcolor{keywordflow}{case} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{SPU\_EXE\_NOARGS}}:}
-\DoxyCodeLine{78                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: corrupted file, wrong instruction args\(\backslash\)n"{}});}
-\DoxyCodeLine{79                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{80             \textcolor{keywordflow}{case} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf41640121168996e72b9d0d624f728a7}{SPU\_EXE\_NOMEMORY}}:}
-\DoxyCodeLine{81                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: run out of memory\(\backslash\)n"{}});}
-\DoxyCodeLine{82                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{83             \textcolor{keywordflow}{case} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fad5a2a81664c27b80c90aee5b839992bb}{SPU\_EXE\_INVALIDINPUT}}:}
-\DoxyCodeLine{84                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: invalid input\(\backslash\)n"{}});}
-\DoxyCodeLine{85                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{86         \}}
-\DoxyCodeLine{87         \textcolor{keywordflow}{if} (params.\mbox{\hyperlink{SPUDtypes_8hpp_abe26a421f31a88df230b81e8cc4e087a}{verbose}})\{}
-\DoxyCodeLine{88             \mbox{\hyperlink{StackRigid_8cpp_a34ed05fb570dfd9ade77d3c0bd664591}{StackDump}}(core.\mbox{\hyperlink{SPUDtypes_8hpp_a7e53f3d8e7ad44b3dea986b508dddb4e}{stack}}, -\/1, params.\mbox{\hyperlink{SPUDtypes_8hpp_ac75aca7c0a7abd09ad0f8a1d0c1f34be}{inputFileName}}, \textcolor{stringliteral}{"{}ERROR"{}});}
-\DoxyCodeLine{89             \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}REGs: "{}});}
-\DoxyCodeLine{90             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 0;  \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} < \textcolor{keyword}{sizeof}(core.\mbox{\hyperlink{SPUDtypes_8hpp_a73b3a44c7e762d16b1952dad905f39c2}{REG}}) / \textcolor{keyword}{sizeof}(core.\mbox{\hyperlink{SPUDtypes_8hpp_a73b3a44c7e762d16b1952dad905f39c2}{REG}}[0]); \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++ )\{}
-\DoxyCodeLine{91                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}\%lg "{}}, core.\mbox{\hyperlink{SPUDtypes_8hpp_a73b3a44c7e762d16b1952dad905f39c2}{REG}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}]);}
-\DoxyCodeLine{92             \}}
-\DoxyCodeLine{93             \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{94         \}}
-\DoxyCodeLine{95         \mbox{\hyperlink{SPUCoreHelpers_8cpp_aaad251afe9f24c4d0160d66b4011d64d}{DestructSPUArgs}}(\&params);}
-\DoxyCodeLine{96         \mbox{\hyperlink{AssemblyHelpers_8cpp_a8384d0729973f2658ba4e29f66c9a7c7}{DestructBinaryFile}}(binary);}
-\DoxyCodeLine{97         \mbox{\hyperlink{SPUCore_8cpp_abcc188767bfe5fedeec886779e9f1bb3}{DestructSPUCore}}(\&core);}
-\DoxyCodeLine{98         \textcolor{keywordflow}{return} EXIT\_FAILURE;}
-\DoxyCodeLine{99     \}}
-\DoxyCodeLine{100     }
-\DoxyCodeLine{101     \textcolor{keywordflow}{if} (params.\mbox{\hyperlink{SPUDtypes_8hpp_abe26a421f31a88df230b81e8cc4e087a}{verbose}}) \{}
-\DoxyCodeLine{102         \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}info: spu: output finished to \%s\(\backslash\)n"{}}, params.\mbox{\hyperlink{SPUDtypes_8hpp_abab18039b4e5acf3efc51a8a76d6b07a}{outputFileName}});}
-\DoxyCodeLine{103     \}}
-\DoxyCodeLine{104     }
-\DoxyCodeLine{105     \mbox{\hyperlink{SPUCoreHelpers_8cpp_aaad251afe9f24c4d0160d66b4011d64d}{DestructSPUArgs}}(\&params);}
-\DoxyCodeLine{106     \mbox{\hyperlink{AssemblyHelpers_8cpp_a8384d0729973f2658ba4e29f66c9a7c7}{DestructBinaryFile}}(binary);}
-\DoxyCodeLine{107     \mbox{\hyperlink{SPUCore_8cpp_abcc188767bfe5fedeec886779e9f1bb3}{DestructSPUCore}}(\&core);}
-\DoxyCodeLine{108     \textcolor{keywordflow}{return} EXIT\_SUCCESS;}
-\DoxyCodeLine{109 \}}
+\DoxyCodeLine{54     \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}\(\backslash\)x1b[2J"{}});}
+\DoxyCodeLine{55     \mbox{\hyperlink{SPUCore_8cpp_a6a206874805d856f6acaafa7b0151381}{ConstructSPUCore}}(\&core, binary-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_abed489abcb0040342f3be1a90ada73f8}{stackSize}});}
+\DoxyCodeLine{56     }
+\DoxyCodeLine{57     \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2f}{InstructionExeResult}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}} = \mbox{\hyperlink{SPUCore_8cpp_a93857b1d478028ef9ef8aaebd23109c2}{runCode}}(\&core, \&params, binary);}
+\DoxyCodeLine{58     }
+\DoxyCodeLine{59     \textcolor{keywordflow}{if} (\mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}} != \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa1e1608a157e7bb2d746ba91df8873e9e}{SPU\_EXE\_OK}}) \{}
+\DoxyCodeLine{60         \textcolor{keywordflow}{switch} (\mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}) \{}
+\DoxyCodeLine{61             \textcolor{keywordflow}{case} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa1e1608a157e7bb2d746ba91df8873e9e}{SPU\_EXE\_OK}}:}
+\DoxyCodeLine{62                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{63             \textcolor{keywordflow}{case} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa8f97989cd162132712e7919534d2604a}{SPU\_EXE\_STACK\_UNDERFLOW}}:}
+\DoxyCodeLine{64                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: stack underflow detected\(\backslash\)n"{}});}
+\DoxyCodeLine{65                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{66             \textcolor{keywordflow}{case} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fade40cc4c7fe7f735df35e57ee9dbba5e}{SPU\_EXE\_STACK\_OVERFLOW}}:}
+\DoxyCodeLine{67                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: stack owerflow detected\(\backslash\)n"{}});}
+\DoxyCodeLine{68                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{69             \textcolor{keywordflow}{case} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa6055455fd60dd2f673b2f702685f7a58}{SPU\_EXE\_CORRUPTED}}:}
+\DoxyCodeLine{70                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: binary structure invalid\(\backslash\)n"{}});}
+\DoxyCodeLine{71                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{72             \textcolor{keywordflow}{case} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fa5da1141c988b4757a50db1ef053b8fc3}{SPU\_EXE\_ZERODIV}}:}
+\DoxyCodeLine{73                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: division by zero\(\backslash\)n"{}});}
+\DoxyCodeLine{74                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{75             \textcolor{keywordflow}{case} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf0113534f70048df0263a31742bc10ce}{SPU\_EXE\_UNKNOWN}}:}
+\DoxyCodeLine{76                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: unknown command\(\backslash\)n"{}});}
+\DoxyCodeLine{77                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{78             \textcolor{keywordflow}{case} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{SPU\_EXE\_NOARGS}}:}
+\DoxyCodeLine{79                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: corrupted file, wrong instruction args\(\backslash\)n"{}});}
+\DoxyCodeLine{80                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{81             \textcolor{keywordflow}{case} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faf41640121168996e72b9d0d624f728a7}{SPU\_EXE\_NOMEMORY}}:}
+\DoxyCodeLine{82                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: run out of memory\(\backslash\)n"{}});}
+\DoxyCodeLine{83                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{84             \textcolor{keywordflow}{case} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fad5a2a81664c27b80c90aee5b839992bb}{SPU\_EXE\_INVALIDINPUT}}:}
+\DoxyCodeLine{85                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}error: spu: invalid input\(\backslash\)n"{}});}
+\DoxyCodeLine{86                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{87         \}}
+\DoxyCodeLine{88         \textcolor{keywordflow}{if} (params.\mbox{\hyperlink{SPUDtypes_8hpp_abe26a421f31a88df230b81e8cc4e087a}{verbose}})\{}
+\DoxyCodeLine{89             \mbox{\hyperlink{StackRigid_8cpp_a34ed05fb570dfd9ade77d3c0bd664591}{StackDump}}(core.\mbox{\hyperlink{SPUDtypes_8hpp_a7e53f3d8e7ad44b3dea986b508dddb4e}{stack}}, -\/1, params.\mbox{\hyperlink{SPUDtypes_8hpp_ac75aca7c0a7abd09ad0f8a1d0c1f34be}{inputFileName}}, \textcolor{stringliteral}{"{}ERROR"{}});}
+\DoxyCodeLine{90             \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}REGs: "{}});}
+\DoxyCodeLine{91             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} = 0;  \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} < \textcolor{keyword}{sizeof}(core.\mbox{\hyperlink{SPUDtypes_8hpp_a66cb1b89fdc5a306e383f4557523a925}{REG}}) / \textcolor{keyword}{sizeof}(core.\mbox{\hyperlink{SPUDtypes_8hpp_a66cb1b89fdc5a306e383f4557523a925}{REG}}[0]); \mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}++ )\{}
+\DoxyCodeLine{92                 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}\%lg "{}}, core.\mbox{\hyperlink{SPUDtypes_8hpp_a66cb1b89fdc5a306e383f4557523a925}{REG}}[\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}]);}
+\DoxyCodeLine{93             \}}
+\DoxyCodeLine{94             \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{95         \}}
+\DoxyCodeLine{96         \mbox{\hyperlink{SPUCoreHelpers_8cpp_aaad251afe9f24c4d0160d66b4011d64d}{DestructSPUArgs}}(\&params);}
+\DoxyCodeLine{97         \mbox{\hyperlink{AssemblyHelpers_8cpp_a8384d0729973f2658ba4e29f66c9a7c7}{DestructBinaryFile}}(binary);}
+\DoxyCodeLine{98         \mbox{\hyperlink{SPUCore_8cpp_abcc188767bfe5fedeec886779e9f1bb3}{DestructSPUCore}}(\&core);}
+\DoxyCodeLine{99         \textcolor{keywordflow}{return} EXIT\_FAILURE;}
+\DoxyCodeLine{100     \}}
+\DoxyCodeLine{101     }
+\DoxyCodeLine{102     \textcolor{keywordflow}{if} (params.\mbox{\hyperlink{SPUDtypes_8hpp_abe26a421f31a88df230b81e8cc4e087a}{verbose}}) \{}
+\DoxyCodeLine{103         \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}info: spu: output finished to \%s\(\backslash\)n"{}}, params.\mbox{\hyperlink{SPUDtypes_8hpp_abab18039b4e5acf3efc51a8a76d6b07a}{outputFileName}});}
+\DoxyCodeLine{104     \}}
+\DoxyCodeLine{105     }
+\DoxyCodeLine{106     \mbox{\hyperlink{SPUCoreHelpers_8cpp_aaad251afe9f24c4d0160d66b4011d64d}{DestructSPUArgs}}(\&params);}
+\DoxyCodeLine{107     \mbox{\hyperlink{AssemblyHelpers_8cpp_a8384d0729973f2658ba4e29f66c9a7c7}{DestructBinaryFile}}(binary);}
+\DoxyCodeLine{108     \mbox{\hyperlink{SPUCore_8cpp_abcc188767bfe5fedeec886779e9f1bb3}{DestructSPUCore}}(\&core);}
+\DoxyCodeLine{109     \textcolor{keywordflow}{return} EXIT\_SUCCESS;}
+\DoxyCodeLine{110 \}}
 
 \end{DoxyCode}
 
 
 References Construct\+S\+P\+U\+Core(), Destruct\+Binary\+File(), Destruct\+S\+P\+U\+Args(), Destruct\+S\+P\+U\+Core(), i, Run\+Parameters\+::input\+File, Run\+Parameters\+::input\+File\+Name, load\+Bin\+File(), New\+Binary\+File(), Run\+Parameters\+::output\+File\+Name, parse\+S\+P\+U\+Args(), printf(), S\+P\+U\+Core\+::\+R\+EG, result, run\+Code(), S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED, S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+OK, S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+W\+R\+O\+N\+G\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE, S\+P\+U\+\_\+\+B\+I\+N\+L\+O\+A\+D\+\_\+\+W\+R\+O\+N\+G\+\_\+\+V\+E\+R\+S\+I\+ON, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+I\+N\+P\+UT, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+M\+E\+M\+O\+RY, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+S\+T\+A\+C\+K\+\_\+\+O\+V\+E\+R\+F\+L\+OW, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+S\+T\+A\+C\+K\+\_\+\+U\+N\+D\+E\+R\+F\+L\+OW, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+U\+N\+K\+N\+O\+WN, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+Z\+E\+R\+O\+D\+IV, S\+P\+U\+Core\+::stack, Stack\+Dump(), Binary\+File\+::stack\+Size, and Run\+Parameters\+::verbose.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

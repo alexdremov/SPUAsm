@@ -27,7 +27,7 @@ struct SPUCore {
 
 struct RunParameters {
     int         verbose;
-    int         vram;
+    int         vsync;
     
     FILE*       inputFile;
     const char* inputFileName;

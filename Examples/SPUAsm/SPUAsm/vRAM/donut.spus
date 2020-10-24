@@ -7,11 +7,40 @@ push 10
 push 35
 call drawCircle
 
+clrscr
+
 push 32
 push 16
 push 4
 push 42
 call drawCircle
+
+clrscr
+
+push 16
+push 8
+push 2
+push 42
+call drawCircle
+
+clrscr
+rend
+
+push 40
+push 25
+push 4
+push 48
+call drawCircle
+
+clrscr
+rend
+
+push 60
+push 13
+push 8
+push 48
+call drawCircle
+
 
 hlt
 
@@ -28,25 +57,25 @@ drawCircle: ;(x0, y0, r, symbol)
         sin
         push rcx
         mul
-        add
+        add ; y0 + r*sin(alpha)
 
-        pop [0]
+        pop [0] ; y coordinate
 
         push rax
         push rdx
         cos
         push rcx
-        push 2   ;
+        push 2
         mul
         mul
-        add
+        add ; x0 + r*cos(alpha)
 
-        pop [1]
+        pop [1] ; x coordinate
 
         pixset [1] [0] [2]
         
         rend
-        ; slp 10000
+        slp 10000
     ; loop params
     mov rdx rdx+0.1
     push rdx

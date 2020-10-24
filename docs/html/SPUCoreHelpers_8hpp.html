@@ -90,15 +90,17 @@ Include dependency graph for SPUCoreHelpers.hpp:</div>
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="SPUCoreHelpers_8hpp__dep__incl.png" border="0" usemap="#aSoftProcessorUnit_2SPU_2Core_2SPUCoreHelpers_8hppdep" alt=""/></div>
-<map name="SoftProcessorUnit_2SPU_2Core_2SPUCoreHelpers_8hppdep" id="SoftProcessorUnit_2SPU_2Core_2SPUCoreHelpers_8hppdep">
-<area shape="rect" title=" " alt="" coords="135,5,319,47"/>
+<map name="SoftProcessorUnit_2SPU_2Core_2SPUCoreHelpers_8hppdep" id="aSoftProcessorUnit_2SPU_2Core_2SPUCoreHelpers_8hppdep">
+<area shape="rect" title=" " alt="" coords="160,5,344,47"/>
 <area shape="rect" href="SPUCoreHelpers_8cpp.html" title=" " alt="" coords="5,102,189,143"/>
-<area shape="rect" href="SPU_8cpp.html" title=" " alt="" coords="229,407,390,448"/>
-<area shape="rect" href="EXEDefs_8h.html" title=" " alt="" coords="347,95,522,151"/>
-<area shape="rect" href="InstrExecutors_8cpp.html" title=" " alt="" coords="265,303,471,359"/>
-<area shape="rect" href="InstrExecutors_8hpp.html" title=" " alt="" coords="331,199,538,255"/>
-<area shape="rect" href="SPUCore_8hpp.html" title=" " alt="" coords="495,310,657,351"/>
-<area shape="rect" href="SPUCore_8cpp.html" title=" " alt="" coords="495,407,657,448"/>
+<area shape="rect" href="CoreRender_8hpp.html" title=" " alt="" coords="98,392,289,433"/>
+<area shape="rect" href="SPU_8cpp.html" title=" " alt="" coords="313,392,474,433"/>
+<area shape="rect" href="EXEDefs_8h.html" title=" " alt="" coords="385,95,559,151"/>
+<area shape="rect" href="SPUCore_8cpp.html" title=" " alt="" coords="294,489,455,530"/>
+<area shape="rect" href="CoreRender_8cpp.html" title=" " alt="" coords="79,489,270,530"/>
+<area shape="rect" href="InstrExecutors_8cpp.html" title=" " alt="" coords="479,481,686,537"/>
+<area shape="rect" href="InstrExecutors_8hpp.html" title=" " alt="" coords="369,199,575,255"/>
+<area shape="rect" href="SPUCore_8hpp.html" title=" " alt="" coords="315,303,477,344"/>
 </map>
 </div>
 </div>
@@ -129,10 +131,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                                {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    fclose(parameters-&gt;<a class="code" href="SPUDtypes_8hpp.html#a2af4e09a5ada13ad50069b8dbf89efd6">inputFile</a>);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    fclose(parameters-&gt;<a class="code" href="SPUDtypes_8hpp.html#a2f52d85470f1a16f8e836db4e7dfcda0">outputFile</a>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                                                {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    fclose(parameters-&gt;<a class="code" href="SPUDtypes_8hpp.html#a2af4e09a5ada13ad50069b8dbf89efd6">inputFile</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    fclose(parameters-&gt;<a class="code" href="SPUDtypes_8hpp.html#a2f52d85470f1a16f8e836db4e7dfcda0">outputFile</a>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SPUDtypes_8hpp.html#a2af4e09a5ada13ad50069b8dbf89efd6">RunParameters::inputFile</a>, and <a class="el" href="SPUDtypes_8hpp.html#a2f52d85470f1a16f8e836db4e7dfcda0">RunParameters::outputFile</a>.</p>
 
@@ -181,7 +183,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                                                           {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="SPUDtypes_8hpp.html#structRunParameters">RunParameters</a> newParams = {0, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>};</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="SPUDtypes_8hpp.html#structRunParameters">RunParameters</a> newParams = {0, 0, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>};</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">if</span> (argc &lt;= 1){</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="SPUCoreHelpers_8cpp.html#ac7a309a014bd981682f3e640d670050b">spuHelp</a>();</div>
@@ -215,34 +217,36 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            newParams.<a class="code" href="SPUDtypes_8hpp.html#abe26a421f31a88df230b81e8cc4e087a">verbose</a> = 1;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(argv[<a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>], <span class="stringliteral">&quot;--help&quot;</span>) == 0 || strcmp(argv[<a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>], <span class="stringliteral">&quot;-h&quot;</span>) == 0) {</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <a class="code" href="SPUCoreHelpers_8cpp.html#ac7a309a014bd981682f3e640d670050b">spuHelp</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }<span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">if</span> (newParams.<a class="code" href="SPUDtypes_8hpp.html#a2af4e09a5ada13ad50069b8dbf89efd6">inputFile</a> == <span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                FILE* inputFile = fopen(argv[<a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>], <span class="stringliteral">&quot;rb&quot;</span>);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                newParams.<a class="code" href="SPUDtypes_8hpp.html#a2af4e09a5ada13ad50069b8dbf89efd6">inputFile</a> = inputFile;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                newParams.<a class="code" href="SPUDtypes_8hpp.html#ac75aca7c0a7abd09ad0f8a1d0c1f34be">inputFileName</a> = *(argv + <a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">if</span> (newParams.<a class="code" href="SPUDtypes_8hpp.html#a2af4e09a5ada13ad50069b8dbf89efd6">inputFile</a> == <span class="keyword">nullptr</span>){</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    <a class="code" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf</a>(<span class="stringliteral">&quot;error: spu: Can&#39;t open input file %s\n&quot;</span>, argv[<a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>]);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    <span class="keywordflow">return</span> EXIT_FAILURE;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> (newParams.<a class="code" href="SPUDtypes_8hpp.html#a2af4e09a5ada13ad50069b8dbf89efd6">inputFile</a> == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf</a>(<span class="stringliteral">&quot;error: spu: No input file specified\n&quot;</span>);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span> (newParams.<a class="code" href="SPUDtypes_8hpp.html#a2f52d85470f1a16f8e836db4e7dfcda0">outputFile</a> == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        newParams.<a class="code" href="SPUDtypes_8hpp.html#a2f52d85470f1a16f8e836db4e7dfcda0">outputFile</a> = stdout;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        newParams.<a class="code" href="SPUDtypes_8hpp.html#abab18039b4e5acf3efc51a8a76d6b07a">outputFileName</a> = <span class="stringliteral">&quot;stdout&quot;</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    *parameters = newParams;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(argv[<a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>], <span class="stringliteral">&quot;--vsync&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            newParams.<a class="code" href="SPUDtypes_8hpp.html#a5d2a639386ec5c9177015deb45ef8dd5">vsync</a> = 1;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }<span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">if</span> (newParams.<a class="code" href="SPUDtypes_8hpp.html#a2af4e09a5ada13ad50069b8dbf89efd6">inputFile</a> == <span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                FILE* inputFile = fopen(argv[<a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>], <span class="stringliteral">&quot;rb&quot;</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                newParams.<a class="code" href="SPUDtypes_8hpp.html#a2af4e09a5ada13ad50069b8dbf89efd6">inputFile</a> = inputFile;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                newParams.<a class="code" href="SPUDtypes_8hpp.html#ac75aca7c0a7abd09ad0f8a1d0c1f34be">inputFileName</a> = *(argv + <a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordflow">if</span> (newParams.<a class="code" href="SPUDtypes_8hpp.html#a2af4e09a5ada13ad50069b8dbf89efd6">inputFile</a> == <span class="keyword">nullptr</span>){</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    <a class="code" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf</a>(<span class="stringliteral">&quot;error: spu: Can&#39;t open input file %s\n&quot;</span>, argv[<a class="code" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>]);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (newParams.<a class="code" href="SPUDtypes_8hpp.html#a2af4e09a5ada13ad50069b8dbf89efd6">inputFile</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf</a>(<span class="stringliteral">&quot;error: spu: No input file specified\n&quot;</span>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> (newParams.<a class="code" href="SPUDtypes_8hpp.html#a2f52d85470f1a16f8e836db4e7dfcda0">outputFile</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        newParams.<a class="code" href="SPUDtypes_8hpp.html#a2f52d85470f1a16f8e836db4e7dfcda0">outputFile</a> = stdout;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        newParams.<a class="code" href="SPUDtypes_8hpp.html#abab18039b4e5acf3efc51a8a76d6b07a">outputFileName</a> = <span class="stringliteral">&quot;stdout&quot;</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    *parameters = newParams;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>, <a class="el" href="SPUDtypes_8hpp.html#a2af4e09a5ada13ad50069b8dbf89efd6">RunParameters::inputFile</a>, <a class="el" href="SPUDtypes_8hpp.html#ac75aca7c0a7abd09ad0f8a1d0c1f34be">RunParameters::inputFileName</a>, <a class="el" href="SPUDtypes_8hpp.html#a2f52d85470f1a16f8e836db4e7dfcda0">RunParameters::outputFile</a>, <a class="el" href="SPUDtypes_8hpp.html#abab18039b4e5acf3efc51a8a76d6b07a">RunParameters::outputFileName</a>, <a class="el" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf()</a>, <a class="el" href="SPUCoreHelpers_8cpp.html#ac7a309a014bd981682f3e640d670050b">spuHelp()</a>, and <a class="el" href="SPUDtypes_8hpp.html#abe26a421f31a88df230b81e8cc4e087a">RunParameters::verbose</a>.</p>
+<p class="reference">References <a class="el" href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>, <a class="el" href="SPUDtypes_8hpp.html#a2af4e09a5ada13ad50069b8dbf89efd6">RunParameters::inputFile</a>, <a class="el" href="SPUDtypes_8hpp.html#ac75aca7c0a7abd09ad0f8a1d0c1f34be">RunParameters::inputFileName</a>, <a class="el" href="SPUDtypes_8hpp.html#a2f52d85470f1a16f8e836db4e7dfcda0">RunParameters::outputFile</a>, <a class="el" href="SPUDtypes_8hpp.html#abab18039b4e5acf3efc51a8a76d6b07a">RunParameters::outputFileName</a>, <a class="el" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf()</a>, <a class="el" href="SPUCoreHelpers_8cpp.html#ac7a309a014bd981682f3e640d670050b">spuHelp()</a>, <a class="el" href="SPUDtypes_8hpp.html#abe26a421f31a88df230b81e8cc4e087a">RunParameters::verbose</a>, and <a class="el" href="SPUDtypes_8hpp.html#a5d2a639386ec5c9177015deb45ef8dd5">RunParameters::vsync</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SPU_8cpp.html#ac0f2228420376f4db7e1274f2b41667c">main()</a>.</p>
 <div class="dynheader">
@@ -281,20 +285,21 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;               {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">int</span> SPUAssemblyVersion = <a class="code" href="SPUVersion_8hpp.html#a46cfa984fce0310cc64459db66aba985">SPU_VERSION</a>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">char</span>* SPUAssemblyVersion_chars = (<span class="keywordtype">char</span>*)&amp;SPUAssemblyVersion;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf</a>(<span class="stringliteral">&quot;SPU v%c.%c.%c%c help\n&quot;</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;           <span class="stringliteral">&quot;--input     &lt;input file&gt; input file to be assembled .spub format (spu binary)\n&quot;</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;           <span class="stringliteral">&quot;--output    &lt;output file&gt; output file stdout by default\n&quot;</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;           <span class="stringliteral">&quot;-h, --help  show this help message\n&quot;</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;           <span class="stringliteral">&quot;--verbose   output debug information to the console\n&quot;</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;           <span class="stringliteral">&quot;\n&quot;</span>,</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;           SPUAssemblyVersion_chars[0],</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;           SPUAssemblyVersion_chars[1],</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;           SPUAssemblyVersion_chars[2],</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;           SPUAssemblyVersion_chars[3]);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;               {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">int</span> SPUAssemblyVersion = <a class="code" href="SPUVersion_8hpp.html#a46cfa984fce0310cc64459db66aba985">SPU_VERSION</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">char</span>* SPUAssemblyVersion_chars = (<span class="keywordtype">char</span>*)&amp;SPUAssemblyVersion;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf</a>(<span class="stringliteral">&quot;SPU v%c.%c.%c%c help\n&quot;</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;           <span class="stringliteral">&quot;--input     &lt;input file&gt; input file to be assembled .spub format (spu binary)\n&quot;</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;           <span class="stringliteral">&quot;--output    &lt;output file&gt; output file stdout by default\n&quot;</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;           <span class="stringliteral">&quot;-h, --help  show this help message\n&quot;</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;           <span class="stringliteral">&quot;--verbose   output debug information to the console\n&quot;</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;           <span class="stringliteral">&quot;--vsync     render vram after every command\n&quot;</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;           <span class="stringliteral">&quot;\n&quot;</span>,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;           SPUAssemblyVersion_chars[0],</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;           SPUAssemblyVersion_chars[1],</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;           SPUAssemblyVersion_chars[2],</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;           SPUAssemblyVersion_chars[3]);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf()</a>, and <a class="el" href="SPUVersion_8hpp.html#a46cfa984fce0310cc64459db66aba985">SPU_VERSION</a>.</p>
 
@@ -322,15 +327,16 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aSPUCoreHelpers_8cpp_html_ac7a309a014bd981682f3e640d670050b"><div class="ttname"><a href="SPUCoreHelpers_8cpp.html#ac7a309a014bd981682f3e640d670050b">spuHelp</a></div><div class="ttdeci">void spuHelp()</div><div class="ttdef"><b>Definition:</b> SPUCoreHelpers.cpp:74</div></div>
-<div class="ttc" id="aSPUDtypes_8hpp_html_a2f52d85470f1a16f8e836db4e7dfcda0"><div class="ttname"><a href="SPUDtypes_8hpp.html#a2f52d85470f1a16f8e836db4e7dfcda0">RunParameters::outputFile</a></div><div class="ttdeci">FILE * outputFile</div><div class="ttdef"><b>Definition:</b> SPUDtypes.hpp:30</div></div>
-<div class="ttc" id="aSPUDtypes_8hpp_html_abab18039b4e5acf3efc51a8a76d6b07a"><div class="ttname"><a href="SPUDtypes_8hpp.html#abab18039b4e5acf3efc51a8a76d6b07a">RunParameters::outputFileName</a></div><div class="ttdeci">const char * outputFileName</div><div class="ttdef"><b>Definition:</b> SPUDtypes.hpp:31</div></div>
-<div class="ttc" id="aSPUDtypes_8hpp_html_abe26a421f31a88df230b81e8cc4e087a"><div class="ttname"><a href="SPUDtypes_8hpp.html#abe26a421f31a88df230b81e8cc4e087a">RunParameters::verbose</a></div><div class="ttdeci">int verbose</div><div class="ttdef"><b>Definition:</b> SPUDtypes.hpp:25</div></div>
+<div class="ttc" id="aSPUCoreHelpers_8cpp_html_ac7a309a014bd981682f3e640d670050b"><div class="ttname"><a href="SPUCoreHelpers_8cpp.html#ac7a309a014bd981682f3e640d670050b">spuHelp</a></div><div class="ttdeci">void spuHelp()</div><div class="ttdef"><b>Definition:</b> SPUCoreHelpers.cpp:76</div></div>
+<div class="ttc" id="aSPUDtypes_8hpp_html_a2f52d85470f1a16f8e836db4e7dfcda0"><div class="ttname"><a href="SPUDtypes_8hpp.html#a2f52d85470f1a16f8e836db4e7dfcda0">RunParameters::outputFile</a></div><div class="ttdeci">FILE * outputFile</div><div class="ttdef"><b>Definition:</b> SPUDtypes.hpp:35</div></div>
+<div class="ttc" id="aSPUDtypes_8hpp_html_abab18039b4e5acf3efc51a8a76d6b07a"><div class="ttname"><a href="SPUDtypes_8hpp.html#abab18039b4e5acf3efc51a8a76d6b07a">RunParameters::outputFileName</a></div><div class="ttdeci">const char * outputFileName</div><div class="ttdef"><b>Definition:</b> SPUDtypes.hpp:36</div></div>
+<div class="ttc" id="aSPUDtypes_8hpp_html_abe26a421f31a88df230b81e8cc4e087a"><div class="ttname"><a href="SPUDtypes_8hpp.html#abe26a421f31a88df230b81e8cc4e087a">RunParameters::verbose</a></div><div class="ttdeci">int verbose</div><div class="ttdef"><b>Definition:</b> SPUDtypes.hpp:29</div></div>
 <div class="ttc" id="aEXE_8h_html_ab99234c936a3345fdf76f51743a997ea"><div class="ttname"><a href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf</a></div><div class="ttdeci">printf(&quot;%lf\n&quot;, value)</div></div>
-<div class="ttc" id="aSPUDtypes_8hpp_html_a2af4e09a5ada13ad50069b8dbf89efd6"><div class="ttname"><a href="SPUDtypes_8hpp.html#a2af4e09a5ada13ad50069b8dbf89efd6">RunParameters::inputFile</a></div><div class="ttdeci">FILE * inputFile</div><div class="ttdef"><b>Definition:</b> SPUDtypes.hpp:27</div></div>
+<div class="ttc" id="aSPUDtypes_8hpp_html_a2af4e09a5ada13ad50069b8dbf89efd6"><div class="ttname"><a href="SPUDtypes_8hpp.html#a2af4e09a5ada13ad50069b8dbf89efd6">RunParameters::inputFile</a></div><div class="ttdeci">FILE * inputFile</div><div class="ttdef"><b>Definition:</b> SPUDtypes.hpp:32</div></div>
+<div class="ttc" id="aSPUDtypes_8hpp_html_a5d2a639386ec5c9177015deb45ef8dd5"><div class="ttname"><a href="SPUDtypes_8hpp.html#a5d2a639386ec5c9177015deb45ef8dd5">RunParameters::vsync</a></div><div class="ttdeci">int vsync</div><div class="ttdef"><b>Definition:</b> SPUDtypes.hpp:30</div></div>
 <div class="ttc" id="aSPUVersion_8hpp_html_a46cfa984fce0310cc64459db66aba985"><div class="ttname"><a href="SPUVersion_8hpp.html#a46cfa984fce0310cc64459db66aba985">SPU_VERSION</a></div><div class="ttdeci">#define SPU_VERSION</div><div class="ttdef"><b>Definition:</b> SPUVersion.hpp:12</div></div>
-<div class="ttc" id="aSPUDtypes_8hpp_html_ac75aca7c0a7abd09ad0f8a1d0c1f34be"><div class="ttname"><a href="SPUDtypes_8hpp.html#ac75aca7c0a7abd09ad0f8a1d0c1f34be">RunParameters::inputFileName</a></div><div class="ttdeci">const char * inputFileName</div><div class="ttdef"><b>Definition:</b> SPUDtypes.hpp:28</div></div>
-<div class="ttc" id="aSPUDtypes_8hpp_html_structRunParameters"><div class="ttname"><a href="SPUDtypes_8hpp.html#structRunParameters">RunParameters</a></div><div class="ttdef"><b>Definition:</b> SPUDtypes.hpp:24</div></div>
+<div class="ttc" id="aSPUDtypes_8hpp_html_ac75aca7c0a7abd09ad0f8a1d0c1f34be"><div class="ttname"><a href="SPUDtypes_8hpp.html#ac75aca7c0a7abd09ad0f8a1d0c1f34be">RunParameters::inputFileName</a></div><div class="ttdeci">const char * inputFileName</div><div class="ttdef"><b>Definition:</b> SPUDtypes.hpp:33</div></div>
+<div class="ttc" id="aSPUDtypes_8hpp_html_structRunParameters"><div class="ttname"><a href="SPUDtypes_8hpp.html#structRunParameters">RunParameters</a></div><div class="ttdef"><b>Definition:</b> SPUDtypes.hpp:28</div></div>
 <div class="ttc" id="aCMakeCache_8txt_html_a7e98b8a17c0aad30ba64d47b74e2a6c1"><div class="ttname"><a href="CMakeCache_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> CMakeCache.txt:304</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

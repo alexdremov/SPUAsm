@@ -305,3 +305,10 @@ OPBACKTRANSLATE_FUNC(pixset, {
     })
     return SPU_DISASM_OK;
 })
+
+OPBACKTRANSLATE_FUNC(clrscr, {
+    OPBACKGENERAL({
+        INCSPI;
+    })
+    return SPU_DISASM_OK;
+})

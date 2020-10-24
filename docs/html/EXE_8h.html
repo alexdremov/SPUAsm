@@ -73,27 +73,31 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for EXE.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="EXE_8h__incl.png" border="0" usemap="#aSoftProcessorUnit_2Syntax_2EXE_8h" alt=""/></div>
-<map name="SoftProcessorUnit_2Syntax_2EXE_8h" id="SoftProcessorUnit_2Syntax_2EXE_8h">
+<map name="SoftProcessorUnit_2Syntax_2EXE_8h" id="aSoftProcessorUnit_2Syntax_2EXE_8h">
 <area shape="rect" title=" " alt="" coords="5,5,180,47"/>
-<area shape="rect" title=" " alt="" coords="65,95,120,121"/>
+<area shape="rect" title=" " alt="" coords="23,95,77,121"/>
+<area shape="rect" title=" " alt="" coords="101,95,169,121"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="EXE_8h__dep__incl.png" border="0" usemap="#aSoftProcessorUnit_2Syntax_2EXE_8hdep" alt=""/></div>
-<map name="SoftProcessorUnit_2Syntax_2EXE_8hdep" id="SoftProcessorUnit_2Syntax_2EXE_8hdep">
-<area shape="rect" title=" " alt="" coords="148,5,323,47"/>
+<map name="SoftProcessorUnit_2Syntax_2EXE_8hdep" id="aSoftProcessorUnit_2Syntax_2EXE_8hdep">
+<area shape="rect" title=" " alt="" coords="37,5,212,47"/>
 <area shape="rect" href="InstrExecutors_8cpp.html" title=" " alt="" coords="5,392,212,448"/>
-<area shape="rect" href="InstrExecutors_8hpp.html" title=" " alt="" coords="309,95,516,151"/>
-<area shape="rect" href="SPUCore_8hpp.html" title=" " alt="" coords="332,199,493,240"/>
-<area shape="rect" href="EXEDefs_8h.html" title=" " alt="" coords="517,288,692,344"/>
-<area shape="rect" href="SPUCore_8cpp.html" title=" " alt="" coords="147,295,308,337"/>
-<area shape="rect" href="SPU_8cpp.html" title=" " alt="" coords="332,295,493,337"/>
+<area shape="rect" href="InstrExecutors_8hpp.html" title=" " alt="" coords="109,95,316,151"/>
+<area shape="rect" href="SPUCore_8hpp.html" title=" " alt="" coords="339,199,500,240"/>
+<area shape="rect" href="EXEDefs_8h.html" title=" " alt="" coords="125,288,300,344"/>
+<area shape="rect" href="SPUCore_8cpp.html" title=" " alt="" coords="472,399,633,441"/>
+<area shape="rect" href="CoreRender_8hpp.html" title=" " alt="" coords="324,295,515,337"/>
+<area shape="rect" href="SPU_8cpp.html" title=" " alt="" coords="591,295,752,337"/>
+<area shape="rect" href="CoreRender_8cpp.html" title=" " alt="" coords="257,399,448,441"/>
 </map>
 </div>
 </div>
@@ -115,10 +119,14 @@ Functions</h2></td></tr>
 <tr class="separator:ad3c4171d67b7f3ee90710cf8ad212078"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0684b935c830dd82c5712c53480801c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#a0684b935c830dd82c5712c53480801c4">if</a> (<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>&lt;=<a class="el" href="EXE_8h.html#ab833bacb3fa8d1a189efcbba74f10fa1">right</a>) <a class="el" href="EXE_8h.html#aa7627babb7e2db2ba52209b8517e92c2">ADDSPI</a>(<a class="el" href="ParseHelpers_8hpp.html#a503732ecee5e0f7a02f23c8381727ed6">getIntFromBuffer</a>(<a class="el" href="EXE_8h.html#a6fc13e99b0e5bfd34110346dec8c347d">localSPI</a>+1))</td></tr>
 <tr class="separator:a0684b935c830dd82c5712c53480801c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad87bc2bfa2956f33ea88ab8af40cdc08"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#ad87bc2bfa2956f33ea88ab8af40cdc08">if</a> (params-&gt;vsync)</td></tr>
+<tr class="separator:ad87bc2bfa2956f33ea88ab8af40cdc08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00ef586d393155bc1fcf915531940ae4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#a00ef586d393155bc1fcf915531940ae4">if</a> (<a class="el" href="EXE_8h.html#a9cd5df19a53bf394077be925bb924459">scanned</a>&lt;=0)</td></tr>
 <tr class="separator:a00ef586d393155bc1fcf915531940ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefbba8e6103e96f02f9dab0aeaab3c00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#aefbba8e6103e96f02f9dab0aeaab3c00">if</a> (<a class="el" href="EXE_8h.html#a9ab9d7057831483025a5c168d2308109">val</a>==<a class="el" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeba9b917da5e21d036fbc6af5d22dd64d2c">SPU_CV_NOARG</a>)</td></tr>
 <tr class="separator:aefbba8e6103e96f02f9dab0aeaab3c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46eb8e9d4c4db42fc9108030c991e94a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#a46eb8e9d4c4db42fc9108030c991e94a">OPEXE_FUNC</a> (abs, { <a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(!<a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>(1)) return <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>;double <a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>=0;<a class="el" href="StackRigid_8h.html#afa660da841608914d20d9819a7efe039">StackRigidOperationCodes</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#aa1dcc2d6eda6e79d7bdda5f8dd461c39">POP</a>(&amp;<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>);<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#a9bd299905b65faef2943ad1b91e71236">PUSH</a>(abs(<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>));<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#a2f7c8a600c42c1dfd1cd779f10aca47c">INCSPI</a>;return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;}) OPEXE_FUNC(pixset</td></tr>
+<tr class="separator:a46eb8e9d4c4db42fc9108030c991e94a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8d4cf441908b05c8f12e9d4965b2f13"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#af8d4cf441908b05c8f12e9d4965b2f13">OPEXE_FUNC</a> (add, { <a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(!<a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>(1)) return <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>;double <a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>=0;double <a class="el" href="EXE_8h.html#ab833bacb3fa8d1a189efcbba74f10fa1">right</a>=0;<a class="el" href="StackRigid_8h.html#afa660da841608914d20d9819a7efe039">StackRigidOperationCodes</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#aa1dcc2d6eda6e79d7bdda5f8dd461c39">POP</a>(&amp;<a class="el" href="EXE_8h.html#ab833bacb3fa8d1a189efcbba74f10fa1">right</a>);<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#aa1dcc2d6eda6e79d7bdda5f8dd461c39">POP</a>(&amp;<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>);<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#a9bd299905b65faef2943ad1b91e71236">PUSH</a>(<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>+<a class="el" href="EXE_8h.html#ab833bacb3fa8d1a189efcbba74f10fa1">right</a>);<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#a2f7c8a600c42c1dfd1cd779f10aca47c">INCSPI</a>;return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;}) OPEXE_FUNC(sub</td></tr>
 <tr class="separator:af8d4cf441908b05c8f12e9d4965b2f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62e7c2a8e0114665e0377e5874366e55"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#a62e7c2a8e0114665e0377e5874366e55">OPEXE_FUNC</a> (dec, { <a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(!<a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>(2)) return <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>;double *<a class="el" href="EXE_8h.html#ace9fc28c7e7897c736d1105503a3457d">valueTo</a>=nullptr;<a class="el" href="AssemblyDTypes_8hpp.html#structComplexValue">ComplexValue</a> <a class="el" href="EXE_8h.html#afd28069fe7ee361686d9303957752105">cvalue</a>={};<a class="el" href="EXE_8h.html#aa7627babb7e2db2ba52209b8517e92c2">ADDSPI</a>(1);<a class="el" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeb">ComplexValueResult</a> <a class="el" href="EXE_8h.html#a9ab9d7057831483025a5c168d2308109">val</a>=<a class="el" href="ComplexValueTools_8hpp.html#a6fa8bc820187e01175c5230208e2623c">pointerToComplexValue</a>(core, SPI, &amp;<a class="el" href="EXE_8h.html#ace9fc28c7e7897c736d1105503a3457d">valueTo</a>, &amp;<a class="el" href="EXE_8h.html#afd28069fe7ee361686d9303957752105">cvalue</a>);<a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(<a class="el" href="EXE_8h.html#a9ab9d7057831483025a5c168d2308109">val</a>==<a class="el" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeba9b917da5e21d036fbc6af5d22dd64d2c">SPU_CV_NOARG</a>){ double <a class="el" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>=0;<a class="el" href="StackRigid_8h.html#afa660da841608914d20d9819a7efe039">StackRigidOperationCodes</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#aa1dcc2d6eda6e79d7bdda5f8dd461c39">POP</a>(&amp;<a class="el" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>);<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a>;<a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#a9bd299905b65faef2943ad1b91e71236">PUSH</a>(<a class="el" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a> - 1);<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a>;return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;} <a class="el" href="EXE_8h.html#add5ada3745a53f8fa6baeb3da47800ff">COMPLEXVALOK</a>;double <a class="el" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>= *<a class="el" href="EXE_8h.html#ace9fc28c7e7897c736d1105503a3457d">valueTo</a> - 1;<a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(<a class="el" href="ComplexValueTools_8hpp.html#a4e707f106314d2e928408c63af237407">charAdress</a>(&amp;<a class="el" href="EXE_8h.html#afd28069fe7ee361686d9303957752105">cvalue</a>)){ *((<a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a> *) <a class="el" href="EXE_8h.html#ace9fc28c7e7897c736d1105503a3457d">valueTo</a>)=(<a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a>) <a class="el" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>;} <a class="el" href="EXE_8h.html#a0544c3fe466e421738dae463968b70ba">else</a> { *<a class="el" href="EXE_8h.html#ace9fc28c7e7897c736d1105503a3457d">valueTo</a>=<a class="el" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>;} return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;}) OPEXE_FUNC(call</td></tr>
@@ -133,7 +141,7 @@ Functions</h2></td></tr>
 <tr class="separator:a20936b51fc3be86fb2849172b6f01f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a188fddf6643fab736a3e14594d52f696"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#a188fddf6643fab736a3e14594d52f696">OPEXE_FUNC</a> (je, { <a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(!<a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>(5)) return <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>;<a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a> *<a class="el" href="EXE_8h.html#a6fc13e99b0e5bfd34110346dec8c347d">localSPI</a>= *SPI;double <a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>=0;double <a class="el" href="EXE_8h.html#ab833bacb3fa8d1a189efcbba74f10fa1">right</a>=0;<a class="el" href="StackRigid_8h.html#afa660da841608914d20d9819a7efe039">StackRigidOperationCodes</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#aa1dcc2d6eda6e79d7bdda5f8dd461c39">POP</a>(&amp;<a class="el" href="EXE_8h.html#ab833bacb3fa8d1a189efcbba74f10fa1">right</a>);<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#aa1dcc2d6eda6e79d7bdda5f8dd461c39">POP</a>(&amp;<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>);<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>==<a class="el" href="EXE_8h.html#ab833bacb3fa8d1a189efcbba74f10fa1">right</a>) <a class="el" href="EXE_8h.html#aa7627babb7e2db2ba52209b8517e92c2">ADDSPI</a>(<a class="el" href="ParseHelpers_8hpp.html#a503732ecee5e0f7a02f23c8381727ed6">getIntFromBuffer</a>(<a class="el" href="EXE_8h.html#a6fc13e99b0e5bfd34110346dec8c347d">localSPI</a>+1));<a class="el" href="EXE_8h.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="EXE_8h.html#aa7627babb7e2db2ba52209b8517e92c2">ADDSPI</a>(5);return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;}) OPEXE_FUNC(jne</td></tr>
 <tr class="separator:a188fddf6643fab736a3e14594d52f696"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d23ca000e85a0d41b0053a26ebc51c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#a2d23ca000e85a0d41b0053a26ebc51c7">OPEXE_FUNC</a> (jm, { <a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(!<a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>(5)) return <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>;<a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a> *<a class="el" href="EXE_8h.html#a6fc13e99b0e5bfd34110346dec8c347d">localSPI</a>= *SPI;time_t t=time(NULL);struct tm tm= *localtime(&amp;t);<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> <a class="el" href="CMakeCache_8txt.html#a1aabac6d068eef6a7bad3fdf50a05cc8">d</a>=tm.tm_mday;<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> m=tm.tm_mon+1;<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> y=tm.tm_year+1900;<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> weekday=(<a class="el" href="CMakeCache_8txt.html#a1aabac6d068eef6a7bad3fdf50a05cc8">d</a>+=m&lt; 3 ? y-- :y - 2, 23 *m/9+<a class="el" href="CMakeCache_8txt.html#a1aabac6d068eef6a7bad3fdf50a05cc8">d</a>+4+y/4- y/100+y/400)%7;<a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(weekday==1) <a class="el" href="EXE_8h.html#aa7627babb7e2db2ba52209b8517e92c2">ADDSPI</a>(<a class="el" href="ParseHelpers_8hpp.html#a503732ecee5e0f7a02f23c8381727ed6">getIntFromBuffer</a>(<a class="el" href="EXE_8h.html#a6fc13e99b0e5bfd34110346dec8c347d">localSPI</a>+1));<a class="el" href="EXE_8h.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="EXE_8h.html#aa7627babb7e2db2ba52209b8517e92c2">ADDSPI</a>(5);return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;}) OPEXE_FUNC(inc</td></tr>
+<tr class="memitem:a2d23ca000e85a0d41b0053a26ebc51c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#a2d23ca000e85a0d41b0053a26ebc51c7">OPEXE_FUNC</a> (jm, { <a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(!<a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>(5)) return <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>;<a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a> *<a class="el" href="EXE_8h.html#a6fc13e99b0e5bfd34110346dec8c347d">localSPI</a>= *SPI;time_t t=time(NULL);struct tm tm= *localtime(&amp;t);<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> <a class="el" href="CMakeCache_8txt.html#a1aabac6d068eef6a7bad3fdf50a05cc8">d</a>=tm.tm_mday;<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> m=tm.tm_mon+1;<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> <a class="el" href="EXE_8h.html#ab927965981178aa1fba979a37168db2a">y</a>=tm.tm_year+1900;<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> weekday=(<a class="el" href="CMakeCache_8txt.html#a1aabac6d068eef6a7bad3fdf50a05cc8">d</a>+=m&lt; 3 ? <a class="el" href="EXE_8h.html#ab927965981178aa1fba979a37168db2a">y</a>-- :<a class="el" href="EXE_8h.html#ab927965981178aa1fba979a37168db2a">y</a> - 2, 23 *m/9+<a class="el" href="CMakeCache_8txt.html#a1aabac6d068eef6a7bad3fdf50a05cc8">d</a>+4+<a class="el" href="EXE_8h.html#ab927965981178aa1fba979a37168db2a">y</a>/4- <a class="el" href="EXE_8h.html#ab927965981178aa1fba979a37168db2a">y</a>/100+<a class="el" href="EXE_8h.html#ab927965981178aa1fba979a37168db2a">y</a>/400)%7;<a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(weekday==1) <a class="el" href="EXE_8h.html#aa7627babb7e2db2ba52209b8517e92c2">ADDSPI</a>(<a class="el" href="ParseHelpers_8hpp.html#a503732ecee5e0f7a02f23c8381727ed6">getIntFromBuffer</a>(<a class="el" href="EXE_8h.html#a6fc13e99b0e5bfd34110346dec8c347d">localSPI</a>+1));<a class="el" href="EXE_8h.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="EXE_8h.html#aa7627babb7e2db2ba52209b8517e92c2">ADDSPI</a>(5);return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;}) OPEXE_FUNC(inc</td></tr>
 <tr class="separator:a2d23ca000e85a0d41b0053a26ebc51c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad81d23bbdae1884132dabbbe85daacca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#ad81d23bbdae1884132dabbbe85daacca">OPEXE_FUNC</a> (mul, { <a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(!<a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>(1)) return <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>;double <a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>=0;double <a class="el" href="EXE_8h.html#ab833bacb3fa8d1a189efcbba74f10fa1">right</a>=0;<a class="el" href="StackRigid_8h.html#afa660da841608914d20d9819a7efe039">StackRigidOperationCodes</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#aa1dcc2d6eda6e79d7bdda5f8dd461c39">POP</a>(&amp;<a class="el" href="EXE_8h.html#ab833bacb3fa8d1a189efcbba74f10fa1">right</a>);<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#aa1dcc2d6eda6e79d7bdda5f8dd461c39">POP</a>(&amp;<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>);<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#a9bd299905b65faef2943ad1b91e71236">PUSH</a>(<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a> *<a class="el" href="EXE_8h.html#ab833bacb3fa8d1a189efcbba74f10fa1">right</a>);<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#a2f7c8a600c42c1dfd1cd779f10aca47c">INCSPI</a>;return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;}) OPEXE_FUNC(div</td></tr>
 <tr class="separator:ad81d23bbdae1884132dabbbe85daacca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,9 +149,11 @@ Functions</h2></td></tr>
 <tr class="separator:a7f44957aaaa3a519a3fadf35c773f516"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d11c9d4ccb58125788ea44f62a6c8bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#a2d11c9d4ccb58125788ea44f62a6c8bd">OPEXE_FUNC</a> (push, { <a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(!<a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>(3)) return <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>;double <a class="el" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>=0;<a class="el" href="EXE_8h.html#aa7627babb7e2db2ba52209b8517e92c2">ADDSPI</a>(1);<a class="el" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeb">ComplexValueResult</a> <a class="el" href="EXE_8h.html#a9ab9d7057831483025a5c168d2308109">val</a>=<a class="el" href="ComplexValueTools_8hpp.html#a530fd3cc4479bf1cd2e1f49cde53f7ea">retrieveComplexValue</a>(core, SPI, &amp;<a class="el" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>);<a class="el" href="EXE_8h.html#add5ada3745a53f8fa6baeb3da47800ff">COMPLEXVALOK</a>;<a class="el" href="StackRigid_8h.html#afa660da841608914d20d9819a7efe039">StackRigidOperationCodes</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#a9bd299905b65faef2943ad1b91e71236">PUSH</a>(<a class="el" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>);<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;}) OPEXE_FUNC(out</td></tr>
 <tr class="separator:a2d11c9d4ccb58125788ea44f62a6c8bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae185edfb6f10589271412280696def18"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#ae185edfb6f10589271412280696def18">OPEXE_FUNC</a> (rend, { <a class="el" href="CoreRender_8hpp.html#aecd17d0a9d0aab13b605f9ad48bf60ea">renderVRAM</a>(core);<a class="el" href="EXE_8h.html#aa7627babb7e2db2ba52209b8517e92c2">ADDSPI</a>(1);return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;}) OPEXE_FUNC(slp</td></tr>
+<tr class="separator:ae185edfb6f10589271412280696def18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a7954467408cfb9e1657aedf3ee0249"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#a4a7954467408cfb9e1657aedf3ee0249">OPEXE_FUNC</a> (ret, { <a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(!<a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>(1)) return <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>;double offset=0;<a class="el" href="StackRigid_8h.html#afa660da841608914d20d9819a7efe039">StackRigidOperationCodes</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#a5aeb7890f48c90ba4eb4c3dde56aec5d">callPOP</a>(&amp;offset);<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a>;<a class="el" href="EXEDefs_8h.html#a498a442635405b9571ad6912ae85a478">MOVSPI</a>(binary-&gt;code+(<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a>) offset);return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;}) OPEXE_FUNC(mov</td></tr>
 <tr class="separator:a4a7954467408cfb9e1657aedf3ee0249"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13f3ba01ca6f20753d21eb11f54dc2b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#a13f3ba01ca6f20753d21eb11f54dc2b9">OPEXE_FUNC</a> (sin, { <a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(!<a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>(1)) return <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>;double <a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>=0;<a class="el" href="StackRigid_8h.html#afa660da841608914d20d9819a7efe039">StackRigidOperationCodes</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#aa1dcc2d6eda6e79d7bdda5f8dd461c39">POP</a>(&amp;<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>);<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#a9bd299905b65faef2943ad1b91e71236">PUSH</a>(sin(<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>));<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#a2f7c8a600c42c1dfd1cd779f10aca47c">INCSPI</a>;return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;}) OPEXE_FUNC(cos</td></tr>
+<tr class="memitem:a13f3ba01ca6f20753d21eb11f54dc2b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#a13f3ba01ca6f20753d21eb11f54dc2b9">OPEXE_FUNC</a> (<a class="el" href="donut_8cpp.html#ab115207b90bd7664893c3eda01a20591">sin</a>, { <a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(!<a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>(1)) return <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>;double <a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>=0;<a class="el" href="StackRigid_8h.html#afa660da841608914d20d9819a7efe039">StackRigidOperationCodes</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#aa1dcc2d6eda6e79d7bdda5f8dd461c39">POP</a>(&amp;<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>);<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#a9bd299905b65faef2943ad1b91e71236">PUSH</a>(<a class="el" href="donut_8cpp.html#ab115207b90bd7664893c3eda01a20591">sin</a>(<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>));<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#a2f7c8a600c42c1dfd1cd779f10aca47c">INCSPI</a>;return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;}) OPEXE_FUNC(<a class="el" href="donut_8cpp.html#a2a208886a2a691a8d14219b558ea713b">cos</a></td></tr>
 <tr class="separator:a13f3ba01ca6f20753d21eb11f54dc2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9c0573724ad7edc53464f4f8fed70aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#ab9c0573724ad7edc53464f4f8fed70aa">OPEXE_FUNC</a> (sqrt, { <a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(!<a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>(1)) return <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>;double <a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>=0;<a class="el" href="StackRigid_8h.html#afa660da841608914d20d9819a7efe039">StackRigidOperationCodes</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#aa1dcc2d6eda6e79d7bdda5f8dd461c39">POP</a>(&amp;<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>);<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#a9bd299905b65faef2943ad1b91e71236">PUSH</a>(sqrt(<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>));<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#a2f7c8a600c42c1dfd1cd779f10aca47c">INCSPI</a>;return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;}) OPEXE_FUNC(pow</td></tr>
 <tr class="separator:ab9c0573724ad7edc53464f4f8fed70aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,6 +161,10 @@ Functions</h2></td></tr>
 <tr class="separator:ab99234c936a3345fdf76f51743a997ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bc054f8187ba3931c689f28b4d63465"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#a9bc054f8187ba3931c689f28b4d63465">printf</a> (&quot;Requested value: &quot;)</td></tr>
 <tr class="separator:a9bc054f8187ba3931c689f28b4d63465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dbd3a71bbf815d4d892180fde504474"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#a7dbd3a71bbf815d4d892180fde504474">usleep</a> ((unsigned) <a class="el" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>)</td></tr>
+<tr class="separator:a7dbd3a71bbf815d4d892180fde504474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3883623213b342ebd6ba0772bfdc6be1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#a3883623213b342ebd6ba0772bfdc6be1">vramSetPixel</a> (core,(<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a>) <a class="el" href="EXE_8h.html#af88b946fb90d5f08b5fb740c70e98c10">x</a>,(<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a>) <a class="el" href="EXE_8h.html#ab927965981178aa1fba979a37168db2a">y</a>,(<a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a>) <a class="el" href="EXE_8h.html#a8b283aacb16eba272bc1bf4278158a83">valPix</a>)</td></tr>
+<tr class="separator:a3883623213b342ebd6ba0772bfdc6be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -180,10 +194,16 @@ Variables</h2></td></tr>
 <tr class="separator:a3d5a91f6cd5cdd9f5ddda00f4f00e4be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ab9d7057831483025a5c168d2308109"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeb">ComplexValueResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#a9ab9d7057831483025a5c168d2308109">val</a> = <a class="el" href="ComplexValueTools_8hpp.html#a530fd3cc4479bf1cd2e1f49cde53f7ea">retrieveComplexValue</a>(core, SPI, &amp;<a class="el" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>)</td></tr>
 <tr class="separator:a9ab9d7057831483025a5c168d2308109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b283aacb16eba272bc1bf4278158a83"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#a8b283aacb16eba272bc1bf4278158a83">valPix</a> = 0</td></tr>
+<tr class="separator:a8b283aacb16eba272bc1bf4278158a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee90379adb0307effb138f4871edbc5c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a> = 0</td></tr>
 <tr class="separator:aee90379adb0307effb138f4871edbc5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace9fc28c7e7897c736d1105503a3457d"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#ace9fc28c7e7897c736d1105503a3457d">valueTo</a> = nullptr</td></tr>
 <tr class="separator:ace9fc28c7e7897c736d1105503a3457d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af88b946fb90d5f08b5fb740c70e98c10"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#af88b946fb90d5f08b5fb740c70e98c10">x</a> = 0</td></tr>
+<tr class="separator:af88b946fb90d5f08b5fb740c70e98c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab927965981178aa1fba979a37168db2a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXE_8h.html#ab927965981178aa1fba979a37168db2a">y</a> = 0</td></tr>
+<tr class="separator:ab927965981178aa1fba979a37168db2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ae3570cefbbd9fc7b1e80de402477a790"></a>
@@ -253,7 +273,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="acc418fb6ebe84cfbf2af63663d99f698"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc418fb6ebe84cfbf2af63663d99f698">&#9670;&nbsp;</a></span>if() <span class="overload">[1/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acc418fb6ebe84cfbf2af63663d99f698">&#9670;&nbsp;</a></span>if() <span class="overload">[1/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -267,16 +287,16 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                           {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        *((<span class="keywordtype">char</span>*)<a class="code" href="EXE_8h.html#ace9fc28c7e7897c736d1105503a3457d">valueTo</a>) = (<a class="code" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a>)<a class="code" href="EXE_8h.html#a1b15538a46facb727655d93d4156272f">newVal</a>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                           {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        *((<span class="keywordtype">char</span>*)<a class="code" href="EXE_8h.html#ace9fc28c7e7897c736d1105503a3457d">valueTo</a>) = (<a class="code" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a>)<a class="code" href="EXE_8h.html#a1b15538a46facb727655d93d4156272f">newVal</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    } <span class="keywordflow">else</span> {</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a>, <a class="el" href="EXE_8h.html#a1b15538a46facb727655d93d4156272f">newVal</a>, and <a class="el" href="EXE_8h.html#ace9fc28c7e7897c736d1105503a3457d">valueTo</a>.</p>
 
 </div>
 </div>
 <a id="af62567ff7478a4c51ec9f29e745286f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af62567ff7478a4c51ec9f29e745286f4">&#9670;&nbsp;</a></span>if() <span class="overload">[2/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af62567ff7478a4c51ec9f29e745286f4">&#9670;&nbsp;</a></span>if() <span class="overload">[2/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -294,7 +314,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="ad3c4171d67b7f3ee90710cf8ad212078"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3c4171d67b7f3ee90710cf8ad212078">&#9670;&nbsp;</a></span>if() <span class="overload">[3/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3c4171d67b7f3ee90710cf8ad212078">&#9670;&nbsp;</a></span>if() <span class="overload">[3/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -312,7 +332,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a0684b935c830dd82c5712c53480801c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0684b935c830dd82c5712c53480801c4">&#9670;&nbsp;</a></span>if() <span class="overload">[4/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0684b935c830dd82c5712c53480801c4">&#9670;&nbsp;</a></span>if() <span class="overload">[4/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,8 +349,40 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="ad87bc2bfa2956f33ea88ab8af40cdc08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad87bc2bfa2956f33ea88ab8af40cdc08">&#9670;&nbsp;</a></span>if() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">if </td>
+          <td>(</td>
+          <td class="paramtype">params-&gt;&#160;</td>
+          <td class="paramname"><em>vsync</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                      {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="EXE_8h.html#a7dbd3a71bbf815d4d892180fde504474">usleep</a>(50000);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="EXE_8h.html#a7dbd3a71bbf815d4d892180fde504474">usleep()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="EXE_8h_ad87bc2bfa2956f33ea88ab8af40cdc08_cgraph.png" border="0" usemap="#aEXE_8h_ad87bc2bfa2956f33ea88ab8af40cdc08_cgraph" alt=""/></div>
+<map name="EXE_8h_ad87bc2bfa2956f33ea88ab8af40cdc08_cgraph" id="aEXE_8h_ad87bc2bfa2956f33ea88ab8af40cdc08_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,44,32"/>
+<area shape="rect" href="EXE_8h.html#a7dbd3a71bbf815d4d892180fde504474" title=" " alt="" coords="92,5,152,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a00ef586d393155bc1fcf915531940ae4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00ef586d393155bc1fcf915531940ae4">&#9670;&nbsp;</a></span>if() <span class="overload">[5/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a00ef586d393155bc1fcf915531940ae4">&#9670;&nbsp;</a></span>if() <span class="overload">[6/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -344,16 +396,16 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                     {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2fad5a2a81664c27b80c90aee5b839992bb">SPU_EXE_INVALIDINPUT</a>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                     {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2fad5a2a81664c27b80c90aee5b839992bb">SPU_EXE_INVALIDINPUT</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2fad5a2a81664c27b80c90aee5b839992bb">SPU_EXE_INVALIDINPUT</a>.</p>
 
 </div>
 </div>
 <a id="aefbba8e6103e96f02f9dab0aeaab3c00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefbba8e6103e96f02f9dab0aeaab3c00">&#9670;&nbsp;</a></span>if() <span class="overload">[6/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aefbba8e6103e96f02f9dab0aeaab3c00">&#9670;&nbsp;</a></span>if() <span class="overload">[7/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -367,14 +419,14 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                            {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="StackRigid_8h.html#afa660da841608914d20d9819a7efe039">StackRigidOperationCodes</a> <a class="code" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a> = <a class="code" href="StackRigid_8cpp.html#a81920cc1380e65ab9173893cb1772d86">StackBack</a>(core-&gt;stack, &amp;<a class="code" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="EXE_8h.html#ae3570cefbbd9fc7b1e80de402477a790">ADDSPI</a>(1);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//        printf(&quot;off: %d\n&quot;, (int)(*SPI - binary-&gt;code));</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf</a>(<span class="stringliteral">&quot;%lf\n&quot;</span>, <a class="code" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                            {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="StackRigid_8h.html#afa660da841608914d20d9819a7efe039">StackRigidOperationCodes</a> <a class="code" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a> = <a class="code" href="StackRigid_8cpp.html#a81920cc1380e65ab9173893cb1772d86">StackBack</a>(core-&gt;stack, &amp;<a class="code" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="EXE_8h.html#ae3570cefbbd9fc7b1e80de402477a790">ADDSPI</a>(1);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//        printf(&quot;off: %d\n&quot;, (int)(*SPI - binary-&gt;code));</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf</a>(<span class="stringliteral">&quot;%lf\n&quot;</span>, <a class="code" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="EXE_8h.html#ae3570cefbbd9fc7b1e80de402477a790">ADDSPI()</a>, <a class="el" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf()</a>, <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>, <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>, <a class="el" href="StackRigid_8cpp.html#a81920cc1380e65ab9173893cb1772d86">StackBack()</a>, <a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a>, and <a class="el" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>.</p>
 <div class="dynheader">
@@ -398,8 +450,38 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a46eb8e9d4c4db42fc9108030c991e94a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46eb8e9d4c4db42fc9108030c991e94a">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[1/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OPEXE_FUNC </td>
+          <td>(</td>
+          <td class="paramtype">abs&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">{ <a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(!<a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>(1)) return <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>;double <a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>=0;<a class="el" href="StackRigid_8h.html#afa660da841608914d20d9819a7efe039">StackRigidOperationCodes</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#aa1dcc2d6eda6e79d7bdda5f8dd461c39">POP</a>(&amp;<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>);<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#a9bd299905b65faef2943ad1b91e71236">PUSH</a>(abs(<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>));<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#a2f7c8a600c42c1dfd1cd779f10aca47c">INCSPI</a>;return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;}&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>, <a class="el" href="EXE_8h.html#a2f7c8a600c42c1dfd1cd779f10aca47c">INCSPI</a>, <a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>, <a class="el" href="EXEDefs_8h.html#aa1dcc2d6eda6e79d7bdda5f8dd461c39">POP</a>, <a class="el" href="EXEDefs_8h.html#a9bd299905b65faef2943ad1b91e71236">PUSH</a>, <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>, <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>, <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>, and <a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a>.</p>
+
+</div>
+</div>
 <a id="af8d4cf441908b05c8f12e9d4965b2f13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8d4cf441908b05c8f12e9d4965b2f13">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[1/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af8d4cf441908b05c8f12e9d4965b2f13">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[2/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -429,7 +511,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="a62e7c2a8e0114665e0377e5874366e55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62e7c2a8e0114665e0377e5874366e55">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[2/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a62e7c2a8e0114665e0377e5874366e55">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[3/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -472,7 +554,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="aa33f433d3ffa06d1d01567b282d8706b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa33f433d3ffa06d1d01567b282d8706b">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[3/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa33f433d3ffa06d1d01567b282d8706b">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[4/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -519,7 +601,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="a292f635aec856d7fac576dff2d2601e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a292f635aec856d7fac576dff2d2601e7">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[4/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a292f635aec856d7fac576dff2d2601e7">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[5/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -549,7 +631,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="ae8bc7d56208d600d9b2575804d98a71a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8bc7d56208d600d9b2575804d98a71a">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[5/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8bc7d56208d600d9b2575804d98a71a">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[6/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -589,7 +671,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="a20936b51fc3be86fb2849172b6f01f41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20936b51fc3be86fb2849172b6f01f41">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[6/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a20936b51fc3be86fb2849172b6f01f41">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[7/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -639,7 +721,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="a188fddf6643fab736a3e14594d52f696"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a188fddf6643fab736a3e14594d52f696">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[7/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a188fddf6643fab736a3e14594d52f696">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[8/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -679,7 +761,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="a2d23ca000e85a0d41b0053a26ebc51c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d23ca000e85a0d41b0053a26ebc51c7">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[8/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d23ca000e85a0d41b0053a26ebc51c7">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[9/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -693,7 +775,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">{ <a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(!<a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>(5)) return <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>;<a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a> *<a class="el" href="EXE_8h.html#a6fc13e99b0e5bfd34110346dec8c347d">localSPI</a>= *SPI;time_t t=time(NULL);struct tm tm= *localtime(&amp;t);<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> <a class="el" href="CMakeCache_8txt.html#a1aabac6d068eef6a7bad3fdf50a05cc8">d</a>=tm.tm_mday;<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> m=tm.tm_mon+1;<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> y=tm.tm_year+1900;<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> weekday=(<a class="el" href="CMakeCache_8txt.html#a1aabac6d068eef6a7bad3fdf50a05cc8">d</a>+=m&lt; 3 ? y-- :y - 2, 23 *m/9+<a class="el" href="CMakeCache_8txt.html#a1aabac6d068eef6a7bad3fdf50a05cc8">d</a>+4+y/4- y/100+y/400)%7;<a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(weekday==1) <a class="el" href="EXE_8h.html#aa7627babb7e2db2ba52209b8517e92c2">ADDSPI</a>(<a class="el" href="ParseHelpers_8hpp.html#a503732ecee5e0f7a02f23c8381727ed6">getIntFromBuffer</a>(<a class="el" href="EXE_8h.html#a6fc13e99b0e5bfd34110346dec8c347d">localSPI</a>+1));<a class="el" href="EXE_8h.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="EXE_8h.html#aa7627babb7e2db2ba52209b8517e92c2">ADDSPI</a>(5);return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;}&#160;</td>
+          <td class="paramtype">{ <a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(!<a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>(5)) return <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>;<a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a> *<a class="el" href="EXE_8h.html#a6fc13e99b0e5bfd34110346dec8c347d">localSPI</a>= *SPI;time_t t=time(NULL);struct tm tm= *localtime(&amp;t);<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> <a class="el" href="CMakeCache_8txt.html#a1aabac6d068eef6a7bad3fdf50a05cc8">d</a>=tm.tm_mday;<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> m=tm.tm_mon+1;<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> <a class="el" href="EXE_8h.html#ab927965981178aa1fba979a37168db2a">y</a>=tm.tm_year+1900;<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a> weekday=(<a class="el" href="CMakeCache_8txt.html#a1aabac6d068eef6a7bad3fdf50a05cc8">d</a>+=m&lt; 3 ? <a class="el" href="EXE_8h.html#ab927965981178aa1fba979a37168db2a">y</a>-- :<a class="el" href="EXE_8h.html#ab927965981178aa1fba979a37168db2a">y</a> - 2, 23 *m/9+<a class="el" href="CMakeCache_8txt.html#a1aabac6d068eef6a7bad3fdf50a05cc8">d</a>+4+<a class="el" href="EXE_8h.html#ab927965981178aa1fba979a37168db2a">y</a>/4- <a class="el" href="EXE_8h.html#ab927965981178aa1fba979a37168db2a">y</a>/100+<a class="el" href="EXE_8h.html#ab927965981178aa1fba979a37168db2a">y</a>/400)%7;<a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(weekday==1) <a class="el" href="EXE_8h.html#aa7627babb7e2db2ba52209b8517e92c2">ADDSPI</a>(<a class="el" href="ParseHelpers_8hpp.html#a503732ecee5e0f7a02f23c8381727ed6">getIntFromBuffer</a>(<a class="el" href="EXE_8h.html#a6fc13e99b0e5bfd34110346dec8c347d">localSPI</a>+1));<a class="el" href="EXE_8h.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="EXE_8h.html#aa7627babb7e2db2ba52209b8517e92c2">ADDSPI</a>(5);return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;}&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -704,7 +786,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="EXE_8h.html#ae3570cefbbd9fc7b1e80de402477a790">ADDSPI()</a>, <a class="el" href="CMakeCache_8txt.html#a1aabac6d068eef6a7bad3fdf50a05cc8">d</a>, <a class="el" href="ParseHelpers_8cpp.html#a503732ecee5e0f7a02f23c8381727ed6">getIntFromBuffer()</a>, <a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>, <a class="el" href="EXE_8h.html#a6fc13e99b0e5bfd34110346dec8c347d">localSPI</a>, <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>, and <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>.</p>
+<p class="reference">References <a class="el" href="EXE_8h.html#ae3570cefbbd9fc7b1e80de402477a790">ADDSPI()</a>, <a class="el" href="CMakeCache_8txt.html#a1aabac6d068eef6a7bad3fdf50a05cc8">d</a>, <a class="el" href="ParseHelpers_8cpp.html#a503732ecee5e0f7a02f23c8381727ed6">getIntFromBuffer()</a>, <a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>, <a class="el" href="EXE_8h.html#a6fc13e99b0e5bfd34110346dec8c347d">localSPI</a>, <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>, <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>, and <a class="el" href="EXE_8h.html#ab927965981178aa1fba979a37168db2a">y</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -719,7 +801,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="ad81d23bbdae1884132dabbbe85daacca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad81d23bbdae1884132dabbbe85daacca">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[9/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad81d23bbdae1884132dabbbe85daacca">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[10/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -749,7 +831,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="a7f44957aaaa3a519a3fadf35c773f516"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f44957aaaa3a519a3fadf35c773f516">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[10/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f44957aaaa3a519a3fadf35c773f516">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[11/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -792,7 +874,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="a2d11c9d4ccb58125788ea44f62a6c8bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d11c9d4ccb58125788ea44f62a6c8bd">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[11/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d11c9d4ccb58125788ea44f62a6c8bd">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[12/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -832,8 +914,49 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="ae185edfb6f10589271412280696def18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae185edfb6f10589271412280696def18">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[13/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OPEXE_FUNC </td>
+          <td>(</td>
+          <td class="paramtype">rend&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">{ <a class="el" href="CoreRender_8hpp.html#aecd17d0a9d0aab13b605f9ad48bf60ea">renderVRAM</a>(core);<a class="el" href="EXE_8h.html#aa7627babb7e2db2ba52209b8517e92c2">ADDSPI</a>(1);return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;}&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="EXE_8h.html#ae3570cefbbd9fc7b1e80de402477a790">ADDSPI()</a>, <a class="el" href="CoreRender_8cpp.html#aecd17d0a9d0aab13b605f9ad48bf60ea">renderVRAM()</a>, and <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="EXE_8h_ae185edfb6f10589271412280696def18_cgraph.png" border="0" usemap="#aEXE_8h_ae185edfb6f10589271412280696def18_cgraph" alt=""/></div>
+<map name="EXE_8h_ae185edfb6f10589271412280696def18_cgraph" id="aEXE_8h_ae185edfb6f10589271412280696def18_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,119,57"/>
+<area shape="rect" href="EXE_8h.html#ae3570cefbbd9fc7b1e80de402477a790" title=" " alt="" coords="179,5,252,32"/>
+<area shape="rect" href="CoreRender_8cpp.html#aecd17d0a9d0aab13b605f9ad48bf60ea" title=" " alt="" coords="167,56,264,83"/>
+<area shape="rect" href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea" title=" " alt="" coords="312,56,363,83"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a4a7954467408cfb9e1657aedf3ee0249"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a7954467408cfb9e1657aedf3ee0249">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[12/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a7954467408cfb9e1657aedf3ee0249">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[14/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -863,7 +986,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="a13f3ba01ca6f20753d21eb11f54dc2b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13f3ba01ca6f20753d21eb11f54dc2b9">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[13/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a13f3ba01ca6f20753d21eb11f54dc2b9">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[15/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -871,13 +994,13 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">OPEXE_FUNC </td>
           <td>(</td>
-          <td class="paramtype">sin&#160;</td>
+          <td class="paramtype"><a class="el" href="donut_8cpp.html#ab115207b90bd7664893c3eda01a20591">sin</a>&#160;</td>
           <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">{ <a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(!<a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>(1)) return <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>;double <a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>=0;<a class="el" href="StackRigid_8h.html#afa660da841608914d20d9819a7efe039">StackRigidOperationCodes</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#aa1dcc2d6eda6e79d7bdda5f8dd461c39">POP</a>(&amp;<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>);<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#a9bd299905b65faef2943ad1b91e71236">PUSH</a>(sin(<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>));<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#a2f7c8a600c42c1dfd1cd779f10aca47c">INCSPI</a>;return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;}&#160;</td>
+          <td class="paramtype">{ <a class="el" href="EXE_8h.html#ad3c4171d67b7f3ee90710cf8ad212078">if</a>(!<a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>(1)) return <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>;double <a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>=0;<a class="el" href="StackRigid_8h.html#afa660da841608914d20d9819a7efe039">StackRigidOperationCodes</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#aa1dcc2d6eda6e79d7bdda5f8dd461c39">POP</a>(&amp;<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>);<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>=<a class="el" href="EXEDefs_8h.html#a9bd299905b65faef2943ad1b91e71236">PUSH</a>(<a class="el" href="donut_8cpp.html#ab115207b90bd7664893c3eda01a20591">sin</a>(<a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>));<a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a> <a class="el" href="EXE_8h.html#a2f7c8a600c42c1dfd1cd779f10aca47c">INCSPI</a>;return <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>;}&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -888,12 +1011,21 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>, <a class="el" href="EXE_8h.html#a2f7c8a600c42c1dfd1cd779f10aca47c">INCSPI</a>, <a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>, <a class="el" href="EXEDefs_8h.html#aa1dcc2d6eda6e79d7bdda5f8dd461c39">POP</a>, <a class="el" href="EXEDefs_8h.html#a9bd299905b65faef2943ad1b91e71236">PUSH</a>, <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>, <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>, <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>, and <a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a>.</p>
+<p class="reference">References <a class="el" href="EXEDefs_8h.html#a301649058f4c3cef20f99c5792e0b027">HASBYTES</a>, <a class="el" href="EXE_8h.html#a2f7c8a600c42c1dfd1cd779f10aca47c">INCSPI</a>, <a class="el" href="EXE_8h.html#a5eeeb20fab9ff0f54568882b94d57921">left</a>, <a class="el" href="EXEDefs_8h.html#aa1dcc2d6eda6e79d7bdda5f8dd461c39">POP</a>, <a class="el" href="EXEDefs_8h.html#a9bd299905b65faef2943ad1b91e71236">PUSH</a>, <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>, <a class="el" href="donut_8cpp.html#ab115207b90bd7664893c3eda01a20591">sin()</a>, <a class="el" href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6">SPU_EXE_NOARGS</a>, <a class="el" href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a>, and <a class="el" href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="EXE_8h_a13f3ba01ca6f20753d21eb11f54dc2b9_cgraph.png" border="0" usemap="#aEXE_8h_a13f3ba01ca6f20753d21eb11f54dc2b9_cgraph" alt=""/></div>
+<map name="EXE_8h_a13f3ba01ca6f20753d21eb11f54dc2b9_cgraph" id="aEXE_8h_a13f3ba01ca6f20753d21eb11f54dc2b9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,119,32"/>
+<area shape="rect" href="donut_8cpp.html#ab115207b90bd7664893c3eda01a20591" title=" " alt="" coords="167,5,205,32"/>
+</map>
+</div>
 
 </div>
 </div>
 <a id="ab9c0573724ad7edc53464f4f8fed70aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9c0573724ad7edc53464f4f8fed70aa">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[14/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9c0573724ad7edc53464f4f8fed70aa">&#9670;&nbsp;</a></span>OPEXE_FUNC() <span class="overload">[16/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -948,34 +1080,37 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="CodeAnalysis_8hpp.html#a741d17d321cfb9f97aa32bf56eb51370">analyzeLabelsErrors()</a>, <a class="el" href="DisAssemblyHelpers_8hpp.html#a5565186704b0cd16cfb8076ebb5b7460">disAssamblyInstruction()</a>, <a class="el" href="EXE_8h.html#aefbba8e6103e96f02f9dab0aeaab3c00">if()</a>, <a class="el" href="CommandsParser_8hpp.html#ac706821978aab6d75c0e673fac677e75">labelsTableComplete()</a>, <a class="el" href="SPUAssembly_8cpp.html#ac0f2228420376f4db7e1274f2b41667c">main()</a>, <a class="el" href="AssemblyHelpers_8hpp.html#a6c4bb8a89afb60b2164c352fec284d61">parseArgs()</a>, <a class="el" href="CommandsParser_8cpp.html#a9f77310758d1c97d9ea9e1bb83779d5f">parseCode()</a>, <a class="el" href="CommandsParser_8cpp.html#ab7c640fc2a8dcec923fa8ffb2844da87">parseCommand()</a>, <a class="el" href="SPUCoreHelpers_8hpp.html#a6453a5d405d0626203f8933eefc6948f">parseSPUArgs()</a>, <a class="el" href="AssemblyHelpers_8hpp.html#ae88ab93d0f7a91de8f099375012b69f1">printAssemblyHelpData()</a>, <a class="el" href="AssemblyHelpers_8hpp.html#a76bb301072f1ce35898cbd2ef5195831">printAssemblyVersion()</a>, <a class="el" href="DisAssemblyHelpers_8hpp.html#a2646c39b04bc6f2a554883c09ccbcb64">printDisAssemblyHelpData()</a>, <a class="el" href="SPUCoreHelpers_8hpp.html#ac7a309a014bd981682f3e640d670050b">spuHelp()</a>, and <a class="el" href="StackRigid_8h.html#a34ed05fb570dfd9ade77d3c0bd664591">StackDump()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CodeAnalysis_8hpp.html#a741d17d321cfb9f97aa32bf56eb51370">analyzeLabelsErrors()</a>, <a class="el" href="DisAssemblyHelpers_8hpp.html#a5565186704b0cd16cfb8076ebb5b7460">disAssamblyInstruction()</a>, <a class="el" href="EXE_8h.html#aefbba8e6103e96f02f9dab0aeaab3c00">if()</a>, <a class="el" href="CommandsParser_8hpp.html#ac706821978aab6d75c0e673fac677e75">labelsTableComplete()</a>, <a class="el" href="SPUAssembly_8cpp.html#ac0f2228420376f4db7e1274f2b41667c">main()</a>, <a class="el" href="AssemblyHelpers_8hpp.html#a6c4bb8a89afb60b2164c352fec284d61">parseArgs()</a>, <a class="el" href="CommandsParser_8cpp.html#a9f77310758d1c97d9ea9e1bb83779d5f">parseCode()</a>, <a class="el" href="CommandsParser_8cpp.html#ab7c640fc2a8dcec923fa8ffb2844da87">parseCommand()</a>, <a class="el" href="SPUCoreHelpers_8hpp.html#a6453a5d405d0626203f8933eefc6948f">parseSPUArgs()</a>, <a class="el" href="AssemblyHelpers_8hpp.html#ae88ab93d0f7a91de8f099375012b69f1">printAssemblyHelpData()</a>, <a class="el" href="AssemblyHelpers_8hpp.html#a76bb301072f1ce35898cbd2ef5195831">printAssemblyVersion()</a>, <a class="el" href="DisAssemblyHelpers_8hpp.html#a2646c39b04bc6f2a554883c09ccbcb64">printDisAssemblyHelpData()</a>, <a class="el" href="CoreRender_8hpp.html#aecd17d0a9d0aab13b605f9ad48bf60ea">renderVRAM()</a>, <a class="el" href="SPUCoreHelpers_8hpp.html#ac7a309a014bd981682f3e640d670050b">spuHelp()</a>, and <a class="el" href="StackRigid_8h.html#a34ed05fb570dfd9ade77d3c0bd664591">StackDump()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="EXE_8h_ab99234c936a3345fdf76f51743a997ea_icgraph.png" border="0" usemap="#aEXE_8h_ab99234c936a3345fdf76f51743a997ea_icgraph" alt=""/></div>
-<map name="EXE_8h_ab99234c936a3345fdf76f51743a997ea_icgraph" id="EXE_8h_ab99234c936a3345fdf76f51743a997ea_icgraph">
-<area shape="rect" title=" " alt="" coords="529,335,580,361"/>
-<area shape="rect" href="CodeAnalysis_8hpp.html#a741d17d321cfb9f97aa32bf56eb51370" title=" " alt="" coords="321,259,461,285"/>
-<area shape="rect" href="SPUAssembly_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,259,56,285"/>
+<map name="EXE_8h_ab99234c936a3345fdf76f51743a997ea_icgraph" id="aEXE_8h_ab99234c936a3345fdf76f51743a997ea_icgraph">
+<area shape="rect" title=" " alt="" coords="529,360,580,387"/>
+<area shape="rect" href="CodeAnalysis_8hpp.html#a741d17d321cfb9f97aa32bf56eb51370" title=" " alt="" coords="321,461,461,488"/>
+<area shape="rect" href="SPUAssembly_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,309,56,336"/>
 <area shape="rect" href="DisAssemblyHelpers_8hpp.html#a5565186704b0cd16cfb8076ebb5b7460" title=" " alt="" coords="312,5,471,32"/>
 <area shape="rect" href="EXE_8h.html#aefbba8e6103e96f02f9dab0aeaab3c00" title=" " alt="" coords="372,157,411,184"/>
-<area shape="rect" href="CommandsParser_8hpp.html#ac706821978aab6d75c0e673fac677e75" title=" " alt="" coords="320,208,463,235"/>
-<area shape="rect" href="AssemblyHelpers_8hpp.html#a6c4bb8a89afb60b2164c352fec284d61" title=" " alt="" coords="138,309,219,336"/>
-<area shape="rect" href="CommandsParser_8cpp.html#a9f77310758d1c97d9ea9e1bb83779d5f" title=" " alt="" coords="136,411,221,437"/>
-<area shape="rect" href="CommandsParser_8cpp.html#ab7c640fc2a8dcec923fa8ffb2844da87" title=" " alt="" coords="334,411,449,437"/>
-<area shape="rect" href="SPUCoreHelpers_8hpp.html#a6453a5d405d0626203f8933eefc6948f" title=" " alt="" coords="124,563,233,589"/>
-<area shape="rect" href="AssemblyHelpers_8hpp.html#ae88ab93d0f7a91de8f099375012b69f1" title=" " alt="" coords="311,309,471,336"/>
-<area shape="rect" href="AssemblyHelpers_8hpp.html#a76bb301072f1ce35898cbd2ef5195831" title=" " alt="" coords="104,132,253,159"/>
+<area shape="rect" href="CommandsParser_8hpp.html#ac706821978aab6d75c0e673fac677e75" title=" " alt="" coords="320,411,463,437"/>
+<area shape="rect" href="AssemblyHelpers_8hpp.html#a6c4bb8a89afb60b2164c352fec284d61" title=" " alt="" coords="138,107,219,133"/>
+<area shape="rect" href="CommandsParser_8cpp.html#a9f77310758d1c97d9ea9e1bb83779d5f" title=" " alt="" coords="136,259,221,285"/>
+<area shape="rect" href="CommandsParser_8cpp.html#ab7c640fc2a8dcec923fa8ffb2844da87" title=" " alt="" coords="334,208,449,235"/>
+<area shape="rect" href="SPUCoreHelpers_8hpp.html#a6453a5d405d0626203f8933eefc6948f" title=" " alt="" coords="124,537,233,564"/>
+<area shape="rect" href="AssemblyHelpers_8hpp.html#ae88ab93d0f7a91de8f099375012b69f1" title=" " alt="" coords="311,56,471,83"/>
+<area shape="rect" href="AssemblyHelpers_8hpp.html#a76bb301072f1ce35898cbd2ef5195831" title=" " alt="" coords="104,360,253,387"/>
 <area shape="rect" href="DisAssemblyHelpers_8hpp.html#a2646c39b04bc6f2a554883c09ccbcb64" title=" " alt="" coords="301,613,481,640"/>
-<area shape="rect" href="SPUCoreHelpers_8hpp.html#ac7a309a014bd981682f3e640d670050b" title=" " alt="" coords="356,512,427,539"/>
+<area shape="rect" href="CoreRender_8hpp.html#aecd17d0a9d0aab13b605f9ad48bf60ea" title=" " alt="" coords="343,740,440,767"/>
+<area shape="rect" href="SPUCoreHelpers_8hpp.html#ac7a309a014bd981682f3e640d670050b" title=" " alt="" coords="356,563,427,589"/>
 <area shape="rect" href="StackRigid_8h.html#a34ed05fb570dfd9ade77d3c0bd664591" title="Dumps debug information about the stack." alt="" coords="346,664,437,691"/>
-<area shape="rect" href="CodeAnalysis_8hpp.html#adc769d122142b2a70d004f1c82ca813d" title=" " alt="" coords="125,259,232,285"/>
+<area shape="rect" href="CodeAnalysis_8hpp.html#adc769d122142b2a70d004f1c82ca813d" title=" " alt="" coords="125,461,232,488"/>
 <area shape="rect" href="DisAssemblyHelpers_8hpp.html#a0dfce63afcb5e97ccdc8cfe8cc913a5c" title=" " alt="" coords="115,5,243,32"/>
 <area shape="rect" href="SPUDisAssembly_8cpp.html#a217dbf8b442f20279ea00b898af96f52" title=" " alt="" coords="5,5,56,32"/>
-<area shape="rect" href="CommandsParser_8hpp.html#a5f07be82b880dc88bb95bd6085e8399a" title=" " alt="" coords="124,208,233,235"/>
+<area shape="rect" href="CommandsParser_8hpp.html#a5f07be82b880dc88bb95bd6085e8399a" title=" " alt="" coords="124,411,233,437"/>
 <area shape="rect" href="SPU_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title=" " alt="" coords="5,639,56,665"/>
-<area shape="rect" href="DisAssemblyHelpers_8hpp.html#aa49203c20a4b7afd1ae91e70a9dc2ec4" title=" " alt="" coords="138,613,219,640"/>
-<area shape="rect" href="EXE_8h.html#aa33f433d3ffa06d1d01567b282d8706b" title=" " alt="" coords="122,664,235,691"/>
+<area shape="rect" href="DisAssemblyHelpers_8hpp.html#aa49203c20a4b7afd1ae91e70a9dc2ec4" title=" " alt="" coords="138,588,219,615"/>
+<area shape="rect" href="EXE_8h.html#ae185edfb6f10589271412280696def18" title=" " alt="" coords="122,740,235,767"/>
+<area shape="rect" href="SPUCore_8hpp.html#a93857b1d478028ef9ef8aaebd23109c2" title=" " alt="" coords="143,791,214,817"/>
+<area shape="rect" href="EXE_8h.html#aa33f433d3ffa06d1d01567b282d8706b" title=" " alt="" coords="122,689,235,716"/>
 </map>
 </div>
 
@@ -993,6 +1128,75 @@ Here is the caller graph for this function:</div>
           <td class="paramtype">&quot;Requested value: &quot;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7dbd3a71bbf815d4d892180fde504474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dbd3a71bbf815d4d892180fde504474">&#9670;&nbsp;</a></span>usleep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">usleep </td>
+          <td>(</td>
+          <td class="paramtype">(unsigned)&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="EXE_8h.html#ad87bc2bfa2956f33ea88ab8af40cdc08">if()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="EXE_8h_a7dbd3a71bbf815d4d892180fde504474_icgraph.png" border="0" usemap="#aEXE_8h_a7dbd3a71bbf815d4d892180fde504474_icgraph" alt=""/></div>
+<map name="EXE_8h_a7dbd3a71bbf815d4d892180fde504474_icgraph" id="aEXE_8h_a7dbd3a71bbf815d4d892180fde504474_icgraph">
+<area shape="rect" title=" " alt="" coords="92,5,152,32"/>
+<area shape="rect" href="EXE_8h.html#ad87bc2bfa2956f33ea88ab8af40cdc08" title=" " alt="" coords="5,5,44,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3883623213b342ebd6ba0772bfdc6be1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3883623213b342ebd6ba0772bfdc6be1">&#9670;&nbsp;</a></span>vramSetPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vramSetPixel </td>
+          <td>(</td>
+          <td class="paramtype">core&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a>)&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a>)&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a>)&#160;</td>
+          <td class="paramname"><em>valPix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1202,7 +1406,21 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="BTC_8h.html#a05ff730541c033e42d099664fa663477">OPBACKTRANSLATE_FUNC()</a>, <a class="el" href="EXE_8h.html#a2d11c9d4ccb58125788ea44f62a6c8bd">OPEXE_FUNC()</a>, and <a class="el" href="CTB_8h.html#a96c31e05271201023f9c5187e8a0fa77">OPTRANSLATE_FUNC()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BTC_8h.html#a05ff730541c033e42d099664fa663477">OPBACKTRANSLATE_FUNC()</a>, <a class="el" href="EXE_8h.html#a2d11c9d4ccb58125788ea44f62a6c8bd">OPEXE_FUNC()</a>, <a class="el" href="CTB_8h.html#a96c31e05271201023f9c5187e8a0fa77">OPTRANSLATE_FUNC()</a>, and <a class="el" href="CoreRender_8hpp.html#a27ebeafb9f2347e5c56ddedf029af4ac">vramSetPixel()</a>.</p>
+
+</div>
+</div>
+<a id="a8b283aacb16eba272bc1bf4278158a83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b283aacb16eba272bc1bf4278158a83">&#9670;&nbsp;</a></span>valPix</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double valPix = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1238,18 +1456,49 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="af88b946fb90d5f08b5fb740c70e98c10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af88b946fb90d5f08b5fb740c70e98c10">&#9670;&nbsp;</a></span>x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double x = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab927965981178aa1fba979a37168db2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab927965981178aa1fba979a37168db2a">&#9670;&nbsp;</a></span>y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double y = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="donut_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>, <a class="el" href="EXE_8h.html#a2d23ca000e85a0d41b0053a26ebc51c7">OPEXE_FUNC()</a>, and <a class="el" href="CoreRender_8hpp.html#a27ebeafb9f2347e5c56ddedf029af4ac">vramSetPixel()</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
-<div class="ttc" id="aEXE_8h_html_a3d5a91f6cd5cdd9f5ddda00f4f00e4be"><div class="ttname"><a href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a></div><div class="ttdeci">STACKRESULT</div><div class="ttdef"><b>Definition:</b> EXE.h:480</div></div>
+<div class="ttc" id="aEXE_8h_html_a7dbd3a71bbf815d4d892180fde504474"><div class="ttname"><a href="EXE_8h.html#a7dbd3a71bbf815d4d892180fde504474">usleep</a></div><div class="ttdeci">usleep((unsigned) value)</div></div>
+<div class="ttc" id="aEXE_8h_html_a3d5a91f6cd5cdd9f5ddda00f4f00e4be"><div class="ttname"><a href="EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be">STACKRESULT</a></div><div class="ttdeci">STACKRESULT</div><div class="ttdef"><b>Definition:</b> EXE.h:485</div></div>
 <div class="ttc" id="aEXE_8h_html_ab99234c936a3345fdf76f51743a997ea"><div class="ttname"><a href="EXE_8h.html#ab99234c936a3345fdf76f51743a997ea">printf</a></div><div class="ttdeci">printf(&quot;%lf\n&quot;, value)</div></div>
-<div class="ttc" id="aEXE_8h_html_a1e1608a157e7bb2d746ba91df8873e9e"><div class="ttname"><a href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a></div><div class="ttdeci">return SPU_EXE_OK</div><div class="ttdef"><b>Definition:</b> EXE.h:51</div></div>
-<div class="ttc" id="aSPUDtypes_8hpp_html_a885ae53bbee7aae3da281a6c83857f2fad5a2a81664c27b80c90aee5b839992bb"><div class="ttname"><a href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2fad5a2a81664c27b80c90aee5b839992bb">SPU_EXE_INVALIDINPUT</a></div><div class="ttdeci">@ SPU_EXE_INVALIDINPUT</div><div class="ttdef"><b>Definition:</b> SPUDtypes.hpp:43</div></div>
-<div class="ttc" id="aEXE_8h_html_aee90379adb0307effb138f4871edbc5c"><div class="ttname"><a href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a></div><div class="ttdeci">double value</div><div class="ttdef"><b>Definition:</b> EXE.h:35</div></div>
+<div class="ttc" id="aEXE_8h_html_a1e1608a157e7bb2d746ba91df8873e9e"><div class="ttname"><a href="EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e">SPU_EXE_OK</a></div><div class="ttdeci">return SPU_EXE_OK</div><div class="ttdef"><b>Definition:</b> EXE.h:56</div></div>
+<div class="ttc" id="aSPUDtypes_8hpp_html_a885ae53bbee7aae3da281a6c83857f2fad5a2a81664c27b80c90aee5b839992bb"><div class="ttname"><a href="SPUDtypes_8hpp.html#a885ae53bbee7aae3da281a6c83857f2fad5a2a81664c27b80c90aee5b839992bb">SPU_EXE_INVALIDINPUT</a></div><div class="ttdeci">@ SPU_EXE_INVALIDINPUT</div><div class="ttdef"><b>Definition:</b> SPUDtypes.hpp:48</div></div>
+<div class="ttc" id="aEXE_8h_html_aee90379adb0307effb138f4871edbc5c"><div class="ttname"><a href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a></div><div class="ttdeci">double value</div><div class="ttdef"><b>Definition:</b> EXE.h:36</div></div>
 <div class="ttc" id="aEXE_8h_html_ae3570cefbbd9fc7b1e80de402477a790"><div class="ttname"><a href="EXE_8h.html#ae3570cefbbd9fc7b1e80de402477a790">ADDSPI</a></div><div class="ttdeci">ADDSPI(1)</div></div>
 <div class="ttc" id="aCMakeCache_8txt_html_afe71f11dacb15682cdc012f7208e6e09"><div class="ttname"><a href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a></div><div class="ttdeci">signed char</div><div class="ttdef"><b>Definition:</b> CMakeCache.txt:304</div></div>
-<div class="ttc" id="aEXE_8h_html_acf11827d6961c67b6782cbd7c21b7481"><div class="ttname"><a href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a></div><div class="ttdeci">StackRigidOperationCodes result</div><div class="ttdef"><b>Definition:</b> EXE.h:130</div></div>
+<div class="ttc" id="aEXE_8h_html_acf11827d6961c67b6782cbd7c21b7481"><div class="ttname"><a href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a></div><div class="ttdeci">StackRigidOperationCodes result</div><div class="ttdef"><b>Definition:</b> EXE.h:135</div></div>
 <div class="ttc" id="aStackRigid_8h_html_afa660da841608914d20d9819a7efe039"><div class="ttname"><a href="StackRigid_8h.html#afa660da841608914d20d9819a7efe039">StackRigidOperationCodes</a></div><div class="ttdeci">StackRigidOperationCodes</div><div class="ttdoc">Codes returned after operations on Stack.</div><div class="ttdef"><b>Definition:</b> StackRigid.h:62</div></div>
-<div class="ttc" id="aEXE_8h_html_ace9fc28c7e7897c736d1105503a3457d"><div class="ttname"><a href="EXE_8h.html#ace9fc28c7e7897c736d1105503a3457d">valueTo</a></div><div class="ttdeci">double * valueTo</div><div class="ttdef"><b>Definition:</b> EXE.h:95</div></div>
-<div class="ttc" id="aEXE_8h_html_a1b15538a46facb727655d93d4156272f"><div class="ttname"><a href="EXE_8h.html#a1b15538a46facb727655d93d4156272f">newVal</a></div><div class="ttdeci">double newVal</div><div class="ttdef"><b>Definition:</b> EXE.h:89</div></div>
+<div class="ttc" id="aEXE_8h_html_ace9fc28c7e7897c736d1105503a3457d"><div class="ttname"><a href="EXE_8h.html#ace9fc28c7e7897c736d1105503a3457d">valueTo</a></div><div class="ttdeci">double * valueTo</div><div class="ttdef"><b>Definition:</b> EXE.h:100</div></div>
+<div class="ttc" id="aEXE_8h_html_a1b15538a46facb727655d93d4156272f"><div class="ttname"><a href="EXE_8h.html#a1b15538a46facb727655d93d4156272f">newVal</a></div><div class="ttdeci">double newVal</div><div class="ttdef"><b>Definition:</b> EXE.h:94</div></div>
 <div class="ttc" id="aStackRigid_8cpp_html_a81920cc1380e65ab9173893cb1772d86"><div class="ttname"><a href="StackRigid_8cpp.html#a81920cc1380e65ab9173893cb1772d86">StackBack</a></div><div class="ttdeci">StackRigidOperationCodes StackBack(__overload(StackRigid) *stack, StackElementType *value)</div><div class="ttdoc">Free stack memory.</div><div class="ttdef"><b>Definition:</b> StackRigid.cpp:274</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -51,6 +51,7 @@ int main(int argc, const char * argv[]) {
     
     SPUCore core = {};
     
+    printf("\x1b[2J");
     ConstructSPUCore(&core, binary->stackSize);
     
     InstructionExeResult result = runCode(&core, &params, binary);

@@ -1,13 +1,7 @@
 var searchData=
 [
-  ['scanned_1440',['scanned',['../EXE_8h.html#a9cd5df19a53bf394077be925bb924459',1,'EXE.h']]],
-  ['score_1441',['score',['../StringDistance_8hpp.html#aaa7a506415d915062595e69e6ffed3b5',1,'LevenshteinEdit']]],
-  ['short_1442',['short',['../CMakeCache_8txt.html#a831ae7261cfbc3d10cd36bed891d713a',1,'CMakeCache.txt']]],
-  ['signature_1443',['signature',['../AssemblyDTypes_8hpp.html#a277acb0e778ff5dcf97a507113096c7a',1,'BinaryFile']]],
-  ['size_1444',['size',['../StackRigid_8cpp.html#aa778f833989c5b73d0fbe86e9b6ef977',1,'StackRigid.cpp']]],
-  ['spu_5fexe_5fok_1445',['SPU_EXE_OK',['../EXE_8h.html#a1e1608a157e7bb2d746ba91df8873e9e',1,'EXE.h']]],
-  ['stack_1446',['stack',['../SPUDtypes_8hpp.html#a7e53f3d8e7ad44b3dea986b508dddb4e',1,'SPUCore']]],
-  ['stackresult_1447',['STACKRESULT',['../EXE_8h.html#a3d5a91f6cd5cdd9f5ddda00f4f00e4be',1,'EXE.h']]],
-  ['stacksize_1448',['stackSize',['../AssemblyDTypes_8hpp.html#abed489abcb0040342f3be1a90ada73f8',1,'BinaryFile']]],
-  ['success_1449',['success',['../AssemblyDTypes_8hpp.html#a2236e0432c20b0b9c7b50e71b605259b',1,'ComplexValue']]]
+  ['ram_1462',['RAM',['../SPUDtypes_8hpp.html#a844dd891e3e2d8c67fa2e8863cf0423b',1,'SPUCore']]],
+  ['reg_1463',['reg',['../AssemblyDTypes_8hpp.html#a34b986e960ed19a4ea0a071d4ba16014',1,'ComplexValue::reg()'],['../SPUDtypes_8hpp.html#a66cb1b89fdc5a306e383f4557523a925',1,'SPUCore::REG()']]],
+  ['result_1464',['result',['../EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481',1,'EXE.h']]],
+  ['right_1465',['right',['../EXE_8h.html#ab833bacb3fa8d1a189efcbba74f10fa1',1,'EXE.h']]]
 ];

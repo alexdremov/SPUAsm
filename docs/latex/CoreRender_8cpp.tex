@@ -1,0 +1,126 @@
+\hypertarget{CoreRender_8cpp}{}\doxysection{Soft\+Processor\+Unit/\+S\+P\+U/\+Core/\+V\+Ideo/\+Core\+Render.cpp File Reference}
+\label{CoreRender_8cpp}\index{SoftProcessorUnit/SPU/Core/VIdeo/CoreRender.cpp@{SoftProcessorUnit/SPU/Core/VIdeo/CoreRender.cpp}}
+{\ttfamily \#include \char`\"{}Core\+Render.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for Core\+Render.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CoreRender_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{CoreRender_8cpp_aca6de0ec4939c87897259ebc5d303eec}{fill\+Blank}} (\mbox{\hyperlink{SPUDtypes_8hpp_structSPUCore}{S\+P\+U\+Core}} $\ast$core)
+\item 
+void \mbox{\hyperlink{CoreRender_8cpp_aecd17d0a9d0aab13b605f9ad48bf60ea}{render\+V\+R\+AM}} (\mbox{\hyperlink{SPUDtypes_8hpp_structSPUCore}{S\+P\+U\+Core}} $\ast$core)
+\item 
+\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{CoreRender_8cpp_a27ebeafb9f2347e5c56ddedf029af4ac}{vram\+Set\+Pixel}} (\mbox{\hyperlink{SPUDtypes_8hpp_structSPUCore}{S\+P\+U\+Core}} $\ast$core, \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{EXE_8h_af88b946fb90d5f08b5fb740c70e98c10}{x}}, \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}}, \mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} \mbox{\hyperlink{EXE_8h_a9ab9d7057831483025a5c168d2308109}{val}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{CoreRender_8cpp_aca6de0ec4939c87897259ebc5d303eec}\label{CoreRender_8cpp_aca6de0ec4939c87897259ebc5d303eec}} 
+\index{CoreRender.cpp@{CoreRender.cpp}!fillBlank@{fillBlank}}
+\index{fillBlank@{fillBlank}!CoreRender.cpp@{CoreRender.cpp}}
+\doxysubsubsection{\texorpdfstring{fillBlank()}{fillBlank()}}
+{\footnotesize\ttfamily void fill\+Blank (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{SPUDtypes_8hpp_structSPUCore}{S\+P\+U\+Core}} $\ast$}]{core }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26                              \{}
+\DoxyCodeLine{27     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} h = 0; h < \mbox{\hyperlink{SPUDtypes_8hpp_a6974d08a74da681b3957b2fead2608b8}{SCREEN\_HEIGHT}}; h++)\{}
+\DoxyCodeLine{28         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} w = 0; w < \mbox{\hyperlink{SPUDtypes_8hpp_a2cd109632a6dcccaa80b43561b1ab700}{SCREEN\_WIDTH}}; w++)\{}
+\DoxyCodeLine{29             *(((\textcolor{keywordtype}{char}*)core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_a844dd891e3e2d8c67fa2e8863cf0423b}{RAM}}) + \mbox{\hyperlink{SPUDtypes_8hpp_ac962c3a9a4bf680c417e48b765f2dfe7}{VRAM\_OFFSET}} * \textcolor{keyword}{sizeof}(double) + (\mbox{\hyperlink{SPUDtypes_8hpp_a2cd109632a6dcccaa80b43561b1ab700}{SCREEN\_WIDTH}} * h) + w) = \textcolor{charliteral}{' '};}
+\DoxyCodeLine{30         \}}
+\DoxyCodeLine{31     \}}
+\DoxyCodeLine{32 \}}
+
+\end{DoxyCode}
+
+
+References S\+P\+U\+Core\+::\+R\+AM, S\+C\+R\+E\+E\+N\+\_\+\+H\+E\+I\+G\+HT, S\+C\+R\+E\+E\+N\+\_\+\+W\+I\+D\+TH, and V\+R\+A\+M\+\_\+\+O\+F\+F\+S\+ET.
+
+
+
+Referenced by Construct\+S\+P\+U\+Core().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{CoreRender_8cpp_aca6de0ec4939c87897259ebc5d303eec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CoreRender_8cpp_aecd17d0a9d0aab13b605f9ad48bf60ea}\label{CoreRender_8cpp_aecd17d0a9d0aab13b605f9ad48bf60ea}} 
+\index{CoreRender.cpp@{CoreRender.cpp}!renderVRAM@{renderVRAM}}
+\index{renderVRAM@{renderVRAM}!CoreRender.cpp@{CoreRender.cpp}}
+\doxysubsubsection{\texorpdfstring{renderVRAM()}{renderVRAM()}}
+{\footnotesize\ttfamily void render\+V\+R\+AM (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{SPUDtypes_8hpp_structSPUCore}{S\+P\+U\+Core}} $\ast$}]{core }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12                               \{}
+\DoxyCodeLine{13 \textcolor{comment}{//    printf("{}\(\backslash\)x1b[2J"{});}}
+\DoxyCodeLine{14     \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}\(\backslash\)x1b[H"{}});}
+\DoxyCodeLine{15     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} h = 0; h < \mbox{\hyperlink{SPUDtypes_8hpp_a6974d08a74da681b3957b2fead2608b8}{SCREEN\_HEIGHT}}; h++)\{}
+\DoxyCodeLine{16         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} w = 0; w < \mbox{\hyperlink{SPUDtypes_8hpp_a2cd109632a6dcccaa80b43561b1ab700}{SCREEN\_WIDTH}}; w++)\{}
+\DoxyCodeLine{17             putchar(*(((\textcolor{keywordtype}{char}*)core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_a844dd891e3e2d8c67fa2e8863cf0423b}{RAM}})}
+\DoxyCodeLine{18                       + \mbox{\hyperlink{SPUDtypes_8hpp_ac962c3a9a4bf680c417e48b765f2dfe7}{VRAM\_OFFSET}} * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double})}
+\DoxyCodeLine{19                       + (\mbox{\hyperlink{SPUDtypes_8hpp_a2cd109632a6dcccaa80b43561b1ab700}{SCREEN\_WIDTH}} * h)}
+\DoxyCodeLine{20                       + w));}
+\DoxyCodeLine{21         \}}
+\DoxyCodeLine{22         putchar(10);}
+\DoxyCodeLine{23     \}}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}
+
+
+References printf(), S\+P\+U\+Core\+::\+R\+AM, S\+C\+R\+E\+E\+N\+\_\+\+H\+E\+I\+G\+HT, S\+C\+R\+E\+E\+N\+\_\+\+W\+I\+D\+TH, and V\+R\+A\+M\+\_\+\+O\+F\+F\+S\+ET.
+
+
+
+Referenced by O\+P\+E\+X\+E\+\_\+\+F\+U\+N\+C(), and run\+Code().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{CoreRender_8cpp_aecd17d0a9d0aab13b605f9ad48bf60ea_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{CoreRender_8cpp_aecd17d0a9d0aab13b605f9ad48bf60ea_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{CoreRender_8cpp_a27ebeafb9f2347e5c56ddedf029af4ac}\label{CoreRender_8cpp_a27ebeafb9f2347e5c56ddedf029af4ac}} 
+\index{CoreRender.cpp@{CoreRender.cpp}!vramSetPixel@{vramSetPixel}}
+\index{vramSetPixel@{vramSetPixel}!CoreRender.cpp@{CoreRender.cpp}}
+\doxysubsubsection{\texorpdfstring{vramSetPixel()}{vramSetPixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} vram\+Set\+Pixel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{SPUDtypes_8hpp_structSPUCore}{S\+P\+U\+Core}} $\ast$}]{core,  }\item[{\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}}}]{x,  }\item[{\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}}}]{y,  }\item[{\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}}}]{val }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                                                         \{}
+\DoxyCodeLine{35     \textcolor{keywordtype}{char}* start = ((\textcolor{keywordtype}{char}*)core-\/>\mbox{\hyperlink{SPUDtypes_8hpp_a844dd891e3e2d8c67fa2e8863cf0423b}{RAM}}) + \mbox{\hyperlink{SPUDtypes_8hpp_ac962c3a9a4bf680c417e48b765f2dfe7}{VRAM\_OFFSET}} * \textcolor{keyword}{sizeof}(double);}
+\DoxyCodeLine{36     start += \mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}} * \mbox{\hyperlink{SPUDtypes_8hpp_a2cd109632a6dcccaa80b43561b1ab700}{SCREEN\_WIDTH}};}
+\DoxyCodeLine{37     start += \mbox{\hyperlink{CMakeCache_8txt_a9336ebf25087d91c818ee6e9ec29f8c1}{x}};}
+\DoxyCodeLine{38     *start = \mbox{\hyperlink{EXE_8h_a9ab9d7057831483025a5c168d2308109}{val}};}
+\DoxyCodeLine{39     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{40 \}}
+
+\end{DoxyCode}
+
+
+References S\+P\+U\+Core\+::\+R\+AM, S\+C\+R\+E\+E\+N\+\_\+\+W\+I\+D\+TH, val, V\+R\+A\+M\+\_\+\+O\+F\+F\+S\+ET, x, and y.
+

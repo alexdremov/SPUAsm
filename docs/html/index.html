@@ -104,6 +104,7 @@ Usage</h1>
 <div class="line">        --input &lt;filename.spub&gt;     - binary assembled file</div>
 <div class="line">        --output &lt;filename.spus&gt;    - source file (if not specified, stdout selected)</div>
 <div class="line">        --verbose                   - output assembly debug information</div>
+<div class="line">        --vsync                     - render vram after every command</div>
 <div class="line">        -h, --help                  - show help message</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md4"></a>
 Algorithm description</h1>
@@ -181,85 +182,101 @@ dump</h3>
 clear</h3>
 <p>Clear stack</p>
 <h3><a class="anchor" id="autotoc_md20"></a>
+rend</h3>
+<p>Force render vram</p>
+<h3><a class="anchor" id="autotoc_md21"></a>
+slp      &lt;any cvalue&gt;</h3>
+<p>Sleep for ... nanoseconds</p>
+<h3><a class="anchor" id="autotoc_md22"></a>
 hlt</h3>
 <p>Finish the program</p>
-<h2><a class="anchor" id="autotoc_md21"></a>
+<h3><a class="anchor" id="autotoc_md23"></a>
+pixelset &lt;any cvalue&gt; &lt;any cvalue&gt; &lt;any cvalue&gt;</h3>
+<p>x y value</p>
+<p>Set vram pixel (x, y) to value</p>
+<h3><a class="anchor" id="autotoc_md24"></a>
+clrscr</h3>
+<p>Fill vram with spaces</p>
+<h2><a class="anchor" id="autotoc_md25"></a>
 Math</h2>
-<h3><a class="anchor" id="autotoc_md22"></a>
+<h3><a class="anchor" id="autotoc_md26"></a>
 inc       &lt;nothing/assignable cvalue&gt;</h3>
 <p>Increments the value</p><ul>
 <li>no args - last stack value</li>
 <li>cvalue - cvalue value</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md23"></a>
+<h3><a class="anchor" id="autotoc_md27"></a>
 dec       &lt;nothing/assignable cvalue&gt;</h3>
 <p>Decrements the value</p><ul>
 <li>no args - last stack value</li>
 <li>cvalue - cvalue value</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md24"></a>
+<h3><a class="anchor" id="autotoc_md28"></a>
 add</h3>
 <p>Add two last stack values and push to the stack</p>
-<h3><a class="anchor" id="autotoc_md25"></a>
+<h3><a class="anchor" id="autotoc_md29"></a>
 sub</h3>
 <p>Substract two last stack values and push to the stack</p>
-<h3><a class="anchor" id="autotoc_md26"></a>
+<h3><a class="anchor" id="autotoc_md30"></a>
 mul</h3>
 <p>Multiply two last stack values and push to the stack</p>
-<h3><a class="anchor" id="autotoc_md27"></a>
+<h3><a class="anchor" id="autotoc_md31"></a>
 div</h3>
 <p>Divide two last stack values and push to the stack</p>
-<h3><a class="anchor" id="autotoc_md28"></a>
+<h3><a class="anchor" id="autotoc_md32"></a>
 sin</h3>
 <p>Sin of the last stack value</p>
-<h3><a class="anchor" id="autotoc_md29"></a>
+<h3><a class="anchor" id="autotoc_md33"></a>
 cos</h3>
 <p>Cos of the last stack value</p>
-<h3><a class="anchor" id="autotoc_md30"></a>
+<h3><a class="anchor" id="autotoc_md34"></a>
+abs</h3>
+<p>Abs of the last stack value</p>
+<h3><a class="anchor" id="autotoc_md35"></a>
 sqrt</h3>
 <p>Square root of the last stack value</p>
-<h3><a class="anchor" id="autotoc_md31"></a>
+<h3><a class="anchor" id="autotoc_md36"></a>
 pow</h3>
 <p>The pre-last element of the stack to the power of the last one</p>
-<h2><a class="anchor" id="autotoc_md32"></a>
+<h2><a class="anchor" id="autotoc_md37"></a>
 Codeflow modifiers</h2>
-<h3><a class="anchor" id="autotoc_md33"></a>
+<h3><a class="anchor" id="autotoc_md38"></a>
 call       &lt;label&gt;</h3>
 <p>Gives execution to the label block. Can be returned to the call instruction using <em>ret</em></p>
-<h3><a class="anchor" id="autotoc_md34"></a>
+<h3><a class="anchor" id="autotoc_md39"></a>
 ret</h3>
 <p>Returnes to the last call position. May fail if there were no calls.</p>
-<h3><a class="anchor" id="autotoc_md35"></a>
+<h3><a class="anchor" id="autotoc_md40"></a>
 jmp      &lt;label&gt;</h3>
 <p>Jump to the label</p>
-<h3><a class="anchor" id="autotoc_md36"></a>
+<h3><a class="anchor" id="autotoc_md41"></a>
 jb         &lt;label&gt;</h3>
 <p>Jump if last element is bigger than pre-last. Removes both operands from the stack</p>
-<h3><a class="anchor" id="autotoc_md37"></a>
+<h3><a class="anchor" id="autotoc_md42"></a>
 jbe       &lt;label&gt;</h3>
 <p>Jump if last element is bigger-or-equal than pre-last. Removes both operands from the stack</p>
-<h3><a class="anchor" id="autotoc_md38"></a>
+<h3><a class="anchor" id="autotoc_md43"></a>
 je         &lt;label&gt;</h3>
 <p>Jump if last element is equal to the pre-last one. Removes both operands from the stack</p>
-<h3><a class="anchor" id="autotoc_md39"></a>
+<h3><a class="anchor" id="autotoc_md44"></a>
 jne       &lt;label&gt;</h3>
 <p>Jump if last element is not equal to the pre-last one. Removes both operands from the stack</p>
-<h3><a class="anchor" id="autotoc_md40"></a>
+<h3><a class="anchor" id="autotoc_md45"></a>
 ja         &lt;label&gt;</h3>
 <p>Jump if last element is lower than pre-last. Removes both operands from the stack</p>
-<h3><a class="anchor" id="autotoc_md41"></a>
+<h3><a class="anchor" id="autotoc_md46"></a>
 jae       &lt;label&gt;</h3>
 <p>Jump if last element is lower-or-equal than pre-last. Removes both operands from the stack</p>
-<h3><a class="anchor" id="autotoc_md42"></a>
+<h3><a class="anchor" id="autotoc_md47"></a>
 jm        &lt;label&gt;</h3>
 <p>Jump if it's Monday.</p>
-<h3><a class="anchor" id="autotoc_md43"></a>
+<h3><a class="anchor" id="autotoc_md48"></a>
 labelName:</h3>
 <p>Creates label</p>
-<h1><a class="anchor" id="autotoc_md44"></a>
+<h1><a class="anchor" id="autotoc_md49"></a>
 Examples</h1>
 <p>All examples are available <a href="https://github.com/AlexRoar/SPUAsm/tree/main/Examples/SPUAsm/SPUAsm">in this dir</a>.</p>
-<h2><a class="anchor" id="autotoc_md45"></a>
+<h2><a class="anchor" id="autotoc_md50"></a>
 Squares of first n numbers</h2>
 <div class="fragment"><div class="line">;</div>
 <div class="line">; Squares</div>
@@ -292,7 +309,96 @@ Squares of first n numbers</h2>
 <div class="line">jne loop</div>
 <div class="line"> </div>
 <div class="line">mondayOnly:</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md46"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md51"></a>
+Popping circles</h2>
+<p><img src="https://github.com/AlexRoar/SPUAsm/raw/main/Images/circles.gif" alt="" style="max-height: 200px" class="inline"/></p>
+<div class="fragment"><div class="line">; height 32</div>
+<div class="line">; width  64</div>
+<div class="line"> </div>
+<div class="line">push 32</div>
+<div class="line">push 16</div>
+<div class="line">push 10</div>
+<div class="line">push 35</div>
+<div class="line">call drawCircle</div>
+<div class="line"> </div>
+<div class="line">clrscr</div>
+<div class="line"> </div>
+<div class="line">push 32</div>
+<div class="line">push 16</div>
+<div class="line">push 4</div>
+<div class="line">push 42</div>
+<div class="line">call drawCircle</div>
+<div class="line"> </div>
+<div class="line">clrscr</div>
+<div class="line"> </div>
+<div class="line">push 16</div>
+<div class="line">push 8</div>
+<div class="line">push 2</div>
+<div class="line">push 42</div>
+<div class="line">call drawCircle</div>
+<div class="line"> </div>
+<div class="line">clrscr</div>
+<div class="line">rend</div>
+<div class="line"> </div>
+<div class="line">push 40</div>
+<div class="line">push 25</div>
+<div class="line">push 4</div>
+<div class="line">push 48</div>
+<div class="line">call drawCircle</div>
+<div class="line"> </div>
+<div class="line">clrscr</div>
+<div class="line">rend</div>
+<div class="line"> </div>
+<div class="line">push 60</div>
+<div class="line">push 13</div>
+<div class="line">push 8</div>
+<div class="line">push 48</div>
+<div class="line">call drawCircle</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">hlt</div>
+<div class="line"> </div>
+<div class="line">drawCircle: ;(x0, y0, r, symbol)</div>
+<div class="line">    pop [2]</div>
+<div class="line">    pop rcx  ; r</div>
+<div class="line">    pop rbx  ; y0</div>
+<div class="line">    pop rax  ; x0</div>
+<div class="line"> </div>
+<div class="line">    mov rdx 0   ; initial angle</div>
+<div class="line">    loop:</div>
+<div class="line">        push rbx</div>
+<div class="line">        push rdx</div>
+<div class="line">        sin</div>
+<div class="line">        push rcx</div>
+<div class="line">        mul</div>
+<div class="line">        add ; y0 + r*sin(alpha)</div>
+<div class="line"> </div>
+<div class="line">        pop [0] ; y coordinate</div>
+<div class="line"> </div>
+<div class="line">        push rax</div>
+<div class="line">        push rdx</div>
+<div class="line">        cos</div>
+<div class="line">        push rcx</div>
+<div class="line">        push 2</div>
+<div class="line">        mul</div>
+<div class="line">        mul</div>
+<div class="line">        add ; x0 + r*cos(alpha)</div>
+<div class="line"> </div>
+<div class="line">        pop [1] ; x coordinate</div>
+<div class="line"> </div>
+<div class="line">        pixset [1] [0] [2]</div>
+<div class="line">        </div>
+<div class="line">        rend</div>
+<div class="line">        slp 10000</div>
+<div class="line">    ; loop params</div>
+<div class="line">    mov rdx rdx+0.1</div>
+<div class="line">    push rdx</div>
+<div class="line">    push 3.1415926535897</div>
+<div class="line">    push 2</div>
+<div class="line">    mul</div>
+<div class="line">    jbe loop</div>
+<div class="line">    ret</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md52"></a>
 Square equation solutions</h2>
 <div class="fragment"><div class="line">;</div>
 <div class="line">; Data input</div>
@@ -354,7 +460,7 @@ Square equation solutions</h2>
 <div class="line">;</div>
 <div class="line">out     rax</div>
 <div class="line">out     rcx</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md47"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md53"></a>
 Links</h1>
 <ul>
 <li><a href="https://github.com/AlexRoar/SPUAsm/blob/main/SoftProcessorUnit/Assembly/SPUAssembly.cpp">SPUAsm code</a></li>

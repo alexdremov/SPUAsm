@@ -1,14 +1,17 @@
 \hypertarget{EXE_8h}{}\doxysection{Soft\+Processor\+Unit/\+Syntax/\+E\+XE.h File Reference}
 \label{EXE_8h}\index{SoftProcessorUnit/Syntax/EXE.h@{SoftProcessorUnit/Syntax/EXE.h}}
 {\ttfamily \#include $<$ctime$>$}\newline
-Include dependency graph for E\+X\+E.\+h\+:\nopagebreak
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for E\+X\+E.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=211pt]{EXE_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -32,9 +35,13 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \item 
 \mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_a0684b935c830dd82c5712c53480801c4}{if}} (\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}$<$=\mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}}) \mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(\mbox{\hyperlink{ParseHelpers_8hpp_a503732ecee5e0f7a02f23c8381727ed6}{get\+Int\+From\+Buffer}}(\mbox{\hyperlink{EXE_8h_a6fc13e99b0e5bfd34110346dec8c347d}{local\+S\+PI}}+1))
 \item 
+\mbox{\hyperlink{EXE_8h_ad87bc2bfa2956f33ea88ab8af40cdc08}{if}} (params-\/$>$vsync)
+\item 
 \mbox{\hyperlink{EXE_8h_a00ef586d393155bc1fcf915531940ae4}{if}} (\mbox{\hyperlink{EXE_8h_a9cd5df19a53bf394077be925bb924459}{scanned}}$<$=0)
 \item 
 \mbox{\hyperlink{EXE_8h_aefbba8e6103e96f02f9dab0aeaab3c00}{if}} (\mbox{\hyperlink{EXE_8h_a9ab9d7057831483025a5c168d2308109}{val}}==\mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba9b917da5e21d036fbc6af5d22dd64d2c}{S\+P\+U\+\_\+\+C\+V\+\_\+\+N\+O\+A\+RG}})
+\item 
+\mbox{\hyperlink{EXE_8h_a46eb8e9d4c4db42fc9108030c991e94a}{O\+P\+E\+X\+E\+\_\+\+F\+U\+NC}} (abs, \{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(1)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};double \mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_a9bd299905b65faef2943ad1b91e71236}{P\+U\+SH}}(abs(\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}));\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_a2f7c8a600c42c1dfd1cd779f10aca47c}{I\+N\+C\+S\+PI}};return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}) O\+P\+E\+X\+E\+\_\+\+F\+U\+NC(pixset
 \item 
 \mbox{\hyperlink{EXE_8h_af8d4cf441908b05c8f12e9d4965b2f13}{O\+P\+E\+X\+E\+\_\+\+F\+U\+NC}} (add, \{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(1)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};double \mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}=0;double \mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}}=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_a9bd299905b65faef2943ad1b91e71236}{P\+U\+SH}}(\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}+\mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_a2f7c8a600c42c1dfd1cd779f10aca47c}{I\+N\+C\+S\+PI}};return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}) O\+P\+E\+X\+E\+\_\+\+F\+U\+NC(sub
 \item 
@@ -50,7 +57,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \item 
 \mbox{\hyperlink{EXE_8h_a188fddf6643fab736a3e14594d52f696}{O\+P\+E\+X\+E\+\_\+\+F\+U\+NC}} (je, \{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(5)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$\mbox{\hyperlink{EXE_8h_a6fc13e99b0e5bfd34110346dec8c347d}{local\+S\+PI}}= $\ast$S\+PI;double \mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}=0;double \mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}}=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}==\mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}}) \mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(\mbox{\hyperlink{ParseHelpers_8hpp_a503732ecee5e0f7a02f23c8381727ed6}{get\+Int\+From\+Buffer}}(\mbox{\hyperlink{EXE_8h_a6fc13e99b0e5bfd34110346dec8c347d}{local\+S\+PI}}+1));\mbox{\hyperlink{EXE_8h_a0544c3fe466e421738dae463968b70ba}{else}} \mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(5);return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}) O\+P\+E\+X\+E\+\_\+\+F\+U\+NC(jne
 \item 
-\mbox{\hyperlink{EXE_8h_a2d23ca000e85a0d41b0053a26ebc51c7}{O\+P\+E\+X\+E\+\_\+\+F\+U\+NC}} (jm, \{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(5)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$\mbox{\hyperlink{EXE_8h_a6fc13e99b0e5bfd34110346dec8c347d}{local\+S\+PI}}= $\ast$S\+PI;time\+\_\+t t=time(N\+U\+LL);struct tm tm= $\ast$localtime(\&t);\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{CMakeCache_8txt_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}=tm.\+tm\+\_\+mday;\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} m=tm.\+tm\+\_\+mon+1;\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} y=tm.\+tm\+\_\+year+1900;\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} weekday=(\mbox{\hyperlink{CMakeCache_8txt_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}+=m$<$ 3 ? y-\/-\/ \+:y -\/ 2, 23 $\ast$m/9+\mbox{\hyperlink{CMakeCache_8txt_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}+4+y/4-\/ y/100+y/400)\%7;\mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(weekday==1) \mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(\mbox{\hyperlink{ParseHelpers_8hpp_a503732ecee5e0f7a02f23c8381727ed6}{get\+Int\+From\+Buffer}}(\mbox{\hyperlink{EXE_8h_a6fc13e99b0e5bfd34110346dec8c347d}{local\+S\+PI}}+1));\mbox{\hyperlink{EXE_8h_a0544c3fe466e421738dae463968b70ba}{else}} \mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(5);return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}) O\+P\+E\+X\+E\+\_\+\+F\+U\+NC(inc
+\mbox{\hyperlink{EXE_8h_a2d23ca000e85a0d41b0053a26ebc51c7}{O\+P\+E\+X\+E\+\_\+\+F\+U\+NC}} (jm, \{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(5)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$\mbox{\hyperlink{EXE_8h_a6fc13e99b0e5bfd34110346dec8c347d}{local\+S\+PI}}= $\ast$S\+PI;time\+\_\+t t=time(N\+U\+LL);struct tm tm= $\ast$localtime(\&t);\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{CMakeCache_8txt_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}=tm.\+tm\+\_\+mday;\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} m=tm.\+tm\+\_\+mon+1;\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}}=tm.\+tm\+\_\+year+1900;\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} weekday=(\mbox{\hyperlink{CMakeCache_8txt_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}+=m$<$ 3 ? \mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}}-\/-\/ \+:\mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}} -\/ 2, 23 $\ast$m/9+\mbox{\hyperlink{CMakeCache_8txt_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}+4+\mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}}/4-\/ \mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}}/100+\mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}}/400)\%7;\mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(weekday==1) \mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(\mbox{\hyperlink{ParseHelpers_8hpp_a503732ecee5e0f7a02f23c8381727ed6}{get\+Int\+From\+Buffer}}(\mbox{\hyperlink{EXE_8h_a6fc13e99b0e5bfd34110346dec8c347d}{local\+S\+PI}}+1));\mbox{\hyperlink{EXE_8h_a0544c3fe466e421738dae463968b70ba}{else}} \mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(5);return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}) O\+P\+E\+X\+E\+\_\+\+F\+U\+NC(inc
 \item 
 \mbox{\hyperlink{EXE_8h_ad81d23bbdae1884132dabbbe85daacca}{O\+P\+E\+X\+E\+\_\+\+F\+U\+NC}} (mul, \{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(1)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};double \mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}=0;double \mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}}=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_a9bd299905b65faef2943ad1b91e71236}{P\+U\+SH}}(\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}} $\ast$\mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_a2f7c8a600c42c1dfd1cd779f10aca47c}{I\+N\+C\+S\+PI}};return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}) O\+P\+E\+X\+E\+\_\+\+F\+U\+NC(div
 \item 
@@ -58,15 +65,21 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \item 
 \mbox{\hyperlink{EXE_8h_a2d11c9d4ccb58125788ea44f62a6c8bd}{O\+P\+E\+X\+E\+\_\+\+F\+U\+NC}} (push, \{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(3)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};double \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}}=0;\mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(1);\mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeb}{Complex\+Value\+Result}} \mbox{\hyperlink{EXE_8h_a9ab9d7057831483025a5c168d2308109}{val}}=\mbox{\hyperlink{ComplexValueTools_8hpp_a530fd3cc4479bf1cd2e1f49cde53f7ea}{retrieve\+Complex\+Value}}(core, S\+PI, \&\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}});\mbox{\hyperlink{EXE_8h_add5ada3745a53f8fa6baeb3da47800ff}{C\+O\+M\+P\+L\+E\+X\+V\+A\+L\+OK}};\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_a9bd299905b65faef2943ad1b91e71236}{P\+U\+SH}}(\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}) O\+P\+E\+X\+E\+\_\+\+F\+U\+NC(out
 \item 
+\mbox{\hyperlink{EXE_8h_ae185edfb6f10589271412280696def18}{O\+P\+E\+X\+E\+\_\+\+F\+U\+NC}} (rend, \{ \mbox{\hyperlink{CoreRender_8hpp_aecd17d0a9d0aab13b605f9ad48bf60ea}{render\+V\+R\+AM}}(core);\mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(1);return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}) O\+P\+E\+X\+E\+\_\+\+F\+U\+NC(slp
+\item 
 \mbox{\hyperlink{EXE_8h_a4a7954467408cfb9e1657aedf3ee0249}{O\+P\+E\+X\+E\+\_\+\+F\+U\+NC}} (ret, \{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(1)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};double offset=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_a5aeb7890f48c90ba4eb4c3dde56aec5d}{call\+P\+OP}}(\&offset);\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}};\mbox{\hyperlink{EXEDefs_8h_a498a442635405b9571ad6912ae85a478}{M\+O\+V\+S\+PI}}(binary-\/$>$code+(\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}}) offset);return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}) O\+P\+E\+X\+E\+\_\+\+F\+U\+NC(mov
 \item 
-\mbox{\hyperlink{EXE_8h_a13f3ba01ca6f20753d21eb11f54dc2b9}{O\+P\+E\+X\+E\+\_\+\+F\+U\+NC}} (sin, \{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(1)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};double \mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_a9bd299905b65faef2943ad1b91e71236}{P\+U\+SH}}(sin(\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}));\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_a2f7c8a600c42c1dfd1cd779f10aca47c}{I\+N\+C\+S\+PI}};return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}) O\+P\+E\+X\+E\+\_\+\+F\+U\+NC(cos
+\mbox{\hyperlink{EXE_8h_a13f3ba01ca6f20753d21eb11f54dc2b9}{O\+P\+E\+X\+E\+\_\+\+F\+U\+NC}} (\mbox{\hyperlink{donut_8cpp_ab115207b90bd7664893c3eda01a20591}{sin}}, \{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(1)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};double \mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_a9bd299905b65faef2943ad1b91e71236}{P\+U\+SH}}(\mbox{\hyperlink{donut_8cpp_ab115207b90bd7664893c3eda01a20591}{sin}}(\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}));\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_a2f7c8a600c42c1dfd1cd779f10aca47c}{I\+N\+C\+S\+PI}};return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}) O\+P\+E\+X\+E\+\_\+\+F\+U\+NC(\mbox{\hyperlink{donut_8cpp_a2a208886a2a691a8d14219b558ea713b}{cos}}
 \item 
 \mbox{\hyperlink{EXE_8h_ab9c0573724ad7edc53464f4f8fed70aa}{O\+P\+E\+X\+E\+\_\+\+F\+U\+NC}} (sqrt, \{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(1)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};double \mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_a9bd299905b65faef2943ad1b91e71236}{P\+U\+SH}}(sqrt(\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}));\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_a2f7c8a600c42c1dfd1cd779f10aca47c}{I\+N\+C\+S\+PI}};return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}) O\+P\+E\+X\+E\+\_\+\+F\+U\+NC(pow
 \item 
 \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}} (\char`\"{}\%lf\textbackslash{}n\char`\"{}, value)
 \item 
 \mbox{\hyperlink{EXE_8h_a9bc054f8187ba3931c689f28b4d63465}{printf}} (\char`\"{}Requested value\+: \char`\"{})
+\item 
+\mbox{\hyperlink{EXE_8h_a7dbd3a71bbf815d4d892180fde504474}{usleep}} ((unsigned) \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}})
+\item 
+\mbox{\hyperlink{EXE_8h_a3883623213b342ebd6ba0772bfdc6be1}{vram\+Set\+Pixel}} (core,(\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}}) \mbox{\hyperlink{EXE_8h_af88b946fb90d5f08b5fb740c70e98c10}{x}},(\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}}) \mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}},(\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}}) \mbox{\hyperlink{EXE_8h_a8b283aacb16eba272bc1bf4278158a83}{val\+Pix}})
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -97,9 +110,15 @@ return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\
 \item 
 \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeb}{Complex\+Value\+Result}} \mbox{\hyperlink{EXE_8h_a9ab9d7057831483025a5c168d2308109}{val}} = \mbox{\hyperlink{ComplexValueTools_8hpp_a530fd3cc4479bf1cd2e1f49cde53f7ea}{retrieve\+Complex\+Value}}(core, S\+PI, \&\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}})
 \item 
+double \mbox{\hyperlink{EXE_8h_a8b283aacb16eba272bc1bf4278158a83}{val\+Pix}} = 0
+\item 
 double \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}} = 0
 \item 
 double $\ast$ \mbox{\hyperlink{EXE_8h_ace9fc28c7e7897c736d1105503a3457d}{value\+To}} = nullptr
+\item 
+double \mbox{\hyperlink{EXE_8h_af88b946fb90d5f08b5fb740c70e98c10}{x}} = 0
+\item 
+double \mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}} = 0
 \end{DoxyCompactItemize}
 
 
@@ -136,14 +155,14 @@ Here is the caller graph for this function\+:\nopagebreak
 \mbox{\Hypertarget{EXE_8h_acc418fb6ebe84cfbf2af63663d99f698}\label{EXE_8h_acc418fb6ebe84cfbf2af63663d99f698}} 
 \index{EXE.h@{EXE.h}!if@{if}}
 \index{if@{if}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
 {\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{ComplexValueTools_8hpp_a4e707f106314d2e928408c63af237407}{char\+Adress}} \&}]{cvalue }\end{DoxyParamCaption})}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{108                            \{}
-\DoxyCodeLine{109         *((\textcolor{keywordtype}{char}*)\mbox{\hyperlink{EXE_8h_ace9fc28c7e7897c736d1105503a3457d}{valueTo}}) = (\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}})\mbox{\hyperlink{EXE_8h_a1b15538a46facb727655d93d4156272f}{newVal}};}
-\DoxyCodeLine{110     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{113                            \{}
+\DoxyCodeLine{114         *((\textcolor{keywordtype}{char}*)\mbox{\hyperlink{EXE_8h_ace9fc28c7e7897c736d1105503a3457d}{valueTo}}) = (\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}})\mbox{\hyperlink{EXE_8h_a1b15538a46facb727655d93d4156272f}{newVal}};}
+\DoxyCodeLine{115     \} \textcolor{keywordflow}{else} \{}
 
 \end{DoxyCode}
 
@@ -153,32 +172,57 @@ References char, new\+Val, and value\+To.
 \mbox{\Hypertarget{EXE_8h_af62567ff7478a4c51ec9f29e745286f4}\label{EXE_8h_af62567ff7478a4c51ec9f29e745286f4}} 
 \index{EXE.h@{EXE.h}!if@{if}}
 \index{if@{if}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}} !}]{ = {\ttfamily \mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}}} }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}\label{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}} 
 \index{EXE.h@{EXE.h}!if@{if}}
 \index{if@{if}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}} $>$=}]{right }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{EXE_8h_a0684b935c830dd82c5712c53480801c4}\label{EXE_8h_a0684b935c830dd82c5712c53480801c4}} 
 \index{EXE.h@{EXE.h}!if@{if}}
 \index{if@{if}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}$<$=}]{right }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{EXE_8h_ad87bc2bfa2956f33ea88ab8af40cdc08}\label{EXE_8h_ad87bc2bfa2956f33ea88ab8af40cdc08}} 
+\index{EXE.h@{EXE.h}!if@{if}}
+\index{if@{if}!EXE.h@{EXE.h}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{params-\/$>$}]{vsync }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52                       \{}
+\DoxyCodeLine{53         \mbox{\hyperlink{EXE_8h_a7dbd3a71bbf815d4d892180fde504474}{usleep}}(50000);}
+\DoxyCodeLine{54     \}}
+
+\end{DoxyCode}
+
+
+References usleep().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{EXE_8h_ad87bc2bfa2956f33ea88ab8af40cdc08_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{EXE_8h_a00ef586d393155bc1fcf915531940ae4}\label{EXE_8h_a00ef586d393155bc1fcf915531940ae4}} 
 \index{EXE.h@{EXE.h}!if@{if}}
 \index{if@{if}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
 {\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{EXE_8h_a9cd5df19a53bf394077be925bb924459}{scanned}}$<$=}]{0 }\end{DoxyParamCaption})}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{92                      \{}
-\DoxyCodeLine{93         \textcolor{keywordflow}{return} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fad5a2a81664c27b80c90aee5b839992bb}{SPU\_EXE\_INVALIDINPUT}};}
-\DoxyCodeLine{94     \}}
+\DoxyCodeLine{97                      \{}
+\DoxyCodeLine{98         \textcolor{keywordflow}{return} \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2fad5a2a81664c27b80c90aee5b839992bb}{SPU\_EXE\_INVALIDINPUT}};}
+\DoxyCodeLine{99     \}}
 
 \end{DoxyCode}
 
@@ -188,19 +232,19 @@ References S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+I\+N\+P\+UT.
 \mbox{\Hypertarget{EXE_8h_aefbba8e6103e96f02f9dab0aeaab3c00}\label{EXE_8h_aefbba8e6103e96f02f9dab0aeaab3c00}} 
 \index{EXE.h@{EXE.h}!if@{if}}
 \index{if@{if}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
 {\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{EXE_8h_a9ab9d7057831483025a5c168d2308109}{val}}}]{ = {\ttfamily =~\mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba9b917da5e21d036fbc6af5d22dd64d2c}{S\+P\+U\+\_\+\+C\+V\+\_\+\+N\+O\+A\+RG}}} }\end{DoxyParamCaption})}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{39                             \{}
-\DoxyCodeLine{40         \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{StackRigidOperationCodes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}} = \mbox{\hyperlink{StackRigid_8cpp_a81920cc1380e65ab9173893cb1772d86}{StackBack}}(core-\/>stack, \&\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}});}
-\DoxyCodeLine{41         \mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{STACKRESULT}}}
-\DoxyCodeLine{42         \mbox{\hyperlink{EXE_8h_ae3570cefbbd9fc7b1e80de402477a790}{ADDSPI}}(1);}
-\DoxyCodeLine{43 \textcolor{comment}{//        printf("{}off: \%d\(\backslash\)n"{}, (int)(*SPI -\/ binary-\/>code));}}
-\DoxyCodeLine{44         \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}});}
-\DoxyCodeLine{45         \textcolor{keywordflow}{return} \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{SPU\_EXE\_OK}};}
-\DoxyCodeLine{46     \}}
+\DoxyCodeLine{40                             \{}
+\DoxyCodeLine{41         \mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{StackRigidOperationCodes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}} = \mbox{\hyperlink{StackRigid_8cpp_a81920cc1380e65ab9173893cb1772d86}{StackBack}}(core-\/>stack, \&\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}});}
+\DoxyCodeLine{42         \mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{STACKRESULT}}}
+\DoxyCodeLine{43         \mbox{\hyperlink{EXE_8h_ae3570cefbbd9fc7b1e80de402477a790}{ADDSPI}}(1);}
+\DoxyCodeLine{44 \textcolor{comment}{//        printf("{}off: \%d\(\backslash\)n"{}, (int)(*SPI -\/ binary-\/>code));}}
+\DoxyCodeLine{45         \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}});}
+\DoxyCodeLine{46         \textcolor{keywordflow}{return} \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{SPU\_EXE\_OK}};}
+\DoxyCodeLine{47     \}}
 
 \end{DoxyCode}
 
@@ -214,10 +258,20 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{EXE_8h_aefbba8e6103e96f02f9dab0aeaab3c00_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{EXE_8h_a46eb8e9d4c4db42fc9108030c991e94a}\label{EXE_8h_a46eb8e9d4c4db42fc9108030c991e94a}} 
+\index{EXE.h@{EXE.h}!OPEXE\_FUNC@{OPEXE\_FUNC}}
+\index{OPEXE\_FUNC@{OPEXE\_FUNC}!EXE.h@{EXE.h}}
+\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [1/16]}}
+{\footnotesize\ttfamily O\+P\+E\+X\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{abs}]{,  }\item[{\{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(1)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};double \mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_a9bd299905b65faef2943ad1b91e71236}{P\+U\+SH}}(abs(\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}));\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_a2f7c8a600c42c1dfd1cd779f10aca47c}{I\+N\+C\+S\+PI}};return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}}]{ }\end{DoxyParamCaption})}
+
+
+
+References H\+A\+S\+B\+Y\+T\+ES, I\+N\+C\+S\+PI, left, P\+OP, P\+U\+SH, result, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK, and S\+T\+A\+C\+K\+R\+E\+S\+U\+LT.
+
 \mbox{\Hypertarget{EXE_8h_af8d4cf441908b05c8f12e9d4965b2f13}\label{EXE_8h_af8d4cf441908b05c8f12e9d4965b2f13}} 
 \index{EXE.h@{EXE.h}!OPEXE\_FUNC@{OPEXE\_FUNC}}
 \index{OPEXE\_FUNC@{OPEXE\_FUNC}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [1/14]}}
+\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [2/16]}}
 {\footnotesize\ttfamily O\+P\+E\+X\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{add}]{,  }\item[{\{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(1)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};double \mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}=0;double \mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}}=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_a9bd299905b65faef2943ad1b91e71236}{P\+U\+SH}}(\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}+\mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_a2f7c8a600c42c1dfd1cd779f10aca47c}{I\+N\+C\+S\+PI}};return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}}]{ }\end{DoxyParamCaption})}
 
 
@@ -227,7 +281,7 @@ References H\+A\+S\+B\+Y\+T\+ES, I\+N\+C\+S\+PI, left, P\+OP, P\+U\+SH, result, 
 \mbox{\Hypertarget{EXE_8h_a62e7c2a8e0114665e0377e5874366e55}\label{EXE_8h_a62e7c2a8e0114665e0377e5874366e55}} 
 \index{EXE.h@{EXE.h}!OPEXE\_FUNC@{OPEXE\_FUNC}}
 \index{OPEXE\_FUNC@{OPEXE\_FUNC}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [2/14]}}
+\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [3/16]}}
 {\footnotesize\ttfamily O\+P\+E\+X\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{dec}]{,  }\item[{\{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(2)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};double $\ast$\mbox{\hyperlink{EXE_8h_ace9fc28c7e7897c736d1105503a3457d}{value\+To}}=nullptr;\mbox{\hyperlink{AssemblyDTypes_8hpp_structComplexValue}{Complex\+Value}} \mbox{\hyperlink{EXE_8h_afd28069fe7ee361686d9303957752105}{cvalue}}=\{\};\mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(1);\mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeb}{Complex\+Value\+Result}} \mbox{\hyperlink{EXE_8h_a9ab9d7057831483025a5c168d2308109}{val}}=\mbox{\hyperlink{ComplexValueTools_8hpp_a6fa8bc820187e01175c5230208e2623c}{pointer\+To\+Complex\+Value}}(core, S\+PI, \&\mbox{\hyperlink{EXE_8h_ace9fc28c7e7897c736d1105503a3457d}{value\+To}}, \&\mbox{\hyperlink{EXE_8h_afd28069fe7ee361686d9303957752105}{cvalue}});\mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(\mbox{\hyperlink{EXE_8h_a9ab9d7057831483025a5c168d2308109}{val}}==\mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba9b917da5e21d036fbc6af5d22dd64d2c}{S\+P\+U\+\_\+\+C\+V\+\_\+\+N\+O\+A\+RG}})\{ double \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}}=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}};\mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_a9bd299905b65faef2943ad1b91e71236}{P\+U\+SH}}(\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}} -\/ 1);\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}};return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\} \mbox{\hyperlink{EXE_8h_add5ada3745a53f8fa6baeb3da47800ff}{C\+O\+M\+P\+L\+E\+X\+V\+A\+L\+OK}};double \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}}= $\ast$\mbox{\hyperlink{EXE_8h_ace9fc28c7e7897c736d1105503a3457d}{value\+To}} -\/ 1;\mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(\mbox{\hyperlink{ComplexValueTools_8hpp_a4e707f106314d2e928408c63af237407}{char\+Adress}}(\&\mbox{\hyperlink{EXE_8h_afd28069fe7ee361686d9303957752105}{cvalue}}))\{ $\ast$((\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$) \mbox{\hyperlink{EXE_8h_ace9fc28c7e7897c736d1105503a3457d}{value\+To}})=(\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}}) \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}};\} \mbox{\hyperlink{EXE_8h_a0544c3fe466e421738dae463968b70ba}{else}} \{ $\ast$\mbox{\hyperlink{EXE_8h_ace9fc28c7e7897c736d1105503a3457d}{value\+To}}=\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}};\} return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}}]{ }\end{DoxyParamCaption})}
 
 
@@ -244,7 +298,7 @@ Here is the call graph for this function\+:\nopagebreak
 \mbox{\Hypertarget{EXE_8h_aa33f433d3ffa06d1d01567b282d8706b}\label{EXE_8h_aa33f433d3ffa06d1d01567b282d8706b}} 
 \index{EXE.h@{EXE.h}!OPEXE\_FUNC@{OPEXE\_FUNC}}
 \index{OPEXE\_FUNC@{OPEXE\_FUNC}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [3/14]}}
+\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [4/16]}}
 {\footnotesize\ttfamily O\+P\+E\+X\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{dump}]{,  }\item[{\{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(1)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};\mbox{\hyperlink{StackRigid_8h_a34ed05fb570dfd9ade77d3c0bd664591}{Stack\+Dump}}(core-\/$>$stack, -\/1, params-\/$>$input\+File\+Name, \char`\"{}dump requested\char`\"{});I\+N\+C\+S\+PI;return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}}]{ }\end{DoxyParamCaption})}
 
 
@@ -261,7 +315,7 @@ Here is the call graph for this function\+:\nopagebreak
 \mbox{\Hypertarget{EXE_8h_a292f635aec856d7fac576dff2d2601e7}\label{EXE_8h_a292f635aec856d7fac576dff2d2601e7}} 
 \index{EXE.h@{EXE.h}!OPEXE\_FUNC@{OPEXE\_FUNC}}
 \index{OPEXE\_FUNC@{OPEXE\_FUNC}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [4/14]}}
+\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [5/16]}}
 {\footnotesize\ttfamily O\+P\+E\+X\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{hlt}]{,  }\item[{\{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(1)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};core-\/$>$terminated=1;\mbox{\hyperlink{EXE_8h_a2f7c8a600c42c1dfd1cd779f10aca47c}{I\+N\+C\+S\+PI}};return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}}]{ }\end{DoxyParamCaption})}
 
 
@@ -271,7 +325,7 @@ References H\+A\+S\+B\+Y\+T\+ES, I\+N\+C\+S\+PI, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N
 \mbox{\Hypertarget{EXE_8h_ae8bc7d56208d600d9b2575804d98a71a}\label{EXE_8h_ae8bc7d56208d600d9b2575804d98a71a}} 
 \index{EXE.h@{EXE.h}!OPEXE\_FUNC@{OPEXE\_FUNC}}
 \index{OPEXE\_FUNC@{OPEXE\_FUNC}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [5/14]}}
+\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [6/16]}}
 {\footnotesize\ttfamily O\+P\+E\+X\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{ja}]{,  }\item[{\{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(5)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$\mbox{\hyperlink{EXE_8h_a6fc13e99b0e5bfd34110346dec8c347d}{local\+S\+PI}}= $\ast$S\+PI;double \mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}=0;double \mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}}=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}} $>$ \mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}}) \mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(\mbox{\hyperlink{ParseHelpers_8hpp_a503732ecee5e0f7a02f23c8381727ed6}{get\+Int\+From\+Buffer}}(\mbox{\hyperlink{EXE_8h_a6fc13e99b0e5bfd34110346dec8c347d}{local\+S\+PI}}+1));\mbox{\hyperlink{EXE_8h_a0544c3fe466e421738dae463968b70ba}{else}} \mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(5);return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}}]{ }\end{DoxyParamCaption})}
 
 
@@ -288,7 +342,7 @@ Here is the call graph for this function\+:\nopagebreak
 \mbox{\Hypertarget{EXE_8h_a20936b51fc3be86fb2849172b6f01f41}\label{EXE_8h_a20936b51fc3be86fb2849172b6f01f41}} 
 \index{EXE.h@{EXE.h}!OPEXE\_FUNC@{OPEXE\_FUNC}}
 \index{OPEXE\_FUNC@{OPEXE\_FUNC}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [6/14]}}
+\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [7/16]}}
 {\footnotesize\ttfamily O\+P\+E\+X\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{jb}]{,  }\item[{\{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(5)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$\mbox{\hyperlink{EXE_8h_a6fc13e99b0e5bfd34110346dec8c347d}{local\+S\+PI}}= $\ast$S\+PI;double \mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}=0;double \mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}}=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{StackRigid_8h_a3da847c6aaf3f472d56d528de1a0f6f7}{Stack\+Pop}}(\&(core-\/$>$stack), \&\mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{StackRigid_8h_a3da847c6aaf3f472d56d528de1a0f6f7}{Stack\+Pop}}(\&(core-\/$>$stack), \&\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}$<$ \mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}}) \mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(\mbox{\hyperlink{ParseHelpers_8hpp_a503732ecee5e0f7a02f23c8381727ed6}{get\+Int\+From\+Buffer}}(\mbox{\hyperlink{EXE_8h_a6fc13e99b0e5bfd34110346dec8c347d}{local\+S\+PI}}+1));\mbox{\hyperlink{EXE_8h_a0544c3fe466e421738dae463968b70ba}{else}} \mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(5);return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}}]{ }\end{DoxyParamCaption})}
 
 
@@ -305,7 +359,7 @@ Here is the call graph for this function\+:\nopagebreak
 \mbox{\Hypertarget{EXE_8h_a188fddf6643fab736a3e14594d52f696}\label{EXE_8h_a188fddf6643fab736a3e14594d52f696}} 
 \index{EXE.h@{EXE.h}!OPEXE\_FUNC@{OPEXE\_FUNC}}
 \index{OPEXE\_FUNC@{OPEXE\_FUNC}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [7/14]}}
+\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [8/16]}}
 {\footnotesize\ttfamily O\+P\+E\+X\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{je}]{,  }\item[{\{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(5)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$\mbox{\hyperlink{EXE_8h_a6fc13e99b0e5bfd34110346dec8c347d}{local\+S\+PI}}= $\ast$S\+PI;double \mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}=0;double \mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}}=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}==\mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}}) \mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(\mbox{\hyperlink{ParseHelpers_8hpp_a503732ecee5e0f7a02f23c8381727ed6}{get\+Int\+From\+Buffer}}(\mbox{\hyperlink{EXE_8h_a6fc13e99b0e5bfd34110346dec8c347d}{local\+S\+PI}}+1));\mbox{\hyperlink{EXE_8h_a0544c3fe466e421738dae463968b70ba}{else}} \mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(5);return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}}]{ }\end{DoxyParamCaption})}
 
 
@@ -322,12 +376,12 @@ Here is the call graph for this function\+:\nopagebreak
 \mbox{\Hypertarget{EXE_8h_a2d23ca000e85a0d41b0053a26ebc51c7}\label{EXE_8h_a2d23ca000e85a0d41b0053a26ebc51c7}} 
 \index{EXE.h@{EXE.h}!OPEXE\_FUNC@{OPEXE\_FUNC}}
 \index{OPEXE\_FUNC@{OPEXE\_FUNC}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [8/14]}}
-{\footnotesize\ttfamily O\+P\+E\+X\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{jm}]{,  }\item[{\{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(5)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$\mbox{\hyperlink{EXE_8h_a6fc13e99b0e5bfd34110346dec8c347d}{local\+S\+PI}}= $\ast$S\+PI;time\+\_\+t t=time(N\+U\+LL);struct tm tm= $\ast$localtime(\&t);\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{CMakeCache_8txt_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}=tm.\+tm\+\_\+mday;\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} m=tm.\+tm\+\_\+mon+1;\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} y=tm.\+tm\+\_\+year+1900;\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} weekday=(\mbox{\hyperlink{CMakeCache_8txt_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}+=m$<$ 3 ? y-\/-\/ \+:y -\/ 2, 23 $\ast$m/9+\mbox{\hyperlink{CMakeCache_8txt_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}+4+y/4-\/ y/100+y/400)\%7;\mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(weekday==1) \mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(\mbox{\hyperlink{ParseHelpers_8hpp_a503732ecee5e0f7a02f23c8381727ed6}{get\+Int\+From\+Buffer}}(\mbox{\hyperlink{EXE_8h_a6fc13e99b0e5bfd34110346dec8c347d}{local\+S\+PI}}+1));\mbox{\hyperlink{EXE_8h_a0544c3fe466e421738dae463968b70ba}{else}} \mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(5);return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [9/16]}}
+{\footnotesize\ttfamily O\+P\+E\+X\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{jm}]{,  }\item[{\{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(5)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$\mbox{\hyperlink{EXE_8h_a6fc13e99b0e5bfd34110346dec8c347d}{local\+S\+PI}}= $\ast$S\+PI;time\+\_\+t t=time(N\+U\+LL);struct tm tm= $\ast$localtime(\&t);\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{CMakeCache_8txt_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}=tm.\+tm\+\_\+mday;\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} m=tm.\+tm\+\_\+mon+1;\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}}=tm.\+tm\+\_\+year+1900;\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} weekday=(\mbox{\hyperlink{CMakeCache_8txt_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}+=m$<$ 3 ? \mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}}-\/-\/ \+:\mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}} -\/ 2, 23 $\ast$m/9+\mbox{\hyperlink{CMakeCache_8txt_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}+4+\mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}}/4-\/ \mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}}/100+\mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}}/400)\%7;\mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(weekday==1) \mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(\mbox{\hyperlink{ParseHelpers_8hpp_a503732ecee5e0f7a02f23c8381727ed6}{get\+Int\+From\+Buffer}}(\mbox{\hyperlink{EXE_8h_a6fc13e99b0e5bfd34110346dec8c347d}{local\+S\+PI}}+1));\mbox{\hyperlink{EXE_8h_a0544c3fe466e421738dae463968b70ba}{else}} \mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(5);return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}}]{ }\end{DoxyParamCaption})}
 
 
 
-References A\+D\+D\+S\+P\+I(), d, get\+Int\+From\+Buffer(), H\+A\+S\+B\+Y\+T\+ES, local\+S\+PI, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS, and S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK.
+References A\+D\+D\+S\+P\+I(), d, get\+Int\+From\+Buffer(), H\+A\+S\+B\+Y\+T\+ES, local\+S\+PI, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK, and y.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -339,7 +393,7 @@ Here is the call graph for this function\+:\nopagebreak
 \mbox{\Hypertarget{EXE_8h_ad81d23bbdae1884132dabbbe85daacca}\label{EXE_8h_ad81d23bbdae1884132dabbbe85daacca}} 
 \index{EXE.h@{EXE.h}!OPEXE\_FUNC@{OPEXE\_FUNC}}
 \index{OPEXE\_FUNC@{OPEXE\_FUNC}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [9/14]}}
+\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [10/16]}}
 {\footnotesize\ttfamily O\+P\+E\+X\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{mul}]{,  }\item[{\{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(1)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};double \mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}=0;double \mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}}=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_a9bd299905b65faef2943ad1b91e71236}{P\+U\+SH}}(\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}} $\ast$\mbox{\hyperlink{EXE_8h_ab833bacb3fa8d1a189efcbba74f10fa1}{right}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_a2f7c8a600c42c1dfd1cd779f10aca47c}{I\+N\+C\+S\+PI}};return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}}]{ }\end{DoxyParamCaption})}
 
 
@@ -349,7 +403,7 @@ References H\+A\+S\+B\+Y\+T\+ES, I\+N\+C\+S\+PI, left, P\+OP, P\+U\+SH, result, 
 \mbox{\Hypertarget{EXE_8h_a7f44957aaaa3a519a3fadf35c773f516}\label{EXE_8h_a7f44957aaaa3a519a3fadf35c773f516}} 
 \index{EXE.h@{EXE.h}!OPEXE\_FUNC@{OPEXE\_FUNC}}
 \index{OPEXE\_FUNC@{OPEXE\_FUNC}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [10/14]}}
+\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [11/16]}}
 {\footnotesize\ttfamily O\+P\+E\+X\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{pop}]{,  }\item[{\{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(2)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};double $\ast$\mbox{\hyperlink{EXE_8h_ace9fc28c7e7897c736d1105503a3457d}{value\+To}}=nullptr;\mbox{\hyperlink{AssemblyDTypes_8hpp_structComplexValue}{Complex\+Value}} \mbox{\hyperlink{EXE_8h_afd28069fe7ee361686d9303957752105}{cvalue}}=\{\};\mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(1);\mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeb}{Complex\+Value\+Result}} \mbox{\hyperlink{EXE_8h_a9ab9d7057831483025a5c168d2308109}{val}}=\mbox{\hyperlink{ComplexValueTools_8hpp_a6fa8bc820187e01175c5230208e2623c}{pointer\+To\+Complex\+Value}}(core, S\+PI, \&\mbox{\hyperlink{EXE_8h_ace9fc28c7e7897c736d1105503a3457d}{value\+To}}, \&\mbox{\hyperlink{EXE_8h_afd28069fe7ee361686d9303957752105}{cvalue}});\mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(\mbox{\hyperlink{EXE_8h_a9ab9d7057831483025a5c168d2308109}{val}}==\mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba9b917da5e21d036fbc6af5d22dd64d2c}{S\+P\+U\+\_\+\+C\+V\+\_\+\+N\+O\+A\+RG}})\{ double \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}}=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}};return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\} \mbox{\hyperlink{EXE_8h_add5ada3745a53f8fa6baeb3da47800ff}{C\+O\+M\+P\+L\+E\+X\+V\+A\+L\+OK}};double \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}}=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}};\mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(\mbox{\hyperlink{ComplexValueTools_8hpp_a4e707f106314d2e928408c63af237407}{char\+Adress}}(\&\mbox{\hyperlink{EXE_8h_afd28069fe7ee361686d9303957752105}{cvalue}}))\{ $\ast$((\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}} $\ast$) \mbox{\hyperlink{EXE_8h_ace9fc28c7e7897c736d1105503a3457d}{value\+To}})=(\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}}) \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}};\} \mbox{\hyperlink{EXE_8h_a0544c3fe466e421738dae463968b70ba}{else}} \{ $\ast$\mbox{\hyperlink{EXE_8h_ace9fc28c7e7897c736d1105503a3457d}{value\+To}}=\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}};\} return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}}]{ }\end{DoxyParamCaption})}
 
 
@@ -366,7 +420,7 @@ Here is the call graph for this function\+:\nopagebreak
 \mbox{\Hypertarget{EXE_8h_a2d11c9d4ccb58125788ea44f62a6c8bd}\label{EXE_8h_a2d11c9d4ccb58125788ea44f62a6c8bd}} 
 \index{EXE.h@{EXE.h}!OPEXE\_FUNC@{OPEXE\_FUNC}}
 \index{OPEXE\_FUNC@{OPEXE\_FUNC}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [11/14]}}
+\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [12/16]}}
 {\footnotesize\ttfamily O\+P\+E\+X\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{push}]{,  }\item[{\{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(3)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};double \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}}=0;\mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(1);\mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeb}{Complex\+Value\+Result}} \mbox{\hyperlink{EXE_8h_a9ab9d7057831483025a5c168d2308109}{val}}=\mbox{\hyperlink{ComplexValueTools_8hpp_a530fd3cc4479bf1cd2e1f49cde53f7ea}{retrieve\+Complex\+Value}}(core, S\+PI, \&\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}});\mbox{\hyperlink{EXE_8h_add5ada3745a53f8fa6baeb3da47800ff}{C\+O\+M\+P\+L\+E\+X\+V\+A\+L\+OK}};\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_a9bd299905b65faef2943ad1b91e71236}{P\+U\+SH}}(\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}}]{ }\end{DoxyParamCaption})}
 
 
@@ -380,10 +434,28 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{EXE_8h_a2d11c9d4ccb58125788ea44f62a6c8bd_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{EXE_8h_ae185edfb6f10589271412280696def18}\label{EXE_8h_ae185edfb6f10589271412280696def18}} 
+\index{EXE.h@{EXE.h}!OPEXE\_FUNC@{OPEXE\_FUNC}}
+\index{OPEXE\_FUNC@{OPEXE\_FUNC}!EXE.h@{EXE.h}}
+\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [13/16]}}
+{\footnotesize\ttfamily O\+P\+E\+X\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{rend}]{,  }\item[{\{ \mbox{\hyperlink{CoreRender_8hpp_aecd17d0a9d0aab13b605f9ad48bf60ea}{render\+V\+R\+AM}}(core);\mbox{\hyperlink{EXE_8h_aa7627babb7e2db2ba52209b8517e92c2}{A\+D\+D\+S\+PI}}(1);return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}}]{ }\end{DoxyParamCaption})}
+
+
+
+References A\+D\+D\+S\+P\+I(), render\+V\+R\+A\+M(), and S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{EXE_8h_ae185edfb6f10589271412280696def18_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{EXE_8h_a4a7954467408cfb9e1657aedf3ee0249}\label{EXE_8h_a4a7954467408cfb9e1657aedf3ee0249}} 
 \index{EXE.h@{EXE.h}!OPEXE\_FUNC@{OPEXE\_FUNC}}
 \index{OPEXE\_FUNC@{OPEXE\_FUNC}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [12/14]}}
+\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [14/16]}}
 {\footnotesize\ttfamily O\+P\+E\+X\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{ret}]{,  }\item[{\{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(1)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};double offset=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_a5aeb7890f48c90ba4eb4c3dde56aec5d}{call\+P\+OP}}(\&offset);\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}};\mbox{\hyperlink{EXEDefs_8h_a498a442635405b9571ad6912ae85a478}{M\+O\+V\+S\+PI}}(binary-\/$>$code+(\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}}) offset);return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}}]{ }\end{DoxyParamCaption})}
 
 
@@ -393,17 +465,25 @@ References call\+P\+OP, H\+A\+S\+B\+Y\+T\+ES, M\+O\+V\+S\+PI, result, S\+P\+U\+\
 \mbox{\Hypertarget{EXE_8h_a13f3ba01ca6f20753d21eb11f54dc2b9}\label{EXE_8h_a13f3ba01ca6f20753d21eb11f54dc2b9}} 
 \index{EXE.h@{EXE.h}!OPEXE\_FUNC@{OPEXE\_FUNC}}
 \index{OPEXE\_FUNC@{OPEXE\_FUNC}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [13/14]}}
-{\footnotesize\ttfamily O\+P\+E\+X\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{sin}]{,  }\item[{\{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(1)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};double \mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_a9bd299905b65faef2943ad1b91e71236}{P\+U\+SH}}(sin(\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}));\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_a2f7c8a600c42c1dfd1cd779f10aca47c}{I\+N\+C\+S\+PI}};return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [15/16]}}
+{\footnotesize\ttfamily O\+P\+E\+X\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{donut_8cpp_ab115207b90bd7664893c3eda01a20591}{sin}}}]{,  }\item[{\{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(1)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};double \mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_a9bd299905b65faef2943ad1b91e71236}{P\+U\+SH}}(\mbox{\hyperlink{donut_8cpp_ab115207b90bd7664893c3eda01a20591}{sin}}(\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}));\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_a2f7c8a600c42c1dfd1cd779f10aca47c}{I\+N\+C\+S\+PI}};return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}}]{ }\end{DoxyParamCaption})}
 
 
 
-References H\+A\+S\+B\+Y\+T\+ES, I\+N\+C\+S\+PI, left, P\+OP, P\+U\+SH, result, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK, and S\+T\+A\+C\+K\+R\+E\+S\+U\+LT.
+References H\+A\+S\+B\+Y\+T\+ES, I\+N\+C\+S\+PI, left, P\+OP, P\+U\+SH, result, sin(), S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS, S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK, and S\+T\+A\+C\+K\+R\+E\+S\+U\+LT.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{EXE_8h_a13f3ba01ca6f20753d21eb11f54dc2b9_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{EXE_8h_ab9c0573724ad7edc53464f4f8fed70aa}\label{EXE_8h_ab9c0573724ad7edc53464f4f8fed70aa}} 
 \index{EXE.h@{EXE.h}!OPEXE\_FUNC@{OPEXE\_FUNC}}
 \index{OPEXE\_FUNC@{OPEXE\_FUNC}!EXE.h@{EXE.h}}
-\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [14/14]}}
+\doxysubsubsection{\texorpdfstring{OPEXE\_FUNC()}{OPEXE\_FUNC()}\hspace{0.1cm}{\footnotesize\ttfamily [16/16]}}
 {\footnotesize\ttfamily O\+P\+E\+X\+E\+\_\+\+F\+U\+NC (\begin{DoxyParamCaption}\item[{sqrt}]{,  }\item[{\{ \mbox{\hyperlink{EXE_8h_ad3c4171d67b7f3ee90710cf8ad212078}{if}}(!\mbox{\hyperlink{EXEDefs_8h_a301649058f4c3cef20f99c5792e0b027}{H\+A\+S\+B\+Y\+T\+ES}}(1)) return \mbox{\hyperlink{SPUDtypes_8hpp_a885ae53bbee7aae3da281a6c83857f2faa7b69649b116bd922f086fac066233e6}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+N\+O\+A\+R\+GS}};double \mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}=0;\mbox{\hyperlink{StackRigid_8h_afa660da841608914d20d9819a7efe039}{Stack\+Rigid\+Operation\+Codes}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_aa1dcc2d6eda6e79d7bdda5f8dd461c39}{P\+OP}}(\&\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}});\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}=\mbox{\hyperlink{EXEDefs_8h_a9bd299905b65faef2943ad1b91e71236}{P\+U\+SH}}(sqrt(\mbox{\hyperlink{EXE_8h_a5eeeb20fab9ff0f54568882b94d57921}{left}}));\mbox{\hyperlink{EXE_8h_a3d5a91f6cd5cdd9f5ddda00f4f00e4be}{S\+T\+A\+C\+K\+R\+E\+S\+U\+LT}} \mbox{\hyperlink{EXE_8h_a2f7c8a600c42c1dfd1cd779f10aca47c}{I\+N\+C\+S\+PI}};return \mbox{\hyperlink{EXE_8h_a1e1608a157e7bb2d746ba91df8873e9e}{S\+P\+U\+\_\+\+E\+X\+E\+\_\+\+OK}};\}}]{ }\end{DoxyParamCaption})}
 
 
@@ -418,9 +498,10 @@ References H\+A\+S\+B\+Y\+T\+ES, I\+N\+C\+S\+PI, left, P\+OP, P\+U\+SH, result, 
 
 
 
-Referenced by analyze\+Labels\+Errors(), dis\+Assambly\+Instruction(), if(), labels\+Table\+Complete(), main(), parse\+Args(), parse\+Code(), parse\+Command(), parse\+S\+P\+U\+Args(), print\+Assembly\+Help\+Data(), print\+Assembly\+Version(), print\+Dis\+Assembly\+Help\+Data(), spu\+Help(), and Stack\+Dump().
+Referenced by analyze\+Labels\+Errors(), dis\+Assambly\+Instruction(), if(), labels\+Table\+Complete(), main(), parse\+Args(), parse\+Code(), parse\+Command(), parse\+S\+P\+U\+Args(), print\+Assembly\+Help\+Data(), print\+Assembly\+Version(), print\+Dis\+Assembly\+Help\+Data(), render\+V\+R\+A\+M(), spu\+Help(), and Stack\+Dump().
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -432,6 +513,30 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{printf@{printf}!EXE.h@{EXE.h}}
 \doxysubsubsection{\texorpdfstring{printf()}{printf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily printf (\begin{DoxyParamCaption}\item[{\char`\"{}Requested value\+: \char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{EXE_8h_a7dbd3a71bbf815d4d892180fde504474}\label{EXE_8h_a7dbd3a71bbf815d4d892180fde504474}} 
+\index{EXE.h@{EXE.h}!usleep@{usleep}}
+\index{usleep@{usleep}!EXE.h@{EXE.h}}
+\doxysubsubsection{\texorpdfstring{usleep()}{usleep()}}
+{\footnotesize\ttfamily usleep (\begin{DoxyParamCaption}\item[{(unsigned)}]{value }\end{DoxyParamCaption})}
+
+
+
+Referenced by if().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{EXE_8h_a7dbd3a71bbf815d4d892180fde504474_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{EXE_8h_a3883623213b342ebd6ba0772bfdc6be1}\label{EXE_8h_a3883623213b342ebd6ba0772bfdc6be1}} 
+\index{EXE.h@{EXE.h}!vramSetPixel@{vramSetPixel}}
+\index{vramSetPixel@{vramSetPixel}!EXE.h@{EXE.h}}
+\doxysubsubsection{\texorpdfstring{vramSetPixel()}{vramSetPixel()}}
+{\footnotesize\ttfamily vram\+Set\+Pixel (\begin{DoxyParamCaption}\item[{core}]{,  }\item[{(\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}})}]{x,  }\item[{(\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}})}]{y,  }\item[{(\mbox{\hyperlink{CMakeCache_8txt_afe71f11dacb15682cdc012f7208e6e09}{char}})}]{val\+Pix }\end{DoxyParamCaption})}
 
 
 
@@ -562,7 +667,13 @@ Referenced by if(), and O\+P\+E\+X\+E\+\_\+\+F\+U\+N\+C().
 
 
 
-Referenced by O\+P\+B\+A\+C\+K\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+N\+C(), O\+P\+E\+X\+E\+\_\+\+F\+U\+N\+C(), and O\+P\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+N\+C().
+Referenced by O\+P\+B\+A\+C\+K\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+N\+C(), O\+P\+E\+X\+E\+\_\+\+F\+U\+N\+C(), O\+P\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+N\+C(), and vram\+Set\+Pixel().
+
+\mbox{\Hypertarget{EXE_8h_a8b283aacb16eba272bc1bf4278158a83}\label{EXE_8h_a8b283aacb16eba272bc1bf4278158a83}} 
+\index{EXE.h@{EXE.h}!valPix@{valPix}}
+\index{valPix@{valPix}!EXE.h@{EXE.h}}
+\doxysubsubsection{\texorpdfstring{valPix}{valPix}}
+{\footnotesize\ttfamily double val\+Pix = 0}
 
 \mbox{\Hypertarget{EXE_8h_aee90379adb0307effb138f4871edbc5c}\label{EXE_8h_aee90379adb0307effb138f4871edbc5c}} 
 \index{EXE.h@{EXE.h}!value@{value}}
@@ -583,4 +694,20 @@ Referenced by char\+Adress(), complex\+Value\+Assignable(), get\+Double\+From\+B
 
 
 Referenced by if(), and O\+P\+E\+X\+E\+\_\+\+F\+U\+N\+C().
+
+\mbox{\Hypertarget{EXE_8h_af88b946fb90d5f08b5fb740c70e98c10}\label{EXE_8h_af88b946fb90d5f08b5fb740c70e98c10}} 
+\index{EXE.h@{EXE.h}!x@{x}}
+\index{x@{x}!EXE.h@{EXE.h}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily double x = 0}
+
+\mbox{\Hypertarget{EXE_8h_ab927965981178aa1fba979a37168db2a}\label{EXE_8h_ab927965981178aa1fba979a37168db2a}} 
+\index{EXE.h@{EXE.h}!y@{y}}
+\index{y@{y}!EXE.h@{EXE.h}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily double y = 0}
+
+
+
+Referenced by main(), O\+P\+E\+X\+E\+\_\+\+F\+U\+N\+C(), and vram\+Set\+Pixel().
 

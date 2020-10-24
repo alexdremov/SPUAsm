@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zeroorstorage_1588',['ZEROORSTORAGE',['../CTBDefs_8h.html#a50efb823f71a6c6cde80cf1a39b08f30',1,'CTBDefs.h']]]
+  ['vram_5foffset_1619',['VRAM_OFFSET',['../SPUDtypes_8hpp.html#ac962c3a9a4bf680c417e48b765f2dfe7',1,'SPUDtypes.hpp']]]
 ];

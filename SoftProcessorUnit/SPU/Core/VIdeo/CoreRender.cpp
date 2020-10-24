@@ -6,10 +6,12 @@
 //
 
 #include "CoreRender.hpp"
+#include <stdio.h>
+#include <stdlib.h>
 
 void renderVRAM(SPUCore* core){
-    printf("\x1b[2J");
-    printf("\033[1;1H");
+//    printf("\x1b[2J");
+    printf("\x1b[H");
     for(int h = 0; h < SCREEN_HEIGHT; h++){
         for(int w = 0; w < SCREEN_WIDTH; w++){
             putchar(*(((char*)core->RAM)
@@ -17,7 +19,7 @@ void renderVRAM(SPUCore* core){
                       + (SCREEN_WIDTH * h)
                       + w));
         }
-        putchar('\n');
+        putchar(10);
     }
 }
 

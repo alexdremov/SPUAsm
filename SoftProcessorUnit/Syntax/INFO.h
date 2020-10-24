@@ -265,3 +265,11 @@ COMMAND_INFO(
              CMD_FLAGBYTES 3,
              CMD_VALUETYPE 0
              )
+
+COMMAND_INFO(
+             clrscr,
+             CMD_CODE 33,
+             CMD_ARGRULES "",
+             CMD_FLAGBYTES 0,
+             CMD_VALUETYPE 0
+             )

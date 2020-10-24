@@ -49,7 +49,7 @@ OPEXE_FUNC(out,  {
     
     printf("%lf\n", value);
     
-    if (params->vram){
+    if (params->vsync){
         usleep(50000);
     }
 
@@ -576,6 +576,14 @@ OPEXE_FUNC(pixset,  {
     COMPLEXVALOK;
     
     vramSetPixel(core, (int)x, (int)y, (char)valPix);
+    return SPU_EXE_OK;
+})
+
+OPEXE_FUNC(clrscr,  {
+    if (!HASBYTES(1))
+        return SPU_EXE_NOARGS;
+    fillBlank(core);
+    INCSPI;
     return SPU_EXE_OK;
 })
 

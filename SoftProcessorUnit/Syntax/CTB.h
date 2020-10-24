@@ -226,3 +226,7 @@ OPTRANSLATE_FUNC(pixset, {
     })
     return SPU_CTB_OK;
 });
+
+OPTRANSLATE_FUNC(clrscr, {
+    JUSTCOMMAND
+});

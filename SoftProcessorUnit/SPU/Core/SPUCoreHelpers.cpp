@@ -44,8 +44,8 @@ int parseSPUArgs(RunParameters* parameters, int argc, const char * argv[]) {
             newParams.verbose = 1;
         }else if (strcmp(argv[i], "--help") == 0 || strcmp(argv[i], "-h") == 0) {
             spuHelp();
-        }else if (strcmp(argv[i], "--vram") == 0) {
-            newParams.vram = 1;
+        }else if (strcmp(argv[i], "--vsync") == 0) {
+            newParams.vsync = 1;
         }else {
             if (newParams.inputFile == nullptr){
                 FILE* inputFile = fopen(argv[i], "rb");
@@ -81,6 +81,7 @@ void spuHelp() {
            "--output    <output file> output file stdout by default\n"
            "-h, --help  show this help message\n"
            "--verbose   output debug information to the console\n"
+           "--vsync     render vram after every command\n"
            "\n",
            SPUAssemblyVersion_chars[0],
            SPUAssemblyVersion_chars[1],

@@ -59,7 +59,7 @@ $ SPU <binary file>
         --input <filename.spub>     - binary assembled file
         --output <filename.spus>    - source file (if not specified, stdout selected)
         --verbose                   - output assembly debug information
-        --vram                      - render vram after every command
+        --vsync                     - render vram after every command
         -h, --help                  - show help message
 ```
 
@@ -141,8 +141,19 @@ Clear stack
 #### rend
 Force render vram
 
+#### slp      <any cvalue>
+Sleep for ... nanoseconds
+
 #### hlt
 Finish the program
+
+#### pixelset <any cvalue> <any cvalue> <any cvalue>
+x y value
+
+Set vram pixel (x, y) to value
+
+#### clrscr
+Fill vram with spaces
 
 ### Math
 
@@ -173,6 +184,9 @@ Sin of the last stack value
 
 #### cos
 Cos of the last stack value
+
+#### abs
+Abs of the last stack value
 
 #### sqrt
 Square root of the last stack value
@@ -262,6 +276,100 @@ jne loop
 mondayOnly:
 ```
 
+### Popping circles
+
+<img style="max-height: 200px" src="https://github.com/AlexRoar/SPUAsm/raw/main/Images/circles.gif">
+
+
+```asm
+; height 32
+; width  64
+
+push 32
+push 16
+push 10
+push 35
+call drawCircle
+
+clrscr
+
+push 32
+push 16
+push 4
+push 42
+call drawCircle
+
+clrscr
+
+push 16
+push 8
+push 2
+push 42
+call drawCircle
+
+clrscr
+rend
+
+push 40
+push 25
+push 4
+push 48
+call drawCircle
+
+clrscr
+rend
+
+push 60
+push 13
+push 8
+push 48
+call drawCircle
+
+
+hlt
+
+drawCircle: ;(x0, y0, r, symbol)
+    pop [2]
+    pop rcx  ; r
+    pop rbx  ; y0
+    pop rax  ; x0
+
+    mov rdx 0   ; initial angle
+    loop:
+        push rbx
+        push rdx
+        sin
+        push rcx
+        mul
+        add ; y0 + r*sin(alpha)
+
+        pop [0] ; y coordinate
+
+        push rax
+        push rdx
+        cos
+        push rcx
+        push 2
+        mul
+        mul
+        add ; x0 + r*cos(alpha)
+
+        pop [1] ; x coordinate
+
+        pixset [1] [0] [2]
+        
+        rend
+        slp 10000
+    ; loop params
+    mov rdx rdx+0.1
+    push rdx
+    push 3.1415926535897
+    push 2
+    mul
+    jbe loop
+    ret
+```
+
 
 ### Square equation solutions
 
@@ -326,7 +434,6 @@ pop     rax
 ;
 out     rax
 out     rcx
-
 ```
 
 ## Links

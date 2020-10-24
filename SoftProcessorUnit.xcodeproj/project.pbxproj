@@ -81,7 +81,7 @@
 		A04D829D25423DE40095FB80 /* CMakeLists.template.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.template.txt; sourceTree = "<group>"; };
 		A0648E5325440A24003AD222 /* ComplexValueTools.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ComplexValueTools.cpp; path = SoftProcessorUnit/Assembly/Helpers/ComplexValueTools.cpp; sourceTree = SOURCE_ROOT; };
 		A0648E5425440A24003AD222 /* ComplexValueTools.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ComplexValueTools.hpp; sourceTree = "<group>"; };
-		A0648E6225443C91003AD222 /* donut.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = donut.c; sourceTree = "<group>"; };
+		A0648E6225443C91003AD222 /* donut.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = donut.cpp; sourceTree = "<group>"; };
 		A0648E6425443DFB003AD222 /* CoreRender.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CoreRender.cpp; path = SoftProcessorUnit/SPU/Core/VIdeo/CoreRender.cpp; sourceTree = SOURCE_ROOT; };
 		A0648E6525443DFB003AD222 /* CoreRender.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CoreRender.hpp; sourceTree = "<group>"; };
 		A071A8EE2534D19D008711EF /* SPU */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SPU; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -277,7 +277,7 @@
 		A071A94E2534E4F7008711EF /* WorkingDirectory */ = {
 			isa = PBXGroup;
 			children = (
-				A0648E6225443C91003AD222 /* donut.c */,
+				A0648E6225443C91003AD222 /* donut.cpp */,
 				A071A9522534E616008711EF /* prog.spus */,
 				A071A97A25351D8C008711EF /* output.spub */,
 				A071A95A2534E886008711EF /* assembly.lst */,

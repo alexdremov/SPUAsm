@@ -75,42 +75,46 @@ $(function() {
 <code>#include &lt;cmath&gt;</code><br />
 <code>#include &quot;<a class="el" href="">EXEDefs.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="">ComplexValueTools.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="">CoreRender.hpp</a>&quot;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="">EXE.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for InstrExecutors.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="InstrExecutors_8cpp__incl.png" border="0" usemap="#aSoftProcessorUnit_2Syntax_2Translation_2Helpers_2Generators_2InstrExecutors_8cpp" alt=""/></div>
-<map name="SoftProcessorUnit_2Syntax_2Translation_2Helpers_2Generators_2InstrExecutors_8cpp" id="SoftProcessorUnit_2Syntax_2Translation_2Helpers_2Generators_2InstrExecutors_8cpp">
-<area shape="rect" title=" " alt="" coords="307,5,514,61"/>
-<area shape="rect" href="InstrExecutors_8hpp.html" title=" " alt="" coords="241,109,373,136"/>
-<area shape="rect" href="EXEDefs_8h.html" title=" " alt="" coords="159,184,247,211"/>
-<area shape="rect" href="EXE_8h.html" title=" " alt="" coords="449,184,509,211"/>
-<area shape="rect" title=" " alt="" coords="499,109,557,136"/>
-<area shape="rect" href="ComplexValueTools_8hpp.html" title=" " alt="" coords="383,259,545,285"/>
-<area shape="rect" title=" " alt="" coords="618,856,675,883"/>
-<area shape="rect" href="SPUDtypes_8hpp.html" title=" " alt="" coords="72,856,189,883"/>
-<area shape="rect" href="SPUCore_8hpp.html" title=" " alt="" coords="255,259,358,285"/>
-<area shape="rect" href="ParseHelpers_8hpp.html" title=" " alt="" coords="450,781,577,808"/>
-<area shape="rect" href="SPUCoreHelpers_8hpp.html" title=" " alt="" coords="169,781,317,808"/>
-<area shape="rect" href="StackRigid_8h.html" title=" " alt="" coords="31,931,129,957"/>
-<area shape="rect" title=" " alt="" coords="5,1005,69,1032"/>
-<area shape="rect" title=" " alt="" coords="93,1005,155,1032"/>
-<area shape="rect" href="Syntax_8hpp.html" title=" " alt="" coords="821,333,909,360"/>
-<area shape="rect" href="CommandsParser_8hpp.html" title=" " alt="" coords="498,557,649,584"/>
-<area shape="rect" href="CommandsDTypes_8hpp.html" title=" " alt="" coords="443,632,602,659"/>
-<area shape="rect" title=" " alt="" coords="1182,707,1242,733"/>
-<area shape="rect" href="TranslationDTypes_8hpp.html" title=" " alt="" coords="1086,632,1242,659"/>
-<area shape="rect" href="AssemblyHelpers_8hpp.html" title=" " alt="" coords="859,632,1010,659"/>
-<area shape="rect" href="CommandToBytecode_8hpp.html" title=" " alt="" coords="1117,408,1293,435"/>
-<area shape="rect" href="BytecodeToCommand_8hpp.html" title=" " alt="" coords="715,483,891,509"/>
-<area shape="rect" href="AssemblyDTypes_8hpp.html" title=" " alt="" coords="710,707,861,733"/>
-<area shape="rect" href="LabelsStore_8hpp.html" title=" " alt="" coords="821,781,937,808"/>
-<area shape="rect" href="CTBDefs_8h.html" title=" " alt="" coords="1120,557,1208,584"/>
-<area shape="rect" href="CTB_8h.html" title=" " alt="" coords="1126,483,1186,509"/>
-<area shape="rect" href="DisAssemblyDTypes_8hpp.html" title=" " alt="" coords="885,707,1056,733"/>
-<area shape="rect" href="BTC_8h.html" title=" " alt="" coords="673,557,733,584"/>
-<area shape="rect" href="BTCDefs_8h.html" title=" " alt="" coords="487,707,575,733"/>
-<area shape="rect" title=" " alt="" coords="570,259,625,285"/>
+<map name="SoftProcessorUnit_2Syntax_2Translation_2Helpers_2Generators_2InstrExecutors_8cpp" id="aSoftProcessorUnit_2Syntax_2Translation_2Helpers_2Generators_2InstrExecutors_8cpp">
+<area shape="rect" title=" " alt="" coords="483,5,690,61"/>
+<area shape="rect" href="InstrExecutors_8hpp.html" title=" " alt="" coords="391,109,523,136"/>
+<area shape="rect" href="EXEDefs_8h.html" title=" " alt="" coords="309,184,397,211"/>
+<area shape="rect" href="EXE_8h.html" title=" " alt="" coords="708,184,768,211"/>
+<area shape="rect" title=" " alt="" coords="798,259,866,285"/>
+<area shape="rect" title=" " alt="" coords="624,109,682,136"/>
+<area shape="rect" href="ComplexValueTools_8hpp.html" title=" " alt="" coords="532,259,694,285"/>
+<area shape="rect" href="CoreRender_8hpp.html" title=" " alt="" coords="82,184,198,211"/>
+<area shape="rect" title=" " alt="" coords="866,856,923,883"/>
+<area shape="rect" href="SPUDtypes_8hpp.html" title=" " alt="" coords="193,856,310,883"/>
+<area shape="rect" href="SPUCore_8hpp.html" title=" " alt="" coords="404,259,507,285"/>
+<area shape="rect" href="ParseHelpers_8hpp.html" title=" " alt="" coords="559,781,686,808"/>
+<area shape="rect" href="SPUCoreHelpers_8hpp.html" title=" " alt="" coords="66,333,214,360"/>
+<area shape="rect" href="StackRigid_8h.html" title=" " alt="" coords="203,931,300,957"/>
+<area shape="rect" title=" " alt="" coords="220,1005,284,1032"/>
+<area shape="rect" title=" " alt="" coords="66,1005,128,1032"/>
+<area shape="rect" href="Syntax_8hpp.html" title=" " alt="" coords="854,333,942,360"/>
+<area shape="rect" href="CommandsParser_8hpp.html" title=" " alt="" coords="983,557,1134,584"/>
+<area shape="rect" href="CommandsDTypes_8hpp.html" title=" " alt="" coords="983,632,1142,659"/>
+<area shape="rect" title=" " alt="" coords="706,707,766,733"/>
+<area shape="rect" href="TranslationDTypes_8hpp.html" title=" " alt="" coords="751,632,907,659"/>
+<area shape="rect" href="AssemblyHelpers_8hpp.html" title=" " alt="" coords="1268,632,1419,659"/>
+<area shape="rect" href="CommandToBytecode_8hpp.html" title=" " alt="" coords="1057,408,1233,435"/>
+<area shape="rect" href="BytecodeToCommand_8hpp.html" title=" " alt="" coords="810,483,986,509"/>
+<area shape="rect" href="AssemblyDTypes_8hpp.html" title=" " alt="" coords="1268,707,1419,733"/>
+<area shape="rect" href="LabelsStore_8hpp.html" title=" " alt="" coords="1278,781,1394,808"/>
+<area shape="rect" href="CTBDefs_8h.html" title=" " alt="" coords="1209,557,1297,584"/>
+<area shape="rect" href="CTB_8h.html" title=" " alt="" coords="1118,483,1178,509"/>
+<area shape="rect" href="DisAssemblyDTypes_8hpp.html" title=" " alt="" coords="1022,707,1193,733"/>
+<area shape="rect" href="BTC_8h.html" title=" " alt="" coords="695,557,755,584"/>
+<area shape="rect" href="BTCDefs_8h.html" title=" " alt="" coords="593,707,681,733"/>
+<area shape="rect" title=" " alt="" coords="719,259,774,285"/>
 </map>
 </div>
 </div><table class="memberdecls">

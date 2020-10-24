@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['_7ejmplabel_966',['~JMPLabel',['../structJMPLabel.html#a3457883cc04a0209a93359c4e3317669',1,'JMPLabel']]],
-  ['_7ejmplabelsstore_967',['~JMPLabelsStore',['../structJMPLabelsStore.html#a2fd4e86a17748c8baee34cb5e44c0466',1,'JMPLabelsStore']]]
+  ['vramsetpixel_988',['vramSetPixel',['../CoreRender_8cpp.html#a27ebeafb9f2347e5c56ddedf029af4ac',1,'vramSetPixel(SPUCore *core, int x, int y, char val):&#160;CoreRender.cpp'],['../CoreRender_8hpp.html#a27ebeafb9f2347e5c56ddedf029af4ac',1,'vramSetPixel(SPUCore *core, int x, int y, char val):&#160;CoreRender.cpp'],['../EXE_8h.html#a3883623213b342ebd6ba0772bfdc6be1',1,'vramSetPixel(core,(int) x,(int) y,(char) valPix):&#160;EXE.h']]]
 ];

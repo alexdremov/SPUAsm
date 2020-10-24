@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['levenshteinedit_791',['LevenshteinEdit',['../StringDistance_8hpp.html#structLevenshteinEdit',1,'']]]
+  ['levenshteinedit_807',['LevenshteinEdit',['../StringDistance_8hpp.html#structLevenshteinEdit',1,'']]]
 ];

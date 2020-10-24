@@ -32,7 +32,7 @@ InstructionExeResult runCode(SPUCore* core, RunParameters* params, BinaryFile* b
                     (int)((int)(prevOffset - binary->code) + (int)(binary->codeOffset)), (int)((int)(SPI - binary->code) + (int)(binary->codeOffset)));
             return cmdResult;
         }
-        if (params->vram){
+        if (params->vsync){
             renderVRAM(core);
         }
     }

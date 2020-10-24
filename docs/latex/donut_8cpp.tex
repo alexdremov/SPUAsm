@@ -1,0 +1,130 @@
+\hypertarget{donut_8cpp}{}\doxysection{Soft\+Processor\+Unit/\+Working\+Directory/donut.cpp File Reference}
+\label{donut_8cpp}\index{SoftProcessorUnit/WorkingDirectory/donut.cpp@{SoftProcessorUnit/WorkingDirectory/donut.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for donut.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{donut_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{donut_8cpp_a2a208886a2a691a8d14219b558ea713b}{cos}} ()
+\item 
+\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{donut_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\item 
+double \mbox{\hyperlink{donut_8cpp_ab115207b90bd7664893c3eda01a20591}{sin}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} \mbox{\hyperlink{donut_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}{k}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{donut_8cpp_a2a208886a2a691a8d14219b558ea713b}\label{donut_8cpp_a2a208886a2a691a8d14219b558ea713b}} 
+\index{donut.cpp@{donut.cpp}!cos@{cos}}
+\index{cos@{cos}!donut.cpp@{donut.cpp}}
+\doxysubsubsection{\texorpdfstring{cos()}{cos()}}
+{\footnotesize\ttfamily double cos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{donut_8cpp_a2a208886a2a691a8d14219b558ea713b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{donut_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{donut_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{donut.cpp@{donut.cpp}!main@{main}}
+\index{main@{main}!donut.cpp@{donut.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8           \{}
+\DoxyCodeLine{9     setbuf(stdout, NULL);}
+\DoxyCodeLine{10     \textcolor{keywordtype}{float} A=0, B=0,\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}},j,z[1760];}
+\DoxyCodeLine{11     \textcolor{keywordtype}{char} b[1760];}
+\DoxyCodeLine{12     \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}\(\backslash\)x1b[2J"{}});}
+\DoxyCodeLine{13     \textcolor{keywordflow}{for}(;;)\{}
+\DoxyCodeLine{14 \textcolor{comment}{//        printf("{}\(\backslash\)x1b[2J"{});}}
+\DoxyCodeLine{15         memset(b,32,1760);}
+\DoxyCodeLine{16         memset(z,0,7040);}
+\DoxyCodeLine{17         \textcolor{keywordflow}{for}(j=0;6.28>j;j+=0.07)}
+\DoxyCodeLine{18         \textcolor{keywordflow}{for}(\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}=0;6.28>\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}};\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}+=0.02)\{}
+\DoxyCodeLine{19             \textcolor{keywordtype}{float} c=\mbox{\hyperlink{donut_8cpp_ab115207b90bd7664893c3eda01a20591}{sin}}(\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}),\mbox{\hyperlink{CMakeCache_8txt_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}=\mbox{\hyperlink{donut_8cpp_a2a208886a2a691a8d14219b558ea713b}{cos}}(j),e=\mbox{\hyperlink{donut_8cpp_ab115207b90bd7664893c3eda01a20591}{sin}}(A),f=\mbox{\hyperlink{donut_8cpp_ab115207b90bd7664893c3eda01a20591}{sin}}(j),g=\mbox{\hyperlink{donut_8cpp_a2a208886a2a691a8d14219b558ea713b}{cos}}(A),h=\mbox{\hyperlink{CMakeCache_8txt_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}+2,}
+\DoxyCodeLine{20             D=1/(c*h*e+f*g+5),l=\mbox{\hyperlink{donut_8cpp_a2a208886a2a691a8d14219b558ea713b}{cos}}(\mbox{\hyperlink{CMakeCache_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}),m=\mbox{\hyperlink{donut_8cpp_a2a208886a2a691a8d14219b558ea713b}{cos}}(B),n=\mbox{\hyperlink{donut_8cpp_ab115207b90bd7664893c3eda01a20591}{sin}}(B),t=c*h*g-\/f*e;}
+\DoxyCodeLine{21             \textcolor{keywordtype}{int} \mbox{\hyperlink{CMakeCache_8txt_a9336ebf25087d91c818ee6e9ec29f8c1}{x}}=40+30*D*(l*h*m-\/t*n),}
+\DoxyCodeLine{22             \mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}}= 12+15*D*(l*h*n+t*m),}
+\DoxyCodeLine{23             \mbox{\hyperlink{CMakeCache_8txt_ae47ca7a09cf6781e29634502345930a7}{o}}=\mbox{\hyperlink{CMakeCache_8txt_a9336ebf25087d91c818ee6e9ec29f8c1}{x}}+80*\mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}},}
+\DoxyCodeLine{24             N=8*((f*e-\/c*\mbox{\hyperlink{CMakeCache_8txt_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}*g)*m-\/c*\mbox{\hyperlink{CMakeCache_8txt_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}*e-\/f*g-\/l*\mbox{\hyperlink{CMakeCache_8txt_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}}*n);}
+\DoxyCodeLine{25             \textcolor{keywordflow}{if}(22>\mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}}\&\&\mbox{\hyperlink{EXE_8h_ab927965981178aa1fba979a37168db2a}{y}}>0\&\&\mbox{\hyperlink{CMakeCache_8txt_a9336ebf25087d91c818ee6e9ec29f8c1}{x}}>0\&\&80>\mbox{\hyperlink{CMakeCache_8txt_a9336ebf25087d91c818ee6e9ec29f8c1}{x}}\&\&D>z[\mbox{\hyperlink{CMakeCache_8txt_ae47ca7a09cf6781e29634502345930a7}{o}}])\{}
+\DoxyCodeLine{26                 z[\mbox{\hyperlink{CMakeCache_8txt_ae47ca7a09cf6781e29634502345930a7}{o}}]=D;}
+\DoxyCodeLine{27                 b[\mbox{\hyperlink{CMakeCache_8txt_ae47ca7a09cf6781e29634502345930a7}{o}}]=\textcolor{stringliteral}{"{}.,-\/\string~:;=!*\#\$@"{}}[N>0?N:0];}
+\DoxyCodeLine{28             \}}
+\DoxyCodeLine{29         \}}
+\DoxyCodeLine{30         \mbox{\hyperlink{EXE_8h_ab99234c936a3345fdf76f51743a997ea}{printf}}(\textcolor{stringliteral}{"{}\(\backslash\)x1b[H"{}});}
+\DoxyCodeLine{31         \textcolor{keywordflow}{for}(\mbox{\hyperlink{donut_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}{k}}=0;1761>\mbox{\hyperlink{donut_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}{k}};\mbox{\hyperlink{donut_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}{k}}++)}
+\DoxyCodeLine{32             putchar(\mbox{\hyperlink{donut_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}{k}}\%80?b[\mbox{\hyperlink{donut_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}{k}}]:10);}
+\DoxyCodeLine{33         A+=0.04;B+=0.02;}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+
+
+References cos(), d, i, k, o, printf(), sin(), x, and y.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{donut_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{donut_8cpp_ab115207b90bd7664893c3eda01a20591}\label{donut_8cpp_ab115207b90bd7664893c3eda01a20591}} 
+\index{donut.cpp@{donut.cpp}!sin@{sin}}
+\index{sin@{sin}!donut.cpp@{donut.cpp}}
+\doxysubsubsection{\texorpdfstring{sin()}{sin()}}
+{\footnotesize\ttfamily double sin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Referenced by main(), and O\+P\+E\+X\+E\+\_\+\+F\+U\+N\+C().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{donut_8cpp_ab115207b90bd7664893c3eda01a20591_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{donut_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}\label{donut_8cpp_ab66ed8e0098c0a86b458672a55a9cca9}} 
+\index{donut.cpp@{donut.cpp}!k@{k}}
+\index{k@{k}!donut.cpp@{donut.cpp}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily \mbox{\hyperlink{CMakeCache_8txt_a1cb0c2afe2f6ed3001e79e875440ed60}{int}} k}
+
+
+
+Referenced by main().
+
