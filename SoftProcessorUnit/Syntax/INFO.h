@@ -233,3 +233,35 @@ COMMAND_INFO(
              CMD_FLAGBYTES 2,
              CMD_VALUETYPE 0
              )
+
+COMMAND_INFO(
+             rend,
+             CMD_CODE 28,
+             CMD_ARGRULES "",
+             CMD_FLAGBYTES 0,
+             CMD_VALUETYPE 0
+             )
+
+COMMAND_INFO(
+             slp,
+             CMD_CODE 29,
+             CMD_ARGRULES "*",
+             CMD_FLAGBYTES 1,
+             CMD_VALUETYPE 0
+             )
+
+COMMAND_INFO(
+             abs,
+             CMD_CODE 30,
+             CMD_ARGRULES "",
+             CMD_FLAGBYTES 0,
+             CMD_VALUETYPE 0
+             )
+
+COMMAND_INFO(
+             pixset,
+             CMD_CODE 31,
+             CMD_ARGRULES "***",
+             CMD_FLAGBYTES 3,
+             CMD_VALUETYPE 0
+             )

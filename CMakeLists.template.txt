@@ -117,6 +117,7 @@ SoftProcessorUnit/Syntax/Translation/Helpers/Generators/InstrExecutors.cpp
 SoftProcessorUnit/Syntax/Translation/Syntax.cpp
 SoftProcessorUnit/Assembly/Helpers/ComplexValueTools.cpp
 SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.cpp
+SoftProcessorUnit/SPU/Core/VIdeo/CoreRender.cpp
 )
 
 set( SPU_STATIC_DEPENDENCIES

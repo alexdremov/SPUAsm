@@ -6,6 +6,7 @@
 //
 
 #include <ctime>
+#include <unistd.h>
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunused-parameter"
@@ -47,6 +48,10 @@ OPEXE_FUNC(out,  {
     COMPLEXVALOK;
     
     printf("%lf\n", value);
+    
+    if (params->vram){
+        usleep(50000);
+    }
 
     return SPU_EXE_OK;
 })
@@ -514,6 +519,63 @@ OPEXE_FUNC(mov,  {
         *valueTo = value;
     }
     
+    return SPU_EXE_OK;
+})
+
+OPEXE_FUNC(rend,  {
+    renderVRAM(core);
+    ADDSPI(1);
+    return SPU_EXE_OK;
+})
+
+OPEXE_FUNC(slp,  {
+    if (!HASBYTES(3))
+        return SPU_EXE_NOARGS;
+    double value = 0;
+    ADDSPI(1);
+    ComplexValueResult val = retrieveComplexValue(core, SPI, &value);
+    
+    COMPLEXVALOK;
+
+    usleep((unsigned)value);
+    return SPU_EXE_OK;
+})
+
+
+OPEXE_FUNC(abs,  {
+    if (!HASBYTES(1))
+        return SPU_EXE_NOARGS;
+    double left = 0;
+    StackRigidOperationCodes result = POP(&left);
+    STACKRESULT
+
+    result = PUSH(abs(left));
+    STACKRESULT
+    INCSPI;
+    return SPU_EXE_OK;
+})
+
+
+OPEXE_FUNC(pixset,  {
+    if (!HASBYTES(3))
+        return SPU_EXE_NOARGS;
+    double x = 0;
+    double y = 0;
+    double valPix = 0;
+    ADDSPI(1);
+    ComplexValueResult val = retrieveComplexValue(core, SPI, &x);
+    
+    COMPLEXVALOK;
+    
+    val = retrieveComplexValue(core, SPI, &y);
+    
+    COMPLEXVALOK;
+    
+    val = retrieveComplexValue(core, SPI, &valPix);
+    
+    COMPLEXVALOK;
+    
+    vramSetPixel(core, (int)x, (int)y, (char)valPix);
     return SPU_EXE_OK;
 })
 

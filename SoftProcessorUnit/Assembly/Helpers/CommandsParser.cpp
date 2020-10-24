@@ -329,6 +329,14 @@ int registerNoFromName(char *name) {
         result = 2;
     } else if (strcmp("rdx", name) == 0) {
         result = 3;
+    } else if (strcmp("rex", name) == 0) {
+        result = 4;
+    } else if (strcmp("rfx", name) == 0) {
+        result = 5;
+    } else if (strcmp("rgx", name) == 0) {
+        result = 6;
+    } else if (strcmp("rhx", name) == 0) {
+        result = 7;
     }
     if (whPos != nullptr)
         *whPos = ' ';
@@ -345,6 +353,14 @@ const char *registerNameFromNo(int no) {
             return "rcx";
         case 3:
             return "rdx";
+        case 4:
+            return "rex";
+        case 5:
+            return "rfx";
+        case 6:
+            return "rgx";
+        case 7:
+            return "rhx";
         default:
             return "<UNKNOWN REGISTER>";
     }

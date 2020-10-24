@@ -191,3 +191,38 @@ OPTRANSLATE_FUNC(mov, {
     })
     return SPU_CTB_OK;
 });
+
+OPTRANSLATE_FUNC(rend, {
+    JUSTCOMMAND;
+});
+
+OPTRANSLATE_FUNC(slp, {
+    LSTDUMPED({
+        APPENDCHAR(thou->code);
+        ComplexValue val = retrieveComplexValueFromArg((char*)argv[1]);
+        COMPLEXVALOK
+        writeComplexArg(&val, binary);
+    })
+    return SPU_CTB_OK;
+});
+
+OPTRANSLATE_FUNC(abs, {
+    JUSTCOMMAND
+});
+
+
+OPTRANSLATE_FUNC(pixset, {
+    LSTDUMPED({
+        APPENDCHAR(thou->code);
+        ComplexValue val = retrieveComplexValueFromArg((char*)argv[1]);
+        COMPLEXVALOK
+        writeComplexArg(&val, binary);
+        val = retrieveComplexValueFromArg((char*)argv[2]);
+        COMPLEXVALOK;
+        writeComplexArg(&val, binary);
+        val = retrieveComplexValueFromArg((char*)argv[3]);
+        COMPLEXVALOK;
+        writeComplexArg(&val, binary);
+    })
+    return SPU_CTB_OK;
+});

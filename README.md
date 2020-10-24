@@ -59,6 +59,7 @@ $ SPU <binary file>
         --input <filename.spub>     - binary assembled file
         --output <filename.spus>    - source file (if not specified, stdout selected)
         --verbose                   - output assembly debug information
+        --vram                      - render vram after every command
         -h, --help                  - show help message
 ```
 
@@ -136,6 +137,9 @@ Dump stack information
 
 #### clear
 Clear stack
+
+#### rend
+Force render vram
 
 #### hlt
 Finish the program

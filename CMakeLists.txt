@@ -104,6 +104,7 @@ SoftProcessorUnit/Common
 SoftProcessorUnit/Common/Stack
 SoftProcessorUnit/SPU
 SoftProcessorUnit/SPU/Core
+SoftProcessorUnit/SPU/Core/VIdeo
 SoftProcessorUnit/Syntax
 SoftProcessorUnit/Syntax/Translation
 SoftProcessorUnit/Syntax/Translation/MacroSyntax
@@ -134,6 +135,7 @@ SoftProcessorUnit/Syntax/Translation/Helpers/Generators/InstrExecutors.cpp
 SoftProcessorUnit/Syntax/Translation/Syntax.cpp
 SoftProcessorUnit/Assembly/Helpers/ComplexValueTools.cpp
 SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.cpp
+SoftProcessorUnit/SPU/Core/VIdeo/CoreRender.cpp
 )
 
 set( SPU_STATIC_DEPENDENCIES

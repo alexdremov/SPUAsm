@@ -270,3 +270,38 @@ OPBACKTRANSLATE_FUNC(mov, {
     })
     return SPU_DISASM_OK;
 })
+
+OPBACKTRANSLATE_FUNC(rend, {
+    OPBACKGENERAL({
+        INCSPI;
+    })
+    return SPU_DISASM_OK;
+})
+
+OPBACKTRANSLATE_FUNC(slp, {
+    OPBACKGENERAL({
+        if (!checkBytesEnoughNumber( binary, *SPI, 10)){
+            return SPU_DISASM_NOTENOUGHARGS;
+        }
+        ADDSPI(1);
+        ComplexValue val = {};
+        ComplexValueResult valResult = retrieveComplexValue(SPI, &val);
+        COMPLEXVALOK;
+        renderComplexValue(&val, params->outputFile);
+    })
+    return SPU_DISASM_OK;
+})
+
+OPBACKTRANSLATE_FUNC(abs, {
+    OPBACKGENERAL({
+        INCSPI;
+    })
+    return SPU_DISASM_OK;
+})
+
+OPBACKTRANSLATE_FUNC(pixset, {
+    OPBACKGENERAL({
+        INCSPI;
+    })
+    return SPU_DISASM_OK;
+})

@@ -10,6 +10,8 @@
 #include <cmath>
 #include "EXEDefs.h"
 #include "ComplexValueTools.hpp"
+#include "CoreRender.hpp"
+#include <unistd.h>
 
 #undef OPEXE_FUNC
 

@@ -9,8 +9,8 @@ call drawCircle
 
 push 32
 push 16
-push 5
-push 35
+push 4
+push 42
 call drawCircle
 
 hlt
@@ -44,13 +44,14 @@ drawCircle: ;(x0, y0, r, symbol)
         pop [1]
 
         pixset [1] [0] [2]
-
+        
         rend
-        slp 10000
+        ; slp 10000
     ; loop params
-    mov rdx rdx+0.05
+    mov rdx rdx+0.1
     push rdx
     push 3.1415926535897
     push 2
     mul
     jbe loop
+    ret

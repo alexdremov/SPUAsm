@@ -13,6 +13,7 @@
 		A0648E5525440A24003AD222 /* ComplexValueTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0648E5325440A24003AD222 /* ComplexValueTools.cpp */; };
 		A0648E5625440A24003AD222 /* ComplexValueTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0648E5325440A24003AD222 /* ComplexValueTools.cpp */; };
 		A0648E5725440A24003AD222 /* ComplexValueTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0648E5325440A24003AD222 /* ComplexValueTools.cpp */; };
+		A0648E6625443DFB003AD222 /* CoreRender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0648E6425443DFB003AD222 /* CoreRender.cpp */; };
 		A071A8FE2534D1C9008711EF /* Syntax.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A071A8FB2534D1C9008711EF /* Syntax.cpp */; };
 		A071A8FF2534D1C9008711EF /* SPU.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A071A8FC2534D1C9008711EF /* SPU.cpp */; };
 		A071A9172534DC2D008711EF /* Syntax.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A071A8FB2534D1C9008711EF /* Syntax.cpp */; };
@@ -74,13 +75,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A04D82862540A91D0095FB80 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = CMakeLists.txt; sourceTree = "<group>"; };
 		A04D828C2541B9F00095FB80 /* ParseHelpers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ParseHelpers.cpp; path = SoftProcessorUnit/Syntax/Translation/Helpers/ParseHelpers.cpp; sourceTree = SOURCE_ROOT; };
 		A04D828D2541B9F00095FB80 /* ParseHelpers.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ParseHelpers.hpp; sourceTree = "<group>"; };
 		A04D82952541FA040095FB80 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A04D829D25423DE40095FB80 /* CMakeLists.template.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.template.txt; sourceTree = "<group>"; };
 		A0648E5325440A24003AD222 /* ComplexValueTools.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ComplexValueTools.cpp; path = SoftProcessorUnit/Assembly/Helpers/ComplexValueTools.cpp; sourceTree = SOURCE_ROOT; };
 		A0648E5425440A24003AD222 /* ComplexValueTools.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ComplexValueTools.hpp; sourceTree = "<group>"; };
+		A0648E6225443C91003AD222 /* donut.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = donut.c; sourceTree = "<group>"; };
+		A0648E6425443DFB003AD222 /* CoreRender.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = CoreRender.cpp; path = SoftProcessorUnit/SPU/Core/VIdeo/CoreRender.cpp; sourceTree = SOURCE_ROOT; };
+		A0648E6525443DFB003AD222 /* CoreRender.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CoreRender.hpp; sourceTree = "<group>"; };
 		A071A8EE2534D19D008711EF /* SPU */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SPU; sourceTree = BUILT_PRODUCTS_DIR; };
 		A071A8FA2534D1C9008711EF /* Syntax.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Syntax.hpp; path = SoftProcessorUnit/Syntax/Translation/Syntax.hpp; sourceTree = SOURCE_ROOT; };
 		A071A8FB2534D1C9008711EF /* Syntax.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Syntax.cpp; sourceTree = "<group>"; };
@@ -172,11 +175,19 @@
 			path = Generators;
 			sourceTree = "<group>";
 		};
+		A0648E6325443DE5003AD222 /* VIdeo */ = {
+			isa = PBXGroup;
+			children = (
+				A0648E6425443DFB003AD222 /* CoreRender.cpp */,
+				A0648E6525443DFB003AD222 /* CoreRender.hpp */,
+			);
+			path = VIdeo;
+			sourceTree = "<group>";
+		};
 		A071A8E52534D19D008711EF = {
 			isa = PBXGroup;
 			children = (
 				A04D82952541FA040095FB80 /* README.md */,
-				A04D82862540A91D0095FB80 /* CMakeLists.txt */,
 				A04D829D25423DE40095FB80 /* CMakeLists.template.txt */,
 				A071A8F02534D19D008711EF /* SoftProcessorUnit */,
 				A071A8EF2534D19D008711EF /* Products */,
@@ -266,6 +277,7 @@
 		A071A94E2534E4F7008711EF /* WorkingDirectory */ = {
 			isa = PBXGroup;
 			children = (
+				A0648E6225443C91003AD222 /* donut.c */,
 				A071A9522534E616008711EF /* prog.spus */,
 				A071A97A25351D8C008711EF /* output.spub */,
 				A071A95A2534E886008711EF /* assembly.lst */,
@@ -366,6 +378,7 @@
 		A0DD8BF425370DFB00CD405B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A0648E6325443DE5003AD222 /* VIdeo */,
 				A0DD8C08253732F900CD405B /* SPUDtypes.hpp */,
 				A0DD8BF525370E0D00CD405B /* SPUCore.cpp */,
 				A0DD8BF625370E0D00CD405B /* SPUCore.hpp */,
@@ -484,6 +497,7 @@
 				A0DD8BF725370E0D00CD405B /* SPUCore.cpp in Sources */,
 				A0DD8BC2253653B400CD405B /* AssemblyHelpers.cpp in Sources */,
 				A0DD8C0025372E2300CD405B /* SPUCoreHelpers.cpp in Sources */,
+				A0648E6625443DFB003AD222 /* CoreRender.cpp in Sources */,
 				A0DD8C102537343200CD405B /* StackRigid.cpp in Sources */,
 				A0648E5525440A24003AD222 /* ComplexValueTools.cpp in Sources */,
 				A04D828E2541B9F00095FB80 /* ParseHelpers.cpp in Sources */,

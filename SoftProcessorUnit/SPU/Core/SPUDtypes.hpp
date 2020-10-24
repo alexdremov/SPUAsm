@@ -10,11 +10,15 @@
 
 #include "StackRigid.h"
 
-#define VRAMOFFSET 512
+#define SCREEN_WIDTH  64
+#define SCREEN_HEIGHT 32
+#define VRAM_OFFSET   512
+#define RAM_SIZE      (VRAM_OFFSET + (SCREEN_WIDTH * SCREEN_HEIGHT) / sizeof(double))
+
 
 struct SPUCore {
-    double             RAM  [612];
-    double             REG  [4];
+    double             RAM  [RAM_SIZE];
+    double             REG  [8];
     int            terminated;
     StackRigid_double*  stack;
     StackRigid_double*  callStack;
@@ -23,6 +27,7 @@ struct SPUCore {
 
 struct RunParameters {
     int         verbose;
+    int         vram;
     
     FILE*       inputFile;
     const char* inputFileName;

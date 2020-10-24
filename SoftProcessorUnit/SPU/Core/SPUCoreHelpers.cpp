@@ -10,7 +10,7 @@
 #include <cstring>
 
 int parseSPUArgs(RunParameters* parameters, int argc, const char * argv[]) {
-    RunParameters newParams = {0, nullptr, nullptr, nullptr, nullptr};
+    RunParameters newParams = {0, 0, nullptr, nullptr, nullptr, nullptr};
     
     if (argc <= 1){
         spuHelp();
@@ -44,6 +44,8 @@ int parseSPUArgs(RunParameters* parameters, int argc, const char * argv[]) {
             newParams.verbose = 1;
         }else if (strcmp(argv[i], "--help") == 0 || strcmp(argv[i], "-h") == 0) {
             spuHelp();
+        }else if (strcmp(argv[i], "--vram") == 0) {
+            newParams.vram = 1;
         }else {
             if (newParams.inputFile == nullptr){
                 FILE* inputFile = fopen(argv[i], "rb");

@@ -6,6 +6,7 @@
 //
 
 #include "SPUCore.hpp"
+#include "CoreRender.hpp"
 
 #define CALLEXE(name) return name (core,  params, binary, SPI)
 #define EVALUATE(a) a
@@ -14,6 +15,7 @@ void ConstructSPUCore(SPUCore* core, size_t initStackSize) {
     core->stack = NewStackRigid_double(initStackSize, stderr);
     core->callStack = NewStackRigid_double(16, stderr);
     core->terminated = 0;
+    fillBlank(core);
 }
 
 InstructionExeResult runCode(SPUCore* core, RunParameters* params, BinaryFile* binary) {
@@ -29,6 +31,9 @@ InstructionExeResult runCode(SPUCore* core, RunParameters* params, BinaryFile* b
             fprintf(stderr, "error: spu: terminated at offset: %d reached: %d\n",
                     (int)((int)(prevOffset - binary->code) + (int)(binary->codeOffset)), (int)((int)(SPI - binary->code) + (int)(binary->codeOffset)));
             return cmdResult;
+        }
+        if (params->vram){
+            renderVRAM(core);
         }
     }
     

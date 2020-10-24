@@ -798,8 +798,8 @@
             filePath = "SoftProcessorUnit/Assembly/Helpers/CommandsParser.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "465"
-            endingLineNumber = "465"
+            startingLineNumber = "481"
+            endingLineNumber = "481"
             landmarkName = "evaluateLabels(compileParams, binary)"
             landmarkType = "9">
          </BreakpointContent>
@@ -1054,8 +1054,8 @@
             filePath = "SoftProcessorUnit/Assembly/Helpers/CommandsParser.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "425"
-            endingLineNumber = "425"
+            startingLineNumber = "441"
+            endingLineNumber = "441"
             landmarkName = "parseLabel(compileParams, code)"
             landmarkType = "9">
          </BreakpointContent>
@@ -1134,8 +1134,8 @@
             filePath = "SoftProcessorUnit/SPU/Core/SPUCore.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "runCode(core, params, binary)"
             landmarkType = "9">
          </BreakpointContent>
@@ -1150,8 +1150,8 @@
             filePath = "SoftProcessorUnit/Syntax/EXE.h"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -1166,8 +1166,8 @@
             filePath = "SoftProcessorUnit/Assembly/Helpers/CommandsParser.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "385"
-            endingLineNumber = "385"
+            startingLineNumber = "401"
+            endingLineNumber = "401"
             landmarkName = "removeWhitespacesInTheBeginning(code, length)"
             landmarkType = "9">
          </BreakpointContent>
@@ -1201,6 +1201,22 @@
             startingLineNumber = "73"
             endingLineNumber = "73"
             landmarkName = "generateErrors(mapping, params, code)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9A06D5B4-4CEC-4D6D-B04A-F20B502C3DC6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SoftProcessorUnit/SPU/Core/SPUCore.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "runCode(core, params, binary)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
