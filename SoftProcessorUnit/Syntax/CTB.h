@@ -12,7 +12,7 @@
 OPTRANSLATE_FUNC(push, {
     LSTDUMPED({
         APPENDCHAR(thou->code);
-        ComplexValue val = retrieveComplexValueFromArg((char*)argv[1]);
+        ComplexValue val = GETCOMPLEXVALNO(1);
         COMPLEXVALOK
         writeComplexArg(&val, binary);
     })
@@ -180,14 +180,14 @@ OPTRANSLATE_FUNC(ret, {
 OPTRANSLATE_FUNC(mov, {
     LSTDUMPED({
         APPENDCHAR(thou->code);
-        ComplexValue val = retrieveComplexValueFromArg((char*)argv[1]);
+        ComplexValue val = GETCOMPLEXVALNO(1);
         COMPLEXVALOK
-        int assignable = complexValueAssignable(&val);\
-        if (assignable != 1) return SPU_CTB_NONASSIGNABLE; \
+        int assignable = complexValueAssignable(&val);
+        if (assignable != 1) return SPU_CTB_NONASSIGNABLE;
         writeComplexArg(&val, binary);
-        val = retrieveComplexValueFromArg((char*)argv[2]);\
-        COMPLEXVALOK;\
-        writeComplexArg(&val, binary);\
+        val = GETCOMPLEXVALNO(2);
+        COMPLEXVALOK;
+        writeComplexArg(&val, binary);
     })
     return SPU_CTB_OK;
 });
@@ -199,7 +199,7 @@ OPTRANSLATE_FUNC(rend, {
 OPTRANSLATE_FUNC(slp, {
     LSTDUMPED({
         APPENDCHAR(thou->code);
-        ComplexValue val = retrieveComplexValueFromArg((char*)argv[1]);
+        ComplexValue val = GETCOMPLEXVALNO(1);
         COMPLEXVALOK
         writeComplexArg(&val, binary);
     })
@@ -214,13 +214,13 @@ OPTRANSLATE_FUNC(abs, {
 OPTRANSLATE_FUNC(pixset, {
     LSTDUMPED({
         APPENDCHAR(thou->code);
-        ComplexValue val = retrieveComplexValueFromArg((char*)argv[1]);
+        ComplexValue val = GETCOMPLEXVALNO(1);
         COMPLEXVALOK
         writeComplexArg(&val, binary);
-        val = retrieveComplexValueFromArg((char*)argv[2]);
+        val = GETCOMPLEXVALNO(2);
         COMPLEXVALOK;
         writeComplexArg(&val, binary);
-        val = retrieveComplexValueFromArg((char*)argv[3]);
+        val = GETCOMPLEXVALNO(3);
         COMPLEXVALOK;
         writeComplexArg(&val, binary);
     })

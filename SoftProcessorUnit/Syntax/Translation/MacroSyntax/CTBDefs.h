@@ -83,3 +83,5 @@ ComplexValue val = retrieveComplexValueFromArg((char*)argv[1]);\
 COMPLEXVALOK;\
 writeComplexArg(&val, binary);\
 }}}) return SPU_CTB_OK;\
+
+#define GETCOMPLEXVALNO(n) retrieveComplexValueFromArg((char*)argv[n]);

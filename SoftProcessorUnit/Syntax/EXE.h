@@ -48,10 +48,6 @@ OPEXE_FUNC(out,  {
     COMPLEXVALOK;
     
     printf("%lf\n", value);
-    
-    if (params->vsync){
-        usleep(50000);
-    }
 
     return SPU_EXE_OK;
 })
