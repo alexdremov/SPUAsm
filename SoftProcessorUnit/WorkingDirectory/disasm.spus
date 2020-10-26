@@ -1,2 +1,41 @@
-push [rax+2.000000]
-pop push +0.000000
+push 32.000000 
+push 16.000000 
+push 10.000000 
+push 35.000000 
+call 51
+push 32.000000 
+push 16.000000 
+push 5.000000 
+push 35.000000 
+call 6
+hlt 
+pop [2.000000] 
+pop rcx 
+pop rbx 
+pop rax 
+mov rdx 0.000000 
+push rbx 
+push rdx 
+sin 
+push rcx 
+mul 
+add 
+pop [0.000000] 
+push rax 
+push rdx 
+cos 
+push rcx 
+push 2.000000 
+mul 
+mul 
+add 
+pop [1.000000] 
+pixset [1.000000] [0.000000] [2.000000] 
+rend 
+slp 10000.000000 
+mov rdx rdx+0.050000 
+push rdx 
+push 3.141593 
+push 2.000000 
+mul 
+jbe -131

@@ -302,23 +302,23 @@ Complex value examples\+:
 \end{DoxyItemize}
 
 {\bfseries{Notice\+:}} whitespaces inside complex value are not allowed and considered as syntax error.\hypertarget{index_autotoc_md16}{}\doxysubsection{General purpose}\label{index_autotoc_md16}
-\hypertarget{index_autotoc_md17}{}\doxysubsubsection{push    $<$any cvalue$>$}\label{index_autotoc_md17}
-Push value to the stack\hypertarget{index_autotoc_md18}{}\doxysubsubsection{pop      $<$nothing/assignable cvalue$>$}\label{index_autotoc_md18}
+\hypertarget{index_autotoc_md17}{}\doxysubsubsection{push $<$any cvalue$>$}\label{index_autotoc_md17}
+Push value to the stack\hypertarget{index_autotoc_md18}{}\doxysubsubsection{pop $<$nothing/assignable cvalue$>$}\label{index_autotoc_md18}
 Pop value from the stack
 \begin{DoxyItemize}
 \item no args -\/ just delete
 \item cvalue -\/ pop and save to assignable cvalue
-\end{DoxyItemize}\hypertarget{index_autotoc_md19}{}\doxysubsubsection{in          $<$nothing/assignable cvalue$>$}\label{index_autotoc_md19}
+\end{DoxyItemize}\hypertarget{index_autotoc_md19}{}\doxysubsubsection{in $<$nothing/assignable cvalue$>$}\label{index_autotoc_md19}
 Request value from the console
 \begin{DoxyItemize}
 \item no args -\/ push value to the stack
 \item cvalue -\/ save to assignable cvalue
-\end{DoxyItemize}\hypertarget{index_autotoc_md20}{}\doxysubsubsection{out       $<$nothing/any cvalue$>$}\label{index_autotoc_md20}
+\end{DoxyItemize}\hypertarget{index_autotoc_md20}{}\doxysubsubsection{out $<$nothing/any cvalue$>$}\label{index_autotoc_md20}
 Prints value to the console
 \begin{DoxyItemize}
 \item no args -\/ last stack value
 \item cvalue -\/ cvalue value
-\end{DoxyItemize}\hypertarget{index_autotoc_md21}{}\doxysubsubsection{mov       $<$assignable cvalue$>$  $<$any cvalue$>$}\label{index_autotoc_md21}
+\end{DoxyItemize}\hypertarget{index_autotoc_md21}{}\doxysubsubsection{mov $<$assignable cvalue$>$  $<$any cvalue$>$}\label{index_autotoc_md21}
 destination -\/$>$ source
 
 Sets the first argument value to the secon argument\textquotesingle{}s value\hypertarget{index_autotoc_md22}{}\doxysubsubsection{dump}\label{index_autotoc_md22}
@@ -331,12 +331,12 @@ x y value
 
 Set vram pixel (x, y) to value\hypertarget{index_autotoc_md28}{}\doxysubsubsection{clrscr}\label{index_autotoc_md28}
 Fill vram with spaces\hypertarget{index_autotoc_md29}{}\doxysubsection{Math}\label{index_autotoc_md29}
-\hypertarget{index_autotoc_md30}{}\doxysubsubsection{inc       $<$nothing/assignable cvalue$>$}\label{index_autotoc_md30}
+\hypertarget{index_autotoc_md30}{}\doxysubsubsection{inc $<$nothing/assignable cvalue$>$}\label{index_autotoc_md30}
 Increments the value
 \begin{DoxyItemize}
 \item no args -\/ last stack value
 \item cvalue -\/ cvalue value
-\end{DoxyItemize}\hypertarget{index_autotoc_md31}{}\doxysubsubsection{dec       $<$nothing/assignable cvalue$>$}\label{index_autotoc_md31}
+\end{DoxyItemize}\hypertarget{index_autotoc_md31}{}\doxysubsubsection{dec $<$nothing/assignable cvalue$>$}\label{index_autotoc_md31}
 Decrements the value
 \begin{DoxyItemize}
 \item no args -\/ last stack value
@@ -351,16 +351,16 @@ Cos of the last stack value\hypertarget{index_autotoc_md38}{}\doxysubsubsection{
 Abs of the last stack value\hypertarget{index_autotoc_md39}{}\doxysubsubsection{sqrt}\label{index_autotoc_md39}
 Square root of the last stack value\hypertarget{index_autotoc_md40}{}\doxysubsubsection{pow}\label{index_autotoc_md40}
 The pre-\/last element of the stack to the power of the last one\hypertarget{index_autotoc_md41}{}\doxysubsection{Codeflow modifiers}\label{index_autotoc_md41}
-\hypertarget{index_autotoc_md42}{}\doxysubsubsection{call       $<$label$>$}\label{index_autotoc_md42}
+\hypertarget{index_autotoc_md42}{}\doxysubsubsection{call $<$label$>$}\label{index_autotoc_md42}
 Gives execution to the label block. Can be returned to the call instruction using {\itshape ret}\hypertarget{index_autotoc_md43}{}\doxysubsubsection{ret}\label{index_autotoc_md43}
-Returnes to the last call position. May fail if there were no calls.\hypertarget{index_autotoc_md44}{}\doxysubsubsection{jmp      $<$label$>$}\label{index_autotoc_md44}
-Jump to the label\hypertarget{index_autotoc_md45}{}\doxysubsubsection{jb         $<$label$>$}\label{index_autotoc_md45}
-Jump if last element is bigger than pre-\/last. Removes both operands from the stack\hypertarget{index_autotoc_md46}{}\doxysubsubsection{jbe       $<$label$>$}\label{index_autotoc_md46}
-Jump if last element is bigger-\/or-\/equal than pre-\/last. Removes both operands from the stack\hypertarget{index_autotoc_md47}{}\doxysubsubsection{je         $<$label$>$}\label{index_autotoc_md47}
-Jump if last element is equal to the pre-\/last one. Removes both operands from the stack\hypertarget{index_autotoc_md48}{}\doxysubsubsection{jne       $<$label$>$}\label{index_autotoc_md48}
-Jump if last element is not equal to the pre-\/last one. Removes both operands from the stack\hypertarget{index_autotoc_md49}{}\doxysubsubsection{ja         $<$label$>$}\label{index_autotoc_md49}
-Jump if last element is lower than pre-\/last. Removes both operands from the stack\hypertarget{index_autotoc_md50}{}\doxysubsubsection{jae       $<$label$>$}\label{index_autotoc_md50}
-Jump if last element is lower-\/or-\/equal than pre-\/last. Removes both operands from the stack\hypertarget{index_autotoc_md51}{}\doxysubsubsection{jm        $<$label$>$}\label{index_autotoc_md51}
+Returnes to the last call position. May fail if there were no calls.\hypertarget{index_autotoc_md44}{}\doxysubsubsection{jmp $<$label$>$}\label{index_autotoc_md44}
+Jump to the label\hypertarget{index_autotoc_md45}{}\doxysubsubsection{jb $<$label$>$}\label{index_autotoc_md45}
+Jump if last element is bigger than pre-\/last. Removes both operands from the stack\hypertarget{index_autotoc_md46}{}\doxysubsubsection{jbe $<$label$>$}\label{index_autotoc_md46}
+Jump if last element is bigger-\/or-\/equal than pre-\/last. Removes both operands from the stack\hypertarget{index_autotoc_md47}{}\doxysubsubsection{je $<$label$>$}\label{index_autotoc_md47}
+Jump if last element is equal to the pre-\/last one. Removes both operands from the stack\hypertarget{index_autotoc_md48}{}\doxysubsubsection{jne $<$label$>$}\label{index_autotoc_md48}
+Jump if last element is not equal to the pre-\/last one. Removes both operands from the stack\hypertarget{index_autotoc_md49}{}\doxysubsubsection{ja $<$label$>$}\label{index_autotoc_md49}
+Jump if last element is lower than pre-\/last. Removes both operands from the stack\hypertarget{index_autotoc_md50}{}\doxysubsubsection{jae $<$label$>$}\label{index_autotoc_md50}
+Jump if last element is lower-\/or-\/equal than pre-\/last. Removes both operands from the stack\hypertarget{index_autotoc_md51}{}\doxysubsubsection{jm $<$label$>$}\label{index_autotoc_md51}
 Jump if it\textquotesingle{}s Monday.\hypertarget{index_autotoc_md52}{}\doxysubsubsection{label\+Name\+:}\label{index_autotoc_md52}
 Creates label\hypertarget{index_autotoc_md53}{}\doxysection{Links}\label{index_autotoc_md53}
 

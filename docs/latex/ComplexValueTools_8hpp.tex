@@ -96,7 +96,8 @@ References value.
 
 Referenced by O\+P\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+N\+C(), and pointer\+To\+Complex\+Value().
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -214,20 +215,22 @@ Here is the call graph for this function\+:\nopagebreak
 \DoxyCodeLine{273     }
 \DoxyCodeLine{274     \textcolor{keywordflow}{if} ((\mbox{\hyperlink{EXE_8h_afd28069fe7ee361686d9303957752105}{cvalue}}-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a054e8e27ec479293da3373464bf51488}{argMask}} \& 1) == 1)\{}
 \DoxyCodeLine{275         \textcolor{keywordflow}{if} (\mbox{\hyperlink{EXE_8h_afd28069fe7ee361686d9303957752105}{cvalue}}-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_ab83e0c3bc53a5eee84be61bf61592dff}{value}} >= 0)\{}
-\DoxyCodeLine{276             fprintf(output, \textcolor{stringliteral}{"{}+"{}});}
-\DoxyCodeLine{277         \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{278             fprintf(output, \textcolor{stringliteral}{"{}-\/"{}});}
-\DoxyCodeLine{279         \}}
-\DoxyCodeLine{280         fprintf(output, \textcolor{stringliteral}{"{}\%lf"{}}, \mbox{\hyperlink{EXE_8h_afd28069fe7ee361686d9303957752105}{cvalue}}-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_ab83e0c3bc53a5eee84be61bf61592dff}{value}});}
-\DoxyCodeLine{281     \}}
-\DoxyCodeLine{282     }
+\DoxyCodeLine{276             \textcolor{keywordflow}{if} ((\mbox{\hyperlink{EXE_8h_afd28069fe7ee361686d9303957752105}{cvalue}}-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a054e8e27ec479293da3373464bf51488}{argMask}} \& 2) == 2)}
+\DoxyCodeLine{277                 fprintf(output, \textcolor{stringliteral}{"{}+"{}});}
+\DoxyCodeLine{278         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{279             fprintf(output, \textcolor{stringliteral}{"{}-\/"{}});}
+\DoxyCodeLine{280         \}}
+\DoxyCodeLine{281         fprintf(output, \textcolor{stringliteral}{"{}\%lf"{}}, \mbox{\hyperlink{EXE_8h_afd28069fe7ee361686d9303957752105}{cvalue}}-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_ab83e0c3bc53a5eee84be61bf61592dff}{value}});}
+\DoxyCodeLine{282     \}}
 \DoxyCodeLine{283     }
-\DoxyCodeLine{284     \textcolor{keywordflow}{if} ((\mbox{\hyperlink{EXE_8h_afd28069fe7ee361686d9303957752105}{cvalue}}-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a054e8e27ec479293da3373464bf51488}{argMask}} \& 4) == 4)\{}
-\DoxyCodeLine{285         fprintf(output, \textcolor{stringliteral}{"{}]"{}});}
-\DoxyCodeLine{286     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((\mbox{\hyperlink{EXE_8h_afd28069fe7ee361686d9303957752105}{cvalue}}-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a054e8e27ec479293da3373464bf51488}{argMask}} \& 8) == 8)\{}
-\DoxyCodeLine{287         fprintf(output, \textcolor{stringliteral}{"{})"{}});}
-\DoxyCodeLine{288     \}}
-\DoxyCodeLine{289 \}}
+\DoxyCodeLine{284     }
+\DoxyCodeLine{285     \textcolor{keywordflow}{if} ((\mbox{\hyperlink{EXE_8h_afd28069fe7ee361686d9303957752105}{cvalue}}-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a054e8e27ec479293da3373464bf51488}{argMask}} \& 4) == 4)\{}
+\DoxyCodeLine{286         fprintf(output, \textcolor{stringliteral}{"{}]"{}});}
+\DoxyCodeLine{287     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((\mbox{\hyperlink{EXE_8h_afd28069fe7ee361686d9303957752105}{cvalue}}-\/>\mbox{\hyperlink{AssemblyDTypes_8hpp_a054e8e27ec479293da3373464bf51488}{argMask}} \& 8) == 8)\{}
+\DoxyCodeLine{288         fprintf(output, \textcolor{stringliteral}{"{})"{}});}
+\DoxyCodeLine{289     \}}
+\DoxyCodeLine{290     fprintf(output, \textcolor{stringliteral}{"{} "{}});}
+\DoxyCodeLine{291 \}}
 
 \end{DoxyCode}
 
@@ -245,7 +248,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=333pt]{ComplexValueTools_8hpp_a32bd4596c36b9f2160c9b6d8af9d635a_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -349,7 +353,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{ComplexValueTools_8hpp_a19b735a28ba6fe7f6c4f52680e67600f_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -417,7 +422,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{64                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{StackRigid_8cpp_aa778f833989c5b73d0fbe86e9b6ef977}{size}} >= 4)\{}
 \DoxyCodeLine{65                     \textcolor{keywordtype}{int} scanfRes = sscanf(argument + 4, \textcolor{stringliteral}{"{}\%lg"{}}, \&\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}});}
 \DoxyCodeLine{66                     \textcolor{keywordflow}{if} (scanfRes == -\/1) \{}
-\DoxyCodeLine{67                         \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}.success = \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba4a1f60d63bf941be38f1d6ce5112295e}{SPU\_CV\_WRONGNUM}};}
+\DoxyCodeLine{67                         \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}.success = \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba7c553218731efc8153852484febe3d2d}{SPU\_CV\_WRONGSTRUCT}};}
 \DoxyCodeLine{68                         \textcolor{keywordflow}{return} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}};}
 \DoxyCodeLine{69                     \} \textcolor{keywordflow}{else} \{}
 \DoxyCodeLine{70                         \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}.value += \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}} * ((tmpThird == \textcolor{charliteral}{'-\/'})? -\/1: 1);}
@@ -435,8 +440,8 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{82             }
 \DoxyCodeLine{83             \textcolor{keywordtype}{double} \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}} = 0;}
 \DoxyCodeLine{84             \textcolor{keywordtype}{int} scanfRes = sscanf(argument, \textcolor{stringliteral}{"{}\%lg"{}}, \&\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}});}
-\DoxyCodeLine{85             \textcolor{keywordflow}{if} (scanfRes == -\/1) \{}
-\DoxyCodeLine{86                 \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}.success = \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba4a1f60d63bf941be38f1d6ce5112295e}{SPU\_CV\_WRONGNUM}};}
+\DoxyCodeLine{85             \textcolor{keywordflow}{if} (scanfRes <= 0) \{}
+\DoxyCodeLine{86                 \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}.success = \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba7c553218731efc8153852484febe3d2d}{SPU\_CV\_WRONGSTRUCT}};}
 \DoxyCodeLine{87                 \textcolor{keywordflow}{return} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}};}
 \DoxyCodeLine{88             \} \textcolor{keywordflow}{else} \{}
 \DoxyCodeLine{89                 \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}.value += \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}};}
@@ -447,8 +452,8 @@ Here is the caller graph for this function\+:\nopagebreak
 \DoxyCodeLine{94     \} \textcolor{keywordflow}{else} \{}
 \DoxyCodeLine{95         \textcolor{keywordtype}{double} \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}} = 0;}
 \DoxyCodeLine{96         \textcolor{keywordtype}{int} scanfRes = sscanf(argument, \textcolor{stringliteral}{"{}\%lg"{}}, \&\mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}});}
-\DoxyCodeLine{97         \textcolor{keywordflow}{if} (scanfRes == -\/1) \{}
-\DoxyCodeLine{98             \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}.success = \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba4a1f60d63bf941be38f1d6ce5112295e}{SPU\_CV\_WRONGNUM}};}
+\DoxyCodeLine{97         \textcolor{keywordflow}{if} (scanfRes <= 0) \{}
+\DoxyCodeLine{98             \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}.success = \mbox{\hyperlink{ParseHelpers_8hpp_a6848fe4717e087a247d0bbbd7268faeba7c553218731efc8153852484febe3d2d}{SPU\_CV\_WRONGSTRUCT}};}
 \DoxyCodeLine{99             \textcolor{keywordflow}{return} \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}};}
 \DoxyCodeLine{100         \} \textcolor{keywordflow}{else} \{}
 \DoxyCodeLine{101             \mbox{\hyperlink{EXE_8h_acf11827d6961c67b6782cbd7c21b7481}{result}}.value += \mbox{\hyperlink{EXE_8h_aee90379adb0307effb138f4871edbc5c}{value}};}
@@ -472,24 +477,13 @@ Here is the caller graph for this function\+:\nopagebreak
 \end{DoxyCode}
 
 
-References char, int, register\+No\+From\+Name(), result, size, S\+P\+U\+\_\+\+C\+V\+\_\+\+OK, S\+P\+U\+\_\+\+C\+V\+\_\+\+W\+R\+O\+N\+G\+N\+UM, S\+P\+U\+\_\+\+C\+V\+\_\+\+W\+R\+O\+N\+G\+OP, S\+P\+U\+\_\+\+C\+V\+\_\+\+W\+R\+O\+N\+G\+R\+EG, S\+P\+U\+\_\+\+C\+V\+\_\+\+W\+R\+O\+N\+G\+S\+T\+R\+U\+CT, and value.
-
-
-
-Referenced by O\+P\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+F\+U\+N\+C().
+References char, int, register\+No\+From\+Name(), result, size, S\+P\+U\+\_\+\+C\+V\+\_\+\+OK, S\+P\+U\+\_\+\+C\+V\+\_\+\+W\+R\+O\+N\+G\+OP, S\+P\+U\+\_\+\+C\+V\+\_\+\+W\+R\+O\+N\+G\+R\+EG, S\+P\+U\+\_\+\+C\+V\+\_\+\+W\+R\+O\+N\+G\+S\+T\+R\+U\+CT, and value.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{ComplexValueTools_8hpp_a07415ffabfc3f85e9dd7e3efbeb7a489_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{ComplexValueTools_8hpp_a07415ffabfc3f85e9dd7e3efbeb7a489_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{ComplexValueTools_8hpp_acdf108393d9cfa818d45cd66e048c1c0}\label{ComplexValueTools_8hpp_acdf108393d9cfa818d45cd66e048c1c0}} 
@@ -536,7 +530,8 @@ References result, S\+P\+U\+\_\+\+C\+V\+\_\+\+N\+O\+A\+RG, and S\+P\+U\+\_\+\+C\
 
 Referenced by pointer\+To\+Complex\+Value(), and retrieve\+Complex\+Value().
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -579,7 +574,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{ComplexValueTools_8hpp_acd99748499155942d9b1fc7a873904a6_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

@@ -202,14 +202,14 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CTB_8h.html#ad2405f5ca2529cdf21579610d9115dd1">OPTRANSLATE_FUNC()</a>, and <a class="el" href="ComplexValueTools_8hpp.html#a71b1ca94f4af2892542e83aca101dae6">pointerToComplexValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CTB_8h.html#a6942abb0ac119631ed40e2a1431cdaad">OPTRANSLATE_FUNC()</a>, and <a class="el" href="ComplexValueTools_8hpp.html#a71b1ca94f4af2892542e83aca101dae6">pointerToComplexValue()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="ComplexValueTools_8hpp_af1a455af260ab7a5f016aaf4b706e5a3_icgraph.png" border="0" usemap="#aComplexValueTools_8hpp_af1a455af260ab7a5f016aaf4b706e5a3_icgraph" alt=""/></div>
-<map name="ComplexValueTools_8hpp_af1a455af260ab7a5f016aaf4b706e5a3_icgraph" id="ComplexValueTools_8hpp_af1a455af260ab7a5f016aaf4b706e5a3_icgraph">
+<map name="ComplexValueTools_8hpp_af1a455af260ab7a5f016aaf4b706e5a3_icgraph" id="aComplexValueTools_8hpp_af1a455af260ab7a5f016aaf4b706e5a3_icgraph">
 <area shape="rect" title=" " alt="" coords="424,31,591,57"/>
-<area shape="rect" href="CTB_8h.html#ad2405f5ca2529cdf21579610d9115dd1" title=" " alt="" coords="212,5,376,32"/>
+<area shape="rect" href="CTB_8h.html#a6942abb0ac119631ed40e2a1431cdaad" title=" " alt="" coords="212,5,376,32"/>
 <area shape="rect" href="ComplexValueTools_8hpp.html#a71b1ca94f4af2892542e83aca101dae6" title=" " alt="" coords="215,56,373,83"/>
 <area shape="rect" href="EXE_8h.html#a7f44957aaaa3a519a3fadf35c773f516" title=" " alt="" coords="28,31,141,57"/>
 <area shape="rect" href="ComplexValueTools_8hpp.html#a6fa8bc820187e01175c5230208e2623c" title=" " alt="" coords="5,81,164,108"/>
@@ -410,24 +410,26 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    </div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">if</span> ((<a class="code" href="EXE_8h.html#afd28069fe7ee361686d9303957752105">cvalue</a>-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#a054e8e27ec479293da3373464bf51488">argMask</a> &amp; 1) == 1){</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="EXE_8h.html#afd28069fe7ee361686d9303957752105">cvalue</a>-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#ab83e0c3bc53a5eee84be61bf61592dff">value</a> &gt;= 0){</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            fprintf(output, <span class="stringliteral">&quot;+&quot;</span>);</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            fprintf(output, <span class="stringliteral">&quot;-&quot;</span>);</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        }</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        fprintf(output, <span class="stringliteral">&quot;%lf&quot;</span>, <a class="code" href="EXE_8h.html#afd28069fe7ee361686d9303957752105">cvalue</a>-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#ab83e0c3bc53a5eee84be61bf61592dff">value</a>);</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    }</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            <span class="keywordflow">if</span> ((<a class="code" href="EXE_8h.html#afd28069fe7ee361686d9303957752105">cvalue</a>-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#a054e8e27ec479293da3373464bf51488">argMask</a> &amp; 2) == 2)</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                fprintf(output, <span class="stringliteral">&quot;+&quot;</span>);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            fprintf(output, <span class="stringliteral">&quot;-&quot;</span>);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        }</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        fprintf(output, <span class="stringliteral">&quot;%lf&quot;</span>, <a class="code" href="EXE_8h.html#afd28069fe7ee361686d9303957752105">cvalue</a>-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#ab83e0c3bc53a5eee84be61bf61592dff">value</a>);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    }</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    </div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">if</span> ((<a class="code" href="EXE_8h.html#afd28069fe7ee361686d9303957752105">cvalue</a>-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#a054e8e27ec479293da3373464bf51488">argMask</a> &amp; 4) == 4){</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        fprintf(output, <span class="stringliteral">&quot;]&quot;</span>);</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<a class="code" href="EXE_8h.html#afd28069fe7ee361686d9303957752105">cvalue</a>-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#a054e8e27ec479293da3373464bf51488">argMask</a> &amp; 8) == 8){</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        fprintf(output, <span class="stringliteral">&quot;)&quot;</span>);</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;}</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">if</span> ((<a class="code" href="EXE_8h.html#afd28069fe7ee361686d9303957752105">cvalue</a>-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#a054e8e27ec479293da3373464bf51488">argMask</a> &amp; 4) == 4){</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        fprintf(output, <span class="stringliteral">&quot;]&quot;</span>);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<a class="code" href="EXE_8h.html#afd28069fe7ee361686d9303957752105">cvalue</a>-&gt;<a class="code" href="AssemblyDTypes_8hpp.html#a054e8e27ec479293da3373464bf51488">argMask</a> &amp; 8) == 8){</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        fprintf(output, <span class="stringliteral">&quot;)&quot;</span>);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    fprintf(output, <span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="AssemblyDTypes_8hpp.html#a054e8e27ec479293da3373464bf51488">ComplexValue::argMask</a>, <a class="el" href="EXE_8h.html#afd28069fe7ee361686d9303957752105">cvalue</a>, <a class="el" href="AssemblyDTypes_8hpp.html#a34b986e960ed19a4ea0a071d4ba16014">ComplexValue::reg</a>, <a class="el" href="CommandsParser_8cpp.html#a3a86900aa34b39b3fedbebc7ae0c53e7">registerNameFromNo()</a>, and <a class="el" href="AssemblyDTypes_8hpp.html#ab83e0c3bc53a5eee84be61bf61592dff">ComplexValue::value</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BTC_8h.html#a05ff730541c033e42d099664fa663477">OPBACKTRANSLATE_FUNC()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BTC_8h.html#a2c4b1a72b1c01d937864bfa054d2bb63">OPBACKTRANSLATE_FUNC()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -441,9 +443,9 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="ComplexValueTools_8hpp_a32bd4596c36b9f2160c9b6d8af9d635a_icgraph.png" border="0" usemap="#aComplexValueTools_8hpp_a32bd4596c36b9f2160c9b6d8af9d635a_icgraph" alt=""/></div>
-<map name="ComplexValueTools_8hpp_a32bd4596c36b9f2160c9b6d8af9d635a_icgraph" id="ComplexValueTools_8hpp_a32bd4596c36b9f2160c9b6d8af9d635a_icgraph">
+<map name="ComplexValueTools_8hpp_a32bd4596c36b9f2160c9b6d8af9d635a_icgraph" id="aComplexValueTools_8hpp_a32bd4596c36b9f2160c9b6d8af9d635a_icgraph">
 <area shape="rect" title=" " alt="" coords="255,5,397,32"/>
-<area shape="rect" href="BTC_8h.html#a05ff730541c033e42d099664fa663477" title=" " alt="" coords="5,5,207,32"/>
+<area shape="rect" href="BTC_8h.html#a2c4b1a72b1c01d937864bfa054d2bb63" title=" " alt="" coords="5,5,207,32"/>
 </map>
 </div>
 
@@ -573,7 +575,7 @@ Here is the call graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="AssemblyDTypes_8hpp.html#a054e8e27ec479293da3373464bf51488">ComplexValue::argMask</a>, <a class="el" href="EXE_8h.html#afd28069fe7ee361686d9303957752105">cvalue</a>, <a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a>, <a class="el" href="SPUDtypes_8hpp.html#a844dd891e3e2d8c67fa2e8863cf0423b">SPUCore::RAM</a>, <a class="el" href="AssemblyDTypes_8hpp.html#a34b986e960ed19a4ea0a071d4ba16014">ComplexValue::reg</a>, <a class="el" href="SPUDtypes_8hpp.html#a66cb1b89fdc5a306e383f4557523a925">SPUCore::REG</a>, <a class="el" href="ComplexValueTools_8cpp.html#acdf108393d9cfa818d45cd66e048c1c0">retrieveComplexValueFromFlow()</a>, <a class="el" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeba5f66e97c52f7197a515c702ff8675ede">SPU_CV_OK</a>, <a class="el" href="AssemblyDTypes_8hpp.html#a2236e0432c20b0b9c7b50e71b605259b">ComplexValue::success</a>, <a class="el" href="AssemblyDTypes_8hpp.html#ab83e0c3bc53a5eee84be61bf61592dff">ComplexValue::value</a>, and <a class="el" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BTC_8h.html#a05ff730541c033e42d099664fa663477">OPBACKTRANSLATE_FUNC()</a>, and <a class="el" href="EXE_8h.html#a2d11c9d4ccb58125788ea44f62a6c8bd">OPEXE_FUNC()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BTC_8h.html#a2c4b1a72b1c01d937864bfa054d2bb63">OPBACKTRANSLATE_FUNC()</a>, and <a class="el" href="EXE_8h.html#a2d11c9d4ccb58125788ea44f62a6c8bd">OPEXE_FUNC()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -587,9 +589,9 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="ComplexValueTools_8hpp_a19b735a28ba6fe7f6c4f52680e67600f_icgraph.png" border="0" usemap="#aComplexValueTools_8hpp_a19b735a28ba6fe7f6c4f52680e67600f_icgraph" alt=""/></div>
-<map name="ComplexValueTools_8hpp_a19b735a28ba6fe7f6c4f52680e67600f_icgraph" id="ComplexValueTools_8hpp_a19b735a28ba6fe7f6c4f52680e67600f_icgraph">
+<map name="ComplexValueTools_8hpp_a19b735a28ba6fe7f6c4f52680e67600f_icgraph" id="aComplexValueTools_8hpp_a19b735a28ba6fe7f6c4f52680e67600f_icgraph">
 <area shape="rect" title=" " alt="" coords="255,31,404,57"/>
-<area shape="rect" href="BTC_8h.html#a05ff730541c033e42d099664fa663477" title=" " alt="" coords="5,5,207,32"/>
+<area shape="rect" href="BTC_8h.html#a2c4b1a72b1c01d937864bfa054d2bb63" title=" " alt="" coords="5,5,207,32"/>
 <area shape="rect" href="EXE_8h.html#a2d11c9d4ccb58125788ea44f62a6c8bd" title=" " alt="" coords="49,56,163,83"/>
 </map>
 </div>
@@ -664,7 +666,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="StackRigid_8cpp.html#aa778f833989c5b73d0fbe86e9b6ef977">size</a> &gt;= 4){</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    <span class="keywordtype">int</span> scanfRes = sscanf(argument + 4, <span class="stringliteral">&quot;%lg&quot;</span>, &amp;<a class="code" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    <span class="keywordflow">if</span> (scanfRes == -1) {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                        <a class="code" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>.success = <a class="code" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeba4a1f60d63bf941be38f1d6ce5112295e">SPU_CV_WRONGNUM</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                        <a class="code" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>.success = <a class="code" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeba7c553218731efc8153852484febe3d2d">SPU_CV_WRONGSTRUCT</a>;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                        <span class="keywordflow">return</span> <a class="code" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                        <a class="code" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>.value += <a class="code" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a> * ((tmpThird == <span class="charliteral">&#39;-&#39;</span>)? -1: 1);</div>
@@ -682,8 +684,8 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            </div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordtype">double</span> <a class="code" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a> = 0;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordtype">int</span> scanfRes = sscanf(argument, <span class="stringliteral">&quot;%lg&quot;</span>, &amp;<a class="code" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">if</span> (scanfRes == -1) {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <a class="code" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>.success = <a class="code" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeba4a1f60d63bf941be38f1d6ce5112295e">SPU_CV_WRONGNUM</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">if</span> (scanfRes &lt;= 0) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <a class="code" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>.success = <a class="code" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeba7c553218731efc8153852484febe3d2d">SPU_CV_WRONGSTRUCT</a>;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <a class="code" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>.value += <a class="code" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>;</div>
@@ -694,8 +696,8 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a> = 0;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordtype">int</span> scanfRes = sscanf(argument, <span class="stringliteral">&quot;%lg&quot;</span>, &amp;<a class="code" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">if</span> (scanfRes == -1) {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <a class="code" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>.success = <a class="code" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeba4a1f60d63bf941be38f1d6ce5112295e">SPU_CV_WRONGNUM</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">if</span> (scanfRes &lt;= 0) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <a class="code" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>.success = <a class="code" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeba7c553218731efc8153852484febe3d2d">SPU_CV_WRONGSTRUCT</a>;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <a class="code" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>.value += <a class="code" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>;</div>
@@ -716,9 +718,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a>, <a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a>, <a class="el" href="CommandsParser_8cpp.html#a339f0d81c397ae53843ca64e2f0c86f0">registerNoFromName()</a>, <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>, <a class="el" href="StackRigid_8cpp.html#aa778f833989c5b73d0fbe86e9b6ef977">size</a>, <a class="el" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeba5f66e97c52f7197a515c702ff8675ede">SPU_CV_OK</a>, <a class="el" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeba4a1f60d63bf941be38f1d6ce5112295e">SPU_CV_WRONGNUM</a>, <a class="el" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faebaaa36217cb7d15a536c7466503a96f632">SPU_CV_WRONGOP</a>, <a class="el" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faebafe28959c136e1cbbe6bbef4397de1b50">SPU_CV_WRONGREG</a>, <a class="el" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeba7c553218731efc8153852484febe3d2d">SPU_CV_WRONGSTRUCT</a>, and <a class="el" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="CTB_8h.html#a96c31e05271201023f9c5187e8a0fa77">OPTRANSLATE_FUNC()</a>.</p>
+<p class="reference">References <a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a>, <a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a>, <a class="el" href="CommandsParser_8cpp.html#a339f0d81c397ae53843ca64e2f0c86f0">registerNoFromName()</a>, <a class="el" href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a>, <a class="el" href="StackRigid_8cpp.html#aa778f833989c5b73d0fbe86e9b6ef977">size</a>, <a class="el" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeba5f66e97c52f7197a515c702ff8675ede">SPU_CV_OK</a>, <a class="el" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faebaaa36217cb7d15a536c7466503a96f632">SPU_CV_WRONGOP</a>, <a class="el" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faebafe28959c136e1cbbe6bbef4397de1b50">SPU_CV_WRONGREG</a>, <a class="el" href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeba7c553218731efc8153852484febe3d2d">SPU_CV_WRONGSTRUCT</a>, and <a class="el" href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -726,15 +726,6 @@ Here is the call graph for this function:</div>
 <map name="ComplexValueTools_8hpp_a07415ffabfc3f85e9dd7e3efbeb7a489_cgraph" id="ComplexValueTools_8hpp_a07415ffabfc3f85e9dd7e3efbeb7a489_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,204,32"/>
 <area shape="rect" href="CommandsParser_8cpp.html#a339f0d81c397ae53843ca64e2f0c86f0" title=" " alt="" coords="252,5,399,32"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="ComplexValueTools_8hpp_a07415ffabfc3f85e9dd7e3efbeb7a489_icgraph.png" border="0" usemap="#aComplexValueTools_8hpp_a07415ffabfc3f85e9dd7e3efbeb7a489_icgraph" alt=""/></div>
-<map name="ComplexValueTools_8hpp_a07415ffabfc3f85e9dd7e3efbeb7a489_icgraph" id="ComplexValueTools_8hpp_a07415ffabfc3f85e9dd7e3efbeb7a489_icgraph">
-<area shape="rect" title=" " alt="" coords="217,5,416,32"/>
-<area shape="rect" href="CTB_8h.html#a96c31e05271201023f9c5187e8a0fa77" title=" " alt="" coords="5,5,169,32"/>
 </map>
 </div>
 
@@ -789,13 +780,13 @@ Here is the caller graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="ComplexValueTools_8hpp_acdf108393d9cfa818d45cd66e048c1c0_icgraph.png" border="0" usemap="#aComplexValueTools_8hpp_acdf108393d9cfa818d45cd66e048c1c0_icgraph" alt=""/></div>
-<map name="ComplexValueTools_8hpp_acdf108393d9cfa818d45cd66e048c1c0_icgraph" id="ComplexValueTools_8hpp_acdf108393d9cfa818d45cd66e048c1c0_icgraph">
+<map name="ComplexValueTools_8hpp_acdf108393d9cfa818d45cd66e048c1c0_icgraph" id="aComplexValueTools_8hpp_acdf108393d9cfa818d45cd66e048c1c0_icgraph">
 <area shape="rect" title=" " alt="" coords="461,81,668,108"/>
 <area shape="rect" href="ComplexValueTools_8hpp.html#a71b1ca94f4af2892542e83aca101dae6" title=" " alt="" coords="255,56,413,83"/>
 <area shape="rect" href="ComplexValueTools_8hpp.html#a19b735a28ba6fe7f6c4f52680e67600f" title=" " alt="" coords="259,107,409,133"/>
 <area shape="rect" href="EXE_8h.html#a7f44957aaaa3a519a3fadf35c773f516" title=" " alt="" coords="49,5,163,32"/>
 <area shape="rect" href="ComplexValueTools_8hpp.html#a6fa8bc820187e01175c5230208e2623c" title=" " alt="" coords="27,56,185,83"/>
-<area shape="rect" href="BTC_8h.html#a05ff730541c033e42d099664fa663477" title=" " alt="" coords="5,107,207,133"/>
+<area shape="rect" href="BTC_8h.html#a2c4b1a72b1c01d937864bfa054d2bb63" title=" " alt="" coords="5,107,207,133"/>
 <area shape="rect" href="EXE_8h.html#a2d11c9d4ccb58125788ea44f62a6c8bd" title=" " alt="" coords="49,157,163,184"/>
 </map>
 </div>
@@ -841,7 +832,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="AssemblyHelpers_8cpp.html#a34ace815bc5b07c3dd0b9b22acd102f7">appendToBinFile()</a>, <a class="el" href="AssemblyDTypes_8hpp.html#a054e8e27ec479293da3373464bf51488">ComplexValue::argMask</a>, <a class="el" href="EXE_8h.html#afd28069fe7ee361686d9303957752105">cvalue</a>, <a class="el" href="AssemblyDTypes_8hpp.html#a34b986e960ed19a4ea0a071d4ba16014">ComplexValue::reg</a>, and <a class="el" href="AssemblyDTypes_8hpp.html#ab83e0c3bc53a5eee84be61bf61592dff">ComplexValue::value</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CTB_8h.html#a96c31e05271201023f9c5187e8a0fa77">OPTRANSLATE_FUNC()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CTB_8h.html#a4aae076279a7f661054ed5b5c7dad2ba">OPTRANSLATE_FUNC()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -856,9 +847,9 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="ComplexValueTools_8hpp_acd99748499155942d9b1fc7a873904a6_icgraph.png" border="0" usemap="#aComplexValueTools_8hpp_acd99748499155942d9b1fc7a873904a6_icgraph" alt=""/></div>
-<map name="ComplexValueTools_8hpp_acd99748499155942d9b1fc7a873904a6_icgraph" id="ComplexValueTools_8hpp_acd99748499155942d9b1fc7a873904a6_icgraph">
+<map name="ComplexValueTools_8hpp_acd99748499155942d9b1fc7a873904a6_icgraph" id="aComplexValueTools_8hpp_acd99748499155942d9b1fc7a873904a6_icgraph">
 <area shape="rect" title=" " alt="" coords="217,5,340,32"/>
-<area shape="rect" href="CTB_8h.html#a96c31e05271201023f9c5187e8a0fa77" title=" " alt="" coords="5,5,169,32"/>
+<area shape="rect" href="CTB_8h.html#a4aae076279a7f661054ed5b5c7dad2ba" title=" " alt="" coords="5,5,169,32"/>
 </map>
 </div>
 
@@ -879,17 +870,16 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="aEXE_8h_html_aee90379adb0307effb138f4871edbc5c"><div class="ttname"><a href="EXE_8h.html#aee90379adb0307effb138f4871edbc5c">value</a></div><div class="ttdeci">double value</div><div class="ttdef"><b>Definition:</b> EXE.h:36</div></div>
 <div class="ttc" id="aParseHelpers_8hpp_html_a6848fe4717e087a247d0bbbd7268faeba5f66e97c52f7197a515c702ff8675ede"><div class="ttname"><a href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeba5f66e97c52f7197a515c702ff8675ede">SPU_CV_OK</a></div><div class="ttdeci">@ SPU_CV_OK</div><div class="ttdef"><b>Definition:</b> ParseHelpers.hpp:14</div></div>
 <div class="ttc" id="aCMakeCache_8txt_html_afe71f11dacb15682cdc012f7208e6e09"><div class="ttname"><a href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a></div><div class="ttdeci">signed char</div><div class="ttdef"><b>Definition:</b> CMakeCache.txt:304</div></div>
-<div class="ttc" id="aEXE_8h_html_acf11827d6961c67b6782cbd7c21b7481"><div class="ttname"><a href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a></div><div class="ttdeci">StackRigidOperationCodes result</div><div class="ttdef"><b>Definition:</b> EXE.h:135</div></div>
+<div class="ttc" id="aEXE_8h_html_acf11827d6961c67b6782cbd7c21b7481"><div class="ttname"><a href="EXE_8h.html#acf11827d6961c67b6782cbd7c21b7481">result</a></div><div class="ttdeci">StackRigidOperationCodes result</div><div class="ttdef"><b>Definition:</b> EXE.h:131</div></div>
 <div class="ttc" id="aAssemblyDTypes_8hpp_html_ab83e0c3bc53a5eee84be61bf61592dff"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#ab83e0c3bc53a5eee84be61bf61592dff">ComplexValue::value</a></div><div class="ttdeci">double value</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:51</div></div>
 <div class="ttc" id="aSPUDtypes_8hpp_html_a844dd891e3e2d8c67fa2e8863cf0423b"><div class="ttname"><a href="SPUDtypes_8hpp.html#a844dd891e3e2d8c67fa2e8863cf0423b">SPUCore::RAM</a></div><div class="ttdeci">double RAM[RAM_SIZE]</div><div class="ttdef"><b>Definition:</b> SPUDtypes.hpp:20</div></div>
 <div class="ttc" id="aParseHelpers_8hpp_html_a6848fe4717e087a247d0bbbd7268faeba9b917da5e21d036fbc6af5d22dd64d2c"><div class="ttname"><a href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeba9b917da5e21d036fbc6af5d22dd64d2c">SPU_CV_NOARG</a></div><div class="ttdeci">@ SPU_CV_NOARG</div><div class="ttdef"><b>Definition:</b> ParseHelpers.hpp:20</div></div>
 <div class="ttc" id="aComplexValueTools_8cpp_html_af1a455af260ab7a5f016aaf4b706e5a3"><div class="ttname"><a href="ComplexValueTools_8cpp.html#af1a455af260ab7a5f016aaf4b706e5a3">complexValueAssignable</a></div><div class="ttdeci">int complexValueAssignable(ComplexValue *value)</div><div class="ttdef"><b>Definition:</b> ComplexValueTools.cpp:212</div></div>
 <div class="ttc" id="aComplexValueTools_8cpp_html_acdf108393d9cfa818d45cd66e048c1c0"><div class="ttname"><a href="ComplexValueTools_8cpp.html#acdf108393d9cfa818d45cd66e048c1c0">retrieveComplexValueFromFlow</a></div><div class="ttdeci">ComplexValue retrieveComplexValueFromFlow(char *SPI)</div><div class="ttdef"><b>Definition:</b> ComplexValueTools.cpp:131</div></div>
-<div class="ttc" id="aEXE_8h_html_afd28069fe7ee361686d9303957752105"><div class="ttname"><a href="EXE_8h.html#afd28069fe7ee361686d9303957752105">cvalue</a></div><div class="ttdeci">ComplexValue cvalue</div><div class="ttdef"><b>Definition:</b> EXE.h:101</div></div>
+<div class="ttc" id="aEXE_8h_html_afd28069fe7ee361686d9303957752105"><div class="ttname"><a href="EXE_8h.html#afd28069fe7ee361686d9303957752105">cvalue</a></div><div class="ttdeci">ComplexValue cvalue</div><div class="ttdef"><b>Definition:</b> EXE.h:97</div></div>
 <div class="ttc" id="aAssemblyDTypes_8hpp_html_a054e8e27ec479293da3373464bf51488"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a054e8e27ec479293da3373464bf51488">ComplexValue::argMask</a></div><div class="ttdeci">char argMask</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:53</div></div>
 <div class="ttc" id="aAssemblyDTypes_8hpp_html_a2236e0432c20b0b9c7b50e71b605259b"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a2236e0432c20b0b9c7b50e71b605259b">ComplexValue::success</a></div><div class="ttdeci">ComplexValueResult success</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:54</div></div>
 <div class="ttc" id="aAssemblyDTypes_8hpp_html_a34b986e960ed19a4ea0a071d4ba16014"><div class="ttname"><a href="AssemblyDTypes_8hpp.html#a34b986e960ed19a4ea0a071d4ba16014">ComplexValue::reg</a></div><div class="ttdeci">char reg</div><div class="ttdef"><b>Definition:</b> AssemblyDTypes.hpp:52</div></div>
-<div class="ttc" id="aParseHelpers_8hpp_html_a6848fe4717e087a247d0bbbd7268faeba4a1f60d63bf941be38f1d6ce5112295e"><div class="ttname"><a href="ParseHelpers_8hpp.html#a6848fe4717e087a247d0bbbd7268faeba4a1f60d63bf941be38f1d6ce5112295e">SPU_CV_WRONGNUM</a></div><div class="ttdeci">@ SPU_CV_WRONGNUM</div><div class="ttdef"><b>Definition:</b> ParseHelpers.hpp:16</div></div>
 <div class="ttc" id="aSPUDtypes_8hpp_html_a66cb1b89fdc5a306e383f4557523a925"><div class="ttname"><a href="SPUDtypes_8hpp.html#a66cb1b89fdc5a306e383f4557523a925">SPUCore::REG</a></div><div class="ttdeci">double REG[8]</div><div class="ttdef"><b>Definition:</b> SPUDtypes.hpp:21</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

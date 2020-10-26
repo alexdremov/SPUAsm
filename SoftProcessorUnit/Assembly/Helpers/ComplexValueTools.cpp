@@ -64,7 +64,7 @@ ComplexValue retrieveComplexValueFromArg(char* argument){
                 if (size >= 4){
                     int scanfRes = sscanf(argument + 4, "%lg", &value);
                     if (scanfRes == -1) {
-                        result.success = SPU_CV_WRONGNUM;
+                        result.success = SPU_CV_WRONGSTRUCT;
                         return result;
                     } else {
                         result.value += value * ((tmpThird == '-')? -1: 1);
@@ -82,8 +82,8 @@ ComplexValue retrieveComplexValueFromArg(char* argument){
             
             double value = 0;
             int scanfRes = sscanf(argument, "%lg", &value);
-            if (scanfRes == -1) {
-                result.success = SPU_CV_WRONGNUM;
+            if (scanfRes <= 0) {
+                result.success = SPU_CV_WRONGSTRUCT;
                 return result;
             } else {
                 result.value += value;
@@ -94,8 +94,8 @@ ComplexValue retrieveComplexValueFromArg(char* argument){
     } else {
         double value = 0;
         int scanfRes = sscanf(argument, "%lg", &value);
-        if (scanfRes == -1) {
-            result.success = SPU_CV_WRONGNUM;
+        if (scanfRes <= 0) {
+            result.success = SPU_CV_WRONGSTRUCT;
             return result;
         } else {
             result.value += value;
@@ -273,7 +273,8 @@ void renderComplexValue(ComplexValue* cvalue, FILE* output){
     
     if ((cvalue->argMask & 1) == 1){
         if (cvalue->value >= 0){
-            fprintf(output, "+");
+            if ((cvalue->argMask & 2) == 2)
+                fprintf(output, "+");
         } else {
             fprintf(output, "-");
         }
@@ -286,4 +287,5 @@ void renderComplexValue(ComplexValue* cvalue, FILE* output){
     } else if ((cvalue->argMask & 8) == 8){
         fprintf(output, ")");
     }
+    fprintf(output, " ");
 }

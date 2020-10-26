@@ -1,4 +1,4 @@
-SPUAssembly v2.0.1r jp.spus -> jp.spub
+SPUAssembly v2.3.0r jp.spus -> jp.spub
 26    ->    28 | 3   | in <rbx>                  |  2  2  1 
 29    ->    38 | 10  | push <0>                  |  0  1  0  0  0  0  0  0  0  0 
 39    ->    41 | 3   | pop <rax>                 |  1  2  0 

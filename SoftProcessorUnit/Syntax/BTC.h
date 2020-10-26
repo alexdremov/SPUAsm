@@ -12,9 +12,6 @@
 
 OPBACKTRANSLATE_FUNC(push, {
     OPBACKGENERAL({
-        if (!checkBytesEnoughNumber( binary, *SPI, 10)){
-            return SPU_DISASM_NOTENOUGHARGS;
-        }
         ADDSPI(1);
         ComplexValue val = {};
         ComplexValueResult valResult = retrieveComplexValue(SPI, &val);
@@ -266,7 +263,14 @@ OPBACKTRANSLATE_FUNC(ret, {
 
 OPBACKTRANSLATE_FUNC(mov, {
     OPBACKGENERAL({
-        INCSPI;
+        ADDSPI(1);
+        ComplexValue val = {};
+        ComplexValueResult valResult = retrieveComplexValue(SPI, &val);
+        COMPLEXVALOK;
+        renderComplexValue(&val, params->outputFile);
+        valResult = retrieveComplexValue(SPI, &val);
+        COMPLEXVALOK;
+        renderComplexValue(&val, params->outputFile);
     })
     return SPU_DISASM_OK;
 })
@@ -280,9 +284,6 @@ OPBACKTRANSLATE_FUNC(rend, {
 
 OPBACKTRANSLATE_FUNC(slp, {
     OPBACKGENERAL({
-        if (!checkBytesEnoughNumber( binary, *SPI, 10)){
-            return SPU_DISASM_NOTENOUGHARGS;
-        }
         ADDSPI(1);
         ComplexValue val = {};
         ComplexValueResult valResult = retrieveComplexValue(SPI, &val);
@@ -301,7 +302,17 @@ OPBACKTRANSLATE_FUNC(abs, {
 
 OPBACKTRANSLATE_FUNC(pixset, {
     OPBACKGENERAL({
-        INCSPI;
+        ADDSPI(1);
+        ComplexValue val = {};
+        ComplexValueResult valResult = retrieveComplexValue(SPI, &val);
+        COMPLEXVALOK;
+        renderComplexValue(&val, params->outputFile);
+        valResult = retrieveComplexValue(SPI, &val);
+        COMPLEXVALOK;
+        renderComplexValue(&val, params->outputFile);
+        valResult = retrieveComplexValue(SPI, &val);
+        COMPLEXVALOK;
+        renderComplexValue(&val, params->outputFile);
     })
     return SPU_DISASM_OK;
 })

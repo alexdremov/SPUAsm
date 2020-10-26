@@ -153,6 +153,8 @@ Macros</h2></td></tr>
 <tr class="separator:ad550327644158d58574a917bb0f7c630"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dd95ba5857ae6decf9a4601a205a300"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CTBDefs_8h.html#a6dd95ba5857ae6decf9a4601a205a300">DUMPCODEBLOCKHEX</a>&#160;&#160;&#160;for (;starting &lt; ending; starting++) { fprintf(compileParams-&gt;lstFile, &quot;%2x &quot;, (unsigned <a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a>)binary-&gt;code[starting]); }</td></tr>
 <tr class="separator:a6dd95ba5857ae6decf9a4601a205a300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8976d1a9ea5ef6e56cfba73e5b6c625e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CTBDefs_8h.html#a8976d1a9ea5ef6e56cfba73e5b6c625e">GETCOMPLEXVALNO</a>(n)&#160;&#160;&#160;<a class="el" href="ComplexValueTools_8hpp.html#a07415ffabfc3f85e9dd7e3efbeb7a489">retrieveComplexValueFromArg</a>((<a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a>*)argv[n]);</td></tr>
+<tr class="separator:a8976d1a9ea5ef6e56cfba73e5b6c625e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67c48cbedae2e3f42f87f0476a67ba50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CTBDefs_8h.html#a67c48cbedae2e3f42f87f0476a67ba50">GETLABELPOS</a>&#160;&#160;&#160;((<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a>)(compileParams-&gt;labelsStore-&gt;getLabelToPosition((<a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a>*)argv[1])) - (<a class="el" href="CMakeCache_8txt.html#a1cb0c2afe2f6ed3001e79e875440ed60">int</a>)(binary-&gt;currentSize) + 1)</td></tr>
 <tr class="separator:a67c48cbedae2e3f42f87f0476a67ba50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb786e3a5a82623adb22ae4bf030c7c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CTBDefs_8h.html#aeb786e3a5a82623adb22ae4bf030c7c6">JUSTCOMMAND</a>&#160;&#160;&#160;<a class="el" href="CTBDefs_8h.html#aed61c14a9a5ce11f5e135d8280dd3316">LSTDUMPED</a>({ <a class="el" href="CTBDefs_8h.html#a935ce0c5b7b54e84859821376fad7cf6">APPENDCHAR</a>(thou-&gt;code); }) return <a class="el" href="TranslationDTypes_8hpp.html#aaef4a579ede91cde0e35d0c6d40c8061a7c3c53b3cdfb58d13a224b0b19788161">SPU_CTB_OK</a>;</td></tr>
@@ -163,6 +165,8 @@ Macros</h2></td></tr>
 <tr class="separator:a3fa8ba14d0d39c00e4c920dca5faee7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50efb823f71a6c6cde80cf1a39b08f30"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CTBDefs_8h.html#a50efb823f71a6c6cde80cf1a39b08f30">ZEROORSTORAGE</a></td></tr>
 <tr class="separator:a50efb823f71a6c6cde80cf1a39b08f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b6a1ccd0a50770e1097e8597880e004"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CTBDefs_8h.html#a7b6a1ccd0a50770e1097e8597880e004">ZEROORVAL</a></td></tr>
+<tr class="separator:a7b6a1ccd0a50770e1097e8597880e004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a935ce0c5b7b54e84859821376fad7cf6"></a>
@@ -269,6 +273,24 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="a8976d1a9ea5ef6e56cfba73e5b6c625e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8976d1a9ea5ef6e56cfba73e5b6c625e">&#9670;&nbsp;</a></span>GETCOMPLEXVALNO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GETCOMPLEXVALNO</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="ComplexValueTools_8hpp.html#a07415ffabfc3f85e9dd7e3efbeb7a489">retrieveComplexValueFromArg</a>((<a class="el" href="CMakeCache_8txt.html#afe71f11dacb15682cdc012f7208e6e09">char</a>*)argv[n]);</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a67c48cbedae2e3f42f87f0476a67ba50"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a67c48cbedae2e3f42f87f0476a67ba50">&#9670;&nbsp;</a></span>GETLABELPOS</h2>
 
@@ -369,6 +391,29 @@ Macros</h2></td></tr>
 <div class="line">if (assignable != 1) return <a class="code" href="TranslationDTypes_8hpp.html#aaef4a579ede91cde0e35d0c6d40c8061afc6028cb01e39c22bac9b9c5406e758e">SPU_CTB_NONASSIGNABLE</a>; \</div>
 <div class="line"><a class="code" href="ComplexValueTools_8cpp.html#acd99748499155942d9b1fc7a873904a6">writeComplexArg</a>(&amp;<a class="code" href="EXE_8h.html#a9ab9d7057831483025a5c168d2308109">val</a>, binary);\</div>
 <div class="line">}}}) return <a class="code" href="TranslationDTypes_8hpp.html#aaef4a579ede91cde0e35d0c6d40c8061a7c3c53b3cdfb58d13a224b0b19788161">SPU_CTB_OK</a>;\</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7b6a1ccd0a50770e1097e8597880e004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b6a1ccd0a50770e1097e8597880e004">&#9670;&nbsp;</a></span>ZEROORVAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZEROORVAL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="CTBDefs_8h.html#aed61c14a9a5ce11f5e135d8280dd3316">LSTDUMPED</a>({{\</div>
+<div class="line">APPENDCHAR(thou-&gt;code);\</div>
+<div class="line">if (argc == 1) {\</div>
+<div class="line">    APPENDCHAR(0);\</div>
+<div class="line">} <span class="keywordflow">else</span> {\</div>
+<div class="line">ComplexValue <a class="code" href="EXE_8h.html#a9ab9d7057831483025a5c168d2308109">val</a> = <a class="code" href="ComplexValueTools_8cpp.html#a07415ffabfc3f85e9dd7e3efbeb7a489">retrieveComplexValueFromArg</a>((<span class="keywordtype">char</span>*)argv[1]);\</div>
+<div class="line">COMPLEXVALOK;\</div>
+<div class="line">writeComplexArg(&amp;<a class="code" href="EXE_8h.html#a9ab9d7057831483025a5c168d2308109">val</a>, binary);\</div>
+<div class="line">}}}) <span class="keywordflow">return</span> <a class="code" href="TranslationDTypes_8hpp.html#aaef4a579ede91cde0e35d0c6d40c8061a7c3c53b3cdfb58d13a224b0b19788161">SPU_CTB_OK</a>;\</div>
 </div><!-- fragment -->
 </div>
 </div>

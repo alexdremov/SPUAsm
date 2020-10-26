@@ -12,7 +12,7 @@
 
 #define SCREEN_WIDTH  128
 #define SCREEN_HEIGHT 32
-#define VRAM_OFFSET   128
+#define VRAM_OFFSET   10000
 #define RAM_SIZE      (VRAM_OFFSET + (SCREEN_WIDTH * SCREEN_HEIGHT) / sizeof(double))
 
 

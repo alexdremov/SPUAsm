@@ -346,28 +346,28 @@ Complex value (cvalue)</h2>
 <h2><a class="anchor" id="autotoc_md16"></a>
 General purpose</h2>
 <h3><a class="anchor" id="autotoc_md17"></a>
-push    &lt;any cvalue&gt;</h3>
+push &lt;any cvalue&gt;</h3>
 <p>Push value to the stack</p>
 <h3><a class="anchor" id="autotoc_md18"></a>
-pop      &lt;nothing/assignable cvalue&gt;</h3>
+pop &lt;nothing/assignable cvalue&gt;</h3>
 <p>Pop value from the stack</p><ul>
 <li>no args - just delete</li>
 <li>cvalue - pop and save to assignable cvalue</li>
 </ul>
 <h3><a class="anchor" id="autotoc_md19"></a>
-in          &lt;nothing/assignable cvalue&gt;</h3>
+in &lt;nothing/assignable cvalue&gt;</h3>
 <p>Request value from the console</p><ul>
 <li>no args - push value to the stack</li>
 <li>cvalue - save to assignable cvalue</li>
 </ul>
 <h3><a class="anchor" id="autotoc_md20"></a>
-out       &lt;nothing/any cvalue&gt;</h3>
+out &lt;nothing/any cvalue&gt;</h3>
 <p>Prints value to the console</p><ul>
 <li>no args - last stack value</li>
 <li>cvalue - cvalue value</li>
 </ul>
 <h3><a class="anchor" id="autotoc_md21"></a>
-mov       &lt;assignable cvalue&gt;  &lt;any cvalue&gt;</h3>
+mov &lt;assignable cvalue&gt;  &lt;any cvalue&gt;</h3>
 <p>destination -&gt; source</p>
 <p>Sets the first argument value to the secon argument's value</p>
 <h3><a class="anchor" id="autotoc_md22"></a>
@@ -395,13 +395,13 @@ clrscr</h3>
 <h2><a class="anchor" id="autotoc_md29"></a>
 Math</h2>
 <h3><a class="anchor" id="autotoc_md30"></a>
-inc       &lt;nothing/assignable cvalue&gt;</h3>
+inc &lt;nothing/assignable cvalue&gt;</h3>
 <p>Increments the value</p><ul>
 <li>no args - last stack value</li>
 <li>cvalue - cvalue value</li>
 </ul>
 <h3><a class="anchor" id="autotoc_md31"></a>
-dec       &lt;nothing/assignable cvalue&gt;</h3>
+dec &lt;nothing/assignable cvalue&gt;</h3>
 <p>Decrements the value</p><ul>
 <li>no args - last stack value</li>
 <li>cvalue - cvalue value</li>
@@ -436,34 +436,34 @@ pow</h3>
 <h2><a class="anchor" id="autotoc_md41"></a>
 Codeflow modifiers</h2>
 <h3><a class="anchor" id="autotoc_md42"></a>
-call       &lt;label&gt;</h3>
+call &lt;label&gt;</h3>
 <p>Gives execution to the label block. Can be returned to the call instruction using <em>ret</em></p>
 <h3><a class="anchor" id="autotoc_md43"></a>
 ret</h3>
 <p>Returnes to the last call position. May fail if there were no calls.</p>
 <h3><a class="anchor" id="autotoc_md44"></a>
-jmp      &lt;label&gt;</h3>
+jmp &lt;label&gt;</h3>
 <p>Jump to the label</p>
 <h3><a class="anchor" id="autotoc_md45"></a>
-jb         &lt;label&gt;</h3>
+jb &lt;label&gt;</h3>
 <p>Jump if last element is bigger than pre-last. Removes both operands from the stack</p>
 <h3><a class="anchor" id="autotoc_md46"></a>
-jbe       &lt;label&gt;</h3>
+jbe &lt;label&gt;</h3>
 <p>Jump if last element is bigger-or-equal than pre-last. Removes both operands from the stack</p>
 <h3><a class="anchor" id="autotoc_md47"></a>
-je         &lt;label&gt;</h3>
+je &lt;label&gt;</h3>
 <p>Jump if last element is equal to the pre-last one. Removes both operands from the stack</p>
 <h3><a class="anchor" id="autotoc_md48"></a>
-jne       &lt;label&gt;</h3>
+jne &lt;label&gt;</h3>
 <p>Jump if last element is not equal to the pre-last one. Removes both operands from the stack</p>
 <h3><a class="anchor" id="autotoc_md49"></a>
-ja         &lt;label&gt;</h3>
+ja &lt;label&gt;</h3>
 <p>Jump if last element is lower than pre-last. Removes both operands from the stack</p>
 <h3><a class="anchor" id="autotoc_md50"></a>
-jae       &lt;label&gt;</h3>
+jae &lt;label&gt;</h3>
 <p>Jump if last element is lower-or-equal than pre-last. Removes both operands from the stack</p>
 <h3><a class="anchor" id="autotoc_md51"></a>
-jm        &lt;label&gt;</h3>
+jm &lt;label&gt;</h3>
 <p>Jump if it's Monday.</p>
 <h3><a class="anchor" id="autotoc_md52"></a>
 labelName:</h3>

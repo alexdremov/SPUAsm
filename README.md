@@ -318,25 +318,25 @@ Complex value examples:
 
 ### General purpose
 
-#### push    <any cvalue>
+#### push <any cvalue>
 Push value to the stack
 
-#### pop      <nothing/assignable cvalue>
+#### pop <nothing/assignable cvalue>
 Pop value from the stack
 -  no args - just delete
 -  cvalue  - pop and save to assignable cvalue
 
-#### in          <nothing/assignable cvalue>
+#### in <nothing/assignable cvalue>
 Request value from the console
 -  no args - push value to the stack
 -  cvalue   - save to assignable cvalue
 
-#### out       <nothing/any cvalue>
+#### out <nothing/any cvalue>
 Prints value to the console
 -  no args - last stack value
 -  cvalue  - cvalue value
 
-#### mov       <assignable cvalue>  <any cvalue>
+#### mov <assignable cvalue>  <any cvalue>
 destination -> source
 
 Sets the first argument value to the secon argument's value
@@ -366,12 +366,12 @@ Fill vram with spaces
 
 ### Math
 
-#### inc       <nothing/assignable cvalue>
+#### inc <nothing/assignable cvalue>
 Increments the value
 -  no args - last stack value
 -  cvalue  - cvalue value
 
-#### dec       <nothing/assignable cvalue>
+#### dec <nothing/assignable cvalue>
 Decrements the value
 -  no args - last stack value
 -  cvalue  - cvalue value
@@ -405,41 +405,41 @@ The pre-last element of the stack to the power of the last one
 
 ### Codeflow modifiers
 
-#### call       <label>
+#### call <label>
 Gives execution to the label block. Can be returned to the call instruction using *ret*
 
 #### ret
 Returnes to the last call position.
 May fail if there were no calls.
 
-#### jmp      <label>
+#### jmp <label>
 Jump to the label
 
-#### jb         <label>
+#### jb <label>
 Jump if last element is bigger than pre-last. 
 Removes both operands from the stack
 
-#### jbe       <label>
+#### jbe <label>
 Jump if last element is bigger-or-equal than pre-last. 
 Removes both operands from the stack
 
-#### je         <label>
+#### je <label>
 Jump if last element is equal to the pre-last one. 
 Removes both operands from the stack
 
-#### jne       <label>
+#### jne <label>
 Jump if last element is not equal to the pre-last one. 
 Removes both operands from the stack
 
-#### ja         <label>
+#### ja <label>
 Jump if last element is lower than pre-last. 
 Removes both operands from the stack
 
-#### jae       <label>
+#### jae <label>
 Jump if last element is lower-or-equal than pre-last. 
 Removes both operands from the stack
 
-#### jm        <label>
+#### jm <label>
 Jump if it's Monday. 
 
 #### labelName:
