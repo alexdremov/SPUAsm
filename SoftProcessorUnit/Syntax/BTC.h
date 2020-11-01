@@ -289,6 +289,9 @@ OPBACKTRANSLATE_FUNC(slp, {
         ComplexValueResult valResult = retrieveComplexValue(SPI, &val);
         COMPLEXVALOK;
         renderComplexValue(&val, params->outputFile);
+        valResult = retrieveComplexValue(SPI, &val);
+        COMPLEXVALOK;
+        renderComplexValue(&val, params->outputFile);
     })
     return SPU_DISASM_OK;
 })
@@ -318,6 +321,13 @@ OPBACKTRANSLATE_FUNC(pixset, {
 })
 
 OPBACKTRANSLATE_FUNC(clrscr, {
+    OPBACKGENERAL({
+        INCSPI;
+    })
+    return SPU_DISASM_OK;
+})
+
+OPBACKTRANSLATE_FUNC(meow, {
     OPBACKGENERAL({
         INCSPI;
     })

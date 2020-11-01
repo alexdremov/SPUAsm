@@ -9,6 +9,7 @@
 #include "CommandsDTypes.hpp"
 #include "AssemblyHelpers.hpp"
 #include "Syntax.hpp"
+#include <ctype.h>
 #include <cstring>
 
 ComplexValue retrieveComplexValueFromArg(char* argument){

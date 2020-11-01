@@ -245,7 +245,7 @@ COMMAND_INFO(
 COMMAND_INFO(
              slp,
              CMD_CODE 29,
-             CMD_ARGRULES "*",
+             CMD_ARGRULES "**",
              CMD_FLAGBYTES 1,
              CMD_VALUETYPE 0
              )
@@ -269,6 +269,14 @@ COMMAND_INFO(
 COMMAND_INFO(
              clrscr,
              CMD_CODE 33,
+             CMD_ARGRULES "",
+             CMD_FLAGBYTES 0,
+             CMD_VALUETYPE 0
+             )
+
+COMMAND_INFO(
+             meow,
+             CMD_CODE 34,
              CMD_ARGRULES "",
              CMD_FLAGBYTES 0,
              CMD_VALUETYPE 0

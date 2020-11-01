@@ -75,7 +75,7 @@ drawCircle: ;(x0, y0, r, symbol)
         pixset [1] [0] [2]
         
         rend
-        slp 10000
+        slp 0 9000000
     ; loop params
     mov rdx rdx+0.1
     push rdx

@@ -48,9 +48,7 @@ InstructionExeResult executeInstruction(SPUCore* core,
 //    printf("NOW: %d\n", binary->codeOffset + (int)(*SPI - binary->code));
     switch (**SPI) {
         #define COMMAND_INFO(name, code, args, flags, isValue) case code : EVALUATE(CALLEXE(EVALUATE(CMDEXE_ ## name)));
-            
         #include "INFO.h"
-            
         #undef COMMAND_INFO
             
         default:

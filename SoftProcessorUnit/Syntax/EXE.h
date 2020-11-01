@@ -6,7 +6,6 @@
 //
 
 #include <ctime>
-#include <unistd.h>
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunused-parameter"
@@ -25,7 +24,7 @@ OPEXE_FUNC(push,  {
     
     StackRigidOperationCodes result = PUSH(value);
     
-    STACKRESULT
+    STACKRESULT;
     return SPU_EXE_OK;
 })
 
@@ -527,13 +526,22 @@ OPEXE_FUNC(rend,  {
 OPEXE_FUNC(slp,  {
     if (!HASBYTES(3))
         return SPU_EXE_NOARGS;
-    double value = 0;
+    double valueSec = 0;
+    double valueNanosec = 0;
     ADDSPI(1);
-    ComplexValueResult val = retrieveComplexValue(core, SPI, &value);
+    ComplexValueResult val = retrieveComplexValue(core, SPI, &valueSec);
+    
+    COMPLEXVALOK;
+    val = retrieveComplexValue(core, SPI, &valueNanosec);
     
     COMPLEXVALOK;
 
-    usleep((unsigned)value);
+    struct timespec tim = {};
+    struct timespec tim2 = {};
+    tim.tv_sec = (long)valueSec;
+    tim.tv_nsec = (long)valueNanosec;
+    
+    nanosleep(&tim , &tim2);
     return SPU_EXE_OK;
 })
 
@@ -579,6 +587,22 @@ OPEXE_FUNC(clrscr,  {
     if (!HASBYTES(1))
         return SPU_EXE_NOARGS;
     fillBlank(core);
+    INCSPI;
+    return SPU_EXE_OK;
+})
+
+OPEXE_FUNC(meow,  {
+    if (!HASBYTES(1))
+        return SPU_EXE_NOARGS;
+    
+    double meowNo = 0;
+    StackRigidOperationCodes result = POP(&meowNo);
+    STACKRESULT
+    
+    for (int i=0; i< (int)meowNo; i++){
+        printf("say meooow\n");
+    }
+    
     INCSPI;
     return SPU_EXE_OK;
 })

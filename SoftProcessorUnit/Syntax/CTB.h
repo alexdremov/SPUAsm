@@ -12,7 +12,7 @@
 OPTRANSLATE_FUNC(push, {
     LSTDUMPED({
         APPENDCHAR(thou->code);
-        ComplexValue val = GETCOMPLEXVALNO(1);
+        ComplexValue val = GETCOMPLEXVALNO(1); // TODO: readable
         COMPLEXVALOK
         writeComplexArg(&val, binary);
     })
@@ -21,7 +21,7 @@ OPTRANSLATE_FUNC(push, {
 
 OPTRANSLATE_FUNC(pop, {
     ZEROORSTORAGE;
-}) ;
+});
 
 OPTRANSLATE_FUNC(in, {
     ZEROORSTORAGE;
@@ -202,6 +202,9 @@ OPTRANSLATE_FUNC(slp, {
         ComplexValue val = GETCOMPLEXVALNO(1);
         COMPLEXVALOK
         writeComplexArg(&val, binary);
+        val = GETCOMPLEXVALNO(2);
+        COMPLEXVALOK
+        writeComplexArg(&val, binary);
     })
     return SPU_CTB_OK;
 });
@@ -229,4 +232,8 @@ OPTRANSLATE_FUNC(pixset, {
 
 OPTRANSLATE_FUNC(clrscr, {
     JUSTCOMMAND
+});
+
+OPTRANSLATE_FUNC(meow, {
+    JUSTCOMMAND;
 });

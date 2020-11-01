@@ -43,7 +43,7 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
-         FilePath = "/Users/aleksandrdremov/Desktop/&#x41e;&#x431;&#x443;&#x447;&#x435;&#x43d;&#x438;&#x435;/&#x41c;&#x424;&#x422;&#x418;/&#x424;&#x41f;&#x41c;&#x418;/BigProjects/SPUAsm/DerivedData/SoftProcessorUnit/Build/Products/Debug/SPU">
+         FilePath = "/Users/aleksandrdremov/Desktop/&#x41e;&#x431;&#x443;&#x447;&#x435;&#x43d;&#x438;&#x435;/&#x41c;&#x424;&#x422;&#x418;/&#x424;&#x41f;&#x41c;&#x418;/BigProjects/SPUAsm/build/SPU">
       </PathRunnable>
       <CommandLineArguments>
          <CommandLineArgument
