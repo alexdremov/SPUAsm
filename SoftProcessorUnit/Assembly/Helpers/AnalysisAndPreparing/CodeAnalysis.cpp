@@ -71,7 +71,7 @@ int generateErrors(SyntaxMapping* mapping, AssemblyParams* params, char* code) {
     
     while (newInstruction > (char*)(1)) {
         char* newlinePos = strchr(newInstruction, '\n');
-        if (newlinePos != nullptr){
+        if (newlinePos != nullptr) {
             *newlinePos = '\0';
         }
         
@@ -149,6 +149,9 @@ int analyzeInstructionErrors(SyntaxMapping* mapping, AssemblyParams* params, Bin
             freeArgList((char**)argv, argc);
             return 0;
         } else {
+//            size_t len = strlen(trimmed);
+//            if (trimmed[len] == ':')
+//                trimmed[len] = 0;
             setLabelPos(params, trimmed, (unsigned int) binary->currentSize);
             freeArgList((char**)argv, argc);
             free(trimmed);

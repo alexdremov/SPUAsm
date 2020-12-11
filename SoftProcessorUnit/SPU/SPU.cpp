@@ -51,7 +51,8 @@ int main(int argc, const char * argv[]) {
     
     SPUCore core = {};
     
-    printf("\x1b[2J");
+    if (params.vsync)
+        printf("\x1b[2J");
     ConstructSPUCore(&core, binary->stackSize);
     
     InstructionExeResult result = runCode(&core, &params, binary);
@@ -64,7 +65,7 @@ int main(int argc, const char * argv[]) {
                 printf("error: spu: stack underflow detected\n");
                 break;
             case SPU_EXE_STACK_OVERFLOW:
-                printf("error: spu: stack owerflow detected\n");
+                printf("error: spu: stack overflow detected\n");
                 break;
             case SPU_EXE_CORRUPTED:
                 printf("error: spu: binary structure invalid\n");
@@ -86,7 +87,10 @@ int main(int argc, const char * argv[]) {
                 break;
         }
         if (params.verbose){
+            printf("Operational stack:\n");
             StackDump(core.stack, -1, params.inputFileName, "ERROR");
+            printf("Call stack:\n");
+            StackDump(core.callStack, -1, params.inputFileName, "ERROR");
             printf("REGs: ");
             for (size_t i = 0;  i < sizeof(core.REG) / sizeof(core.REG[0]); i++ ){
                 printf("%lg ", core.REG[i]);

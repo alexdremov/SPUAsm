@@ -327,9 +327,43 @@ OPBACKTRANSLATE_FUNC(clrscr, {
     return SPU_DISASM_OK;
 })
 
-OPBACKTRANSLATE_FUNC(meow, {
+OPBACKTRANSLATE_FUNC(gr, {
     OPBACKGENERAL({
-        INCSPI;
-    })
+                          INCSPI;
+                  })
+    return SPU_DISASM_OK;
+})
+
+OPBACKTRANSLATE_FUNC(geq, {
+    OPBACKGENERAL({
+                          INCSPI;
+                  })
+    return SPU_DISASM_OK;
+})
+
+OPBACKTRANSLATE_FUNC(le, {
+    OPBACKGENERAL({
+                          INCSPI;
+                  })
+    return SPU_DISASM_OK;
+})
+OPBACKTRANSLATE_FUNC(leq, {
+    OPBACKGENERAL({
+                          INCSPI;
+                  })
+    return SPU_DISASM_OK;
+})
+
+OPBACKTRANSLATE_FUNC(neq, {
+    OPBACKGENERAL({
+                          INCSPI;
+                  })
+    return SPU_DISASM_OK;
+})
+
+OPBACKTRANSLATE_FUNC(eq, {
+    OPBACKGENERAL({
+                          INCSPI;
+                  })
     return SPU_DISASM_OK;
 })

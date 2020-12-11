@@ -1,1 +1,57 @@
-push [rax+2]
+mov rex 0
+call giveYouUp
+jmp end_label
+giveYouUp:
+in
+pop [rex+0]
+push 1
+push 0
+gr
+push 0
+jae lbl_l2_c6_else__IAOLN
+out 122
+push 1
+out
+pop
+jmp lbl_l2_c6_cont__HBRCK
+lbl_l2_c6_else__IAOLN:
+push 0
+out
+pop
+lbl_l2_c6_cont__HBRCK:
+ret
+fact:
+push [rex+0]
+out
+pop
+push [rex+0]
+push 1
+leq
+push 0
+jae lbl_l11_c6_cont__AFMCD
+push 1
+pop rax
+ret
+jmp lbl_l11_c6_cont__AFMCD
+lbl_l11_c6_cont__AFMCD:
+push [rex+0]
+push 1
+sub
+pop [rex+1]
+push 1
+push rex
+add
+pop rex
+call fact
+push rex
+push 1
+sub
+pop rex
+push rax
+push [rex+0]
+mul
+pop rax
+ret
+ret
+end_label:
+hlt

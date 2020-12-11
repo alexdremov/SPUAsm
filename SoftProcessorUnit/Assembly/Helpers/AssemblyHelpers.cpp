@@ -237,10 +237,10 @@ BinFileLoadResult loadBinFile(BinaryFile* binFile, FILE* inputFile) {
     binFile->prepend    = *((short int*) curPos);
     curPos += sizeof(binFile->prepend);
     
-    binFile->version    = *((int*) curPos);
+    memcpy(&binFile->version, curPos, sizeof(int));
     curPos += sizeof(binFile->version);
     
-    binFile->signature  = *((int*) curPos);
+    memcpy(&binFile->signature, curPos, sizeof(int));
     curPos += sizeof(binFile->signature);
     
     if (binFile->prepend != currentPrepend) {
@@ -255,10 +255,10 @@ BinFileLoadResult loadBinFile(BinaryFile* binFile, FILE* inputFile) {
         return SPU_BINLOAD_WRONG_VERSION;
     }
     
-    binFile->stackSize    = *((size_t*) curPos);
+    memcpy(&binFile->stackSize, curPos, sizeof(size_t));
     curPos += sizeof(binFile->stackSize);
     
-    binFile->currentSize    = *((size_t*) curPos);
+    memcpy(&binFile->currentSize, curPos, sizeof(size_t));
     curPos += sizeof(binFile->currentSize);
     
     resizeBinFile(binFile, binFile->currentSize + 20);

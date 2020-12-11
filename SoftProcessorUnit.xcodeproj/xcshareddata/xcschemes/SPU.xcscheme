@@ -48,6 +48,9 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      enableAddressSanitizer = "YES"
+      enableASanStackUseAfterReturn = "YES"
+      enableUBSanitizer = "YES"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
       customWorkingDirectory = "/Users/aleksandrdremov/Desktop/&#x41e;&#x431;&#x443;&#x447;&#x435;&#x43d;&#x438;&#x435;/&#x41c;&#x424;&#x422;&#x418;/&#x424;&#x41f;&#x41c;&#x418;/BigProjects/SPUAsm/SoftProcessorUnit/WorkingDirectory"
@@ -72,7 +75,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--verbose"
-            isEnabled = "NO">
+            isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "--vram"

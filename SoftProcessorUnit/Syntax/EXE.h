@@ -41,12 +41,12 @@ OPEXE_FUNC(out,  {
         STACKRESULT
         ADDSPI(1);
 //        printf("off: %d\n", (int)(*SPI - binary->code));
-        printf("%lf\n", value);
+        printf("%lg\n", value);
         return SPU_EXE_OK;
     }
     COMPLEXVALOK;
     
-    printf("%lf\n", value);
+    printf("%lg\n", value);
 
     return SPU_EXE_OK;
 })
@@ -591,19 +591,105 @@ OPEXE_FUNC(clrscr,  {
     return SPU_EXE_OK;
 })
 
-OPEXE_FUNC(meow,  {
+OPEXE_FUNC(gr,  {
     if (!HASBYTES(1))
         return SPU_EXE_NOARGS;
-    
-    double meowNo = 0;
-    StackRigidOperationCodes result = POP(&meowNo);
+
+    double left = 0;
+    double right = 0;
+
+    StackRigidOperationCodes result = POP(&right);
     STACKRESULT
-    
-    for (int i=0; i< (int)meowNo; i++){
-        printf("say meooow\n");
-    }
-    
-    INCSPI;
+            result = POP(&left);
+    STACKRESULT
+            result = PUSH(left > right);
+    STACKRESULT
+            INCSPI;
+    return SPU_EXE_OK;
+})
+
+OPEXE_FUNC(geq,  {
+    if (!HASBYTES(1))
+        return SPU_EXE_NOARGS;
+
+    double left = 0;
+    double right = 0;
+
+    StackRigidOperationCodes result = POP(&right);
+    STACKRESULT
+            result = POP(&left);
+    STACKRESULT
+            result = PUSH(left >= right);
+    STACKRESULT
+            INCSPI;
+    return SPU_EXE_OK;
+})
+
+OPEXE_FUNC(le,  {
+    if (!HASBYTES(1))
+        return SPU_EXE_NOARGS;
+
+    double left = 0;
+    double right = 0;
+
+    StackRigidOperationCodes result = POP(&right);
+    STACKRESULT
+            result = POP(&left);
+    STACKRESULT
+            result = PUSH(left < right);
+    STACKRESULT
+            INCSPI;
+    return SPU_EXE_OK;
+})
+
+OPEXE_FUNC(leq,  {
+    if (!HASBYTES(1))
+        return SPU_EXE_NOARGS;
+
+    double left = 0;
+    double right = 0;
+
+    StackRigidOperationCodes result = POP(&right);
+    STACKRESULT
+            result = POP(&left);
+    STACKRESULT
+            result = PUSH(left <= right);
+    STACKRESULT
+            INCSPI;
+    return SPU_EXE_OK;
+})
+
+OPEXE_FUNC(neq,  {
+    if (!HASBYTES(1))
+        return SPU_EXE_NOARGS;
+
+    double left = 0;
+    double right = 0;
+
+    StackRigidOperationCodes result = POP(&right);
+    STACKRESULT
+            result = POP(&left);
+    STACKRESULT
+            result = PUSH(left != right);
+    STACKRESULT
+            INCSPI;
+    return SPU_EXE_OK;
+})
+
+OPEXE_FUNC(eq,  {
+    if (!HASBYTES(1))
+        return SPU_EXE_NOARGS;
+
+    double left = 0;
+    double right = 0;
+
+    StackRigidOperationCodes result = POP(&right);
+    STACKRESULT
+            result = POP(&left);
+    STACKRESULT
+            result = PUSH(left == right);
+    STACKRESULT
+            INCSPI;
     return SPU_EXE_OK;
 })
 

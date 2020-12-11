@@ -279,7 +279,7 @@ void renderComplexValue(ComplexValue* cvalue, FILE* output){
         } else {
             fprintf(output, "-");
         }
-        fprintf(output, "%lf", cvalue->value);
+        fprintf(output, "%lg", cvalue->value);
     }
     
     

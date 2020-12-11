@@ -1,56 +1,74 @@
-; height 32
-; width  64
+mov rex 0
+call giveYouUp
+jmp end_label
 
-push 32
-push 16
-push 10
-push 35
-call drawCircle
 
-push 32
-push 16
-push 5
-push 35
-call drawCircle
+; giveYouUp function definition (source:0:13)
+giveYouUp:
+in ; input 1:19
+pop [rex+0] ; identifier x
+; processing if:2:6
+push 1
+push 0
+gr ; >
+out
+push 0
+jae lbl_l2_c6_else__IAOLN
+push 1
+out
+pop
+jmp lbl_l2_c6_cont__HBRCK
+lbl_l2_c6_else__IAOLN:
+push 0
+out
+pop
+lbl_l2_c6_cont__HBRCK:
+ret
 
+
+
+; fact function definition (source:9:14)
+fact:
+push [rex+0] ; identifier value
+out
+pop
+; processing if:11:6
+push [rex+0] ; identifier value
+push 1
+leq ; <=
+push 0
+jae lbl_l11_c6_cont__AFMCD
+push 1
+pop rax ; return value
+ret
+jmp lbl_l11_c6_cont__AFMCD
+lbl_l11_c6_cont__AFMCD:
+push [rex+0] ; identifier value
+push 1
+sub ; 14:46
+pop [rex+1] ; preparing arg for func call
+; incrementing rex for 1
+push 1
+push rex
+add
+pop rex
+; inc complete
+
+call fact
+; decrementing rex for 1
+push rex
+push 1
+sub
+pop rex
+; dec complete
+
+push rax ; pushing return value
+push [rex+0] ; identifier value
+mul ; 14:51
+pop rax ; return value
+ret
+ret
+
+
+end_label:
 hlt
-
-drawCircle: ;(x0, y0, r, symbol)
-    pop [2]
-    pop rcx  ; r
-    pop rbx  ; y0
-    pop rax  ; x0
-
-    mov rdx 0   ; initial angle
-    loop:
-        push rbx
-        push rdx
-        sin
-        push rcx
-        mul
-        add
-
-        pop [0]
-
-        push rax
-        push rdx
-        cos
-        push rcx
-        push 2   ;
-        mul
-        mul
-        add
-
-        pop [1]
-
-        pixset [1] [0] [2]
-
-        rend
-        slp 10000
-    ; loop params
-    mov rdx rdx+0.05
-    push rdx
-    push 3.1415926535897
-    push 2
-    mul
-    jbe loop

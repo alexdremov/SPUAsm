@@ -421,10 +421,13 @@ static StackRigidOperationCodes __StackReallocate( __overload(StackRigid)** stac
     }else if (((*stack)->capacity / 2.2 > (*stack)->size) && direction < 0) { // Down reallocation
         size_t newCapacity = (size_t)((*stack)->capacity / 2.2);
         
+        if (newCapacity == 0) {
+            newCapacity = 10;
+        }
+        
         const size_t memoryNow = StackRigidMemoryUse(*stack);
         const size_t memoryNew = sizeof(__overload(StackRigid)) + (newCapacity - 1) * sizeof(StackElementType);
         
-        if (memoryNew <= memoryNow) {
              __overload(StackRigid)* newStack = ( __overload(StackRigid)*) realloc((*stack), memoryNew);
             if (!istack_pointer_valid(newStack, sizeof(newStack))){
                 if (newStack != NULL) {
@@ -436,8 +439,6 @@ static StackRigidOperationCodes __StackReallocate( __overload(StackRigid)** stac
             
             (*stack) = newStack;
             (*stack)->capacity = newCapacity;
-        }else
-            return STACK_OP_OVERFLOW; // Exceded size_t memory
     }
     return STACK_OP_OK;
 }
